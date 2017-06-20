@@ -43,13 +43,21 @@
     }
   }
 
-  .box:nth-child(2n) {
-    &-image {
-      float: right;
-    }
-
-    &-text {
-      float: left;
-    }
+  //.box:nth-child(2n) {
+  .box:nth-child(odd){
+    flex-direction: row-reverse;
+  }
+  .box{
+    display: flex;
+    //>div{
+    //  float: left;
+    //}
+    //&-image {
+    //  float: right;
+    //}
+    //
+    //&-text {
+    //  float: left;
+    //}
   }
 }
