@@ -1,20 +1,22 @@
 body {
   font-family: proxima-nova, sans-serif;
+  font-size: 10px;
 }
 
 .btn {
-  padding: 10px 35px;
+  padding: 12px 35px;
   border-radius: 116px;
   border: none;
   text-transform: uppercase;
+  letter-spacing: 0.5px;
 
-  &-pacific-blue {
+  &-color {
     background-color: #169bd5;
     color: #fff;
   }
 
   &-large {
-    font-size: 17px;
+    font-size: 1.6em;
     font-weight: 700;
   }
 }
