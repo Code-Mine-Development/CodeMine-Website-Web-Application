@@ -1,3 +1,9 @@
-.navbar {
-  border-bottom: 1px solid gray;
+li.active{
+  font-weight: bold;
+}
+li:focus{
+  outline:none;
+}
+li{
+  cursor:pointer;
 }
