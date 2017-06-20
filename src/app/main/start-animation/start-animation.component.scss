@@ -3,7 +3,7 @@
 
   .section-start {
     margin: 40px;
-    height: 480px;
+    height: 400px;
     overflow: scroll;
 
     .start-slogan {
@@ -31,6 +31,7 @@
     }
 
     .box {
+      clear: both;
       display: flex;
       justify-content: flex-start;
       margin-bottom: 130px;
@@ -38,6 +39,7 @@
       &-image {
         height: 303px;
         border: 1px solid gray;
+        margin-right: 40px;
       }
 
       &-text {
@@ -50,7 +52,7 @@
       }
 
       .col-box-text {
-        width: 36%;
+        width: 32%;
       }
 
       .col-box {
@@ -68,9 +70,14 @@
       }
     }
 
+    .box-with-margin {
+      margin-top: 40px;
+    }
+
     .box:nth-child(2n) {
       flex-direction: row-reverse;
       justify-content: flex-end;
+      margin-right: 0;
     }
   }
 }
