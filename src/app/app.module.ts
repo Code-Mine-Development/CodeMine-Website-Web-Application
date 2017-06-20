@@ -8,7 +8,6 @@ import { HeaderComponent } from './header/header.component';
 import { OfferComponent } from './offer/offer.component';
 import {AppRoutingModule} from "./app-routing.module";
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
-import { WeCreateComponent } from './offer/we-create/we-create.component';
 
 @NgModule({
   declarations: [
@@ -17,8 +16,7 @@ import { WeCreateComponent } from './offer/we-create/we-create.component';
     StartAnimationComponent,
     HeaderComponent,
     OfferComponent,
-    PageNotFoundComponent,
-    WeCreateComponent
+    PageNotFoundComponent
   ],
   imports: [
     BrowserModule,
