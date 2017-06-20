@@ -1,5 +1,5 @@
 .container {
-  padding: 150px;
+  padding: 100px 225px;
 
   .section-start {
     margin: 40px;
@@ -10,7 +10,7 @@
       font-size: 3em;
       text-align: center;
       font-weight: 500;
-      margin-bottom: 100px;
+      margin-bottom: 350px;
     }
 
     .box-start {
@@ -25,7 +25,6 @@
 
     .text {
       font-size: 18px;
-      padding: 10px 200px 0 0;
       font-weight: 200;
       text-align: left;
 
@@ -33,17 +32,16 @@
 
     .box {
       display: flex;
-      justify-content: flex-end;
+      justify-content: flex-start;
       margin-bottom: 130px;
 
       &-image {
         height: 303px;
         border: 1px solid gray;
-        margin-right: 40px;
       }
 
       &-text {
-        //margin-left: 100px;
+        margin: 0 40px 0 50px;
       }
 
       &-header {
@@ -51,15 +49,28 @@
         font-weight: 500;
       }
 
+      .col-box-text {
+        width: 36%;
+      }
+
       .col-box {
         width: 50%;
       }
     }
 
+    .box-center {
+      text-align: center;
+      margin-bottom: 150px;
+
+      .btn {
+        padding: 10px 95px;
+        font-size: 2em;
+      }
+    }
+
     .box:nth-child(2n) {
       flex-direction: row-reverse;
-      margin-right: 100px;
-      margin-left: 0;
+      justify-content: flex-end;
     }
   }
 }
