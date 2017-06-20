@@ -1,6 +1,4 @@
 .section-start {
-  font-family: proxima-nova, sans-serif;
-
   margin: 40px;
   height: 678px;
   overflow: scroll;
@@ -26,20 +24,32 @@
     font-weight: 100;
   }
 
-  .box-row {
-    display: flex;
-    justify-content: space-between;
-    margin-bottom: 70px;
+  .box {
+    clear: both;
 
-    .box {
+    &-image {
       width: 579px;
       height: 303px;
       border: 1px solid gray;
       margin-right: 40px;
     }
 
-    .box-header {
+    &-text {
+      width: 50%;
+    }
+
+    &-header {
       font-size: 25px;
+    }
+  }
+
+  .box:nth-child(2n) {
+    &-image {
+      float: right;
+    }
+
+    &-text {
+      float: left;
     }
   }
 }
