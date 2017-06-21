@@ -7,6 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CarouselComponent implements OnInit {
 
+  images = ['img/img1.jpg', 'img/img2.jpg'];
   constructor() { }
 
   ngOnInit() {
