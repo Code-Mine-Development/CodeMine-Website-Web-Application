@@ -1,5 +1,6 @@
 .container {
-  padding: 100px 225px;
+  width: 80%;
+  margin: auto;
 
   .section-start {
     margin: 40px;
@@ -78,6 +79,19 @@
       flex-direction: row-reverse;
       justify-content: flex-end;
       margin-right: 0;
+    }
+  }
+
+  .skip {
+    text-align: center;
+
+    &-text {
+      font-size: 1.6em;
+    }
+
+    &-btn {
+      font-size: 2.5em;
+      color: #333333;
     }
   }
 }

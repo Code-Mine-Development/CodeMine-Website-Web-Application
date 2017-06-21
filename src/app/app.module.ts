@@ -10,6 +10,7 @@ import {AppRoutingModule} from './app-routing.module';
 import {PageNotFoundComponent} from './page-not-found/page-not-found.component';
 import { ContactComponent } from './main/contact/contact.component';
 import { FooterComponent } from './footer/footer.component';
+import { CarouselComponent } from './main/carousel/carousel.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { FooterComponent } from './footer/footer.component';
     OfferComponent,
     PageNotFoundComponent,
     ContactComponent,
-    FooterComponent
+    FooterComponent,
+    CarouselComponent
   ],
   imports: [
     BrowserModule,
