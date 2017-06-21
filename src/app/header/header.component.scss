@@ -1,9 +1,17 @@
-li.active{
-  font-weight: bold;
+div {
+  position: absolute;
+  top: 0;
+
+  li.active {
+    font-weight: bold;
+  }
+
+  li:focus {
+    outline:none;
+  }
+
+  li {
+    cursor:pointer;
+  }
 }
-li:focus{
-  outline:none;
-}
-li{
-  cursor:pointer;
-}
+

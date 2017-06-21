@@ -9,6 +9,7 @@ export class CarouselComponent implements OnInit {
   @ViewChildren('item') items: QueryList<any>;
   @Input() timeout = 5000;
   @Input() animationDelay = 1500;
+  @Input() transition = 1000;
   images: Array<Object> = [
     {path: 'http://blog.oxforddictionaries.com/wp-content/uploads/mountain-names.jpg', title: 'test1'},
     {path: 'http://blog.oxforddictionaries.com/wp-content/uploads/mountain-names.jpg', title: 'test2'},
