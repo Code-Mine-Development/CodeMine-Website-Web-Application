@@ -1,0 +1,7 @@
+<div>
+    <ul>
+        <li #item *ngFor="let image of images" [ngStyle]="{'background-image': 'url(' + image.path + ')'}">
+            <p>{{image.title}}</p>
+        </li>
+    </ul>
+</div>

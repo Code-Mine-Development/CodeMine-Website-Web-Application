@@ -11,7 +11,6 @@ import {PageNotFoundComponent} from './page-not-found/page-not-found.component';
 import { ContactComponent } from './main/contact/contact.component';
 import { FooterComponent } from './footer/footer.component';
 import { CarouselComponent } from './main/carousel/carousel.component';
-import {OwlModule} from 'ng2-owl-carousel';
 
 @NgModule({
   declarations: [
@@ -28,7 +27,6 @@ import {OwlModule} from 'ng2-owl-carousel';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    OwlModule
   ],
   providers: [],
   bootstrap: [AppComponent]
