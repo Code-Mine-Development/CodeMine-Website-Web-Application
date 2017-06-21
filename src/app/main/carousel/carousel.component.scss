@@ -1,17 +1,20 @@
-div{
-    overflow: hidden;
-    ul{
-	   display: flex;
-	   list-style: none;
-	   min-height: 600px;
-	   margin: 0;
-	   padding: 0;
-	   width: 100%;
-	   li{
-		  min-width: 100%;
-		  background-repeat: no-repeat;
-		  background-size: cover;
-		  transition: 1.5s;
-	   }
-    }
+.carousel {
+  overflow: hidden;
+  margin-bottom: 80px;
+
+  &-list {
+   display: flex;
+   list-style: none;
+   min-height: 600px;
+   margin: 0;
+   padding: 0;
+   width: 100%;
+
+   &-item {
+     min-width: 100%;
+     background-repeat: no-repeat;
+     background-size: cover;
+     transition: 1.5s;
+   }
+  }
 }
