@@ -11,6 +11,7 @@ import { PageNotFoundComponent } from './page-not-found/page-not-found.component
 import { PortfolioComponent } from './portfolio/portfolio.component';
 import { NavigationComponent } from './portfolio/navigation/navigation.component';
 import { ProjectsComponent } from './portfolio/projects/projects.component';
+import { ProjectDetailComponent } from './portfolio/projects/project-detail/project-detail.component';
 
 
 @NgModule({
@@ -24,6 +25,7 @@ import { ProjectsComponent } from './portfolio/projects/projects.component';
     PortfolioComponent,
     NavigationComponent,
     ProjectsComponent,
+    ProjectDetailComponent,
 
   ],
   imports: [

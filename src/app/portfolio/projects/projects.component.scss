@@ -8,15 +8,19 @@
   flex-direction: row;
   justify-content: space-between;
   width: 100%;
-  margin-bottom: 4em;
+  margin-bottom: 6em;
   &:nth-of-type(2n){
     flex-direction: row-reverse;
     .project-details{
-
+      .technologies{
+        flex-direction: row-reverse;
+      }
       .project-tech{
         right:-5em;
         left: inherit;
         align-self: flex-end;
+
+
       }
     }
   }
@@ -26,8 +30,29 @@
     background: #eee;
     transition: 1s;
     border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     &:hover{
       transform: scale(1.05);
+      p{
+        opacity: 1;
+        transition: 2s;
+        &:hover{
+          transform: scale(0.95);
+          transition: 0.3s;
+        }
+      }
+    }
+
+    p{
+      background: #169bd5;
+      color:white;
+      border-radius: 15px;
+      padding:5px 20px;
+      font-size: 20px;
+      cursor: pointer;
+      opacity: 0;
     }
   }
   .project-details{
@@ -66,9 +91,11 @@
       position:relative;
       width: 70%;
       left: -5em;
+
       .technologies{
         display: flex;
         flex-wrap: wrap;
+
       }
       .tech{
         width: calc(25% - 2px);
