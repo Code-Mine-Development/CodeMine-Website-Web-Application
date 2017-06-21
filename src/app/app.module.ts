@@ -14,6 +14,7 @@ import { ProjectsComponent } from './portfolio/projects/projects.component';
 import { ProjectDetailComponent } from './portfolio/projects/project-detail/project-detail.component';
 
 
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -26,6 +27,7 @@ import { ProjectDetailComponent } from './portfolio/projects/project-detail/proj
     NavigationComponent,
     ProjectsComponent,
     ProjectDetailComponent,
+
 
   ],
   imports: [
