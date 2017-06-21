@@ -1,0 +1,16 @@
+header{
+  display: flex;
+  justify-content: space-between;
+}
+ul{
+  display: flex;
+  li.active{
+    font-weight: bold;
+  }
+  li:focus{
+    outline:none;
+  }
+  li{
+    cursor:pointer;
+  }
+}

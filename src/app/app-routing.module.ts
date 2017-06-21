@@ -1,13 +1,14 @@
 import {NgModule} from "@angular/core";
-import {RouterModule, Routes} from "@angular/router";
-import {MainComponent} from "./main/main.component";
+import {RouterModule, Routes, PreloadAllModules} from "@angular/router";
 import {OfferComponent} from "./offer/offer.component";
-import {PageNotFoundComponent} from "./page-not-found/page-not-found.component";
+import {PageNotFoundComponent} from "./core/page-not-found/page-not-found.component";
+import {HomeComponent} from "./core/home/home.component";
 
 const appRoutes: Routes = [
-  { path: '', redirectTo:'/home', pathMatch:'full'},
-  { path: 'home', component:MainComponent},
+  { path: '', component:HomeComponent},
   { path: 'offer', component:OfferComponent},
+  { path: 'aboutUs', loadChildren: './about-us/about-us.module#AboutUsModule'},
+
   { path: 'not-found', component:PageNotFoundComponent},
   { path:'**',redirectTo:'/not-found'},
 
@@ -16,7 +17,7 @@ const appRoutes: Routes = [
 
 @NgModule({
   imports:[
-    RouterModule.forRoot(appRoutes)
+    RouterModule.forRoot(appRoutes, {preloadingStrategy: PreloadAllModules})
   ],
   exports:[RouterModule]
 })
