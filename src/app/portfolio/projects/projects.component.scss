@@ -1,0 +1,104 @@
+.container {
+  width: 70%;
+  margin: 4em auto;
+}
+
+.project{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+  margin-bottom: 4em;
+  &:nth-of-type(2n){
+    flex-direction: row-reverse;
+    .project-details{
+
+      .project-tech{
+        right:-5em;
+        left: inherit;
+        align-self: flex-end;
+      }
+    }
+  }
+  .project-image{
+    width:60%;
+    min-height: 50vh;
+    background: #eee;
+    transition: 1s;
+    border-radius: 5px;
+    &:hover{
+      transform: scale(1.05);
+    }
+  }
+  .project-details{
+    width: 50%;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    .project-desc{
+      width: 100%;
+      display: flex;
+      justify-content: space-around;
+      .desc-img{
+        width: 15%;
+        height: 50%;
+        img{
+          max-width: 100%;
+          max-height: 100%;
+        }
+      }
+      .desc-info{
+        width: 75%;
+        h1{
+          margin-top: 0;
+        }
+        .tags{
+          display: flex;
+          width: 100%;
+          font-size: 0.9em;
+          p{
+            margin-right: 1em;
+          }
+        }
+      }
+    }
+ .project-tech{
+      position:relative;
+      width: 70%;
+      left: -5em;
+      .technologies{
+        display: flex;
+        flex-wrap: wrap;
+      }
+      .tech{
+        width: calc(25% - 2px);
+        border: 1px solid #ddd;
+        img{
+          max-height: 100%;
+          max-width: 100%;
+        }
+      }
+    }
+
+  }
+}
+
+.cta{
+  height: 50vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  h2{
+    font-weight: 500;
+    font-size: 30px;
+  }
+  button{
+    border: none;
+    background: #169bd5;
+    color:white;
+    border-radius: 15px;
+    padding:10px 40px;
+    font-size: 20px;
+  }
+}

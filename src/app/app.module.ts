@@ -8,6 +8,10 @@ import { HeaderComponent } from './header/header.component';
 import { OfferComponent } from './offer/offer.component';
 import {AppRoutingModule} from "./app-routing.module";
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
+import { PortfolioComponent } from './portfolio/portfolio.component';
+import { NavigationComponent } from './portfolio/navigation/navigation.component';
+import { ProjectsComponent } from './portfolio/projects/projects.component';
+
 
 @NgModule({
   declarations: [
@@ -16,7 +20,11 @@ import { PageNotFoundComponent } from './page-not-found/page-not-found.component
     StartAnimationComponent,
     HeaderComponent,
     OfferComponent,
-    PageNotFoundComponent
+    PageNotFoundComponent,
+    PortfolioComponent,
+    NavigationComponent,
+    ProjectsComponent,
+
   ],
   imports: [
     BrowserModule,

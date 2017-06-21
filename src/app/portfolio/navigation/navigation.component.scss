@@ -1,0 +1,41 @@
+container {
+  width: 70%;
+  margin: 4em auto 6em;
+}
+li{
+  list-style: none;
+  cursor: pointer;
+}
+hr{
+  width:70%;
+  margin: auto;
+  color:#eee;
+}
+.main{
+  display: flex;
+  width: 50%;
+  margin: auto;
+  justify-content: space-between;
+  font-size: 1.5em;
+  font-weight: 700;
+  li{
+    display: flex;
+    align-items: center;
+    text-align: center;
+  }
+  i{
+    font-size: 0.8em;
+    margin-left: 1em;
+  }
+}
+.sub{
+  display:flex;
+  width: 70%;
+  margin:2em auto;
+  justify-content: space-between;
+  font-size: 1em;
+  font-weight: 400;
+  li:hover{
+    font-weight: bold;
+  }
+}
