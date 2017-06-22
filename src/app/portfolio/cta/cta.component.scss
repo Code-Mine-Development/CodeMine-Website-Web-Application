@@ -1,0 +1,19 @@
+.cta{
+  height: 50vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  h2{
+    font-weight: 500;
+    font-size: 30px;
+  }
+  button{
+    border: none;
+    background: #169bd5;
+    color:white;
+    border-radius: 15px;
+    padding:10px 40px;
+    font-size: 20px;
+  }
+}

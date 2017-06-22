@@ -1,0 +1,23 @@
+<div class="container">
+  <div class="project"  >
+    <div class="project-image" [ngStyle]="{'background-image': 'url(' + project.mainImg + ')'}"><p>zobacz wiecej</p></div>
+    <div class="project-details">
+      <div class="project-desc">
+        <div class="desc-img"><img [src]="project.thumbnail"></div>
+        <div class="desc-info">
+          <h1>{{project.title}}</h1>
+          <p>{{project.desc}}</p>
+          <div class="tags" id="" ><p *ngFor="let tag of project.tags">{{tag}}</p></div>
+        </div>
+      </div>
+      <div class="project-tech" >
+        <h4>Technologie</h4>
+        <div class="technologies"  >
+          <div class="tech" *ngFor="let tech of project.technologies" ><img [src]="tech" ></div>
+
+
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -12,6 +12,8 @@ import { PortfolioComponent } from './portfolio/portfolio.component';
 import { NavigationComponent } from './portfolio/navigation/navigation.component';
 import { ProjectsComponent } from './portfolio/projects/projects.component';
 import { ProjectDetailComponent } from './portfolio/projects/project-detail/project-detail.component';
+import { CtaComponent } from './portfolio/cta/cta.component';
+import { ProjectComponent } from './portfolio/projects/project/project.component';
 
 
 
@@ -27,6 +29,8 @@ import { ProjectDetailComponent } from './portfolio/projects/project-detail/proj
     NavigationComponent,
     ProjectsComponent,
     ProjectDetailComponent,
+    CtaComponent,
+    ProjectComponent,
 
 
   ],
