@@ -1,0 +1,46 @@
+.audit-panel {
+  background-color: #fee03c;
+  color: #515151;
+  padding: 100px;
+
+  .column {
+    width: 45%;
+  }
+
+  &-header {
+    font-size: 7.2em;
+    margin: 0;
+  }
+
+  &-text {
+    font-size: 1.6em;
+    word-wrap: break-word;
+    margin: 40px 0;
+  }
+
+  .table {
+    width: 100%;
+    text-align: left;
+    margin-bottom: 100px;
+
+    th, td {
+      padding: 10px 0;
+    }
+
+    &-header {
+      font-size: 2.8em;
+    }
+
+    &-row {
+      font-size: 1.6em;
+    }
+  }
+}
+
+.details {
+  text-align: center;
+
+  h2 {
+    font-size: 2.8em;
+  }
+}
