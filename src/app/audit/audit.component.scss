@@ -1,42 +1,26 @@
 .section-audit {
   background-color: #8E8E8E;
-  height: 50vh;
+  height: 70vh;
   text-align: center;
 
   .start-panel {
+    padding: 120px;
 
     &-header {
       font-size: 3em;
       text-align: center;
+      margin-bottom: 50px;
     }
 
     .row {
       display: flex;
       justify-content: center;
-
-      .column {
-        width: 30%;
-      }
     }
 
-    .column {
-      width: 50%;
-    }
-
-    &-black-box,
-    &-white-box {
+    .box {
       width: 259px;
       height: 190px;
-    }
-
-    &-black-box {
       background-color: #000000;
-      border: thin solid black;
-    }
-
-    &-white-box {
-      background-color: #ffffff;
-      border: thin solid #797979;
     }
   }
 }
