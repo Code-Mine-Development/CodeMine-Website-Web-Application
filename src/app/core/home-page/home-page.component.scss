@@ -1,10 +1,12 @@
-//.slider {
-//  border: 1px solid red;
-//}
+:host{
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
 
 .section-home {
-  position: relative;
-  height: 90vh;
+  //position: relative;
+  //height: 90vh;
 
   .skip {
     text-align: center;

@@ -1,4 +1,5 @@
 import {Component, OnInit, ViewChildren, QueryList, Input} from '@angular/core';
+import {Portfolio} from "../../shared/interface/portfolio.interface";
 
 @Component({
   selector: 'app-carousel',
@@ -8,18 +9,13 @@ import {Component, OnInit, ViewChildren, QueryList, Input} from '@angular/core';
 export class CarouselComponent implements OnInit {
   @ViewChildren('item') items: QueryList<any>;
   @Input() timeout = 5000;
-  @Input() animationDelay = 1500;
   @Input() transition = 1000;
-  images: Array<Object> = [
-    {path: 'http://blog.oxforddictionaries.com/wp-content/uploads/mountain-names.jpg', title: 'test1'},
-    {path: 'http://blog.oxforddictionaries.com/wp-content/uploads/mountain-names.jpg', title: 'test2'},
-    {path: 'http://blog.oxforddictionaries.com/wp-content/uploads/mountain-names.jpg', title: 'test3'},
-  ];
+  @Input() data:Portfolio[];
 
   constructor() { }
 
   ngOnInit() {
-    this.animateCarousel()
+    this.animateCarousel();
   }
 
   animateCarousel() {
@@ -28,12 +24,12 @@ export class CarouselComponent implements OnInit {
         child.nativeElement.style.transform = 'translateX(-' + window.innerWidth + 'px)';
       });
       setTimeout(() => {
-        const first = this.images.shift();
-        this.images.push(first);
+        const first = this.data.shift();
+        this.data.push(first);
         this.items.forEach((child) => {
           child.nativeElement.style.transform = 'translateX(0px)';
         });
-      }, this.animationDelay);
+      }, this.transition);
     }, this.timeout);
   }
 }

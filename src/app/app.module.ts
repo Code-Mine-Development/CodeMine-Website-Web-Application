@@ -1,45 +1,40 @@
 import {BrowserModule} from '@angular/platform-browser';
 import {NgModule} from '@angular/core';
-
 import {AppComponent} from './app.component';
-import {HomePageComponent} from './home-page/home-page.component';
-import {StartAnimationComponent} from './home-page/start-animation/start-animation.component';
-import {HeaderComponent} from './header/header.component';
 import {OfferComponent} from './offer/offer.component';
-import {AppRoutingModule} from './app-routing.module';
-import {PageNotFoundComponent} from './page-not-found/page-not-found.component';
-// import { ContactComponent } from './home-page/contact/contact.component';
-import { FooterComponent } from './footer/footer.component';
-import { CarouselComponent } from './home-page/carousel/carousel.component';
-import {ContactComponent} from './contact/contact.component';
-import { AuditComponent } from './audit/audit.component';
+import {AuditComponent} from './audit/audit.component';
 import {QualityComponent} from './audit/quality/quality.component';
-import { UsabilityComponent } from './audit/usability/usability.component';
-import { ContactPageComponent } from './contact-page/contact-page.component';
+import {UsabilityComponent} from './audit/usability/usability.component';
+import {CoreModule} from "./core/core-module";
+import {HttpModule} from "@angular/http";
+import {PageNotFoundComponent} from "./page-not-found/page-not-found.component";
+import {PortfolioService} from "./shared/service/portfolio.service";
+import {HomePageResolver} from "./core/home-page/home-page.resolver";
+import {UiModule} from "./ui-elements/ui.module";
+import {ContactService} from "./contact/contact.service";
+import {ContactResolver} from "./contact/contact.resolver";
+import {CommonModule} from "@angular/common";
+import {AuditService} from "./audit/audit.service";
+import {AuditResolver} from "./audit/audit.resolver";
 
 @NgModule({
-  declarations: [
-    AppComponent,
-    HomePageComponent,
-    StartAnimationComponent,
-    HeaderComponent,
-    OfferComponent,
-    PageNotFoundComponent,
-    // ContactComponent,
-    FooterComponent,
-    CarouselComponent,
-    ContactComponent,
-    AuditComponent,
-    QualityComponent,
-    UsabilityComponent,
-    ContactPageComponent
-  ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule,
-  ],
-  providers: [],
-  bootstrap: [AppComponent]
+    declarations: [
+        AppComponent,
+        OfferComponent,
+        AuditComponent,
+        QualityComponent,
+        UsabilityComponent,
+        PageNotFoundComponent,
+    ],
+    imports: [
+        BrowserModule,
+        CommonModule,
+        HttpModule,
+        CoreModule,
+        UiModule
+    ],
+    providers: [PortfolioService,HomePageResolver,ContactResolver,ContactService, AuditService, AuditResolver],
+    bootstrap: [AppComponent]
 })
 export class AppModule {
 }

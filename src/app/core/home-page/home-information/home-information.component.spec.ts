@@ -1,6 +1,6 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { StartAnimationComponent } from './start-animation.component';
+import { StartAnimationComponent } from './home-information.component';
 
 describe('StartAnimationComponent', () => {
   let component: StartAnimationComponent;

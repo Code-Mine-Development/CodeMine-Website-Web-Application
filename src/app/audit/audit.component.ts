@@ -1,4 +1,6 @@
 import {Component, OnInit} from '@angular/core';
+import {Audit} from "./audit.interface";
+import {ActivatedRoute, Data} from "@angular/router";
 
 @Component({
   selector: 'app-audit',
@@ -6,10 +8,16 @@ import {Component, OnInit} from '@angular/core';
   styleUrls: ['./audit.component.scss']
 })
 export class AuditComponent implements OnInit {
-  constructor() {
-  }
+  audits:Audit[];
+  constructor(private route: ActivatedRoute) { }
 
   ngOnInit() {
+    this.route.data
+        .subscribe((data: Data) =>{
+          this.audits = data['audit'];
+          console.log(this.audits)
+        });
   }
+
 
 }

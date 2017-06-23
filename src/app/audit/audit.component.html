@@ -1,14 +1,14 @@
-<app-header></app-header>
 <div class="section-audit">
   <div class="start-panel">
     <div class="row">
       <div class="start-panel-header">Audyty</div>
     </div>
-    <div class="row">
+    <div class="row" *ngFor="let audit of audits">
+      <div class="box">
+        <img [src]="audit.image" alt="">
+      </div>
+      <div>{{audit.title}}</div>
       <div class="box"></div>
-      <div>Code Quality</div>
-      <div class="box"></div>
-      <div>Usability</div>
     </div>
   </div>
 </div>
