@@ -5,12 +5,13 @@ import {OfferComponent} from './offer/offer.component';
 import {PageNotFoundComponent} from './page-not-found/page-not-found.component';
 import {ContactComponent} from "./contact/contact.component";
 import {AuditComponent} from "./audit/audit.component";
+import {ContactPageComponent} from "./contact-page/contact-page.component";
 
 const appRoutes: Routes = [
   { path: '', redirectTo: '/home', pathMatch: 'full'},
   { path: 'home', component: HomePageComponent},
   { path: 'offer', component: OfferComponent},
-  { path: 'contact', component: ContactComponent},
+  { path: 'contact', component: ContactPageComponent},
   { path: 'audit', component: AuditComponent},
   { path: 'not-found', component: PageNotFoundComponent},
   { path: '**', redirectTo: '/not-found'}

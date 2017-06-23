@@ -1,6 +1,6 @@
 .section-audit {
   background-color: #8E8E8E;
-  height: 70vh;
+  height: 50vh;
   text-align: center;
 
   .start-panel {
@@ -21,6 +21,8 @@
       width: 259px;
       height: 190px;
       background-color: #000000;
+      border-radius: 50%;
+      margin: 0 20px;
     }
   }
 }

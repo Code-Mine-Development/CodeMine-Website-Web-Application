@@ -15,6 +15,7 @@ import {ContactComponent} from './contact/contact.component';
 import { AuditComponent } from './audit/audit.component';
 import {QualityComponent} from './audit/quality/quality.component';
 import { UsabilityComponent } from './audit/usability/usability.component';
+import { ContactPageComponent } from './contact-page/contact-page.component';
 
 @NgModule({
   declarations: [
@@ -30,7 +31,8 @@ import { UsabilityComponent } from './audit/usability/usability.component';
     ContactComponent,
     AuditComponent,
     QualityComponent,
-    UsabilityComponent
+    UsabilityComponent,
+    ContactPageComponent
   ],
   imports: [
     BrowserModule,
