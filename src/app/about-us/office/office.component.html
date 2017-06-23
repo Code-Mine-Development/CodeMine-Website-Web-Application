@@ -1,3 +1,6 @@
-<p>
-  office works!
-</p>
+<div class="wrap" [ngStyle]="{'top': '-' + topOffset + 'px', 'max-width':'' + windowWidth + 'px'}" (mousemove)="mouseMove($event)">
+  <div [ngStyle]="{'background-image': 'url(./assets/images/office.svg)', 'transform':smoothMove.translate}"></div>
+</div>
+<div class="scroll" [ngStyle]="{'top': '-' + topOffset + 'px'}" (click)="scrollDown()" (mouseenter)="moveArrow(true)" (mouseleave)="moveArrow(false)">
+  <i [@arrow]="state" class="fa fa-chevron-down" aria-hidden="true"></i>
+</div>

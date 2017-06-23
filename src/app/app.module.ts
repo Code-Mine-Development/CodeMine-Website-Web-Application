@@ -6,6 +6,7 @@ import {MainComponent} from './main/main.component';
 import {StartAnimationComponent} from './main/start-animation/start-animation.component';
 import {OfferComponent} from './offer/offer.component';
 import {CoreModule} from "./core/core-module";
+import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
 
 @NgModule({
     declarations: [
@@ -16,7 +17,8 @@ import {CoreModule} from "./core/core-module";
     ],
     imports: [
         BrowserModule,
-        CoreModule
+        CoreModule,
+        BrowserAnimationsModule
     ],
     providers: [],
     bootstrap: [AppComponent]

@@ -1,6 +1,15 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { OfficeComponent } from './office.component';
+import {Component} from "@angular/core";
+
+@Component({
+  selector: 'app-office',
+  template: '<header style="height: 50px"></header>',
+})
+export class MockHeaderComponent{
+
+}
 
 describe('OfficeComponent', () => {
   let component: OfficeComponent;
@@ -8,7 +17,7 @@ describe('OfficeComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ OfficeComponent ]
+      declarations: [ MockHeaderComponent, OfficeComponent]
     })
     .compileComponents();
   }));

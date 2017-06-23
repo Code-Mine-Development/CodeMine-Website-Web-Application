@@ -5,7 +5,8 @@ import {PageNotFoundComponent} from "./core/page-not-found/page-not-found.compon
 import {HomeComponent} from "./core/home/home.component";
 
 const appRoutes: Routes = [
-  { path: '', component:HomeComponent},
+  { path: '', redirectTo:'/home', pathMatch:'full'},
+  { path: 'home', component:HomeComponent},
   { path: 'offer', component:OfferComponent},
   { path: 'aboutUs', loadChildren: './about-us/about-us.module#AboutUsModule'},
 

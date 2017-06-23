@@ -7,7 +7,7 @@ import {AboutUsRoutingModule} from "./about-us.routing.module";
 @NgModule({
     imports: [
         CommonModule,
-        AboutUsRoutingModule
+        AboutUsRoutingModule,
     ],
     declarations: [
         AboutUsComponent,

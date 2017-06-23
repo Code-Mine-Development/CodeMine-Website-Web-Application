@@ -1,6 +1,11 @@
+@import "../../../assets/styles/colors";
+
 header{
   display: flex;
   justify-content: space-between;
+  padding: 20px;
+  z-index: 1;
+  position: relative;
 }
 ul{
   display: flex;
@@ -12,5 +17,6 @@ ul{
   }
   li{
     cursor:pointer;
+    padding: 0 10px;
   }
 }
