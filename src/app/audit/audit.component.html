@@ -3,14 +3,17 @@
     <div class="row">
       <div class="start-panel-header">Audyty</div>
     </div>
-    <div class="row" *ngFor="let audit of audits">
-      <div class="box">
-        <img [src]="audit.image" alt="">
+    <div class="row">
+      <div class="column" *ngFor="let audit of audits">
+        <a href="#" class="audit-image" (click)="onSkip($event, target)"><img [src]="audit.image" alt=""></a>
+        <div class="row">
+          <a href="#" class="audit-title" (click)="onSkip($event, target)">{{audit.title}}</a>
+        </div>
       </div>
-      <div>{{audit.title}}</div>
-      <div class="box"></div>
     </div>
   </div>
 </div>
-<app-quality></app-quality>
-<app-usability></app-usability>
+<!--<div  #target>-->
+  <!--<app-quality></app-quality>-->
+<!--</div>-->
+<!--<app-usability></app-usability>-->

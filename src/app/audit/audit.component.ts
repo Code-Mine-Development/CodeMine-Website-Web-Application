@@ -19,5 +19,9 @@ export class AuditComponent implements OnInit {
         });
   }
 
+  onSkip(event: Event, el: HTMLElement) {
+    event.preventDefault();
+    el.scrollIntoView();
+  }
 
 }

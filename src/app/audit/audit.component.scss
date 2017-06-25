@@ -1,28 +1,31 @@
 .section-audit {
   background-color: #8E8E8E;
   height: 50vh;
-  text-align: center;
+  padding: 20px;
 
   .start-panel {
-    padding: 120px;
 
     &-header {
       font-size: 3em;
-      text-align: center;
-      margin-bottom: 50px;
+      margin-top: 40px;
+      margin-bottom: 40px;
     }
 
     .row {
       display: flex;
-      justify-content: center;
-    }
+      justify-content: space-around;
 
-    .box {
-      width: 259px;
-      height: 190px;
-      background-color: #000000;
-      border-radius: 50%;
-      margin: 0 20px;
+      .audit-image {
+        img {
+          margin-bottom: 25px;
+        }
+      }
+
+      .audit-title {
+        text-decoration: none;
+        color: #333333;
+        font-size: 1.5em;
+      }
     }
   }
 }

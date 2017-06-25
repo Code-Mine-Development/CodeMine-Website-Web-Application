@@ -16,6 +16,7 @@ import {ContactResolver} from "./contact/contact.resolver";
 import {CommonModule} from "@angular/common";
 import {AuditService} from "./audit/audit.service";
 import {AuditResolver} from "./audit/audit.resolver";
+import { AuditItemsComponent } from './audit/audit-items/audit-items.component';
 
 @NgModule({
     declarations: [
@@ -25,6 +26,7 @@ import {AuditResolver} from "./audit/audit.resolver";
         QualityComponent,
         UsabilityComponent,
         PageNotFoundComponent,
+        AuditItemsComponent,
     ],
     imports: [
         BrowserModule,
