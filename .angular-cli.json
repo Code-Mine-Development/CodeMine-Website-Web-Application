@@ -19,7 +19,6 @@
       "testTsconfig": "tsconfig.spec.json",
       "prefix": "app",
       "styles": [
-        "../node_modules/reset-css/_reset.scss",
         "../node_modules/font-awesome/css/font-awesome.css",
         "styles.scss"
       ],

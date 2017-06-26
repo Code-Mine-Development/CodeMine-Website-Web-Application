@@ -16,20 +16,21 @@
 		  }
 
 		  .contact-box {
-			 background-color: #F2F2F2;
-			 text-align: center;
-			 line-height: 28px;
-			 padding: 100px 100px;
+         background-color: #F2F2F2;
+         text-align: center;
+         line-height: 28px;
+         padding: 100px 20px;
 
-			 .text {
-				font-size: 1.8em;
+        .text {
+          font-size: 1.8em;
 			 }
 
 			 &-header {
-				font-size: 3.6em;
-				font-weight: 500;
-				margin-bottom: 50px;
-			 }
+         font-size: 3.6em;
+         font-weight: 500;
+         margin-bottom: 50px;
+         line-height: 36px;
+       }
 
 			 .contact {
 				font-weight: 700;
