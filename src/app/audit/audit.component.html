@@ -13,7 +13,4 @@
     </div>
   </div>
 </div>
-<div  #target>
-  <app-quality></app-quality>
-  <app-usability></app-usability>
-</div>
+<app-audit-details *ngFor="let audit of audits" [audit]="audit"></app-audit-details>

@@ -1,7 +1,7 @@
 [
   {
     "title": "Code Quality",
-    "image":"http://d2t44wh9rnwl5y.cloudfront.net/gsc/FDVL08/d3/97/74/d3977437423c45c994d1ab0a6507ba98/images/audyty_ver_1/u929.png?token=fb861cb9aed3eb6f1fb11bbaffac0903",
+    "image":"./assets/images/usability.png",
     "description":"Audyt zastosowanej technologii  i architektury aplikacji, Audyt kodu źródłowego Audyt skalowalności i wydajności aplikacji.Często gdy ktoś wynajmuje firmę do wykonania oprogramowania jest zmuszony zaakceptowac produkt jaki dostanie i nie ma możliwości sprawdzenia co siedzi pod maską, czy to z braku własnych zasobów by to zrobić czy też ze względu na czas. Tutaj wchodzi Code Mine - możemy być filtrem/tarczą między klientem a wykonawcą sprawdzając i oceniając rozwiązania jakie zastosowano i czy na pewno spełniają one wymaania",
     "tasks":[
       {
@@ -28,7 +28,7 @@
   },
   {
     "title": "Usability",
-    "image":"http://d2v8ggac1o0f6z.cloudfront.net/gsc/FDVL08/dc/b3/78/dcb378943c9149838f70975f19cbd3f0/images/audyty_ver_1/u833.png?token=7a88aa7069852d395dd50eb8e81ab8da",
+    "image":"./assets/images/quality.png",
     "description":"Audyt usability ma na celu kompleksową analizę użyteczności i funkcjonalności strony internetowej, aplikacji czy systemu. Podczas tego procesu sprawdzamy przede wszystkim intuicyjność strony, łatwość poruszania po niej, przydatność dla internautów i ogólne wrażenia związane z korzystania z usługi. Bierzemy pod uwagę wszystkie czynniki mające wpływ na użyteczność takie jak: architektura informacji, nawigacja, strukturę funkcjonalności dodatkowo sprawdzamy wszystkie ekrany oraz procesy myślowe. Stosujemy najlepsze techniki w zależności od rodzaju powierzonego problemu takie jak: Indywidualne wywiady pogłębione, Card Sorting, Paper prototyping, Eyetracking,",
     "tasks":[
       {

@@ -15,7 +15,6 @@ export class AuditComponent implements OnInit {
     this.route.data
         .subscribe((data: Data) =>{
           this.audits = data['audit'];
-          console.log(this.audits)
         });
   }
 
