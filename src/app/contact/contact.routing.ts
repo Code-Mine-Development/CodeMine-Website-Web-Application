@@ -1,7 +1,7 @@
 import {NgModule} from '@angular/core';
 import {RouterModule, Routes} from '@angular/router';
-import {ContactComponent} from "./contact.component";
-import {ContactResolver} from "./contact.resolver";
+import {ContactComponent} from './contact.component';
+import {ContactResolver} from './contact.resolver';
 
 const contactRoutes: Routes = [
     {path: '', component: ContactComponent, resolve: {company: ContactResolver}},

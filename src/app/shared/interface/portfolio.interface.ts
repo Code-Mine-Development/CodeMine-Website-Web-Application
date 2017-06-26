@@ -1,5 +1,5 @@
-import {Tags} from "./tags.interface";
-import {Technologies} from "./technologies.interface";
+import {Tags} from './tags.interface';
+import {Technologies} from './technologies.interface';
 export interface Portfolio {
     title: string;
     description: string;

@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import {ActivatedRoute, Data} from "@angular/router";
-import {Company} from "../shared/interface/company.interface";
+import {ActivatedRoute, Data} from '@angular/router';
+import {Company} from '../shared/interface/company.interface';
 
 @Component ({
   selector: 'app-contact',
@@ -9,12 +9,12 @@ import {Company} from "../shared/interface/company.interface";
 })
 
 export class ContactComponent implements OnInit {
-  company:Company;
+  company: Company;
   constructor(private route: ActivatedRoute) { }
 
   ngOnInit() {
     this.route.data
-        .subscribe((data: Data) =>{
+        .subscribe((data: Data) => {
           this.company = data['company'];
         });
   }

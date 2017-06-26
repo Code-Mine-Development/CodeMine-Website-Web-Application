@@ -1,4 +1,4 @@
-export interface Company{
+export interface Company {
     country: string;
     city: string;
     street: string;

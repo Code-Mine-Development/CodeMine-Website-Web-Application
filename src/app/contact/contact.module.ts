@@ -1,8 +1,8 @@
 import {NgModule} from '@angular/core';
-import {CommonModule} from "@angular/common";
-import {UiModule} from "../ui-elements/ui.module";
-import {ContactComponent} from "./contact.component";
-import {ContactRoutingModule} from "./contact.routing";
+import {CommonModule} from '@angular/common';
+import {UiModule} from '../ui-elements/ui.module';
+import {ContactComponent} from './contact.component';
+import {ContactRoutingModule} from './contact.routing';
 
 @NgModule({
     declarations: [
@@ -13,8 +13,8 @@ import {ContactRoutingModule} from "./contact.routing";
         ContactRoutingModule,
         UiModule,
     ],
-    exports:[],
-    providers:[]
+    exports: [],
+    providers: []
 })
 export class ContactModule {
 }

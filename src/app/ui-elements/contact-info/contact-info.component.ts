@@ -1,5 +1,5 @@
 import {Component, OnInit, Input} from '@angular/core';
-import {Company} from "../../shared/interface/company.interface";
+import {Company} from '../../shared/interface/company.interface';
 
 @Component({
   selector: 'app-contact-info',
@@ -7,7 +7,7 @@ import {Company} from "../../shared/interface/company.interface";
   styleUrls: ['./contact-info.component.scss']
 })
 export class ContactInfoComponent implements OnInit {
-  @Input() company:Company[];
+  @Input() company: Company[];
   constructor() { }
 
   ngOnInit() {

@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-start-animation',
+  selector: 'app-home-information',
   templateUrl: 'home-information.component.html',
   styleUrls: ['home-information.component.scss']
 })

@@ -1,6 +1,6 @@
-import {Injectable} from "@angular/core";
-import {Http, Response} from "@angular/http";
-import {Portfolio} from "../interface/portfolio.interface";
+import {Injectable} from '@angular/core';
+import {Http, Response} from '@angular/http';
+import {Portfolio} from '../interface/portfolio.interface';
 import 'rxjs/Rx';
 
 const url = 'assets/data/';
@@ -13,7 +13,7 @@ export class PortfolioService {
     }
 
     getPortfolioList() {
-        return this.http.get(url +'portfolio.json')
+        return this.http.get(url + 'portfolio.json')
             .map(
                 (response: Response) => {
                     const portfolio: Portfolio[] = response.json();
@@ -21,14 +21,14 @@ export class PortfolioService {
                 })
     }
 
-    getPortfolioHomePageList(){
-        return this.http.get(url +'portfolio.json')
+    getPortfolioHomePageList() {
+        return this.http.get(url + 'portfolio.json')
             .map(
                 (response: Response) => {
                     const portfolio = response.json();
-                    portfolio.forEach((item,index)=>{
-                        if (!item.homePage){
-                            portfolio.splice(index,1);
+                    portfolio.forEach((item, index) => {
+                        if (!item.homePage) {
+                            portfolio.splice(index, 1);
                         }
                     });
                     return portfolio;

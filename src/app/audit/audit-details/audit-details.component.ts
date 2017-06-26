@@ -1,5 +1,5 @@
 import {Component, OnInit, NgZone, Input} from '@angular/core';
-import {Audit} from "../audit.interface";
+import {Audit} from '../audit.interface';
 
 @Component({
   selector: 'app-audit-details',

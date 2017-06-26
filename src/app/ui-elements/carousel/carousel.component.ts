@@ -1,16 +1,17 @@
-import {Component, OnInit, ViewChildren, QueryList, Input} from '@angular/core';
-import {Portfolio} from "../../shared/interface/portfolio.interface";
+import {Component, OnInit, ViewChildren, QueryList, Input, OnDestroy} from '@angular/core';
+import {Portfolio} from '../../shared/interface/portfolio.interface';
 
 @Component({
   selector: 'app-carousel',
   templateUrl: './carousel.component.html',
   styleUrls: ['./carousel.component.scss']
 })
-export class CarouselComponent implements OnInit {
+export class CarouselComponent implements OnInit, OnDestroy {
   @ViewChildren('item') items: QueryList<any>;
   @Input() timeout = 5000;
   @Input() transition = 1000;
-  @Input() data:Portfolio[];
+  @Input() data: Portfolio[];
+  interval;
 
   constructor() { }
 
@@ -19,7 +20,7 @@ export class CarouselComponent implements OnInit {
   }
 
   animateCarousel() {
-    setInterval(() => {
+    this.interval = setInterval(() => {
       this.items.forEach((child) => {
         child.nativeElement.style.transform = 'translateX(-' + window.innerWidth + 'px)';
       });
@@ -31,5 +32,9 @@ export class CarouselComponent implements OnInit {
         });
       }, this.transition);
     }, this.timeout);
+  }
+
+  ngOnDestroy(){
+    clearInterval(this.interval);
   }
 }

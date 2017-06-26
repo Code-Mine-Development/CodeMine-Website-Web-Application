@@ -1,6 +1,6 @@
-import {Injectable} from "@angular/core";
-import {Http, Response} from "@angular/http";
-import {Audit} from "./audit.interface";
+import {Injectable} from '@angular/core';
+import {Http, Response} from '@angular/http';
+import {Audit} from './audit.interface';
 import 'rxjs/Rx';
 
 const url = 'assets/data/';

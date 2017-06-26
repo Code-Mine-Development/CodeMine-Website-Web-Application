@@ -1,14 +1,14 @@
 import {ActivatedRouteSnapshot, Resolve, RouterStateSnapshot} from '@angular/router';
 import {Observable} from 'rxjs/Observable';
 import {Injectable} from '@angular/core';
-import {AuditService} from "./audit.service";
-import {Audit} from "./audit.interface";
+import {AuditService} from './audit.service';
+import {Audit} from './audit.interface';
 
 
 @Injectable()
 export class AuditResolver implements Resolve<Audit> {
 
-    constructor(private auditService: AuditService){
+    constructor(private auditService: AuditService) {
 
     }
 

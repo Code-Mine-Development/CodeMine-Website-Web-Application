@@ -1,7 +1,7 @@
 import {NgModule} from '@angular/core';
-import {CarouselComponent} from "./carousel/carousel.component";
-import {CommonModule} from "@angular/common";
-import {ContactInfoComponent} from "./contact-info/contact-info.component";
+import {CarouselComponent} from './carousel/carousel.component';
+import {CommonModule} from '@angular/common';
+import {ContactInfoComponent} from './contact-info/contact-info.component';
 import { ListComponent } from './list/list.component';
 
 @NgModule({
@@ -13,7 +13,7 @@ import { ListComponent } from './list/list.component';
     imports: [
         CommonModule,
     ],
-    exports:[CarouselComponent,ContactInfoComponent,ListComponent],
+    exports: [CarouselComponent, ContactInfoComponent, ListComponent],
     providers: [],
 })
 export class UiModule {

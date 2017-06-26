@@ -1,7 +1,7 @@
 import {Component, OnInit} from '@angular/core';
-import {Portfolio} from "../../shared/interface/portfolio.interface";
-import {ActivatedRoute, Data} from "@angular/router";
-import {Company} from "../../shared/interface/company.interface";
+import {Portfolio} from '../../shared/interface/portfolio.interface';
+import {ActivatedRoute, Data} from '@angular/router';
+import {Company} from '../../shared/interface/company.interface';
 
 @Component({
     selector: 'app-home-page',
@@ -10,7 +10,7 @@ import {Company} from "../../shared/interface/company.interface";
 })
 export class HomePageComponent implements OnInit {
     carousel: Portfolio;
-    company:Company;
+    company: Company;
 
     constructor(private route: ActivatedRoute) {
     }
@@ -21,11 +21,6 @@ export class HomePageComponent implements OnInit {
                 this.carousel = data['carousel'];
                 this.company = data['company'];
             });
-    }
-
-    onSkip(event: Event, el: HTMLElement) {
-        event.preventDefault();
-        el.scrollIntoView();
     }
 
 }
