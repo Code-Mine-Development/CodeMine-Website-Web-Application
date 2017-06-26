@@ -86,13 +86,13 @@ describe('CarouselComponent', () => {
   }
 
 
-  it('should set interval',(done) => {
-    fixture.whenStable().then(() => {
-      observableDelay(component.data,100).subscribe((response)=>{
-        console.log(response);
-      });
-      done();
-    });
-  });
+  // it('should set interval',(done) => {
+  //   fixture.whenStable().then(() => {
+  //     observableDelay(component.data,100).subscribe((response)=>{
+  //       console.log(response);
+  //     });
+  //     done();
+  //   });
+  // });
 
 });
