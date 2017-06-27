@@ -6,7 +6,7 @@ import {Audit} from '../audit.interface';
   templateUrl: './audit-details.component.html',
   styleUrls: ['./audit-details.component.scss'],
   host: {
-    'window:resize)' : 'registerWindowChange($event)'
+    '(window:resize)' : 'registerWindowChange($event)'
   }
 })
 export class AuditDetailsComponent implements OnInit {
