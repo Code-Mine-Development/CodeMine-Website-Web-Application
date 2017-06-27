@@ -2,7 +2,7 @@ import {NgModule} from '@angular/core';
 import {RouterModule, Routes, PreloadAllModules} from '@angular/router';
 import {HomePageComponent} from './core/home-page/home-page.component';
 import {ContactResolver} from './contact/contact.resolver';
-import {PageNotFoundComponent} from './page-not-found/page-not-found.component';
+import {PageNotFoundComponent} from './core/page-not-found/page-not-found.component';
 import {HomePageResolver} from './core/home-page/home-page.resolver';
 
 const appRoutes: Routes = [
