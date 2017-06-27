@@ -1,29 +1,29 @@
 import {async, ComponentFixture, TestBed} from '@angular/core/testing';
 
 import {ListComponent} from './list.component';
-import {Component} from "@angular/core";
+import {Component} from '@angular/core';
 
 
 const MockData = {
-    "tasks":[
+    'tasks': [
         {
-            "name":"Badanie kodu źródłowego pod kątem zgodności z standardami"
+            'name': 'Badanie kodu źródłowego pod kątem zgodności z standardami'
         },
         {
-            "name":"Ocena kodu pod kątem braku wykorzystania lub błędnego wykorzystania wzorców projektowych"
+            'name': 'Ocena kodu pod kątem braku wykorzystania lub błędnego wykorzystania wzorców projektowych'
         },
         {
-            "name":"Sprawdzenie sposobu wykorzystania bibliotek zewnętrznych oraz dostarczanych przez firmy trzecie."
+            'name': 'Sprawdzenie sposobu wykorzystania bibliotek zewnętrznych oraz dostarczanych przez firmy trzecie.'
         }
     ],
 };
 
 @Component({
-    selector: 'fake-app-list-wrapper',
+    selector: 'app-fake-list-wrapper',
     template: `<app-list [listData]="listData.tasks" [title]="title"></app-list>`
 })
 class FakeWrapperListComponent {
-    title: string = 'testTitle';
+    title = 'testTitle';
     listData = MockData;
 }
 

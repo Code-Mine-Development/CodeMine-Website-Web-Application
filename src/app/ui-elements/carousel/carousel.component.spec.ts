@@ -1,7 +1,7 @@
-import {async, ComponentFixture, TestBed, tick, fakeAsync, discardPeriodicTasks} from '@angular/core/testing';
+import {async, ComponentFixture, TestBed} from '@angular/core/testing';
 import { CarouselComponent } from './carousel.component';
-import {Observable} from 'rxjs';
-import {Component} from "@angular/core";
+import {Observable} from 'rxjs/Observable';
+import {Component} from '@angular/core';
 
 const MockCarouselData = [
   {
@@ -59,13 +59,13 @@ const MockCarouselData = [
 ];
 
 @Component({
-  selector: 'fake-carousel-wrapper',
+  selector: 'app-fake-carousel-wrapper',
   template: `<app-carousel [data]="data" [timeout]="timeout" [transition]="transition"></app-carousel>`
 })
 class FakeWrapperCarouselComponent {
   data = MockCarouselData;
-  timeout:number = 5000;
-  transition:number = 1500;
+  timeout = 5000;
+  transition = 1500;
 }
 
 describe('CarouselComponent', () => {

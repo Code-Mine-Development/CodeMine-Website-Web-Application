@@ -1,22 +1,22 @@
 import {Router, Routes} from '@angular/router';
 import { RouterTestingModule } from '@angular/router/testing';
 import {TestBed, inject, tick, fakeAsync} from '@angular/core/testing';
-import {ContactResolver} from "./contact.resolver";
-import {ContactService} from "./contact.service";
-import {HttpModule} from "@angular/http";
-import {Component} from "@angular/core";
+import {ContactResolver} from './contact.resolver';
+import {ContactService} from './contact.service';
+import {HttpModule} from '@angular/http';
+import {Component} from '@angular/core';
 
 const MockCompany = {
-    "country":"Poland",
-    "city": "Katowice",
-    "street":"3 maja",
-    "apartment": "18/3",
-    "email":"office@code-mine.com",
-    "phone":"+48 723 21 67"
+    'country': 'Poland',
+    'city': 'Katowice',
+    'street': '3 maja',
+    'apartment': '18/3',
+    'email': 'office@code-mine.com',
+    'phone': '+48 723 21 67'
 };
 
 @Component ({
-    selector: 'fake-app-resolver',
+    selector: 'app-fake-resolver',
     template: '<p></p>',
 })
 class FakeResolveComponent {}
@@ -30,9 +30,9 @@ describe('ContactResolverService', () => {
 
     beforeEach(() => {
         TestBed.configureTestingModule({
-            declarations:[FakeResolveComponent],
-            providers: [ContactResolver,ContactService],
-            imports: [RouterTestingModule.withRoutes(routes),HttpModule]
+            declarations: [FakeResolveComponent],
+            providers: [ContactResolver, ContactService],
+            imports: [RouterTestingModule.withRoutes(routes), HttpModule]
         });
     });
 

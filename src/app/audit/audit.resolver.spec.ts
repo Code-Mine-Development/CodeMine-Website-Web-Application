@@ -1,15 +1,15 @@
-import {Router, Routes,} from '@angular/router';
+import {Router, Routes, } from '@angular/router';
 import { RouterTestingModule } from '@angular/router/testing';
 import {TestBed, inject, tick, fakeAsync} from '@angular/core/testing';
 
-import {HttpModule} from "@angular/http";
-import {Component} from "@angular/core";
-import {AuditResolver} from "./audit.resolver";
-import {MockAudit} from "./mocks/audit.mock";
-import {AuditService} from "./audit.service";
+import {HttpModule} from '@angular/http';
+import {Component} from '@angular/core';
+import {AuditResolver} from './audit.resolver';
+import {MockAudit} from './mocks/audit.mock';
+import {AuditService} from './audit.service';
 
 @Component ({
-    selector: 'fake-audit-resolver',
+    selector: 'app-fake-audit-resolver',
     template: '<p></p>',
 })
 class FakeResolveComponent {}
@@ -23,9 +23,9 @@ describe('AuditResolverService', () => {
 
     beforeEach(() => {
         TestBed.configureTestingModule({
-            declarations:[FakeResolveComponent],
-            providers: [AuditResolver,AuditService],
-            imports: [RouterTestingModule.withRoutes(routes),HttpModule]
+            declarations: [FakeResolveComponent],
+            providers: [AuditResolver, AuditService],
+            imports: [RouterTestingModule.withRoutes(routes), HttpModule]
         })
     });
 

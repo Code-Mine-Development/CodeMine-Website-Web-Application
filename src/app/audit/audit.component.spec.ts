@@ -1,10 +1,10 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { AuditComponent } from './audit.component';
-import {AuditDetailsComponent} from "./audit-details/audit-details.component";
-import {ActivatedRoute, Data, Router} from "@angular/router";
-import {ListComponent} from "../ui-elements/list/list.component";
-import {MockAudit} from "./mocks/audit.mock";
+import {AuditDetailsComponent} from './audit-details/audit-details.component';
+import {ActivatedRoute, Data, Router} from '@angular/router';
+import {ListComponent} from '../ui-elements/list/list.component';
+import {MockAudit} from './mocks/audit.mock';
 
 
 describe('AuditComponent', () => {

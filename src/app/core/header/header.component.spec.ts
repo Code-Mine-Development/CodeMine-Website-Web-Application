@@ -7,10 +7,10 @@ import {Routes} from '@angular/router';
 import {Component} from '@angular/core';
 
 @Component ({
-  selector: 'fake-app-contact',
+  selector: 'app-fake-contact',
   template: '<h1>Contact\'s routing works</h1>',
 })
-export class FakeContactComponent{}
+export class FakeContactComponent {}
 
 export const routes: Routes = [
   {path: 'contact', component: FakeContactComponent},
@@ -31,7 +31,6 @@ describe('HeaderComponent', () => {
     })
     .compileComponents();
   }));
-
   beforeEach(() => {
     fixture = TestBed.createComponent(HeaderComponent);
     fakeFixture = TestBed.createComponent(FakeContactComponent);

@@ -1,12 +1,12 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { AuditDetailsComponent } from './audit-details.component';
-import {Component} from "@angular/core";
-import {MockAudit} from "../mocks/audit.mock";
-import {ListComponent} from "../../ui-elements/list/list.component";
+import {Component} from '@angular/core';
+import {MockAudit} from '../mocks/audit.mock';
+import {ListComponent} from '../../ui-elements/list/list.component';
 
 @Component({
-    selector: 'fake-audit-wrapper',
+    selector: 'app-fake-audit-wrapper',
     template: `<app-audit-details [audit]="audit"></app-audit-details>`
 })
 
@@ -15,8 +15,8 @@ class FakeWrapperAuditDetailsComponent {
 }
 
 const MockWindowEvent = {
-  target:{
-    innerWidth:1500,
+  target: {
+    innerWidth: 1500,
   }
 };
 

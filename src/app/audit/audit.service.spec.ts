@@ -1,8 +1,8 @@
 import {async, TestBed, inject} from '@angular/core/testing';
 import {HttpModule, XHRBackend, ResponseOptions, Response} from '@angular/http';
 import {MockBackend} from '@angular/http/testing';
-import {AuditService} from "./audit.service";
-import {MockAudit} from "./mocks/audit.mock";
+import {AuditService} from './audit.service';
+import {MockAudit} from './mocks/audit.mock';
 
 describe('AuditService', () => {
     beforeEach(async(() => {

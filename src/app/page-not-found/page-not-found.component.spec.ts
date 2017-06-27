@@ -2,15 +2,15 @@ import {async, ComponentFixture, TestBed, fakeAsync, tick} from '@angular/core/t
 import {Location} from '@angular/common';
 
 import {PageNotFoundComponent} from './page-not-found.component';
-import {Component} from "@angular/core";
-import {RouterTestingModule} from "@angular/router/testing";
-import {Routes} from "@angular/router";
+import {Component} from '@angular/core';
+import {RouterTestingModule} from '@angular/router/testing';
+import {Routes} from '@angular/router';
 
 @Component({
-    selector: 'fake-app-page-not-found',
+    selector: 'app-fake-page-not-found',
     template: '<button class="fakeButton" routerLink="/wrong"></button>',
 })
-class FakeWrongComponent{}
+class FakeWrongComponent {}
 
 export const routes: Routes = [
     {path: 'not-found', component: PageNotFoundComponent},
@@ -20,16 +20,14 @@ export const routes: Routes = [
 describe('PageNotFoundComponent', () => {
     let component: PageNotFoundComponent;
     let fixture: ComponentFixture<PageNotFoundComponent>;
-
     let fakeComponent: FakeWrongComponent;
     let fakeFixture: ComponentFixture<FakeWrongComponent>;
-
     let location: Location;
     let nativeElement;
 
     beforeEach(async(() => {
         TestBed.configureTestingModule({
-            imports:[RouterTestingModule.withRoutes(routes)],
+            imports: [RouterTestingModule.withRoutes(routes)],
             declarations: [FakeWrongComponent, PageNotFoundComponent]
         })
             .compileComponents();

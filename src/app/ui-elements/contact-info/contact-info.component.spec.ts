@@ -1,6 +1,6 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 import { ContactInfoComponent } from './contact-info.component';
-import {Component} from "@angular/core";
+import {Component} from '@angular/core';
 
 const MockCompany = [{
   'country': 'Poland',
@@ -12,7 +12,7 @@ const MockCompany = [{
 }];
 
 @Component({
-  selector: 'fake-contact-info-wrapper',
+  selector: 'app-fake-contact-info-wrapper',
   template: `<app-contact-info [company]="company"></app-contact-info>`
 })
 class FakeWrapperContactInfoComponent {

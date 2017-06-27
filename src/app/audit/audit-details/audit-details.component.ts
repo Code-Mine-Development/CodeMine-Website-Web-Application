@@ -5,8 +5,8 @@ import {Audit} from '../audit.interface';
   selector: 'app-audit-details',
   templateUrl: './audit-details.component.html',
   styleUrls: ['./audit-details.component.scss'],
-  host : {
-    '(window:resize)' : 'registerWindowChange($event)'
+  host: {
+    'window:resize)' : 'registerWindowChange($event)'
   }
 })
 export class AuditDetailsComponent implements OnInit {
@@ -15,12 +15,9 @@ export class AuditDetailsComponent implements OnInit {
 
   constructor() {}
 
-  registerWindowChange(event):void{
+  registerWindowChange(event): void {
     this.width = event.target.innerWidth;
   }
 
-  ngOnInit() {
-
-  }
-
+  ngOnInit() {}
 }
