@@ -1,0 +1,31 @@
+.section-audit {
+  background-color: #8E8E8E;
+  height: 50vh;
+  padding: 20px;
+
+  .start-panel {
+
+    &-header {
+      font-size: 3em;
+      margin-top: 140px;
+      margin-bottom: 60px;
+    }
+
+    .row {
+      display: flex;
+      justify-content: space-around;
+
+      .audit-image {
+        img {
+          margin-bottom: 25px;
+        }
+      }
+
+      .audit-title {
+        text-decoration: none;
+        color: #333333;
+        font-size: 1.5em;
+      }
+    }
+  }
+}
