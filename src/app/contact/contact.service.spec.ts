@@ -3,16 +3,14 @@ import {HttpModule, XHRBackend, ResponseOptions, Response} from '@angular/http';
 import {MockBackend} from '@angular/http/testing';
 import {ContactService} from './contact.service';
 
-const MockCompany = [
-  {
-    'country': 'Poland',
-    'city': 'Katowice',
-    'street': '3 maja',
-    'apartment': '18/3',
-    'email': 'office@code-mine.com',
-    'phone': '+48 723 21 67'
-  }
-];
+const MockCompany = {
+  'country': 'Poland',
+  'city': 'Katowice',
+  'street': '3 maja',
+  'apartment': '18/3',
+  'email': 'office@code-mine.com',
+  'phone': '+48 723 21 67'
+};
 
 describe('ContactService', () => {
   beforeEach(async(() => {
@@ -36,8 +34,7 @@ describe('ContactService', () => {
         });
 
         contactService.getCompany().subscribe((company) => {
-          // expect(company.length).toBe(2);
-          expect(company[0].country).toEqual('Poland');
+          expect(company.country).toEqual('Poland');
         });
       }));
   });

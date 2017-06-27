@@ -1,6 +1,7 @@
 import {async, ComponentFixture, TestBed, tick, fakeAsync, discardPeriodicTasks} from '@angular/core/testing';
 import { CarouselComponent } from './carousel.component';
 import {Observable} from 'rxjs';
+import {Component} from "@angular/core";
 
 const MockCarouselData = [
   {
@@ -57,27 +58,56 @@ const MockCarouselData = [
   },
 ];
 
+@Component({
+  selector: 'fake-carousel-wrapper',
+  template: `<app-carousel [data]="data" [timeout]="timeout" [transition]="transition"></app-carousel>`
+})
+class FakeWrapperCarouselComponent {
+  data = MockCarouselData;
+  timeout:number = 5000;
+  transition:number = 1500;
+}
+
 describe('CarouselComponent', () => {
   let component: CarouselComponent;
-  let fixture: ComponentFixture<CarouselComponent>;
-  // let originalTimeout;
+  let fixture: ComponentFixture<FakeWrapperCarouselComponent>;
+
+  let fakeComponent: CarouselComponent;
+  let fakeFixture: ComponentFixture<CarouselComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [CarouselComponent ]
+      declarations: [FakeWrapperCarouselComponent, CarouselComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(CarouselComponent);
-    component = fixture.componentInstance;
+    fixture = TestBed.createComponent(FakeWrapperCarouselComponent);
+    component = fixture.debugElement.children[0].componentInstance;
+
+    fakeFixture = TestBed.createComponent(CarouselComponent);
+    fakeComponent = fakeFixture.componentInstance;
+    fakeComponent.data = component.data;
+    fakeComponent.timeout = component.timeout;
+    fakeComponent.transition = component.transition;
     fixture.detectChanges();
-    component.data = MockCarouselData;
   });
 
   it('should be created', () => {
     expect(component).toBeTruthy();
+  });
+
+  it('should @Input timeout to be 5000', () => {
+    expect(component.timeout).toBe(5000)
+  });
+
+  it('should @Input transition to be 1500', () => {
+    expect(component.transition).toBe(1500)
+  });
+
+  it('should @Input data contain Mock from FakeWrapperCarouselComponent', () => {
+    expect(component.data).toEqual(MockCarouselData)
   });
 
 
@@ -86,13 +116,21 @@ describe('CarouselComponent', () => {
   }
 
 
-  // it('should set interval',(done) => {
-  //   fixture.whenStable().then(() => {
-  //     observableDelay(component.data,100).subscribe((response)=>{
-  //       console.log(response);
-  //     });
-  //     done();
-  //   });
-  // });
+  // it('should set interval',fakeAsync(() => {
+  //   // spyOn(component, 'setInterval').and.callThrough();
+  //   // component.animateCarousel();
+  //   // let promise = new Promise((resolve) => {
+  //   //   setTimeout(resolve, 5500)
+  //   // });
+  //   // promise.then(() => console.log(component.data));
+  //   // tick(5500);
+  //   // console.log(component.data);
+  //   // fixture.whenStable().then(() => {
+  //   //   observableDelay(component.data,100).subscribe((response)=>{
+  //   //     console.log(response);
+  //   //   });
+  //   //   done();
+  //   // });
+  // }));
 
 });

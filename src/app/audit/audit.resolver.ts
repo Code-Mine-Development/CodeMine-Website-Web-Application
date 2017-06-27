@@ -12,10 +12,8 @@ export class AuditResolver implements Resolve<Audit> {
 
     }
 
-
     resolve(route: ActivatedRouteSnapshot,
              state: RouterStateSnapshot): Observable<Audit> | Promise<Audit> | Audit {
     return  this.auditService.getAudit();
 }
-
 }

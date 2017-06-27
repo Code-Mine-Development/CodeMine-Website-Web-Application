@@ -66,7 +66,7 @@ const MockData = [
                 'mainImage': 'https://a0.awsstatic.com/main/images/logos/aws_logo_179x109.gif'
             }
         ],
-        'homePage': true
+        'homePage': false
     }
 ];
 
@@ -92,9 +92,8 @@ describe('PortfolioService', () => {
             });
 
             portfolioService.getPortfolioHomePageList().subscribe((portfolio) => {
-                expect(portfolio.length).toBe(2);
+                expect(portfolio.length).toBe(1);
                 expect(portfolio[0].title).toEqual('Mountain1');
-                expect(portfolio[1].title).toEqual('Mountain2');
                 expect(portfolio[0].technologies.length).toBeGreaterThan(0);
             });
         }));

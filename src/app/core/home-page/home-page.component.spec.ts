@@ -1,9 +1,8 @@
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import {async, ComponentFixture, TestBed} from '@angular/core/testing';
 
-import { HomePageComponent } from './home-page.component';
+import {HomePageComponent} from './home-page.component';
 import {HomeInformationComponent} from './home-information/home-information.component';
 import {ActivatedRoute, Data, Router} from '@angular/router';
-import {Observable} from 'rxjs';
 import {RouterTestingModule} from '@angular/router/testing';
 import {CommonModule} from '@angular/common';
 import {UiModule} from '../../ui-elements/ui.module';
@@ -59,40 +58,50 @@ const MockCarousel = [
 ];
 
 describe('HomePageComponent', () => {
-  let component: HomePageComponent;
-  let fixture: ComponentFixture<HomePageComponent>;
+    let component: HomePageComponent;
+    let fixture: ComponentFixture<HomePageComponent>;
     const router = {
         navigate: jasmine.createSpy('navigate')
     };
 
-  beforeEach(async(() => {
-    TestBed.configureTestingModule({
-      declarations: [ HomePageComponent, HomeInformationComponent ],
-      imports: [ CommonModule, RouterTestingModule, UiModule],
-      providers: [
-          {provide: ActivatedRoute,
-              useValue: {
-                  data: {
-                      subscribe: (fn: (value: Data) => void) => fn({
-                          company: MockCompany,
-                          carousel: MockCarousel
-                      })
-                  }
-              }
-          },
-          {provide: Router, useValue: router}
-      ]
-    })
-    .compileComponents();
-  }));
+    beforeEach(async(() => {
+        TestBed.configureTestingModule({
+            declarations: [HomePageComponent, HomeInformationComponent],
+            imports: [CommonModule, RouterTestingModule, UiModule],
+            providers: [
+                {
+                    provide: ActivatedRoute,
+                    useValue: {
+                        data: {
+                            subscribe: (fn: (value: Data) => void) => fn({
+                                company: MockCompany,
+                                carousel: MockCarousel
+                            })
+                        }
+                    }
+                },
+                {provide: Router, useValue: router}
+            ]
+        })
+            .compileComponents();
+    }));
 
-  beforeEach(() => {
-    fixture = TestBed.createComponent(HomePageComponent);
-    component = fixture.componentInstance;
-    fixture.detectChanges();
-  });
+    beforeEach(() => {
+        fixture = TestBed.createComponent(HomePageComponent);
+        component = fixture.componentInstance;
+        fixture.detectChanges();
+    });
 
-  it('should be created', () => {
-    expect(component).toBeTruthy();
-  });
+    it('should be created', () => {
+        expect(component).toBeTruthy();
+    });
+
+    it('should define our company variable', () => {
+        expect(component.company).toBeDefined();
+    });
+
+    it('should define our portfolio variable', () => {
+        expect(component.carousel).toBeDefined();
+    });
+
 });
