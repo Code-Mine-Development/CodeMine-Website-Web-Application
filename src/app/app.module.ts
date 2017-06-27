@@ -14,6 +14,8 @@ import { ProjectsComponent } from './portfolio/projects/projects.component';
 import { ProjectDetailComponent } from './portfolio/projects/project-detail/project-detail.component';
 import { CtaComponent } from './portfolio/cta/cta.component';
 import { ProjectComponent } from './portfolio/projects/project/project.component';
+import {PortfolioService} from "./shared/service/portfolio.service"
+import {Http, HttpModule} from "@angular/http";
 
 
 
@@ -36,9 +38,10 @@ import { ProjectComponent } from './portfolio/projects/project/project.component
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpModule
   ],
-  providers: [],
+  providers: [PortfolioService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

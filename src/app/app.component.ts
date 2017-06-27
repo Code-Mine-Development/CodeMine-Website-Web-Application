@@ -6,7 +6,7 @@ import WebFont from 'webfontloader';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent implements OnInit {
-  title = 'app';
+
 
   ngOnInit() {
     WebFont.load({
