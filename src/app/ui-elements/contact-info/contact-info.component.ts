@@ -1,4 +1,4 @@
-import {Component, OnInit, Input} from '@angular/core';
+import {Component, Input} from '@angular/core';
 import {Company} from '../../shared/interface/company.interface';
 
 @Component({
@@ -6,11 +6,6 @@ import {Company} from '../../shared/interface/company.interface';
   templateUrl: './contact-info.component.html',
   styleUrls: ['./contact-info.component.scss']
 })
-export class ContactInfoComponent implements OnInit {
+export class ContactInfoComponent {
   @Input() company: Company[];
-  constructor() { }
-
-  ngOnInit() {
-  }
-
 }

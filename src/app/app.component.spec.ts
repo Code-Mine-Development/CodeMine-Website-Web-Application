@@ -1,8 +1,8 @@
 import {TestBed, async, ComponentFixture} from '@angular/core/testing';
 
 import { AppComponent } from './app.component';
-import {CoreModule} from "./core/core-module";
-import {APP_BASE_HREF} from "@angular/common";
+import {CoreModule} from './core/core-module';
+import {APP_BASE_HREF} from '@angular/common';
 
 describe('AppComponent', () => {
   let app: AppComponent;
@@ -13,10 +13,10 @@ describe('AppComponent', () => {
       declarations: [
         AppComponent,
       ],
-      imports:[
+      imports: [
         CoreModule
       ],
-      providers:[
+      providers: [
         {provide: APP_BASE_HREF, useValue: '/'},
       ]
     }).compileComponents();

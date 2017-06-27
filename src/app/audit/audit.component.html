@@ -5,9 +5,9 @@
     </div>
     <div class="row">
       <div class="column" *ngFor="let audit of audits">
-        <a href="#" class="audit-image" (click)="onSkip($event, target)"><img [src]="audit.image" alt=""></a>
+        <a href="#" class="audit-image"><img [src]="audit.image" alt=""></a>
         <div class="row">
-          <a href="#" class="audit-title" (click)="onSkip($event, target)">{{audit.title}}</a>
+          <a href="#" class="audit-title">{{audit.title}}</a>
         </div>
       </div>
     </div>

@@ -2,9 +2,9 @@ import {async, ComponentFixture, TestBed, inject, tick, fakeAsync} from '@angula
 import {Location} from '@angular/common';
 
 import { HeaderComponent } from './header.component';
-import {RouterTestingModule} from "@angular/router/testing";
-import {Routes} from "@angular/router";
-import {Component} from "@angular/core";
+import {RouterTestingModule} from '@angular/router/testing';
+import {Routes} from '@angular/router';
+import {Component} from '@angular/core';
 
 @Component ({
   selector: 'fake-app-contact',
@@ -26,8 +26,8 @@ describe('HeaderComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ HeaderComponent,FakeContactComponent ],
-      imports:[RouterTestingModule.withRoutes(routes)]
+      declarations: [ HeaderComponent, FakeContactComponent ],
+      imports: [RouterTestingModule.withRoutes(routes)]
     })
     .compileComponents();
   }));
@@ -47,7 +47,7 @@ describe('HeaderComponent', () => {
   });
 
   it('should return 4 links with routing', () => {
-    let link = nativeElement.querySelectorAll('header ul li');
+    const link = nativeElement.querySelectorAll('header ul li');
     expect(link.length).toBe(4)
   });
 
