@@ -1,0 +1,11 @@
+<div class="section-home">
+  <app-home-information></app-home-information>
+  <div class="skip">
+    <div class="skip-text">skip</div>
+    <a class="skip-btn" scrollTo  href="#target"><i class="fa fa-chevron-down" aria-hidden="true"></i></a>
+  </div>
+</div>
+<div id="target">
+  <app-carousel [data]="carousel" [timeout]="5000" [transition]="1500"></app-carousel>
+</div>
+<app-contact-info [company]="company"></app-contact-info>

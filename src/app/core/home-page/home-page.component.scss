@@ -1,0 +1,26 @@
+:host{
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.section-home {
+  //position: relative;
+  //height: 90vh;
+
+  .skip {
+    text-align: center;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+
+    &-text {
+      font-size: 1.6em;
+    }
+
+    &-btn {
+      font-size: 2.5em;
+      color: #333333;
+    }
+  }
+}

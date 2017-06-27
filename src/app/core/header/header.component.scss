@@ -1,0 +1,31 @@
+@import "../../../assets/styles/colors";
+
+
+:host{
+  z-index: 9999999;
+  background: white;
+  position: fixed;
+  width: 100%;
+  top:0;
+
+  header{
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    z-index: 1;
+    position: relative;
+  }
+  ul{
+    display: flex;
+    li.active{
+      font-weight: bold;
+    }
+    li:focus{
+      outline:none;
+    }
+    li{
+      cursor:pointer;
+      padding: 0 10px;
+    }
+  }
+}
