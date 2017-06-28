@@ -1,5 +1,5 @@
 import {Component, OnInit} from '@angular/core';
-import {Portfolio} from '../../shared/interface/portfolio.interface';
+import {Portfolio} from '../../aplication/portfolio/interfaces/portfolio.interface';
 import {ActivatedRoute, Data} from '@angular/router';
 import {Company} from '../../shared/interface/company.interface';
 

@@ -1,0 +1,5 @@
+<app-portfolio-project [ngClass]="{'right': i %2!==0}" *ngFor="let project of portfolio, let i = index" [project]="project" [index]="i"></app-portfolio-project>
+<div class="cta">
+  <h2>CTA dodaj swój projekt</h2>
+  <app-button [title]="'CTA do formularza'" [color]="'#169bd5'" [hover]="'#000000'"></app-button>
+</div>

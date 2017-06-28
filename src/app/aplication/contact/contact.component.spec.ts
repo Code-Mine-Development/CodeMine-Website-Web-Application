@@ -1,25 +1,21 @@
 import {async, ComponentFixture, TestBed} from '@angular/core/testing';
-import {HomePageComponent} from './home-page.component';
-import {HomeInformationComponent} from '../../components/home-page/home-information/home-information.component';
+import {ContactComponent} from './contact.component';
+import {ContactInfoComponent} from '../../components/contact/contact-info/contact-info.component';
 import {ActivatedRoute, Data, Router} from '@angular/router';
-import {RouterTestingModule} from '@angular/router/testing';
-import {CommonModule} from '@angular/common';
-import {UiModule} from '../../shared/ui-elements/ui.module';
-import {ContactComponentModule} from "../../components/contact/contact-components.module";
 import {MockCompany} from "../../shared/mocks/company.mock";
-import {MockCarousel} from "../../shared/mocks/carousel.mock";
 
-describe('HomePageComponent', () => {
-    let component: HomePageComponent;
-    let fixture: ComponentFixture<HomePageComponent>;
+describe('ContactComponent', () => {
+    let component: ContactComponent;
+    let fixture: ComponentFixture<ContactComponent>;
+
     const router = {
         navigate: jasmine.createSpy('navigate')
     };
 
+
     beforeEach(async(() => {
         TestBed.configureTestingModule({
-            declarations: [HomePageComponent, HomeInformationComponent],
-            imports: [CommonModule, RouterTestingModule, UiModule,ContactComponentModule],
+            declarations: [ContactComponent, ContactInfoComponent],
             providers: [
                 {
                     provide: ActivatedRoute,
@@ -27,7 +23,6 @@ describe('HomePageComponent', () => {
                         data: {
                             subscribe: (fn: (value: Data) => void) => fn({
                                 company: MockCompany,
-                                carousel: MockCarousel
                             })
                         }
                     }
@@ -39,7 +34,7 @@ describe('HomePageComponent', () => {
     }));
 
     beforeEach(() => {
-        fixture = TestBed.createComponent(HomePageComponent);
+        fixture = TestBed.createComponent(ContactComponent);
         component = fixture.componentInstance;
         fixture.detectChanges();
     });
@@ -52,8 +47,5 @@ describe('HomePageComponent', () => {
         expect(component.company).toBeDefined();
     });
 
-    it('should define our portfolio variable', () => {
-        expect(component.carousel).toBeDefined();
-    });
 
 });

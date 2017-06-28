@@ -1,6 +1,10 @@
 export interface Technologies {
-    title: string,
-    description: string,
-    thumbnail: string,
-    mainImage: string
+    technologies:[
+        {
+            title: string,
+            description: string,
+            thumbnail: string,
+            mainImage: string
+        }
+    ]
 }

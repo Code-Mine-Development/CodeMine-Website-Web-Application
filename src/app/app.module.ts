@@ -1,26 +1,36 @@
-import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
+import {BrowserModule} from '@angular/platform-browser';
+import {NgModule} from '@angular/core';
 
-import { AppComponent } from './app.component';
+import {AppComponent} from './app.component';
 import {CommonModule} from '@angular/common';
 import {HttpModule} from '@angular/http';
 import {CoreModule} from './core/core-module';
-import {PortfolioService} from './shared/service/portfolio.service';
-import {HomePageResolver} from './core/home-page/home-page.resolver';
-import {ContactResolver} from './contact/contact.resolver';
-import {ContactService} from './contact/contact.service';
+import {ContactResolver} from './aplication/contact/services/contact.resolver';
+import {ContactService} from './aplication/contact/services/contact.service';
+import {PortfolioService} from "./aplication/portfolio/services/portfolio.service";
+import {PortfolioResolver} from "./aplication/portfolio/services/portfolio.resolver";
+import {PortfolioModule} from "./aplication/portfolio/portfolio.module";
+import {HomePageResolver} from "./core/home-page/services/home-page.resolver";
 
 @NgModule({
     declarations: [
-        AppComponent
+        AppComponent,
     ],
     imports: [
         BrowserModule,
         CommonModule,
         HttpModule,
         CoreModule,
+        PortfolioModule
+
     ],
-    providers: [PortfolioService, HomePageResolver, ContactResolver, ContactService],
+    providers: [
+        PortfolioService,
+        HomePageResolver,
+        ContactResolver,
+        ContactService,
+        PortfolioResolver
+    ],
     bootstrap: [AppComponent]
 })
 export class AppModule {
