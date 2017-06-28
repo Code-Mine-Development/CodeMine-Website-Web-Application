@@ -1,4 +1,4 @@
-import {async, TestBed, inject} from '@angular/core/testing';
+import {async, TestBed, inject, tick, fakeAsync} from '@angular/core/testing';
 import {HttpModule, XHRBackend, ResponseOptions, Response} from '@angular/http';
 import {MockBackend} from '@angular/http/testing';
 import {PortfolioService} from './portfolio.service';
@@ -50,7 +50,9 @@ describe('PortfolioService', () => {
                     expect(portfolio[0].title).toEqual('Mountain1');
                     expect(portfolio[1].title).toEqual('Mountain2');
                     expect(portfolio[0].technologies.length).toBeGreaterThan(0);
+                    expect(portfolioService.getPortfolioDetails(1)).toEqual(MockPortfolio[1]);
                 });
             }));
-    })
+    });
+
 });

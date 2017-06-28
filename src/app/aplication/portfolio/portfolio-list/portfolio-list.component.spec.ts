@@ -43,4 +43,9 @@ describe('PortfolioListComponent', () => {
   it('should be created', () => {
     expect(component).toBeTruthy();
   });
+
+  it('should define our portfolio variable', () => {
+    expect(component.portfolio).toBeDefined();
+  });
+
 });
