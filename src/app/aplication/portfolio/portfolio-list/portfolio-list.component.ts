@@ -1,14 +1,14 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import {Data, ActivatedRoute} from "@angular/router";
 import {Portfolio} from "../interfaces/portfolio.interface";
 
 @Component({
-  selector: 'app-portfo-list',
-  templateUrl: './portfo-list.component.html',
-  styleUrls: ['./portfo-list.component.scss']
+  selector: 'app-portfolio-list',
+  templateUrl: './portfolio-list.component.html',
+  styleUrls: ['./portfolio-list.component.scss']
 })
-export class PortfoListComponent implements OnInit {
-  portfolio: Portfolio;
+export class PortfolioListComponent implements OnInit {
+portfolio: Portfolio;
 
   constructor(private route: ActivatedRoute) { }
 

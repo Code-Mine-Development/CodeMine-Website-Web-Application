@@ -3,7 +3,7 @@ import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 import { AuditDetailsComponent } from './audit-details.component';
 import {Component} from '@angular/core';
 import {MockAudit} from '../../../shared/mocks/audit.mock';
-import {ListComponent} from '../../shared/ui-elements/list/list.component';
+import {AuditListComponent} from '../audit-list/aduit-list.component'
 
 @Component({
     selector: 'app-fake-audit-wrapper',
@@ -29,7 +29,7 @@ describe('AuditDetailsComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ FakeWrapperAuditDetailsComponent, AuditDetailsComponent, ListComponent ],
+      declarations: [ FakeWrapperAuditDetailsComponent, AuditDetailsComponent, AuditListComponent ],
     })
     .compileComponents();
   }));

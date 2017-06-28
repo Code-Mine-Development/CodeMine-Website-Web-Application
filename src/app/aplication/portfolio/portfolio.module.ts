@@ -5,14 +5,15 @@ import {PortfolioRoutingModule} from "./portfolio.routing";
 import {UiModule} from "../../shared/ui-elements/ui.module";
 import {PortfolioComponentModule} from "../../components/portfolio/portfolio-components.module";
 import {PortfolioDetailsComponent} from './portfolio-details/portfolio-details.component';
-import {PortfoListComponent} from "./portfo-list/portfo-list.component";
+import {PortfolioListComponent} from "./portfolio-list/portfolio-list.component";
+import {PortfolioService} from "./services/portfolio.service";
 
 
 @NgModule({
     declarations: [
         PortfolioComponent,
         PortfolioDetailsComponent,
-        PortfoListComponent
+        PortfolioListComponent
     ],
     imports: [
         CommonModule,

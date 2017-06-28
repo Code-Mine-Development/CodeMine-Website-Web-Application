@@ -1,4 +1,4 @@
-import {async, ComponentFixture, TestBed, inject, tick, fakeAsync} from '@angular/core/testing';
+import {async, ComponentFixture, TestBed, tick, fakeAsync} from '@angular/core/testing';
 import {Location} from '@angular/common';
 
 import { HeaderComponent } from './header.component';
@@ -47,7 +47,7 @@ describe('HeaderComponent', () => {
 
   it('should return 4 links with routing', () => {
     const link = nativeElement.querySelectorAll('header ul li');
-    expect(link.length).toBe(4)
+    expect(link.length).toBe(5)
   });
 
   it('should navigate to Contact Component', fakeAsync(() => {

@@ -1,6 +1,6 @@
 import {async, ComponentFixture, TestBed} from '@angular/core/testing';
 
-import {ListComponent} from './aduit-list.component';
+import {AuditListComponent} from './aduit-list.component';
 import {Component} from '@angular/core';
 
 
@@ -28,15 +28,15 @@ class FakeWrapperListComponent {
 }
 
 describe('ListComponent', () => {
-    let component: ListComponent;
+    let component: AuditListComponent;
     let fixture: ComponentFixture<FakeWrapperListComponent>;
 
-    let fakeComponent: ListComponent;
-    let fakeFixture: ComponentFixture<ListComponent>;
+    let fakeComponent: AuditListComponent;
+    let fakeFixture: ComponentFixture<AuditListComponent>;
 
     beforeEach(async(() => {
         TestBed.configureTestingModule({
-            declarations: [FakeWrapperListComponent, ListComponent]
+            declarations: [FakeWrapperListComponent, AuditListComponent]
         })
             .compileComponents();
     }));
@@ -45,7 +45,7 @@ describe('ListComponent', () => {
         fixture = TestBed.createComponent(FakeWrapperListComponent);
         component = fixture.debugElement.children[0].componentInstance;
 
-        fakeFixture = TestBed.createComponent(ListComponent);
+        fakeFixture = TestBed.createComponent(AuditListComponent);
         fakeComponent = fakeFixture.componentInstance;
         fakeComponent.title = component.title;
         fakeComponent.listData = component.listData;

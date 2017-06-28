@@ -1,17 +1,8 @@
 import {async, ComponentFixture, TestBed} from '@angular/core/testing';
-
 import {ContactComponent} from './contact.component';
-import {ContactInfoComponent} from '../shared/ui-elements/contact-info/contact-info.component';
+import {ContactInfoComponent} from '../../components/contact/contact-info/contact-info.component';
 import {ActivatedRoute, Data, Router} from '@angular/router';
-
-const MockCompany = [{
-    'country': 'Poland',
-    'city': 'Katowice',
-    'street': '3 maja',
-    'apartment': '18/3',
-    'email': 'office@code-mine.com',
-    'phone': '+48 723 21 67'
-}];
+import {MockCompany} from "../../shared/mocks/company.mock";
 
 describe('ContactComponent', () => {
     let component: ContactComponent;
