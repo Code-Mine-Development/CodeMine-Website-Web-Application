@@ -5,7 +5,7 @@ import {HomeInformationComponent} from './home-information/home-information.comp
 import {ActivatedRoute, Data, Router} from '@angular/router';
 import {RouterTestingModule} from '@angular/router/testing';
 import {CommonModule} from '@angular/common';
-import {UiModule} from '../../ui-elements/ui.module';
+import {UiModule} from '../../shared/ui-elements/ui.module';
 
 const MockCompany = {
     'country': 'Poland',

@@ -4,10 +4,11 @@ import {AppRoutingModule} from '../app-routing.module';
 import {FooterComponent} from './footer/footer.component';
 import {HomePageComponent} from './home-page/home-page.component';
 import {CommonModule} from '@angular/common';
-import {UiModule} from '../ui-elements/ui.module';
+import {UiModule} from '../shared/ui-elements/ui.module';
 import {HomeInformationComponent} from './home-page/home-information/home-information.component';
 import {PageNotFoundComponent} from './page-not-found/page-not-found.component';
 import {ScrollToModule} from 'ng2-scroll-to';
+import {ContactComponentModule} from "../components/contact/contact-components.module";
 
 @NgModule({
     declarations: [
@@ -21,6 +22,7 @@ import {ScrollToModule} from 'ng2-scroll-to';
         CommonModule,
         AppRoutingModule,
         UiModule,
+        ContactComponentModule,
         ScrollToModule.forRoot(),
     ],
     exports: [

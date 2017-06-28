@@ -3,10 +3,10 @@ import { RouterTestingModule } from '@angular/router/testing';
 import {TestBed, inject, tick, fakeAsync} from '@angular/core/testing';
 import {HttpModule} from '@angular/http';
 import {Component} from '@angular/core';
-import {ContactResolver} from '../../contact/contact.resolver';
+import {ContactResolver} from '../../aplication/contact/services/contact.resolver';
 import {HomePageResolver} from './home-page.resolver';
-import {PortfolioService} from '../../shared/service/portfolio.service';
-import {ContactService} from '../../contact/contact.service';
+import {ContactService} from '../../aplication/contact/services/contact.service';
+import {PortfolioService} from "../../aplication/portfolio/services/portfolio.service";
 
 const MockCompany = {
     'country': 'Poland',
