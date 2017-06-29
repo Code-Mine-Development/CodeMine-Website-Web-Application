@@ -11,10 +11,12 @@ import {PortfolioService} from "./aplication/portfolio/services/portfolio.servic
 import {PortfolioResolver} from "./aplication/portfolio/services/portfolio.resolver";
 import {PortfolioModule} from "./aplication/portfolio/portfolio.module";
 import {HomePageResolver} from "./core/home-page/services/home-page.resolver";
+import {OfferComponent} from "./aplication/offer/offer.component";
 
 @NgModule({
     declarations: [
         AppComponent,
+        OfferComponent
     ],
     imports: [
         BrowserModule,

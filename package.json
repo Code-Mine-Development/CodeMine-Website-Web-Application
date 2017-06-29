@@ -8,7 +8,8 @@
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",
-    "e2e": "ng e2e"
+    "e2e": "ng e2e",
+    "i18n": "./node_modules/.bin/ng-xi18n  --i18nFormat=xlf  --outFile=./locale/messages.xlf"
   },
   "private": true,
   "dependencies": {

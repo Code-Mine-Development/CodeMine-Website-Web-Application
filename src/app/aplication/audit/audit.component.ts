@@ -5,7 +5,8 @@ import {ActivatedRoute, Data} from '@angular/router';
 @Component({
   selector: 'app-audit',
   templateUrl: 'audit.component.html',
-  styleUrls: ['audit.component.scss']
+  styleUrls: ['audit.component.scss'],
+
 })
 export class AuditComponent implements OnInit {
   audits: Audit[];
