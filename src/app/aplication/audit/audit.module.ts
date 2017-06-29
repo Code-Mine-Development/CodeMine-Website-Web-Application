@@ -4,8 +4,8 @@ import {AuditComponent} from './audit.component';
 import {AuditResolver} from './services/audit.resolver';
 import {AuditService} from './services/audit.service';
 import {AuditRoutingModule} from './audit-routing';
-import {UiModule} from "../../shared/ui-elements/ui.module";
-import {AuditComponentModule} from "../../components/audit/audit-components.module";
+import {UiModule} from '../../shared/ui-elements/ui.module';
+import {AuditComponentModule} from '../../components/audit/audit-components.module';
 
 @NgModule({
     declarations: [
