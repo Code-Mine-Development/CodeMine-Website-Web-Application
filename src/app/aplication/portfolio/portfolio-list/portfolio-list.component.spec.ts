@@ -1,9 +1,17 @@
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import {async, ComponentFixture, TestBed, fakeAsync, tick} from '@angular/core/testing';
 import { PortfolioListComponent } from './portfolio-list.component';
 import {ActivatedRoute, Data, Router} from "@angular/router";
 import {MockPortfolio} from "app/shared/mocks/portfolio.mock";
 import {PortfolioProjectComponent} from "../../../components/portfolio/portfolio-project/portfolio-project.component";
 import {UiModule} from "../../../shared/ui-elements/ui.module";
+
+const MockRoutingData = {
+  data: {
+    subscribe: (fn: (value: Data) => void) => fn({
+      portfolio: MockPortfolio,
+    })
+  }
+};
 
 describe('PortfolioListComponent', () => {
   let component: PortfolioListComponent;
@@ -20,13 +28,7 @@ describe('PortfolioListComponent', () => {
       providers: [
         {
           provide: ActivatedRoute,
-          useValue: {
-            data: {
-              subscribe: (fn: (value: Data) => void) => fn({
-                portfolio: MockPortfolio,
-              })
-            }
-          }
+          useValue: MockRoutingData,
         },
         {provide: Router, useValue: router}
       ]
@@ -47,5 +49,13 @@ describe('PortfolioListComponent', () => {
   it('should define our portfolio variable', () => {
     expect(component.portfolio).toBeDefined();
   });
+
+  it('should change routing', fakeAsync(() => {
+    component.showDetails(1);
+    tick();
+    expect(router.navigate).toHaveBeenCalledWith(['/portfolio/', 1],{relativeTo: MockRoutingData});
+
+  }));
+
 
 });

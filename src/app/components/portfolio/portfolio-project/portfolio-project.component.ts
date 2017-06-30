@@ -1,6 +1,5 @@
-import { Component, OnInit, Input } from '@angular/core';
+import {Component, OnInit, Input, Output, EventEmitter} from '@angular/core';
 import {Portfolio} from "../../../aplication/portfolio/interfaces/portfolio.interface";
-import {Router, ActivatedRoute} from "@angular/router";
 
 
 @Component({
@@ -10,17 +9,16 @@ import {Router, ActivatedRoute} from "@angular/router";
 })
 export class PortfolioProjectComponent implements OnInit {
   @Input() project: Portfolio;
-  @Input() index: number;
+  @Output() onAction: EventEmitter<string> = new EventEmitter();
 
-  constructor(private router: Router,private route: ActivatedRoute) {
+  constructor() {
   }
 
   ngOnInit() {
   }
 
-
-  showDetails(){
-    this.router.navigate(['/portfolio/',this.index],{relativeTo: this.route})
+  onClick(){
+    this.onAction.emit();
   }
 
 }
