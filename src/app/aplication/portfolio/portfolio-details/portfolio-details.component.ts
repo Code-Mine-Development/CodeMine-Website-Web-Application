@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import {PortfolioService} from "../services/portfolio.service";
-import {Portfolio} from "../interfaces/portfolio.interface";
-import {Params, ActivatedRoute} from "@angular/router";
+import {PortfolioService} from '../services/portfolio.service';
+import {Portfolio} from '../interfaces/portfolio.interface';
+import {Params, ActivatedRoute} from '@angular/router';
 
 @Component({
   selector: 'app-portfolio-details',
@@ -14,6 +14,8 @@ export class PortfolioDetailsComponent implements OnInit {
 
   constructor(private service: PortfolioService, private route: ActivatedRoute) { }
 
+
+
   ngOnInit() {
     this.route.params
         .subscribe(
@@ -25,3 +27,9 @@ export class PortfolioDetailsComponent implements OnInit {
   }
 
 }
+
+
+
+
+
+
