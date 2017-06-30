@@ -10,12 +10,12 @@ import { trigger, state, animate, transition, style } from '@angular/animations'
   animations: [
     trigger('startImage', [
       state('start', style({
-        'transform': 'translateY(-100px)'
+        'transform': 'translateX(-600px)'
       })),
       state('end', style({
-        'transform': 'translateY(0px)'
+        'transform': 'translateX(0px)'
       })),
-      transition('start <=> end', animate(5000)),
+      transition('start <=> end', animate(1000)),
     ])
   ]
 })

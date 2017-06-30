@@ -14,10 +14,10 @@ export class AuditDetailsComponent implements OnInit {
   @Input() audit: Audit[];
 
   constructor() {}
-
   registerWindowChange(event): void {
     this.width = event.target.innerWidth;
   }
 
   ngOnInit() {}
 }
+

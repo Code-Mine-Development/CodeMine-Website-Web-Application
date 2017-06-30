@@ -12,6 +12,7 @@ import {PortfolioResolver} from './aplication/portfolio/services/portfolio.resol
 import {PortfolioModule} from './aplication/portfolio/portfolio.module';
 import {HomePageResolver} from './core/home-page/services/home-page.resolver';
 import {OfferComponent} from './aplication/offer/offer.component';
+import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
 
 @NgModule({
     declarations: [
@@ -23,8 +24,8 @@ import {OfferComponent} from './aplication/offer/offer.component';
         CommonModule,
         HttpModule,
         CoreModule,
-        PortfolioModule
-
+        PortfolioModule,
+        BrowserAnimationsModule
     ],
     providers: [
         PortfolioService,
