@@ -3,18 +3,29 @@ html,body{
   margin: 0;
 
 }
+canvas{
+display: none;
+}
 
-
-
+#triangle1, #triangle2{
+   width: 100%;
+   background-repeat: no-repeat;
+   box-sizing: initial;
+   padding: 2em 0;
+ }
 .details{
   width: 100%;
+  padding: 2em 0;
+
 
 }
 p {
   letter-spacing: 2px;
+
 }
 h3{
   margin: 3em 0 2em;
+
 }
 .container {
   width: 80%;
