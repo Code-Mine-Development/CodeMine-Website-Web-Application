@@ -5,9 +5,9 @@
     </div>
     <div class="row">
       <div class="column" *ngFor="let audit of audits">
-        <a href="#" class="audit-image"><img [src]="audit.image" alt=""></a>
+        <a href="#" class="audit-image"><img [src]="audit.image" alt="" [@startImage]="state"></a>
         <div class="row">
-          <a href="#" class="audit-title"><h2 i18n>{{audit.title}}</h2></a>
+          <a href="#" class="audit-title"><h2 i18n >{{audit.title}}</h2></a>
         </div>
       </div>
     </div>

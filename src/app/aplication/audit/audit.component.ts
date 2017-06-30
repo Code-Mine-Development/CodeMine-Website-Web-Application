@@ -1,4 +1,4 @@
-import {Component, Input, OnInit} from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import {Audit} from './interfaces/audit.interface';
 import {ActivatedRoute, Data} from '@angular/router';
 import { trigger, state, animate, transition, style } from '@angular/animations';
@@ -8,17 +8,21 @@ import { trigger, state, animate, transition, style } from '@angular/animations'
   templateUrl: 'audit.component.html',
   styleUrls: ['audit.component.scss'],
   animations: [
-    trigger('slideLeft', [
-      state('shown' , style({ opacity: 1 })),
-      state('hidden', style({ opacity: 0 })),
-      transition('* => *', animate('.5s'))
+    trigger('startImage', [
+      state('start', style({
+        'transform': 'translateY(-100px)'
+      })),
+      state('end', style({
+        'transform': 'translateY(0px)'
+      })),
+      transition('start <=> end', animate(5000)),
     ])
-    ],
+  ]
 })
 export class AuditComponent implements OnInit {
   audits: Audit[];
-  @Input() isVisible = true;
-  visibility = 'shown';
+  state: string = 'start';
+
   constructor(private route: ActivatedRoute) { }
 
   ngOnInit() {
@@ -26,6 +30,6 @@ export class AuditComponent implements OnInit {
         .subscribe((data: Data) => {
           this.audits = data['audit'];
         });
-    this.visibility = this.isVisible ? 'shown' : 'hidden';
+    this.state = 'end';
   }
 }
