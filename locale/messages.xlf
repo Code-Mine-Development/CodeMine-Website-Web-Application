@@ -1,0 +1,259 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+  <file source-language="en" datatype="plaintext" original="ng2.template">
+    <body>
+      <trans-unit id="4ca70efe6da19bcee3b1d0bf8523c6d956c135c2" datatype="html">
+        <source>Skontaktuj się z nami!</source>
+        <target/>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/contact/contact-info/contact-info.component.ts</context>
+          <context context-type="linenumber">6</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="587e8a5343f2eb29b1a3fc58d6aaa0256bb8367d" datatype="html">
+        <source>Zobacz na mapie</source>
+        <target/>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/contact/contact-info/contact-info.component.ts</context>
+          <context context-type="linenumber">16</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="707b1b7d0a063c8c65cbea630b4691a1d005ec4b" datatype="html">
+        <source>Opisz nam swój pomysł, formularz pomoże ci sprecyzować czego będzie on dotyczył.</source>
+        <target/>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/contact/contact-info/contact-info.component.ts</context>
+          <context context-type="linenumber">23</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="d66d6cfdfdcbaf0aff108e9b3356c37e05bf2ae3" datatype="html">
+        <source>Przejdź do briefu</source>
+        <target/>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/contact/contact-info/contact-info.component.ts</context>
+          <context context-type="linenumber">26</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="76c63367f14ae89716a16be3a30dcd233344fc7d" datatype="html">
+        <source>We are...lorem ipsum dolor sit amet, <x id="LINE_BREAK" ctype="lb"/>consectetur adipiscing elit, sed do <x id="LINE_BREAK" ctype="lb"/>eiusmod tempor incididunt ut labores</source>
+        <target/>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/home-page/home-information/home-information.component.ts</context>
+          <context context-type="linenumber">4</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="802e4a92e9c86c475e178b12329485aa6175e059" datatype="html">
+        <source>Jak pracujemy?</source>
+        <target/>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/home-page/home-information/home-information.component.ts</context>
+          <context context-type="linenumber">7</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="6418e7e3a07b8c6bd4a3654a8980ad4f03a47b50" datatype="html">
+        <source>Sprawdź nasz proces realizacji bla bla....</source>
+        <target/>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/home-page/home-information/home-information.component.ts</context>
+          <context context-type="linenumber">8</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="bad596964f2df2aea9c119c1a58afe41ddc3a3a3" datatype="html">
+        <source>Tworzymy jednolity język komunikacji</source>
+        <target/>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/home-page/home-information/home-information.component.ts</context>
+          <context context-type="linenumber">14</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="16157bd286d25ef9c6c930f029f54fe86e89e6cd" datatype="html">
+        <source>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</source>
+        <target/>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/home-page/home-information/home-information.component.ts</context>
+          <context context-type="linenumber">15</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="ed97471ae7ebc14fd6c09c960543efee55c44a66" datatype="html">
+        <source>Zdobywamy wiedzę biznesową</source>
+        <target/>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/home-page/home-information/home-information.component.ts</context>
+          <context context-type="linenumber">22</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="ff799e549a84df44ae9eaa52f118a8f2c4a7e548" datatype="html">
+        <source>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</source>
+        <target/>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/home-page/home-information/home-information.component.ts</context>
+          <context context-type="linenumber">23</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/home-page/home-information/home-information.component.ts</context>
+          <context context-type="linenumber">31</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/home-page/home-information/home-information.component.ts</context>
+          <context context-type="linenumber">39</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/home-page/home-information/home-information.component.ts</context>
+          <context context-type="linenumber">47</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/home-page/home-information/home-information.component.ts</context>
+          <context context-type="linenumber">56</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/home-page/home-information/home-information.component.ts</context>
+          <context context-type="linenumber">65</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/home-page/home-information/home-information.component.ts</context>
+          <context context-type="linenumber">74</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="be6bd56abc2f57270190610f7d26dcd15e0d3fc7" datatype="html">
+        <source>Tworzymy logikę biznesową</source>
+        <target/>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/home-page/home-information/home-information.component.ts</context>
+          <context context-type="linenumber">30</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="8fc68c6d25f0af41fc536aaecab613c38710b737" datatype="html">
+        <source>Tworzymy szczegółową specyfikację projektu</source>
+        <target/>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/home-page/home-information/home-information.component.ts</context>
+          <context context-type="linenumber">38</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="7d904b0f00cbe27066ad197a61156aa8b0dc6095" datatype="html">
+        <source>Rysujemy makiety UX</source>
+        <target/>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/home-page/home-information/home-information.component.ts</context>
+          <context context-type="linenumber">46</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="ea63279cb32f62c6d43262b148cd455116e5d9a7" datatype="html">
+        <source>Zobacz więcej</source>
+        <target/>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/home-page/home-information/home-information.component.ts</context>
+          <context context-type="linenumber">48</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="9ae7a69a4d2a76780225b57bccb772fe28b632f4" datatype="html">
+        <source>Implementujemy</source>
+        <target/>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/home-page/home-information/home-information.component.ts</context>
+          <context context-type="linenumber">55</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="1db0dc8fa562158d5fe09cbe426a7f874f65d30e" datatype="html">
+        <source>Sprawdź naszą ofertę</source>
+        <target/>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/home-page/home-information/home-information.component.ts</context>
+          <context context-type="linenumber">57</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="0592d1db50bab8e5773779b6690eedccc4c0c47d" datatype="html">
+        <source>Wdrażamy</source>
+        <target/>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/home-page/home-information/home-information.component.ts</context>
+          <context context-type="linenumber">64</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="e8c8ee01ed3630bd7b0ae3f48f2fde16d4480c8d" datatype="html">
+        <source>Sprawdź realizacje</source>
+        <target/>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/home-page/home-information/home-information.component.ts</context>
+          <context context-type="linenumber">66</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="2925d1626e02bcbe9a99e3bd65a06d8a0b5c4680" datatype="html">
+        <source>Wspieramy</source>
+        <target/>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/home-page/home-information/home-information.component.ts</context>
+          <context context-type="linenumber">73</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="67607e2922535b3f86375857893182c8bbfc7db1" datatype="html">
+        <source>Poznaj nasz zespół</source>
+        <target/>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/home-page/home-information/home-information.component.ts</context>
+          <context context-type="linenumber">75</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="152a915e700b70586bc08e4748e72ebf49f9ed0c" datatype="html">
+        <source>CTA do formularza</source>
+        <target/>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/home-page/home-information/home-information.component.ts</context>
+          <context context-type="linenumber">82</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="cf2b91c26cb738a7384eb1384c912132b3027390" datatype="html">
+        <source>Audyty</source>
+        <target/>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/aplication/audit/audit.component.ts</context>
+          <context context-type="linenumber">4</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="d608a36d8fcd7d124d9bae8e32674c0e7fa64e07" datatype="html">
+        <source><x id="INTERPOLATION"/></source>
+        <target/>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/aplication/audit/audit.component.ts</context>
+          <context context-type="linenumber">10</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/audit/audit-details/audit-details.component.ts</context>
+          <context context-type="linenumber">4</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="8898429de600424addc775edca95ce4f2aef9193" datatype="html">
+        <source>Audyt</source>
+        <target/>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/audit/audit-details/audit-details.component.ts</context>
+          <context context-type="linenumber">3</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="cbf3ed41e792355859ccf7c0d1c78bad08682eac" datatype="html">
+        <source><x id="INTERPOLATION"/></source>
+        <target/>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/audit/audit-details/audit-details.component.ts</context>
+          <context context-type="linenumber">5</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="4c13babbb6ad18daa85624cfc9926a103d535362" datatype="html">
+        <source>Chcesz poznać więcej szczegółów ?</source>
+        <target/>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/audit/audit-details/audit-details.component.ts</context>
+          <context context-type="linenumber">11</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="2a789b430ec5fa270fda1f3ddccb2bbbf002f9ac" datatype="html">
+        <source>Wyślij zapytanie</source>
+        <target/>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/audit/audit-details/audit-details.component.ts</context>
+          <context context-type="linenumber">12</context>
+        </context-group>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>

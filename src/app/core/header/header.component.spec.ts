@@ -10,7 +10,8 @@ import {Component} from '@angular/core';
   selector: 'app-fake-contact',
   template: '<h1>Contact\'s routing works</h1>',
 })
-export class FakeContactComponent {}
+
+class FakeContactComponent {}
 
 export const routes: Routes = [
   {path: 'contact', component: FakeContactComponent},
