@@ -21,7 +21,7 @@ import { trigger, state, animate, transition, style } from '@angular/animations'
 })
 export class AuditComponent implements OnInit {
   audits: Audit[];
-  state: string = 'start';
+  state = 'start';
 
   constructor(private route: ActivatedRoute) { }
 

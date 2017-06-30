@@ -22,9 +22,9 @@ import { trigger, state, animate, transition, style } from '@angular/animations'
 export class AuditListComponent {
   @Input() listData;
   @Input() title: string;
-  state: string = 'down';
-  lastScrollTop: number = 0;
-  direction: string = '';
+  state = 'down';
+  lastScrollTop = 0;
+  direction = '';
 
   constructor (lc: NgZone) {
     window.onscroll = () => {
@@ -46,7 +46,6 @@ export class AuditListComponent {
   moveText () {
     if (this.direction === 'down') {
       this.state = 'up';
-      // this.state === 'down' ? this.state = 'up' : this.state = 'down';
     }
   }
 }
