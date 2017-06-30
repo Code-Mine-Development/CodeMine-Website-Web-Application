@@ -1,5 +1,5 @@
 export interface Tags {
-    tags:[
+    tags: [
         {products: Array<string>},
         {technology: Array<string>},
         {languages: Array<string>}

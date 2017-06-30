@@ -1,6 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
-import {Portfolio} from "../../../aplication/portfolio/interfaces/portfolio.interface";
-import {Router, ActivatedRoute} from "@angular/router";
+import {Portfolio} from '../../../aplication/portfolio/interfaces/portfolio.interface';
+import {Router, ActivatedRoute} from '@angular/router';
 
 
 @Component({
@@ -12,15 +12,11 @@ export class PortfolioProjectComponent implements OnInit {
   @Input() project: Portfolio;
   @Input() index: number;
 
-  constructor(private router: Router,private route: ActivatedRoute) {
+  constructor(private router: Router, private route: ActivatedRoute) {
   }
 
-  ngOnInit() {
+  ngOnInit() {}
+  showDetails() {
+    this.router.navigate(['/portfolio/', this.index], {relativeTo: this.route})
   }
-
-
-  showDetails(){
-    this.router.navigate(['/portfolio/',this.index],{relativeTo: this.route})
-  }
-
 }

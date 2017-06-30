@@ -1,6 +1,6 @@
 import {Injectable} from '@angular/core';
 import {Http, Response} from '@angular/http';
-import {Portfolio} from "../interfaces/portfolio.interface";
+import {Portfolio} from '../interfaces/portfolio.interface';
 import 'rxjs/Rx';
 
 const url = 'assets/data/';
@@ -8,7 +8,7 @@ const url = 'assets/data/';
 @Injectable()
 export class PortfolioService {
 
-    private portfolio:Portfolio[] = [];
+    private portfolio: Portfolio[] = [];
 
     constructor(private http: Http) {
 
@@ -24,7 +24,7 @@ export class PortfolioService {
                 })
     }
 
-    getPortfolioDetails(index:number):Portfolio {
+    getPortfolioDetails(index: number): Portfolio {
         return this.portfolio[index];
     }
 

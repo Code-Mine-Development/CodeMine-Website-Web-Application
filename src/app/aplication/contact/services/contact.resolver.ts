@@ -2,7 +2,7 @@ import {ActivatedRouteSnapshot, Resolve, RouterStateSnapshot} from '@angular/rou
 import {Observable} from 'rxjs/Observable';
 import {Injectable} from '@angular/core';
 import {ContactService} from './contact.service';
-import {Company} from "../../../shared/interface/company.interface";
+import {Company} from '../../../shared/interface/company.interface';
 
 
 

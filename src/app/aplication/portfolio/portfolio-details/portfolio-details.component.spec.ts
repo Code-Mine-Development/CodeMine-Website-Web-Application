@@ -1,10 +1,10 @@
 import {async, ComponentFixture, TestBed, inject} from '@angular/core/testing';
 
 import {PortfolioDetailsComponent} from './portfolio-details.component';
-import {PortfolioComponentModule} from "../../../components/portfolio/portfolio-components.module";
-import {PortfolioService} from "../services/portfolio.service";
-import {MockPortfolio} from "../../../shared/mocks/portfolio.mock";
-import {ActivatedRoute, Router, Params} from "@angular/router";
+import {PortfolioComponentModule} from '../../../components/portfolio/portfolio-components.module';
+import {PortfolioService} from '../services/portfolio.service';
+import {MockPortfolio} from '../../../shared/mocks/portfolio.mock';
+import {ActivatedRoute, Router, Params} from '@angular/router';
 
 class MockPortfolioService {
     private portfolio = MockPortfolio;
@@ -55,7 +55,7 @@ describe('PortfolioDetailsComponent', () => {
     });
 
     it('should use the user name from the service', inject([PortfolioService], (portfolioService: PortfolioService) => {
-        let item = portfolioService.getPortfolioDetails(0);
+        const item = portfolioService.getPortfolioDetails(0);
         fixture.detectChanges();
         expect(item.title).toBe('Mountain1');
     }));

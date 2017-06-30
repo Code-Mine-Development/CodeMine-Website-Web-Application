@@ -1,5 +1,5 @@
 export interface Technologies {
-    technologies:[
+    technologies: [
         {
             title: string,
             description: string,

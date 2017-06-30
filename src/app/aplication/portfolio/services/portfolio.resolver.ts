@@ -1,8 +1,8 @@
 import {ActivatedRouteSnapshot, Resolve, RouterStateSnapshot} from '@angular/router';
 import {Observable} from 'rxjs/Observable';
 import {Injectable} from '@angular/core';
-import {PortfolioService} from "./portfolio.service";
-import {Portfolio} from "../interfaces/portfolio.interface";
+import {PortfolioService} from './portfolio.service';
+import {Portfolio} from '../interfaces/portfolio.interface';
 
 
 @Injectable()

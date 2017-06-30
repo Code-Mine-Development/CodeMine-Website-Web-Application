@@ -1,7 +1,7 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 import { ContactInfoComponent } from './contact-info.component';
 import {Component} from '@angular/core';
-import {MockCompany} from "../../../shared/mocks/company.mock";
+import {MockCompany} from '../../../shared/mocks/company.mock';
 
 @Component({
   selector: 'app-fake-contact-info-wrapper',

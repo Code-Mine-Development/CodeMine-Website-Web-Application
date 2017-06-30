@@ -3,7 +3,7 @@ import {RouterModule, Routes, PreloadAllModules} from '@angular/router';
 import {HomePageComponent} from './core/home-page/home-page.component';
 import {ContactResolver} from './aplication/contact/services/contact.resolver';
 import {PageNotFoundComponent} from './core/page-not-found/page-not-found.component';
-import {HomePageResolver} from "./core/home-page/services/home-page.resolver";
+import {HomePageResolver} from './core/home-page/services/home-page.resolver';
 
 const appRoutes: Routes = [
     {path: '', redirectTo: '/home', pathMatch: 'full'},

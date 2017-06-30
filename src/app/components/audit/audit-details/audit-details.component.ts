@@ -1,5 +1,5 @@
 import {Component, OnInit, Input} from '@angular/core';
-import {Audit} from "../../../aplication/audit/interfaces/audit.interface";
+import {Audit} from '../../../aplication/audit/interfaces/audit.interface';
 
 @Component({
   selector: 'app-audit-details',

@@ -1,6 +1,6 @@
 import {async, ComponentFixture, TestBed} from '@angular/core/testing';
 import {Component} from '@angular/core';
-import {SquareImageComponent} from "./square-image.component";
+import {SquareImageComponent} from './square-image.component';
 
 
 @Component({
@@ -8,8 +8,8 @@ import {SquareImageComponent} from "./square-image.component";
   template: `<app-square-image [image]="image" [width]="width"></app-square-image>`
 })
 class FakeWrapperComponent {
-  image:string = 'https://static.pexels.com/photos/6548/cold-snow-winter-mountain.jpeg';
-  width:number = 5.44;
+  image = 'https://static.pexels.com/photos/6548/cold-snow-winter-mountain.jpeg';
+  width = 5.44;
 }
 
 describe('CarouselComponent', () => {

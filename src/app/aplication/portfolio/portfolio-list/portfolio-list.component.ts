@@ -1,6 +1,6 @@
 import {Component, OnInit} from '@angular/core';
-import {Data, ActivatedRoute} from "@angular/router";
-import {Portfolio} from "../interfaces/portfolio.interface";
+import {Data, ActivatedRoute} from '@angular/router';
+import {Portfolio} from '../interfaces/portfolio.interface';
 
 @Component({
     selector: 'app-portfolio-list',

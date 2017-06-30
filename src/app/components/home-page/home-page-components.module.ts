@@ -1,6 +1,6 @@
 import {NgModule} from '@angular/core';
 import {CommonModule} from '@angular/common';
-import {HomeInformationComponent} from "./home-information/home-information.component";
+import {HomeInformationComponent} from './home-information/home-information.component';
 
 
 @NgModule({

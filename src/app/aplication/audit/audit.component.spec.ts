@@ -4,7 +4,7 @@ import { AuditComponent } from './audit.component';
 import {AuditDetailsComponent} from '../../components/audit/audit-details/audit-details.component';
 import {ActivatedRoute, Data, Router} from '@angular/router';
 import {MockAudit} from '../../shared/mocks/audit.mock';
-import {AuditListComponent} from "../../components/audit/audit-list/aduit-list.component";
+import {AuditListComponent} from '../../components/audit/audit-list/aduit-list.component';
 
 
 describe('AuditComponent', () => {

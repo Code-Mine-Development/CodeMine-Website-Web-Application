@@ -1,17 +1,17 @@
 import {async, ComponentFixture, TestBed, fakeAsync, tick} from '@angular/core/testing';
 
 import { PortfolioProjectComponent } from './portfolio-project.component';
-import {Router, ActivatedRoute} from "@angular/router";
-import {Component} from "@angular/core";
-import {MockPortfolio} from "../../../shared/mocks/portfolio.mock";
-import {SquareImageComponent} from "../../../shared/ui-elements/squareImage/square-image.component";
+import {Router, ActivatedRoute} from '@angular/router';
+import {Component} from '@angular/core';
+import {MockPortfolio} from '../../../shared/mocks/portfolio.mock';
+import {SquareImageComponent} from '../../../shared/ui-elements/squareImage/square-image.component';
 
 @Component({
   selector: 'app-fake-project-wrapper',
   template: `<app-portfolio-project [index]="index" [project]="project"></app-portfolio-project>`
 })
 class FakeWrapperPortfolioProjectComponent {
-  index: number = 1;
+  index = 1;
   project = MockPortfolio[0];
 }
 
@@ -28,10 +28,10 @@ describe('PortfolioProjectComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [FakeWrapperPortfolioProjectComponent, PortfolioProjectComponent,SquareImageComponent ],
-      providers:[
+      declarations: [FakeWrapperPortfolioProjectComponent, PortfolioProjectComponent, SquareImageComponent ],
+      providers: [
         {provide: Router, useValue: router},
-        {provide: ActivatedRoute, useValue: {data:{}}}
+        {provide: ActivatedRoute, useValue: {data: {}}}
       ]
     })
       .compileComponents();
@@ -59,7 +59,7 @@ describe('PortfolioProjectComponent', () => {
   it('dupa', fakeAsync(() => {
     component.showDetails();
     tick();
-    expect(router.navigate).toHaveBeenCalledWith(['/portfolio/', 1],{relativeTo: {data:{}}});
+    expect(router.navigate).toHaveBeenCalledWith(['/portfolio/', 1], {relativeTo: {data: {}}});
 
   }));
 

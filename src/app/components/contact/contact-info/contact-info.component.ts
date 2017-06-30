@@ -1,5 +1,5 @@
 import {Component, Input} from '@angular/core';
-import {Company} from "../../../shared/interface/company.interface";
+import {Company} from '../../../shared/interface/company.interface';
 
 
 @Component({

@@ -3,10 +3,10 @@ import {Component, Input, HostBinding, HostListener} from '@angular/core';
 @Component({
     selector: 'app-button',
     template: '<button>{{title}}</button>',
-    styles:[`
+    styles: [`
             :host{
                 border-radius: 15px;
-            } 
+            }
             button{
                 cursor: pointer;
                 border: none;
@@ -19,23 +19,22 @@ import {Component, Input, HostBinding, HostListener} from '@angular/core';
     `]
 })
 export class ButtonComponent {
-    @Input() title:string = 'Button';
-    @Input() color:string = '#169bd5';
-    @Input() hover:string = '#000000';
+    @Input() title = 'Button';
+    @Input() color = '#169bd5';
+    @Input() hover = '#000000';
     @HostBinding('style.backgroundColor') backgroundColor: string;
 
     ngOnInit() {
         this.backgroundColor = this.color;
     }
 
-    @HostListener('mouseenter') mouseover(eventData: Event){
+    @HostListener('mouseenter') mouseover(eventData: Event) {
         // this.renderer.setStyle(this.elRef.nativeElement, 'background-color', 'blue');
         this.backgroundColor = this.hover;
     }
 
-    @HostListener('mouseleave') mouseleave(eventData: Event){
+    @HostListener('mouseleave') mouseleave(eventData: Event) {
         // this.renderer.setStyle(this.elRef.nativeElement, 'background-color', 'transparent');
         this.backgroundColor = this.color
     }
-
 }
