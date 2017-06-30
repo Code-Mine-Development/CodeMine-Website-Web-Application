@@ -1,4 +1,7 @@
 <p>{{title}}</p>
-<ul>
-  <li *ngFor="let item of listData">{{item.name}}</li>
-</ul>
+
+<div class="row list" *ngFor="let item of listData">
+  <div class="column">
+    {{item.name}}
+  </div>
+</div>

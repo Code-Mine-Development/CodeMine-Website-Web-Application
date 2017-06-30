@@ -4,11 +4,15 @@
   height: 0;
   border-style: solid;
   border-color: transparent #fee03c transparent transparent;
+  color: #515151;
+
 
   .audit-details-panel {
-    top: 400px;
-    color: #515151;
-    width: 50vh;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    left: 80px;
+    right: 80px;
 
     &-header {
       font-size: 7.2em;
@@ -19,27 +23,19 @@
       font-size: 1.6em;
       word-wrap: break-word;
       margin: 80px 0;
+      width: 50%;
     }
 
     .audit-details-table {
-      width: 100vh;
       display: flex;
-      flex-direction: row;
-      justify-content: space-around;
+    }
 
-      .table {
-        width: 100%;
-        text-align: left;
-        margin-bottom: 100px;
+    .details {
+      text-align: center;
+
+      h2 {
+        font-size: 2.8em;
       }
     }
   }
-  .details {
-    text-align: center;
-
-    h2 {
-      font-size: 2.8em;
-    }
-  }
 }
-

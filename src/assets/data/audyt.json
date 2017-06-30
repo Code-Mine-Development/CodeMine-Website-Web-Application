@@ -12,6 +12,12 @@
       },
       {
         "name":"Sprawdzenie sposobu wykorzystania bibliotek zewnętrznych oraz dostarczanych przez firmy trzecie."
+      },
+      {
+        "name":"Ocena elastyczności kodu na ewolucje wymagań biznesowych"
+      },
+      {
+        "name":"Ocena czasochłonności oraz wymagań odnośnie zasobów ludzkich"
       }
     ],
     "benefits": [
@@ -23,6 +29,12 @@
       },
       {
         "name": "Odporność na zmiany w kodzie nad jakim nie ma kontroli jest bardzo ważna. Zapezpieczenie projektu przed modyfikacjami w bibliotekach zewnętrznych pomaga w minimalizowaniu ilości awarii i problemów z bezpieczeństewm oraz wydajnością."
+      },
+      {
+        "name": "Każde oprogramowanie służące działającemu biznesowi będzie ulegało modyfikacją. Wiedza o jego poziomie elastyczności daje możliwość jej zwiększenia zanim nowe wymagania zostaną zaproponowane co oszczędza czas oraz pieniądze."
+      },
+      {
+        "name": "Poznanie alternatywnej oceny czasochłonności wykonania i wymagań odnośnie wielkośi zespołu może pozwolić określić czy wycena czasowa i kosztowa jest realistyczna"
       }
     ]
   },
@@ -39,6 +51,9 @@
       },
       {
         "name":"Sprawdzenie sposobu wykorzystania bibliotek zewnętrznych oraz dostarczanych przez firmy trzecie."
+      },
+      {
+        "name":"Badanie zgodności z standardami UI konkretnej platformy."
       }
     ],
     "benefits": [
@@ -50,6 +65,9 @@
       },
       {
         "name": "Mozliwośc określenia w jak dużym stopniu architektuara informacji oraz stryuktura strony pomaga lub przeszkadza w sprawnym wykonywaniu najistotnejszych czynności"
+      },
+      {
+        "name":"Możliwośc stwierdzeni czy każdy z kanałów komunikacji (web, movile itp) jest wydajny i pryzjazny oraz zgodno z wytycznymi odnośnie interfejsów dla danej platformy."
       }
     ]
   }
