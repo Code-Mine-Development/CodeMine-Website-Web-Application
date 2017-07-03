@@ -13,6 +13,7 @@ export class PortfolioDetailsComponent implements OnInit {
   id: number;
   @ViewChild('myCanvas') canvasRef;
   @ViewChild('myCanvas2') canvasRef2;
+  @ViewChild('myCanvas3') canvasRef3;
 
 
 
@@ -77,10 +78,10 @@ export class PortfolioDetailsComponent implements OnInit {
 
     ctx2.beginPath();
     ctx2.moveTo(1, 1);
-    ctx2.lineTo(canvas.width / 3.5, 1);
-    ctx2.lineTo(canvas.width, canvas.height / 3);
-    ctx2.lineTo(canvas.width, canvas.height);
-    ctx2.lineTo(0, canvas.height - canvas.height / 2);
+    ctx2.lineTo(canvas2.width / 3.3, 1);
+    ctx2.lineTo(canvas2.width, canvas2.height / 3);
+    ctx2.lineTo(canvas2.width, canvas2.height);
+    ctx2.lineTo(0, canvas2.height - canvas2.height / 2);
     ctx2.closePath(0, 0);
     ctx2.fillStyle = '#ffda07';
     ctx2.fill();
@@ -98,7 +99,37 @@ export class PortfolioDetailsComponent implements OnInit {
 
     }
 
+// Background #3
 
+    const canvas3 = this.canvasRef3.nativeElement;
+    const ctx3 = canvas3.getContext('2d');
+    const triangle3 = document.getElementById('triangle3');
+
+    canvas3.width = window.innerWidth;
+    canvas3.height = triangle3.scrollHeight ;
+
+    ctx3.moveTo(1, canvas3.height/4);
+    ctx3.lineTo(canvas3.width, canvas3.height/4);
+    ctx3.lineTo(canvas3.width, canvas3.height / 2);
+    ctx3.lineTo(1, canvas3.height -100);
+
+
+    ctx3.closePath(0, 0);
+    ctx3.fillStyle = '#ffda07';
+    ctx3.fill();
+
+
+    ctx3.stroke();
+    const data3 = canvas3.toDataURL();
+    const bg3= document.getElementById('triangle3');
+
+    bg3.style.backgroundImage = 'url(' + data3 + ')';
+
+    const image3 = new Image();
+    image3.onload = function () {
+      ctx.drawImage(this, 0, 0 );
+
+    }
 
   }
 

@@ -7,7 +7,7 @@ canvas{
 display: none;
 }
 
-#triangle1, #triangle2{
+#triangle1, #triangle2, #triangle3{
    width: 100%;
    background-repeat: no-repeat;
    box-sizing: initial;
@@ -134,10 +134,12 @@ h3{
 }
 
 .eight{
+  padding-bottom:8em;
   .row {
     width: 100%;
     display: flex;
     justify-content: space-between;
+
     .col-3 {
       width: 30%;
       height: 30vh;

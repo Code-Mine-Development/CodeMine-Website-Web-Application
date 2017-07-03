@@ -1,58 +1,40 @@
-.section-usability {
-    display: inline-block;
-    width: 0;
-    height: 0;
-    border-style: solid;
-    border-color: transparent #fee03c transparent transparent;
-
-    .usability-panel {
-	   top: 400px;
-	   color: #515151;
-	   padding: 0 100px 0 100px;
-	   width: 50vh;
-
-	   &-header {
-		  font-size: 7.2em;
-		  margin: 0;
-	   }
-
-	   &-text {
-		  font-size: 1.6em;
-		  word-wrap: break-word;
-		  margin: 80px 0;
-	   }
-
-	   .usability-table {
-		  width: 100vh;
-		  display: flex;
-		  flex-direction: row;
-		  justify-content: space-around;
-
-		  .table {
-			 width: 100%;
-			 text-align: left;
-			 margin-bottom: 100px;
-
-			 th, td {
-				padding: 10px 0;
-			 }
-
-			 &-header {
-				font-size: 2.8em;
-			 }
-
-			 &-row {
-				font-size: 1.6em;
-			 }
-		  }
-	   }
-    }
+.container{
+  width: 80%;
+  margin: auto;
 }
-
-.details {
-    text-align: center;
-
-    h2 {
-	   font-size: 2.8em;
+canvas{
+  display: none;
+}
+#audit0, audit1{
+  width: 100%;
+}
+.usability-panel{
+  padding-top: 4em;
+  .usability-panel-header {
+    font-size: 5.5em;
+}
+  .usability-panel-text{
+    width: 50%;
+    padding: 2em 0;
+  }
+  .usability-table{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    app-list{
+      width:45%;
+      margin: 4em 0;
     }
+  }
+  .details{
+    padding: 10% 0;
+    text-align:center;
+    button{
+      background: #fff;
+      border:none;
+      box-shadow: 0 0 4px 4px rgba(0,0,0,0.2s);
+      padding:1.3em 2em;
+    }
+  }
+
 }
