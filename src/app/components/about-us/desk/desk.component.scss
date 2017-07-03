@@ -1,0 +1,56 @@
+@import "../../../../assets/styles/colors";
+#front{
+  position: absolute;
+  transform-origin: bottom left;
+  cursor: pointer;
+  width: 207px;
+  height: 54px;
+  opacity: 0.95;
+  &:after{
+    content: '';
+    background: $desk;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    transition: 0.3s;
+  }
+}
+#front.animationVariant1{
+  opacity: 1;
+  &:after{
+    width: 65%;
+    height: 167%;
+    transform-origin: bottom;
+    transform: rotateY(0deg) rotateZ(29deg) rotateX(0deg) skew(30deg) translateY(-32px) translateX(102px);
+  }
+}
+
+#back{
+  background: darken($desk,5);
+  width: 0;
+  height: 192%;
+  position: absolute;
+  top: -70px;
+  right: 38px;
+  transform: rotate(-1deg);
+  transition: 0.5s;
+}
+#back.animationVariant1{
+  width: 9px;
+}
+
+#left{
+  background: darken($desk,5);
+  width: 0;
+  height: 124%;
+  position: absolute;
+  top: 40px;
+  right: -36px;
+  transition: 0.5s;
+  transform: skew(61deg) translateY(-9px);
+}
+#left.animationVariant1{
+  width: 8px;
+}

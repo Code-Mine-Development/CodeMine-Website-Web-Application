@@ -1,0 +1,15 @@
+// Buttons
+.btn {
+    padding: 10px 35px;
+    text-transform: uppercase;
+
+    &-pacific-blue {
+	   background-color: #169bd5;
+	   color: #fff;
+    }
+
+    &-large {
+	   font-size: 17px;
+	   font-weight: 700;
+    }
+}

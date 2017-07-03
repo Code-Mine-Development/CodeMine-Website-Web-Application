@@ -1,26 +1,28 @@
-import {NgModule} from "@angular/core";
-import {RouterModule, Routes, PreloadAllModules} from "@angular/router";
-import {OfferComponent} from "./offer/offer.component";
-import {PageNotFoundComponent} from "./core/page-not-found/page-not-found.component";
-import {HomeComponent} from "./core/home/home.component";
+import {NgModule} from '@angular/core';
+import {RouterModule, Routes, PreloadAllModules} from '@angular/router';
+import {HomePageComponent} from './core/home-page/home-page.component';
+import {ContactResolver} from './aplication/contact/services/contact.resolver';
+import {PageNotFoundComponent} from './core/page-not-found/page-not-found.component';
+import {HomePageResolver} from './core/home-page/services/home-page.resolver';
 
 const appRoutes: Routes = [
-  { path: '', redirectTo:'/home', pathMatch:'full'},
-  { path: 'home', component:HomeComponent},
-  { path: 'offer', component:OfferComponent},
-  { path: 'aboutUs', loadChildren: './about-us/about-us.module#AboutUsModule'},
+    {path: '', redirectTo: '/home', pathMatch: 'full'},
+    {path: 'home', component: HomePageComponent, resolve: {company: ContactResolver, carousel: HomePageResolver}},
+    {path: 'contact', loadChildren: './aplication/contact/contact.module#ContactModule'},
+    {path: 'audit', loadChildren: './aplication/audit/audit.module#AuditModule'},
+    {path: 'portfolio', loadChildren: './aplication/portfolio/portfolio.module#PortfolioModule'},
+    {path: 'aboutUs', loadChildren: './aplication/about-us/about-us.module#AboutUsModule'},
 
-  { path: 'not-found', component:PageNotFoundComponent},
-  { path:'**',redirectTo:'/not-found'},
-
+    {path: 'not-found', component: PageNotFoundComponent},
+    {path: '**', redirectTo: '/not-found'}
 ];
 
 
 @NgModule({
-  imports:[
-    RouterModule.forRoot(appRoutes, {preloadingStrategy: PreloadAllModules})
-  ],
-  exports:[RouterModule]
+    imports: [
+        RouterModule.forRoot(appRoutes, {preloadingStrategy: PreloadAllModules})
+    ],
+    exports: [RouterModule]
 })
 export class AppRoutingModule {
 
