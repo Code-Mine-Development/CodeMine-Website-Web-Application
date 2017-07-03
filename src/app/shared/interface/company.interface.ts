@@ -1,5 +1,4 @@
 import {Employees} from '../../aplication/about-us/interfaces/employees.interface';
-
 export interface Company {
     country: string;
     city: string;

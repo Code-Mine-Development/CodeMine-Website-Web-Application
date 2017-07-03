@@ -11,7 +11,6 @@ import {PortfolioService} from "./aplication/portfolio/services/portfolio.servic
 import {PortfolioResolver} from "./aplication/portfolio/services/portfolio.resolver";
 import {PortfolioModule} from "./aplication/portfolio/portfolio.module";
 import {HomePageResolver} from "./core/home-page/services/home-page.resolver";
-import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
 
 @NgModule({
     declarations: [
@@ -22,8 +21,8 @@ import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
         CommonModule,
         HttpModule,
         CoreModule,
-        PortfolioModule,
-        BrowserAnimationsModule
+        PortfolioModule
+
     ],
     providers: [
         PortfolioService,

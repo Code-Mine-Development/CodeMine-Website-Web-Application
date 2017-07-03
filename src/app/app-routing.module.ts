@@ -3,7 +3,7 @@ import {RouterModule, Routes, PreloadAllModules} from '@angular/router';
 import {HomePageComponent} from './core/home-page/home-page.component';
 import {ContactResolver} from './aplication/contact/services/contact.resolver';
 import {PageNotFoundComponent} from './core/page-not-found/page-not-found.component';
-import {HomePageResolver} from './core/home-page/services/home-page.resolver';
+import {HomePageResolver} from "./core/home-page/services/home-page.resolver";
 
 const appRoutes: Routes = [
     {path: '', redirectTo: '/home', pathMatch: 'full'},
@@ -12,7 +12,6 @@ const appRoutes: Routes = [
     {path: 'audit', loadChildren: './aplication/audit/audit.module#AuditModule'},
     {path: 'portfolio', loadChildren: './aplication/portfolio/portfolio.module#PortfolioModule'},
     {path: 'aboutUs', loadChildren: './aplication/about-us/about-us.module#AboutUsModule'},
-
     {path: 'not-found', component: PageNotFoundComponent},
     {path: '**', redirectTo: '/not-found'}
 ];
