@@ -39,7 +39,6 @@ export class AuditListComponent {
       lc.run(() => {
         this.direction = dir;
       });
-      console.log(this.direction);
     };
   }
 

@@ -1,31 +1,126 @@
 @import "../../../assets/styles/colors.scss";
+@import "../../../assets/styles/mixins.scss";
 
 
-:host{
-  z-index: 9999999;
-  background: white;
-  position: fixed;
-  width: 100%;
-  top:0;
-
-  header{
-    display: flex;
-    justify-content: space-between;
-    padding: 20px;
-    z-index: 1;
-    position: relative;
+//:host{
+//  z-index: 9999999;
+//  background: white;
+//  position: fixed;
+//  width: 100%;
+//  top:0;
+//
+//  header{
+//    display: flex;
+//    justify-content: space-between;
+//    padding: 20px;
+//    z-index: 1;
+//    position: relative;
+//  }
+//  ul{
+//    display: flex;
+//    li.active{
+//      font-weight: bold;
+//    }
+//    li:focus{
+//      outline:none;
+//    }
+//    li{
+//      cursor:pointer;
+//      padding: 0 10px;
+//    }
+//  }
+//}
+div.header.animation{
+  height: 100px;
+  @include custom-transition(0.2s);
+}
+div.header.animation.borderAnim{
+  &:before{
+    width: 100%;
+    @include custom-transition(0.3s);
   }
-  ul{
+}
+div.header{
+  @include custom-transition(0.2s);
+  display: flex;
+  justify-content: space-between;
+  position: fixed;
+  width: calc(100% - 100px);
+  background: white;
+  z-index: 99999999999;
+  top: 0;
+  padding: 20px 50px;
+  height: 168px;
+  &:before{
+    content: '';
+    height: 2px;
+    width: 0;
+    position: absolute;
+    background: black;
+    bottom: 0;
+    @include custom-transition(0.3s);
+  }
+  > div:first-of-type {
+    flex: 0.5;
+    @media screen and (max-width: 1350px) {
+      flex: 0.15;
+    }
+    .wrapper {
+      position: relative;
+      width: 115px;
+      img {
+        width: 75px;
+        height: 153px;
+        cursor: pointer;
+      }
+      .triangle-svg {
+        cursor: pointer;
+        position: absolute;
+        width: 43px;
+        bottom: 0;
+        right: -9px;
+      }
+    }
+  }
+
+  > div:last-of-type{
     display: flex;
-    li.active{
-      font-weight: bold;
-    }
-    li:focus{
-      outline:none;
-    }
-    li{
-      cursor:pointer;
-      padding: 0 10px;
+    flex: 1;
+    justify-content: flex-end;
+
+    ul {
+      display: flex;
+      justify-content: flex-end;
+      flex: 1;
+      list-style: none;
+      margin: 0;
+
+      li {
+        span {
+          text-transform: uppercase;
+          white-space:nowrap;
+          cursor: pointer;
+          position: relative;
+          padding: 0 0 10px 40px;
+          font-weight: 700;
+          font-size: 1.6em;
+          letter-spacing: 1px;
+
+          span:last-child {
+            padding-right: 0;
+          }
+
+          &:before {
+            content: '';
+            height: 2px;
+            width: 0;
+            position: absolute;
+            background: black;
+            bottom: 12px;
+          }
+        }
+      }
     }
   }
 }
+

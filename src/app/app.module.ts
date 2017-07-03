@@ -13,6 +13,9 @@ import {PortfolioModule} from './aplication/portfolio/portfolio.module';
 import {HomePageResolver} from './core/home-page/services/home-page.resolver';
 import {OfferComponent} from './aplication/offer/offer.component';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
+import {HomeInformationServices} from './components/home-page/services/home-information.service';
+import {HomeInformationResolver} from './components/home-page/services/home-information.resolver';
+import {ActivatedRoute} from "@angular/router";
 
 @NgModule({
     declarations: [
@@ -32,7 +35,10 @@ import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
         HomePageResolver,
         ContactResolver,
         ContactService,
-        PortfolioResolver
+        PortfolioResolver,
+        HomeInformationServices,
+        HomeInformationResolver,
+        ActivatedRoute
     ],
     bootstrap: [AppComponent]
 })

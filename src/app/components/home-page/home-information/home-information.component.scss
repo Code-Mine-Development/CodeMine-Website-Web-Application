@@ -29,14 +29,14 @@
     }
     .text {
       margin-bottom: 100px;
+      width: 50vh;
     }
   }
 
   .text {
-    font-size: 18px;
+    font-size: 2em;
     font-weight: 200;
     text-align: left;
-
   }
 
   .box {
@@ -55,34 +55,17 @@
     }
 
     &-header {
-      font-size: 3em;
-      font-weight: 500;
+      font-weight: 700;
     }
 
     .col-box-text {
-      width: 32%;
+      width: 50%;
     }
 
     .col-box {
       width: 50%;
     }
   }
-
-  //.box-scroll {
-  //  border: 1px solid red;
-  //  overflow: scroll;
-  //  height: 100vh;
-  //  margin-left: 45px;
-  //  margin-right: 45px;
-  //
-  //  &-inside {
-  //    height: 100vh;
-  //    display: flex;
-  //    align-items: center;
-  //    justify-content: center;
-  //    overflow: scroll;
-  //  }
-  //}
 
   .box-center {
     text-align: center;

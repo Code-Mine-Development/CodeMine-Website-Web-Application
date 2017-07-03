@@ -16,6 +16,20 @@
      background-repeat: no-repeat;
      background-size: cover;
      transition: 1.5s;
+
+     .carousel-desc {
+       display: flex;
+       flex-direction: column;
+       justify-content: center;
+       align-items: center;
+       height: 100%;
+
+       h1 {
+         font-weight: 700;
+         font-size: 4.8em;
+         margin: 0
+       }
+     }
    }
   }
 }
