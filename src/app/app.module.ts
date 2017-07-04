@@ -11,6 +11,8 @@ import {PortfolioService} from "./aplication/portfolio/services/portfolio.servic
 import {PortfolioResolver} from "./aplication/portfolio/services/portfolio.resolver";
 import {PortfolioModule} from "./aplication/portfolio/portfolio.module";
 import {HomePageResolver} from "./core/home-page/services/home-page.resolver";
+import {OfferModule} from "./aplication/offer/offer.module";
+import {OfferResolver} from "./aplication/offer/offer.resolver";
 
 @NgModule({
     declarations: [
@@ -21,7 +23,8 @@ import {HomePageResolver} from "./core/home-page/services/home-page.resolver";
         CommonModule,
         HttpModule,
         CoreModule,
-        PortfolioModule
+        PortfolioModule,
+        OfferModule
 
     ],
     providers: [
@@ -29,7 +32,8 @@ import {HomePageResolver} from "./core/home-page/services/home-page.resolver";
         HomePageResolver,
         ContactResolver,
         ContactService,
-        PortfolioResolver
+        PortfolioResolver,
+        OfferResolver
     ],
     bootstrap: [AppComponent]
 })

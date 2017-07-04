@@ -1,8 +1,7 @@
-export interface Technologies{
+export interface Languages {
   title: string;
-  technologies: Array<LanguagesEntity>;
+  languages: Array<LanguagesEntity>;
 }
-
 
 interface LanguagesEntity {
   image: string;
