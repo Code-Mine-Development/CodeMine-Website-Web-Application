@@ -1,31 +1,64 @@
-.section-audit {
-  background-color: #8E8E8E;
-  height: 50vh;
-  padding: 20px;
+.section-audit{
+  width: 100%;
+  background: #666;
+  padding-top: 2em;
+  .start-panel-header{
+    text-align: center;
+    color:#fff;
+    position: relative;
+    top:-200px;
+    animation: slideIn 1s forwards;
 
-  .start-panel {
+  }
+  .row{
+    display: flex;
+    justify-content: space-around;
+    width: 80%;
+    margin: auto;
+    padding: 2em;
 
-    &-header {
-      font-size: 3em;
-      margin-top: 140px;
-      margin-bottom: 60px;
-    }
+    .column{
+      width: 40%;
+      position: relative;
+      animation: slideIn 1s;
+      animation-fill-mode: forwards;
 
-    .row {
-      display: flex;
-      justify-content: space-around;
-
-      .audit-image {
-        img {
-          margin-bottom: 25px;
-        }
+      &:first-of-type{
+        left:-25%
+      }
+      &:last-of-type{
+        left:25%;
       }
 
-      .audit-title {
+      img{
+        max-height: 100%;
+        max-width:100%;
+      }
+    }
+      a{
+        color:#fff;
         text-decoration: none;
-        color: #333333;
         font-size: 1.5em;
       }
     }
   }
+
+@keyframes slideIn {
+  from{
+    opacity:0
+  }
+  to{
+    opacity:1;
+    left:0%;
+    top:0;
+  }
+}
+@media screen and (min-width: 850px){
+  .section-audit{
+  .row{
+    .column{
+      width: 25%;
+    }
+  }
+}
 }

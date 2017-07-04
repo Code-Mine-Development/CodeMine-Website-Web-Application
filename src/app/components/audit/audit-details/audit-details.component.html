@@ -1,4 +1,7 @@
-<div class="section-usability" [ngStyle]="{'border-width': '0 ' + width + 'px '+ width +'px 0'}">
+
+<div class="section-usability" id="{{'triangle' +indexID}}">
+  <canvas #Canvas></canvas>
+  <div class="container">
   <div class="usability-panel">
     <h1 class="usability-panel-header">Audyt</h1>
     <h1 class="usability-panel-header">{{audit.title}}</h1>
@@ -6,10 +9,12 @@
     <div class="usability-table">
       <app-list [title]="'Zadania'" [listData]="audit.tasks"></app-list>
       <app-list [title]="'Korzyści'" [listData]="audit.benefits"></app-list>
+    </div>
       <div class="details">
         <h2>Chcesz poznać więcej szczegółów ?</h2>
         <button class="btn btn-color btn-large">Wyślij zapytanie</button>
       </div>
     </div>
   </div>
-</div>
+  </div>
+

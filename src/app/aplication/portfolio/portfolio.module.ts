@@ -9,6 +9,7 @@ import {PortfolioListComponent} from "./portfolio-list/portfolio-list.component"
 import {PortfolioService} from "./services/portfolio.service";
 
 
+
 @NgModule({
     declarations: [
         PortfolioComponent,
