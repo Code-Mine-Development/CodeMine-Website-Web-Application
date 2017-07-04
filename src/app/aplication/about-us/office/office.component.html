@@ -1,7 +1,7 @@
 <div class="wrap" [ngStyle]="{'top': '-' + topOffset + 'px', 'max-width':'' + windowWidth + 'px'}" (mousemove)="mouseMove($event)">
   <div id="officeBg" [ngStyle]="{'background-image': 'url(./assets/images/office.svg)'}"></div>
   <div id="deskLayer">
-    <app-desk *ngFor="let person of employees, let i = index" [person]="person"></app-desk>
+    <app-desk #desk *ngFor="let person of employees, let i = index" [person]="person"></app-desk>
   </div>
 </div>
 <div class="scroll" [ngStyle]="{'top': '-' + topOffset + 'px'}" (click)="scrollDown()" (mouseenter)="moveArrow(true)" (mouseleave)="moveArrow(false)">

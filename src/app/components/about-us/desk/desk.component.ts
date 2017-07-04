@@ -1,10 +1,14 @@
-import {Component, HostListener, Input, OnInit, ViewChild} from '@angular/core';
+import {Component, EventEmitter, HostListener, Input, OnInit, Output, ViewChild} from '@angular/core';
 import {Employees} from '../../../aplication/about-us/interfaces/employees.interface';
 import {Coordinate} from '../../../aplication/about-us/models/coordinate.model';
 
 @Component({
   selector: 'app-desk',
-  template: `<div id="front" #desk><div #back id="back"></div><div #left id="left"></div></div>`,
+  template: `
+    <div id="front" #desk>
+      <div #back id="back"></div>
+      <div #left id="left"></div>
+    </div>`,
   styleUrls: ['./desk.component.scss'],
 })
 export class DeskComponent implements OnInit {

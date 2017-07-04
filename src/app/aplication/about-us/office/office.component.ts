@@ -1,4 +1,4 @@
-import {Component, OnInit, OnDestroy, NgZone, Input} from '@angular/core';
+import {Component, OnInit, OnDestroy, NgZone, Input, QueryList, ViewChildren} from '@angular/core';
 import {trigger, state, style, transition, animate} from '@angular/animations'
 import {Employees} from "../interfaces/employees.interface";
 

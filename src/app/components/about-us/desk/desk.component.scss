@@ -54,3 +54,18 @@
 #left.animationVariant1{
   width: 8px;
 }
+
+#txt{
+  width: 200px;
+  height: 73px;
+  background: transparent;
+  position: absolute;
+  opacity: 0;
+  transition: 0.3s;
+}
+#txt.animationVariant1{
+  opacity: 1;
+  transform-origin: bottom;
+  transform: rotateY(58deg) rotateZ(-17deg) rotateX(0deg) skew(-16deg) translate(129px, 54px);
+  z-index: 10;
+}

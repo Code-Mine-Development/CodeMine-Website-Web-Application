@@ -9,8 +9,8 @@ import {ContactResolver} from './aplication/contact/services/contact.resolver';
 import {ContactService} from './aplication/contact/services/contact.service';
 import {PortfolioService} from "./aplication/portfolio/services/portfolio.service";
 import {PortfolioResolver} from "./aplication/portfolio/services/portfolio.resolver";
-import {PortfolioModule} from "./aplication/portfolio/portfolio.module";
 import {HomePageResolver} from "./core/home-page/services/home-page.resolver";
+import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
 
 @NgModule({
     declarations: [
@@ -21,8 +21,7 @@ import {HomePageResolver} from "./core/home-page/services/home-page.resolver";
         CommonModule,
         HttpModule,
         CoreModule,
-        PortfolioModule
-
+        BrowserAnimationsModule,
     ],
     providers: [
         PortfolioService,
