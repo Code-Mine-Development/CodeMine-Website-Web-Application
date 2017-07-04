@@ -21,15 +21,16 @@ canvas{
     font-size: 5.5em;
 }
   .usability-panel-text{
-    width: 50%;
+    width: 100%;
     padding: 2em 0;
   }
   .usability-table{
     width: 100%;
     display: flex;
     justify-content: space-between;
+    flex-wrap: wrap;
     app-list{
-      width:45%;
+      width:100%;
       margin: 4em 0;
     }
   }
@@ -44,4 +45,16 @@ canvas{
     }
   }
 
+}
+@media screen and (min-width: 850px) {
+  .usability-panel {
+    .usability-panel-text {
+      width: 50%;
+    }
+    .usability-table{
+      app-list{
+        width: 45%;
+      }
+    }
+  }
 }

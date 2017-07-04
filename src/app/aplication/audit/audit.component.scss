@@ -1,5 +1,3 @@
-
-
 .section-audit{
   width: 100%;
   background: #666;
@@ -20,7 +18,7 @@
     padding: 2em;
 
     .column{
-      width: 25%;
+      width: 40%;
       position: relative;
       animation: slideIn 1s;
       animation-fill-mode: forwards;
@@ -54,4 +52,13 @@
     left:0%;
     top:0;
   }
+}
+@media screen and (min-width: 850px){
+  .section-audit{
+  .row{
+    .column{
+      width: 25%;
+    }
+  }
+}
 }
