@@ -52,9 +52,9 @@ describe('AuditDetailsComponent', () => {
     expect(component.audit).toEqual(MockAudit)
   });
 
-  it('should define width to 1500 px', () => {
-    component.registerWindowChange(MockWindowEvent);
-    expect(component.width).toBe(1500)
-  });
+  // it('should define width to 1500 px', () => {
+  //   component.registerWindowChange(MockWindowEvent);
+  //   expect(component.width).toBe(1500)
+  // });
 
 });
