@@ -1,2 +1,8 @@
-@import "assets/styles/import.scss";
-@import "assets/styles/layout.scss";
+@import "assets/styles/import";
+body{
+  margin:0;
+}
+
+app-audit{
+  width: 100%;
+}

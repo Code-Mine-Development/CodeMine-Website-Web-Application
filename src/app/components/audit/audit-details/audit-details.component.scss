@@ -1,40 +1,59 @@
-.section-audit-details {
-  display: inline-block;
-  width: 0;
-  height: 0;
-  border-style: solid;
-  border-color: transparent #fee03c transparent transparent;
-  color: #515151;
-
-
-  .audit-details-panel {
-    position: absolute;
+.container{
+  width: 80%;
+  margin: auto;
+}
+canvas{
+  display: none;
+}
+#triangle0{
+  width: 100%;
+  background: #ffda07;
+}
+#triangle1{
+  padding-top: 15%;
+  button{
+    background: #ffda07;
+  }
+}
+.usability-panel{
+  padding-top: 4em;
+  .usability-panel-header {
+    font-size: 5.5em;
+}
+  .usability-panel-text{
+    width: 100%;
+    padding: 2em 0;
+  }
+  .usability-table{
+    width: 100%;
     display: flex;
-    flex-direction: column;
-    left: 80px;
-    right: 80px;
-
-    &-header {
-      font-size: 7.2em;
-      margin: 0;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    app-list{
+      width:100%;
+      margin: 4em 0;
     }
+  }
+  .details{
+    padding: 10% 0;
+    text-align:center;
+    button{
+      background: #fff;
+      border:none;
+      box-shadow: 0 0 4px 4px rgba(0,0,0,0.2s);
+      padding:1.3em 2em;
+    }
+  }
 
-    &-text {
-      font-size: 1.6em;
-      word-wrap: break-word;
-      margin: 80px 0;
+}
+@media screen and (min-width: 850px) {
+  .usability-panel {
+    .usability-panel-text {
       width: 50%;
     }
-
-    .audit-details-table {
-      display: flex;
-    }
-
-    .details {
-      text-align: center;
-
-      h2 {
-        font-size: 2.8em;
+    .usability-table{
+      app-list{
+        width: 45%;
       }
     }
   }

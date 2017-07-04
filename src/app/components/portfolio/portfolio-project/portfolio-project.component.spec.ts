@@ -1,18 +1,24 @@
 import {async, ComponentFixture, TestBed, fakeAsync, tick} from '@angular/core/testing';
 
 import { PortfolioProjectComponent } from './portfolio-project.component';
-import {Router, ActivatedRoute} from '@angular/router';
-import {Component} from '@angular/core';
-import {MockPortfolio} from '../../../shared/mocks/portfolio.mock';
-import {SquareImageComponent} from '../../../shared/ui-elements/squareImage/square-image.component';
+import {Router, ActivatedRoute} from "@angular/router";
+import {Component} from "@angular/core";
+import {MockPortfolio} from "../../../shared/mocks/portfolio.mock";
+import {SquareImageComponent} from "../../../shared/ui-elements/squareImage/square-image.component";
+import {AppRoutingProvider} from "../../../app-routing-provider";
 
 @Component({
   selector: 'app-fake-project-wrapper',
-  template: `<app-portfolio-project [index]="index" [project]="project"></app-portfolio-project>`
+  template: `<app-portfolio-project [project]="project" (onAction)="showDetails(1)"></app-portfolio-project>`
 })
 class FakeWrapperPortfolioProjectComponent {
-  index = 1;
+  index: number = 1;
   project = MockPortfolio[0];
+
+  constructor(private route: ActivatedRoute, private router: Router){}
+  showDetails(index:number):void{
+    this.router.navigate(AppRoutingProvider.portfolioDetail(index),{relativeTo: this.route})
+  }
 }
 
 describe('PortfolioProjectComponent', () => {
@@ -28,10 +34,10 @@ describe('PortfolioProjectComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [FakeWrapperPortfolioProjectComponent, PortfolioProjectComponent, SquareImageComponent ],
-      providers: [
+      declarations: [FakeWrapperPortfolioProjectComponent, PortfolioProjectComponent,SquareImageComponent ],
+      providers:[
         {provide: Router, useValue: router},
-        {provide: ActivatedRoute, useValue: {data: {}}}
+        {provide: ActivatedRoute, useValue: {data:{}}}
       ]
     })
       .compileComponents();
@@ -43,7 +49,6 @@ describe('PortfolioProjectComponent', () => {
 
     fakeFixture = TestBed.createComponent(PortfolioProjectComponent);
     fakeComponent = fakeFixture.componentInstance;
-    fakeComponent.index = component.index;
     fakeComponent.project = component.project;
     fixture.detectChanges();
   });
@@ -56,10 +61,10 @@ describe('PortfolioProjectComponent', () => {
     expect(component.project).toEqual(MockPortfolio[0])
   });
 
-  it('dupa', fakeAsync(() => {
-    component.showDetails();
+  it('should change routing', fakeAsync(() => {
+    component.onClick();
     tick();
-    expect(router.navigate).toHaveBeenCalledWith(['/portfolio/', 1], {relativeTo: {data: {}}});
+    expect(router.navigate).toHaveBeenCalledWith(['/portfolio/', 1],{relativeTo: {data:{}}});
 
   }));
 

@@ -1,16 +1,16 @@
 <div class="section-audit">
   <div class="start-panel">
-    <div class="row">
-      <h1 class="start-panel-header" i18n>Audyty</h1>
-    </div>
+
+      <div class="start-panel-header"><h2>Audyty</h2></div>
+
     <div class="row">
       <div class="column" *ngFor="let audit of audits">
         <a href="#" class="audit-image"><img [src]="audit.image" alt=""></a>
         <div class="row">
-          <a href="#" class="audit-title"><h2 i18n >{{audit.title}}</h2></a>
+          <a href="#" class="audit-title">{{audit.title}}</a>
         </div>
       </div>
     </div>
   </div>
 </div>
-<app-audit-details *ngFor="let audit of audits" [audit]="audit"></app-audit-details>
+<app-audit-details  *ngFor="let audit of audits, let id = index" [audit]="audit"  [indexID]="id"></app-audit-details>
