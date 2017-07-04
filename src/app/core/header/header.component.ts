@@ -134,7 +134,7 @@ export class HeaderComponent implements OnInit {
       }
       if (this.homeLeftWallCalculate > 14.57) {
         this.readyLeftWall = true;
-        this.homeLeft = '0.05 10.86 0.05 25.86 16.87 25.86 0.05 14.57';
+        this.homeLeft = '0.05 10.86 0.05 25.86 16.87 25.86 0.05 9.86';
       }
     }
   }

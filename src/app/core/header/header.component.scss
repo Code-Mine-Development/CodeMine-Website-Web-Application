@@ -2,7 +2,7 @@
 @import "../../../assets/styles/mixins.scss";
 
 div.header.animation {
-  height: 100px;
+  height: 40px;
   @include custom-transition(0.2s);
 }
 div.header.animation.borderAnim {
@@ -21,7 +21,7 @@ div.header {
   background: white;
   z-index: 99999999999;
   top: 0;
-  padding: 20px 50px;
+  padding: 20px 50px 0;
   height: 168px;
 
   //&:before{
