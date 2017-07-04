@@ -15,7 +15,6 @@ import {OfferComponent} from './aplication/offer/offer.component';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {HomeInformationServices} from './components/home-page/services/home-information.service';
 import {HomeInformationResolver} from './components/home-page/services/home-information.resolver';
-import {ActivatedRoute} from "@angular/router";
 
 @NgModule({
     declarations: [
@@ -38,7 +37,6 @@ import {ActivatedRoute} from "@angular/router";
         PortfolioResolver,
         HomeInformationServices,
         HomeInformationResolver,
-        ActivatedRoute
     ],
     bootstrap: [AppComponent]
 })

@@ -1,16 +1,3 @@
-<header>
-  <div class="navbar">
-    logo
-  </div>
-  <ul>
-    <li routerLink="/home" routerLinkActive="active">Home</li>
-    <li routerLinkActive="active">Offer</li>
-    <li routerLink="/contact" routerLinkActive="active">Contact</li>
-    <li routerLink="/audit" routerLinkActive="active">Audyty</li>
-    <li routerLink="/portfolio" routerLinkActive="active">Portfolio</li>
-  </ul>
-</header>
-
 <div class="header" [ngClass]="{'animation':headerAnim == true, 'borderAnim':borderAnim == true}">
   <div [routerLink]="'/'">
     <div class="wrapper">
@@ -38,7 +25,6 @@
       <li *ngFor="let nav of navigation" routerLinkActive="active">
         <span [routerLink]="'/'+ nav">{{nav}}</span>
       </li>
-
     </ul>
   </div>
 </div>

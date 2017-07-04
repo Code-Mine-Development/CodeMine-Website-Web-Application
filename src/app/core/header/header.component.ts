@@ -13,16 +13,17 @@ export class HeaderComponent implements OnInit {
   navigation = [
     'o nas',
     'portfolio',
-    'offer',
-    'audit',
-    'contact',
+    'oferta',
+    'audyty',
+    'kontakt',
   ];
-  switchLang: string = 'en';
+
+  switchLang = 'en';
   scrollTop: number;
   opacity: number;
 
-  headerAnim: boolean = false;
-  borderAnim: boolean = false;
+  headerAnim = false;
+  borderAnim = false;
   translateY: number;
   translateX: number;
   move: string;
@@ -42,8 +43,8 @@ export class HeaderComponent implements OnInit {
   homeRoofAnim: number;
   homeRoofCalculate: number;
 
-  readyRightWall: boolean = false;
-  readyLeftWall: boolean = false;
+  readyRightWall = false;
+  readyLeftWall = false;
 
   constructor(@Inject(DOCUMENT) private document: Document, private router: Router) {
   }

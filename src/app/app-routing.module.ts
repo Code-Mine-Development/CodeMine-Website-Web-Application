@@ -4,8 +4,8 @@ import {HomePageComponent} from './core/home-page/home-page.component';
 import {ContactResolver} from './aplication/contact/services/contact.resolver';
 import {PageNotFoundComponent} from './core/page-not-found/page-not-found.component';
 import {HomePageResolver} from './core/home-page/services/home-page.resolver';
-import {HomeInformationServices} from "./components/home-page/services/home-information.service";
-import {HomeInformationResolver} from "./components/home-page/services/home-information.resolver";
+import {HomeInformationServices} from './components/home-page/services/home-information.service';
+import {HomeInformationResolver} from './components/home-page/services/home-information.resolver';
 
 const appRoutes: Routes = [
   {path: '', redirectTo: '/home', pathMatch: 'full'},
@@ -17,8 +17,8 @@ const appRoutes: Routes = [
       homeInformation: HomeInformationResolver
     }
   },
-  {path: 'contact', loadChildren: './aplication/contact/contact.module#ContactModule'},
-  {path: 'audit', loadChildren: './aplication/audit/audit.module#AuditModule'},
+  {path: 'kontakt', loadChildren: './aplication/contact/contact.module#ContactModule'},
+  {path: 'audyty', loadChildren: './aplication/audit/audit.module#AuditModule'},
   {path: 'portfolio', loadChildren: './aplication/portfolio/portfolio.module#PortfolioModule'},
 
   {path: 'not-found', component: PageNotFoundComponent},

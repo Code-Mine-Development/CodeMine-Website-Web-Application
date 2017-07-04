@@ -13,8 +13,15 @@
     box-shadow: 8px 8px 20px #8E8E8E;
   }
 
-    &-large {
-	   font-size: 17px;
-	   font-weight: 700;
-    }
+  &-white {
+    border: 1px solid #fff;
+    background-color: transparent;
+    color: #fff;
+    cursor: pointer;
+  }
+
+  &-large {
+   font-size: 17px;
+   font-weight: 700;
+  }
 }
