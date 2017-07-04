@@ -1,0 +1,43 @@
+@import "../../../../../../../../Downloads/CodeMine-Website-Web-Application-offer/src/assets/styles/mediaQueries";
+.container {
+  width: 70%;
+  margin: 8em auto;
+}
+.header{
+  text-align: center;
+  margin-bottom: 4em;
+}
+.row{
+  width: 100%;
+  text-align: center;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  .col{
+    text-align: center;
+    @media #{$phone}{
+      width: 100%;
+    }
+    @media #{$tablet}{
+      width: 50%;
+    }
+    @media #{$phone-tablet}{
+      width: 33.33%;
+    }
+    @media #{$computer}{
+      width: 14%;
+    }
+    h3{
+      margin:1.5em 0;
+    }
+    .col-img{
+      height: 150px;
+      width: 100%;
+      border:1px solid #eee;
+      background-size: cover;
+      &:hover{
+        border:1px solid #000;
+      }
+    }
+  }
+}

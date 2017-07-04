@@ -1,0 +1,11 @@
+<div class="container">
+  <div class="header"><h2 i18n>{{Languages.title}}</h2></div>
+  <div class="languages">
+    <div class="languages-col"
+         routerLink="/offer/languages/details"
+         *ngFor="let item of Languages.languages"
+         [ngStyle]="{'background-image': 'url(' + item.image + ')'}">
+      <img [src]="item.image" alt="languageImage">
+    </div>
+  </div>
+</div>
