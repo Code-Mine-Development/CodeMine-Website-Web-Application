@@ -16,6 +16,7 @@ export class AuditComponent implements OnInit {
         .subscribe((data: Data) => {
           this.audits = data['audit'];
         });
+
   }
 
 }
