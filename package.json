@@ -9,7 +9,12 @@
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
-    "i18n": "./node_modules/.bin/ng-xi18n  --i18nFormat=xlf  --outFile=./locale/messages.xlf"
+    "i18n": "ng-xi18n  --i18nFormat xlf",
+    "build-en": "ng build --aot --output-path dist/pl --base-href en --locale en --i18n-format xlf --i18n-file src/locale/messages.en.xlf",
+    "build-de": "ng build --aot --output-path dist/pl --base-href de --locale de --i18n-format xlf --i18n-file src/locale/messages.de.xlf",
+    "build-nov": "ng build --aot --output-path dist/pl --base-href nor --locale nor --i18n-format xlf --i18n-file src/locale/messages.nor.xlf",
+    "build-sl": "ng build --aot --output-path dist/sl --base-href sl --locale sl --i18n-format xlf --i18n-file src/locale/messages.sl.xlf",
+    "build-en": "ng build --aot --output-path dist/en --base-href pl --locale pl"
   },
   "private": true,
   "dependencies": {

@@ -22,10 +22,9 @@
   </div>
   <div>
     <ul>
-      <li *ngFor="let nav of navigation" routerLinkActive="active">
-        <span [routerLink]="'/'+ nav">{{nav}}</span>
+      <li i18n *ngFor="let nav of navigation" routerLinkActive="active">
+        <span i18n [routerLink]="'/'+ nav">{{nav}}</span>
       </li>
     </ul>
   </div>
 </div>
-

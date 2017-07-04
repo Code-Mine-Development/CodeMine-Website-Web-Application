@@ -10,21 +10,38 @@
       margin: 0 30px;
     }
 
+    .col-video {
+      position: relative;
+      overflow: hidden;
+      color: #fff;
+    }
+
+    video {
+      position: absolute;
+      height: 100%;
+      top: 0;
+      margin-left: -45%;
+      left: 0;
+    }
+
     .contact-box {
       background-color: #F2F2F2;
       text-align: center;
       line-height: 28px;
       padding: 80px 30px;
       margin-bottom: 80px;
+      margin-top: 150px;
 
       .text {
         font-size: 1.8em;
+        position: relative;
       }
 
       &-header {
         font-weight: 500;
         margin-bottom: 50px;
         line-height: 36px;
+        position: relative;
       }
 
       .contact {

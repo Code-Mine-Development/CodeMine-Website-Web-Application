@@ -8,38 +8,40 @@ import {HomeInformationResolver} from './home-information.resolver';
 import {HomeInformationServices} from './home-information.service';
 import {MockInformation} from '../../../shared/mocks/home-information.mock';
 
+
 @Component ({
-    selector: 'app-fake-audit-resolver',
-    template: '<p></p>',
+  selector: 'app-fake-home-information-resolver',
+  template: '<p></p>',
 })
 class FakeResolveComponent {}
 
 
 export const routes: Routes = [
-    {path: 'resolver', component: FakeResolveComponent, resolve: {homeInformationServices: HomeInformationResolver}},
+  {path: 'resolver', component: FakeResolveComponent, resolve: {homeInformation: HomeInformationResolver}},
 ];
 
-describe('AuditResolverService', () => {
+describe('HomeInformationResolver', () => {
 
-    beforeEach(() => {
-        TestBed.configureTestingModule({
-            declarations: [FakeResolveComponent],
-            providers: [HomeInformationResolver, HomeInformationServices],
-            imports: [RouterTestingModule.withRoutes(routes), HttpModule]
-        })
-    });
+  beforeEach(() => {
+    TestBed.configureTestingModule({
+      declarations: [FakeResolveComponent],
+      providers: [HomeInformationResolver, HomeInformationServices],
+      imports: [RouterTestingModule.withRoutes(routes), HttpModule]
+    })
+  });
 
-//     it('it should called resolver service on routing change to "/resolver"',
-//         fakeAsync(inject([HomeInformationResolver, Router, HomeInformationServices], (resolve, router, homeInformationServices) => {
-//             spyOn(resolve, 'resolve').and.callThrough();
-//         //
-//         //   homeInformationServices.getInformation() = () => {
-//         //         return MockInformation
-//         //     };
-//         //     router.navigate(['/resolver']);
-//         //     tick();
-//         //     expect(resolve['resolve']).toHaveBeenCalled();
-//         // }))
-//     // );
-//
+  it('it should called resolver service on routing change to "/resolver"',
+    fakeAsync(inject([HomeInformationResolver, Router, HomeInformationServices], (resolve, router, homeInformationServices) => {
+      spyOn(resolve, 'resolve').and.callThrough();
+
+      homeInformationServices.getInformation = () => {
+        return MockInformation;
+      };
+      router.navigate(['/resolver']);
+      tick();
+      expect(resolve['resolve']).toHaveBeenCalled();
+    }))
+  );
+
 });
+
