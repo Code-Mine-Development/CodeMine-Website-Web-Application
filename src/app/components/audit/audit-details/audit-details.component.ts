@@ -1,5 +1,6 @@
-import {Component, OnInit, Input, ViewChild} from '@angular/core';
+import {Component, OnInit, Input, ViewChild, AfterViewInit, HostBinding} from '@angular/core';
 import {Audit} from '../../../aplication/audit/interfaces/audit.interface';
+import {Renderer} from '@angular/core';
 
 @Component({
   selector: 'app-audit-details',
@@ -7,41 +8,51 @@ import {Audit} from '../../../aplication/audit/interfaces/audit.interface';
   styleUrls: ['audit-details.component.scss'],
 
 })
-export class AuditDetailsComponent implements OnInit {
+export class AuditDetailsComponent implements OnInit, AfterViewInit {
   @Input() audit: Audit[];
   @ViewChild('Canvas') canvasRef;
   @Input() indexID: number;
+  @HostBinding('style.width.px') width: Number;
+  @HostBinding('style.height.px') height: Number;
+  renderer: Renderer;
 
   constructor() {
 
   }
-  ngOnInit(){
-    this.initBackground();
+
+  ngAfterViewInit() {
+    if (document.getElementById('triangle1')) {
+      this.initBackground()
+    }
+
+  }
+
+  ngOnInit() {
+
   };
 
-  initBackground(){
+
+  initBackground() {
     // Background
 
     const canvas = this.canvasRef.nativeElement;
     const ctx = canvas.getContext('2d');
-    const triangle = document.getElementById('triangle');
+    const triangle = document.getElementById('triangle1');
 
     canvas.width = window.innerWidth;
     canvas.height = triangle.offsetHeight;
 
     ctx.beginPath();
-    ctx.moveTo(1, 1);
-    ctx.lineTo(canvas.width, 1);
-    ctx.lineTo(canvas.width, canvas.height / 2);
-    ctx.lineTo(canvas.width, canvas.height);
-    ctx.lineTo(0, canvas.height - canvas.height / 2);
+    ctx.moveTo(0,0);
+    ctx.lineTo(canvas.width, 0);
+    ctx.lineTo(canvas.width, canvas.height - canvas.height*0.3);
     ctx.closePath(0, 0);
     ctx.fillStyle = '#ffda07';
     ctx.fill();
 
 
     const data = canvas.toDataURL();
-    const bg1 = document.getElementById('triangle');
+    const bg1 = document.getElementById('triangle1');
 
     bg1.style.backgroundImage = 'url(' + data + ')';
 

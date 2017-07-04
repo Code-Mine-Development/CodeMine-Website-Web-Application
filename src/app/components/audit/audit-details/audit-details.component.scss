@@ -5,8 +5,15 @@
 canvas{
   display: none;
 }
-#audit0, audit1{
+#triangle0{
   width: 100%;
+  background: #ffda07;
+}
+#triangle1{
+  padding-top: 15%;
+  button{
+    background: #ffda07;
+  }
 }
 .usability-panel{
   padding-top: 4em;
