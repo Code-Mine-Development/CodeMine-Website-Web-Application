@@ -1,73 +1,67 @@
 [
   {
-    "title": "Code Quality",
+    "title": "Jakość kodu",
     "image":"./assets/images/usability.png",
-    "description":"Audyt zastosowanej technologii  i architektury aplikacji, Audyt kodu źródłowego Audyt skalowalności i wydajności aplikacji.Często gdy ktoś wynajmuje firmę do wykonania oprogramowania jest zmuszony zaakceptowac produkt jaki dostanie i nie ma możliwości sprawdzenia co siedzi pod maską, czy to z braku własnych zasobów by to zrobić czy też ze względu na czas. Tutaj wchodzi Code Mine - możemy być filtrem/tarczą między klientem a wykonawcą sprawdzając i oceniając rozwiązania jakie zastosowano i czy na pewno spełniają one wymaania",
+    "description":"Otrzymując gotowe oprogramowanie, firmy zazwyczaj akceptują je bez jakiejkolwiek weryfikacji jakości kodu, bezpieczeństwa, elastyczności, zgodności z wymaganiami oraz wszystkich innych czynników. To nic dziwnego – klienci zwykle nie posiadają odpowiedniej wiedzy czy też czasu.Jako specjaliści, możemy zostać pośrednikiem między Twoją firmą, a Twoim wykonawcą, oceniając zastosowane przez niego rozwiązania. Naszym zadaniem będzie sprawdzenie zgodności kodu ze standardami, a także ocena jego wydajności i wielkość długu technologicznego, przeprowadzając audyty zastosowanej technologii, architektury informacji, kodu źródłowego, skalowalności oraz wydajności aplikacji.",
     "tasks":[
       {
         "name":"Badanie kodu źródłowego pod kątem zgodności z standardami"
       },
       {
-        "name":"Ocena kodu pod kątem braku wykorzystania lub błędnego wykorzystania wzorców projektowych"
+        "name":"Badanie kodu pod względem poprawności wykorzystania wzorców projektowych"
       },
       {
-        "name":"Sprawdzenie sposobu wykorzystania bibliotek zewnętrznych oraz dostarczanych przez firmy trzecie."
+        "name":"Badanie kodu pod względem poprawności wykorzystania wzorców projektowych"
       },
       {
-        "name":"Ocena elastyczności kodu na ewolucje wymagań biznesowych"
+        "name":"Badanie elastyczności kodu w perspektywie ewolucji wymagań biznesowych"
       },
       {
-        "name":"Ocena czasochłonności oraz wymagań odnośnie zasobów ludzkich"
+        "name":"Badania realnego nakładu zasobów"
       }
     ],
     "benefits": [
       {
-        "name": "Możliwość identyfikacji problemów z czytelnością kodu oraz otrzymania rekomendacji co do jego poprawy co może znacznie wpłynąć na łatwość pracy nad projketem w zespołach."
+        "name": "MIdentyfikacja problemów dotyczących czytelności kodu wraz z listą rekomendacji w związku z ich poprawą, przyczyniającą się do zwiększenia wydajności zespołowej pracy nad projektem"
       },
       {
-        "name": "Poprawne stosowanie wzorców projektowych jest niesamowicie ważne dla zachowania wysokiej jakości projektu oraz jego łatwego i bezpiecznego rozwoju. Identyfikacja problemów na jaknajwcześniejszym etapie może przyczynić się do znacznych oszczędności w przyszłosci oraz przyśpieszenia tępa prac nad projetkem."
+        "name": "Identyfikacja problemów związanych z błędnym zastosowaniem wzorców projektowych, negatywnie rzutujących na jakość projektu oraz jego bezpieczny rozwój; przyczyniająca się do przyspieszenia tempa pracy nad projektem i znacznych oszczędności w przyszłości"
       },
       {
-        "name": "Odporność na zmiany w kodzie nad jakim nie ma kontroli jest bardzo ważna. Zapezpieczenie projektu przed modyfikacjami w bibliotekach zewnętrznych pomaga w minimalizowaniu ilości awarii i problemów z bezpieczeństewm oraz wydajnością."
+        "name": "Ocena wykorzystania zewnętrznych bibliotek, w tym zabezpieczania projektu przed dokonującymi się w nich zmianami, wpływająca na wydajność oraz neutralizację problemów z bezpieczeństwem"
       },
       {
-        "name": "Każde oprogramowanie służące działającemu biznesowi będzie ulegało modyfikacją. Wiedza o jego poziomie elastyczności daje możliwość jej zwiększenia zanim nowe wymagania zostaną zaproponowane co oszczędza czas oraz pieniądze."
+        "name": "Ocena poziomu elastyczności narażonego na modyfikacje kodu, pozwalająca podjąć decyzję o jego zwiększeniu, przyczyniającego się z kolei do oszczędzenia czasu i pieniędzy"
       },
       {
-        "name": "Poznanie alternatywnej oceny czasochłonności wykonania i wymagań odnośnie wielkośi zespołu może pozwolić określić czy wycena czasowa i kosztowa jest realistyczna"
+        "name": "Ocena wielkości nakładu zasobów ludzkich i czasowych, niezbędnych do wykonania projektu, pozwalająca określić realia otrzymanej od wykonawcy wyceny"
       }
     ]
   },
   {
-    "title": "Usability",
+    "title": "Użyteczność",
     "image":"./assets/images/quality.png",
     "description":"Audyt usability ma na celu kompleksową analizę użyteczności i funkcjonalności strony internetowej, aplikacji czy systemu. Podczas tego procesu sprawdzamy przede wszystkim intuicyjność strony, łatwość poruszania po niej, przydatność dla internautów i ogólne wrażenia związane z korzystania z usługi. Bierzemy pod uwagę wszystkie czynniki mające wpływ na użyteczność takie jak: architektura informacji, nawigacja, strukturę funkcjonalności dodatkowo sprawdzamy wszystkie ekrany oraz procesy myślowe. Stosujemy najlepsze techniki w zależności od rodzaju powierzonego problemu takie jak: Indywidualne wywiady pogłębione, Card Sorting, Paper prototyping, Eyetracking,",
     "tasks":[
       {
-        "name":"Badanie zgodności z heurystykami użyteczności"
+        "name":"Badanie zgodności z heurystykami	"
       },
       {
-        "name":"Badanie efektywności wykonywania scenariuszy użycia"
+        "name":"Badanie efektywności wdrożonych scenariuszy użycia"
       },
       {
-        "name":"Sprawdzenie sposobu wykorzystania bibliotek zewnętrznych oraz dostarczanych przez firmy trzecie."
-      },
-      {
-        "name":"Badanie zgodności z standardami UI konkretnej platformy."
+        "name":"Badanie zgodności ze standardami UI"
       }
     ],
     "benefits": [
       {
-        "name": "Możliwość stwierdzenia zgodności aplikacji lub strony pod względem szeroko przyjętnych norm + opis heurystyk."
+        "name": "Ocena zgodności aplikacji/ strony z przyjętymi norami, opatrzona opisami heurystyk"
       },
       {
-        "name": "Poprawne stosowanie wzorców projektowych jest niesamowicie ważne dla zachowania wysokiej jakości projektu oraz jego łatwego i bezpiecznego rozwoju. Identyfikacja problemów na jaknajwcześniejszym etapie może przyczynić się do znacznych oszczędności w przyszłosci oraz przyśpieszenia tępa prac nad projetkem."
+        "name": "Ocena architektury informacji pod kątem intuicyjności wykonywanych czynności"
       },
       {
-        "name": "Mozliwośc określenia w jak dużym stopniu architektuara informacji oraz stryuktura strony pomaga lub przeszkadza w sprawnym wykonywaniu najistotnejszych czynności"
-      },
-      {
-        "name":"Możliwośc stwierdzeni czy każdy z kanałów komunikacji (web, movile itp) jest wydajny i pryzjazny oraz zgodno z wytycznymi odnośnie interfejsów dla danej platformy."
+        "name": "Ocena wydajności kanałów komunikacji (web/ mobile) oraz zgodności interfejsów z wytycznymi dla danej platformy"
       }
     ]
   }

@@ -22,6 +22,16 @@
   </div>
   <div>
     <ul>
+      <div class="dropdown">
+        <div class="dropbtn">
+          <a href="#">polski</a>
+        </div>
+        <div class="dropdown-content">
+          <a href="#">deutch</a>
+          <a href="#">norsk</a>
+          <a href="#">ślonski</a>
+        </div>
+      </div>
       <li i18n *ngFor="let nav of navigation" routerLinkActive="active">
         <span i18n [routerLink]="'/'+ nav">{{nav}}</span>
       </li>

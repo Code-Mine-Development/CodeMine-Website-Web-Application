@@ -97,6 +97,42 @@ div.header {
         }
       }
     }
+
+    .dropdown {
+      float: left;
+      overflow: hidden;
+
+      .dropbtn {
+        font-size: 13px;
+        font-weight: 700;
+        border-right: solid 2px #000000;
+        padding: 2px 14px;
+        margin-bottom: 10px;
+
+      }
+
+      &-content {
+        display: none;
+        position: absolute;
+        border-right: solid 2px #000000;
+        z-index: 1;
+        padding: 0 10px;
+
+        a {
+          font-size: 13px;
+          margin-right: 1px;
+          padding: 8px 0;
+          font-weight: 700;
+          display: block;
+          text-align: right;
+        }
+      }
+
+      &:hover .dropdown-content {
+        display: block;
+      }
+    }
   }
 }
+
 
