@@ -45,7 +45,7 @@ export class AuditDetailsComponent implements OnInit, AfterViewInit {
     ctx.beginPath();
     ctx.moveTo(0,0);
     ctx.lineTo(canvas.width, 0);
-    ctx.lineTo(canvas.width, canvas.height - canvas.height*0.3);
+    ctx.lineTo(canvas.width, canvas.height - canvas.height * 0.3);
     ctx.closePath(0, 0);
     ctx.fillStyle = '#ffda07';
     ctx.fill();
