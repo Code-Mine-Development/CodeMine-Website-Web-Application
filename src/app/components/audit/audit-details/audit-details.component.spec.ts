@@ -14,12 +14,6 @@ class FakeWrapperAuditDetailsComponent {
     audit = MockAudit;
 }
 
-const MockWindowEvent = {
-  target: {
-    innerWidth: 1500,
-  }
-};
-
 describe('AuditDetailsComponent', () => {
   let component: AuditDetailsComponent;
   let fixture: ComponentFixture<FakeWrapperAuditDetailsComponent>;
@@ -51,10 +45,5 @@ describe('AuditDetailsComponent', () => {
   it('should @Input audit contain Mock from FakeWrapperAuditDetailsComponent', () => {
     expect(component.audit).toEqual(MockAudit)
   });
-
-  // it('should define width to 1500 px', () => {
-  //   component.registerWindowChange(MockWindowEvent);
-  //   expect(component.width).toBe(1500)
-  // });
 
 });
