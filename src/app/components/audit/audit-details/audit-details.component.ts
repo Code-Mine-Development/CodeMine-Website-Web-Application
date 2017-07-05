@@ -14,7 +14,6 @@ export class AuditDetailsComponent implements OnInit, AfterViewInit {
   @Input() indexID: number;
   @HostBinding('style.width.px') width: Number;
   @HostBinding('style.height.px') height: Number;
-  renderer: Renderer;
 
   constructor() {
 
@@ -30,8 +29,6 @@ export class AuditDetailsComponent implements OnInit, AfterViewInit {
   ngOnInit() {
 
   };
-
-
   initBackground() {
     // Background
 
@@ -43,7 +40,7 @@ export class AuditDetailsComponent implements OnInit, AfterViewInit {
     canvas.height = triangle.offsetHeight;
 
     ctx.beginPath();
-    ctx.moveTo(0,0);
+    ctx.moveTo(0, 0);
     ctx.lineTo(canvas.width, 0);
     ctx.lineTo(canvas.width, canvas.height - canvas.height * 0.3);
     ctx.closePath(0, 0);

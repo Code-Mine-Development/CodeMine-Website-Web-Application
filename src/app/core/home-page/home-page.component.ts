@@ -14,7 +14,6 @@ export class HomePageComponent implements OnInit {
     width: number;
     height: number;
     heightDocument: number;
-    footerHeight: number = 20;
 
   constructor(private route: ActivatedRoute, ngZone: NgZone) {
     window.onresize = (e) => {
@@ -35,8 +34,4 @@ export class HomePageComponent implements OnInit {
         this.company = data['company'];
       });
   }
-  scrollToFooter () {
-
-}
-
 }
