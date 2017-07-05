@@ -1,30 +1,28 @@
-<div class="container">
-  <div class="section-start">
-    <div class="slogan-wrapper">
-      <h2 i18n>We are...lorem ipsum dolor sit amet, <br>consectetur adipiscing elit, sed do <br>eiusmod tempor incididunt ut labores</h2>
-    </div>
-    <div class="box-start">
-      <h2 class="header" i18n>Jak pracujemy?</h2>
-      <p class="text" i18n>Gwarantem skuteczności proponowanych przez nas rozwiązań, jest niezmienny proces ich realizacji,składający się z kilku poszczególnych etapów, zaprezentowanych poniżej.</p>
-    </div>
+<div class="section-start">
+  <div class="slogan-wrapper">
+    <h2 i18n>We are...lorem ipsum dolor sit amet, <br>consectetur adipiscing elit, sed do <br>eiusmod tempor incididunt ut labores</h2>
+  </div>
+  <div class="box-start">
+    <h2 class="header" i18n>Jak pracujemy?</h2>
+    <p class="text" i18n>Gwarantem skuteczności proponowanych przez nas rozwiązań, jest niezmienny proces ich realizacji,składający się z kilku poszczególnych etapów, zaprezentowanych poniżej.</p>
+  </div>
 
-    <div class="row box" *ngFor="let information of informations">
-      <div class="col-box box-image"></div>
-      <div class="col-box-text box-text">
-        <h1 class="box-header" i18n>{{information.title}}</h1>
-        <p class="text" i18n>{{information.description}}</p>
-        <button class="btn btn-yellow btn-large btn-shadow" *ngIf="information.more_info.active">{{information.more_info.message}}</button>
+  <div class="row box" *ngFor="let information of informations">
+    <div class="col-box box-image"></div>
+    <div class="col-box-text box-text">
+      <h1 class="box-header" i18n>{{information.title}}</h1>
+      <p class="text" i18n>{{information.description}}</p>
+      <button class="btn btn-yellow btn-large btn-shadow" *ngIf="information.more_info.active">{{information.more_info.message}}</button>
+    </div>
+  </div>
+  <div class="box-center">
+    <div class="row">
+      <div class="box-center-text">
+      <h1 class="box-header" i18n>CTA do formularza</h1>
       </div>
     </div>
-    <div class="box-center">
-      <div class="row">
-        <div class="box-center-text">
-        <h1 class="box-header" i18n>CTA do formularza</h1>
-        </div>
-      </div>
-      <div class="row">
-        <button class="btn btn-yellow btn-shadow btn-large">Cta</button>
-      </div>
+    <div class="row">
+      <button class="btn btn-yellow btn-shadow btn-large">Cta</button>
     </div>
   </div>
 </div>

@@ -23,9 +23,10 @@
   }
 
   .box-start {
+    margin: 0 80px 130px 80px;
+
     .header {
       font-weight: 700;
-
     }
     .text {
       margin-bottom: 100px;
@@ -43,7 +44,7 @@
     clear: both;
     display: flex;
     justify-content: flex-start;
-    margin-bottom: 130px;
+    margin: 0 80px 130px 80px;
 
     &-image {
       height: 30vh;
@@ -84,7 +85,6 @@
   .box:nth-child(2n) {
     flex-direction: row-reverse;
     justify-content: flex-end;
-    margin-right: 0;
   }
 
   .box:nth-child(6) {

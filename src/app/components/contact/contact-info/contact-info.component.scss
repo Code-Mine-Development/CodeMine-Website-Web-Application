@@ -16,12 +16,28 @@
       color: #fff;
     }
 
+
+    .overlay {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      background-color: rgba(0,0,0, 0.2);
+    }
+
     video {
       position: absolute;
       height: 100%;
       top: 0;
-      margin-left: -45%;
       left: 0;
+      margin-left: -45%;
+    }
+
+    @media (min-width: 1226px) {
+      video {
+        margin-left: -20%;
+      }
     }
 
     .contact-box {
