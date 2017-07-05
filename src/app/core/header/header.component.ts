@@ -14,8 +14,8 @@ export class HeaderComponent implements OnInit {
     'o nas',
     'portfolio',
     'oferta',
-    'audyty',
-    'kontakt',
+    'audit',
+    'kontakt'
   ];
 
   switchLang = 'en';

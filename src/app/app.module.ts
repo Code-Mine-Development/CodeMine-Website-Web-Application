@@ -7,17 +7,12 @@ import {HttpModule} from '@angular/http';
 import {CoreModule} from './core/core-module';
 import {ContactResolver} from './aplication/contact/services/contact.resolver';
 import {ContactService} from './aplication/contact/services/contact.service';
-import {PortfolioService} from "./aplication/portfolio/services/portfolio.service";
-import {PortfolioResolver} from "./aplication/portfolio/services/portfolio.resolver";
-import {PortfolioModule} from "./aplication/portfolio/portfolio.module";
-import {HomePageResolver} from "./core/home-page/services/home-page.resolver";
-import {OfferModule} from "./aplication/offer/offer.module";
-import {OfferResolver} from "./aplication/offer/offer.resolver";
 import {PortfolioService} from './aplication/portfolio/services/portfolio.service';
 import {PortfolioResolver} from './aplication/portfolio/services/portfolio.resolver';
 import {PortfolioModule} from './aplication/portfolio/portfolio.module';
 import {HomePageResolver} from './core/home-page/services/home-page.resolver';
-import {OfferComponent} from './aplication/offer/offer.component';
+import {OfferModule} from './aplication/offer/offer.module';
+import {OfferResolver} from './aplication/offer/offer.resolver';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {HomeInformationServices} from './components/home-page/services/home-information.service';
 import {HomeInformationResolver} from './components/home-page/services/home-information.resolver';
@@ -25,7 +20,6 @@ import {HomeInformationResolver} from './components/home-page/services/home-info
 @NgModule({
     declarations: [
         AppComponent,
-        OfferComponent
     ],
     imports: [
         BrowserModule,
@@ -33,8 +27,7 @@ import {HomeInformationResolver} from './components/home-page/services/home-info
         HttpModule,
         CoreModule,
         PortfolioModule,
-        OfferModule
-
+        OfferModule,
         PortfolioModule,
         BrowserAnimationsModule
     ],
@@ -44,7 +37,7 @@ import {HomeInformationResolver} from './components/home-page/services/home-info
         ContactResolver,
         ContactService,
         PortfolioResolver,
-        OfferResolver
+        OfferResolver,
         PortfolioResolver,
         HomeInformationServices,
         HomeInformationResolver,

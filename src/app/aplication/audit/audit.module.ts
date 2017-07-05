@@ -6,7 +6,6 @@ import {AuditService} from './services/audit.service';
 import {AuditRoutingModule} from './audit-routing';
 import {UiModule} from '../../shared/ui-elements/ui.module';
 import {AuditComponentModule} from '../../components/audit/audit-components.module';
-import {BrowserAnimationsModule, NoopAnimationsModule} from '@angular/platform-browser/animations';
 
 @NgModule({
     declarations: [
