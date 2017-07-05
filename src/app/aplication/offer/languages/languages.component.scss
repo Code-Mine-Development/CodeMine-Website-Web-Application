@@ -1,0 +1,41 @@
+@import '../../../../assets/styles/mediaQueries.scss';
+
+.container {
+  width: 70%;
+  margin: 8em auto;
+}
+.header{
+  text-align: left;
+  margin-bottom: 4em;
+}
+.languages{
+  display: flex;
+  flex-wrap: wrap;
+}
+.languages-col{
+  @media #{$phone}{
+    width: 100%;
+  }
+  @media #{$tablet}{
+    width: 50%;
+  }
+  @media #{$phone-tablet}{
+    width: 33.33%;
+  }
+  @media #{$computer}{
+    width: 20%;
+  }
+  box-sizing: border-box;
+  border:1px solid #eee;
+  background-size: cover;
+  img{
+    max-height: 100%;
+    max-width: 100%;
+    opacity: 0;
+  }
+}
+.languages:after {
+  content: "";
+  display: table;
+  clear: both;
+}
