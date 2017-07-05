@@ -12,16 +12,14 @@ export class AuditDetailsComponent implements OnInit, AfterViewInit {
   @Input() audit: Audit[];
   @ViewChild('Canvas') canvasRef;
   @Input() indexID: number;
-  @HostBinding('style.width.px') width: Number;
-  @HostBinding('style.height.px') height: Number;
-  renderer: Renderer;
+
 
   constructor() {
 
   }
 
   ngAfterViewInit() {
-    if (document.getElementById('triangle1')) {
+    if (document.getElementById('triangle0')) {
       this.initBackground()
     }
 
@@ -37,22 +35,29 @@ export class AuditDetailsComponent implements OnInit, AfterViewInit {
 
     const canvas = this.canvasRef.nativeElement;
     const ctx = canvas.getContext('2d');
-    const triangle = document.getElementById('triangle1');
+    const triangle = document.getElementById('triangle0');
 
     canvas.width = window.innerWidth;
     canvas.height = triangle.offsetHeight;
 
     ctx.beginPath();
     ctx.moveTo(0,0);
-    ctx.lineTo(canvas.width, 0);
-    ctx.lineTo(canvas.width, canvas.height - canvas.height*0.3);
-    ctx.closePath(0, 0);
+    ctx.lineTo(canvas.width/3, 0)
+    ctx.lineTo(canvas.width, canvas.height/1.7);
+    ctx.lineTo(canvas.width, canvas.height);
+    ctx.lineTo(canvas.width/1.35, canvas.height);
+    ctx.lineTo(0, canvas.height/1.4);
+
+
+
+    // ctx.closePath(0, 0);
     ctx.fillStyle = '#ffda07';
     ctx.fill();
 
+    // ctx.stroke();
 
     const data = canvas.toDataURL();
-    const bg1 = document.getElementById('triangle1');
+    const bg1 = document.getElementById('triangle0');
 
     bg1.style.backgroundImage = 'url(' + data + ')';
 

@@ -1,7 +1,7 @@
 [
   {
     "title": "Jakość kodu",
-    "image":"./assets/images/usability.png",
+    "image":"./assets/images/code.png",
     "description":"Otrzymując gotowe oprogramowanie, firmy zazwyczaj akceptują je bez jakiejkolwiek weryfikacji jakości kodu, bezpieczeństwa, elastyczności, zgodności z wymaganiami oraz wszystkich innych czynników. To nic dziwnego – klienci zwykle nie posiadają odpowiedniej wiedzy czy też czasu.Jako specjaliści, możemy zostać pośrednikiem między Twoją firmą, a Twoim wykonawcą, oceniając zastosowane przez niego rozwiązania. Naszym zadaniem będzie sprawdzenie zgodności kodu ze standardami, a także ocena jego wydajności i wielkość długu technologicznego, przeprowadzając audyty zastosowanej technologii, architektury informacji, kodu źródłowego, skalowalności oraz wydajności aplikacji.",
     "tasks":[
       {
