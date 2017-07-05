@@ -3,13 +3,25 @@
     padding: 10px 35px;
     text-transform: uppercase;
 
-    &-pacific-blue {
-	   background-color: #169bd5;
-	   color: #fff;
-    }
+  &-yellow {
+    background-color: #fee03c;
+    color: #fff;
+    border:none;
+  }
 
-    &-large {
-	   font-size: 17px;
-	   font-weight: 700;
-    }
+  &-shadow {
+    box-shadow: 8px 8px 20px #8E8E8E;
+  }
+
+  &-white {
+    border: 1px solid #fff;
+    background-color: transparent;
+    color: #fff;
+    cursor: pointer;
+  }
+
+  &-large {
+   font-size: 17px;
+   font-weight: 700;
+  }
 }

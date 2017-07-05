@@ -6,9 +6,9 @@ import {Component} from '@angular/core';
 import {ContactResolver} from '../../../aplication/contact/services/contact.resolver';
 import {HomePageResolver} from './home-page.resolver';
 import {ContactService} from '../../../aplication/contact/services/contact.service';
-import {PortfolioService} from "../../../aplication/portfolio/services/portfolio.service";
-import {MockCompany} from "../../../shared/mocks/company.mock";
-import {MockCarousel} from "../../../shared/mocks/carousel.mock";
+import {PortfolioService} from '../../../aplication/portfolio/services/portfolio.service';
+import {MockCompany} from '../../../shared/mocks/company.mock';
+import {MockCarousel} from '../../../shared/mocks/carousel.mock';
 
 @Component ({
     selector: 'app-fake-resolver',

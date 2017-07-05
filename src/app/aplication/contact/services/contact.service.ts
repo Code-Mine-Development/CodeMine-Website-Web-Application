@@ -1,6 +1,6 @@
 import {Injectable} from '@angular/core';
 import {Http, Response} from '@angular/http';
-import {Company} from "../../../shared/interface/company.interface";
+import {Company} from '../../../shared/interface/company.interface';
 import 'rxjs/Rx';
 
 const url = 'assets/data/';

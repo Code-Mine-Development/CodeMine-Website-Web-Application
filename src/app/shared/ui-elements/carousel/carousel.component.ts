@@ -1,5 +1,5 @@
 import {Component, OnInit, ViewChildren, QueryList, Input, OnDestroy} from '@angular/core';
-import {Portfolio} from "../../../aplication/portfolio/interfaces/portfolio.interface";
+import {Portfolio} from '../../../aplication/portfolio/interfaces/portfolio.interface';
 
 @Component({
   selector: 'app-carousel',

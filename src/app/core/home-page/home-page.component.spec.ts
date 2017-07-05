@@ -5,9 +5,9 @@ import {ActivatedRoute, Data, Router} from '@angular/router';
 import {RouterTestingModule} from '@angular/router/testing';
 import {CommonModule} from '@angular/common';
 import {UiModule} from '../../shared/ui-elements/ui.module';
-import {ContactComponentModule} from "../../components/contact/contact-components.module";
-import {MockCompany} from "../../shared/mocks/company.mock";
-import {MockCarousel} from "../../shared/mocks/carousel.mock";
+import {ContactComponentModule} from '../../components/contact/contact-components.module';
+import {MockCompany} from '../../shared/mocks/company.mock';
+import {MockCarousel} from '../../shared/mocks/carousel.mock';
 
 describe('HomePageComponent', () => {
     let component: HomePageComponent;
@@ -19,7 +19,7 @@ describe('HomePageComponent', () => {
     beforeEach(async(() => {
         TestBed.configureTestingModule({
             declarations: [HomePageComponent, HomeInformationComponent],
-            imports: [CommonModule, RouterTestingModule, UiModule,ContactComponentModule],
+            imports: [CommonModule, RouterTestingModule, UiModule, ContactComponentModule],
             providers: [
                 {
                     provide: ActivatedRoute,

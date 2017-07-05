@@ -1,53 +1,84 @@
 .section-contact {
-    position: relative;
+  position: relative;
 
-    .container {
-	   max-width: 1200px;
-	   margin: auto;
-	   margin-bottom: 80px;
+  .row-contact {
+    display: flex;
+    justify-content: center;
 
-	   .row-contact {
-		  display: flex;
-		  justify-content: center;
-
-		  .col-contact {
-			 width: 40%;
-			 margin: 0 30px;
-		  }
-
-		  .contact-box {
-         background-color: #F2F2F2;
-         text-align: center;
-         line-height: 28px;
-         padding: 100px 20px;
-
-        .text {
-          font-size: 1.8em;
-			 }
-
-			 &-header {
-         font-size: 3.6em;
-         font-weight: 500;
-         margin-bottom: 50px;
-         line-height: 36px;
-       }
-
-			 .contact {
-				font-weight: 700;
-				text-decoration: underline;
-				margin-bottom: 60px;
-			 }
-
-			 .address {
-				margin-bottom: 60px;
-			 }
-
-			 .row-brief {
-				.btn {
-				    margin: 82px 0;
-				}
-			 }
-		  }
-	   }
+    .col-contact {
+      width: 40%;
+      margin: 0 30px;
     }
+
+    .col-video {
+      position: relative;
+      overflow: hidden;
+      color: #fff;
+    }
+
+
+    .overlay {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      background-color: rgba(0,0,0, 0.2);
+    }
+
+    video {
+      position: absolute;
+      height: 100%;
+      top: 0;
+      left: 0;
+      margin-left: -45%;
+    }
+
+    @media (min-width: 1226px) {
+      video {
+        margin-left: -20%;
+      }
+    }
+
+    .contact-box {
+      background-color: #F2F2F2;
+      text-align: center;
+      line-height: 28px;
+      padding: 80px 30px;
+      margin-bottom: 80px;
+      margin-top: 100px;
+
+      .text {
+        font-size: 1.8em;
+        position: relative;
+      }
+
+      &-header {
+        font-weight: 500;
+        margin-bottom: 50px;
+        line-height: 36px;
+        position: relative;
+      }
+
+      .contact {
+        font-weight: 700;
+        text-decoration: underline;
+        margin-bottom: 60px;
+      }
+
+      .address {
+        margin-bottom: 60px;
+      }
+
+      .row-brief {
+        .btn {
+          margin: 82px 0;
+        }
+      }
+
+      .fa-map-marker {
+        font-size: 3.6em;
+      }
+    }
+  }
 }

@@ -1,3 +1,1 @@
-export interface PortfolioDetails{
-
-}
+export interface PortfolioDetails {}

@@ -7,12 +7,15 @@ import {HttpModule} from '@angular/http';
 import {CoreModule} from './core/core-module';
 import {ContactResolver} from './aplication/contact/services/contact.resolver';
 import {ContactService} from './aplication/contact/services/contact.service';
-import {PortfolioService} from "./aplication/portfolio/services/portfolio.service";
-import {PortfolioResolver} from "./aplication/portfolio/services/portfolio.resolver";
-import {PortfolioModule} from "./aplication/portfolio/portfolio.module";
-import {HomePageResolver} from "./core/home-page/services/home-page.resolver";
-import {OfferModule} from "./aplication/offer/offer.module";
-import {OfferResolver} from "./aplication/offer/offer.resolver";
+import {PortfolioService} from './aplication/portfolio/services/portfolio.service';
+import {PortfolioResolver} from './aplication/portfolio/services/portfolio.resolver';
+import {PortfolioModule} from './aplication/portfolio/portfolio.module';
+import {HomePageResolver} from './core/home-page/services/home-page.resolver';
+import {OfferModule} from './aplication/offer/offer.module';
+import {OfferResolver} from './aplication/offer/offer.resolver';
+import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
+import {HomeInformationServices} from './components/home-page/services/home-information.service';
+import {HomeInformationResolver} from './components/home-page/services/home-information.resolver';
 
 @NgModule({
     declarations: [
@@ -24,8 +27,9 @@ import {OfferResolver} from "./aplication/offer/offer.resolver";
         HttpModule,
         CoreModule,
         PortfolioModule,
-        OfferModule
-
+        OfferModule,
+        PortfolioModule,
+        BrowserAnimationsModule
     ],
     providers: [
         PortfolioService,
@@ -33,7 +37,10 @@ import {OfferResolver} from "./aplication/offer/offer.resolver";
         ContactResolver,
         ContactService,
         PortfolioResolver,
-        OfferResolver
+        OfferResolver,
+        PortfolioResolver,
+        HomeInformationServices,
+        HomeInformationResolver,
     ],
     bootstrap: [AppComponent]
 })

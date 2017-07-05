@@ -1,90 +1,28 @@
-<div class="container">
-  <div class="section-start">
-    <div class="slogan-wrapper">
-      <h2 class="start-slogan">We are...lorem ipsum dolor sit amet, <br>consectetur adipiscing elit, sed do <br>eiusmod tempor incididunt ut labores</h2>
-    </div>
-    <div class="box-start">
-      <h2 class="header">Jak pracujemy?</h2>
-      <p class="text">Sprawdź nasz proces realizacji bla bla....</p>
-    </div>
+<div class="section-start">
+  <div class="slogan-wrapper">
+    <h2 i18n>We are...lorem ipsum dolor sit amet, <br>consectetur adipiscing elit, sed do <br>eiusmod tempor incididunt ut labores</h2>
+  </div>
+  <div class="box-start">
+    <h2 class="header" i18n>Jak pracujemy?</h2>
+    <p class="text" i18n>Gwarantem skuteczności proponowanych przez nas rozwiązań, jest niezmienny proces ich realizacji,składający się z kilku poszczególnych etapów, zaprezentowanych poniżej.</p>
+  </div>
 
-    <div class="row box">
-      <div class="col-box box-image box-with-margin"></div>
-      <div class="col-box-text box-text">
-        <span class="box-header">Tworzymy jednolity język komunikacji</span>
-        <p class="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+  <div class="row box" *ngFor="let information of informations">
+    <div class="col-box box-image"></div>
+    <div class="col-box-text box-text">
+      <h1 class="box-header" i18n>{{information.title}}</h1>
+      <p class="text" i18n>{{information.description}}</p>
+      <button class="btn btn-yellow btn-large btn-shadow" *ngIf="information.more_info.active">{{information.more_info.message}}</button>
+    </div>
+  </div>
+  <div class="box-center">
+    <div class="row">
+      <div class="box-center-text">
+      <h1 class="box-header" i18n>CTA do formularza</h1>
       </div>
     </div>
-
-    <div class="row box">
-      <div class="col-box box-image"></div>
-      <div class="col-box-text box-text">
-        <span class="box-header">Zdobywamy wiedzę biznesową</span>
-        <p class="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-      </div>
-    </div>
-
-    <div class="row box">
-      <div class="col-box box-image"></div>
-      <div class="col-box-text box-text">
-        <span class="box-header">Tworzymy logikę biznesową</span>
-        <p class="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-      </div>
-    </div>
-
-    <div class="row box">
-      <div class="col-box box-image"></div>
-      <div class="col-box-text box-text">
-        <span class="box-header">Tworzymy szczegółową specyfikację projektu</span>
-        <p class="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-      </div>
-    </div>
-
-    <div class="row box">
-        <div class="col-box box-image"></div>
-      <div class="col-box-text box-text">
-        <span class="box-header">Rysujemy makiety UX</span>
-        <p class="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-        <button class="btn btn-color btn-large">Zobacz więcej</button>
-      </div>
-    </div>
-
-    <div class="row box">
-      <div class="col-box box-image"></div>
-      <div class="col-box-text box-text">
-        <span class="box-header">Implementujemy</span>
-        <p class="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-        <button class="btn btn-color btn-large">Sprawdź naszą ofertę</button>
-      </div>
-    </div>
-
-    <div class="row box">
-      <div class="col-box box-image"></div>
-      <div class="col-box-text box-text">
-        <span class="box-header">Wdrażamy</span>
-        <p class="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-        <button class="btn btn-color btn-large">Sprawdź realizacje</button>
-      </div>
-    </div>
-
-    <div class="row box">
-      <div class="col-box box-image"></div>
-      <div class="col-box-text box-text">
-        <span class="box-header">Wspieramy</span>
-        <p class="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-        <button class="btn btn-color btn-large">Poznaj nasz zespół</button>
-      </div>
-    </div>
-
-    <div class="box-center">
-      <div class="row">
-        <div class="box-center-text">
-          <span class="box-header">CTA do formularza</span>
-        </div>
-      </div>
-      <div class="row">
-        <button class="btn btn-color btn-large">Cta</button>
-      </div>
+    <div class="row">
+      <button class="btn btn-yellow btn-shadow btn-large">Cta</button>
     </div>
   </div>
 </div>

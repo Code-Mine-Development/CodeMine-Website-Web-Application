@@ -2,7 +2,7 @@ import {async, TestBed, inject, tick, fakeAsync} from '@angular/core/testing';
 import {HttpModule, XHRBackend, ResponseOptions, Response} from '@angular/http';
 import {MockBackend} from '@angular/http/testing';
 import {PortfolioService} from './portfolio.service';
-import {MockPortfolio} from "../../../shared/mocks/portfolio.mock";
+import {MockPortfolio} from '../../../shared/mocks/portfolio.mock';
 
 
 

@@ -1,0 +1,30 @@
+/*
+*Transitions
+ */
+@mixin custom-transition($time) {
+  transition: all $time;
+}
+@mixin button-transition {
+  transition: all 0.2s;
+}
+@mixin menu-line-transition{
+  transition: all 0.3s;
+}
+@mixin placeholder-transition{
+  transition: all 0.2s;
+}
+/*
+*Fonts
+ */
+@mixin roboto-regular{
+  font-family: Roboto-Regular, Roboto, Serif;
+}
+@mixin roboto-bold{
+  font-family: Roboto-Bold, Roboto, Serif;
+}
+@mixin bitter-regular{
+  font-family: Bitter-Regular, Serif;
+}
+@mixin bitter-bold{
+  font-family: Bitter-Regular, Serif;
+}

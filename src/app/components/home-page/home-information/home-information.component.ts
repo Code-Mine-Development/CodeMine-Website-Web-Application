@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import {ActivatedRoute, Data} from '@angular/router';
+import {HomeInformation} from '../interfaces/home-information.interface';
 
 @Component({
   selector: 'app-home-information',
@@ -6,10 +8,15 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['home-information.component.scss']
 })
 export class HomeInformationComponent implements OnInit {
+  informations: HomeInformation[];
 
-  constructor() { }
+  constructor(private route: ActivatedRoute) { }
 
   ngOnInit() {
+    this.route.data
+      .subscribe((data: Data) => {
+        this.informations = data['homeInformation'];
+      });
   }
 
 }

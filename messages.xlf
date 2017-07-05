@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+  <file source-language="en" datatype="plaintext" original="ng2.template">
+    <body>
+      <trans-unit id="dacfa7d0e5565d6695af81eb8d445a22b657a967" datatype="html">
+        <source><x id="INTERPOLATION"/></source>
+        <target/>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/core/header/header.component.ts</context>
+          <context context-type="linenumber">26</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="4ca70efe6da19bcee3b1d0bf8523c6d956c135c2" datatype="html">
+        <source>Skontaktuj się z nami!</source>
+        <target/>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/contact/contact-info/contact-info.component.ts</context>
+          <context context-type="linenumber">9</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="587e8a5343f2eb29b1a3fc58d6aaa0256bb8367d" datatype="html">
+        <source>Zobacz na mapie</source>
+        <target/>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/contact/contact-info/contact-info.component.ts</context>
+          <context context-type="linenumber">19</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="707b1b7d0a063c8c65cbea630b4691a1d005ec4b" datatype="html">
+        <source>Opisz nam swój pomysł, formularz pomoże ci sprecyzować czego będzie on dotyczył.</source>
+        <target/>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/contact/contact-info/contact-info.component.ts</context>
+          <context context-type="linenumber">26</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="d66d6cfdfdcbaf0aff108e9b3356c37e05bf2ae3" datatype="html">
+        <source>Przejdź do briefu</source>
+        <target/>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/contact/contact-info/contact-info.component.ts</context>
+          <context context-type="linenumber">29</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="76c63367f14ae89716a16be3a30dcd233344fc7d" datatype="html">
+        <source>We are...lorem ipsum dolor sit amet, <x id="LINE_BREAK" ctype="lb"/>consectetur adipiscing elit, sed do <x id="LINE_BREAK" ctype="lb"/>eiusmod tempor incididunt ut labores</source>
+        <target/>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/home-page/home-information/home-information.component.ts</context>
+          <context context-type="linenumber">4</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="802e4a92e9c86c475e178b12329485aa6175e059" datatype="html">
+        <source>Jak pracujemy?</source>
+        <target/>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/home-page/home-information/home-information.component.ts</context>
+          <context context-type="linenumber">7</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="a95dce8710d9d15838b4a2a261c47675e8089b1a" datatype="html">
+        <source>Gwarantem skuteczności proponowanych przez nas rozwiązań, jest niezmienny proces ich realizacji,składający się z kilku poszczególnych etapów, zaprezentowanych poniżej.</source>
+        <target/>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/home-page/home-information/home-information.component.ts</context>
+          <context context-type="linenumber">8</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="ee48662118cee04febcc7905a65cec0e349199a7" datatype="html">
+        <source><x id="INTERPOLATION"/></source>
+        <target/>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/home-page/home-information/home-information.component.ts</context>
+          <context context-type="linenumber">14</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="232d138e43a4238181756e83cf437e3a12c8b7f6" datatype="html">
+        <source><x id="INTERPOLATION"/></source>
+        <target/>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/home-page/home-information/home-information.component.ts</context>
+          <context context-type="linenumber">15</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="152a915e700b70586bc08e4748e72ebf49f9ed0c" datatype="html">
+        <source>CTA do formularza</source>
+        <target/>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/home-page/home-information/home-information.component.ts</context>
+          <context context-type="linenumber">21</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="cf2b91c26cb738a7384eb1384c912132b3027390" datatype="html">
+        <source>Audyty</source>
+        <target/>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/aplication/audit/audit.component.ts</context>
+          <context context-type="linenumber">4</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="d608a36d8fcd7d124d9bae8e32674c0e7fa64e07" datatype="html">
+        <source><x id="INTERPOLATION"/></source>
+        <target/>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/aplication/audit/audit.component.ts</context>
+          <context context-type="linenumber">10</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/audit/audit-details/audit-details.component.ts</context>
+          <context context-type="linenumber">4</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="8898429de600424addc775edca95ce4f2aef9193" datatype="html">
+        <source>Audyt</source>
+        <target/>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/audit/audit-details/audit-details.component.ts</context>
+          <context context-type="linenumber">3</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="cbf3ed41e792355859ccf7c0d1c78bad08682eac" datatype="html">
+        <source><x id="INTERPOLATION"/></source>
+        <target/>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/audit/audit-details/audit-details.component.ts</context>
+          <context context-type="linenumber">5</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="4c13babbb6ad18daa85624cfc9926a103d535362" datatype="html">
+        <source>Chcesz poznać więcej szczegółów ?</source>
+        <target/>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/audit/audit-details/audit-details.component.ts</context>
+          <context context-type="linenumber">11</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="2a789b430ec5fa270fda1f3ddccb2bbbf002f9ac" datatype="html">
+        <source>Wyślij zapytanie</source>
+        <target/>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/audit/audit-details/audit-details.component.ts</context>
+          <context context-type="linenumber">12</context>
+        </context-group>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>

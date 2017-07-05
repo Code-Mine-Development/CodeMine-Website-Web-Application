@@ -1,9 +1,9 @@
 import {async, ComponentFixture, TestBed, fakeAsync, tick} from '@angular/core/testing';
 import { PortfolioListComponent } from './portfolio-list.component';
-import {ActivatedRoute, Data, Router} from "@angular/router";
-import {MockPortfolio} from "app/shared/mocks/portfolio.mock";
-import {PortfolioProjectComponent} from "../../../components/portfolio/portfolio-project/portfolio-project.component";
-import {UiModule} from "../../../shared/ui-elements/ui.module";
+import {ActivatedRoute, Data, Router} from '@angular/router';
+import {MockPortfolio} from 'app/shared/mocks/portfolio.mock';
+import {PortfolioProjectComponent} from '../../../components/portfolio/portfolio-project/portfolio-project.component';
+import {UiModule} from '../../../shared/ui-elements/ui.module';
 
 const MockRoutingData = {
   data: {
@@ -24,7 +24,7 @@ describe('PortfolioListComponent', () => {
   beforeEach(async(() => {
     TestBed.configureTestingModule({
       declarations: [ PortfolioListComponent, PortfolioProjectComponent ],
-      imports:[UiModule],
+      imports: [UiModule],
       providers: [
         {
           provide: ActivatedRoute,

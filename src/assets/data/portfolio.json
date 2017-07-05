@@ -1,9 +1,10 @@
 [
   {
-    "title":"Mountain1",
+    "title":"MdLinking.com",
+    "subtitle": "Platform for healthcare professionals",
     "description": "Super Description1",
-    "mainImage":"https://static.pexels.com/photos/6548/cold-snow-winter-mountain.jpeg",
-    "thumbnail": "https://static.pexels.com/photos/6548/cold-snow-winter-mountain.jpeg",
+    "mainImage":"../assets/images/mdlinking-carousel.jpg",
+    "thumbnail": "../assets/images/mdlinking-carousel.jpg",
     "tags":{
       "products":["prod1","prod2","prod3"],
       "technology":["tech1","tech2","tech3"],
@@ -40,6 +41,7 @@
 
   {
     "title":"Mountain2",
+    "subtitle": "Platform for healthcare professionals",
     "description": "Super Description2",
     "mainImage":"http://blog.oxforddictionaries.com/wp-content/uploads/mountain-names.jpg",
     "thumbnail": "http://blog.oxforddictionaries.com/wp-content/uploads/mountain-names.jpg",
@@ -66,6 +68,7 @@
   },
   {
     "title":"Mountain3",
+    "subtitle": "Platform for healthcare professionals",
     "description": "Super Description2",
     "mainImage":"https://steamuserimages-a.akamaihd.net/ugc/25087975291817161/4B01A1274CA990A3577CC37E1DAA72F88DE353F8/",
     "thumbnail": "https://steamuserimages-a.akamaihd.net/ugc/25087975291817161/4B01A1274CA990A3577CC37E1DAA72F88DE353F8/",
@@ -92,6 +95,7 @@
   },
   {
     "title":"Mountain4",
+    "subtitle": "Platform for healthcare professionals",
     "description": "Super Description4",
     "mainImage":"https://static.pexels.com/photos/23049/pexels-photo.jpg",
     "thumbnail": "https://static.pexels.com/photos/23049/pexels-photo.jpg",
@@ -112,6 +116,7 @@
   },
   {
     "title":"Mountain4",
+    "subtitle": "Platform for healthcare professionals",
     "description": "Super Description4",
     "mainImage":"https://static.pexels.com/photos/23049/pexels-photo.jpg",
     "thumbnail": "https://static.pexels.com/photos/23049/pexels-photo.jpg",

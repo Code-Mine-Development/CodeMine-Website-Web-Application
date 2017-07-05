@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {ActivatedRoute, Data} from '@angular/router';
-import {Company} from "../../shared/interface/company.interface";
+import {Company} from '../../shared/interface/company.interface';
 
 @Component ({
   selector: 'app-contact',

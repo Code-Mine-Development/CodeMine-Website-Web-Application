@@ -2,7 +2,7 @@ import {async, ComponentFixture, TestBed} from '@angular/core/testing';
 import {ContactComponent} from './contact.component';
 import {ContactInfoComponent} from '../../components/contact/contact-info/contact-info.component';
 import {ActivatedRoute, Data, Router} from '@angular/router';
-import {MockCompany} from "../../shared/mocks/company.mock";
+import {MockCompany} from '../../shared/mocks/company.mock';
 
 describe('ContactComponent', () => {
     let component: ContactComponent;

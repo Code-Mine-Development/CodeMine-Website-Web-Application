@@ -1,7 +1,7 @@
 import {TestBed, ComponentFixture} from '@angular/core/testing';
 import {Component, DebugElement} from '@angular/core';
 import {By} from '@angular/platform-browser';
-import {ButtonComponent} from "./button.component";
+import {ButtonComponent} from './button.component';
 
 @Component({
     template: `<app-button [title]="'test'" [color]="'red'"></app-button>`

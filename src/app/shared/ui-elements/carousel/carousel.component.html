@@ -1,7 +1,12 @@
 <div class="carousel">
     <ul class="carousel-list">
         <li class="carousel-list-item" #item *ngFor="let image of data" [ngStyle]="{'background-image': 'url(' + image.mainImage + ')', 'transition': 'all ' + (transition/1000) + 's'}">
-            <p>{{image.title}}</p>
+          <div class="carousel-desc">
+            <div class="overlay"></div>
+            <h1>{{image.title}}</h1>
+            <h3>{{image.subtitle}}</h3>
+            <a routerLink="/portfolio" routerLinkActive="active" class="btn btn-large btn-white">check our portfolio</a>
+          </div>
         </li>
     </ul>
 </div>
