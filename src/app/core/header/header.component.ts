@@ -14,7 +14,7 @@ export class HeaderComponent implements OnInit {
     'o nas',
     'portfolio',
     'oferta',
-    'audit',
+    'audyty',
     'kontakt'
   ];
 

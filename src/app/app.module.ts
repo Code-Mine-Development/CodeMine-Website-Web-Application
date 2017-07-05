@@ -16,33 +16,37 @@ import {OfferResolver} from './aplication/offer/offer.resolver';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {HomeInformationServices} from './components/home-page/services/home-information.service';
 import {HomeInformationResolver} from './components/home-page/services/home-information.resolver';
+import {AuditModule} from "./aplication/audit/audit.module";
+import {AuditResolver} from "./aplication/audit/services/audit.resolver";
 
 @NgModule({
-    declarations: [
-        AppComponent,
-    ],
-    imports: [
-        BrowserModule,
-        CommonModule,
-        HttpModule,
-        CoreModule,
-        PortfolioModule,
-        OfferModule,
-        PortfolioModule,
-        BrowserAnimationsModule
-    ],
-    providers: [
-        PortfolioService,
-        HomePageResolver,
-        ContactResolver,
-        ContactService,
-        PortfolioResolver,
-        OfferResolver,
-        PortfolioResolver,
-        HomeInformationServices,
-        HomeInformationResolver,
-    ],
-    bootstrap: [AppComponent]
+  declarations: [
+    AppComponent,
+  ],
+  imports: [
+    BrowserModule,
+    CommonModule,
+    HttpModule,
+    CoreModule,
+    PortfolioModule,
+    OfferModule,
+    AuditModule,
+    PortfolioModule,
+    BrowserAnimationsModule
+  ],
+  providers: [
+    PortfolioService,
+    HomePageResolver,
+    ContactResolver,
+    ContactService,
+    PortfolioResolver,
+    OfferResolver,
+    AuditResolver,
+    PortfolioResolver,
+    HomeInformationServices,
+    HomeInformationResolver,
+  ],
+  bootstrap: [AppComponent]
 })
 export class AppModule {
 }
