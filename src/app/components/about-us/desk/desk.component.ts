@@ -1,4 +1,4 @@
-import {Component, EventEmitter, HostListener, Input, OnInit, Output, ViewChild} from '@angular/core';
+import {Component, EventEmitter, HostBinding, HostListener, Input, OnInit, Output, ViewChild} from '@angular/core';
 import {Employees} from '../../../aplication/about-us/interfaces/employees.interface';
 import {Coordinate} from '../../../aplication/about-us/models/coordinate.model';
 
@@ -6,24 +6,22 @@ import {Coordinate} from '../../../aplication/about-us/models/coordinate.model';
   selector: 'app-desk',
   template: `
     <div id="front" #desk>
-      <div #back id="back"></div>
-      <div #left id="left"></div>
     </div>`,
   styleUrls: ['./desk.component.scss'],
 })
 export class DeskComponent implements OnInit {
   @Input() person: Employees;
+  @Input() index: number;
   @ViewChild('desk') desk;
-  @ViewChild('back') back;
-  @ViewChild('left') left;
   coordinate: Coordinate;
+  deskIsActive = false;
 
   constructor() {
   }
 
   ngOnInit() {
     const person = this.person.deskCoordinate;
-    this.coordinate = new Coordinate(person.variant, person.top, person.left, this.desk, this.back, this.left);
+    this.coordinate = new Coordinate(person.variant, person.top, person.left, this.desk);
     this.prepareCoordinates();
   }
 
@@ -34,7 +32,10 @@ export class DeskComponent implements OnInit {
   }
 
   @HostListener('mouseenter') mouseover(eventData: Event) {
-    this.coordinate.restyleDesk(true);
+    if (!this.deskIsActive) {
+      this.coordinate.restyleDesk(true, this.index);
+      this.deskIsActive = true;
+    }
   }
 
   @HostListener('mouseleave') mouseleave(eventData: Event) {

@@ -1,4 +1,4 @@
-import {Component, Input, HostBinding, HostListener} from '@angular/core';
+import {Component, Input, HostBinding, HostListener, OnInit} from '@angular/core';
 
 @Component({
     selector: 'app-button',
@@ -18,7 +18,7 @@ import {Component, Input, HostBinding, HostListener} from '@angular/core';
             }
     `]
 })
-export class ButtonComponent {
+export class ButtonComponent implements OnInit{
     @Input() title:string = 'Button';
     @Input() color:string = '#169bd5';
     @Input() hover:string = '#000000';

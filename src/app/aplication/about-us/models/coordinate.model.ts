@@ -1,5 +1,7 @@
+import $ from 'jquery';
+
 export class Coordinate {
-  constructor(public variant: number, public top: number, public left: number, public front, public backSide, public leftSide) {
+  constructor(public variant: number, public top: number, public left: number, public front) {
   }
   transform(): string {
     const rotateY = this.variant === 1 ? 14 : 66;
@@ -17,19 +19,39 @@ export class Coordinate {
   offsetLeft(): string {
     return this.left + 'px';
   }
-  restyleDesk(value): void {
-    value ? this.moveUp() : this.moveDown();
+  restyleDesk(value, index): void {
+    value ? this.moveUp(index) : this.moveDown();
   }
-  private moveUp(): void {
+  private moveUp(index): void {
+    const layer = $('#deskLayer');
+    layer[0].style.pointerEvents = 'none';
     this.front.nativeElement.style.transition = '0.3s';
     this.front.nativeElement.style.top = this.top - 50 + 'px';
     setTimeout(() => {
       this.front.nativeElement.classList.add('animationVariant1');
     }, 300);
     setTimeout(() => {
-      this.backSide.nativeElement.classList.add('animationVariant1');
-      this.leftSide.nativeElement.classList.add('animationVariant1');
-    }, 550)
+      const w = $(window).width();
+      const h = $(window).height();
+      const parent = $('#desk' + index);
+      const d = parent[0].children[0];
+      const divW = $(d).width();
+      const divH = $(d).height();
+      const bg = document.getElementById('officeBg');
+
+      d.classList.value = d.classList.value + ' ' + 'big';
+      d.style.position = 'absolute';
+      d.style.top = (h / 2) - (divH / 2) + 100 - (+bg.getAttribute('data-y')) + 'px';
+      d.style.left = (w / 2) - (divW / 2) + 300 - (+bg.getAttribute('data-x')) + 'px';
+      d.style.transform = '';
+    }, 650);
+
+    setTimeout(() => {
+      const person = $('#personView');
+      const personInfo = $('#personWrapper');
+      person.addClass('active');
+      personInfo.addClass('active');
+    }, 950)
   }
   private moveDown(): void {
   }

@@ -48,8 +48,8 @@ export class MouseMove {
 
     data.lMouseX = Math.max(-100, Math.min(100, this.windowWidth / 2 - event.clientX));
     data.lMouseY = Math.max(-100, Math.min(100, this.windowWidth / 2 - event.clientY));
-    data.lFollowX = (20 * data.lMouseX) / 100 + (+bg.getAttribute('data-x'));
-    data.lFollowY = (20 * data.lMouseY) / 100 + (+bg.getAttribute('data-y'));
+    data.lFollowX = (15 * data.lMouseX) / 100 + (+bg.getAttribute('data-x'));
+    data.lFollowY = (15 * data.lMouseY) / 100 + (+bg.getAttribute('data-y'));
   }
   playAnimation() {
     animation();

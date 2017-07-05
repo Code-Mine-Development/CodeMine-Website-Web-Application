@@ -19,6 +19,7 @@
 }
 #front.animationVariant1{
   opacity: 1;
+  transition: 0.3s;
   &:after{
     width: 65%;
     height: 167%;
@@ -26,46 +27,9 @@
     transform: rotateY(0deg) rotateZ(29deg) rotateX(0deg) skew(30deg) translateY(-32px) translateX(102px);
   }
 }
-
-#back{
-  background: darken($desk,5);
-  width: 0;
-  height: 192%;
-  position: absolute;
-  top: -70px;
-  right: 38px;
-  transform: rotate(-1deg);
-  transition: 0.5s;
-}
-#back.animationVariant1{
-  width: 9px;
-}
-
-#left{
-  background: darken($desk,5);
-  width: 0;
-  height: 124%;
-  position: absolute;
-  top: 40px;
-  right: -36px;
-  transition: 0.5s;
-  transform: skew(61deg) translateY(-9px);
-}
-#left.animationVariant1{
-  width: 8px;
-}
-
-#txt{
-  width: 200px;
-  height: 73px;
-  background: transparent;
-  position: absolute;
-  opacity: 0;
-  transition: 0.3s;
-}
-#txt.animationVariant1{
-  opacity: 1;
-  transform-origin: bottom;
-  transform: rotateY(58deg) rotateZ(-17deg) rotateX(0deg) skew(-16deg) translate(129px, 54px);
-  z-index: 10;
+#front.animationVariant1.big{
+  &:after{
+    width: 100%;
+    transform: inherit;
+  }
 }
