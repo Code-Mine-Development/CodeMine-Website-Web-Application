@@ -65,12 +65,20 @@ export class HeaderComponent implements OnInit {
     this.translateX = 0;
     this.XYanimation();
     this.homeLeftWallAnimation();
-    this.homeRightWallAnimation();
-    this.homeRoofAnimation();
     this.borderAnimation();
     this.headerAnimation();
     this.opacityAnimation();
     this.move = 'translateX(' + this.translateX + 'px) translateY(' + this.translateY + 'px)';
+  }
+
+  onOver() {
+    this.homeRightWallAnimation();
+    this.homeRoofAnimation();
+    console.log("Mouseover called");
+  }
+
+  onLeave() {
+    console.log("Test");
   }
 
   opacityAnimation() {
@@ -134,7 +142,7 @@ export class HeaderComponent implements OnInit {
       }
       if (this.homeLeftWallCalculate > 14.57) {
         this.readyLeftWall = true;
-        this.homeLeft = '0.05 10.86 0.05 25.86 16.87 25.86 0.05 9.86';
+        this.homeLeft = '0.05 10.86 0.05 25.86 16.87 25.86 0.05 14.57';
       }
     }
   }
