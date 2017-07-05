@@ -11,16 +11,17 @@ import {Company} from '../../shared/interface/company.interface';
 export class HomePageComponent implements OnInit {
     carousel: Portfolio;
     company: Company;
-
-    constructor(private route: ActivatedRoute) {
+  constructor(private route: ActivatedRoute) {
     }
 
     ngOnInit() {
-        this.route.data
-            .subscribe((data: Data) => {
-                this.carousel = data['carousel'];
-                this.company = data['company'];
-            });
+      this.route.data
+        .subscribe((data: Data) => {
+          this.carousel = data['carousel'];
+          this.company = data['company'];
+        });
     }
-
+    scrollToFooter() {
+      
+    }
 }
