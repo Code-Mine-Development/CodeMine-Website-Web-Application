@@ -5,12 +5,14 @@ import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
 import {ArrowComponent} from "./arrow/arrow.component";
 import { PersonComponent } from './person/person.component';
 import {UiModule} from "../../shared/ui-elements/ui.module";
+import { DoorComponent } from './door/door.component';
 
 @NgModule({
   declarations: [
     DeskComponent,
     ArrowComponent,
-    PersonComponent
+    PersonComponent,
+    DoorComponent
   ],
   imports: [
     CommonModule,
@@ -19,7 +21,8 @@ import {UiModule} from "../../shared/ui-elements/ui.module";
   exports: [
     DeskComponent,
     ArrowComponent,
-    PersonComponent
+    PersonComponent,
+    DoorComponent
   ],
   providers: [],
 })
