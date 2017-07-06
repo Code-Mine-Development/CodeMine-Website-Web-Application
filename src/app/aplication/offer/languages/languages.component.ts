@@ -1,4 +1,4 @@
-import {Component, Input, OnInit} from '@angular/core';
+import {Component, Input} from '@angular/core';
 import {Languages} from "../../../shared/interface/languages.interface";
 
 @Component({
@@ -6,8 +6,6 @@ import {Languages} from "../../../shared/interface/languages.interface";
   templateUrl: './languages.component.html',
   styleUrls: ['./languages.component.scss']
 })
-export class LanguagesComponent implements OnInit {
+export class LanguagesComponent {
  @Input() Languages: Languages;
-
- ngOnInit(){}
 }
