@@ -4,24 +4,22 @@
   flex: 1;
 }
 
-scroll-animation {
 
-  .section-home {
+.section-home {
 
-    .skip {
-      text-align: center;
-      position: absolute;
-      bottom: 10px;
-      width: 100%;
+  .skip {
+    text-align: center;
+    position: absolute;
+    bottom: 15px;
+    width: 100%;
 
-      &-text {
-        font-size: 1.6em;
-      }
+    &-text {
+      font-size: 1.6em;
+    }
 
-      &-btn {
-        font-size: 2.5em;
-        color: #333333;
-      }
+    &-btn {
+      font-size: 2.5em;
+      color: #333333;
     }
   }
 }
