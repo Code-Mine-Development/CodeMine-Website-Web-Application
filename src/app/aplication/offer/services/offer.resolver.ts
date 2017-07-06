@@ -2,7 +2,7 @@ import {ActivatedRouteSnapshot, Resolve, RouterStateSnapshot} from '@angular/rou
 import {Observable} from 'rxjs/Observable';
 import {Injectable} from '@angular/core';
 import {OfferService} from './offer.service';
-import {Offer} from '../../shared/interface/offer.interface';
+import {Offer} from '../../../shared/interface/offer.interface';
 
 
 
