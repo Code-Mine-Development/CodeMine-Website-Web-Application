@@ -26,16 +26,6 @@ div.header {
   padding: 20px 50px 0;
   height: 168px;
 
-  //&:before{
-    //content: '';
-    //height: 2px;
-    //width: 0;
-    //position: absolute;
-    //background: black;
-    //bottom: 0;
-    //@include custom-transition(0.3s);
-  //}
-
   > div:first-of-type {
     flex: 0.5;
     @media screen and (max-width: 1350px) {

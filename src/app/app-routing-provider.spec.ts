@@ -1,5 +1,5 @@
 import {TestBed, inject} from '@angular/core/testing';
-import {AppRoutingProvider} from "./app-routing-provider";
+import {AppRoutingProvider} from './app-routing-provider';
 
 
 describe('AppRoutingProvider', () => {

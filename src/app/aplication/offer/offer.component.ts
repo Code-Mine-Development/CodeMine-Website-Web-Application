@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {ActivatedRoute, Data} from '@angular/router';
-import {Offer} from "../../shared/interface/offer.interface";
+import {Offer} from '../../shared/interface/offer.interface';
 
 
 @Component ({

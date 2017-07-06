@@ -16,8 +16,8 @@ import {OfferResolver} from './aplication/offer/offer.resolver';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {HomeInformationServices} from './components/home-page/services/home-information.service';
 import {HomeInformationResolver} from './components/home-page/services/home-information.resolver';
-import {AuditModule} from "./aplication/audit/audit.module";
-import {AuditResolver} from "./aplication/audit/services/audit.resolver";
+import {AuditModule} from './aplication/audit/audit.module';
+import {AuditResolver} from './aplication/audit/services/audit.resolver';
 
 @NgModule({
   declarations: [

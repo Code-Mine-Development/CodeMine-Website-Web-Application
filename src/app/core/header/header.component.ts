@@ -75,11 +75,11 @@ export class HeaderComponent implements OnInit {
   onOver() {
     this.homeRightWallAnimation();
     this.homeRoofAnimation();
-    console.log("Mouseover called");
+    console.log('Mouseover called');
   }
 
   onLeave() {
-    console.log("Test");
+    console.log('Test');
   }
 
 

@@ -1,6 +1,11 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
-
 import { TechnologiesComponent } from './technologies.component';
+import {Component} from "@angular/core";
+
+@Component({
+  selector: 'app-fake-language-wrapper',
+  template: '<app-technologies [Technologies]="" ]="technologies"></app-technologies>'
+})
 
 describe('TechnologiesComponent', () => {
   let component: TechnologiesComponent;

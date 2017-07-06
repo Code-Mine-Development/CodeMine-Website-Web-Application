@@ -1,5 +1,5 @@
-import {Component, OnInit, Input, Output, EventEmitter} from '@angular/core';
-import {Portfolio} from "../../../aplication/portfolio/interfaces/portfolio.interface";
+import {Component, Input, Output, EventEmitter} from '@angular/core';
+import {Portfolio} from '../../../aplication/portfolio/interfaces/portfolio.interface';
 
 
 @Component({
@@ -7,18 +7,12 @@ import {Portfolio} from "../../../aplication/portfolio/interfaces/portfolio.inte
   templateUrl: 'portfolio-project.component.html',
   styleUrls: ['portfolio-project.component.scss']
 })
-export class PortfolioProjectComponent implements OnInit {
+export class PortfolioProjectComponent {
   @Input() project: Portfolio;
   @Output() onAction: EventEmitter<string> = new EventEmitter();
 
-  constructor() {
-  }
-
-  ngOnInit() {
-  }
-
-  onClick(){
+  constructor() {}
+  onClick() {
     this.onAction.emit();
   }
-
 }

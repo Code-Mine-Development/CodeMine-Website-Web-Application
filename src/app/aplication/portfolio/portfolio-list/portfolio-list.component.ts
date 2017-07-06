@@ -1,7 +1,7 @@
 import {Component, OnInit} from '@angular/core';
-import {Data, ActivatedRoute, Router} from "@angular/router";
-import {Portfolio} from "../interfaces/portfolio.interface";
-import {AppRoutingProvider} from "../../../app-routing-provider";
+import {Data, ActivatedRoute, Router} from '@angular/router';
+import {Portfolio} from '../interfaces/portfolio.interface';
+import {AppRoutingProvider} from '../../../app-routing-provider';
 
 @Component({
     selector: 'app-portfolio-list',
@@ -21,8 +21,8 @@ export class PortfolioListComponent implements OnInit {
             });
     }
 
-    showDetails(index:number):void{
-        this.router.navigate(AppRoutingProvider.portfolioDetail(index),{relativeTo: this.route})
+    showDetails(index: number): void {
+        this.router.navigate(AppRoutingProvider.portfolioDetail(index), {relativeTo: this.route})
     }
 
 }

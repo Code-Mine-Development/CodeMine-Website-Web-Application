@@ -3,7 +3,7 @@ export interface WeCreate {
   features: Array<FeaturesEntity>;
 }
 
-interface FeaturesEntity{
+interface FeaturesEntity {
   name: string;
   image: string;
   description: string;

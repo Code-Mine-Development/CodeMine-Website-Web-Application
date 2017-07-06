@@ -1,5 +1,5 @@
-import {Component, Input, OnInit} from '@angular/core';
-import {WeCreate} from "../../../shared/interface/we-create.interface";
+import {Component, Input} from '@angular/core';
+import {WeCreate} from '../../../shared/interface/we-create.interface';
 
 
 @Component({
@@ -7,10 +7,6 @@ import {WeCreate} from "../../../shared/interface/we-create.interface";
   templateUrl: './weCreate.component.html',
   styleUrls: ['./weCreate.component.scss']
 })
-export class WeCreateComponent implements OnInit {
+export class WeCreateComponent {
   @Input() WeCreate: WeCreate;
-
-
-  ngOnInit() {
-  }
 }

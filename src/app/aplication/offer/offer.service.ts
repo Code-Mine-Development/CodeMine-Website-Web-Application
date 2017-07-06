@@ -2,7 +2,7 @@
 import {Injectable} from '@angular/core';
 import {Http, Response} from '@angular/http';
 import 'rxjs/Rx';
-import {Offer} from "../../shared/interface/offer.interface";
+import {Offer} from '../../shared/interface/offer.interface';
 
 const url = 'assets/data/';
 
