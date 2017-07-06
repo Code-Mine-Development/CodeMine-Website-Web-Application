@@ -4,10 +4,12 @@
   .row-contact {
     display: flex;
     justify-content: center;
+    margin: 100px 80px 100px 80px;
 
     .col-contact {
       width: 40%;
       margin: 0 30px;
+      box-shadow: 8px 6px 91px -9px rgba(0,0,0,0.7)
     }
 
     .col-video {

@@ -9,3 +9,16 @@
 	   flex: 1;
     }
 }
+
+.scroll-animation {
+  margin-bottom: 400px;
+  background: white;
+}
+
+app-footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  z-index: -1;
+}
+
