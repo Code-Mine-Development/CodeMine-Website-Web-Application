@@ -1,3 +1,5 @@
+@import '../assets/styles/mediaQueries';
+
 :host {
     display: flex;
     min-height: 100vh;
@@ -13,6 +15,10 @@
 .scroll-animation {
   margin-bottom: 340px;
   background: white;
+
+  @media #{$phone}, #{$tablet}{
+    margin: 0;
+  }
 }
 
 app-footer {
@@ -20,5 +26,10 @@ app-footer {
   bottom: 0;
   width: 100%;
   z-index: -1;
+
+  @media #{$phone}, #{$tablet}{
+    z-index: 1;
+    position: relative;
+  }
 }
 
