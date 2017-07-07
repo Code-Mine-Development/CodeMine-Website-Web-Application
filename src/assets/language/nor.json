@@ -1,0 +1,14 @@
+{
+  "HOME": {
+    "homeTittle":"Test Norweski",
+    "header": "Skontaktuj się z nami! Norweski",
+    "TITLE": "Bonjour Angular avec ngx-translate !",
+    "SELECT": "Changer la langue",
+    "COUNTRY":"Pologne",
+    "CITY": "Katowice3Nor",
+    "street":"3 majaNor",
+    "apartament": "18/3Nor",
+    "email":"office@code-mine.comNor",
+    "phone":"+48 723 21 67Nor"
+  }
+}

@@ -1,6 +1,7 @@
 import {Component, OnInit, Inject, HostListener} from '@angular/core';
 import {DOCUMENT} from '@angular/platform-browser';
 import {Router, NavigationEnd} from '@angular/router';
+import {TranslateService} from '@ngx-translate/core';
 
 @Component({
   selector: 'app-header',
@@ -46,7 +47,8 @@ export class HeaderComponent implements OnInit {
   readyRightWall = false;
   readyLeftWall = false;
 
-  constructor(@Inject(DOCUMENT) private document: Document, private router: Router) {
+  constructor(@Inject(DOCUMENT) private document: Document, private router: Router, private translate: TranslateService) {
+
   }
 
   ngOnInit() {

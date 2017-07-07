@@ -3,7 +3,7 @@ import {NgModule} from '@angular/core';
 
 import {AppComponent} from './app.component';
 import {CommonModule} from '@angular/common';
-import {HttpModule} from '@angular/http';
+import {Http, HttpModule} from '@angular/http';
 import {CoreModule} from './core/core-module';
 import {ContactResolver} from './aplication/contact/services/contact.resolver';
 import {ContactService} from './aplication/contact/services/contact.service';
@@ -18,13 +18,28 @@ import {HomeInformationServices} from './components/home-page/services/home-info
 import {HomeInformationResolver} from './components/home-page/services/home-information.resolver';
 import {AuditModule} from './aplication/audit/audit.module';
 import {AuditResolver} from './aplication/audit/services/audit.resolver';
+import {TranslateLoader, TranslateModule} from '@ngx-translate/core';
+import {TranslateHttpLoader} from '@ngx-translate/http-loader';
 
+export function createTranslateLoader(http: Http) {
+  return new TranslateHttpLoader(http, './assets/language/', '.json');
+}
 @NgModule({
+  exports: [
+    TranslateModule
+  ],
   declarations: [
     AppComponent,
   ],
   imports: [
     BrowserModule,
+    TranslateModule.forRoot({
+      loader: {
+        provide: TranslateLoader,
+        useFactory: (createTranslateLoader),
+        deps: [Http]
+      }
+    }),
     CommonModule,
     HttpModule,
     CoreModule,

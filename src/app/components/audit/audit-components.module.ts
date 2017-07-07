@@ -2,6 +2,7 @@ import {NgModule} from '@angular/core';
 import {CommonModule} from '@angular/common';
 import {AuditDetailsComponent} from './audit-details/audit-details.component';
 import {AuditListComponent} from './audit-list/aduit-list.component';
+import {TranslateModule} from '@ngx-translate/core';
 
 @NgModule({
     declarations: [
@@ -9,11 +10,12 @@ import {AuditListComponent} from './audit-list/aduit-list.component';
         AuditListComponent
     ],
     imports: [
-        CommonModule,
+        CommonModule
     ],
     exports: [
         AuditDetailsComponent,
-        AuditListComponent
+        AuditListComponent,
+        TranslateModule
     ],
     providers: [],
 })

@@ -2,6 +2,7 @@ import {NgModule} from '@angular/core';
 import {CommonModule} from '@angular/common';
 import {HomeInformationComponent} from './home-information/home-information.component';
 import {ActivatedRoute} from '@angular/router';
+import {TranslateModule} from '@ngx-translate/core';
 
 
 @NgModule({
@@ -12,7 +13,8 @@ import {ActivatedRoute} from '@angular/router';
         CommonModule,
     ],
     exports: [
-      HomeInformationComponent
+      HomeInformationComponent,
+      TranslateModule
     ],
     providers: [],
 })

@@ -1,6 +1,5 @@
 import {Component, OnInit, Input, ViewChild, AfterViewInit, HostBinding} from '@angular/core';
 import {Audit} from '../../../aplication/audit/interfaces/audit.interface';
-import {Renderer} from '@angular/core';
 
 @Component({
   selector: 'app-audit-details',
@@ -15,9 +14,7 @@ export class AuditDetailsComponent implements OnInit, AfterViewInit {
   @HostBinding('style.width.px') width: Number;
   @HostBinding('style.height.px') height: Number;
 
-  constructor() {
-
-  }
+  constructor() {}
 
   ngAfterViewInit() {
     if (document.getElementById('triangle1')) {

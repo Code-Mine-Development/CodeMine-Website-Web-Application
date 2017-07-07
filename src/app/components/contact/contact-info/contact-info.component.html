@@ -7,14 +7,15 @@
           </video>
           <div class="overlay"></div>
 
-          <h1 class="contact-box-header" i18n>Skontaktuj się z nami!</h1>
+          <h1 class="contact-box-header">{{'HOME.header' | translate }}</h1>
           <div class="row contact text">
-            <div class="contact-email">{{company.email}}</div>
-            <div class="contact-phone">{{company.phone}}</div>
+            <div class="contact-email">{{'HOME.email' | translate }}</div>
+            <div class="contact-phone">{{'HOME.phone' | translate }}</div>
           </div>
           <div class="row address text">
-            <div>{{company.street}} {{company.apartment}}</div>
-            <div>{{company.city}}, {{company.country}}</div>
+            <div>{{'HOME.street' | translate }} {{'HOME.apartament' | translate }}</div>
+            <div>{{'HOME.CITY' | translate}}, {{'HOME.COUNTRY' | translate}}</div>
+            <!--<div>{{company.city}}, {{company.country}}</div>-->
           </div>
           <div class="row localization text">
             <div class="contact-local" i18n>Zobacz na mapie</div>

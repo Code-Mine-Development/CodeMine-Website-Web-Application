@@ -9,4 +9,6 @@ import {Company} from '../../../shared/interface/company.interface';
 })
 export class ContactInfoComponent {
   @Input() company: Company[];
+
+  constructor() {}
 }

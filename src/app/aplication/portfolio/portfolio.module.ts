@@ -7,6 +7,7 @@ import {PortfolioComponentModule} from '../../components/portfolio/portfolio-com
 import {PortfolioDetailsComponent} from './portfolio-details/portfolio-details.component';
 import {PortfolioListComponent} from './portfolio-list/portfolio-list.component';
 import {PortfolioService} from './services/portfolio.service';
+import {TranslateModule} from '@ngx-translate/core';
 
 
 
@@ -20,7 +21,8 @@ import {PortfolioService} from './services/portfolio.service';
         CommonModule,
         UiModule,
         PortfolioRoutingModule,
-        PortfolioComponentModule
+        PortfolioComponentModule,
+        TranslateModule
     ],
     exports: [],
     providers: []

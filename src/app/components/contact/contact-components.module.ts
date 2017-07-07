@@ -1,7 +1,7 @@
 import {NgModule} from '@angular/core';
 import {CommonModule} from '@angular/common';
 import {ContactInfoComponent} from './contact-info/contact-info.component';
-import {UiModule} from '../../shared/ui-elements/ui.module';
+import {TranslateModule} from '@ngx-translate/core';
 
 @NgModule({
     declarations: [
@@ -9,6 +9,7 @@ import {UiModule} from '../../shared/ui-elements/ui.module';
     ],
     imports: [
         CommonModule,
+        TranslateModule
     ],
     exports: [
         ContactInfoComponent,

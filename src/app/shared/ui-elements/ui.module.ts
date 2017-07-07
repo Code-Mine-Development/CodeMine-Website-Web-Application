@@ -3,6 +3,7 @@ import {CarouselComponent} from './carousel/carousel.component';
 import {CommonModule} from '@angular/common';
 import {ButtonComponent} from './button/button.component';
 import {SquareImageComponent} from './squareImage/square-image.component';
+import {TranslateModule} from '@ngx-translate/core';
 
 @NgModule({
     declarations: [
@@ -16,7 +17,8 @@ import {SquareImageComponent} from './squareImage/square-image.component';
     exports: [
         CarouselComponent,
         ButtonComponent,
-        SquareImageComponent
+        SquareImageComponent,
+        TranslateModule
     ],
     providers: [],
 })
