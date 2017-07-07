@@ -3,7 +3,9 @@
 .container{
   width: 80%;
   margin: auto;
+
 }
+
 canvas{
   display: none;
 }
@@ -11,11 +13,18 @@ canvas{
 #triangle0{
   width: 100%;
   background-repeat: no-repeat;
-  padding-bottom: 15%;
+  opacity: 0;
+  animation: bgFadeIn 2s  forwards
+
 }
+
 #triangle1{
   width: 100%;
   background-repeat: no-repeat;
+  padding-top: 10%;
+  opacity: 0;
+  animation: bgFadeIn 1s forwards;
+
   button{
     background: #ffda07;
   }
@@ -62,6 +71,17 @@ canvas{
     }
   }
 }
+
+@keyframes bgFadeIn {
+  from{
+    opacity:0
+  }
+  to{
+    opacity: 1;
+  }
+}
+
+
 /deep/
 
  #triangle1 {
@@ -69,3 +89,4 @@ canvas{
     background: #f2f2f2;
   }
 }
+

@@ -62,7 +62,7 @@
       }
       &:hover{
         .little-triangle{
-          animation:triangleHover .7s forwards;
+          animation:triangleHover .7s forwards alternate;
         }
         img{
           animation: imageHover .7s forwards;
@@ -98,10 +98,20 @@ canvas{
 }
 #triangle-head{
   width: 100%;
+  opacity: 0;
   background-repeat: no-repeat;
+  animation: bgFadeIn 2s forwards;
 
 }
 
+@keyframes bgFadeIn {
+  from{
+    opacity:0
+  }
+  to{
+    opacity: 1;
+  }
+}
 @keyframes columns-slideIn {
   from{
     opacity:0

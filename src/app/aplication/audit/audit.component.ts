@@ -1,4 +1,4 @@
-import {Component, OnInit, ViewChild} from '@angular/core';
+import {AfterViewInit, Component, OnInit, ViewChild} from '@angular/core';
 import {Audit} from './interfaces/audit.interface';
 import {ActivatedRoute, Data} from '@angular/router';
 
@@ -7,7 +7,7 @@ import {ActivatedRoute, Data} from '@angular/router';
   templateUrl: 'audit.component.html',
   styleUrls: ['audit.component.scss']
 })
-export class AuditComponent implements OnInit {
+export class AuditComponent implements OnInit, AfterViewInit {
   @ViewChild('canvas') canvasRef;
   audits: Audit[];
 
@@ -19,8 +19,15 @@ export class AuditComponent implements OnInit {
       .subscribe((data: Data) => {
         this.audits = data['audit'];
       });
-    this.initBackground(event);
     }
+  ngAfterViewInit() {
+    if (document.getElementById('triangle-head')) {
+      setTimeout(() => {
+        this.initBackground(event)
+      }, 1);
+
+    }
+  }
 
 
   initBackground(event) {
@@ -30,21 +37,20 @@ export class AuditComponent implements OnInit {
     const canvas = this.canvasRef.nativeElement;
     const ctx = canvas.getContext('2d');
     const triangle = document.getElementById('triangle-head');
-    console.log(triangle.offsetWidth);
-
-
-    canvas.width = event.target.innerWidth ? event.target.innerWidth : triangle.offsetWidth;
+    canvas.width = window.innerWidth;
     canvas.height = triangle.offsetHeight;
-    if(event.target.innerWidth < 850 || triangle.offsetWidth <850){
+
+
+    if(window.innerWidth < 850){
       ctx.beginPath();
       ctx.moveTo(0, canvas.height /2.9);
-      ctx.lineTo(canvas.width / 2.65, canvas.height);
+      ctx.lineTo(canvas.width / 2.5, canvas.height);
       ctx.lineTo(0, canvas.height);
 
     }else {
       ctx.beginPath();
       ctx.moveTo(0, canvas.height / 2.5);
-      ctx.lineTo(canvas.width / 2.7, canvas.height);
+      ctx.lineTo(canvas.width / 2.65, canvas.height);
       ctx.lineTo(0, canvas.height);
 
     }
