@@ -1,5 +1,7 @@
 @import "../../../assets/styles/colors.scss";
 @import "../../../assets/styles/mixins.scss";
+@import '../../../assets/styles/mediaQueries';
+
 
 div.header.animation {
   height: 40px;
@@ -24,16 +26,6 @@ div.header {
   padding: 20px 50px 0;
   height: 168px;
 
-  //&:before{
-    //content: '';
-    //height: 2px;
-    //width: 0;
-    //position: absolute;
-    //background: black;
-    //bottom: 0;
-    //@include custom-transition(0.3s);
-  //}
-
   > div:first-of-type {
     flex: 0.5;
     @media screen and (max-width: 1350px) {
@@ -55,14 +47,18 @@ div.header {
         width: 43px;
         bottom: 0;
         right: -9px;
+
+        @media #{$phone} {
+          left: 0;
+        }
       }
     }
   }
 
-  > div:last-of-type {
-    display: flex;
-    flex: 1;
-    justify-content: flex-end;
+> div:last-of-type {
+  display: flex;
+  flex: 1;
+  justify-content: flex-end;
 
     ul {
       display: flex;
@@ -73,28 +69,28 @@ div.header {
 
       li {
         span {
-          text-transform: uppercase;
-          white-space:nowrap;
-          cursor: pointer;
-          position: relative;
-          padding: 0 0 10px 35px;
-          font-weight: 700;
-          font-size: 1.6em;
-          letter-spacing: 1px;
+           text-transform: uppercase;
+           white-space: nowrap;
+           cursor: pointer;
+           position: relative;
+           padding: 0 0 10px 35px;
+           font-weight: 700;
+           font-size: 1.6em;
+           letter-spacing: 1px;
 
-          span:last-child {
-            padding-right: 0;
-          }
+           span:last-child {
+             padding-right: 0;
+           }
 
-          &:before {
-            content: '';
-            height: 2px;
-            width: 0;
-            position: absolute;
-            background: black;
-            bottom: 12px;
-          }
-        }
+           &:before {
+             content: '';
+             height: 2px;
+             width: 0;
+             position: absolute;
+             background: black;
+             bottom: 12px;
+           }
+         }
       }
     }
 

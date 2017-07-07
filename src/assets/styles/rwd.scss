@@ -1,0 +1,19 @@
+//. {
+//  text-align: center;
+//  @media #{$phone}{
+//    width: 100%;
+//  }
+//  @media #{$tablet}{
+//    width: 50%;
+//  }
+//  @media #{$phone-tablet}{
+//    width: 33.33%;
+//  }
+//  @media #{$computer}{
+//    width: 14%;
+//  }
+//  h3 {
+//    margin: 1.5em 0;
+//  }
+//}
+

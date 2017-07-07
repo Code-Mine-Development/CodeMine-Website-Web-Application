@@ -6,6 +6,7 @@ import {PageNotFoundComponent} from './core/page-not-found/page-not-found.compon
 import {HomePageResolver} from './core/home-page/services/home-page.resolver';
 import {HomeInformationResolver} from './components/home-page/services/home-information.resolver';
 
+
 const appRoutes: Routes = [
   {path: '', redirectTo: '/home', pathMatch: 'full'},
   {

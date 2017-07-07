@@ -12,15 +12,13 @@ export class HomePageComponent implements OnInit {
     carousel: Portfolio;
     company: Company;
 
-    constructor(private route: ActivatedRoute) {
-    }
+  constructor(private route: ActivatedRoute) {}
 
-    ngOnInit() {
-        this.route.data
-            .subscribe((data: Data) => {
-                this.carousel = data['carousel'];
-                this.company = data['company'];
-            });
-    }
-
+  ngOnInit() {
+    this.route.data
+      .subscribe((data: Data) => {
+        this.carousel = data['carousel'];
+        this.company = data['company'];
+      });
+  }
 }

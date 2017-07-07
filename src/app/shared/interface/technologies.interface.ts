@@ -1,4 +1,4 @@
-export interface Technologies{
+export interface Technologies {
   title: string;
   technologies: Array<LanguagesEntity>;
 }
