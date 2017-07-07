@@ -26,7 +26,7 @@
   <div class="navbar">
     <ul>
       <select #langSelect (change)="translate.use(langSelect.value)">
-        <option *ngFor="let lang of translate.getLangs()">{{ lang }}</option>
+        <option *ngFor="let lang of translate.getLangs()" [value]="lang" [selected]="lang === translate.currentLang">{{ lang }}</option>
       </select>
       <!--<div class="dropdown" #langSelect (change)="translate.use(langSelect.value)">-->
         <!--<div class="dropbtn">-->

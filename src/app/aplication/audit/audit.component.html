@@ -11,4 +11,6 @@
     </div>
   </div>
 </div>
+<h2>{{ 'HOME.home' | translate }}</h2>
+
 <app-audit-details  *ngFor="let audit of audits, let id = index" [audit]="audit"  [indexID]="id"></app-audit-details>

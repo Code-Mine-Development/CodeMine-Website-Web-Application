@@ -1,8 +1,7 @@
 import {NgModule} from '@angular/core';
 import {CommonModule} from '@angular/common';
 import {HomeInformationComponent} from './home-information/home-information.component';
-import {ActivatedRoute} from '@angular/router';
-import {TranslateModule} from '@ngx-translate/core';
+import {SharedModule} from "../../shared.module";
 
 
 @NgModule({
@@ -14,7 +13,7 @@ import {TranslateModule} from '@ngx-translate/core';
     ],
     exports: [
       HomeInformationComponent,
-      TranslateModule
+      SharedModule
     ],
     providers: [],
 })

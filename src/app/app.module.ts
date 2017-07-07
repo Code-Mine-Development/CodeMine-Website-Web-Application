@@ -20,14 +20,12 @@ import {AuditModule} from './aplication/audit/audit.module';
 import {AuditResolver} from './aplication/audit/services/audit.resolver';
 import {TranslateLoader, TranslateModule} from '@ngx-translate/core';
 import {TranslateHttpLoader} from '@ngx-translate/http-loader';
+import {TranslateStore} from "@ngx-translate/core/src/translate.store";
 
 export function createTranslateLoader(http: Http) {
   return new TranslateHttpLoader(http, './assets/language/', '.json');
 }
 @NgModule({
-  exports: [
-    TranslateModule
-  ],
   declarations: [
     AppComponent,
   ],
@@ -60,6 +58,7 @@ export function createTranslateLoader(http: Http) {
     PortfolioResolver,
     HomeInformationServices,
     HomeInformationResolver,
+    TranslateStore
   ],
   bootstrap: [AppComponent]
 })

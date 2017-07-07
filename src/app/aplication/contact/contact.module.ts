@@ -4,7 +4,7 @@ import {ContactComponent} from './contact.component';
 import {ContactRoutingModule} from './contact.routing';
 import {UiModule} from '../../shared/ui-elements/ui.module';
 import {ContactComponentModule} from '../../components/contact/contact-components.module';
-import {TranslateModule} from '@ngx-translate/core';
+import {SharedModule} from "../../shared.module";
 
 @NgModule({
     declarations: [
@@ -15,7 +15,6 @@ import {TranslateModule} from '@ngx-translate/core';
         ContactRoutingModule,
         UiModule,
         ContactComponentModule,
-        TranslateModule
     ],
     exports: [],
     providers: []

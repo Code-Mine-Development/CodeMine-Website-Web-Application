@@ -9,7 +9,7 @@ import {PageNotFoundComponent} from './page-not-found/page-not-found.component';
 import {ScrollToModule} from 'ng2-scroll-to';
 import {ContactComponentModule} from '../components/contact/contact-components.module';
 import {HomePageComponentModule} from '../components/home-page/home-page-components.module';
-import {TranslateModule} from '@ngx-translate/core';
+import {SharedModule} from '../shared.module';
 
 @NgModule({
     declarations: [
@@ -25,7 +25,7 @@ import {TranslateModule} from '@ngx-translate/core';
         ContactComponentModule,
         HomePageComponentModule,
         ScrollToModule.forRoot(),
-        TranslateModule
+        SharedModule
 
     ],
     exports: [

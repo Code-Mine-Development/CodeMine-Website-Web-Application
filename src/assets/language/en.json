@@ -1,6 +1,6 @@
 {
   "HOME": {
-    "homeTittle":"Test English",
+    "home":"Test English",
     "header": "Skontaktuj się z nami!",
     "TITLE": "Hello Angular with ngx-translate!",
     "SELECT": "Change language",

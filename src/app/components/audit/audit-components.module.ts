@@ -2,7 +2,7 @@ import {NgModule} from '@angular/core';
 import {CommonModule} from '@angular/common';
 import {AuditDetailsComponent} from './audit-details/audit-details.component';
 import {AuditListComponent} from './audit-list/aduit-list.component';
-import {TranslateModule} from '@ngx-translate/core';
+import {SharedModule} from "../../shared.module";
 
 @NgModule({
     declarations: [
@@ -15,7 +15,7 @@ import {TranslateModule} from '@ngx-translate/core';
     exports: [
         AuditDetailsComponent,
         AuditListComponent,
-        TranslateModule
+        SharedModule
     ],
     providers: [],
 })
