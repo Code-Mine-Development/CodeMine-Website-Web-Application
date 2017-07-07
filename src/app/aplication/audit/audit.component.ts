@@ -19,29 +19,38 @@ export class AuditComponent implements OnInit {
       .subscribe((data: Data) => {
         this.audits = data['audit'];
       });
-    this.initBackground();
-  }
+    this.initBackground(event);
+    }
 
 
-  initBackground() {
+  initBackground(event) {
 
     // Background #1
 
     const canvas = this.canvasRef.nativeElement;
     const ctx = canvas.getContext('2d');
     const triangle = document.getElementById('triangle-head');
+    console.log(triangle.offsetWidth);
 
-    canvas.width = window.innerWidth;
+
+    canvas.width = event.target.innerWidth ? event.target.innerWidth : triangle.offsetWidth;
     canvas.height = triangle.offsetHeight;
+    if(event.target.innerWidth < 850 || triangle.offsetWidth <850){
+      ctx.beginPath();
+      ctx.moveTo(0, canvas.height /2.9);
+      ctx.lineTo(canvas.width / 2.65, canvas.height);
+      ctx.lineTo(0, canvas.height);
 
-    ctx.beginPath();
-    ctx.moveTo(0, canvas.height/2.5);
-    ctx.lineTo(canvas.width/3, canvas.height);
-    ctx.lineTo(0, canvas.height);
-    ctx.closePath(0, canvas.height/2.5);
-    ctx.fillStyle = '#ffda07';
-    ctx.fill();
+    }else {
+      ctx.beginPath();
+      ctx.moveTo(0, canvas.height / 2.5);
+      ctx.lineTo(canvas.width / 2.7, canvas.height);
+      ctx.lineTo(0, canvas.height);
 
+    }
+      ctx.closePath(0, canvas.height / 2.5);
+      ctx.fillStyle = '#ffda07';
+      ctx.fill();
 
     const data = canvas.toDataURL();
     const bg1 = document.getElementById('triangle-head');

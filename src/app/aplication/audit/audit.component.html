@@ -1,11 +1,11 @@
-<div id="triangle-head">
+<div id="triangle-head" (window:resize)="initBackground($event)">
 <div class="section-audit">
 
   <div class="row">
       <div class="column" *ngFor="let audit of audits">
         <img [src]="audit.image" alt="">
-        <div class="little-triangle"></div>
-        <div class="title">
+
+        <div class="title"><div class="little-triangle"></div>
         <h3>{{audit.title}}</h3>
         <i class="fa fa-chevron-down"></i>
           <p>przejdź</p>

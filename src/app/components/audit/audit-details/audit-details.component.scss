@@ -1,3 +1,5 @@
+@import '../../../../assets/styles/typography';
+
 .container{
   width: 80%;
   margin: auto;
@@ -5,6 +7,7 @@
 canvas{
   display: none;
 }
+
 #triangle0{
   width: 100%;
   background-repeat: no-repeat;
@@ -19,12 +22,11 @@ canvas{
 }
 .usability-panel{
   padding-top: 4em;
-  .usability-panel-header {
-    font-size: 5.5em;
-}
+
   .usability-panel-text{
     width: 100%;
     padding: 2em 0;
+    line-height: 1.5em;
   }
   .usability-table{
     width: 100%;
@@ -58,5 +60,12 @@ canvas{
         width: 45%;
       }
     }
+  }
+}
+/deep/
+
+ #triangle1 {
+  ul.list{
+    background: #f2f2f2;
   }
 }

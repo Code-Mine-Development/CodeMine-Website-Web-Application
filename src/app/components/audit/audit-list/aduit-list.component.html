@@ -1,4 +1,11 @@
-<p>{{title}}</p>
-<div class="row list" *ngFor="let item of listData">
-  <div class="column">{{item.name}}</div>
+
+<h2>{{title}}</h2>
+<span class="white"><h3>{{listData.title}}</h3></span>
+<div class="column">
+<ul class="list" >
+  <li [id]="'item'+ i" *ngFor="let item of listData.tasks, let i = index">
+    <img class="checked" src="assets/images/checked.svg" >
+    {{item.name}}
+  </li>
+</ul>
 </div>
