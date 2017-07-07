@@ -1,9 +1,13 @@
 
 <h2>{{title}}</h2>
 <span class="white"><h3>{{listData.title}}</h3></span>
-<div class="column">
+<div class="column"
+     (scroll)="onScrollEvent($event)" >
 <ul class="list" >
-  <li [id]="'item'+ i" *ngFor="let item of listData.tasks, let i = index">
+  <li
+    [id]="'item'+ i"
+    *ngFor="let item of listData.tasks, let i = index"
+  >
     <img class="checked" src="assets/images/checked.svg" >
     {{item.name}}
   </li>

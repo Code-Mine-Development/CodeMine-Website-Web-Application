@@ -27,11 +27,13 @@
       width: 40%;
       position: relative;
       animation: columns-slideIn 1s forwards;
+      animation-delay: .5s;
       display: flex;
       flex-direction: column;
       align-items: center;
       transition: 1s;
       position: relative;
+      opacity: 0;
       img{
         border-radius: 50%;
         position: relative;

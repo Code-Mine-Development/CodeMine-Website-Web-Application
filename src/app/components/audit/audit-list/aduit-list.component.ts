@@ -1,4 +1,4 @@
-import {AfterViewInit, Component, Input, OnInit} from '@angular/core';
+import {AfterViewInit, Component, HostListener, Input, OnInit} from '@angular/core';
 
 
 @Component({
@@ -8,15 +8,26 @@ import {AfterViewInit, Component, Input, OnInit} from '@angular/core';
 
 })
 
-export class AuditListComponent implements OnInit,  AfterViewInit{
+export class AuditListComponent implements OnInit, AfterViewInit {
   @Input() listData;
   @Input() title: string;
 
-  constructor () {}
+  @HostListener('window:scroll', ['$event']) onScrollEvent($event) {
+    console.log($event);
+    console.log("scrolling");
+  }
 
-  ngOnInit(){};
+  constructor() {
+  }
 
-  ngAfterViewInit(){
+
+  ngOnInit() {
+
+  };
+
+  ngAfterViewInit() {
 
   }
 }
+
+
