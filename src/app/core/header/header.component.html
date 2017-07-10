@@ -25,21 +25,15 @@
   </div>
   <div class="navbar">
     <ul>
-      <select #langSelect (change)="translate.use(langSelect.value)">
-        <option *ngFor="let lang of translate.getLangs()" [value]="lang" [selected]="lang === translate.currentLang">{{ lang }}</option>
-      </select>
-      <!--<div class="dropdown" #langSelect (change)="translate.use(langSelect.value)">-->
-        <!--<div class="dropbtn">-->
-          <!--<a i18n href="#">polski</a>-->
-        <!--</div>-->
-        <!--<div class="dropdown-content">-->
-          <!--<a href="#"  *ngFor="let lang of translate.getLangs()">{{ lang }}</a>-->
-          <!--<a i18n href="#">english</a>-->
-          <!--<a i18n href="#">deutch</a>-->
-          <!--<a i18n href="#">norsk</a>-->
-          <!--<a i18n href="#">ślonski</a>-->
-        <!--</div>-->
-      <!--</div>-->
+      <!--<select #langSelect (change)="translate.use(langSelect.value)">-->
+        <!--<option *ngFor="let lang of translate.getLangs()" [value]="lang" [selected]="lang === translate.currentLang">{{ lang }}</option>-->
+      <!--</select>-->
+      <div class="dropdown">
+        <div class="dropbtn">{{ translate.currentLang }}</div>
+        <div class="dropdown-content">
+          <a href="#" (click)="changeLanguage($event, lang)" *ngFor="let lang of translate.getLangs()">{{ lang }}</a>
+        </div>
+      </div>
       <li i18n *ngFor="let nav of navigation" routerLinkActive="active">
         <span i18n [routerLink]="'/'+ nav">{{nav}}</span>
       </li>

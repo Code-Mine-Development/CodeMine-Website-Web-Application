@@ -105,6 +105,9 @@ div.header {
         padding: 2px 14px;
         margin-bottom: 10px;
 
+        &:hover {
+          cursor: pointer;
+        }
       }
 
       &-content {

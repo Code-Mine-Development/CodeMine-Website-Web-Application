@@ -1,14 +1,14 @@
 [
   {
-    "title": "Jakość kodu",
+    "title": "AUDIT.quality.title",
     "image":"./assets/images/usability.png",
-    "description":"Otrzymując gotowe oprogramowanie, firmy zazwyczaj akceptują je bez jakiejkolwiek weryfikacji jakości kodu, bezpieczeństwa, elastyczności, zgodności z wymaganiami oraz wszystkich innych czynników. To nic dziwnego – klienci zwykle nie posiadają odpowiedniej wiedzy czy też czasu.Jako specjaliści, możemy zostać pośrednikiem między Twoją firmą, a Twoim wykonawcą, oceniając zastosowane przez niego rozwiązania. Naszym zadaniem będzie sprawdzenie zgodności kodu ze standardami, a także ocena jego wydajności i wielkość długu technologicznego, przeprowadzając audyty zastosowanej technologii, architektury informacji, kodu źródłowego, skalowalności oraz wydajności aplikacji.",
+    "description":"AUDIT.quality.description",
     "tasks":[
       {
-        "name":"Badanie kodu źródłowego pod kątem zgodności z standardami"
+        "name":"AUDIT.quality.task_1"
       },
       {
-        "name":"Badanie kodu pod względem poprawności wykorzystania wzorców projektowych"
+        "name":"AUDIT.quality.task_2"
       },
       {
         "name":"Badanie kodu pod względem poprawności wykorzystania wzorców projektowych"

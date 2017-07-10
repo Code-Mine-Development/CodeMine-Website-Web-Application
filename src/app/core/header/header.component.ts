@@ -51,6 +51,11 @@ export class HeaderComponent implements OnInit {
 
   }
 
+  changeLanguage(event: Event, lang: string) {
+    event.preventDefault();
+    this.translate.use(lang);
+  }
+
   ngOnInit() {
     this.prepareHomeWall();
 
