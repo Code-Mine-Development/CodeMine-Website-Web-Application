@@ -21,12 +21,17 @@ import {TranslateLoader, TranslateModule, TranslateService} from '@ngx-translate
 import {TranslateHttpLoader} from '@ngx-translate/http-loader';
 import {TranslateStore} from '@ngx-translate/core/src/translate.store';
 import {appRoutes} from './app-routing.module';
-import {LocalizeParser, LocalizeRouterModule, StaticParserLoader} from 'localize-router';
+import {localizeLoaderFactory, LocalizeParser, LocalizeRouterModule, StaticParserLoader} from 'localize-router';
 import {RouterModule} from '@angular/router';
+
 
 
 export function createTranslateLoader(http: Http) {
   return new TranslateHttpLoader(http, './assets/language/', '.json');
+}
+
+export function createTranslateRouting(translate, location, http) {
+  return new StaticParserLoader(translate, location, http, 'assets/locales/en.json'),
 }
 
 @NgModule({
@@ -42,7 +47,13 @@ export function createTranslateLoader(http: Http) {
         deps: [Http]
       }
     }),
-    LocalizeRouterModule.forRoot(appRoutes),
+    LocalizeRouterModule.forRoot(appRoutes, {
+      parser: {
+        provide: LocalizeParser,
+        useFactory: (createTranslateRouting),
+        deps: [TranslateService, Location, Http]
+      }
+    }),
     RouterModule.forRoot(appRoutes),
     CommonModule,
     HttpModule,
