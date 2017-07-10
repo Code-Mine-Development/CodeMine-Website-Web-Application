@@ -41,16 +41,16 @@ export class AuditComponent implements OnInit, AfterViewInit {
     canvas.height = triangle.offsetHeight;
 
 
-    if(window.innerWidth < 850){
-      ctx.beginPath();
-      ctx.moveTo(0, canvas.height /2.9);
-      ctx.lineTo(canvas.width / 2.5, canvas.height);
-      ctx.lineTo(0, canvas.height);
+      if(window.innerWidth < 850){
+        ctx.beginPath();
+        ctx.moveTo(0, canvas.height /2.9);
+        ctx.lineTo(canvas.width / 2.5, canvas.height);
+        ctx.lineTo(0, canvas.height);
 
-    }else {
+      }else {
       ctx.beginPath();
       ctx.moveTo(0, canvas.height / 2.5);
-      ctx.lineTo(canvas.width / 2.6, canvas.height);
+      ctx.lineTo(canvas.width / 2.5, canvas.height);
       ctx.lineTo(0, canvas.height);
 
     }

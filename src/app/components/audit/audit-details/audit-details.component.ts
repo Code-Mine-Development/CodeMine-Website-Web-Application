@@ -108,7 +108,7 @@ export class AuditDetailsComponent implements OnInit, AfterViewInit {
     }else {
       ctx1.beginPath();
       ctx1.moveTo(0, 0);
-      ctx1.lineTo(canvas1.width / 2.6, 0);
+      ctx1.lineTo(canvas1.width / 2.5, 0);
       ctx1.lineTo(canvas1.width, canvas1.height / 2.75);
       ctx1.lineTo(canvas1.width, canvas1.height);
       ctx1.lineTo(canvas1.width / 1.4, canvas1.height);
