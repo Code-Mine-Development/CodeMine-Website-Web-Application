@@ -7,7 +7,7 @@ import {HomePageResolver} from './core/home-page/services/home-page.resolver';
 import {HomeInformationResolver} from './components/home-page/services/home-information.resolver';
 
 
-const appRoutes: Routes = [
+export const appRoutes: Routes = [
   {path: '', redirectTo: '/home', pathMatch: 'full'},
   {
     path: 'home', component: HomePageComponent,

@@ -1,6 +1,5 @@
 import {BrowserModule} from '@angular/platform-browser';
 import {NgModule} from '@angular/core';
-
 import {AppComponent} from './app.component';
 import {CommonModule} from '@angular/common';
 import {Http, HttpModule} from '@angular/http';
@@ -18,13 +17,18 @@ import {HomeInformationServices} from './components/home-page/services/home-info
 import {HomeInformationResolver} from './components/home-page/services/home-information.resolver';
 import {AuditModule} from './aplication/audit/audit.module';
 import {AuditResolver} from './aplication/audit/services/audit.resolver';
-import {TranslateLoader, TranslateModule} from '@ngx-translate/core';
+import {TranslateLoader, TranslateModule, TranslateService} from '@ngx-translate/core';
 import {TranslateHttpLoader} from '@ngx-translate/http-loader';
-import {TranslateStore} from "@ngx-translate/core/src/translate.store";
+import {TranslateStore} from '@ngx-translate/core/src/translate.store';
+import {appRoutes} from './app-routing.module';
+import {LocalizeParser, LocalizeRouterModule, StaticParserLoader} from 'localize-router';
+import {RouterModule} from '@angular/router';
+
 
 export function createTranslateLoader(http: Http) {
   return new TranslateHttpLoader(http, './assets/language/', '.json');
 }
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -38,6 +42,8 @@ export function createTranslateLoader(http: Http) {
         deps: [Http]
       }
     }),
+    LocalizeRouterModule.forRoot(appRoutes),
+    RouterModule.forRoot(appRoutes),
     CommonModule,
     HttpModule,
     CoreModule,

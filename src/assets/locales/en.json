@@ -1,0 +1,11 @@
+{
+  "APP_TITLE": "Some app text",
+  "PORTFOLIO": "Portfolio >",
+  "USERS": "Users >",
+  "PROFILE": "Profile >",
+  "BACK": "< Back",
+
+  "ROUTES.portfolio": "portfolio",
+  "ROUTES.profile": "profile",
+  "ROUTES.home": "home"
+}
