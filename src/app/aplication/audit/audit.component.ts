@@ -40,23 +40,18 @@ export class AuditComponent implements OnInit, AfterViewInit {
     canvas.width = window.innerWidth;
     canvas.height = triangle.offsetHeight;
 
+    ctx.beginPath();
 
-      if(window.innerWidth < 850){
-        ctx.beginPath();
-        ctx.moveTo(0, canvas.height /2.9);
-        ctx.lineTo(canvas.width / 2.5, canvas.height);
-        ctx.lineTo(0, canvas.height);
+    let r =  1000;
+    let theta = 225;
 
-      }else {
-      ctx.beginPath();
-      ctx.moveTo(0, canvas.height / 2.5);
-      ctx.lineTo(canvas.width / 2.5, canvas.height);
-      ctx.lineTo(0, canvas.height);
+    ctx.moveTo(canvas.width/4,  canvas.height);
+    ctx.lineTo(canvas.width/4 + r *Math.cos(Math.PI * theta / 180.0),  canvas.height + r * Math.sin(Math.PI * theta / 180.0));
+    ctx.lineTo(0, canvas.height);
+    ctx.closePath();
 
-    }
-      ctx.closePath(0, canvas.height / 2.5);
-      ctx.fillStyle = '#ffda07';
-      ctx.fill();
+    ctx.fillStyle = '#ffda07';
+    ctx.fill();
 
     const data = canvas.toDataURL();
     const bg1 = document.getElementById('triangle-head');

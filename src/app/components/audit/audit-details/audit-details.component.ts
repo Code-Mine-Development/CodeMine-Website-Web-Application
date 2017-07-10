@@ -72,14 +72,9 @@ export class AuditDetailsComponent implements OnInit, AfterViewInit {
         if (this.audit && document.getElementById('triangle0') && document.getElementById('triangle1')) {
           setTimeout(() => {
             this.initBackground(event)
-
           }, 1);
-          let item = <HTMLElement> document.querySelectorAll("#list1")[1];
-          console.log(item.offsetTop);
     }
   }
-
-
   ngOnInit(){
 
   };
@@ -93,34 +88,23 @@ export class AuditDetailsComponent implements OnInit, AfterViewInit {
     const ctx1 = canvas1.getContext('2d');
     const triangle1 = document.getElementById('triangle0');
 
-
     canvas1.width = window.innerWidth;
     canvas1.height = triangle1.offsetHeight;
 
-    if(window.innerWidth < 850 ){
-      ctx1.beginPath();
-      ctx1.moveTo(0,0);
-      ctx1.lineTo(canvas1.width/2.5, 0);
-      ctx1.lineTo(canvas1.width, canvas1.height/3.8);
-      ctx1.lineTo(canvas1.width, canvas1.height);
-      ctx1.lineTo(canvas1.width/1.4, canvas1.height);
-      ctx1.lineTo(0, canvas1.height/1.45);
-    }else {
-      ctx1.beginPath();
-      ctx1.moveTo(0, 0);
-      ctx1.lineTo(canvas1.width / 2.5, 0);
-      ctx1.lineTo(canvas1.width, canvas1.height / 2.75);
-      ctx1.lineTo(canvas1.width, canvas1.height);
-      ctx1.lineTo(canvas1.width / 1.4, canvas1.height);
-      ctx1.lineTo(0, canvas1.height / 1.7);
-    }
+    let r =  4500;
+    let theta = 45;
+    let theta2 = 225;
 
+    ctx1.moveTo(0,0);
+    ctx1.lineTo(canvas1.width/4, 0);
+    ctx1.lineTo(canvas1.width/5 + r * Math.cos(Math.PI * theta / 180.0),  r * Math.sin(Math.PI * theta / 180.0));
+    ctx1.lineTo(canvas1.width, canvas1.height);
+    ctx1.lineTo(canvas1.width/2, canvas1.height);
+    ctx1.lineTo(canvas1.width/2 + r *Math.cos(Math.PI * theta2 / 180.0), canvas1.height +   r * Math.sin(Math.PI * theta2 / 180.0));
+    ctx1.closePath();
 
-    ctx1.closePath(0, 0);
     ctx1.fillStyle = '#ffda07';
     ctx1.fill();
-
-    // ctx1.stroke();
 
     const data1 = canvas1.toDataURL();
     const bg1 = document.getElementById('triangle0');
@@ -130,7 +114,6 @@ export class AuditDetailsComponent implements OnInit, AfterViewInit {
     const image1 = new Image();
     image1.onload = function () {
       ctx1.drawImage(this, 0, 0);
-
     }
 
 
@@ -143,21 +126,10 @@ export class AuditDetailsComponent implements OnInit, AfterViewInit {
     canvas2.width = window.innerWidth;
     canvas2.height = triangle2.offsetHeight;
 
-
-    if(window.innerWidth< 850){
-      ctx2.beginPath();
-      ctx2.moveTo(canvas2.width / 1.4, 0);
-      ctx2.lineTo(canvas2.width, 0);
-      ctx2.lineTo(canvas2.width, canvas2.height / 8);
-      ctx2.closePath(canvas2.width / 1.5, 0)
-    }else {
-      ctx2.beginPath();
-      ctx2.moveTo(canvas2.width / 1.4, 0);
-      ctx2.lineTo(canvas2.width, 0);
-      ctx2.lineTo(canvas2.width, canvas2.height / 6);
-      ctx2.closePath(canvas2.width / 1.5, 0)
-    }
-
+    ctx2.moveTo(canvas1.width/2, 0);
+    ctx2.lineTo(canvas1.width/2 + r * Math.cos(Math.PI * theta / 180.0),  r * Math.sin(Math.PI * theta / 180.0));
+    ctx2.lineTo(canvas2.width, 0);
+    ctx2.closePath();
     ctx2.fillStyle = '#ffda07';
     ctx2.fill();
 
