@@ -1,5 +1,5 @@
 
-<div class="section-usability" id="{{'triangle' +indexID}}" (window:resize)="initBackground($event)">
+<div class="section-usability" id="{{'triangle' +indexID}}" (window:resize)="initBackground($event)"  (scroll)="onScrollEvent($event)" >
   <canvas #Canvas1></canvas>
   <canvas #Canvas2></canvas>
   <div class="container">
@@ -8,8 +8,8 @@
     <h1 class="usability-panel-header">{{audit.title}}</h1>
     <p class="usability-panel-text">{{audit.description}}</p>
     <div class="usability-table">
-      <app-list [title]="'Zadania'" [listData]="audit"></app-list>
-      <app-list [title]="'Korzyści'" [listData]="audit"></app-list>
+      <app-list id="list1" [title]="'Zadania'" [listData]="audit"></app-list>
+      <app-list id="list2" [title]="'Korzyści'" [listData]="audit"></app-list>
     </div>
       <div class="details">
         <h2>Chcesz poznać więcej szczegółów ?</h2>

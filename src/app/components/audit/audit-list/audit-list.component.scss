@@ -14,17 +14,36 @@ h2, h4, span{
     box-shadow: 10px 15px 15px 0px rgba(0, 0, 0, 0.1);
     border-radius:2px;
     position: relative;
+    top:0;
+    bottom: 0;
   }
 
   li{
-    font-size: 1.7em;
     width: 80%;
-    margin:0 auto 2em;
+    margin:0 auto;
     display: inline-flex;
+    position: relative;
+    opacity:0;
+
   }
 
-  img.checked{
-    height: 25px;
-    position: relative;
-    left: calc(-12% + -12.5px)
+.tick {
+  fill:none;
+  stroke:#000;
+  stroke-width:4px;
+
+
+}
+  svg{
+    position: absolute;
+    left: -16%;
+    height: 40px;
+    stroke-dasharray: 100;
+    stroke-dashoffset: 100;
   }
+
+@keyframes draw-tick {
+  0% {
+    stroke-dashoffset: 100; }
+  100% {
+    stroke-dashoffset: 0; } }

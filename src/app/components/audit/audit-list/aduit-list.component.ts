@@ -12,10 +12,7 @@ export class AuditListComponent implements OnInit, AfterViewInit {
   @Input() listData;
   @Input() title: string;
 
-  @HostListener('window:scroll', ['$event']) onScrollEvent($event) {
-    console.log($event);
-    console.log("scrolling");
-  }
+
 
   constructor() {
   }
