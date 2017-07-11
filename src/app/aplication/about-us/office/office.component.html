@@ -7,7 +7,7 @@
        [ngStyle]="{'background-image': 'url(./assets/images/office.svg)'}">
   </div>
   <div id="deskLayer" class="draggable">
-    <app-desk #desk *ngFor="let person of employees, let i = index" id="desk{{i}}" [index]="i" [person]="person"></app-desk>
+    <app-desk #desk *ngFor="let person of employees, let i = index" id="desk{{i}}" [index]="i" [person]="person" ></app-desk>
     <app-door></app-door>
   </div>
 </div>

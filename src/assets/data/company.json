@@ -1,10 +1,10 @@
 {
-  "country":"Poland",
+  "country": "Poland",
   "city": "Katowice",
-  "street":"3 maja",
+  "street": "3 maja",
   "apartment": "18/3",
-  "email":"office@code-mine.com",
-  "phone":"+48 723 21 67",
+  "email": "office@code-mine.com",
+  "phone": "+48 723 21 67",
   "employees": [
     {
       "name": "Michał",
@@ -42,7 +42,118 @@
       "position": "frontend dev",
       "deskCoordinate": {
         "top": 715,
-        "left": 746,
+        "left": 745,
+        "variant": 1
+      }
+    },
+    {
+      "name": "Michał",
+      "surname": "Matusik",
+      "position": "frontend dev",
+      "deskCoordinate": {
+        "top": 554,
+        "left": 1397,
+        "variant": 1
+      }
+    },
+    {
+      "name": "Michał",
+      "surname": "Matusik",
+      "position": "frontend dev",
+      "deskCoordinate": {
+        "top": 872,
+        "left": 1006,
+        "variant": 1
+      }
+    },
+    {
+      "name": "Michał",
+      "surname": "Matusik",
+      "position": "frontend dev",
+      "deskCoordinate": {
+        "top": 917,
+        "left": 395,
+        "variant": 1
+      }
+    },
+    {
+      "name": "Michał",
+      "surname": "Matusik",
+      "position": "frontend dev",
+      "deskCoordinate": {
+        "top": 884,
+        "left": 451,
+        "variant": 1
+      }
+    },
+    {
+      "name": "Michał",
+      "surname": "Matusik",
+      "position": "frontend dev",
+      "deskCoordinate": {
+        "top": 906,
+        "left": 697,
+        "variant": 2
+      }
+    },
+    {
+      "name": "Michał",
+      "surname": "Matusik",
+      "position": "frontend dev",
+      "deskCoordinate": {
+        "top": 774,
+        "left": 1269,
+        "variant": 2
+      }
+    },
+    {
+      "name": "Michał",
+      "surname": "Matusik",
+      "position": "frontend dev",
+      "deskCoordinate": {
+        "top": 849,
+        "left": 1142,
+        "variant": 2
+      }
+    },
+    {
+      "name": "Michał",
+      "surname": "Matusik",
+      "position": "frontend dev",
+      "deskCoordinate": {
+        "top": 616,
+        "left": 1233,
+        "variant": 2
+      }
+    },
+    {
+      "name": "Michał",
+      "surname": "Matusik",
+      "position": "frontend dev",
+      "deskCoordinate": {
+        "top": 1116,
+        "left": 680,
+        "variant": 2
+      }
+    }
+  ,
+    {
+      "name": "Michał",
+      "surname": "Matusik",
+      "position": "frontend dev",
+      "deskCoordinate": {
+        "top": 1107,
+        "left": 554,
+        "variant": 1
+      }
+    },
+    {
+      "name": "Michał",
+      "surname": "Matusik",
+      "position": "frontend dev",
+      "deskCoordinate": {
+        "top": 989,
+        "left": 554,
         "variant": 1
       }
     }

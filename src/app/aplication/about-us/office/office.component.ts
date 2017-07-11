@@ -43,4 +43,5 @@ export class OfficeComponent implements OnInit, OnDestroy {
     this.doomRestyle.restyleElement(['.header', 'body'], ['color', 'overflow'], ['', '']);
   }
 
+
 }

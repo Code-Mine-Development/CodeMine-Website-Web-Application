@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, EventEmitter, OnInit, Output} from '@angular/core';
 
 @Component({
   selector: 'app-person',
@@ -6,10 +6,17 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./person.component.scss']
 })
 export class PersonComponent implements OnInit {
+  @Output() showCard = new EventEmitter<{closeItem:boolean}>() ;
+  showItem:boolean = true;
 
   constructor() { }
 
   ngOnInit() {
   }
 
+  onCloseClick() {
+    this.showCard.emit({
+      closeItem: !this.showItem
+    });
+  }
 }

@@ -4,15 +4,20 @@ export class Coordinate {
   constructor(public variant: number, public top: number, public left: number, public front) {
   }
   transform(): string {
-    const rotateY = this.variant === 1 ? 14 : 66;
-    const rotateX = this.variant === 1 ? 49 : 66;
-    const rotateZ = this.variant === 1 ? 29 : 66;
-    const skew = this.variant === 1 ? 33 : 66;
+    const rotateY = this.variant === 1 ? 14 : 52;
+    const rotateX = this.variant === 1 ? 49 : -61;
+    const rotateZ = this.variant === 1 ? 29 : -23;
+    const scale = this.variant=== 1 ? 1 : 1.45;
+    const skew = this.variant === 1 ? 33 : 10;
     return 'skew(-' + skew + 'deg) ' +
       'rotateY(-' + rotateY + 'deg) ' +
       'rotateX(' + rotateX + 'deg) ' +
+      'scale(' + scale + ') ' +
       'rotateZ(' + rotateZ + 'deg)';
   }
+
+
+
   offsetTop(): string {
     return this.top + 'px';
   }
