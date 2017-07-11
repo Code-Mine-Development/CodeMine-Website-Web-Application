@@ -1,28 +1,41 @@
+@import '../../../../assets/styles/typography';
+
 .container{
   width: 80%;
   margin: auto;
+
 }
+
 canvas{
   display: none;
 }
+
 #triangle0{
   width: 100%;
-  background: #ffda07;
+  background-repeat: no-repeat;
+  opacity: 0;
+  animation: bgFadeIn 2s  forwards
+
 }
+
 #triangle1{
-  padding-top: 15%;
+  width: 100%;
+  background-repeat: no-repeat;
+  padding-top: 10%;
+  opacity: 0;
+  animation: bgFadeIn 1s forwards;
+
   button{
     background: #ffda07;
   }
 }
 .usability-panel{
   padding-top: 4em;
-  .usability-panel-header {
-    font-size: 5.5em;
-}
+
   .usability-panel-text{
     width: 100%;
     padding: 2em 0;
+    line-height: 1.5em;
   }
   .usability-table{
     width: 100%;
@@ -58,3 +71,22 @@ canvas{
     }
   }
 }
+
+@keyframes bgFadeIn {
+  from{
+    opacity:0
+  }
+  to{
+    opacity: 1;
+  }
+}
+
+
+/deep/
+
+ #triangle1 {
+  ul.list{
+    background: #f2f2f2;
+  }
+}
+

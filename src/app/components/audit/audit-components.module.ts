@@ -3,6 +3,7 @@ import {CommonModule} from '@angular/common';
 import {AuditDetailsComponent} from './audit-details/audit-details.component';
 import {AuditListComponent} from './audit-list/aduit-list.component';
 
+
 @NgModule({
     declarations: [
         AuditDetailsComponent,

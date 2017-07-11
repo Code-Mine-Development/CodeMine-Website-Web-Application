@@ -23,3 +23,4 @@ const offerRoutes: Routes = [
 export class OfferRoutingModule {
 
 }
+
