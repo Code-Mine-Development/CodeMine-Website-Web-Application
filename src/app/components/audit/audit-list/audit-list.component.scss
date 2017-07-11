@@ -24,6 +24,7 @@ h2, h4, span{
     display: inline-flex;
     position: relative;
     opacity:0;
+    font-size: 1.5em;
 
   }
 
@@ -37,6 +38,7 @@ h2, h4, span{
   svg{
     position: absolute;
     left: -16%;
+    top: -15px;
     height: 40px;
     stroke-dasharray: 100;
     stroke-dashoffset: 100;
