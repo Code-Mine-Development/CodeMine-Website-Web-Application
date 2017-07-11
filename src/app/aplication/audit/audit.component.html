@@ -5,12 +5,11 @@
       <div class="column" *ngFor="let audit of audits">
         <a href="#" class="audit-image"><img [src]="audit.image" alt=""></a>
         <div class="row">
-          <a href="#" class="audit-title">{{audit.title }}</a>
+          <a href="#" class="audit-title">{{audit.title | translate }}</a>
         </div>
       </div>
     </div>
   </div>
 </div>
-<h2>{{ 'HOME.home' | translate }}</h2>
 
 <app-audit-details  *ngFor="let audit of audits, let id = index" [audit]="audit"  [indexID]="id"></app-audit-details>

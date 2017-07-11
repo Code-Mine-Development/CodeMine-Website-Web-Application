@@ -3,6 +3,7 @@ import {CommonModule} from '@angular/common';
 import {AuditDetailsComponent} from './audit-details/audit-details.component';
 import {AuditListComponent} from './audit-list/aduit-list.component';
 import {SharedModule} from "../../shared.module";
+import {TranslateModule} from '@ngx-translate/core'
 
 @NgModule({
     declarations: [
@@ -10,7 +11,8 @@ import {SharedModule} from "../../shared.module";
         AuditListComponent
     ],
     imports: [
-        CommonModule
+        CommonModule,
+        TranslateModule
     ],
     exports: [
         AuditDetailsComponent,

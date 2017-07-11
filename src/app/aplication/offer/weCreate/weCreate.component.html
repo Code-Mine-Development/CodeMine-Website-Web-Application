@@ -6,8 +6,8 @@
     <div class="col" *ngFor="let item of WeCreate.features">
       <div class="col-img" routerLink="/offer/weCreate/details"
            [ngStyle]="{'background-image': 'url(' + item.image + ')'}"></div>
-      <h3>{{item.name}}</h3>
-      <p>{{item.description}}</p>
+      <h3>{{item.name | translate}}</h3>
+      <p>{{item.description | translate }}</p>
     </div>
   </div>
 </div>

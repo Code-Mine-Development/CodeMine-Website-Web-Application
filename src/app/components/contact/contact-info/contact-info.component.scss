@@ -46,27 +46,8 @@
       position: absolute;
       height: 100%;
       top: 0;
-      left: 0;
-      margin-left: -15%;
-
-      @media #{$phone}  {
-        margin-left: -75%;
-      }
-      @media (min-width: 400px) {
-        margin-left: -50%;
-      }
-      @media (min-width: 500px) {
-        margin-left: -35%;
-      }
-      @media (min-width: 660px) {
-        margin-left: -10%;
-      }
-      @media (min-width: 799px) {
-        margin-left: -6%;
-      }
-      @media (min-width: 992px) and (max-width: 1140px){
-        margin-left: -45%;
-      }
+      left: 50%;
+      transform:translateX(-50%);
     }
 
     .contact-box {

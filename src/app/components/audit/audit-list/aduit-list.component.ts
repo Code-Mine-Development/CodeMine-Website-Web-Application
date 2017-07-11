@@ -21,7 +21,9 @@ import { trigger, state, animate, transition, style } from '@angular/animations'
 
 export class AuditListComponent {
   @Input() listData;
-  @Input() title: string;
+  @Input() source;
+  @Input() title:string;
+
 
   constructor () {}
 }
