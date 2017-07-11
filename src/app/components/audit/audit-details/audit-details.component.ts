@@ -79,9 +79,7 @@ export class AuditDetailsComponent implements OnInit, AfterViewInit {
 
   };
 
-
-
-  initBackground(event) {
+initBackground(event) {
     // Background #1
 
     const canvas1 = this.canvasRef1.nativeElement;

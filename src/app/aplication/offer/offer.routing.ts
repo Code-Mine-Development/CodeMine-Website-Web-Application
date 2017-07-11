@@ -3,7 +3,7 @@ import {RouterModule, Routes} from '@angular/router';
 import {OfferComponent} from './offer.component';
 import {WeCreateDetailsComponent} from './weCreate/weCreateDetails/weCreateDetails.component';
 import {LanguagesDetailsComponent} from './languages/languages-details/languages-details.component';
-import {OfferResolver} from './offer.resolver';
+import {OfferResolver} from './services/offer.resolver';
 
 const offerRoutes: Routes = [
   {path: '', component: OfferComponent, resolve: {offer: OfferResolver}},

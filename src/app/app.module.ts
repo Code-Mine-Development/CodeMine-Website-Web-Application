@@ -12,12 +12,12 @@ import {PortfolioResolver} from './aplication/portfolio/services/portfolio.resol
 import {PortfolioModule} from './aplication/portfolio/portfolio.module';
 import {HomePageResolver} from './core/home-page/services/home-page.resolver';
 import {OfferModule} from './aplication/offer/offer.module';
-import {OfferResolver} from './aplication/offer/offer.resolver';
+import {OfferResolver} from './aplication/offer/services/offer.resolver';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {HomeInformationServices} from './components/home-page/services/home-information.service';
 import {HomeInformationResolver} from './components/home-page/services/home-information.resolver';
-import {AuditModule} from "./aplication/audit/audit.module";
-import {AuditResolver} from "./aplication/audit/services/audit.resolver";
+import {AuditModule} from './aplication/audit/audit.module';
+import {AuditResolver} from './aplication/audit/services/audit.resolver';
 
 @NgModule({
   declarations: [

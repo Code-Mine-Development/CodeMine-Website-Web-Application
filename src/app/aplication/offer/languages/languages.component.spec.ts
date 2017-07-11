@@ -1,40 +1,38 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
-
 import { LanguagesComponent } from './languages.component';
-import {ActivatedRoute, Data, Router} from "@angular/router";
-import {MockLanguage} from "../../../shared/mocks/language.mock";
+import {Component} from '@angular/core';
+import {MockLanguage} from '../../../shared/mocks/language.mock';
+
+@Component({
+  selector: 'app-fake-language-wrapper',
+  template: '<app-languages [Languages]="language"></app-languages>'
+})
+
+class FakeWrapperLanguagesComponent {
+  language = MockLanguage;
+}
 
 describe('LanguagesComponent', () => {
   let component: LanguagesComponent;
-  let fixture: ComponentFixture<LanguagesComponent>;
+  let fixture: ComponentFixture<FakeWrapperLanguagesComponent>;
 
-  const router = {
-    navigate: jasmine.createSpy('navigate')
-  };
+  let fakeComponent: LanguagesComponent;
+  let fakeFixture: ComponentFixture<LanguagesComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ LanguagesComponent ],
-      providers: [
-        {
-          provide: ActivatedRoute,
-          useValue: {
-            data: {
-              subscribe: (fn: (value: Data) => void) => fn({
-                company: MockLanguage,
-              })
-            }
-          }
-        },
-        {provide: Router, useValue: router}
-      ]
+      declarations: [ FakeWrapperLanguagesComponent, LanguagesComponent ],
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(LanguagesComponent);
-    component = fixture.componentInstance;
+    fixture = TestBed.createComponent(FakeWrapperLanguagesComponent);
+    component = fixture.debugElement.children[0].componentInstance;
+
+    fakeFixture = TestBed.createComponent(LanguagesComponent);
+    fakeComponent = fakeFixture.componentInstance;
+    fakeComponent.Languages = component.Languages;
     fixture.detectChanges();
   });
 
