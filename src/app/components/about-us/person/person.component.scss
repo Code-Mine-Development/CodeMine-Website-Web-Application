@@ -1,0 +1,72 @@
+@import "../../../../assets/styles/colors";
+#personView{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: $desk;
+  >div{
+    display: flex;
+    height: 100%;
+    app-close{
+      position: absolute;
+      right: 20px;
+      top: 20px;
+    }
+    >div{
+      display: flex;
+      width: 50%;
+    }
+    .bg{
+      background-repeat: no-repeat;
+      margin: 50px 25px 50px 50px;
+      background-size: cover;
+    }
+    .desc{
+      margin: 50px 50px 50px 25px;
+      flex-direction: column;
+      h2{
+        font-weight: 600;
+      }
+      h3{
+        margin: 0;
+        position: relative;
+        &:before{
+          content: '';
+          position: absolute;
+          width: 42px;
+          height: 2px;
+          background: black;
+          bottom: -6px;
+        }
+      }
+      p{
+        margin-top: 50px;
+        font-size: 15px;
+      }
+      strong{
+        font-size: 13px;
+        margin-top: 10px;
+        span{
+          font-weight: 400;
+        }
+      }
+    }
+  }
+}
+#personWrapper{
+  opacity: 0;
+  transition: 1.8s;
+}
+#personWrapper.active{
+  opacity: 1;
+}
+#personView{
+  width: 0;
+  height: 0;
+  transition: 0.3s;
+}
+#personView.active{
+  width: 80%;
+  height: 70%;
+}
