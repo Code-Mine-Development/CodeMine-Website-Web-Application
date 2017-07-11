@@ -21,6 +21,7 @@ const appRoutes: Routes = [
   {path: 'portfolio', loadChildren: './aplication/portfolio/portfolio.module#PortfolioModule'},
   {path: 'oferta', loadChildren: './aplication/offer/offer.module#OfferModule'},
   {path: 'audyty', loadChildren: './aplication/audit/audit.module#AuditModule'},
+  {path: 'o nas', loadChildren: './aplication/about-us/about-us.module#AboutUsModule'},
   {path: 'not-found', component: PageNotFoundComponent},
   {path: '**', redirectTo: '/not-found'}
 ];

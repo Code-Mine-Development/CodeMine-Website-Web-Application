@@ -10,7 +10,7 @@ import {DoomRestyle} from '../models/doomRestyle.model';
   styleUrls: ['./office.component.scss'],
 })
 export class OfficeComponent implements OnInit, OnDestroy {
-  topOffset: number = document.querySelector('header')['offsetHeight'];
+  topOffset: number = document.querySelector('.header')['offsetHeight'];
   windowWidth: number = window.innerWidth;
   dragging: MovingLayers = new MovingLayers();
   mouseMoving: MouseMove = new MouseMove(this.windowWidth);
@@ -27,7 +27,7 @@ export class OfficeComponent implements OnInit, OnDestroy {
   }
 
   ngOnInit() {
-    this.doomRestyle.restyleElement(['header', 'body'], ['color', 'overflow'], ['white', 'hidden']);
+    this.doomRestyle.restyleElement(['.header', 'body'], ['color', 'overflow'], ['black', 'hidden']);
     this.mouseMoving.playAnimation();
   }
 
@@ -40,7 +40,7 @@ export class OfficeComponent implements OnInit, OnDestroy {
   }
 
   ngOnDestroy() {
-    this.doomRestyle.restyleElement(['header', 'body'], ['color', 'overflow'], ['', '']);
+    this.doomRestyle.restyleElement(['.header', 'body'], ['color', 'overflow'], ['', '']);
   }
 
 }
