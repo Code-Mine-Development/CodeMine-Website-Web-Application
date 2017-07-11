@@ -99,8 +99,8 @@ export class AuditDetailsComponent implements OnInit, AfterViewInit {
     ctx1.lineTo(canvas1.width/4, 0);
     ctx1.lineTo(canvas1.width/5 + r * Math.cos(Math.PI * theta / 180.0),  r * Math.sin(Math.PI * theta / 180.0));
     ctx1.lineTo(canvas1.width, canvas1.height);
-    ctx1.lineTo(canvas1.width/2, canvas1.height);
-    ctx1.lineTo(canvas1.width/2 + r *Math.cos(Math.PI * theta2 / 180.0), canvas1.height +   r * Math.sin(Math.PI * theta2 / 180.0));
+    ctx1.lineTo(canvas1.width/5, canvas1.height);
+    ctx1.lineTo(canvas1.width/5 + r *Math.cos(Math.PI * theta2 / 180.0), canvas1.height +   r * Math.sin(Math.PI * theta2 / 180.0));
     ctx1.closePath();
 
     ctx1.fillStyle = '#ffda07';
@@ -126,8 +126,8 @@ export class AuditDetailsComponent implements OnInit, AfterViewInit {
     canvas2.width = window.innerWidth;
     canvas2.height = triangle2.offsetHeight;
 
-    ctx2.moveTo(canvas1.width/2, 0);
-    ctx2.lineTo(canvas1.width/2 + r * Math.cos(Math.PI * theta / 180.0),  r * Math.sin(Math.PI * theta / 180.0));
+    ctx2.moveTo(canvas1.width/5, 0);
+    ctx2.lineTo(canvas1.width/5 + r * Math.cos(Math.PI * theta / 180.0),  r * Math.sin(Math.PI * theta / 180.0));
     ctx2.lineTo(canvas2.width, 0);
     ctx2.closePath();
     ctx2.fillStyle = '#ffda07';
