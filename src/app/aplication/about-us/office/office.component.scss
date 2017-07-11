@@ -1,0 +1,22 @@
+@import "../../../../assets/styles/colors";
+:host {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.wrap {
+  height: 120vh;
+  overflow: hidden;
+  position: relative;
+  background: $dark;
+  > div {
+    width: 2920px;
+    height: 1700px;
+    position: absolute;
+    background-repeat: no-repeat;
+    transition: 0.1s;
+    left: -300px;
+    top: -100px;
+  }
+}

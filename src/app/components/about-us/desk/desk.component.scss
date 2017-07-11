@@ -1,0 +1,35 @@
+@import "../../../../assets/styles/colors";
+#front{
+  position: absolute;
+  transform-origin: bottom left;
+  cursor: pointer;
+  width: 207px;
+  height: 54px;
+  opacity: 0.95;
+  &:after{
+    content: '';
+    background: $desk;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    transition: 0.3s;
+  }
+}
+#front.animationVariant1{
+  opacity: 1;
+  transition: 0.3s;
+  &:after{
+    width: 65%;
+    height: 167%;
+    transform-origin: bottom;
+    transform: rotateY(0deg) rotateZ(29deg) rotateX(0deg) skew(30deg) translateY(-32px) translateX(102px);
+  }
+}
+#front.animationVariant1.big{
+  &:after{
+    width: 100%;
+    transform: inherit;
+  }
+}

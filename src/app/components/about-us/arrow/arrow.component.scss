@@ -1,0 +1,14 @@
+.scroll {
+  height: 40px;
+  background: white;
+  display: flex;
+  align-items: center;
+  position: relative;
+  z-index: 1;
+  margin-top: -72px;
+  justify-content: center;
+  cursor: pointer;
+  i {
+    font-size: 15px;
+  }
+}

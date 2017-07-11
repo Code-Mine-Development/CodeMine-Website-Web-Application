@@ -1,14 +1,16 @@
 import {NgModule} from '@angular/core';
 import {CarouselComponent} from './carousel/carousel.component';
 import {CommonModule} from '@angular/common';
-import {ButtonComponent} from './button/button.component';
-import {SquareImageComponent} from './squareImage/square-image.component';
+import {ButtonComponent} from "./button/button.component";
+import {SquareImageComponent} from "./squareImage/square-image.component";
+import {CloseComponent} from "./close/close.component";
 
 @NgModule({
     declarations: [
         CarouselComponent,
         ButtonComponent,
-        SquareImageComponent
+        SquareImageComponent,
+        CloseComponent
     ],
     imports: [
         CommonModule,
@@ -16,7 +18,8 @@ import {SquareImageComponent} from './squareImage/square-image.component';
     exports: [
         CarouselComponent,
         ButtonComponent,
-        SquareImageComponent
+        SquareImageComponent,
+        CloseComponent
     ],
     providers: [],
 })
