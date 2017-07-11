@@ -10,6 +10,7 @@ import {ScrollToModule} from 'ng2-scroll-to';
 import {ContactComponentModule} from '../components/contact/contact-components.module';
 import {HomePageComponentModule} from '../components/home-page/home-page-components.module';
 import {SharedModule} from '../shared.module';
+import {LocalizeRouterModule} from 'localize-router'
 
 @NgModule({
     declarations: [
@@ -25,7 +26,8 @@ import {SharedModule} from '../shared.module';
         ContactComponentModule,
         HomePageComponentModule,
         ScrollToModule.forRoot(),
-        SharedModule
+        SharedModule,
+        LocalizeRouterModule
 
     ],
     exports: [

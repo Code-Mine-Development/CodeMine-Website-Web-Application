@@ -35,7 +35,7 @@
         </div>
       </div>
       <li i18n *ngFor="let nav of navigation" routerLinkActive="active">
-        <span i18n [routerLink]="'/'+ nav">{{nav}}</span>
+        <span i18n [routerLink]="'/'+ nav | localize">{{nav}}</span>
       </li>
     </ul>
   </div>
