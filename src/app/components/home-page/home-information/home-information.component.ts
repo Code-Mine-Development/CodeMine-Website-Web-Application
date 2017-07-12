@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {ActivatedRoute, Data} from '@angular/router';
 import {HomeInformation} from '../interfaces/home-information.interface';
+import {TranslateService} from '@ngx-translate/core';
 
 @Component({
   selector: 'app-home-information',
@@ -10,7 +11,9 @@ import {HomeInformation} from '../interfaces/home-information.interface';
 export class HomeInformationComponent implements OnInit {
   informations: HomeInformation[];
 
-  constructor(private route: ActivatedRoute) { }
+  constructor(private route: ActivatedRoute) {
+
+  }
 
   ngOnInit() {
     this.route.data

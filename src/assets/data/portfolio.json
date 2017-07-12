@@ -1,8 +1,8 @@
 [
   {
-    "title":"MdLinking.com",
-    "subtitle": "Platform for healthcare professionals",
-    "description": "Super Description1",
+    "title":"PORTFOLIO.MDLinking.title",
+    "shortDescription": "Sieć społecznościowa umożliwiająca prywatną komunikację lekarzy z całego świata",
+    "description": "PORTFOLIO.MDLinking.description",
     "mainImage":"../assets/images/mdlinking-carousel.jpg",
     "thumbnail": "../assets/images/mdlinking-carousel.jpg",
     "tags":{
@@ -40,9 +40,9 @@
   },
 
   {
-    "title":"Mountain2",
+    "title":"PORTFOLIO.BrigterVision.title",
     "subtitle": "Platform for healthcare professionals",
-    "description": "Super Description2",
+    "description": "PORTFOLIO.BrigterVision.description",
     "mainImage":"http://blog.oxforddictionaries.com/wp-content/uploads/mountain-names.jpg",
     "thumbnail": "http://blog.oxforddictionaries.com/wp-content/uploads/mountain-names.jpg",
     "tags":{
@@ -67,9 +67,9 @@
     "homePage":true
   },
   {
-    "title":"Mountain3",
+    "title":"PORTFOLIO.telecom.title",
     "subtitle": "Platform for healthcare professionals",
-    "description": "Super Description2",
+    "description": "PORTFOLIO.telecom.description",
     "mainImage":"https://steamuserimages-a.akamaihd.net/ugc/25087975291817161/4B01A1274CA990A3577CC37E1DAA72F88DE353F8/",
     "thumbnail": "https://steamuserimages-a.akamaihd.net/ugc/25087975291817161/4B01A1274CA990A3577CC37E1DAA72F88DE353F8/",
     "tags":{
@@ -94,9 +94,9 @@
     "homePage":true
   },
   {
-    "title":"Mountain4",
+    "title":"PORTFOLIO.exchange.title",
     "subtitle": "Platform for healthcare professionals",
-    "description": "Super Description4",
+    "description": "PORTFOLIO.exchange.description",
     "mainImage":"https://static.pexels.com/photos/23049/pexels-photo.jpg",
     "thumbnail": "https://static.pexels.com/photos/23049/pexels-photo.jpg",
     "tags":{
@@ -115,9 +115,93 @@
     "homePage":true
   },
   {
-    "title":"Mountain4",
+    "title":"PORTFOLIO.MidOceanBrands.title",
     "subtitle": "Platform for healthcare professionals",
-    "description": "Super Description4",
+    "description": "PORTFOLIO.MidOceanBrands.description",
+    "mainImage":"https://static.pexels.com/photos/23049/pexels-photo.jpg",
+    "thumbnail": "https://static.pexels.com/photos/23049/pexels-photo.jpg",
+    "tags":{
+      "products":["prod1","prod2","prod3"],
+      "technology":["tech1","tech2","tech3"],
+      "languages":["lang1","lang1","lang1"]
+    },
+    "technologies":[
+      {
+        "title":"Technology2",
+        "description":"Description2",
+        "thumbnail":"https://upload.wikimedia.org/wikipedia/commons/thumb/d/d9/Node.js_logo.svg/1200px-Node.js_logo.svg.png",
+        "mainImage":"https://upload.wikimedia.org/wikipedia/commons/thumb/d/d9/Node.js_logo.svg/1200px-Node.js_logo.svg.png"
+      }
+    ],
+    "homePage":false
+  },
+  {
+    "title":"PORTFOLIO.SmartHome.title",
+    "subtitle": "Platform for healthcare professionals",
+    "description": "PORTFOLIO.SmartHome.description",
+    "mainImage":"https://static.pexels.com/photos/23049/pexels-photo.jpg",
+    "thumbnail": "https://static.pexels.com/photos/23049/pexels-photo.jpg",
+    "tags":{
+      "products":["prod1","prod2","prod3"],
+      "technology":["tech1","tech2","tech3"],
+      "languages":["lang1","lang1","lang1"]
+    },
+    "technologies":[
+      {
+        "title":"Technology2",
+        "description":"Description2",
+        "thumbnail":"https://upload.wikimedia.org/wikipedia/commons/thumb/d/d9/Node.js_logo.svg/1200px-Node.js_logo.svg.png",
+        "mainImage":"https://upload.wikimedia.org/wikipedia/commons/thumb/d/d9/Node.js_logo.svg/1200px-Node.js_logo.svg.png"
+      }
+    ],
+    "homePage":false
+  },
+  {
+    "title":"PORTFOLIO.Tandarts.title",
+    "subtitle": "Platform for healthcare professionals",
+    "description": "PORTFOLIO.Tandarts.description",
+    "mainImage":"https://static.pexels.com/photos/23049/pexels-photo.jpg",
+    "thumbnail": "https://static.pexels.com/photos/23049/pexels-photo.jpg",
+    "tags":{
+      "products":["prod1","prod2","prod3"],
+      "technology":["tech1","tech2","tech3"],
+      "languages":["lang1","lang1","lang1"]
+    },
+    "technologies":[
+      {
+        "title":"Technology2",
+        "description":"Description2",
+        "thumbnail":"https://upload.wikimedia.org/wikipedia/commons/thumb/d/d9/Node.js_logo.svg/1200px-Node.js_logo.svg.png",
+        "mainImage":"https://upload.wikimedia.org/wikipedia/commons/thumb/d/d9/Node.js_logo.svg/1200px-Node.js_logo.svg.png"
+      }
+    ],
+    "homePage":false
+  },
+  {
+    "title":"PORTFOLIO.Tripbuzz.title",
+    "subtitle": "Platform for healthcare professionals",
+    "description": "PORTFOLIO.Tripbuzz.description",
+    "mainImage":"https://static.pexels.com/photos/23049/pexels-photo.jpg",
+    "thumbnail": "https://static.pexels.com/photos/23049/pexels-photo.jpg",
+    "tags":{
+      "products":["prod1","prod2","prod3"],
+      "technology":["tech1","tech2","tech3"],
+      "languages":["lang1","lang1","lang1"]
+    },
+    "technologies":[
+      {
+        "title":"Technology2",
+        "description":"Description2",
+        "thumbnail":"https://upload.wikimedia.org/wikipedia/commons/thumb/d/d9/Node.js_logo.svg/1200px-Node.js_logo.svg.png",
+        "mainImage":"https://upload.wikimedia.org/wikipedia/commons/thumb/d/d9/Node.js_logo.svg/1200px-Node.js_logo.svg.png"
+      }
+    ],
+    "homePage":false
+  },
+  {
+    "title":"PORTFOLIO.ZorgIndicator.title",
+    "subtitle": "Platform for healthcare professionals",
+    "description": "PORTFOLIO.ZorgIndicator.description",
     "mainImage":"https://static.pexels.com/photos/23049/pexels-photo.jpg",
     "thumbnail": "https://static.pexels.com/photos/23049/pexels-photo.jpg",
     "tags":{
@@ -135,4 +219,5 @@
     ],
     "homePage":false
   }
+
 ]

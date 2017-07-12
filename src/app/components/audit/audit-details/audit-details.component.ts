@@ -1,6 +1,7 @@
 import {Component, OnInit, Input, ViewChild, AfterViewInit, HostListener} from '@angular/core';
 import {Audit} from '../../../aplication/audit/interfaces/audit.interface';
 
+
 @Component({
   selector: 'app-audit-details',
   templateUrl: 'audit-details.component.html',
@@ -64,9 +65,7 @@ export class AuditDetailsComponent implements OnInit, AfterViewInit {
     }
   }
 
-  constructor() {
-
-  }
+  constructor() {}
 
   ngAfterViewInit() {
         if (this.audit && document.getElementById('triangle0') && document.getElementById('triangle1')) {
@@ -74,12 +73,14 @@ export class AuditDetailsComponent implements OnInit, AfterViewInit {
             this.initBackground(event)
           }, 1);
     }
+
   }
-  ngOnInit(){
+
+  ngOnInit() {
 
   };
 
-initBackground(event) {
+  initBackground(event) {
     // Background #1
 
     const canvas1 = this.canvasRef1.nativeElement;
@@ -141,5 +142,7 @@ initBackground(event) {
       ctx2.drawImage(this, 0, 0);
 
     }
+
+
   }
 }

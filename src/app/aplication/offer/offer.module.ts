@@ -12,13 +12,15 @@ import {TechnologiesComponent} from './technologies/technologies.component';
 import {LanguagesComponent} from './languages/languages.component';
 import {OfferService} from './services/offer.service';
 import {OfferResolver} from './services/offer.resolver';
+import {TranslateModule} from '@ngx-translate/core';
 
 
 @NgModule({
   imports: [
     CommonModule,
     OfferRoutingModule,
-    HttpModule
+    HttpModule,
+    TranslateModule
   ],
   declarations: [
     ArchitectureComponent,
@@ -28,8 +30,7 @@ import {OfferResolver} from './services/offer.resolver';
     TechnologiesDetailsComponent,
     WeCreateComponent,
     TechnologiesComponent,
-    LanguagesComponent
-
+    LanguagesComponent,
   ],
   providers: [OfferService, OfferResolver],
 })
