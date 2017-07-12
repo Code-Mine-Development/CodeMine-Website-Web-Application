@@ -1,6 +1,8 @@
 import {Component, OnInit, Inject, HostListener} from '@angular/core';
 import {DOCUMENT} from '@angular/platform-browser';
 import {Router, NavigationEnd} from '@angular/router';
+import {TranslateService} from '@ngx-translate/core';
+import {LocalizeRouterService} from 'localize-router';
 
 @Component({
   selector: 'app-header',
@@ -11,11 +13,26 @@ import {Router, NavigationEnd} from '@angular/router';
 export class HeaderComponent implements OnInit {
 
   navigation = [
-    'o nas',
-    'portfolio',
-    'oferta',
-    'audyty',
-    'kontakt'
+    {
+      "title": 'NAVIGATION.about_as',
+      "href": 'aboutus'
+    },
+    {
+      "title":'NAVIGATION.portfolio',
+      "href": 'portfolio'
+    },
+    {
+      "title":'NAVIGATION.offer',
+      "href":'offer'
+    },
+    {
+      "title":'NAVIGATION.audit',
+      "href":'audit'
+    },
+    {
+      "title": 'NAVIGATION.contact',
+      "href": 'contact'
+    }
   ];
 
   switchLang = 'en';
@@ -46,7 +63,19 @@ export class HeaderComponent implements OnInit {
   readyRightWall = false;
   readyLeftWall = false;
 
-  constructor(@Inject(DOCUMENT) private document: Document, private router: Router) {
+  constructor(@Inject(DOCUMENT)
+              private document: Document,
+              private router: Router,
+              private translate: TranslateService,
+              private localize:LocalizeRouterService
+            ) {
+
+  }
+
+  changeLanguage(event: Event, lang: string) {
+    event.preventDefault();
+    this.localize.changeLanguage(lang);
+    this.translate.use(lang);
   }
 
   ngOnInit() {

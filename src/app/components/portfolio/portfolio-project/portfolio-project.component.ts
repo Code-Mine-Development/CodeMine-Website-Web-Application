@@ -9,6 +9,7 @@ import {Portfolio} from '../../../aplication/portfolio/interfaces/portfolio.inte
 })
 export class PortfolioProjectComponent {
   @Input() project: Portfolio;
+
   @Output() onAction: EventEmitter<string> = new EventEmitter();
 
   constructor() {}

@@ -1,28 +1,28 @@
 <div class="section-start">
   <div class="slogan-wrapper">
-    <h2 i18n>Wydobywany z pasją w samym sercu Śląska, <br> Quality Driven Development</h2>
+    <h2 i18n>{{ 'HOME.motto.title' | translate}} <br> {{ 'HOME.motto.subtitle' | translate}}</h2>
   </div>
   <div class="box-start">
-    <h2 class="header" i18n>Jak pracujemy?</h2>
-    <p class="text" i18n>Gwarantem skuteczności proponowanych przez nas rozwiązań, jest niezmienny proces ich realizacji,składający się z kilku poszczególnych etapów, zaprezentowanych poniżej.</p>
+    <h2 class="header" i18n>{{ 'HOME.howWeWork.title' | translate}}</h2>
+    <p class="text" i18n>{{ 'HOME.howWeWork.description' | translate}}</p>
   </div>
 
   <div class="row box" *ngFor="let information of informations">
     <div class="col-box box-image"></div>
     <div class="col-box-text box-text">
-      <h1 class="box-header" i18n>{{information.title}}</h1>
-      <p class="text" i18n>{{information.description}}</p>
-      <button class="btn btn-yellow btn-large btn-shadow" *ngIf="information.more_info.active">{{information.more_info.message}}</button>
+      <h1 class="box-header" i18n>{{information.title | translate}}</h1>
+      <p class="text" i18n>{{information.description | translate}}</p>
+      <button class="btn btn-yellow btn-large btn-shadow" *ngIf="information.more_info.active">{{information.more_info.message | translate}}</button>
     </div>
   </div>
   <div class="box-center">
     <div class="row">
       <div class="box-center-text">
-      <h1 class="box-header" i18n>CTA do formularza</h1>
+      <h1 class="box-header" i18n>{{ 'HOME.button.label' | translate }}</h1>
       </div>
     </div>
     <div class="row">
-      <button class="btn btn-yellow btn-shadow btn-large">Cta</button>
+      <button class="btn btn-yellow btn-shadow btn-large">{{ 'HOME.button.text' | translate }}</button>
     </div>
   </div>
 </div>

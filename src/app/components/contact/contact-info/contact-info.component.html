@@ -3,31 +3,31 @@
       <div class="row row-contact">
         <div class="col-contact contact-box col-video">
           <video autoplay="autoplay" loop="loop" poster="../assets/images/city-of-mineshaft-timelapse-cover.jpg">
-            <source src="../assets/videos/timelapse-chorzowska-2.mp4.mp4" type="video/mp4">
+            <source src="../assets/videos/timelapse-chorzowska-2.mp4" type="video/mp4">
           </video>
           <div class="overlay"></div>
 
-          <h1 class="contact-box-header" i18n>Skontaktuj się z nami!</h1>
+          <h1 class="contact-box-header">{{'COMPANY.adressTitle' | translate}}</h1>
           <div class="row contact text">
-            <div class="contact-email">{{company.email}}</div>
-            <div class="contact-phone">{{company.phone}}</div>
+            <div class="contact-email">{{company.email }}</div>
+            <div class="contact-phone">{{company.phone }}</div>
           </div>
           <div class="row address text">
-            <div>{{company.street}} {{company.apartment}}</div>
+            <div>{{company.street }} {{company.apartament}}</div>
             <div>{{company.city}}, {{company.country}}</div>
           </div>
           <div class="row localization text">
-            <div class="contact-local" i18n>Zobacz na mapie</div>
+            <div class="contact-local" i18n>{{'COMPANY.showOnMap' | translate}}</div>
           </div>
           <i class="fa fa-map-marker" aria-hidden="true"></i>
         </div>
         <div class="col-contact contact-box">
-          <h1 class="contact-box-header">Hire us!</h1>
+          <h1 class="contact-box-header">{{'COMPANY.hireUs' | translate}}</h1>
           <div class="row row-brief text">
-            <span i18n>Opisz nam swój pomysł, formularz pomoże ci sprecyzować czego będzie on dotyczył.</span>
+            <span i18n>{{'COMPANY.describeUsYourProject' | translate}}</span>
           </div>
           <div class="row row-brief">
-            <button class="btn btn-yellow btn-shadow btn-large" i18n>Przejdź do briefu</button>
+            <button class="btn btn-yellow btn-shadow btn-large" i18n>{{'COMPANY.navigateToBrief' | translate}}</button>
           </div>
         </div>
       </div>
