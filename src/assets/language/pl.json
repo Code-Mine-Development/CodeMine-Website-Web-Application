@@ -167,10 +167,11 @@
     "contact": "kontakt"
   },
   "home": "home",
+  "aboutus": "onas",
   "portfolio":"portfolio",
-  "oferta": "oferta",
-  "kontakt": "kontakt",
-  "audyty": "audyty",
+  "offer": "oferta",
+  "contact": "kontakt",
+  "audit": "audyty",
   "not-found": "nie-ma"
 }
 

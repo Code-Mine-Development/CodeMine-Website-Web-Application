@@ -15,7 +15,7 @@ export class HeaderComponent implements OnInit {
   navigation = [
     {
       "title": 'NAVIGATION.about_as',
-      "href": 'onas'
+      "href": 'aboutus'
     },
     {
       "title":'NAVIGATION.portfolio',
@@ -23,15 +23,15 @@ export class HeaderComponent implements OnInit {
     },
     {
       "title":'NAVIGATION.offer',
-      "href":'oferta'
+      "href":'offer'
     },
     {
       "title":'NAVIGATION.audit',
-      "href":'audyty'
+      "href":'audit'
     },
     {
       "title": 'NAVIGATION.contact',
-      "href": 'kontakt'
+      "href": 'contact'
     }
   ];
 

@@ -17,10 +17,10 @@ export const appRoutes: Routes = [
       homeInformation: HomeInformationResolver
     }
   },
-  {path: 'kontakt', loadChildren: './aplication/contact/contact.module#ContactModule'},
+  {path: 'contact', loadChildren: './aplication/contact/contact.module#ContactModule'},
   {path: 'portfolio', loadChildren: './aplication/portfolio/portfolio.module#PortfolioModule'},
-  {path: 'oferta', loadChildren: './aplication/offer/offer.module#OfferModule'},
-  {path: 'audyty', loadChildren: './aplication/audit/audit.module#AuditModule'},
+  {path: 'offer', loadChildren: './aplication/offer/offer.module#OfferModule'},
+  {path: 'audit', loadChildren: './aplication/audit/audit.module#AuditModule'},
   {path: 'not-found', component: PageNotFoundComponent},
   {path: '**', redirectTo: '/not-found'}
 ];
