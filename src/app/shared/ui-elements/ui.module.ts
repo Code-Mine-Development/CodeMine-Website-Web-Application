@@ -4,6 +4,9 @@ import {CommonModule} from '@angular/common';
 import {ButtonComponent} from './button/button.component';
 import {SquareImageComponent} from './squareImage/square-image.component';
 import {SharedModule} from "../../shared.module";
+import {TranslateModule} from '@ngx-translate/core';
+import {LocalizeRouterModule} from 'localize-router';
+import {RouterModule} from '@angular/router';
 
 @NgModule({
     declarations: [
@@ -13,6 +16,9 @@ import {SharedModule} from "../../shared.module";
     ],
     imports: [
         CommonModule,
+        TranslateModule,
+        LocalizeRouterModule,
+        RouterModule
     ],
     exports: [
         CarouselComponent,

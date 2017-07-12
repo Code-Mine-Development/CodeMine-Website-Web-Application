@@ -3,19 +3,18 @@
       <div class="row row-contact">
         <div class="col-contact contact-box col-video">
           <video autoplay="autoplay" loop="loop" poster="../assets/images/city-of-mineshaft-timelapse-cover.jpg">
-            <source src="../assets/videos/timelapse-chorzowska-2.mp4.mp4" type="video/mp4">
+            <source src="../assets/videos/timelapse-chorzowska-2.mp4" type="video/mp4">
           </video>
           <div class="overlay"></div>
 
-          <h1 class="contact-box-header">{{'HOME.header' | translate }}</h1>
+          <h1 class="contact-box-header">{{company.header | translate}}</h1>
           <div class="row contact text">
-            <div class="contact-email">{{'HOME.email' | translate }}</div>
-            <div class="contact-phone">{{'HOME.phone' | translate }}</div>
+            <div class="contact-email">{{company.email }}</div>
+            <div class="contact-phone">{{company.phone }}</div>
           </div>
           <div class="row address text">
-            <div>{{'HOME.street' | translate }} {{'HOME.apartament' | translate }}</div>
-            <div>{{'HOME.CITY' | translate}}, {{'HOME.COUNTRY' | translate}}</div>
-            <!--<div>{{company.city}}, {{company.country}}</div>-->
+            <div>{{company.street }} {{company.apartament}}</div>
+            <div>{{company.city}}, {{company.country}}</div>
           </div>
           <div class="row localization text">
             <div class="contact-local" i18n>Zobacz na mapie</div>
