@@ -28,5 +28,4 @@ import {Component, Input, HostBinding, HostListener} from '@angular/core';
 })
 export class CloseComponent {
 
-
 }

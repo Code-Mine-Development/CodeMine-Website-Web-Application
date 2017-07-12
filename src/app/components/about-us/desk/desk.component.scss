@@ -20,6 +20,7 @@
 #front.animationVariant1{
   opacity: 1;
   transition: 0.3s;
+
   &:after{
     width: 65%;
     height: 167%;
@@ -27,6 +28,19 @@
     transform: rotateY(0deg) rotateZ(29deg) rotateX(0deg) skew(30deg) translateY(-32px) translateX(102px);
   }
 }
+#front.animationVariant2{
+  opacity: 1;
+  transition: 0.3s;
+
+  &:after{
+    transform: rotate(90deg);
+    width: 65%;
+    height: 167%;
+    transform-origin: bottom;
+    transform: rotateY(0deg) rotateZ(29deg) rotateX(0deg) skew(30deg) translateY(-32px) translateX(102px);
+  }
+}
+
 #front.animationVariant1.big{
   &:after{
     width: 100%;
