@@ -2,6 +2,7 @@ import {Component, OnInit} from '@angular/core';
 import {Data, ActivatedRoute, Router} from '@angular/router';
 import {Portfolio} from '../interfaces/portfolio.interface';
 import {AppRoutingProvider} from '../../../app-routing-provider';
+import {LocalizeRouterService} from 'localize-router';
 
 @Component({
     selector: 'app-portfolio-list',
@@ -11,7 +12,7 @@ import {AppRoutingProvider} from '../../../app-routing-provider';
 export class PortfolioListComponent implements OnInit {
     portfolio: Portfolio;
 
-    constructor(private route: ActivatedRoute, private router: Router) {
+    constructor(private route: ActivatedRoute, private router: Router, private localize:LocalizeRouterService) {
     }
 
     ngOnInit() {
@@ -22,7 +23,8 @@ export class PortfolioListComponent implements OnInit {
     }
 
     showDetails(index: number): void {
-        this.router.navigate(AppRoutingProvider.portfolioDetail(index), {relativeTo: this.route})
+        let translatedPath:any = this.localize.translateRoute(AppRoutingProvider.portfolioDetail(index))
+        this.router.navigate(translatedPath, {relativeTo: this.route})
     }
 
 }

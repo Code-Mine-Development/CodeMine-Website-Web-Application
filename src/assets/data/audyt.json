@@ -1,82 +1,47 @@
 [
   {
-    "title": "Jakość kodu",
+    "title": "AUDIT.quality.title",
     "image":"./assets/images/code.png",
-    "description":"Otrzymując gotowe oprogramowanie, firmy zazwyczaj akceptują je bez jakiejkolwiek weryfikacji jakości kodu, bezpieczeństwa, elastyczności, zgodności z wymaganiami oraz wszystkich innych czynników. To nic dziwnego – klienci zwykle nie posiadają odpowiedniej wiedzy czy też czasu.Jako specjaliści, możemy zostać pośrednikiem między Twoją firmą, a Twoim wykonawcą, oceniając zastosowane przez niego rozwiązania. Naszym zadaniem będzie sprawdzenie zgodności kodu ze standardami, a także ocena jego wydajności i wielkość długu technologicznego, przeprowadzając audyty zastosowanej technologii, architektury informacji, kodu źródłowego, skalowalności oraz wydajności aplikacji.",
-    "tasks":[
+    "description":"AUDIT.quality.description",
+    "items":[
       {
-        "name":"Badanie kodu źródłowego pod kątem zgodności z standardami"
+        "task":"AUDIT.quality.task_1",
+        "benefit": "AUDIT.quality.benefit_1"
       },
       {
-        "name":"Badanie kodu pod względem poprawności wykorzystania wzorców projektowych"
+        "task":"AUDIT.quality.task_2",
+        "benefit": "AUDIT.quality.benefit_2"
       },
       {
-        "name":"Badanie kodu pod względem poprawności wykorzystania wzorców projektowych"
+        "task":"AUDIT.quality.task_3",
+        "benefit": "AUDIT.quality.benefit_3"
       },
       {
-        "name":"Badanie elastyczności kodu w perspektywie ewolucji wymagań biznesowych"
+        "task":"AUDIT.quality.task_4",
+        "benefit": "AUDIT.quality.benefit_4"
       },
       {
-        "name":"Badania realnego nakładu zasobów"
-      }
-    ],
-    "benefits": [
-      {
-        "name": "MIdentyfikacja problemów dotyczących czytelności kodu wraz z listą rekomendacji w związku z ich poprawą, przyczyniającą się do zwiększenia wydajności zespołowej pracy nad projektem"
-      },
-      {
-        "name": "Identyfikacja problemów związanych z błędnym zastosowaniem wzorców projektowych, negatywnie rzutujących na jakość projektu oraz jego bezpieczny rozwój; przyczyniająca się do przyspieszenia tempa pracy nad projektem i znacznych oszczędności w przyszłości"
-      },
-      {
-        "name": "Ocena wykorzystania zewnętrznych bibliotek, w tym zabezpieczania projektu przed dokonującymi się w nich zmianami, wpływająca na wydajność oraz neutralizację problemów z bezpieczeństwem"
-      },
-      {
-        "name": "Ocena poziomu elastyczności narażonego na modyfikacje kodu, pozwalająca podjąć decyzję o jego zwiększeniu, przyczyniającego się z kolei do oszczędzenia czasu i pieniędzy"
-      },
-      {
-        "name": "Ocena wielkości nakładu zasobów ludzkich i czasowych, niezbędnych do wykonania projektu, pozwalająca określić realia otrzymanej od wykonawcy wyceny"
+        "task":"AUDIT.quality.task_5",
+        "benefit": "AUDIT.quality.benefit_5"
       }
     ]
   },
   {
-    "title": "Użyteczność",
+    "title": "AUDIT.usability.title",
     "image":"./assets/images/quality.png",
-    "description":"Audyt usability ma na celu kompleksową analizę użyteczności i funkcjonalności strony internetowej, aplikacji czy systemu. Podczas tego procesu sprawdzamy przede wszystkim intuicyjność strony, łatwość poruszania po niej, przydatność dla internautów i ogólne wrażenia związane z korzystania z usługi. Bierzemy pod uwagę wszystkie czynniki mające wpływ na użyteczność takie jak: architektura informacji, nawigacja, strukturę funkcjonalności dodatkowo sprawdzamy wszystkie ekrany oraz procesy myślowe. Stosujemy najlepsze techniki w zależności od rodzaju powierzonego problemu takie jak: Indywidualne wywiady pogłębione, Card Sorting, Paper prototyping, Eyetracking,",
-    "tasks":[
+    "description":"AUDIT.usability.description",
+    "items":[
       {
-        "name":"Badanie zgodności z heurystykami"
+        "task":"AUDIT.usability.task_1",
+        "benefit": "AUDIT.usability.benefit_1"
       },
       {
-        "name":"Badanie efektywności wdrożonych scenariuszy użycia"
+        "task":"AUDIT.usability.task_2",
+        "benefit": "AUDIT.usability.benefit_2"
       },
       {
-        "name":"Badanie zgodności ze standardami UI"
-      },
-      {
-        "name":"Badanie zgodności ze standardami UI"
-      },
-      {
-        "name":"Badanie zgodności ze standardami UI"
-      }
-    ],
-    "benefits": [
-      {
-        "name": "Ocena zgodności aplikacji/ strony z przyjętymi norami, opatrzona opisami heurystyk"
-      },
-      {
-        "name": "Ocena architektury informacji pod kątem intuicyjności wykonywanych czynności"
-      },
-      {
-        "name": "Ocena wydajności kanałów komunikacji (web/ mobile) oraz zgodności interfejsów z wytycznymi dla danej platformy"
-      },
-      {
-        "name": "Ocena wydajności kanałów komunikacji (web/ mobile) oraz zgodności interfejsów z wytycznymi dla danej platformy"
-      },
-      {
-        "name": "Ocena wydajności kanałów komunikacji (web/ mobile) oraz zgodności interfejsów z wytycznymi dla danej platformy"
-      },
-      {
-        "name": "Ocena wydajności kanałów komunikacji (web/ mobile) oraz zgodności interfejsów z wytycznymi dla danej platformy"
+        "task": "AUDIT.usability.task_3",
+        "benefit": "AUDIT.usability.benefit_3"
       }
     ]
   }

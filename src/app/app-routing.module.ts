@@ -7,7 +7,7 @@ import {HomePageResolver} from './core/home-page/services/home-page.resolver';
 import {HomeInformationResolver} from './components/home-page/services/home-information.resolver';
 
 
-const appRoutes: Routes = [
+export const appRoutes: Routes = [
   {path: '', redirectTo: '/home', pathMatch: 'full'},
   {
     path: 'home', component: HomePageComponent,
@@ -17,11 +17,11 @@ const appRoutes: Routes = [
       homeInformation: HomeInformationResolver
     }
   },
-  {path: 'kontakt', loadChildren: './aplication/contact/contact.module#ContactModule'},
+  {path: 'contact', loadChildren: './aplication/contact/contact.module#ContactModule'},
   {path: 'portfolio', loadChildren: './aplication/portfolio/portfolio.module#PortfolioModule'},
-  {path: 'oferta', loadChildren: './aplication/offer/offer.module#OfferModule'},
-  {path: 'audyty', loadChildren: './aplication/audit/audit.module#AuditModule'},
-  {path: 'o nas', loadChildren: './aplication/about-us/about-us.module#AboutUsModule'},
+  {path: 'offer', loadChildren: './aplication/offer/offer.module#OfferModule'},
+  {path: 'audit', loadChildren: './aplication/audit/audit.module#AuditModule'},
+  {path: 'aboutus', loadChildren: './aplication/about-us/about-us.module#AboutUsModule'},
   {path: 'not-found', component: PageNotFoundComponent},
   {path: '**', redirectTo: '/not-found'}
 ];

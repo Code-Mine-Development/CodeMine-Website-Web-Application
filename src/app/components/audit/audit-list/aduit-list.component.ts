@@ -10,7 +10,9 @@ import {AfterViewInit, Component, HostListener, Input, OnInit} from '@angular/co
 
 export class AuditListComponent implements OnInit, AfterViewInit {
   @Input() listData;
-  @Input() title: string;
+  @Input() source;
+  @Input() title:string;
+
 
 
 

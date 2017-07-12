@@ -1,0 +1,177 @@
+{
+  "AUDIT": {
+    "title": "Audyty",
+    "quality": {
+      "title": "Jakość kodu",
+      "description": "Otrzymując gotowe oprogramowanie, firmy zazwyczaj akceptują je bez jakiejkolwiek weryfikacji jakości kodu, bezpieczeństwa, elastyczności, zgodności z wymaganiami oraz wszystkich innych czynników. To nic dziwnego – klienci zwykle nie posiadają odpowiedniej wiedzy czy też czasu.Jako specjaliści, możemy zostać pośrednikiem między Twoją firmą, a Twoim wykonawcą, oceniając zastosowane przez niego rozwiązania. Naszym zadaniem będzie sprawdzenie zgodności kodu ze standardami, a także ocena jego wydajności i wielkość długu technologicznego, przeprowadzając audyty zastosowanej technologii, architektury informacji, kodu źródłowego, skalowalności oraz wydajności aplikacji.",
+      "task_1": "Badanie kodu źródłowego pod kątem zgodności z standardami",
+      "task_2": "Badanie kodu pod względem poprawności wykorzystania wzorców projektowych",
+      "task_3": "Badanie kodu pod względem poprawności wykorzystania wzorców projektowych",
+      "task_4": "Badanie elastyczności kodu w perspektywie ewolucji wymagań biznesowych",
+      "task_5": "Badania realnego nakładu zasobów",
+      "benefit_1": "Identyfikacja problemów dotyczących czytelności kodu wraz z listą rekomendacji w związku z ich poprawą, przyczyniającą się do zwiększenia wydajności zespołowej pracy nad projektem",
+      "benefit_2": "Identyfikacja problemów związanych z błędnym zastosowaniem wzorców projektowych, negatywnie rzutujących na jakość projektu oraz jego bezpieczny rozwój; przyczyniająca się do przyspieszenia tempa pracy nad projektem i znacznych oszczędności w przyszłości",
+      "benefit_3": "Ocena wykorzystania zewnętrznych bibliotek, w tym zabezpieczania projektu przed dokonującymi się w nich zmianami, wpływająca na wydajność oraz neutralizację problemów z bezpieczeństwem",
+      "benefit_4": "Ocena poziomu elastyczności narażonego na modyfikacje kodu, pozwalająca podjąć decyzję o jego zwiększeniu, przyczyniającego się z kolei do oszczędzenia czasu i pieniędzy",
+      "benefit_5": "Ocena wielkości nakładu zasobów ludzkich i czasowych, niezbędnych do wykonania projektu, pozwalająca określić realia otrzymanej od wykonawcy wyceny"
+    },
+    "usability":{
+      "title": "Użyteczność",
+      "description":"Audyt usability ma na celu kompleksową analizę użyteczności i funkcjonalności strony internetowej, aplikacji czy systemu. Podczas tego procesu sprawdzamy przede wszystkim intuicyjność strony, łatwość poruszania po niej, przydatność dla internautów i ogólne wrażenia związane z korzystania z usługi. Bierzemy pod uwagę wszystkie czynniki mające wpływ na użyteczność takie jak: architektura informacji, nawigacja, strukturę funkcjonalności dodatkowo sprawdzamy wszystkie ekrany oraz procesy myślowe. Stosujemy najlepsze techniki w zależności od rodzaju powierzonego problemu takie jak: Indywidualne wywiady pogłębione, Card Sorting, Paper prototyping, Eyetracking,",
+      "task_1":"Badanie zgodności z heurystykami",
+      "task_2":"Badanie efektywności wdrożonych scenariuszy użycia",
+      "task_3":"Badanie zgodności ze standardami UI",
+      "benefit_1": "Ocena zgodności aplikacji/ strony z przyjętymi norami, opatrzona opisami heurystyk",
+      "benefit_2": "Ocena architektury informacji pod kątem intuicyjności wykonywanych czynności",
+      "benefit_3": "Ocena wydajności kanałów komunikacji (web/ mobile) oraz zgodności interfejsów z wytycznymi dla danej platformy"
+    }
+  },
+  "HOME":{
+    "motto":{
+        "title":"Wydobywany z pasją w samym sercu Śląska,",
+        "subtitle":"Quality Driven Development"
+    },
+    "howWeWork":{
+        "title":"Jak pracujemy?",
+        "description": "Gwarantem skuteczności proponowanych przez nas rozwiązań, jest niezmienny proces ich realizacji,składający się z kilku poszczególnych etapów, zaprezentowanych poniżej."
+    },
+    "button": {
+      "label": "CTA do formularza",
+      "text": "CTA"
+    },
+    "language":{
+      "title": "Tworzymy jednolity język komunikacji",
+      "description": "W celu zapewnienia efektywnej komunikacji, punktem wyjścia każdego realizowanego przez nas projektu jest stworzenie kompletnego słownika pojęć typowych dla obszaru biznesowego, w jakim porusza się nasz klient."
+    },
+    "knowledge":{
+      "title": "Zdobywamy wiedzę biznesową",
+      "description": "Uważamy, że zrozumienie branży to podstawa, dlatego kolejnym etapem jest wyczerpująca rozmowa z klientem, pozwalająca nam na wyodrębnienie najistotniejszych elementów, zachowań i modeli, potrzebnych do stworzenia nowego systemu."
+    },
+    "logic":{
+      "title": "Tworzymy logikę biznesową",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+    },
+    "specyfication":{
+      "title": "Tworzymy szczegółową specyfikację projektu",
+      "description": "Posiadawszy wymaganą wiedzę, zagłębiamy się w projekt, tworząc jego szczegółową specyfikację. Zakłada ona głównie opracowanie ścieżek użytkownika i modelowanie jego zachowań, opisanie działania poszczególnych komponentów systemu oraz stworzenie poglądowych diagramów."
+    },
+    "implementation":{
+      "title": "Implementujemy",
+      "description": "Następnym etapem projektu jest implementacja zaprogramowanego interfejsu użytkownika, a więc integracja wcześniej napisanego kodu logiki biznesowej z warstwą aplikacyjną oprogramowania. Tak przygotowany system przechodzi szereg testów, mających potwierdzić jego zgodność z początkowymi założeniami.",
+      "message": "Sprawdź ofertę"
+    },
+    "secoundImplementation":{
+      "title": "Wdrażamy",
+      "description": "Po pozytywnym przejściu wszystkich testów, software zostaje uruchomiony, a my przechodzimy do szkolenia klienta z zakresu jego funkcjonowania, przekazując tym samym wcześniej skompletowaną, szczegółową dokumentację.",
+      "message": "Sprawdź realizację"
+    },
+    "support":{
+      "title": "Wspieramy",
+      "description": "„Go live” systemu nie oznacza końca współpracy. Po oddaniu projektu zapewniamy naszym klientom wsparcie, obejmujące między innymi kwestie związane z drobnymi zmianami, modernizacją oprogramowania czy fachowym doradztwem w jego potencjalnych kierunkach rozwoju.",
+      "message": "Poznaj nasz zespół"
+    }
+  },
+  "OFFER":{
+    "features":{
+      "title": "We create",
+      "nr_1":{
+        "title": "Solutions to your business problems",
+        "description": "Rozwiązania problemów nie zawsze są oczywiste – z tego względu pomożemy Ci znaleźć złoty środek, pomagający usprawnić procesy i polepszyć wydajność w Twojej firmie."
+      },
+      "nr_2":{
+        "title": "Internal Apps",
+        "description": "Oferujemy wydajne i responsywne, zaawansowane aplikacje dla Twojej firmy, oparte na najnowszych technologiach i możliwe do integracji z systemami enterprise."
+      },
+      "nr_3":{
+        "title": "B2C Applications",
+        "description": "Zaprojektujemy nowoczesne systemy aplikacji internetowych dla Twoich klientów, które możemy także zintegrować z mediami społecznościowymi czy systemami płatności."
+      },
+      "nr_4":{
+        "title": "Social Networking",
+        "description": "Sieci społecznościowe to dla nas nie problem – posiadamy doświadczenie zarówno w ich budowaniu, jak i rozwiązywaniu towarzyszących im problemów."
+      },
+      "nr_5":{
+        "title": "TV Apps",
+        "description": "Jeśli masz pomysł na aplikację dla Apple TV - zgłoś się do nas! Jesteśmy otwarci na wyzwania i przeanalizujemy każdą Twoją koncepcję."
+      }
+    },
+    "technologies":{
+      "title": "Technologie"
+    },
+    "languages":{
+      "title": "Języki"
+    },
+    "architecture":{
+      "title": "Architektura"
+    }
+  },
+  "COMPANY":{
+    "adressTitle": "Skontaktuj się z nami!",
+    "showOnMap": "Zobacz na mapie",
+    "hireUs": "Hire us!",
+    "describeUsYourProject": "Opisz nam swój pomysł, formularz pomoże ci sprecyzować czego będzie on dotyczył",
+    "navigateToBrief": "Przejdź do briefu"
+  },
+  "PORTFOLIO":{
+    "addProjectTitle": "Dodaj swój projekt",
+    "addProjectButton": "do formularza",
+    "BrigterVision":{
+      "title": "Brigter Vision Growth Platform",
+      "description": "Aplikacja skierowana do amerykańskich terapeutów, pozwalająca na przeglądanie puli dostępnych postów oraz ich publikację w formie bloga."
+    },
+    "telecom":{
+      "title": "E-commerce dla telecomu",
+      "description": "Samodzielne moduły oprogramowania przyczyniające się do stworzenia nowoczesnej platformy e-commerce dla wiodących operatorów telekomunikacyjnych w Europie."
+    },
+    "exchange":{
+      "title": "Internetowy system wymiany walut",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+    },
+    "MDLinking":{
+      "title": "MDLinking",
+      "description": "Sieć społecznościowa umożliwiająca prywatną komunikację lekarzy z całego świata i przyczyniająca się do polepszania jakości opieki medycznej."
+    },
+    "MidOceanBrands":{
+      "title": "Mid Ocean Brands Reporting System",
+      "description": "Kompleksowe narzędzie służące do planowania wydajności produkcji dla firmy zajmującej się wykonywaniem nadruków graficzne na różnego rodzaju gadżetach."
+    },
+    "SmartHome":{
+      "title": "System zarządzania inteligentnymi domami",
+      "description": "System do zarządzania inteligentnymi domami, konieczny do dostosowania do nowych wymagań technologicznych."
+    },
+    "Tandarts":{
+      "title": "Tandarts.com",
+      "description": "Aplikacja zrzeszająca praktyki dentystyczne na terenie Holandii, pozwalająca użytkownikom wyszukać najlepszych specjalistów z okolicy i bezpośrednio umówić się na wizytę."
+    },
+    "Tripbuzz":{
+      "title": "Tripbuzz",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+    },
+    "ZorgIndicator":{
+      "title": "ZorgIndicator",
+      "description": "Platforma umożliwiająca pacjentom wyszukanie najlepszych szpitali w okolicy, z uwzględnieniem ich oceny, statystyk w leczeniu oraz liczby wolnych łóżek."
+    }
+  },
+  "UTILITIES": {
+    "tasks": "Zadania",
+    "benefits": "Korzyści",
+    "showDetails": "Chcesz poznać więcej szczegółów ?",
+    "sendRequest": "Wyślij zapytanie",
+    "technologies": "Technologie"
+  },
+  "NAVIGATION":{
+    "about_as": "o nas",
+    "portfolio": "portfolio",
+    "offer": "oferta",
+    "audit": "audit",
+    "contact": "kontakt"
+  },
+  "home": "home",
+  "aboutus": "onas",
+  "portfolio":"portfolio",
+  "offer": "oferta",
+  "contact": "kontakt",
+  "audit": "audyty",
+  "not-found": "nie-ma"
+}
+

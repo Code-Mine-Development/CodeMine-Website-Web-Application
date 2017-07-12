@@ -5,13 +5,13 @@
 <ul class="list" >
   <li
     class="listItem"
-    *ngFor="let item of listData.tasks, let i = index"
+    *ngFor="let item of listData"
   >
     <svg viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
       <path class="tick" d="M1 25l14 14L47 7"/>
     </svg>
 
-    {{item.name}}
+    {{ (source == 0 ? item.task : item.benefit) | translate }}
   </li>
 </ul>
 </div>
