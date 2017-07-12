@@ -10,25 +10,30 @@ import {LocalizeRouterService} from 'localize-router';
 })
 export class AppComponent implements OnInit {
   constructor(private translate: TranslateService, private localize:LocalizeRouterService) {
+    const languages = <[string]>localize.parser.locales;
     const browserLang = translate.getBrowserLang();
     const currentLang = localize.parser.currentLang;
-    const defaultLang = browserLang.match(/pl|en|de|nor/) ? browserLang : 'pl';
+    const defaultLang = this.checkLanguages( browserLang, languages )? browserLang : 'pl';
 
-    translate.addLangs(['pl', 'en', 'nor', 'de']);
 
-    this.selectLanguage(currentLang, defaultLang)
+    translate.addLangs(languages);
+
+    if( this.checkLanguages( currentLang, languages ) )
+      this.selectLanguage(currentLang);
+    else
+      this.selectLanguage(defaultLang);
+
   }
 
-  selectLanguage(currentLang,defaultLang){
-    if( currentLang.match(/pl|en|de|nor/) ) {
-      this.translate.use(currentLang);
-      this.translate.setDefaultLang(currentLang);
-    }
-    else {
-      this.translate.use(defaultLang);
-      this.translate.setDefaultLang(defaultLang);
-    }
+  selectLanguage(lang){
+      this.translate.use(lang);
+      this.translate.setDefaultLang(lang);
   }
+
+  checkLanguages(lang, languages){
+    return languages.find( (listLang) => (listLang == lang)) || false;
+  }
+
 
   ngOnInit() {
 
