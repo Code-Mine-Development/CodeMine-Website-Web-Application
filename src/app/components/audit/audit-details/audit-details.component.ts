@@ -28,41 +28,42 @@ export class AuditDetailsComponent implements OnInit, AfterViewInit {
     let list4ToTop = fourthList.offsetTop - fourthList.offsetHeight;
 
 
-    for( let i = 0; i <  5; i++){
-      let listElement  = <HTMLElement>document.getElementsByClassName('listItem')[i];
-      let listElement2 = <HTMLElement>document.getElementsByClassName('listItem')[i+5];
-      let listElement3 = <HTMLElement>document.getElementsByClassName('listItem')[i+10];
-      let listElement4 = <HTMLElement>document.getElementsByClassName('listItem')[i+15];
-
-      let ticks1 = <HTMLElement>document.getElementsByClassName('tick')[i];
-      let ticks2 = <HTMLElement>document.getElementsByClassName('tick')[i+5];
-      let ticks3 = <HTMLElement>document.getElementsByClassName('tick')[i+10];
-      let ticks4 = <HTMLElement>document.getElementsByClassName('tick')[i+15];
-
-      let item1ToTop = listElement.offsetTop +  list1ToTop;
-      let item2ToTop = listElement2.offsetTop + list2ToTop;
-      let item3ToTop = listElement3.offsetTop + list3ToTop;
-      let item4ToTop = listElement4.offsetTop + list4ToTop;
-
-
-
-      if ( viewport -150 >= item1ToTop) {
-        listElement.style.animation = 'jumpIn 1s forwards';
-        ticks1.style.animation="draw-tick 2s .5s forwards";
-      }
-      if( viewport -150 >= item2ToTop){
-        listElement2.style.animation = 'jumpIn 1s forwards';
-        ticks2.style.animation="draw-tick 2s .5s forwards";
-      }
-      if( viewport -150 >= item3ToTop){
-        listElement3.style.animation = 'jumpIn 1s forwards';
-        ticks3.style.animation="draw-tick 2s .5s forwards";
-      }
-      if( viewport -150 >= item4ToTop){
-        listElement4.style.animation = 'jumpIn 1s forwards';
-        ticks4.style.animation="draw-tick 2s .5s forwards";
-      }
-    }
+    // for( let i = 0; i <  5; i++){
+    //   let listElement  = <HTMLElement>document.getElementsByClassName('listItem')[i];
+    //   let listElement2 = <HTMLElement>document.getElementsByClassName('listItem')[i+5];
+    //   let listElement3 = <HTMLElement>document.getElementsByClassName('listItem')[i+10];
+    //   let listElement4 = <HTMLElement>document.getElementsByClassName('listItem')[i+15];
+    //
+    //   console.log(listElement.offsetTop)
+    //   let ticks1 = <HTMLElement>document.getElementsByClassName('tick')[i];
+    //   let ticks2 = <HTMLElement>document.getElementsByClassName('tick')[i+5];
+    //   let ticks3 = <HTMLElement>document.getElementsByClassName('tick')[i+10];
+    //   let ticks4 = <HTMLElement>document.getElementsByClassName('tick')[i+15];
+    //
+    //   // let item1ToTop = listElement.offsetTop +  list1ToTop;
+    //   // let item2ToTop = listElement2.offsetTop + list2ToTop;
+    //   // let item3ToTop = listElement3.offsetTop + list3ToTop;
+    //   // let item4ToTop = listElement4.offsetTop + list4ToTop;
+    //   //
+    //   //
+    //   //
+    //   // if ( viewport -150 >= item1ToTop) {
+    //   //   listElement.style.animation = 'jumpIn 1s forwards';
+    //   //   ticks1.style.animation="draw-tick 2s .5s forwards";
+    //   // }
+    //   // if( viewport -150 >= item2ToTop){
+    //   //   listElement2.style.animation = 'jumpIn 1s forwards';
+    //   //   ticks2.style.animation="draw-tick 2s .5s forwards";
+    //   // }
+    //   // if( viewport -150 >= item3ToTop){
+    //   //   listElement3.style.animation = 'jumpIn 1s forwards';
+    //   //   ticks3.style.animation="draw-tick 2s .5s forwards";
+    //   // }
+    //   // if( viewport -150 >= item4ToTop){
+    //   //   listElement4.style.animation = 'jumpIn 1s forwards';
+    //   //   ticks4.style.animation="draw-tick 2s .5s forwards";
+    //   // }
+    // }
   }
 
   constructor() {}
