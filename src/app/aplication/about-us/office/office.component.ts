@@ -29,7 +29,7 @@ export class OfficeComponent implements OnInit {
   }
 
   ngOnInit() {
-    this.doomRestyle.restyleElement(['.header', 'body'], ['color', 'overflow'], ['black', 'hidden']);
+    this.doomRestyle.restyleElement(['.header', 'body'], ['color', 'overflow'], ['black', 'auto']);
     this.mouseMoving.playAnimation();
   }
 

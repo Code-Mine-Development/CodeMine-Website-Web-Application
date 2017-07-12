@@ -19,6 +19,8 @@ function animation() {
 
   const bg = document.getElementById('officeBg'),
     desks = document.getElementById('deskLayer');
+  if(!bg && !desks)
+    return;
   bg['style']['transform'] = data.translate;
   desks['style']['transform'] = data.translate;
   requestId = window.requestAnimationFrame(animation);
