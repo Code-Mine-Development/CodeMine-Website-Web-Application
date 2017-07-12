@@ -28,7 +28,9 @@
       <div class="dropdown">
         <div class="dropbtn">{{ translate.currentLang }}</div>
         <div class="dropdown-content">
-          <a href="#" (click)="changeLanguage($event, lang)" *ngFor="let lang of translate.getLangs()">{{ lang }}</a>
+          <a href="#" (click)="changeLanguage($event, lang)" *ngFor="let lang of translate.getLangs()" >
+              <span *ngIf="lang!= translate.currentLang">{{lang}}</span>
+          </a>
         </div>
       </div>
       <li i18n *ngFor="let nav of navigation" routerLinkActive="active">
