@@ -1,6 +1,7 @@
 import $ from 'jquery';
 
-export class Coordinate {
+export class Coordinate{
+
   constructor(public variant: number, public top: number, public left: number, public front) {
   }
   transform(): string {
@@ -28,6 +29,8 @@ export class Coordinate {
     value ? this.moveUp(index) : this.moveDown();
   }
   private moveUp(index): void {
+    document.getElementById('personWrapper').style.transition = '1.8s';
+
     const layer = $('#deskLayer');
     layer[0].style.pointerEvents = 'none';
     this.front.nativeElement.style.transition = '0.3s';
@@ -58,6 +61,23 @@ export class Coordinate {
       personInfo.addClass('active');
     }, 950)
   }
+
+
   private moveDown(): void {
+    const layer = $('#deskLayer');
+    layer[0].style.pointerEvents = 'all';
+    document.getElementById('personWrapper').style.transition = '0.5s';
+    setTimeout(() => {
+      const person = $('#personView');
+      const personInfo = $('#personWrapper');
+      person.removeClass('active');
+      personInfo.removeClass('active');
+    }, 50)
+
+    setTimeout(() => {
+      this.front.nativeElement.classList.remove('animationVariant1');
+    }, 300);
+
+
   }
 }

@@ -9,13 +9,15 @@ import {DoomRestyle} from '../models/doomRestyle.model';
   templateUrl: './office.component.html',
   styleUrls: ['./office.component.scss'],
 })
-export class OfficeComponent implements OnInit, OnDestroy {
+export class OfficeComponent implements OnInit {
   topOffset: number = document.querySelector('.header')['offsetHeight'];
   windowWidth: number = window.innerWidth;
   dragging: MovingLayers = new MovingLayers();
   mouseMoving: MouseMove = new MouseMove(this.windowWidth);
   doomRestyle: DoomRestyle = new DoomRestyle();
   @Input() employees: Employees;
+  bgClicked:boolean = false;
+
 
   constructor(ngZone: NgZone) {
     window.onresize = () => {
@@ -39,9 +41,14 @@ export class OfficeComponent implements OnInit, OnDestroy {
     this.mouseMoving.setMove(value)
   }
 
-  ngOnDestroy() {
-    this.doomRestyle.restyleElement(['.header', 'body'], ['color', 'overflow'], ['', '']);
+  // ngOnDestroy() {
+  //   this.doomRestyle.restyleElement(['.header', 'body'], ['color', 'overflow'], ['', '']);
+  // }
+  clickBackground(){
+    this.bgClicked = true;
+    setTimeout(() => {
+      this.bgClicked = false;
+    },500);
+
   }
-
-
 }
