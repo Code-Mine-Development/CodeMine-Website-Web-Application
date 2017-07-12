@@ -4,7 +4,6 @@ import {ContactComponent} from './contact.component';
 import {ContactRoutingModule} from './contact.routing';
 import {UiModule} from '../../shared/ui-elements/ui.module';
 import {ContactComponentModule} from '../../components/contact/contact-components.module';
-import {SharedModule} from "../../shared.module";
 import {TranslateModule} from '@ngx-translate/core';
 
 @NgModule({

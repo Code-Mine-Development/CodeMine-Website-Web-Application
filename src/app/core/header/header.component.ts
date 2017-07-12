@@ -13,11 +13,26 @@ import {LocalizeRouterService} from 'localize-router';
 export class HeaderComponent implements OnInit {
 
   navigation = [
-    'o nas',
-    'portfolio',
-    'oferta',
-    'audyty',
-    'kontakt'
+    {
+      "title": 'NAVIGATION.about_as',
+      "href": 'onas'
+    },
+    {
+      "title":'NAVIGATION.portfolio',
+      "href": 'portfolio'
+    },
+    {
+      "title":'NAVIGATION.offer',
+      "href":'oferta'
+    },
+    {
+      "title":'NAVIGATION.audit',
+      "href":'audyty'
+    },
+    {
+      "title": 'NAVIGATION.contact',
+      "href": 'kontakt'
+    }
   ];
 
   switchLang = 'en';
@@ -60,6 +75,7 @@ export class HeaderComponent implements OnInit {
   changeLanguage(event: Event, lang: string) {
     event.preventDefault();
     this.localize.changeLanguage(lang);
+    this.translate.use(lang);
   }
 
   ngOnInit() {

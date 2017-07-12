@@ -44,8 +44,8 @@ export function createTranslateLoader(http: Http) {
         deps: [Http]
       }
     }),
-    RouterModule.forRoot(appRoutes),
     LocalizeRouterModule.forRoot(appRoutes),
+    RouterModule.forRoot(appRoutes),
     CommonModule,
     HttpModule,
     CoreModule,

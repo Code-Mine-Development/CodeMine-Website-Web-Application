@@ -1,14 +1,19 @@
 {
-  "HOME": {
-    "home":"Test English",
-    "header": "Skontaktuj się z nami!",
-    "TITLE": "Hello Angular with ngx-translate!",
-    "SELECT": "Change language",
-    "COUNTRY":"Poland",
-    "CITY": "Katowice",
-    "street":"3 maja",
-    "apartament": "18/3",
-    "email":"office@code-mine.com",
-    "phone":"+48 723 21 67"
+  "AUDIT": {
+    "title": "hahaha",
+    "quality": {
+      "title": "Jakość kodu",
+      "description": "Otrzymując gotowe oprogramowanie, firmy zazwyczaj akceptują je bez jakiejkolwiek weryfikacji jakości kodu, bezpieczeństwa, elastyczności, zgodności z wymaganiami oraz wszystkich innych czynników. To nic dziwnego – klienci zwykle nie posiadają odpowiedniej wiedzy czy też czasu.Jako specjaliści, możemy zostać pośrednikiem między Twoją firmą, a Twoim wykonawcą, oceniając zastosowane przez niego rozwiązania. Naszym zadaniem będzie sprawdzenie zgodności kodu ze standardami, a także ocena jego wydajności i wielkość długu technologicznego, przeprowadzając audyty zastosowanej technologii, architektury informacji, kodu źródłowego, skalowalności oraz wydajności aplikacji.",
+      "task_1": "Badanie kodu źródłowego pod kątem zgodności z standardami",
+      "task_2": "Badanie kodu pod względem poprawności wykorzystania wzorców projektowych",
+      "task_3": "Badanie kodu pod względem poprawności wykorzystania wzorców projektowych",
+      "task_4": "Badanie elastyczności kodu w perspektywie ewolucji wymagań biznesowych",
+      "task_5": "Badania realnego nakładu zasobów",
+      "benefit_1": "Identyfikacja problemów dotyczących czytelności kodu wraz z listą rekomendacji w związku z ich poprawą, przyczyniającą się do zwiększenia wydajności zespołowej pracy nad projektem",
+      "benefit_2": "Identyfikacja problemów związanych z błędnym zastosowaniem wzorców projektowych, negatywnie rzutujących na jakość projektu oraz jego bezpieczny rozwój; przyczyniająca się do przyspieszenia tempa pracy nad projektem i znacznych oszczędności w przyszłości",
+      "benefit_3": "Ocena wykorzystania zewnętrznych bibliotek, w tym zabezpieczania projektu przed dokonującymi się w nich zmianami, wpływająca na wydajność oraz neutralizację problemów z bezpieczeństwem",
+      "benefit_4": "Ocena poziomu elastyczności narażonego na modyfikacje kodu, pozwalająca podjąć decyzję o jego zwiększeniu, przyczyniającego się z kolei do oszczędzenia czasu i pieniędzy",
+      "benefit_5": "Ocena wielkości nakładu zasobów ludzkich i czasowych, niezbędnych do wykonania projektu, pozwalająca określić realia otrzymanej od wykonawcy wyceny"
+    }
   }
 }

@@ -1,5 +1,6 @@
 {
   "AUDIT": {
+    "title": "Audyty",
     "quality": {
       "title": "Jakość kodu",
       "description": "Otrzymując gotowe oprogramowanie, firmy zazwyczaj akceptują je bez jakiejkolwiek weryfikacji jakości kodu, bezpieczeństwa, elastyczności, zgodności z wymaganiami oraz wszystkich innych czynników. To nic dziwnego – klienci zwykle nie posiadają odpowiedniej wiedzy czy też czasu.Jako specjaliści, możemy zostać pośrednikiem między Twoją firmą, a Twoim wykonawcą, oceniając zastosowane przez niego rozwiązania. Naszym zadaniem będzie sprawdzenie zgodności kodu ze standardami, a także ocena jego wydajności i wielkość długu technologicznego, przeprowadzając audyty zastosowanej technologii, architektury informacji, kodu źródłowego, skalowalności oraz wydajności aplikacji.",
@@ -26,6 +27,18 @@
     }
   },
   "HOME":{
+    "motto":{
+        "title":"Wydobywany z pasją w samym sercu Śląska,",
+        "subtitle":"Quality Driven Development"
+    },
+    "howWeWork":{
+        "title":"Jak pracujemy?",
+        "description": "Gwarantem skuteczności proponowanych przez nas rozwiązań, jest niezmienny proces ich realizacji,składający się z kilku poszczególnych etapów, zaprezentowanych poniżej."
+    },
+    "button": {
+      "label": "CTA do formularza",
+      "text": "CTA"
+    },
     "language":{
       "title": "Tworzymy jednolity język komunikacji",
       "description": "W celu zapewnienia efektywnej komunikacji, punktem wyjścia każdego realizowanego przez nas projektu jest stworzenie kompletnego słownika pojęć typowych dla obszaru biznesowego, w jakim porusza się nasz klient."
@@ -93,9 +106,15 @@
     }
   },
   "COMPANY":{
-    "adresTitle": "Skontaktuj się z nami!"
+    "adressTitle": "Skontaktuj się z nami!",
+    "showOnMap": "Zobacz na mapie",
+    "hireUs": "Hire us!",
+    "describeUsYourProject": "Opisz nam swój pomysł, formularz pomoże ci sprecyzować czego będzie on dotyczył",
+    "navigateToBrief": "Przejdź do briefu"
   },
   "PORTFOLIO":{
+    "addProjectTitle": "Dodaj swój projekt",
+    "addProjectButton": "do formularza",
     "BrigterVision":{
       "title": "Brigter Vision Growth Platform",
       "description": "Aplikacja skierowana do amerykańskich terapeutów, pozwalająca na przeglądanie puli dostępnych postów oraz ich publikację w formie bloga."
@@ -139,6 +158,19 @@
     "showDetails": "Chcesz poznać więcej szczegółów ?",
     "sendRequest": "Wyślij zapytanie",
     "technologies": "Technologie"
-  }
+  },
+  "NAVIGATION":{
+    "about_as": "o nas",
+    "portfolio": "portfolio",
+    "offer": "oferta",
+    "audit": "audit",
+    "contact": "kontakt"
+  },
+  "home": "home",
+  "portfolio":"portfolio",
+  "oferta": "oferta",
+  "kontakt": "kontakt",
+  "audyty": "audyty",
+  "not-found": "nie-ma"
 }
 

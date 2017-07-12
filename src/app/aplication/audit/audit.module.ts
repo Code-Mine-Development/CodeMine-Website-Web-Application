@@ -9,7 +9,7 @@ import {AuditComponentModule} from '../../components/audit/audit-components.modu
 import {SharedModule} from "../../shared.module";
 import {Http} from "@angular/http";
 import {TranslateHttpLoader} from "@ngx-translate/http-loader";
-import {TranslateLoader, TranslateModule, TranslateParser} from "@ngx-translate/core";
+import {TranslateModule} from "@ngx-translate/core";
 
 export function createTranslateLoader(http: Http) {
   return new TranslateHttpLoader(http, './assets/language/', '.json');
@@ -25,6 +25,7 @@ export function createTranslateLoader(http: Http) {
     UiModule,
     AuditRoutingModule,
     AuditComponentModule,
+    TranslateModule
   ],
   exports: [],
   providers: [AuditService, AuditResolver]

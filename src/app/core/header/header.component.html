@@ -1,5 +1,5 @@
 <div class="header" [ngClass]="{'animation':headerAnim == true, 'borderAnim':borderAnim == true}">
-  <div [routerLink]="'/'">
+  <div [routerLink]="'/' | localize">
     <div class="wrapper">
       <img src="../assets/images/logo.png" alt="" [ngStyle]="{'opacity':opacity}">
       <div class="triangle-svg" [ngStyle]="{'transform':move}">
@@ -25,9 +25,6 @@
   </div>
   <div class="navbar">
     <ul>
-      <!--<select #langSelect (change)="translate.use(langSelect.value)">-->
-        <!--<option *ngFor="let lang of translate.getLangs()" [value]="lang" [selected]="lang === translate.currentLang">{{ lang }}</option>-->
-      <!--</select>-->
       <div class="dropdown">
         <div class="dropbtn">{{ translate.currentLang }}</div>
         <div class="dropdown-content">
@@ -35,7 +32,7 @@
         </div>
       </div>
       <li i18n *ngFor="let nav of navigation" routerLinkActive="active">
-        <span i18n [routerLink]="'/'+ nav | localize">{{nav}}</span>
+        <span i18n [routerLink]="'/'+ nav.href | localize">{{ nav.title | translate }}</span>
       </li>
     </ul>
   </div>
