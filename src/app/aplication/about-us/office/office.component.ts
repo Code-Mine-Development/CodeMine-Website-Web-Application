@@ -1,8 +1,9 @@
-import {Component, OnInit, OnDestroy, NgZone, Input} from '@angular/core';
+import {Component, OnInit, OnDestroy, NgZone, Input, OnChanges} from '@angular/core';
 import {Employees} from '../interfaces/employees.interface';
 import {MovingLayers} from '../models/movingLayers.model';
 import {MouseMove} from '../models/mouseMove.model';
 import {DoomRestyle} from '../models/doomRestyle.model';
+import {ClosePersonService} from '../../../shared/services/close-person.service'
 
 @Component({
   selector: 'app-office',
@@ -16,10 +17,9 @@ export class OfficeComponent implements OnInit {
   mouseMoving: MouseMove = new MouseMove(this.windowWidth);
   doomRestyle: DoomRestyle = new DoomRestyle();
   @Input() employees: Employees;
-  bgClicked:boolean = false;
+  deskActivated:number;
 
-
-  constructor(ngZone: NgZone) {
+  constructor(ngZone: NgZone, private closePersonService:ClosePersonService) {
     window.onresize = () => {
       ngZone.run(() => {
         this.windowWidth = window.innerWidth;
@@ -28,8 +28,10 @@ export class OfficeComponent implements OnInit {
     };
   }
 
+
+
   ngOnInit() {
-    this.doomRestyle.restyleElement(['.header', 'body'], ['color', 'overflow'], ['black', 'hidden']);
+    this.doomRestyle.restyleElement(['.header', 'body'], ['color', 'overflow'], ['black', 'auto']);
     this.mouseMoving.playAnimation();
   }
 
@@ -44,11 +46,12 @@ export class OfficeComponent implements OnInit {
   // ngOnDestroy() {
   //   this.doomRestyle.restyleElement(['.header', 'body'], ['color', 'overflow'], ['', '']);
   // }
-  clickBackground(){
-    this.bgClicked = true;
-    setTimeout(() => {
-      this.bgClicked = false;
-    },500);
+
+  closePersonCard(){
+    this.closePersonService.triggerClose();
+  }
+  getDeskNumber(event){
+    this.deskActivated = event;
 
   }
 }

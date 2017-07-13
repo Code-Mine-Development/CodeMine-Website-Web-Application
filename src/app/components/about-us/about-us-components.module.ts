@@ -6,6 +6,7 @@ import {ArrowComponent} from "./arrow/arrow.component";
 import { PersonComponent } from './person/person.component';
 import {UiModule} from "../../shared/ui-elements/ui.module";
 import { DoorComponent } from './door/door.component';
+import {ClosePersonService} from "../../shared/services/close-person.service";
 
 @NgModule({
   declarations: [
@@ -24,7 +25,7 @@ import { DoorComponent } from './door/door.component';
     PersonComponent,
     DoorComponent
   ],
-  providers: [],
+  providers: [ClosePersonService],
 })
 export class AboutUsComponentModule {
 }

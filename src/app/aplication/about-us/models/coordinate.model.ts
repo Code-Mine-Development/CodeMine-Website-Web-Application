@@ -35,6 +35,11 @@ export class Coordinate{
     layer[0].style.pointerEvents = 'none';
     this.front.nativeElement.style.transition = '0.3s';
     this.front.nativeElement.style.top = this.top - 50 + 'px';
+    // setTimeout(()=>{
+    //   this.front.nativeElement.style.transform = "rotateX(0deg)" + "rotateY(50deg)" + "rotateZ(0deg)" + "scale(1.2)";
+    // },200)
+
+
     setTimeout(() => {
       this.front.nativeElement.classList.add('animationVariant1');
     }, 300);

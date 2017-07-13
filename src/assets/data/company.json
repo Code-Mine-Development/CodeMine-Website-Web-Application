@@ -7,9 +7,12 @@
   "phone": "+48 723 21 67",
   "employees": [
     {
-      "name": "Michał",
-      "surname": "Matusik",
-      "position": "frontend dev",
+      "name": "Przemysław",
+      "surname": "Adamiec",
+      "position": "COO",
+      "description" : "PEOPLE.przemyslaw.description",
+      "since": 5,
+      "imagePath": "",
       "deskCoordinate": {
         "top": 453,
         "left": 1224,
@@ -17,9 +20,12 @@
       }
     },
     {
-      "name": "Michał",
-      "surname": "Matusik",
-      "position": "frontend dev",
+      "name": "Piotr",
+      "surname": "Macha",
+      "position": "Backend developer",
+      "description" : "PEOPLE.piotr.description",
+      "since": 1,
+      "imagePath": "",
       "deskCoordinate": {
         "top": 620,
         "left": 911,
@@ -27,9 +33,12 @@
       }
     },
     {
-      "name": "Michał",
-      "surname": "Matusik",
-      "position": "frontend dev",
+      "name": "Adam",
+      "surname": "Niesłony",
+      "position": "Frontend developer",
+      "description" : "PEOPLE.adamn.description",
+      "since": 2,
+      "imagePath": "",
       "deskCoordinate": {
         "top": 683,
         "left": 802,
@@ -37,9 +46,12 @@
       }
     },
     {
-      "name": "Michał",
-      "surname": "Matusik",
-      "position": "frontend dev",
+      "name": "Joanna",
+      "surname": "Koterba",
+      "position": "Frontend developer",
+      "description" : "PEOPLE.joannaK.description",
+      "since": 1,
+      "imagePath": "",
       "deskCoordinate": {
         "top": 715,
         "left": 745,
@@ -47,9 +59,12 @@
       }
     },
     {
-      "name": "Michał",
-      "surname": "Matusik",
-      "position": "frontend dev",
+      "name": "Tomasz",
+      "surname": "Osadnik",
+      "position": "CFO",
+      "description" : "PEOPLE.tomasz.description",
+      "since": 4,
+      "imagePath": "",
       "deskCoordinate": {
         "top": 554,
         "left": 1397,
@@ -57,9 +72,12 @@
       }
     },
     {
-      "name": "Michał",
-      "surname": "Matusik",
-      "position": "frontend dev",
+      "name": "Mateusz",
+      "surname": "Wit",
+      "position": "Frontend developer",
+      "description" : "PEOPLE.mateusz.description",
+      "since": 1,
+      "imagePath": "",
       "deskCoordinate": {
         "top": 872,
         "left": 1006,
@@ -67,9 +85,12 @@
       }
     },
     {
-      "name": "Michał",
-      "surname": "Matusik",
-      "position": "frontend dev",
+      "name": "Radosław ",
+      "surname": "Adamiec",
+      "position": "CEO",
+      "description" : "PEOPLE.radoslaw.description",
+      "since": 5,
+      "imagePath": "",
       "deskCoordinate": {
         "top": 917,
         "left": 395,
@@ -77,9 +98,12 @@
       }
     },
     {
-      "name": "Michał",
-      "surname": "Matusik",
-      "position": "frontend dev",
+      "name": "Marta",
+      "surname": "Zygmunt",
+      "position": "Tester",
+      "description" : "PEOPLE.marta.description",
+      "since": 1,
+      "imagePath": "",
       "deskCoordinate": {
         "top": 884,
         "left": 451,
@@ -87,9 +111,12 @@
       }
     },
     {
-      "name": "Michał",
-      "surname": "Matusik",
-      "position": "frontend dev",
+      "name": "Adam",
+      "surname": "Grabek",
+      "position": "CTO",
+      "description" : "PEOPLE.adamg.description",
+      "since": 5,
+      "imagePath": "",
       "deskCoordinate": {
         "top": 906,
         "left": 697,
@@ -97,9 +124,12 @@
       }
     },
     {
-      "name": "Michał",
-      "surname": "Matusik",
-      "position": "frontend dev",
+      "name": "Adrian",
+      "surname": "Moroń",
+      "position": "Backend developer",
+      "description" : "PEOPLE.adrian.description",
+      "since": 2,
+      "imagePath": "",
       "deskCoordinate": {
         "top": 774,
         "left": 1269,
@@ -107,9 +137,12 @@
       }
     },
     {
-      "name": "Michał",
-      "surname": "Matusik",
-      "position": "frontend dev",
+      "name": "Kamil",
+      "surname": "Zając",
+      "position": "Frontend developer",
+      "description" : "PEOPLE.kamil.description",
+      "since": 1,
+      "imagePath": "",
       "deskCoordinate": {
         "top": 849,
         "left": 1142,
@@ -118,8 +151,11 @@
     },
     {
       "name": "Michał",
-      "surname": "Matusik",
-      "position": "frontend dev",
+      "surname": "Nicz ",
+      "position": "CSO",
+      "description" : "PEOPLE.michal.description",
+      "since": 4,
+      "imagePath": "",
       "deskCoordinate": {
         "top": 616,
         "left": 1233,
@@ -127,9 +163,12 @@
       }
     },
     {
-      "name": "Michał",
-      "surname": "Matusik",
-      "position": "frontend dev",
+      "name": "Joanna",
+      "surname": "Rodo",
+      "position": "UX/UI Designer",
+      "description" : "PEOPLE.joannar.description",
+      "since": 1,
+      "imagePath": "",
       "deskCoordinate": {
         "top": 1116,
         "left": 680,
@@ -138,9 +177,12 @@
     }
   ,
     {
-      "name": "Michał",
-      "surname": "Matusik",
-      "position": "frontend dev",
+      "name": "Joanna",
+      "surname": "Rodo",
+      "position": "UX/UI Designer",
+      "description" : "PEOPLE.joannar.description",
+      "since": 1,
+      "imagePath": "",
       "deskCoordinate": {
         "top": 1107,
         "left": 554,
@@ -148,9 +190,12 @@
       }
     },
     {
-      "name": "Michał",
-      "surname": "Matusik",
-      "position": "frontend dev",
+      "name": "Wojciech",
+      "surname": "Malinowski",
+      "position": "UX/UI Designer",
+      "description" : "PEOPLE.wojciech.description",
+      "since": 1,
+      "imagePath": "",
       "deskCoordinate": {
         "top": 989,
         "left": 554,

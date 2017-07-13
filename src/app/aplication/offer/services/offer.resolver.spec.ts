@@ -6,7 +6,7 @@
 // import {Component} from '@angular/core';
 // import {OfferResolver} from './offer.resolver';
 // import {OfferService} from './offer.service';
-// import {MockOffer} from '../../../shared/mocks/offer.mock';
+// import {MockOffer} from '../../../services/mocks/offer.mock';
 //
 //
 //
