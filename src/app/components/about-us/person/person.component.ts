@@ -6,12 +6,10 @@ import {Component, EventEmitter, OnInit, Output} from '@angular/core';
   styleUrls: ['./person.component.scss']
 })
 export class PersonComponent implements OnInit {
-
   constructor() { }
 
   ngOnInit() {
   }
-
 
   }
 

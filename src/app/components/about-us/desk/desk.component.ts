@@ -4,7 +4,7 @@ import {
 } from '@angular/core';
 import {Employees} from '../../../aplication/about-us/interfaces/employees.interface';
 import {Coordinate} from '../../../aplication/about-us/models/coordinate.model';
-
+import {ClosePersonService} from '../../../shared/services/close-person.service'
 @Component({
   selector: 'app-desk',
   template: `
@@ -18,8 +18,10 @@ export class DeskComponent implements OnInit, OnChanges {
   @ViewChild('desk') desk;
   coordinate: Coordinate;
   deskIsActive = false;
-  @Input() clicked:boolean;
-  constructor() {
+
+
+  constructor(private closePersonService:ClosePersonService) {
+   this.closePersonService.registerCloseFunction().subscribe(()=>this.closeCard());
   }
 
   ngOnInit() {
@@ -28,16 +30,13 @@ export class DeskComponent implements OnInit, OnChanges {
     this.prepareCoordinates();
   }
   ngOnChanges(){
-   if(this.clicked == true){
-     this.doSomething()
-   }
+
   }
 
   prepareCoordinates() {
     this.desk.nativeElement.style.top =  this.coordinate.offsetTop();
     this.desk.nativeElement.style.left = this.coordinate.offsetLeft();
     this.desk.nativeElement.style.transform = this.coordinate.transform();
-
   }
 
   @HostListener('mouseenter') mouseover(eventData: Event) {
@@ -46,10 +45,11 @@ export class DeskComponent implements OnInit, OnChanges {
 
 
   }
-  doSomething(){
-    this.prepareCoordinates()
+  closeCard(){
+    this.prepareCoordinates();
     this.coordinate.restyleDesk(false, this.index);
 
 
   }
+
 }

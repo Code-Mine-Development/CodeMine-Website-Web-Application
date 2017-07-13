@@ -3,6 +3,7 @@ import {Employees} from '../interfaces/employees.interface';
 import {MovingLayers} from '../models/movingLayers.model';
 import {MouseMove} from '../models/mouseMove.model';
 import {DoomRestyle} from '../models/doomRestyle.model';
+import {ClosePersonService} from '../../../shared/services/close-person.service'
 
 @Component({
   selector: 'app-office',
@@ -19,7 +20,7 @@ export class OfficeComponent implements OnInit {
   bgClicked:boolean = false;
 
 
-  constructor(ngZone: NgZone) {
+  constructor(ngZone: NgZone, private closePersonService:ClosePersonService) {
     window.onresize = () => {
       ngZone.run(() => {
         this.windowWidth = window.innerWidth;
@@ -44,11 +45,8 @@ export class OfficeComponent implements OnInit {
   // ngOnDestroy() {
   //   this.doomRestyle.restyleElement(['.header', 'body'], ['color', 'overflow'], ['', '']);
   // }
-  clickBackground(){
-    this.bgClicked = true;
-    setTimeout(() => {
-      this.bgClicked = false;
-    },500);
 
+  clickBackground(){
+    this.closePersonService.triggerClose();
   }
 }

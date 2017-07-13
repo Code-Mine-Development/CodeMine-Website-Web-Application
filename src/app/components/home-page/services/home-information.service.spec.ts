@@ -2,7 +2,7 @@
 // import {HttpModule, XHRBackend, ResponseOptions, Response} from '@angular/http';
 // import {MockBackend} from '@angular/http/testing';
 // import {HomeInformationServices} from './home-information.service';
-// import {MockInformation} from 'app/shared/mocks/home-information.mock';
+// import {MockInformation} from 'app/services/mocks/home-information.mock';
 //
 // describe('HomeInformationService', () => {
 //   beforeEach(async(() => {

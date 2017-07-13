@@ -1,17 +1,25 @@
 @import "../../../../assets/styles/colors";
 #personView{
   position: absolute;
-  top: 50%;
+  top: 60%;
   left: 50%;
   transform: translate(-50%, -50%);
   background: $desk;
   >div{
     display: flex;
     height: 100%;
-    app-close{
+    button{
       position: absolute;
-      right: 20px;
+      right: 25px;
       top: 20px;
+      font-size: 2em;
+      background: none;
+      border:none;
+      &:focus{
+        outline: none;
+        background: rgba(0,0,0,0.1);
+        border-radius: 5px;
+      }
     }
     >div{
       display: flex;
