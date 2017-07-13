@@ -166,12 +166,27 @@
     "audit": "audit",
     "contact": "kontakt"
   },
+
+
+
   "home": "home",
   "aboutus": "onas",
   "portfolio":"portfolio",
   "offer": "oferta",
   "contact": "kontakt",
   "audit": "audyty",
-  "not-found": "nie-ma"
+
+  "not-found": "nie-ma",
+
+  "wecreate": "tworzymy",
+  "solutionstoyourbusinessproblems": "solutions-to-your-business-problems",
+  "internalapps": "internal-apps",
+  "b2capplications":"b2c-applications",
+  "socialnetworking":"social-networking",
+  "tvapps":"tv-apps",
+
+  "languages":"jezyki",
+
+  "technologies":"technologie"
 }
 

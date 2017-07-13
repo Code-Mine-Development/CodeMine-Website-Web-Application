@@ -3,7 +3,9 @@
 <div class="technologies">
   <div class="technologies-col"
        *ngFor="let item of Technologies.technologies"
-       [ngStyle]="{'background-image': 'url(' + item.image+ ')'}">
+       [ngStyle]="{'background-image': 'url(' + item.image+ ')'}"
+       [routerLink]="'/technologies/'+(item.href||item.name) | localize"
+  >
     <img [src]="item.image" alt="Technologies icon">
   </div>
 </div>
