@@ -4,9 +4,11 @@ import {PortfolioComponent} from './portfolio.component';
 import {PortfolioResolver} from './services/portfolio.resolver';
 import {PortfolioListComponent} from './portfolio-list/portfolio-list.component';
 import {PortfolioDetailsComponent} from './portfolio-details/portfolio-details.component';
+import {LocalizeRouterModule} from 'localize-router';
+import {TranslateModule} from '@ngx-translate/core';
 
 const portfolioRoutes: Routes = [
-    {path: '', component: PortfolioComponent, resolve: {portfolio: PortfolioResolver}, children: [
+    {path: 'portfolio', component: PortfolioComponent, resolve: {portfolio: PortfolioResolver}, children: [
         {path: '', component: PortfolioListComponent},
         {path: ':id', component: PortfolioDetailsComponent},
     ]},
@@ -15,7 +17,9 @@ const portfolioRoutes: Routes = [
 
 @NgModule({
     imports: [
-        RouterModule.forChild(portfolioRoutes)
+      TranslateModule,
+      LocalizeRouterModule.forChild(portfolioRoutes),
+      RouterModule.forChild(portfolioRoutes)
     ],
     exports: [RouterModule]
 })

@@ -1,6 +1,6 @@
 {
   "AUDIT": {
-    "title": "hahaha",
+    "title": "hahahahaxd",
     "quality": {
       "title": "Jakość kodu",
       "description": "Otrzymując gotowe oprogramowanie, firmy zazwyczaj akceptują je bez jakiejkolwiek weryfikacji jakości kodu, bezpieczeństwa, elastyczności, zgodności z wymaganiami oraz wszystkich innych czynników. To nic dziwnego – klienci zwykle nie posiadają odpowiedniej wiedzy czy też czasu.Jako specjaliści, możemy zostać pośrednikiem między Twoją firmą, a Twoim wykonawcą, oceniając zastosowane przez niego rozwiązania. Naszym zadaniem będzie sprawdzenie zgodności kodu ze standardami, a także ocena jego wydajności i wielkość długu technologicznego, przeprowadzając audyty zastosowanej technologii, architektury informacji, kodu źródłowego, skalowalności oraz wydajności aplikacji.",
@@ -14,6 +14,16 @@
       "benefit_3": "Ocena wykorzystania zewnętrznych bibliotek, w tym zabezpieczania projektu przed dokonującymi się w nich zmianami, wpływająca na wydajność oraz neutralizację problemów z bezpieczeństwem",
       "benefit_4": "Ocena poziomu elastyczności narażonego na modyfikacje kodu, pozwalająca podjąć decyzję o jego zwiększeniu, przyczyniającego się z kolei do oszczędzenia czasu i pieniędzy",
       "benefit_5": "Ocena wielkości nakładu zasobów ludzkich i czasowych, niezbędnych do wykonania projektu, pozwalająca określić realia otrzymanej od wykonawcy wyceny"
+    },
+    "usability":{
+      "title": "Użyteczność",
+      "description":"Audyt usability ma na celu kompleksową analizę użyteczności i funkcjonalności strony internetowej, aplikacji czy systemu. Podczas tego procesu sprawdzamy przede wszystkim intuicyjność strony, łatwość poruszania po niej, przydatność dla internautów i ogólne wrażenia związane z korzystania z usługi. Bierzemy pod uwagę wszystkie czynniki mające wpływ na użyteczność takie jak: architektura informacji, nawigacja, strukturę funkcjonalności dodatkowo sprawdzamy wszystkie ekrany oraz procesy myślowe. Stosujemy najlepsze techniki w zależności od rodzaju powierzonego problemu takie jak: Indywidualne wywiady pogłębione, Card Sorting, Paper prototyping, Eyetracking,",
+      "task_1":"Badanie zgodności z heurystykami",
+      "task_2":"Badanie efektywności wdrożonych scenariuszy użycia",
+      "task_3":"Badanie zgodności ze standardami UI",
+      "benefit_1": "Ocena zgodności aplikacji/ strony z przyjętymi norami, opatrzona opisami heurystyk",
+      "benefit_2": "Ocena architektury informacji pod kątem intuicyjności wykonywanych czynności",
+      "benefit_3": "Ocena wydajności kanałów komunikacji (web/ mobile) oraz zgodności interfejsów z wytycznymi dla danej platformy"
     }
   }
 }

@@ -5,27 +5,32 @@
       {
         "name": "OFFER.features.nr_1.title",
         "image": "https://images.pexels.com/photos/23049/pexels-photo.jpg?w=1260&h=750&auto=compress&cs=tinysrgb",
-        "description": "OFFER.features.nr_1.description"
+        "description": "OFFER.features.nr_1.description",
+        "href": "solutionstoyourbusinessproblems"
       },
       {
         "name": "OFFER.features.nr_2.title",
         "image": "https://images.pexels.com/photos/23049/pexels-photo.jpg?w=1260&h=750&auto=compress&cs=tinysrgb",
-        "description": "OFFER.features.nr_2.description"
+        "description": "OFFER.features.nr_2.description",
+        "href": "internalapps"
       },
       {
         "name": "OFFER.features.nr_3.title",
         "image": "https://images.pexels.com/photos/23049/pexels-photo.jpg?w=1260&h=750&auto=compress&cs=tinysrgb",
-        "description": "OFFER.features.nr_3.description"
+        "description": "OFFER.features.nr_3.description",
+        "href": "b2capplications"
       },
       {
         "name": "OFFER.features.nr_4.title",
         "image": "https://images.pexels.com/photos/23049/pexels-photo.jpg?w=1260&h=750&auto=compress&cs=tinysrgb",
-        "description": "OFFER.features.nr_4.description"
+        "description": "OFFER.features.nr_4.description",
+        "href": "socialnetworking"
       },
       {
         "name": "OFFER.features.nr_5.title",
         "image": "https://images.pexels.com/photos/23049/pexels-photo.jpg?w=1260&h=750&auto=compress&cs=tinysrgb",
-        "description": "OFFER.features.nr_5.description"
+        "description": "OFFER.features.nr_5.description",
+        "href": "tvapps"
       }
     ]
   },
@@ -34,11 +39,13 @@
     "technologies": [
       {
         "name": "angular",
-        "image": "https://angular.io/assets/images/logos/angular/angular.png"
+        "image": "https://angular.io/assets/images/logos/angular/angular.png",
+        "href": "angular"
       },
       {
         "name": "angular",
-        "image": "https://angular.io/assets/images/logos/angular/angular.png"
+        "image": "https://angular.io/assets/images/logos/angular/angular.png",
+        "href": "angular"
       },
       {
         "name": "angular",
@@ -83,7 +90,8 @@
     "languages": [
       {
         "name": "NodeJs",
-        "image": "https://cdn2.iconfinder.com/data/icons/nodejs-1/512/nodejs-512.png"
+        "image": "https://cdn2.iconfinder.com/data/icons/nodejs-1/512/nodejs-512.png",
+        "href": "nodejs"
       },
       {
         "name": "NodeJs",
