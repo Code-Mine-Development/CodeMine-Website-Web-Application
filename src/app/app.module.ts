@@ -20,10 +20,8 @@ import {AuditResolver} from './aplication/audit/services/audit.resolver';
 import {TranslateLoader, TranslateModule, TranslateService} from '@ngx-translate/core';
 import {TranslateHttpLoader} from '@ngx-translate/http-loader';
 import {TranslateStore} from '@ngx-translate/core/src/translate.store';
-import {appRoutes} from './app-routing.module';
-import { LocalizeRouterModule, LocalizeRouterService} from 'localize-router';
-import {RouterModule} from '@angular/router';
-
+import {AppRoutingModule} from './app-routing.module';
+import {LocalizeRouterService} from 'localize-router';
 
 
 export function createTranslateLoader(http: Http) {
@@ -44,16 +42,14 @@ export function createTranslateLoader(http: Http) {
         deps: [Http]
       }
     }),
-    LocalizeRouterModule.forRoot(appRoutes),
-    RouterModule.forRoot(appRoutes),
     CommonModule,
     HttpModule,
     CoreModule,
     PortfolioModule,
     OfferModule,
     AuditModule,
-    PortfolioModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    AppRoutingModule
   ],
   providers: [
     PortfolioService,
