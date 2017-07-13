@@ -25,24 +25,53 @@ export class Coordinate{
   offsetLeft(): string {
     return this.left + 'px';
   }
+
   restyleDesk(value, index): void {
-    value ? this.moveUp(index) : this.moveDown();
+    value ? this.moveUp(index) : this.moveDown(index);
   }
   private moveUp(index): void {
     document.getElementById('personWrapper').style.transition = '1.8s';
 
     const layer = $('#deskLayer');
-    layer[0].style.pointerEvents = 'none';
+
+    this.front.nativeElement.style.transition = '0.3s';
+    this.front.nativeElement.style.top = this.top - 20 + 'px';
+
+    let deskOwner = <HTMLElement>document.getElementsByClassName("deskOwner")[index];
+    deskOwner.style.opacity = "1";
+  }
+
+  private moveDown(index): void {
+    const layer = $('#deskLayer');
+    layer[0].style.pointerEvents = 'all';
+    document.getElementById('personWrapper').style.transition = '0.3s';
+
+    setTimeout(() => {
+      const person = $('#personView');
+      const personInfo = $('#personWrapper');
+      person.removeClass('active');
+      personInfo.removeClass('active');
+    }, 50)
+
+    setTimeout(() => {
+      this.front.nativeElement.classList.remove('animationVariant1');
+    }, 300);
+  }
+
+
+  showDetails(index){
+    document.getElementById('personWrapper').style.transition = '1.8s';
+
+    const layer = $('#deskLayer');
+
     this.front.nativeElement.style.transition = '0.3s';
     this.front.nativeElement.style.top = this.top - 50 + 'px';
-    // setTimeout(()=>{
-    //   this.front.nativeElement.style.transform = "rotateX(0deg)" + "rotateY(50deg)" + "rotateZ(0deg)" + "scale(1.2)";
-    // },200)
-
+    let deskOwner = <HTMLElement>document.getElementsByClassName("deskOwner")[index];
+    deskOwner.style.opacity = "1";
 
     setTimeout(() => {
       this.front.nativeElement.classList.add('animationVariant1');
-    }, 300);
+    }, 50);
     setTimeout(() => {
       const w = $(window).width();
       const h = $(window).height();
@@ -56,33 +85,15 @@ export class Coordinate{
       d.style.position = 'absolute';
       d.style.top = (h / 2) - (divH / 2) + 100 - (+bg.getAttribute('data-y')) + 'px';
       d.style.left = (w / 2) - (divW / 2) + 300 - (+bg.getAttribute('data-x')) + 'px';
-      d.style.transform = '';
-    }, 650);
+      d.style.transform = 'scale(1.6)';
+    }, 300);
 
     setTimeout(() => {
       const person = $('#personView');
       const personInfo = $('#personWrapper');
       person.addClass('active');
       personInfo.addClass('active');
-    }, 950)
+    }, 500)
   }
 
-
-  private moveDown(): void {
-    const layer = $('#deskLayer');
-    layer[0].style.pointerEvents = 'all';
-    document.getElementById('personWrapper').style.transition = '0.5s';
-    setTimeout(() => {
-      const person = $('#personView');
-      const personInfo = $('#personWrapper');
-      person.removeClass('active');
-      personInfo.removeClass('active');
-    }, 50)
-
-    setTimeout(() => {
-      this.front.nativeElement.classList.remove('animationVariant1');
-    }, 300);
-
-
-  }
 }

@@ -8,7 +8,19 @@ import {ClosePersonService} from '../../../shared/services/close-person.service'
 @Component({
   selector: 'app-desk',
   template: `
-    <div id="front" #desk>
+    <div id="front" #desk (click)="openPersonDetails()">
+      <div class="deskOwner">
+        <div class="col2">
+          <img src="../../../../assets/images/persons/rodo.png" alt="Asia">
+        </div>
+        <div class="col2">
+          <div class="details">
+           <h4>{{people[index].name}}</h4>
+            <h4>{{people[index].surname}}</h4>
+          </div>
+        </div>
+      
+      </div>
     </div>`,
   styleUrls: ['./desk.component.scss'],
 })
@@ -19,7 +31,7 @@ export class DeskComponent implements OnInit, OnChanges {
   coordinate: Coordinate;
   @Output() personActivated = new EventEmitter<number>();
   deskIsActive:boolean;
-
+  @Input() people:Employees;
 
   constructor(private closePersonService:ClosePersonService) {
    this.closePersonService.registerCloseFunction().subscribe(()=>this.closeCard());
@@ -37,25 +49,26 @@ export class DeskComponent implements OnInit, OnChanges {
     this.desk.nativeElement.style.top =  this.coordinate.offsetTop();
     this.desk.nativeElement.style.left = this.coordinate.offsetLeft();
     this.desk.nativeElement.style.transform = this.coordinate.transform();
+    let deskOwner = <HTMLElement>document.getElementsByClassName("deskOwner")[this.index];
+    deskOwner.style.opacity = "0";
   }
 
   @HostListener('mouseenter') mouseover(eventData: Event) {
-    if(!this.deskIsActive) {
+
       this.coordinate.restyleDesk(true, this.index);
       this.personActivated.emit(
         this.index
       );
-      this.deskIsActive = true;
-    }else{
-      this.prepareCoordinates();
 
-    }
+
   }
-//   @HostListener('mouseleave') deskBack() {
-//     console.log("left");
-//     this.coordinate.restyleDesk(false, this.index);
-//     this.prepareCoordinates();
-// }
+  openPersonDetails(){
+    this.coordinate.showDetails(this.index);
+  }
+  @HostListener('mouseleave') deskBack() {
+    console.log("left");
+    this.prepareCoordinates();
+}
 
   closeCard(){
     this.prepareCoordinates();

@@ -85,19 +85,6 @@
       }
     },
     {
-      "name": "Radosław ",
-      "surname": "Adamiec",
-      "position": "CEO",
-      "description" : "PEOPLE.radoslaw.description",
-      "since": 5,
-      "imagePath": "",
-      "deskCoordinate": {
-        "top": 917,
-        "left": 395,
-        "variant": 1
-      }
-    },
-    {
       "name": "Marta",
       "surname": "Zygmunt",
       "position": "Tester",
@@ -108,6 +95,20 @@
         "top": 884,
         "left": 451,
         "variant": 1
+      }
+    },
+    {
+
+        "name": "Radosław ",
+        "surname": "Adamiec",
+        "position": "CEO",
+        "description" : "PEOPLE.radoslaw.description",
+        "since": 5,
+        "imagePath": "",
+        "deskCoordinate": {
+          "top": 917,
+          "left": 395,
+          "variant": 1
       }
     },
     {
@@ -163,19 +164,34 @@
       }
     },
     {
-      "name": "Joanna",
-      "surname": "Rodo",
+      "name": "Wojciech",
+      "surname": "Malinowski",
       "position": "UX/UI Designer",
-      "description" : "PEOPLE.joannar.description",
+      "description" : "PEOPLE.wojciech.description",
       "since": 1,
       "imagePath": "",
       "deskCoordinate": {
-        "top": 1116,
-        "left": 680,
-        "variant": 2
+        "top": 989,
+        "left": 554,
+        "variant": 1
+
       }
     }
   ,
+    {
+
+        "name": "Joanna",
+        "surname": "Rodo",
+        "position": "UX/UI Designer",
+        "description" : "PEOPLE.joannar.description",
+        "since": 1,
+        "imagePath": "",
+        "deskCoordinate": {
+          "top": 1116,
+          "left": 680,
+          "variant": 2
+      }
+    },
     {
       "name": "Joanna",
       "surname": "Rodo",
@@ -187,19 +203,7 @@
         "top": 1107,
         "left": 554,
         "variant": 1
-      }
-    },
-    {
-      "name": "Wojciech",
-      "surname": "Malinowski",
-      "position": "UX/UI Designer",
-      "description" : "PEOPLE.wojciech.description",
-      "since": 1,
-      "imagePath": "",
-      "deskCoordinate": {
-        "top": 989,
-        "left": 554,
-        "variant": 1
+
       }
     }
   ]
