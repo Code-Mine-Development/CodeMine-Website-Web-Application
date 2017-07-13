@@ -17,7 +17,8 @@ export class DeskComponent implements OnInit, OnChanges {
   @Input() index: number;
   @ViewChild('desk') desk;
   coordinate: Coordinate;
-  deskIsActive = false;
+  @Output() personActivated = new EventEmitter<number>();
+  deskIsActive:boolean;
 
 
   constructor(private closePersonService:ClosePersonService) {
@@ -32,7 +33,6 @@ export class DeskComponent implements OnInit, OnChanges {
   ngOnChanges(){
 
   }
-
   prepareCoordinates() {
     this.desk.nativeElement.style.top =  this.coordinate.offsetTop();
     this.desk.nativeElement.style.left = this.coordinate.offsetLeft();
@@ -40,16 +40,27 @@ export class DeskComponent implements OnInit, OnChanges {
   }
 
   @HostListener('mouseenter') mouseover(eventData: Event) {
-
+    if(!this.deskIsActive) {
       this.coordinate.restyleDesk(true, this.index);
+      this.personActivated.emit(
+        this.index
+      );
+      this.deskIsActive = true;
+    }else{
+      this.prepareCoordinates();
 
-
+    }
   }
+//   @HostListener('mouseleave') deskBack() {
+//     console.log("left");
+//     this.coordinate.restyleDesk(false, this.index);
+//     this.prepareCoordinates();
+// }
+
   closeCard(){
     this.prepareCoordinates();
     this.coordinate.restyleDesk(false, this.index);
-
-
+    this.deskIsActive=false;
   }
 
 }

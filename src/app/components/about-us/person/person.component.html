@@ -1,12 +1,12 @@
-<div id="personView">
+<div id="personView" >
   <div id="personWrapper">
-<button (click)="closeButtonClicked">x</button>
+<button (click)="closeButtonClicked()" >x</button>
     <div class="bg" [ngStyle]="{'background-image': 'url(./assets/images/persons/rodo.png)'}"></div>
     <div class="desc">
-      <h2>Joanna Rodo</h2>
-      <h3>UX i UI designer</h3>
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eaque id, necessitatibus. Ab, aspernatur, atque cumque dolor ex hic in maxime minus quam quidem rem suscipit totam. Maxime molestias rem voluptatibus?</p>
-      <strong>Wydobycie w Code Mine od: <span>1 rok</span></strong>
+      <h2>{{person[ActivatedDeskId || 0 ].name}} {{person[ActivatedDeskId || 0 ].surname}}</h2>
+      <h3>{{person[ActivatedDeskId || 0 ].position}}</h3>
+      <p>{{person[ActivatedDeskId || 0 ].description}}</p>
+      <strong>Wydobycie w Code Mine od: <span>{{person[ActivatedDeskId || 0 ].since}} rok</span></strong>
     </div>
   </div>
 </div>

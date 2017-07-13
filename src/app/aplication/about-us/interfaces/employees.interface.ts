@@ -4,5 +4,9 @@ export interface Employees {
   name: string;
   surname: string;
   position: string;
+  description:string;
+  since:number;
+  imagePath:string;
   deskCoordinate: DeskCoordinate
 }
+

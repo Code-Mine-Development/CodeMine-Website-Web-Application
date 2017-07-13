@@ -1,5 +1,5 @@
 <div class="wrap" id="wrap"
-     (click)="clickBackground()"
+     (click)="closePersonCard()"
      [ngStyle]="{'top': '-' + topOffset + 'px', 'max-width':'' + windowWidth + 'px'}"
      (mousemove)="mouseMove($event)"
      (mousedown)="mouseClick(false)"
@@ -9,9 +9,9 @@
 
   </div>
   <div id="deskLayer" class="draggable">
-    <app-desk #desk *ngFor="let person of employees, let i = index" id="desk{{i}}" [index]="i" [person]="person" ></app-desk>
-    <app-door></app-door>;
+    <app-desk #desk *ngFor="let person of employees, let i = index" id="desk{{i}}" [index]="i" [person]="person" (personActivated)="getDeskNumber($event)"></app-desk>
+    <app-door></app-door>
   </div>
 </div>
 <app-arrow></app-arrow>
-<app-person></app-person>
+<app-person  [person]="employees" [ActivatedDeskId]="deskActivated"></app-person>
