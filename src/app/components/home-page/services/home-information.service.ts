@@ -1,12 +1,14 @@
 import {Injectable} from '@angular/core';
 import {Http, Response} from '@angular/http';
 import {HomeInformation} from '../interfaces/home-information.interface';
-import 'rxjs/Rx';
+import {Subject} from 'rxjs/Rx';
 
 const url = 'assets/data/';
 
 @Injectable()
 export class HomeInformationServices {
+
+  private scrollTopStream = new Subject();
 
   constructor(private http: Http) {
 
@@ -16,9 +18,16 @@ export class HomeInformationServices {
     return this.http.get(url + 'home-information.json')
       .map(
         (response: Response) => {
-          const informations: HomeInformation = response.json();
-          return informations;
+          return <HomeInformation>response.json();
         })
+  }
+
+  setScrollTop(event){
+    this.scrollTopStream.next(event.target.scrollTop);
+  }
+
+  getScrollTopStream(){
+    return this.scrollTopStream.asObservable();
   }
 
 }

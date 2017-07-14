@@ -3,12 +3,6 @@
 @import '../../../assets/styles/mediaQueries';
 
 
-div.header.animation {
-  height: 60px;
-  @include custom-transition(0.2s);
-}
-
-
 div.header {
   @include custom-transition(0.2s);
   display: flex;
@@ -16,14 +10,15 @@ div.header {
   position: fixed;
   width: 100%;
   background: white;
+  height: 60px;
   z-index: 99999999999;
   top: 0;
   padding: 10px 50px 10px;
-  height: 168px;
   box-sizing: border-box;
 
   > div:first-of-type {
     flex: 0.5;
+    outline:none;
     @media screen and (max-width: 1350px) {
       flex: 0.15;
     }

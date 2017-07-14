@@ -1,18 +1,18 @@
-import { Component, OnInit, OnChanges, Input, ViewChild } from '@angular/core';
+import { Component, OnChanges, Input, ViewChild, HostListener } from '@angular/core';
 
 @Component({
   selector: 'app-logo',
   template: `
     <div class="wrapper">
-      <img src="../assets/images/logo.png" alt="" [ngStyle]="{'opacity':opacity, 'visibility': opacity == 0 ? 'hidden': 'visible'}">
+      <img src="assets/images/logo.png" alt="" [class.hidden]="hidden">
       <div #triangle class="triangle-svg" >
         <svg viewBox="0 0 21.89 25.89">
           <defs>
             <style>.cls-1{fill:#ffdf00;}</style>
           </defs>
           <g id="Layer_one" data-name="layer one">
-            <polygon class="cls-1" [attr.points]="'0 25.86 25 25.86 0.05 0'"></polygon>
-            <!--<polygon class="cls-1" [attr.points]="'0.05 25.86  16.05 25.86 16.05 16.86 8.05 9.86 0.05 16.86'"></polygon>-->
+            <polygon class="cls-1" [class.hidden] = 'homeVisible' [attr.points]="'0 25.86 25 25.86 0.05 0'"></polygon>
+            <polygon class="cls-1" [class.hidden] = '!homeVisible'[attr.points]="'0 25.86 24 25.86 24 11 11 0 0 11'"></polygon>
           </g>
         </svg>
       </div>
@@ -24,8 +24,18 @@ export class LogoComponent implements OnChanges {
 
   @Input() scrollTop:number;
   @ViewChild("triangle") triangle;
-  opacity:number = 1;
-  logoInvisiblePoint:number = 295;
+  @HostListener("mouseenter") mouseEnter(){
+    this.homeVisible = true;
+    this.checkHomeVisible();
+  };
+  @HostListener("mouseleave") mouseLeave(){
+    this.homeVisible = false;
+    this.checkHomeVisible();
+  };
+
+  homeVisible:boolean = false;
+  hidden:boolean = false;
+  triangleOnPosition:boolean = false;
   triangleChangeDirectoryPoint:number = 500;
 
   constructor() { }
@@ -36,8 +46,7 @@ export class LogoComponent implements OnChanges {
   }
 
   opacityAnimation() {
-    let opacity = 1 - (this.scrollTop / this.logoInvisiblePoint);
-    this.opacity = opacity < 0 ? 0 : opacity;
+    this.hidden = this.scrollTop > 100;
   }
 
   triangleAnimation() {
@@ -46,13 +55,21 @@ export class LogoComponent implements OnChanges {
         xTranslation = moveFactor > 1 ? targetPosition[0] : targetPosition[0]*this.EasingFunctions.easeInOutCubic(moveFactor),
         yTranslation = moveFactor > 1 ? targetPosition[1] : targetPosition[1]*this.EasingFunctions.easeInOutCubic(moveFactor);
 
+    this.triangleOnPosition = moveFactor > 1;
     this.setTriangleTransformTranslate(xTranslation,yTranslation);
+    this.checkHomeVisible();
   }
 
   setTriangleTransformTranslate(x:number,y:number){
     if(this.triangle)
       this.triangle.nativeElement.style.transform = `translate(${x}px,${y}px)`;
   }
+
+  checkHomeVisible(){
+    if(!this.triangleOnPosition)
+      this.homeVisible = false;
+  }
+
 
   private EasingFunctions = {
     // no easing, no acceleration
@@ -82,5 +99,6 @@ export class LogoComponent implements OnChanges {
     // acceleration until halfway, then deceleration
     easeInOutQuint: function (t) { return t<.5 ? 16*t*t*t*t*t : 1+16*(--t)*t*t*t*t }
   }
+
 
 }

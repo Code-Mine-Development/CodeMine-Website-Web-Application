@@ -10,8 +10,9 @@ import {ScrollToModule} from 'ng2-scroll-to';
 import {ContactComponentModule} from '../components/contact/contact-components.module';
 import {HomePageComponentModule} from '../components/home-page/home-page-components.module';
 import {SharedModule} from '../shared/shared.module';
-import {LocalizeRouterModule} from 'localize-router'
-import { LogoComponent } from './header/logo.component';
+import {LocalizeRouterModule} from 'localize-router';
+import {LogoComponent} from './header/logo.component';
+import {HomeInformationServices} from '../components/home-page/services/home-information.service';
 
 @NgModule({
     declarations: [
@@ -29,16 +30,17 @@ import { LogoComponent } from './header/logo.component';
         HomePageComponentModule,
         ScrollToModule.forRoot(),
         SharedModule,
-        LocalizeRouterModule
+        LocalizeRouterModule,
 
     ],
     exports: [
-        AppRoutingModule,
         HeaderComponent,
         FooterComponent,
 
     ],
-    providers: []
+    providers: [
+      HomeInformationServices
+    ]
 })
 export class CoreModule {
 }
