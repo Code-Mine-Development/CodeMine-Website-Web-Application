@@ -2,7 +2,7 @@
 
 .deskOwner {
 
-  opacity: 1;
+  opacity: 0;
   transition: .3s;
   width: 100%;
   height: 100%;
@@ -37,44 +37,5 @@
   justify-content: center;
   transition: .3s;
 
-
-  //&:after{
-  //  content: '';
-  //
-  //  position: absolute;
-  //  bottom: 0;
-  //  right: 0;
-  //  width: 100%;
-  //  height: 100%;
-  //  transition: 0.3s;
-  //  background: $desk;
-  //}
-
 }
-#front.animationVariant1{
-  opacity: 1;
-  transition: 0.3s;
 
-    transform-origin: bottom;
-    transform:scale(4);
-
-}
-//#front.animationVariant2{
-//  opacity: 1;
-//  transition: 0.3s;
-//
-//  &:after{
-//
-//    width: 65%;
-//    height: 167%;
-//    transform-origin: bottom;
-//    transform: rotateY(0deg) rotateZ(29deg) rotateX(0deg) skew(30deg) translateY(-32px) translateX(102px);
-//  }
-//}
-
-#front.animationVariant1.big{
-  &:after{
-    width: 100%;
-    transform: inherit;
-  }
-}

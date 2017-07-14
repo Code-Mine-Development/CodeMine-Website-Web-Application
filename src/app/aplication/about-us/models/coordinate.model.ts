@@ -1,14 +1,15 @@
-import $ from 'jquery';
+export class Coordinate {
 
-export class Coordinate{
+  deskClicked: boolean = false;
 
   constructor(public variant: number, public top: number, public left: number, public front) {
   }
+
   transform(): string {
     const rotateY = this.variant === 1 ? 14 : 52;
     const rotateX = this.variant === 1 ? 49 : -61;
     const rotateZ = this.variant === 1 ? 29 : -23;
-    const scale = this.variant=== 1 ? 1 : 1.45;
+    const scale = this.variant === 1 ? 1 : 1.45;
     const skew = this.variant === 1 ? 33 : 10;
     return 'skew(-' + skew + 'deg) ' +
       'rotateY(-' + rotateY + 'deg) ' +
@@ -17,83 +18,91 @@ export class Coordinate{
       'rotateZ(' + rotateZ + 'deg)';
   }
 
-
+  showDeskOwner(index, value) {
+    let deskOwner = <HTMLElement>document.getElementsByClassName("deskOwner")[index];
+    value == true ? deskOwner.style.opacity = "1" : deskOwner.style.opacity = "0";
+  }
 
   offsetTop(): string {
     return this.top + 'px';
   }
+
   offsetLeft(): string {
     return this.left + 'px';
   }
 
-  restyleDesk(value, index): void {
-    value ? this.moveUp(index) : this.moveDown(index);
-  }
-  private moveUp(index): void {
-    document.getElementById('personWrapper').style.transition = '1.8s';
+  //on hover
+  hoverDesk(index) {
 
-    const layer = $('#deskLayer');
-
-    this.front.nativeElement.style.transition = '0.3s';
+    // // pull table
+    this.front.nativeElement.style.transition = '0.2s';
     this.front.nativeElement.style.top = this.top - 20 + 'px';
 
-    let deskOwner = <HTMLElement>document.getElementsByClassName("deskOwner")[index];
-    deskOwner.style.opacity = "1";
+    //show owner
+    this.showDeskOwner(index, true);
   }
 
-  private moveDown(index): void {
-    const layer = $('#deskLayer');
-    layer[0].style.pointerEvents = 'all';
-    document.getElementById('personWrapper').style.transition = '0.3s';
-
-    setTimeout(() => {
-      const person = $('#personView');
-      const personInfo = $('#personWrapper');
-      person.removeClass('active');
-      personInfo.removeClass('active');
-    }, 50)
-
-    setTimeout(() => {
-      this.front.nativeElement.classList.remove('animationVariant1');
-    }, 300);
+  //hover Out
+  hoverOutDesk(index) {
+    this.front.nativeElement.style.top = this.top + 'px';
+    this.showDeskOwner(index, false);
   }
 
 
-  showDetails(index){
+  //on Click desk
+  showDetails(index) {
+    this.deskClicked = true;
+    this.showDeskOwner(index, true);
+    let transformVariant = this.variant === 1 ? 'skew(0deg) rotateY(-58deg) rotateX(-8deg) scale(1, 1.3) rotateZ(14deg)'
+      : 'skew(0deg) rotateY(-71deg) rotateX(5deg) scale(1.45) rotateZ(-11deg)';
+
     document.getElementById('personWrapper').style.transition = '1.8s';
 
-    const layer = $('#deskLayer');
+    this.front.nativeElement.style.transform = transformVariant;
 
-    this.front.nativeElement.style.transition = '0.3s';
-    this.front.nativeElement.style.top = this.top - 50 + 'px';
-    let deskOwner = <HTMLElement>document.getElementsByClassName("deskOwner")[index];
-    deskOwner.style.opacity = "1";
+    document.getElementById('deskLayer').style.pointerEvents = 'none';
 
+    const w = window.innerWidth;
+    const h = window.outerHeight;
+    const parent = document.getElementById('desk' + index);
+    const d = <HTMLElement>parent.children[0];
+    const divW = d.offsetWidth;
+    const divH = d.offsetHeight;
+    const bg = document.getElementById('officeBg');
+
+   //get table to the center
     setTimeout(() => {
-      this.front.nativeElement.classList.add('animationVariant1');
-    }, 50);
-    setTimeout(() => {
-      const w = $(window).width();
-      const h = $(window).height();
-      const parent = $('#desk' + index);
-      const d = parent[0].children[0];
-      const divW = $(d).width();
-      const divH = $(d).height();
-      const bg = document.getElementById('officeBg');
-
-      d.classList.value = d.classList.value + ' ' + 'big';
       d.style.position = 'absolute';
-      d.style.top = (h / 2) - (divH / 2) + 100 - (+bg.getAttribute('data-y')) + 'px';
-      d.style.left = (w / 2) - (divW / 2) + 300 - (+bg.getAttribute('data-x')) + 'px';
-      d.style.transform = 'scale(1.6)';
+      d.style.top = (h / 2) - (divH / 2) + 300 - (+bg.getAttribute('data-y')) + 'px';
+      d.style.left = (w / 2) - (divW / 2) + 230 - (+bg.getAttribute('data-x')) + 'px';
+      d.style.transform = 'scale(1.5)';
     }, 300);
 
+    //show little card
     setTimeout(() => {
-      const person = $('#personView');
-      const personInfo = $('#personWrapper');
-      person.addClass('active');
-      personInfo.addClass('active');
-    }, 500)
+      this.front.nativeElement.style.opacity = '0';
+      document.getElementById('personView').classList.add('active');
+    }, 320);
+
+    //enlarge card
+    setTimeout(() => {
+      document.getElementById('personView').style.transform = "scale(1)";
+      document.getElementById('personView').style.transition = ".2s ease-in";
+
+    }, 580);
+  }
+
+//put desk back
+  moveDown(index): void {
+    this.deskClicked = false;
+    this.front.nativeElement.style.opacity = '1';
+    document.getElementById('deskLayer').style.pointerEvents = 'all';
+    this.showDeskOwner(index, false);
+    document.getElementById('personWrapper').style.transition = '0.3s';
+    setTimeout(() => {
+      document.getElementById('personView').classList.remove('active');
+      document.getElementById('personView').style.transform = 'scale(0.4)';
+    }, 50);
   }
 
 }

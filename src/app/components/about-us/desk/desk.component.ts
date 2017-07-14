@@ -19,7 +19,6 @@ import {ClosePersonService} from '../../../shared/services/close-person.service'
             <h4>{{people[index].surname}}</h4>
           </div>
         </div>
-      
       </div>
     </div>`,
   styleUrls: ['./desk.component.scss'],
@@ -30,7 +29,6 @@ export class DeskComponent implements OnInit, OnChanges {
   @ViewChild('desk') desk;
   coordinate: Coordinate;
   @Output() personActivated = new EventEmitter<number>();
-  deskIsActive:boolean;
   @Input() people:Employees;
 
   constructor(private closePersonService:ClosePersonService) {
@@ -46,34 +44,36 @@ export class DeskComponent implements OnInit, OnChanges {
 
   }
   prepareCoordinates() {
+
     this.desk.nativeElement.style.top =  this.coordinate.offsetTop();
     this.desk.nativeElement.style.left = this.coordinate.offsetLeft();
     this.desk.nativeElement.style.transform = this.coordinate.transform();
-    let deskOwner = <HTMLElement>document.getElementsByClassName("deskOwner")[this.index];
-    deskOwner.style.opacity = "0";
+
+
   }
 
-  @HostListener('mouseenter') mouseover(eventData: Event) {
-
-      this.coordinate.restyleDesk(true, this.index);
+  @HostListener('mouseenter') mouseover() {
+    if(this.coordinate.deskClicked == false){
+    this.coordinate.hoverDesk(this.index);
       this.personActivated.emit(
         this.index
       );
-
-
   }
+  }
+
+  @HostListener('mouseleave') deskBack() {
+    if(this.coordinate.deskClicked == false) {
+      this.coordinate.hoverOutDesk(this.index);
+    }
+}
   openPersonDetails(){
     this.coordinate.showDetails(this.index);
   }
-  @HostListener('mouseleave') deskBack() {
-    console.log("left");
-    this.prepareCoordinates();
-}
 
   closeCard(){
     this.prepareCoordinates();
-    this.coordinate.restyleDesk(false, this.index);
-    this.deskIsActive=false;
+    this.coordinate.moveDown(this.index);
+
   }
 
 }
