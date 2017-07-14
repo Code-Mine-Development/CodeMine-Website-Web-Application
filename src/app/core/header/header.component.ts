@@ -35,8 +35,7 @@ export class HeaderComponent implements OnInit {
     }
   ];
 
-  switchLang = 'en';
-  scrollTop: number;
+  scrollTop: number = 0;
   opacity: number;
 
   headerAnim = false;
@@ -94,7 +93,6 @@ export class HeaderComponent implements OnInit {
     this.translateX = 0;
     this.XYanimation();
     this.homeLeftWallAnimation();
-    this.borderAnimation();
     this.headerAnimation();
     this.opacityAnimation();
     this.move = 'translateX(' + this.translateX + 'px) translateY(' + this.translateY + 'px)';
@@ -145,13 +143,6 @@ export class HeaderComponent implements OnInit {
     }
   }
 
-  borderAnimation() {
-    if (this.scrollTop > 305) {
-      this.borderAnim = true;
-    } else {
-      this.borderAnim = false;
-    }
-  }
 
   prepareHomeWall() {
     this.homeLeftWall = '9.86';

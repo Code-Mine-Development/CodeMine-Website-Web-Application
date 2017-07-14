@@ -9,8 +9,9 @@ import {PageNotFoundComponent} from './page-not-found/page-not-found.component';
 import {ScrollToModule} from 'ng2-scroll-to';
 import {ContactComponentModule} from '../components/contact/contact-components.module';
 import {HomePageComponentModule} from '../components/home-page/home-page-components.module';
-import {SharedModule} from '../shared.module';
+import {SharedModule} from '../shared/shared.module';
 import {LocalizeRouterModule} from 'localize-router'
+import { LogoComponent } from './header/logo.component';
 
 @NgModule({
     declarations: [
@@ -18,6 +19,7 @@ import {LocalizeRouterModule} from 'localize-router'
         FooterComponent,
         HomePageComponent,
         PageNotFoundComponent,
+        LogoComponent
     ],
     imports: [
         CommonModule,
