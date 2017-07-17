@@ -5,6 +5,7 @@ import {AuditListComponent} from './audit-list/aduit-list.component';
 import {SharedModule} from "../../shared.module";
 import {TranslateModule} from '@ngx-translate/core';
 import { AuditDetailsDirective } from './audit-details/audit-details.directive'
+import {DrawBackgroundService} from "../../shared/services/draw-background.service";
 
 
 @NgModule({
@@ -22,7 +23,7 @@ import { AuditDetailsDirective } from './audit-details/audit-details.directive'
         AuditListComponent,
         SharedModule
     ],
-    providers: [],
+    providers: [DrawBackgroundService],
 })
 export class AuditComponentModule {
 }
