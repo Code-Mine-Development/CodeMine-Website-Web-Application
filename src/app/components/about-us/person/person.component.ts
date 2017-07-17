@@ -13,7 +13,7 @@ export class PersonComponent implements OnInit {
   constructor(private closePersonService:ClosePersonService) { }
 
   ngOnInit() {
-    console.log(this.person[this.ActivatedDeskId])
+
   }
   closeButtonClicked(){
     this.closePersonService.triggerClose();

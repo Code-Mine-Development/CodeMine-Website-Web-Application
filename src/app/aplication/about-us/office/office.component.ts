@@ -3,7 +3,7 @@ import {Employees} from '../interfaces/employees.interface';
 import {MovingLayers} from '../models/movingLayers.model';
 import {MouseMove} from '../models/mouseMove.model';
 import {DoomRestyle} from '../models/doomRestyle.model';
-import {ClosePersonService} from '../../../shared/services/close-person.service'
+
 
 @Component({
   selector: 'app-office',
@@ -19,7 +19,7 @@ export class OfficeComponent implements OnInit {
   @Input() employees: Employees;
   deskActivated:number;
 
-  constructor(ngZone: NgZone, private closePersonService:ClosePersonService) {
+  constructor(ngZone: NgZone, ) {
     window.onresize = () => {
       ngZone.run(() => {
         this.windowWidth = window.innerWidth;
@@ -43,13 +43,6 @@ export class OfficeComponent implements OnInit {
     this.mouseMoving.setMove(value)
   }
 
-  // ngOnDestroy() {
-  //   this.doomRestyle.restyleElement(['.header', 'body'], ['color', 'overflow'], ['', '']);
-  // }
-
-  closePersonCard(){
-    this.closePersonService.triggerClose();
-  }
   getDeskNumber(event){
     this.deskActivated = event;
 

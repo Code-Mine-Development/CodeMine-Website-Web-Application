@@ -5,7 +5,8 @@
     <div class="desc">
       <h2>{{person[ActivatedDeskId || 0 ].name}} {{person[ActivatedDeskId || 0 ].surname}}</h2>
       <h3>{{person[ActivatedDeskId || 0 ].position}}</h3>
-      <p>{{person[ActivatedDeskId || 0 ].description}}</p>
+      <hr>
+      <p>{{person[ActivatedDeskId || 0 ].description | translate}}</p>
       <strong>Wydobycie w Code Mine od: <span>{{person[ActivatedDeskId || 0 ].since}} rok</span></strong>
     </div>
   </div>
