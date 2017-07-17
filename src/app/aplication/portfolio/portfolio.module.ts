@@ -7,7 +7,9 @@ import {PortfolioComponentModule} from '../../components/portfolio/portfolio-com
 import {PortfolioDetailsComponent} from './portfolio-details/portfolio-details.component';
 import {PortfolioListComponent} from './portfolio-list/portfolio-list.component';
 import {PortfolioService} from './services/portfolio.service';
-import {SharedModule} from "../../shared/shared.module";
+import {SharedModule} from "../../shared.module";
+import {DrawBackgroundService} from "../../shared/services/draw-background.service";
+
 
 
 
@@ -25,7 +27,7 @@ import {SharedModule} from "../../shared/shared.module";
         SharedModule
     ],
     exports: [],
-    providers: []
+    providers: [DrawBackgroundService]
 })
 export class PortfolioModule {
 }
