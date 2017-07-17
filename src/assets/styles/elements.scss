@@ -2,6 +2,7 @@
 .btn {
     padding: 10px 35px;
     text-transform: uppercase;
+    cursor: pointer;
 
   &-yellow {
     background-color: #fee03c;
@@ -10,7 +11,15 @@
   }
 
   &-shadow {
-    box-shadow: 12px 16px 60px -5px rgba(0,0,0,0.34);
+    box-shadow: 12px 16px 60px -5px rgba(0,0,0,0.24);
+    transition: all 500ms;
+
+
+    &:hover {
+      box-shadow: 8px 12px 40px -3px rgba(0,0,0,0.24);
+      transform: scale(0.99);
+    }
+
   }
 
   &-white {

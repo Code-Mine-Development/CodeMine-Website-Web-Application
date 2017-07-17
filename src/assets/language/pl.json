@@ -166,7 +166,50 @@
     "audit": "audit",
     "contact": "kontakt"
   },
-
+  "PEOPLE": {
+    "przemyslaw": {
+      "description": "Jeden z pięciu założycieli Code Mine, oprócz programowania zajmujący się również organizacją firmowej dokumentacji. Najbardziej pokojowy łysy człowiek na ziemi, zdolny do rozwiązania każdego problemu. Wielbiciel muzyki reggae, szybkiej jazdy na deskorolce, zielonego koloru i serowej pizzy. Lubi żartować, często robiąc kawały współpracownikom. W wolnych chwilach lubi odpoczywać na działce."
+    },
+    "piotr": {
+      "description": "Młody i ambitny back-endowiec, który swoje pierwsze próby programowania podjął już pod koniec podstawówki. Lubi wyzwania, dlatego przy wyborze technologii zawsze kieruje się specyfiką projektu, a nie własnymi umiejętnościami. Prywatnie fanatyk zupek chińskich i wielbiciel spontanicznych podróży. Po pracy relaksuje się przy rockowej i punkowe muzyce, często grając również na gitarze"
+    },
+    "adamn": {
+      "description": "Typ przedsiębiorcy, skoncentrowany na osiąganiu postawionych celów zarówno w życiu prywatnym, co zawodowym. Niespełniony fitness model, obecnie pracujący na stanowisku front-end dewelopera, skupiając się na dostarczaniu rozwiązań w możliwie największym stopniu dopasowanych do wymagań klienta. Po pracy pogłębia swoją wiedzę za sprawą branżowej literatury, kursów czy szkoleń. W ramach zainteresowania elektroniką, stara się tchnąć życie w przedmioty martwe, tworząc roboty na Raspberry Pi czy Arduino."
+    },
+    "joannaK": {
+      "description": "Początkująca front-end deweloperka, rozwijająca się w kierunku Angulara i udowadniająca na co dzień, że wcale nie musi to być męski zawód. W życiu prywatnym stawia na zdrowe odżywianie. Lubi też biegać i relaksować się na świeżym powietrzu. Poza biurem – jeśli nie w parku, najłatwiej jest znaleźć ją w domu, gdzie odpoczywa przy serialach Netflixa."
+    },
+    "tomasz": {
+      "description": "Deweloper od najmłodszych lat, specjalizujący się w back-endzie i testowaniu. Jeden z pięciu założycieli Code Mine, wyróżniający się dużym rozsądkiem w wydawaniu pieniędzy. Kocha programować, a atrakcyjne linijki kodu wyzwalają u niego niemałą radość, często wyrażaną tańcem. Uwielbia sporty ekstremalne, do których zalicza grę w szachy, jazdę na rowerze i aktywne oglądanie piłki nożnej z przed telewizora."
+    },
+    "mateusz": {
+      "description": "TEKST"
+    },
+    "radoslaw": {
+      "description": "Współzałożyciel i prezes Code Mine. Twardo stąpający po ziemi programista, bazujący głównie na PHP, Javie, TypeScript i JavaScript. Były sędzia koszykówki, który w pracy, mimo kierowniczego stanowiska, od twardych zasad woli swobodę i przyjazną atmosferę. Największą efektywność zapewnia mu grająca w słuchawkach, głośna muzyka elektroniczna. Kocha awokado, a dowodem jego miłości jest jego własna, mini plantacja przy biurku i zwariowane skarpetki z ich wzorem."
+    },
+    "marta": {
+      "description": "Początkująca testerka, starająca się nie przepuścić żadnego błędu. Wśród wszystkich Code Mine'rów wyróżnia się najładniejszym stylem pisma, jak również tym, że jako jedyna w firmie z wyboru używa Windowsa. Prywatnie studentka malarstwa, interesująca się ilustracją i preferująca styl vintage. Wolny czas spędza na górskich wędrówkach."
+    },
+    "adamg": {
+      "description": "Zapalony programista i lider zespołu deweloperów. Jeden z pięciu założycieli Code Mine, którego kariera zaczęła się od udzielania lekcji programowania na zajęciach informatyki w piątej klasie podstawówki. Bezsprzeczny fanboy marki Apple. Wyznawca Domain Driven Design, z miłością tworzący w TypeScript, Swift, Jave oraz… drewnie. Koneser energetyków, od których zarówno zaczyna, jak i kończy pracę."
+    },
+    "adrian": {
+      "description": "Typ obserwatora, skoncentrowanego na osiąganiu swoich celów, z których jednym od zawsze było programowanie. Lubi pracować przy cloudowych brzmieniach i uprzyjemniać tym samym dniówki całego zespołu, pełniąc rolę firmowego DJ-a. Relaksuje się za kierownicą, a najlepszy okres w jego życiu przypada na czas kuponów na podwójne duże frytki z McDonald’s, których jest najszczerszym fanem."
+    },
+    "kamil": {
+      "description": "Niegdyś ratownik medyczny, a dziś dołączający do zespołu Code Mine, prosperujący front-endowiec. Pasjonat programowania i wszelkiego rodzaju elektroniki. Po pracy udaje muzyka, raz po raz uderzając w talerze perkusji w zespole metalcore’owym, czego efektem stają się własne utwory. Najlepszą odskocznią od codzienności są dla niego... skoki ze spadochronem."
+    },
+    "michal": {
+      "description": "Jeden z pięciu założycieli Code Mine, będący pasjonatem programowania obiektowego i Domain Driven Design. Uwielbia Javę, Swifta i psy. Jako prawdziwy smakosz browarów kraftowych, wytwarza własne piwo. Lubi góry i odludne miejsca, które wybiera na weekendowe wycieczki. Idealnym odprężeniem po całodziennym programowaniu w pracy jest dla niego… programowanie w domu."
+    },
+    "joannar": {
+      "description": "Projektantka UX i UI, dla której dzień bez kuriera w firmie jest dniem straconym. Klasowa prymuska z plastyki i matematyki, od zawsze lubiąca ładne rzeczy. Choć w projektowaniu wyznaje zasadę „Less is more”, z życia chce czerpać garściami, planując zwiedzić cały świat. Wielbicielka kotów, z szczególnym wskazaniem na jej własnego – Janusza, ćwiczącego swoją kreatywność w korytarzach spieltunnelu."
+    },
+    "wojciech": {
+      "description": "Kocha projektowanie doświadczeń użytkownika, ale ceni też dobry design, co sprawia, że idealnie nadaje się na swoje stanowisko UX/UI Designera. Fan Apple, nie w mniejszym stopniu lubiący kawę i fast-foody. Na co dzień odlicza czas pozostały do kolejnych podróży i leniuchowania na piaszczystej plaży. Nienawidzi kolejek i stania w korkach. Jest maniakiem obniżania samochodów do granic przyzwoitości."
+    }
+  },
 
 
   "home": "home",
