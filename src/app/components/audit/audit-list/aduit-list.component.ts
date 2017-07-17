@@ -13,10 +13,8 @@ export class AuditListComponent implements OnInit, AfterViewInit {
   @Input() source;
   @Input() title:string;
 
-
-
-
   constructor() {
+
   }
 
 

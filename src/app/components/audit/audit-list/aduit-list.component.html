@@ -2,16 +2,14 @@
 <span class="white"><h3>{{listData.title}}</h3></span>
 <div class="column" id="column "
     >
-<ul class="list" >
+<ul class="list">
   <li
     class="listItem"
     *ngFor="let item of listData"
-    listScrollAnimation
+    app-list-element
+    [item]="item"
+    [source]="source"
   >
-    <svg viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
-      <path class="tick" d="M1 25l14 14L47 7"/>
-    </svg>
-    {{ (source == 0 ? item.task : item.benefit) | translate }}
   </li>
 </ul>
 </div>
