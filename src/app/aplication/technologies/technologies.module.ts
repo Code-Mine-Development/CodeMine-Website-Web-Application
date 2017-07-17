@@ -1,13 +1,16 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { RouterModule } from '@angular/router';
 
 import { TechnologiesRoutingModule } from './technologies.routing';
+import { TechnologiesComponent } from './technologies.component';
 
 @NgModule({
   imports: [
     CommonModule,
-    TechnologiesRoutingModule
+    TechnologiesRoutingModule,
+    RouterModule
   ],
-  declarations: []
+  declarations: [TechnologiesComponent]
 })
 export class TechnologiesModule { }

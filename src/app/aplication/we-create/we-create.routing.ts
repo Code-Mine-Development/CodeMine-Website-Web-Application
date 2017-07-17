@@ -8,10 +8,11 @@ import {InternalAppsComponent} from "./internal-apps/internal-apps.component";
 import {B2cApplicationsComponent} from "./b2c-applications/b2c-applications.component";
 import {SocialNetworkingComponent} from "./social-networking/social-networking.component";
 import {TvappsComponent} from "./tvapps/tvapps.component";
+import {WeCreateComponent} from "./we-create.component";
 
 
 const weCreateRoutes: Routes = [
-  { path: 'wecreate', children: [
+  { path: 'wecreate', component: WeCreateComponent, children: [
     { path: '' , redirectTo: "/offer", pathMatch:'full'},
     { path: 'solutionstoyourbusinessproblems', component: BusinesSolutionComponent },
     { path: 'internalapps', component: InternalAppsComponent},

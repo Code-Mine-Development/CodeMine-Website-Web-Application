@@ -21,7 +21,7 @@ import {ContactResolver} from './aplication/contact/services/contact.resolver';
 import {ContactService} from './aplication/contact/services/contact.service';
 import {PortfolioService} from './aplication/portfolio/services/portfolio.service';
 import {PortfolioResolver} from './aplication/portfolio/services/portfolio.resolver';
-import {HomePageResolver} from './core/home-page/services/home-page.resolver';
+import {HomePageResolver} from './aplication/home-page/services/home-page.resolver';
 import {OfferResolver} from './aplication/offer/services/offer.resolver';
 import {HomeInformationServices} from './components/home-page/services/home-information.service';
 import {HomeInformationResolver} from './components/home-page/services/home-information.resolver';

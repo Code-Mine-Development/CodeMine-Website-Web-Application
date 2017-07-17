@@ -1,12 +1,15 @@
 import {Component, OnInit} from '@angular/core';
-import {Portfolio} from '../../aplication/portfolio/interfaces/portfolio.interface';
+import {Portfolio} from '../portfolio/interfaces/portfolio.interface';
 import {ActivatedRoute, Data} from '@angular/router';
 import {Company} from '../../shared/interface/company.interface';
+import {fadeInAnimation} from "../../shared/routing.animation";
 
 @Component({
     selector: 'app-home-page',
-    templateUrl: './home-page.component.html',
-    styleUrls: ['./home-page.component.scss']
+    templateUrl: 'home-page.component.html',
+    styleUrls: ['home-page.component.scss'],
+    animations:[fadeInAnimation],
+    host:{ '[@fadeInAnimation]': '' }
 })
 export class HomePageComponent implements OnInit {
     carousel: Portfolio;
