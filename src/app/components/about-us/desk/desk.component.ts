@@ -10,7 +10,7 @@ import {ClosePersonService} from '../../../shared/services/close-person.service'
   template: `
     <div id="front" #desk (click)="openPersonDetails()">
       <div class="deskOwner">
-        <div class="col2">
+        <div class="col2" id="col">
           <img src="../../../../assets/images/persons/rodo.png" alt="Asia">
         </div>
         <div class="col2">
