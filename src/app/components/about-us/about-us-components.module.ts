@@ -7,23 +7,27 @@ import { PersonComponent } from './person/person.component';
 import {UiModule} from "../../shared/ui-elements/ui.module";
 import { DoorComponent } from './door/door.component';
 import {ClosePersonService} from "../../shared/services/close-person.service";
+import {ScrollToModule} from "ng2-scroll-to";
+
 
 @NgModule({
   declarations: [
     DeskComponent,
     ArrowComponent,
     PersonComponent,
-    DoorComponent
+    DoorComponent,
   ],
   imports: [
     CommonModule,
-    UiModule
+    UiModule,
+    ScrollToModule.forRoot(),
+
   ],
   exports: [
     DeskComponent,
     ArrowComponent,
     PersonComponent,
-    DoorComponent
+    DoorComponent,
   ],
   providers: [ClosePersonService],
 })

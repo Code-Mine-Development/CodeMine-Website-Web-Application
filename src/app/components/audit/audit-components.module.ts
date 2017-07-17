@@ -5,8 +5,9 @@ import {AuditListComponent} from './audit-list/aduit-list.component';
 import {SharedModule} from "../../shared/shared.module";
 import {TranslateModule} from '@ngx-translate/core';
 
-import { AuditDetailsDirective } from './audit-details/audit-details.directive'
+
 import {DrawBackgroundService} from "../../shared/services/draw-background.service";
+import {AuditDetailsDirective} from "./audit-list/audit-list-element.component";
 
 
 
@@ -14,7 +15,7 @@ import {DrawBackgroundService} from "../../shared/services/draw-background.servi
     declarations: [
         AuditDetailsComponent,
         AuditListComponent,
-        AuditDetailsDirective
+      AuditDetailsDirective
     ],
     imports: [
         CommonModule,
