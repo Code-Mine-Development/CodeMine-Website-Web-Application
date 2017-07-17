@@ -61,6 +61,7 @@ export class HeaderComponent implements OnInit {
         return;
       }
       document.body.scrollTop = 0;
+      document.documentElement.scrollTop = 0;
     });
 
     this.scrollInformationService.getScrollTopStream()
@@ -72,7 +73,7 @@ export class HeaderComponent implements OnInit {
 
   @HostListener('window:scroll', [])
   onWindowScroll() {
-    this.windowScrollTop = this.document.body.scrollTop;
+    this.windowScrollTop = this.document.body.scrollTop || this.document.documentElement.scrollTop;
     this.parseScrollTop();
   }
 

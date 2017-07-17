@@ -64,9 +64,9 @@ export class AuditDetailsDirective implements AfterViewInit{
   // private element;
   @HostListener("window:scroll",['$event'])
   onWindowScroll(event){
-    let scrollPosition = event.path[1].scrollY,
-        activateLeavel = event.path[1].innerHeight * 0.9;
-    this.checkPosition(scrollPosition + activateLeavel);
+    let scrollPosition = window.pageYOffset,
+        activateLevel = window.innerHeight * 0.9;
+    this.checkPosition(scrollPosition + activateLevel);
   }
   private tick;
   private position = 0;
@@ -79,9 +79,7 @@ export class AuditDetailsDirective implements AfterViewInit{
 
   ngAfterViewInit(){
     this.tick = this.element.querySelector(".tick");
-    console.log(this.tick);
     this.position = this.parsePosition();
-    console.log(this.position);
     this.height = this.element.height;
   }
 
@@ -97,7 +95,6 @@ export class AuditDetailsDirective implements AfterViewInit{
   }
 
   checkPosition(scrollPosition){
-    console.log(scrollPosition);
     if(scrollPosition >= this.position)
       this.animate();
   }
