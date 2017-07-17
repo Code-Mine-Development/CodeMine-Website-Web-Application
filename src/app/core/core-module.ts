@@ -13,6 +13,7 @@ import {SharedModule} from '../shared/shared.module';
 import {LocalizeRouterModule} from 'localize-router';
 import {LogoComponent} from './header/logo.component';
 import {HomeInformationServices} from '../components/home-page/services/home-information.service';
+import {LoadingComponent} from "./header/loadingbar.component";
 
 @NgModule({
     declarations: [
@@ -20,7 +21,8 @@ import {HomeInformationServices} from '../components/home-page/services/home-inf
         FooterComponent,
         HomePageComponent,
         PageNotFoundComponent,
-        LogoComponent
+        LogoComponent,
+        LoadingComponent
     ],
     imports: [
         CommonModule,

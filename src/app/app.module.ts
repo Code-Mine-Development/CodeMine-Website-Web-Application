@@ -29,7 +29,6 @@ import {AuditResolver} from './aplication/audit/services/audit.resolver';
 
 import {AppComponent} from './app.component';
 
-
 export function createTranslateLoader(http: Http) {
   return new TranslateHttpLoader(http, './assets/language/', '.json');
 }
