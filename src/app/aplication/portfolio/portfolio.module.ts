@@ -12,6 +12,7 @@ import {DrawBackgroundService} from "../../shared/services/draw-background.servi
 
 
 
+
 @NgModule({
     declarations: [
         PortfolioComponent,

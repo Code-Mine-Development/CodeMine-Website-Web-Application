@@ -1,0 +1,43 @@
+@import "../../../assets/styles/colors.scss";
+@import "../../../assets/styles/mixins.scss";
+@import '../../../assets/styles/mediaQueries';
+
+
+.wrapper {
+  position: relative;
+  width: 115px;
+  height:153px;
+  display:flex;
+  align-items: center;
+  img {
+    width: 75px;
+    height: 153px;
+    cursor: pointer;
+    transition: .3s all;
+  }
+  .hidden{
+    opacity: 0;
+    visibility: hidden;
+  }
+
+  .triangle-svg {
+    cursor: pointer;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    z-index: 999999999999;
+    @media #{$phone} {
+      left: 0;
+    }
+    width:32px;
+    height:32px;
+  }
+  svg{
+    width:32px;
+    height:32px;
+    polygon{
+      transition:all .5s;
+    }
+  }
+}
+

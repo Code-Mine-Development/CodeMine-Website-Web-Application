@@ -3,31 +3,22 @@
 @import '../../../assets/styles/mediaQueries';
 
 
-div.header.animation {
-  height: 40px;
-  @include custom-transition(0.2s);
-}
-div.header.animation.borderAnim {
-  &:before {
-    width: 100%;
-    @include custom-transition(0.3s);
-  }
-}
-
 div.header {
   @include custom-transition(0.2s);
   display: flex;
   justify-content: space-between;
   position: fixed;
-  width: calc(100% - 100px);
+  width: 100%;
   background: white;
+  height: 60px;
   z-index: 99999999999;
   top: 0;
-  padding: 20px 50px 0;
-  height: 168px;
+  padding: 10px 50px 10px;
+  box-sizing: border-box;
 
   > div:first-of-type {
     flex: 0.5;
+    outline:none;
     @media screen and (max-width: 1350px) {
       flex: 0.15;
     }
@@ -55,30 +46,31 @@ div.header {
     }
   }
 
-> div:last-of-type {
-  display: flex;
-  flex: 1;
-  justify-content: flex-end;
+  > .navbar {
+    display: flex;
+    flex: 1;
+    justify-content: flex-end;
+    align-items: center;
+    height:40px;
 
     ul {
       display: flex;
       justify-content: flex-end;
-      flex: 1;
       list-style: none;
       margin: 0;
-
+      align-items: center;
       li {
-        span {
+        &>span {
            text-transform: uppercase;
            white-space: nowrap;
            cursor: pointer;
            position: relative;
-           padding: 0 0 10px 35px;
+           padding: 0 0 0 35px;
            font-weight: 700;
            font-size: 1.6em;
            letter-spacing: 1px;
 
-           span:last-child {
+           &:last-child {
              padding-right: 0;
            }
 
@@ -97,17 +89,18 @@ div.header {
     .dropdown {
       float: left;
       overflow: hidden;
+      position:relative;
+      &:hover {
+        cursor: pointer;
+        overflow:visible;
+      }
 
       .dropbtn {
+        margin-top:auto;
         font-size: 13px;
         font-weight: 700;
         border-right: solid 2px #000000;
         padding: 2px 14px;
-        margin-bottom: 10px;
-
-        &:hover {
-          cursor: pointer;
-        }
       }
 
       &-content {
@@ -117,6 +110,7 @@ div.header {
         z-index: 1;
         padding: 0 10px;
         background-color: #ffffff;
+        right:0;
 
         span {
           font-size: 13px;
