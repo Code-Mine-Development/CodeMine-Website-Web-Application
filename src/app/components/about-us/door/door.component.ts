@@ -1,5 +1,5 @@
-import {Component, HostListener, OnInit} from '@angular/core';
-import {trigger, state, style, transition, animate} from '@angular/animations'
+import {Component, OnInit} from '@angular/core';
+import {trigger, state, style} from '@angular/animations'
 
 @Component({
   selector: 'app-door',
@@ -8,25 +8,25 @@ import {trigger, state, style, transition, animate} from '@angular/animations'
   animations: [
     trigger('door', [
       state('close', style({
-        'transform': 'rotateY(0deg)'
+        'animation' : 'closeDoor .8s forwards'
       })),
       state('open', style({
-        'transform': 'rotateY(149deg)'
+        'animation' : 'openDoor .8s forwards'
       })),
 
-      transition('close <=> open', animate(800)),
+
     ])
   ]
 })
 export class DoorComponent implements OnInit {
-  state = 'close';
+  state =  'close';
   constructor() { }
 
   ngOnInit() {
   }
 
   openDoor() {
-    this.state === 'close' ? this.state = 'open' : this.state = 'close';
+    this.state === 'close' || null ? this.state = 'open' : this.state = 'close';
   }
 
 }
