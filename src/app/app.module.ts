@@ -14,7 +14,8 @@ import {OfferModule} from './aplication/offer/offer.module';
 import {AuditModule} from './aplication/audit/audit.module';
 import {PortfolioModule} from './aplication/portfolio/portfolio.module';
 import {WeCreateModule} from "./aplication/we-create/we-create.module";
-
+import {LanguagesModule} from "./aplication/languages/languages.module";
+import {TechnologiesModule} from "./aplication/technologies/technologies.module";
 
 import {ContactResolver} from './aplication/contact/services/contact.resolver';
 import {ContactService} from './aplication/contact/services/contact.service';
@@ -27,8 +28,6 @@ import {HomeInformationResolver} from './components/home-page/services/home-info
 import {AuditResolver} from './aplication/audit/services/audit.resolver';
 
 import {AppComponent} from './app.component';
-import {LanguagesModule} from "./aplication/languages/languages.module";
-import {TechnologiesModule} from "./aplication/technologies/technologies.module";
 
 
 export function createTranslateLoader(http: Http) {

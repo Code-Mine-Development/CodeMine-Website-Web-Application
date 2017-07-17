@@ -4,7 +4,7 @@ import {CommonModule} from '@angular/common';
 import {CloseComponent} from "./close/close.component";
 import {ButtonComponent} from './button/button.component';
 import {SquareImageComponent} from './squareImage/square-image.component';
-import {SharedModule} from "../../shared.module";
+import {SharedModule} from "../shared.module";
 import {TranslateModule} from '@ngx-translate/core';
 import {LocalizeRouterModule} from 'localize-router';
 import {RouterModule} from '@angular/router';

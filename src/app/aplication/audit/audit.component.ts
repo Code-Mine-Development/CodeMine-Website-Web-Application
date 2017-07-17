@@ -23,14 +23,14 @@ export class AuditComponent implements OnInit, AfterViewInit {
   ngAfterViewInit() {
     if (document.getElementById('triangle-head')) {
       setTimeout(() => {
-        this.initBackground(event)
+        this.initBackground()
       }, 1);
 
     }
   }
 
 
-  initBackground(event) {
+  initBackground() {
 
     // Background #1
 

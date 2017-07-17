@@ -1,38 +1,20 @@
-<div class="header" [ngClass]="{'animation':headerAnim == true, 'borderAnim':borderAnim == true}">
+<div class="header">
   <div [routerLink]="'/' | localize">
-    <div class="wrapper">
-      <img src="../assets/images/logo.png" alt="" [ngStyle]="{'opacity':opacity}">
-      <div class="triangle-svg" [ngStyle]="{'transform':move}">
-        <svg viewBox="0 0 21.89 25.89">
-          <defs>
-            <style>.cls-1{fill:#ffdf00;}</style>
-          </defs>
-          <g id="Layer_one" data-name="layer one">
-          <line class="cls-1" x1="4.63" y1="14.01" x2="4.63" y2="14.01"></line>
-            <a href="#" (mouseover)="onOver()" (mouseleave)="onLeave()">
-              <polygon class="cls-1" [attr.points]="homeLeft"></polygon>
-            </a>
-          </g>
-          <g id="Layer_two" data-name="layer two">
-            <line class="cls-1" x1="17.3" y1="22.73" x2="17.3" y2="22.73"></line><polygon class="cls-1" [attr.points]="homeRight"></polygon>
-          </g>
-          <g id="Layer_three" data-name="layer three" transform="translate(0,5.2)">
-            <line class="cls-1" x1="17.28" y1="10.94" x2="17.28" y2="10.94"></line><polygon class="cls-1" [attr.points]="homeRoof"></polygon>
-          </g>
-        </svg>
-      </div>
-    </div>
+    <app-logo [scrollTop]="scrollTop"></app-logo>
   </div>
   <div class="navbar">
+
     <ul>
-      <div class="dropdown">
-        <div class="dropbtn">{{ translate.currentLang }}</div>
-        <div class="dropdown-content">
-          <a href="#" (click)="changeLanguage($event, lang)" *ngFor="let lang of translate.getLangs()" >
+      <li>
+        <div class="dropdown">
+          <div class="dropbtn">{{ translate.currentLang }}</div>
+          <div class="dropdown-content">
+            <a href="#" (click)="changeLanguage($event, lang)" *ngFor="let lang of translate.getLangs()" >
               <span *ngIf="lang!= translate.currentLang">{{lang}}</span>
-          </a>
+            </a>
+          </div>
         </div>
-      </div>
+      </li>
       <li *ngFor="let nav of navigation" routerLinkActive="active">
         <span [routerLink]="'/'+ nav.href | localize">{{ nav.title | translate }}</span>
       </li>

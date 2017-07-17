@@ -17,35 +17,3 @@ h2, h4, span{
     top:0;
     bottom: 0;
   }
-
-  li{
-    width: 80%;
-    margin:0 auto;
-    display: inline-flex;
-    position: relative;
-    opacity:0;
-    font-size: 1.5em;
-
-  }
-
-.tick {
-  fill:none;
-  stroke:#000;
-  stroke-width:4px;
-
-
-}
-  svg{
-    position: absolute;
-    left: -16%;
-    top: -15px;
-    height: 40px;
-    stroke-dasharray: 100;
-    stroke-dashoffset: 100;
-  }
-
-@keyframes draw-tick {
-  0% {
-    stroke-dashoffset: 100; }
-  100% {
-    stroke-dashoffset: 0; } }

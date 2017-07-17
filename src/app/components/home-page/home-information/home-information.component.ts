@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {ActivatedRoute, Data} from '@angular/router';
 import {HomeInformation} from '../interfaces/home-information.interface';
-import {TranslateService} from '@ngx-translate/core';
+import {HomeInformationServices} from '../services/home-information.service';
 
 @Component({
   selector: 'app-home-information',
@@ -11,7 +11,7 @@ import {TranslateService} from '@ngx-translate/core';
 export class HomeInformationComponent implements OnInit {
   informations: HomeInformation[];
 
-  constructor(private route: ActivatedRoute) {
+  constructor(private route: ActivatedRoute, private homeInformationService:HomeInformationServices) {
 
   }
 
@@ -20,6 +20,10 @@ export class HomeInformationComponent implements OnInit {
       .subscribe((data: Data) => {
         this.informations = data['homeInformation'];
       });
+  }
+
+  scroll(event){
+    this.homeInformationService.setScrollTop(event);
   }
 
 }

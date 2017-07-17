@@ -19,7 +19,7 @@ export class AuditDetailsComponent implements OnInit, AfterViewInit {
   ngAfterViewInit() {
         if (this.audit && document.getElementById('triangle0') && document.getElementById('triangle1')) {
           setTimeout(() => {
-            this.initBackground(event)
+            this.initBackground()
           }, 1);
     }
 
@@ -29,7 +29,7 @@ export class AuditDetailsComponent implements OnInit, AfterViewInit {
 
   };
 
-  initBackground(event) {
+  initBackground() {
     // Background #1
 
     const canvas1 = this.canvasRef1.nativeElement;

@@ -2,9 +2,9 @@ import {NgModule} from '@angular/core';
 import {CommonModule} from '@angular/common';
 import {AuditDetailsComponent} from './audit-details/audit-details.component';
 import {AuditListComponent} from './audit-list/aduit-list.component';
-import {SharedModule} from "../../shared.module";
+import {SharedModule} from "../../shared/shared.module";
 import {TranslateModule} from '@ngx-translate/core';
-import { AuditDetailsDirective } from './audit-details/audit-details.directive'
+import { AuditDetailsDirective } from './audit-list/audit-list-element.component'
 
 
 @NgModule({
