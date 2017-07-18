@@ -2,18 +2,19 @@ import { Component, OnInit } from '@angular/core';
 import {fadeInAnimation} from "../../shared/routing.animation";
 
 @Component({
-  selector: 'app-portfolio',
-  templateUrl: 'portfolio.component.html',
-  styleUrls: ['portfolio.component.scss'],
+  selector: 'app-technologies',
+  template: `
+    <router-outlet></router-outlet>
+  `,
+  styles: [],
   animations:[fadeInAnimation],
   host:{ '[@fadeInAnimation]': '' }
 })
-export class PortfolioComponent implements OnInit {
+export class TechnologiesComponent implements OnInit {
 
   constructor() { }
 
   ngOnInit() {
-
   }
 
 }
