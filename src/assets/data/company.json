@@ -14,8 +14,8 @@
       "since": 5,
       "imagePath": "",
       "deskCoordinate": {
-        "top": 453,
-        "left": 1224,
+        "top": 322,
+        "left": 1169,
         "variant": 1
       }
     },
@@ -27,8 +27,8 @@
       "since": 1,
       "imagePath": "",
       "deskCoordinate": {
-        "top": 620,
-        "left": 911,
+        "top": 541,
+        "left": 790,
         "variant": 1
       }
     },
@@ -40,8 +40,8 @@
       "since": 2,
       "imagePath": "",
       "deskCoordinate": {
-        "top": 683,
-        "left": 802,
+        "top": 643,
+        "left": 613,
         "variant": 1
       }
     },
@@ -53,8 +53,8 @@
       "since": 1,
       "imagePath": "",
       "deskCoordinate": {
-        "top": 715,
-        "left": 745,
+        "top": 690,
+        "left": 530,
         "variant": 1
       }
     },
@@ -66,8 +66,8 @@
       "since": 4,
       "imagePath": "",
       "deskCoordinate": {
-        "top": 554,
-        "left": 1397,
+        "top": 434,
+        "left": 1384,
         "variant": 1
       }
     },
@@ -79,9 +79,9 @@
       "since": 1,
       "imagePath": "",
       "deskCoordinate": {
-        "top": 872,
-        "left": 1006,
-        "variant": 1
+        "top": 920,
+        "left": 955,
+        "variant": 2
       }
     },
     {
@@ -92,8 +92,8 @@
       "since": 1,
       "imagePath": "",
       "deskCoordinate": {
-        "top": 884,
-        "left": 451,
+        "top": 896,
+        "left": 175,
         "variant": 1
       }
     },
@@ -106,8 +106,8 @@
         "since": 5,
         "imagePath": "",
         "deskCoordinate": {
-          "top": 917,
-          "left": 395,
+          "top": 943,
+          "left": 94,
           "variant": 1
       }
     },
@@ -119,8 +119,8 @@
       "since": 5,
       "imagePath": "",
       "deskCoordinate": {
-        "top": 906,
-        "left": 697,
+        "top": 924,
+        "left": 500,
         "variant": 2
       }
     },
@@ -132,8 +132,8 @@
       "since": 2,
       "imagePath": "",
       "deskCoordinate": {
-        "top": 774,
-        "left": 1269,
+        "top": 749,
+        "left": 1252,
         "variant": 2
       }
     },
@@ -145,8 +145,8 @@
       "since": 1,
       "imagePath": "",
       "deskCoordinate": {
-        "top": 849,
-        "left": 1142,
+        "top": 851,
+        "left": 1076,
         "variant": 2
       }
     },
@@ -158,8 +158,8 @@
       "since": 4,
       "imagePath": "",
       "deskCoordinate": {
-        "top": 616,
-        "left": 1233,
+        "top": 536,
+        "left": 1176,
         "variant": 2
       }
     },
@@ -171,8 +171,8 @@
       "since": 1,
       "imagePath": "",
       "deskCoordinate": {
-        "top": 989,
-        "left": 554,
+        "top": 1042,
+        "left": 266,
         "variant": 1
 
       }
@@ -187,23 +187,9 @@
         "since": 1,
         "imagePath": "",
         "deskCoordinate": {
-          "top": 1116,
-          "left": 680,
+          "top": 1180,
+          "left": 428,
           "variant": 2
-      }
-    },
-    {
-      "name": "Joanna",
-      "surname": "Rodo",
-      "position": "UX/UI Designer",
-      "description" : "PEOPLE.joannar.description",
-      "since": 1,
-      "imagePath": "",
-      "deskCoordinate": {
-        "top": 1107,
-        "left": 554,
-        "variant": 1
-
       }
     }
   ]
