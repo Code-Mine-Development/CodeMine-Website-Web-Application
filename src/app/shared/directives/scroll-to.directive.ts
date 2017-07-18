@@ -4,27 +4,60 @@ import {DOCUMENT} from '@angular/platform-browser';
 @Directive({
   selector: '[appScrollTo]'
 })
-export class ScrollToDirective implements AfterViewInit {
+export class ScrollToDirective {
   @Input('appScrollTo') target: any;
 
-
   @HostListener('click') scroll() {
+    this.reset();
     this.filterTarget();
-    let distance = this.getDistance();
-    this.scrollTo(distance);
-
+    this.scrollTo();
   }
 
-  ngAfterViewInit() {
-  }
+  private targetPosition:number = null;
+  private currentPosition:number = null;
+  private start:number = null;
+  private duration:number = 500;
 
   constructor(@Inject(DOCUMENT) private document) {
   }
+
+  reset(){
+    this.targetPosition = null;
+    this.currentPosition = null;
+    this.start = null;
+  }
+
   filterTarget(){
     this.target =  typeof this.target == 'object' ? this.target : this.document.querySelector('#'+this.target);
+  }
+
+  scrollTo() {
+    this.targetPosition = this.getTargetPosition();
+    this.currentPosition = this.getCurrentPosition();
+    window.requestAnimationFrame(this.scrollToElement.bind(this));
+  }
+
+  scrollToElement(timestamp) {
+    if(!this.start) this.start = timestamp;
+
+    let progress = timestamp - this.start,
+        progressFactor = progress / this.duration,
+        progressFactorWithEasing = Math.sqrt(progressFactor),
+        distance = this.targetPosition - this.currentPosition,
+        animationPosition = distance * progressFactorWithEasing;
+
+    this.changeScrollTop(animationPosition);
+
+    if(this.duration > progress)
+      window.requestAnimationFrame(this.scrollToElement.bind(this))
 
   }
-  getDistance() {
+
+  getCurrentPosition(){
+    return this.document.body.scrollTop || this.document.documentElement.scrollTop;
+  }
+
+  getTargetPosition() {
     let distance = this.target.offsetTop;
     let parent: any = this.target.offsetParent;
 
@@ -34,32 +67,10 @@ export class ScrollToDirective implements AfterViewInit {
     }
     return distance;
   }
-  // getCurrentPosition(){
-  //   return this.document.body.scrollTop || this.document.documentElement.scrollTop;
-  // }
 
-  scrollTo(distance) {
-    this.document.body.scrollTop = (distance);
-    this.document.documentElement.scrollTop = (distance);
+  changeScrollTop(position){
+    this.document.body.scrollTop = position;
+    this.document.documentElement.scrollTop = position;
   }
-//   scrolltoElement(targetPosition) {
-//     let currentPosition = this.getCurrentPosition();
-//     let position = 0;
-//     let distance = targetPosition - position - 50;
-//     let duration = 800;
-//     let interval = setInterval(()=>{
-//       if(position >= distance)
-//         return clearInterval(interval);
-//
-//       let incrementFactor = 0.9;
-//
-//       position += 10*incrementFactor;
-//       this.document.body.scrollTop = currentPosition+position;
-//       this.document.documentElement.scrollTop = currentPosition+position;
-//       console.log(incrementFactor)
-//     },1);
-//
-//
-// }
 
 }
