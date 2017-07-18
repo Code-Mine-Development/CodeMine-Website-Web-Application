@@ -1,9 +1,9 @@
-import {Component, OnDestroy, OnInit} from '@angular/core';
-import {trigger, state, style, transition, animate} from '@angular/animations'
+import {Component, ElementRef, OnDestroy, OnInit, ViewChild} from '@angular/core';
+import {trigger, state, style, transition, animate} from '@angular/animations';
 
 @Component({
   selector: 'app-arrow',
-  template: `<div class="scroll" [ngStyle]="{'top': '-' + topOffset + 'px'}" (click)="scrollDown()" (mouseenter)="moveArrow(true)" (mouseleave)="moveArrow(false)"><i [@arrow]="state" class="fa fa-chevron-down" aria-hidden="true"></i></div>`,
+  template: `<div class="scroll" [ngStyle]="{'top': '-' + topOffset + 'px'}" (click)="scrollDown()" (mouseenter)="moveArrow(true)" (mouseleave)="moveArrow(false)"><i [@arrow]="state" class="fa fa-chevron-down" aria-hidden="true"><a href="target" scrollTo ></a></i></div>`,
   styleUrls: ['./arrow.component.scss'],
   animations: [
     trigger('arrow', [
@@ -21,6 +21,7 @@ import {trigger, state, style, transition, animate} from '@angular/animations'
   ]
 })
 export class ArrowComponent implements OnInit, OnDestroy{
+  @ViewChild('scrollTo') private scroll: ElementRef;
   state = 'down';
   arrowInterval: any;
 
@@ -43,7 +44,11 @@ export class ArrowComponent implements OnInit, OnDestroy{
     }
   }
 
-  scrollDown(): void {}
+  scrollDown(): void {
+    try {
+      this.scroll.nativeElement.scrollTop = this.scroll.nativeElement.scrollHeight;
+    } catch(err) { }
+  }
 
   ngOnDestroy() {
     clearInterval(this.arrowInterval);

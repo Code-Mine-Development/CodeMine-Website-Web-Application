@@ -7,12 +7,14 @@ import {AboutUsComponentModule} from "../../components/about-us/about-us-compone
 import {ClosePersonService} from "../../shared/services/close-person.service";
 import {TranslateModule} from "@ngx-translate/core";
 
+
 @NgModule({
   imports: [
     CommonModule,
     AboutUsComponentModule,
     AboutUsRoutingModule,
-    TranslateModule
+    TranslateModule,
+
   ],
   declarations: [
     AboutUsComponent,

@@ -1,3 +1,4 @@
+import {_document} from "@angular/platform-browser/src/browser";
 export class Coordinate {
 
   deskClicked: boolean = false;
@@ -36,16 +37,18 @@ export class Coordinate {
 
     // // pull table
     this.front.nativeElement.style.transition = '0.2s';
-    this.front.nativeElement.style.top = this.top - 20 + 'px';
+    this.front.nativeElement.style.top = this.top - 25 + 'px';
 
     //show owner
     this.showDeskOwner(index, true);
+
   }
 
   //hover Out
   hoverOutDesk(index) {
     this.front.nativeElement.style.top = this.top + 'px';
     this.showDeskOwner(index, false);
+
   }
 
 
@@ -73,7 +76,7 @@ export class Coordinate {
    //get table to the center
     setTimeout(() => {
       d.style.position = 'absolute';
-      d.style.top = (h / 2) - (divH / 2) + 300 - (+bg.getAttribute('data-y')) + 'px';
+      d.style.top = (h / 2) - (divH / 2) - (+bg.getAttribute('data-y')) + 'px';
       d.style.left = (w / 2) - (divW / 2) + 230 - (+bg.getAttribute('data-x')) + 'px';
       d.style.transform = 'scale(1.5)';
     }, 300);
@@ -89,7 +92,7 @@ export class Coordinate {
       document.getElementById('personView').style.transform = "scale(1)";
       document.getElementById('personView').style.transition = ".2s ease-in";
 
-    }, 580);
+    }, 400);
   }
 
 //put desk back

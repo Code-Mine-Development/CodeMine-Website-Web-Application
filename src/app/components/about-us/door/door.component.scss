@@ -8,3 +8,20 @@ div{
   background-repeat: no-repeat;
   transform-origin: bottom left;
 }
+
+@keyframes closeDoor {
+  from{transform: rotateY(149deg)}
+  to{
+    transform: rotateY(0deg);
+  }
+};
+
+
+@keyframes openDoor {
+  from{
+    transform: rotateY(0deg);
+  }
+  to{
+    transform: rotateY(149deg);
+  }
+}
