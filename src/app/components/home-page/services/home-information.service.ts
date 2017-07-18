@@ -22,8 +22,8 @@ export class HomeInformationServices {
         })
   }
 
-  setScrollTop(event){
-    this.scrollTopStream.next(event.target.scrollTop);
+  setScrollTop(scrollTop){
+    this.scrollTopStream.next(scrollTop);
   }
 
   getScrollTopStream(){
