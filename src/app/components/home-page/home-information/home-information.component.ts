@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, OnDestroy } from '@angular/core';
 import {ActivatedRoute, Data} from '@angular/router';
 import {HomeInformation} from '../interfaces/home-information.interface';
 import {HomeInformationServices} from '../services/home-information.service';
@@ -8,7 +8,7 @@ import {HomeInformationServices} from '../services/home-information.service';
   templateUrl: 'home-information.component.html',
   styleUrls: ['home-information.component.scss']
 })
-export class HomeInformationComponent implements OnInit {
+export class HomeInformationComponent implements OnInit, OnDestroy {
   informations: HomeInformation[];
 
   constructor(private route: ActivatedRoute, private homeInformationService:HomeInformationServices) {
@@ -22,8 +22,13 @@ export class HomeInformationComponent implements OnInit {
       });
   }
 
+  ngOnDestroy(){
+    this.homeInformationService.setScrollTop(0);
+    console.log("destroy");
+  }
+
   scroll(event){
-    this.homeInformationService.setScrollTop(event);
+    this.homeInformationService.setScrollTop(event.target.scrollTop);
   }
 
 }
