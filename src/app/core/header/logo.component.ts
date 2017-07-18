@@ -41,7 +41,6 @@ export class LogoComponent implements OnChanges {
   constructor() { }
 
   ngOnChanges(){
-    console.log(this.scrollTop);
     this.opacityAnimation();
     this.triangleAnimation();
   }

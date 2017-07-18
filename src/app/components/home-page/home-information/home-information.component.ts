@@ -24,7 +24,6 @@ export class HomeInformationComponent implements OnInit, OnDestroy {
 
   ngOnDestroy(){
     this.homeInformationService.setScrollTop(0);
-    console.log("destroy");
   }
 
   scroll(event){
