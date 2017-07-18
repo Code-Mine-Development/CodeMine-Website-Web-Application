@@ -6,10 +6,11 @@ import {AuditService} from './services/audit.service';
 import {AuditRoutingModule} from './audit-routing';
 import {UiModule} from '../../shared/ui-elements/ui.module';
 import {AuditComponentModule} from '../../components/audit/audit-components.module';
-import {SharedModule} from "../../shared/shared.module";
+
 import {Http} from "@angular/http";
 import {TranslateHttpLoader} from "@ngx-translate/http-loader";
 import {TranslateModule} from "@ngx-translate/core";
+import {SharedModule} from "../../shared/shared.module";
 
 export function createTranslateLoader(http: Http) {
   return new TranslateHttpLoader(http, './assets/language/', '.json');
