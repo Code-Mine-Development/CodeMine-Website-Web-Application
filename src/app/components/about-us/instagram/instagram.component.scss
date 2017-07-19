@@ -1,0 +1,24 @@
+h3{
+  color:#ccc;
+  font-weight: 600;
+  text-transform: uppercase;
+  text-align: center;
+}
+h2{
+  font-weight: 600;
+  text-align: center;
+}
+
+.row{
+  width: 80%;
+  margin: 4em auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  .col{
+    width: 22%;
+    height: 250px;
+    background: #eee;
+    margin-bottom: 2em;
+  }
+}

@@ -1,0 +1,14 @@
+.row{
+  width: 50%;
+  padding-top: 5vh;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+
+  .col3{
+    width: 30%;
+    p{
+      font-weight:bold;
+    }
+  }
+}

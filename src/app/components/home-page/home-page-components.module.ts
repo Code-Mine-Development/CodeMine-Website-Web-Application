@@ -9,7 +9,8 @@ import { BgTrianglesComponent } from './home-information/bg-triangles/bg-triangl
 @NgModule({
     declarations: [
       HomeInformationComponent,
-      BgTrianglesComponent
+      BgTrianglesComponent,
+
     ],
     imports: [
         CommonModule,
