@@ -51,18 +51,27 @@ export class LogoComponent implements OnChanges {
 
   triangleAnimation() {
     let targetPosition = [-80,-120],
-        moveFactor = this.scrollTop / this.triangleChangeDirectoryPoint,
-        xTranslation = moveFactor > 1 ? targetPosition[0] : targetPosition[0]*this.EasingFunctions.easeInOutCubic(moveFactor),
-        yTranslation = moveFactor > 1 ? targetPosition[1] : targetPosition[1]*this.EasingFunctions.easeInOutCubic(moveFactor);
+        scrollTopRatio = this.scrollTop / this.triangleChangeDirectoryPoint,
+        moveFactor = scrollTopRatio > 1 ? 1: scrollTopRatio,
+        xTranslation = targetPosition[0]*this.EasingFunctions.easeInOutCubic(moveFactor),
+        yTranslation = targetPosition[1]*this.EasingFunctions.easeInOutCubic(moveFactor),
+        yMultipler = this.parseTriangleAnimationPath(moveFactor),
+        angle = this.EasingFunctions.easeInOutCubic(moveFactor) * 360;
 
-    this.triangleOnPosition = moveFactor > 1;
-    this.setTriangleTransformTranslate(xTranslation,yTranslation);
+    this.triangleOnPosition = scrollTopRatio > 1;
+    this.setTriangleTransform(xTranslation, yTranslation * yMultipler, angle);
     this.checkHomeVisible();
   }
 
-  setTriangleTransformTranslate(x:number,y:number){
+  parseTriangleAnimationPath(position:number){
+    if(position > 1)
+      return 1;
+    return position*position;
+  }
+
+  setTriangleTransform(x:number,y:number,angle:number){
     if(this.triangle)
-      this.triangle.nativeElement.style.transform = `translate(${x}px,${y}px)`;
+      this.triangle.nativeElement.style.transform = `translate(${x}px,${y}px) rotateZ(${angle}deg)`;
   }
 
   checkHomeVisible(){

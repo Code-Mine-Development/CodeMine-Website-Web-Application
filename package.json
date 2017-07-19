@@ -33,6 +33,7 @@
     "ngx-bootstrap": "^1.7.1",
     "reset-css": "^2.2.0",
     "rxjs": "^5.1.0",
+    "web-animations-js": "^2.2.5",
     "webfontloader": "^1.6.28",
     "zone.js": "^0.8.4"
   },

@@ -26,3 +26,4 @@ const portfolioRoutes: Routes = [
 export class PortfolioRoutingModule {
 
 }
+

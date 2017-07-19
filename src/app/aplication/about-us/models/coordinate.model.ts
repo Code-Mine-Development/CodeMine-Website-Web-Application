@@ -6,12 +6,13 @@ export class Coordinate {
   constructor(public variant: number, public top: number, public left: number, public front) {
   }
 
+
   transform(): string {
-    const rotateY = this.variant === 1 ? 14 : 52;
-    const rotateX = this.variant === 1 ? 49 : -61;
-    const rotateZ = this.variant === 1 ? 29 : -23;
-    const scale = this.variant === 1 ? 1 : 1.45;
-    const skew = this.variant === 1 ? 33 : 10;
+    const rotateY = this.variant === 1 ? 43 : 54;
+    const rotateX = this.variant === 1 ? 51 : -60;
+    const rotateZ = this.variant === 1 ? 21 : -21;
+    const scale = this.variant === 1 ? 1.45 : 1.85;
+    const skew = this.variant === 1 ? 24 : 5;
     return 'skew(-' + skew + 'deg) ' +
       'rotateY(-' + rotateY + 'deg) ' +
       'rotateX(' + rotateX + 'deg) ' +
