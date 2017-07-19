@@ -1,27 +1,27 @@
 div{
   position: absolute;
-  width: 102px;
-  height: 303px;
-  top: 926px;
-  left: 1210px;
+  width: 59px;
+  height: 304px;
+  top: 1005px;
+  left: 1226px;
   background-size: inherit;
   background-repeat: no-repeat;
-  transform-origin: bottom left;
+  transform-origin: right;
 }
 
 @keyframes closeDoor {
-  from{transform: rotateY(149deg)}
+  from{transform: skewY(50deg)}
   to{
-    transform: rotateY(0deg);
+    transform: skewY(0deg);
   }
 };
 
 
 @keyframes openDoor {
   from{
-    transform: rotateY(0deg);
+    transform: skewY(0deg);
   }
   to{
-    transform: rotateY(149deg);
+    transform: skewY(50deg);
   }
 }

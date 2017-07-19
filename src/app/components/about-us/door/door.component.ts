@@ -8,10 +8,10 @@ import {trigger, state, style} from '@angular/animations'
   animations: [
     trigger('door', [
       state('close', style({
-        'animation' : 'closeDoor .8s forwards'
+        'animation' : 'closeDoor .6s forwards'
       })),
       state('open', style({
-        'animation' : 'openDoor .8s forwards'
+        'animation' : 'openDoor .6s forwards'
       })),
 
 
