@@ -20,4 +20,19 @@
     top: -100px;
   }
 }
+.skip {
+  text-align: center;
 
+  bottom: 15px;
+  width: 100%;
+
+
+  &-text {
+    font-size: 1.6em;
+  }
+
+  &-btn {
+    font-size: 2.5em;
+    color: #333333;
+  }
+}
