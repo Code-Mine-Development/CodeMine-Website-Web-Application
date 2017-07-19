@@ -1,4 +1,4 @@
-<div class="section-start" (scroll)="scroll($event)">
+<div #homeBox class="section-start" (scroll)="scroll($event)">
   <div class="slogan-wrapper">
     <h2 >{{ 'HOME.motto.title' | translate}} <br> {{ 'HOME.motto.subtitle' | translate}}</h2>
   </div>
@@ -7,9 +7,9 @@
     <p class="text" >{{ 'HOME.howWeWork.description' | translate}}</p>
   </div>
 
-  <div class="row box" *ngFor="let information of informations">
+  <div  class="row box" *ngFor="let information of informations">
     <div class="col-box box-image"></div>
-    <div class="col-box-text box-text">
+    <div #informationBox class="col-box-text box-text">
       <h1 class="box-header">{{information.title | translate}}</h1>
       <p class="text">{{information.description | translate}}</p>
       <button class="btn btn-yellow btn-large btn-shadow" *ngIf="information.more_info.active">{{information.more_info.message | translate}}</button>
@@ -25,4 +25,17 @@
       <button class="btn btn-yellow btn-shadow btn-large">{{ 'HOME.button.text' | translate }}</button>
     </div>
   </div>
+  <div #sideSlider class="horizontal">
+    <h3>{{prevElement}}</h3>
+    <div class="borderDiv"></div>
+    <div class="sliderMain">
+      <h3>{{currentElement}}</h3>
+      <div class="sliderTitle">
+        <p>{{informations[currentElement-1].title | translate}}</p>
+      </div>
+    </div>
+    <div class="borderDiv"></div>
+    <h3 [appScrollTo]="informationBox">{{lastElement}}</h3>
+  </div>
 </div>
+
