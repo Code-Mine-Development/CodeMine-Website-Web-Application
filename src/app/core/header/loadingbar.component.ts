@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ChangeDetectorRef } from '@angular/core';
 import { trigger, state, style, transition,animate } from '@angular/animations';
 import { Router, NavigationStart, NavigationEnd } from '@angular/router';
 
@@ -39,8 +39,8 @@ import { Router, NavigationStart, NavigationEnd } from '@angular/router';
         animate('1250ms ease-in-out')
       ]),
       transition('100 => 0',[
-        animate('50ms ease-in')
-      ]),
+        animate('0ms')
+      ])
     ])
   ]
 })
@@ -53,12 +53,12 @@ export class LoadingComponent implements OnInit {
       if(status instanceof NavigationStart){
         this.state = '50';
       }
-      if(status instanceof NavigationEnd){
+      else if(status instanceof NavigationEnd){
         this.state = '100';
       }
-
     });
   }
+
   onDone(event){
     if(event.toState == '100')
       this.state = '0';

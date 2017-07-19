@@ -210,7 +210,9 @@
       "description": "Kocha projektowanie doświadczeń użytkownika, ale ceni też dobry design, co sprawia, że idealnie nadaje się na swoje stanowisko UX/UI Designera. Fan Apple, nie w mniejszym stopniu lubiący kawę i fast-foody. Na co dzień odlicza czas pozostały do kolejnych podróży i leniuchowania na piaszczystej plaży. Nienawidzi kolejek i stania w korkach. Jest maniakiem obniżania samochodów do granic przyzwoitości."
     }
   },
-
+  "PAGETITLE":{
+    "prefix": "Code-Mine"
+  },
 
   "home": "home",
   "aboutus": "onas",
@@ -218,7 +220,6 @@
   "offer": "oferta",
   "contact": "kontakt",
   "audit": "audyty",
-
   "not-found": "nie-ma",
 
   "wecreate": "tworzymy",
