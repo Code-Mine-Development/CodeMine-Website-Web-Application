@@ -1,35 +1,19 @@
 @import '../assets/styles/mediaQueries';
 
 :host {
-    display: flex;
-    min-height: 100vh;
-    flex-direction: column;
     margin-top: 56px;
 
     >div {
 	   display: flex;
-	   flex: 1;
     }
 }
 
 .scroll-animation {
-  margin-bottom: 340px;
+  margin-bottom: 380px;
   background: white;
-
+  box-shadow: 10px 0px 25px #777777;
   @media #{$phone}, #{$tablet}{
     margin: 0;
-  }
-}
-
-app-footer {
-  position: fixed;
-  bottom: 0;
-  width: 100%;
-  z-index: -1;
-
-  @media #{$phone}, #{$tablet}{
-    z-index: 1;
-    position: relative;
   }
 }
 

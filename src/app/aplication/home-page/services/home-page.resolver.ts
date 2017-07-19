@@ -12,6 +12,7 @@ export class HomePageResolver implements Resolve<Portfolio> {
 
     resolve(route: ActivatedRouteSnapshot,
             state: RouterStateSnapshot): Observable<Portfolio> | Promise<Portfolio> | Portfolio {
+        console.log(this.homePageService.getPortfolioHomePageList());
         return this.homePageService.getPortfolioHomePageList();
     }
 
