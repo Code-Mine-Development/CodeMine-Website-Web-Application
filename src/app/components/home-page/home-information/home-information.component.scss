@@ -5,7 +5,7 @@
 .section-start {
   overflow: scroll;
   height: 85vh;
-  margin: 30px 80px;
+  margin: 100px 80px;
 
   .slogan-wrapper {
     height: 85vh;
@@ -100,6 +100,7 @@
   }
 }
 .horizontal {
+  color:#333;
   position: absolute;
   top: 0;
   right: 0px;
@@ -116,27 +117,24 @@
     height: 10px;
     width:100%
   }
-  .sliderMain[_ngcontent-c6] {
-    display: flex;
-    height: 40vh;
-    text-align: center;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
-    position: relative;
-    p{
-      margin:0;
+
+    .sliderMain {
+      height: 25vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    .sliderTitle{
       transform: rotate(-90deg);
-      top: -145px;
-      font-size: 1.2em;
-      position: relative;
-      width: 280px;
+      p{
+        width: 20vh;
+      }
     }
   }
 }
+
 .borderDiv {
   height: 20vh;
   width: 1px;
-  border-right: 1px solid black;
+  border-right: 1px solid #333;
   margin: auto;
 }
