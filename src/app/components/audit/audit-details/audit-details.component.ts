@@ -15,23 +15,25 @@ export class AuditDetailsComponent implements OnInit, AfterViewInit {
   @ViewChild('Canvas2') canvasRef2;
   @Input() indexID: number;
 
-  constructor(private drawBackgroundService : DrawBackgroundService) {}
-  ngOnInit() {};
+  constructor(private drawBackgroundService: DrawBackgroundService) {
+  }
 
-   ngAfterViewInit() {
-     if (this.audit && document.getElementById('triangle0') && document.getElementById('triangle1')) {
-       setTimeout(() => {
+  ngOnInit() {
+  };
 
-         this.drawBackgroundService.AuditDetailsBackground(this.canvasRef1, this.canvasRef2)
+  ngAfterViewInit() {
+    if (this.audit && document.getElementById('triangle0') && document.getElementById('triangle1')) {
+      setTimeout(() => {
 
-       }, 1);
-     }
-   }
+        this.drawBackgroundService.AuditDetailsBackground(this.canvasRef1, this.canvasRef2)
 
-     resizeBackground(){
-       this.drawBackgroundService.AuditDetailsBackground(this.canvasRef1, this.canvasRef2)
-     }
+      }, 1);
+    }
+  }
 
+  resizeBackground() {
+    this.drawBackgroundService.AuditDetailsBackground(this.canvasRef1, this.canvasRef2)
+  }
 
 
 }

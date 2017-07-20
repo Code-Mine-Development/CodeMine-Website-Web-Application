@@ -6,18 +6,21 @@ import {TranslateModule} from "@ngx-translate/core";
 import { BgTrianglesComponent } from './home-information/bg-triangles/bg-triangles.component';
 
 
+
 @NgModule({
     declarations: [
       HomeInformationComponent,
-      BgTrianglesComponent
+      BgTrianglesComponent,
+
     ],
     imports: [
         CommonModule,
-        TranslateModule
+        TranslateModule,
+        SharedModule
     ],
     exports: [
       HomeInformationComponent,
-      SharedModule
+
     ],
     providers: [],
 })

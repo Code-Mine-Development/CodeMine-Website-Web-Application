@@ -14,6 +14,7 @@ import {LogoComponent} from './header/logo.component';
 import {HomeInformationServices} from '../components/home-page/services/home-information.service';
 import {LoadingComponent} from "./header/loadingbar.component";
 import {ScrollToModule} from "ng2-scroll-to";
+import {SocialServiceComponent} from "./footer/social-service.component";
 
 @NgModule({
     declarations: [
@@ -22,7 +23,8 @@ import {ScrollToModule} from "ng2-scroll-to";
         HomePageComponent,
         PageNotFoundComponent,
         LogoComponent,
-        LoadingComponent
+        LoadingComponent,
+        SocialServiceComponent
     ],
     imports: [
         CommonModule,
