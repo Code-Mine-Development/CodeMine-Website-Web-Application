@@ -1,7 +1,7 @@
 @import '../../../../assets/styles/typography';
 @import "../../../../assets/styles/mediaQueries";
 .container{
-  width: 80%;
+  width: 90%;
   margin: auto;
 
 }
@@ -39,14 +39,14 @@ canvas{
     }
   }
   .usability-table{
-    width: calc(100% - 160px);
+    width: 100%;
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
     margin: 0 auto;
     app-list{
-      width:45%;
-      margin: 4em 0;
+      width:80%;
+      margin: 4em auto;
     }
   }
   .details{
@@ -66,12 +66,11 @@ canvas{
 }
 
 
-
 @media screen and (min-width: 850px) {
   .usability-panel {
     .usability-table{
       app-list{
-        width: 45%;
+        width: 46%;
       }
     }
   }

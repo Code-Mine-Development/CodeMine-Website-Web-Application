@@ -45,6 +45,7 @@
         width: 80%;
         margin:auto;
       }
+
       img{
         border-radius: 50%;
         position: relative;
@@ -117,7 +118,14 @@ canvas{
   overflow:hidden;
 
 }
-
+@media screen and (max-height: 780px){
+  .column{
+    width: 30% !important;
+  }
+  .section-audit{
+    height: 100vh;
+  }
+}
 @keyframes bgFadeIn {
   from{
     opacity:0
