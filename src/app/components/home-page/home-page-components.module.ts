@@ -16,7 +16,7 @@ import { BgTrianglesComponent } from './home-information/bg-triangles/bg-triangl
     imports: [
         CommonModule,
         TranslateModule,
-      SharedModule
+        SharedModule
     ],
     exports: [
       HomeInformationComponent,

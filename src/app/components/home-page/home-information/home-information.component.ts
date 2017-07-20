@@ -8,19 +8,18 @@ import {HomeInformationServices} from '../services/home-information.service';
   templateUrl: 'home-information.component.html',
   styleUrls: ['home-information.component.scss']
 })
-export class HomeInformationComponent implements OnInit, OnDestroy, AfterViewInit {
+export class HomeInformationComponent implements OnInit, OnDestroy {
   informations: HomeInformation[];
   @ViewChild('homeBox') homeBox;
   @ViewChild('sideSlider') sideSlider;
+
   prevElement:number;
   currentElement:number = 1;
   lastElement:number = 7;
 
   constructor(private route: ActivatedRoute, private homeInformationService:HomeInformationServices) {}
-  ngAfterViewInit() {
-  }
-
   ngOnInit() {
+
     this.route.data
       .subscribe((data: Data) => {
         this.informations = data['homeInformation'];
@@ -34,9 +33,9 @@ export class HomeInformationComponent implements OnInit, OnDestroy, AfterViewIni
   scroll(event){
     this.homeInformationService.setScrollTop(event.target.scrollTop);
     this.animateShadowBox(event);
-
-    this.showCurrentTitle(event)
+    this.showCurrentTitle(event);
   }
+
   animateShadowBox(event){
     let distance = 1900;
     let positionRatio = event.target.scrollTop/distance;
@@ -53,7 +52,6 @@ export class HomeInformationComponent implements OnInit, OnDestroy, AfterViewIni
       this.currentElement =i + 1;
       this.prevElement = i >0 ? i : null;
     }
-
   }
 
 }

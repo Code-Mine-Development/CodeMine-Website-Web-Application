@@ -5,7 +5,7 @@
       <p>{{company.phone}}</p>
     </section>
     <div class="footer_slideTop">
-      <span aria-hidden="true" class="fa fa-chevron-up fa-3x" [appScrollTo]="'SiteHead'" [appScrollToOpponent]="target" ></span>
+      <span aria-hidden="true" class="fa fa-chevron-up fa-3x" [appScrollTo]="'SiteHead'" ></span>
     </div>
   </section>
   <section class="footer_content">
@@ -22,7 +22,7 @@
       </div>
       <p>Copyrights 2017</p>
     </section>
-    <ul class="footer_socialmedia" #target>
+    <ul class="footer_socialmedia" >
       <li app-social-service [color]="'#ff0099'" [socialName]="'instagram'" (hoverColor)="changeBg($event)" ></li>
       <li app-social-service [color]="'#3333ff'" [socialName]="'facebook'"  (hoverColor)="changeBg($event)" ></li>
       <li app-social-service [color]="'#6699ff'" [socialName]="'linkedin'"  (hoverColor)="changeBg($event)" ></li>

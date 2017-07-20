@@ -7,9 +7,9 @@
     <p class="text" >{{ 'HOME.howWeWork.description' | translate}}</p>
   </div>
 
-  <div  class="row box" *ngFor="let information of informations">
+  <div [id]="'home_information_'+i" class="row box" *ngFor="let information of informations, let i = index">
     <div class="col-box box-image"></div>
-    <div #informationBox class="col-box-text box-text">
+    <div class="col-box-text box-text">
       <h1 class="box-header">{{information.title | translate}}</h1>
       <p class="text">{{information.description | translate}}</p>
       <button class="btn btn-yellow btn-large btn-shadow" *ngIf="information.more_info.active">{{information.more_info.message | translate}}</button>
@@ -26,7 +26,7 @@
     </div>
   </div>
   <div #sideSlider class="horizontal">
-    <h3>{{prevElement}}</h3>
+    <h3 [appScrollTo]="'home_information_'+(prevElement-1)" [appScrollToOpponent]="homeBox" >{{prevElement}}</h3>
     <div class="borderDiv"></div>
     <div class="sliderMain">
       <h3>{{currentElement}}</h3>
@@ -35,7 +35,7 @@
       </div>
     </div>
     <div class="borderDiv"></div>
-    <h3 [appScrollTo]="informationBox">{{lastElement}}</h3>
+    <h3 [appScrollTo]="'home_information_'+(lastElement-1)" [appScrollToOpponent]="homeBox">{{lastElement}}</h3>
   </div>
 </div>
 
