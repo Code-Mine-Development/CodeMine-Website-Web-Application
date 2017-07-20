@@ -1,5 +1,5 @@
 @import '../../../../assets/styles/typography';
-
+@import "../../../../assets/styles/mediaQueries";
 .container{
   width: 80%;
   margin: auto;
@@ -25,26 +25,27 @@ canvas{
   opacity: 0;
   animation: bgFadeIn 1s forwards;
   overflow:hidden;
-
-  button{
-    background: #ffda07;
-  }
 }
 .usability-panel{
-  padding-top: 4em;
-
+  padding-top: 12em;
+  h1{
+    margin: .3em 0 0 0;
+  }
   .usability-panel-text{
-    width: 100%;
-    padding: 2em 0;
+    width: 40%;
     line-height: 1.5em;
+    @media #{$tablet}{
+     width: 70%;
+    }
   }
   .usability-table{
-    width: 100%;
+    width: calc(100% - 160px);
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
+    margin: 0 auto;
     app-list{
-      width:100%;
+      width:45%;
       margin: 4em 0;
     }
   }
@@ -53,9 +54,13 @@ canvas{
     text-align:center;
     button{
       background: #fff;
-      border:none;
-      box-shadow: 0 0 4px 4px rgba(0,0,0,0.2s);
-      padding:1.3em 2em;
+      border: none;
+      padding: 9px 35px;
+      text-transform: uppercase;
+      font-weight: bold;
+      cursor: pointer;
+      font-size: 1.4em;
+      box-shadow: 7px 10px 30px rgba(161, 161, 161, 0.3);
     }
   }
 }
@@ -64,9 +69,6 @@ canvas{
 
 @media screen and (min-width: 850px) {
   .usability-panel {
-    .usability-panel-text {
-      width: 50%;
-    }
     .usability-table{
       app-list{
         width: 45%;
@@ -104,5 +106,8 @@ canvas{
   .white{
     color:#ccc;
     text-transform: uppercase;
+  }
+  button{
+    background: #ffda07;
   }
 }

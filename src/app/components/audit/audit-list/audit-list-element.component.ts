@@ -38,7 +38,7 @@ import { Component, HostBinding, HostListener, ElementRef, AfterViewInit, Input,
       }
         svg{
           position: absolute;
-          left: -16%;
+          left: -15%;
           top: -15px;
           height: 40px;
           stroke-dasharray: 100;
