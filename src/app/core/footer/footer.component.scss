@@ -7,9 +7,11 @@
   height:380px;
   width: 100%;
   z-index: -100;
+  overflow-x: hidden;
   @media #{$phone}, #{$tablet}{
     z-index: 1;
     position: relative;
+    height: 300px;
   }
 }
 
@@ -17,13 +19,14 @@
 .footer {
   transition:background .5s;
   height: 380px;
+  background: #000;
 
   h1 {
     margin:0;
   }
 
   @media #{$phone}, #{$tablet} {
-    height: 100px;
+    height: 380px;
   }
 }
 
@@ -72,6 +75,8 @@
     flex:.5;
     display:flex;
     align-items: center;
+    @media #{$phone}{
+      width:40%    }
     .footer_triangle{
       padding-right:15px;
       width:32px;
@@ -84,6 +89,10 @@
     display: flex;
     justify-content: flex-end;
     align-items: center;
+    @media #{$phone}{
+      width:40%;
+      zoom: 0.85;
+    }
   }
 }
 

@@ -22,12 +22,14 @@ export class AuditDetailsComponent implements OnInit, AfterViewInit {
   };
 
   ngAfterViewInit() {
+
     if (this.audit && document.getElementById('triangle0') && document.getElementById('triangle1')) {
       setTimeout(() => {
 
-        this.drawBackgroundService.AuditDetailsBackground(this.canvasRef1, this.canvasRef2)
+        this.drawBackgroundService.AuditDetailsBackground(this.canvasRef1, this.canvasRef2);
 
-      }, 1);
+
+      }, 20);
     }
   }
 
