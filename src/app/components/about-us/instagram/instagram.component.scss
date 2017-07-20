@@ -1,3 +1,5 @@
+@import "../../../../assets/styles/mediaQueries";
+
 h3{
   color:#ccc;
   font-weight: 600;
@@ -8,7 +10,20 @@ h2{
   font-weight: 600;
   text-align: center;
 }
-
+.instagram_box{
+  width:80%;
+  margin-left:10%;
+  height: 750px;
+  @media #{$phone}{
+    height: 350px;
+  }
+  @media #{$tablet}{
+    height: 450px;
+  }
+  iframe{
+    height: 100%;
+  }
+}
 .row{
   width: 80%;
   margin: 4em auto;
@@ -17,7 +32,6 @@ h2{
   justify-content: space-between;
   .col{
     width: 22%;
-    height: 250px;
     background: #eee;
     margin-bottom: 2em;
   }
