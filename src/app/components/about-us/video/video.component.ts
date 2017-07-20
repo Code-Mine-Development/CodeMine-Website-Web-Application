@@ -5,7 +5,7 @@ import { Component, OnInit } from '@angular/core';
   template: '<video src="../../../../assets/videos/timelapse-chorzowska-2.mp4" autoplay loop></video>',
   styles: [`video{
     width: 100%; 
-    height: 100vh}`
+    height: 110vh}`
   ]
 })
 export class VideoComponent implements OnInit {
