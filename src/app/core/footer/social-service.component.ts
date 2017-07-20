@@ -1,9 +1,9 @@
-import { Component, Input, Output, EventEmitter } from '@angular/core';
+import { Component, Input, Output, EventEmitter, HostListener } from '@angular/core';
 
 @Component({
   selector: '[app-social-service]',
   template: `
-    <a href="#"><span (mouseenter)="mouse('enter')" (mouseleave)="mouse('leave')"   [class]="'fa fa-3x fa-'+socialName" aria-hidden="true"></span></a>
+    <a href="#"><span [class]="'fa fa-3x fa-'+socialName" aria-hidden="true"></span></a>
   `,
   styles: [`
     :host {
@@ -17,6 +17,13 @@ import { Component, Input, Output, EventEmitter } from '@angular/core';
 export class SocialServiceComponent  {
 
   private defaultColor = "#000000"
+
+  @HostListener('mouseenter') enter(){
+    this.mouse('enter');
+  }
+  @HostListener('mouseleave') leave(){
+    this.mouse('leave');
+  }
 
   @Input('color') color:string;
   @Input('socialName') socialName:string;

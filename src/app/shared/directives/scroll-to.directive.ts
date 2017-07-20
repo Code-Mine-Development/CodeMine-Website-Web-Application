@@ -1,4 +1,4 @@
-import {AfterViewInit, Directive, HostListener, Inject, Input} from '@angular/core';
+import {Directive, HostListener, Inject, Input} from '@angular/core';
 import {DOCUMENT} from '@angular/platform-browser';
 
 @Directive({
@@ -6,30 +6,43 @@ import {DOCUMENT} from '@angular/platform-browser';
 })
 export class ScrollToDirective {
   @Input('appScrollTo') target: any;
+  @Input('appScrollToOpponent') opponent:any;
 
   @HostListener('click') scroll() {
     this.reset();
     this.filterTarget();
+    this.chooseOppenent();
     this.scrollTo();
   }
 
+  private scrollingOpponent:any = null;
   private targetPosition:number = null;
   private currentPosition:number = null;
   private start:number = null;
   private duration:number = 500;
 
-  constructor(@Inject(DOCUMENT) private document) {
-  }
+
+
+  constructor(@Inject(DOCUMENT) private document){}
 
   reset(){
+    this.scrollingOpponent = null;
     this.targetPosition = null;
     this.currentPosition = null;
     this.start = null;
   }
 
+  chooseOppenent(){
+    this.scrollingOpponent = this.opponent ? this.opponent : this.document;
+  }
+
   filterTarget(){
+    if(this.target === 'SiteHead')
+      return;
     this.target =  typeof this.target == 'object' ? this.target : this.document.querySelector('#'+this.target);
   }
+
+
 
   scrollTo() {
     this.targetPosition = this.getTargetPosition();
@@ -44,7 +57,7 @@ export class ScrollToDirective {
         progressFactor = progress / this.duration,
         progressFactorWithEasing = Math.sqrt(progressFactor),
         distance = this.targetPosition - this.currentPosition,
-        animationPosition = distance * progressFactorWithEasing;
+        animationPosition = this.currentPosition + (distance * progressFactorWithEasing);
 
     this.changeScrollTop(animationPosition);
 
@@ -54,10 +67,15 @@ export class ScrollToDirective {
   }
 
   getCurrentPosition(){
-    return this.document.body.scrollTop || this.document.documentElement.scrollTop;
+    if(this.opponent)
+      return this.scrollingOpponent.scrollTop;
+    return this.scrollingOpponent.body.scrollTop || this.scrollingOpponent.documentElement.scrollTop;
   }
 
   getTargetPosition() {
+    if(this.target === "SiteHead")
+      return 0;
+
     let distance = this.target.offsetTop;
     let parent: any = this.target.offsetParent;
 
@@ -69,8 +87,10 @@ export class ScrollToDirective {
   }
 
   changeScrollTop(position){
-    this.document.body.scrollTop = position;
-    this.document.documentElement.scrollTop = position;
+    if(this.opponent)
+      return this.scrollingOpponent.scrollTop = position;
+    this.scrollingOpponent.body.scrollTop = position;
+    this.scrollingOpponent.documentElement.scrollTop = position;
   }
 
 }

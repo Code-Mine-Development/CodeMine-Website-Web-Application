@@ -13,7 +13,6 @@ export class FooterComponent {
 
   constructor(contact:ContactService){
     contact.getCompany().subscribe((company) =>{
-      console.log(company);
       this.company = company;
     })
   }
