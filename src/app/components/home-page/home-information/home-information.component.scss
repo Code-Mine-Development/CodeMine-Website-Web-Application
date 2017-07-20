@@ -4,12 +4,11 @@
 
 .section-start {
   overflow: scroll;
-  height: 100vh;
-  margin-left: 45px;
-  margin-right: 45px;
+  height: 85vh;
+  margin: 30px 80px;
 
   .slogan-wrapper {
-    height: 100vh;
+    height: 85vh;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -99,4 +98,45 @@
       height: 50vh;
     }
   }
+}
+.horizontal {
+  position: absolute;
+  top: 0;
+  right: 0px;
+  height: 85vh;
+  width: 80px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin-top: 90px;
+  text-align: center;
+  opacity: 0;
+  overflow-x: hidden;
+  h3{
+    height: 10px;
+    width:100%
+  }
+  .sliderMain[_ngcontent-c6] {
+    display: flex;
+    height: 40vh;
+    text-align: center;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    p{
+      margin:0;
+      transform: rotate(-90deg);
+      top: -145px;
+      font-size: 1.2em;
+      position: relative;
+      width: 280px;
+    }
+  }
+}
+.borderDiv {
+  height: 20vh;
+  width: 1px;
+  border-right: 1px solid black;
+  margin: auto;
 }
