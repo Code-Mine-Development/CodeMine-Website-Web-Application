@@ -20,7 +20,6 @@ export class AuditListComponent implements OnInit, AfterViewInit {
 
 
   ngOnInit() {
-    console.log(this.listData, this.source, this.title)
   };
 
   ngAfterViewInit() {
