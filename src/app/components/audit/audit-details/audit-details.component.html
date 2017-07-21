@@ -8,8 +8,8 @@
     <h1 class="usability-panel-header">{{audit.title | translate}}</h1>
     <p class="usability-panel-text">{{audit.description  | translate}}</p>
     <div class="usability-table">
-      <app-list class="list1" id="list1" [title]="'UTILITIES.tasks' | translate" [source]="1" [listData]="audit.items" [listTitle]=""></app-list>
-      <app-list class='list2' id="list2" [title]="'UTILITIES.benefits' | translate" [source]="0" [listData]="audit.items" [listTitle]=""></app-list>
+      <app-list class="list1" id="list1" [title]="'UTILITIES.tasks' | translate" [source]="1" [listData]="audit.items" [listTitle]="audit.title| translate"></app-list>
+      <app-list class='list2' id="list2" [title]="'UTILITIES.benefits' | translate" [source]="0" [listData]="audit.items" [listTitle]="audit.title | translate"></app-list>
     </div>
       <div class="details">
         <h2>{{'UTILITIES.showDetails' | translate}}</h2>

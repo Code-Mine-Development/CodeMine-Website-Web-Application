@@ -3,7 +3,7 @@ import { Component, Input, Output, EventEmitter, HostListener } from '@angular/c
 @Component({
   selector: '[app-social-service]',
   template: `
-    <a href="#"><span [class]="'fa fa-3x fa-'+socialName" aria-hidden="true"></span></a>
+    <a href="#"><span [class]="'fa fa-2x fa-'+socialName" aria-hidden="true"></span></a>
   `,
   styles: [`
     :host {

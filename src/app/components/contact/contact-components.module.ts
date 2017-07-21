@@ -3,10 +3,12 @@ import {CommonModule} from '@angular/common';
 import {ContactInfoComponent} from './contact-info/contact-info.component';
 import {SharedModule} from "../../shared/shared.module";
 import {TranslateModule} from '@ngx-translate/core';
+import { CompanyInformationsComponent } from './company-informations/company-informations.component';
 
 @NgModule({
     declarations: [
         ContactInfoComponent,
+        CompanyInformationsComponent,
     ],
     imports: [
         CommonModule,
@@ -15,6 +17,7 @@ import {TranslateModule} from '@ngx-translate/core';
     ],
     exports: [
         ContactInfoComponent,
+        CompanyInformationsComponent
     ],
     providers: [],
 })

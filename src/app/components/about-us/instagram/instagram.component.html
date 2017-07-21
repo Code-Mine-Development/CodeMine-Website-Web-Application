@@ -1,5 +1,5 @@
 <h3>instagram</h3>
 <h2>Jesteśmy cool</h2>
 <div class="instagram_box">
-  <iframe src="https://snapwidget.com/embed/411808" class="snapwidget-widget" allowTransparency="true" frameborder="0" scrolling="no" style="border:none; overflow:hidden; width:100%; "></iframe>
+  <app-instagram-photo *ngFor="let image of imagesData" [image]="image" class="portrait"></app-instagram-photo>
 </div>

@@ -1,0 +1,73 @@
+@import "../../../../assets/styles/mediaQueries";
+
+:host{
+  position:relative;
+  padding-bottom: 5%;
+  width:50%;
+  display:flex;
+  justify-content: center;
+  @media #{$computer} {
+    width:33%;
+  }
+  @media #{$xl-computer} {
+    width:25%;
+  }
+}
+figure{
+  width:150px;
+  height:150px;
+  overflow: hidden;
+  position:relative;
+  font-size: 1rem;
+  margin:0;
+  @media #{$phone-tablet}{
+    width: 250px;
+    height: 250px;
+    font-size: 1.2rem;
+  }
+  @media #{$xl-computer}{
+    width:290px;
+    height:290px;
+  }
+}
+img{
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  height: 100%;
+  width: auto;
+  transform: translate(-50%,-50%) scale(1.3);
+}
+img.portrait{
+  width: 100%;
+  height: auto;
+}
+figcaption{
+  visibility: hidden;
+}
+.cover{
+  transition:all 0.5s;
+  cursor: pointer;
+  width:100%;
+  height: 100%;
+  position:absolute;
+  top:0;
+  left:0;
+  color:#ffffff;
+  background: RGBA(0,0,0,.2);
+  display:flex;
+  align-items: center;
+  justify-content: center;
+  opacity:0;
+  &:hover{
+    opacity:1;
+  }
+  p{
+    margin:0;
+    text-align: center;
+  }
+  span{
+    padding: 0 5px;
+  }
+
+}
