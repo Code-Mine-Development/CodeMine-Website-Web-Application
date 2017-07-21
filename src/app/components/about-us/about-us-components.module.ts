@@ -13,6 +13,7 @@ import { ApproachComponent } from './approach/approach.component';
 import { VideoComponent } from './video/video.component';
 import { InstagramComponent } from './instagram/instagram.component';
 import {ConnectionBackend, Jsonp} from "@angular/http";
+import { InstagramPhotoComponent } from './instagram/instagram-photo.component';
 
 
 @NgModule({
@@ -24,7 +25,8 @@ import {ConnectionBackend, Jsonp} from "@angular/http";
     AboutCompanyNameComponent,
     ApproachComponent,
     VideoComponent,
-    InstagramComponent
+    InstagramComponent,
+    InstagramPhotoComponent
   ],
   imports: [
     CommonModule,

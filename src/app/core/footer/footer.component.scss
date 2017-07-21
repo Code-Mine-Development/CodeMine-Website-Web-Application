@@ -57,16 +57,22 @@
     align-items: center;
     justify-content: flex-end;
       span{
-        padding:25px 25px;
+        display:flex;
+        align-items: center;
+        height:100%;
+        padding:0 25px;
         cursor:pointer;
         transition: background .3s;
         background: #e4e4e4;
+        &:hover{
+          background: #d0d0d0;
+        }
       }
   }
 }
 .footer_content{
   display:flex;
-  height: 300px;
+  height: 280px;
   box-sizing: border-box;
   padding: 0 10%;
   color:#FFFFFF;
@@ -90,8 +96,7 @@
     justify-content: flex-end;
     align-items: center;
     @media #{$phone}{
-      width:40%;
-      zoom: 0.85;
+      zoom: 0.7;
     }
   }
 }

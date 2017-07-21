@@ -11,7 +11,7 @@
 .scroll-animation {
   margin-bottom: 380px;
   background: white;
-  box-shadow: 10px 0px 25px #777777;
+  box-shadow: 1px 1px 20px rgba(51,51,51,.35);
   @media #{$phone}, #{$tablet}{
     margin: 0;
   }

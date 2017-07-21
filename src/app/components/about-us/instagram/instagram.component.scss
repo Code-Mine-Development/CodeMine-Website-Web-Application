@@ -12,24 +12,17 @@ h2{
 }
 .instagram_box{
   width:80%;
-  margin-left:10%;
-  height: 750px;
-  @media #{$phone}{
-    height: 350px;
-  }
-  @media #{$tablet}{
-    height: 450px;
-  }
-  iframe{
-    height: 100%;
-  }
+  display:flex;
+  flex-wrap: wrap;
+  margin: 100px 10% 100px;
+  justify-content: center;
 }
 .row{
   width: 80%;
   margin: 4em auto;
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content: space-around;
   .col{
     width: 22%;
     background: #eee;

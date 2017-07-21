@@ -13,13 +13,13 @@ export class AuditListComponent implements OnInit, AfterViewInit {
   @Input() source;
   @Input() title:string;
   @Input() listTitle:string;
+
   constructor() {
 
   }
 
 
   ngOnInit() {
-    console.log(this.listTitle)
   };
 
   ngAfterViewInit() {
