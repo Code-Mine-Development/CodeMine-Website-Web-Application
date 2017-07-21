@@ -1,35 +1,39 @@
-
+body,html{
+  font-size: 10px;
+  font-family: 'Proxima Nova', sans-serif;
+}
 h1 {
-    font-size: 3.6em;
-    font-weight: 500;
+    font-size: 4.8em;
+    font-weight: bold;
 }
 
 h2 {
-    font-size: 3em;
-    font-weight: 500;
+    font-size: 3.6em;
+    font-weight: bold;
 }
 
 h3 {
-    font-size: 2em;
-    font-weight:400;
+    font-size: 2.4em;
+    font-weight:bold;
 }
 
 h4 {
-    font-size: 1em;
-    font-weight: 700 ;
+    font-size: 1.6em;
+    font-weight: bold ;
 }
 
 p {
     font-size: 1.6em;
-    font-weight:300 ;
+    font-weight:normal ;
 }
 li{
-  font-size: 1.2em;
+  font-size: 1.6em;
+  font-weight: normal;
 }
 span.white{
   color: #fff;
 }
 label {
-    font-size: 1.4em;
-    font-weight: 400;
+    font-size: 1.6em;
+    font-weight: bold;
 }

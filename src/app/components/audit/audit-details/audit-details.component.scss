@@ -1,7 +1,7 @@
 @import '../../../../assets/styles/typography';
-
+@import "../../../../assets/styles/mediaQueries";
 .container{
-  width: 80%;
+  width: 90%;
   margin: auto;
 
 }
@@ -14,8 +14,8 @@ canvas{
   width: 100%;
   background-repeat: no-repeat;
   opacity: 0;
-  animation: bgFadeIn 2s  forwards
-
+  animation: bgFadeIn 2s  forwards;
+  overflow:hidden;
 }
 
 #triangle1{
@@ -24,27 +24,29 @@ canvas{
   padding-top: 10%;
   opacity: 0;
   animation: bgFadeIn 1s forwards;
-
-  button{
-    background: #ffda07;
-  }
+  overflow:hidden;
 }
 .usability-panel{
-  padding-top: 4em;
-
+  padding-top: 12em;
+  h1{
+    margin: .3em 0 0 0;
+  }
   .usability-panel-text{
-    width: 100%;
-    padding: 2em 0;
+    width: 40%;
     line-height: 1.5em;
+    @media #{$tablet}{
+     width: 70%;
+    }
   }
   .usability-table{
     width: 100%;
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
+    margin: 0 auto;
     app-list{
-      width:100%;
-      margin: 4em 0;
+      width:80%;
+      margin: 4em auto;
     }
   }
   .details{
@@ -52,21 +54,23 @@ canvas{
     text-align:center;
     button{
       background: #fff;
-      border:none;
-      box-shadow: 0 0 4px 4px rgba(0,0,0,0.2s);
-      padding:1.3em 2em;
+      border: none;
+      padding: 9px 35px;
+      text-transform: uppercase;
+      font-weight: bold;
+      cursor: pointer;
+      font-size: 1.4em;
+      box-shadow: 7px 10px 30px rgba(161, 161, 161, 0.3);
     }
   }
-
 }
+
+
 @media screen and (min-width: 850px) {
   .usability-panel {
-    .usability-panel-text {
-      width: 50%;
-    }
     .usability-table{
       app-list{
-        width: 45%;
+        width: 46%;
       }
     }
   }
@@ -81,12 +85,28 @@ canvas{
   }
 }
 
-
 /deep/
-
- #triangle1 {
-  ul.list{
-    background: #f2f2f2;
+#triangle0 {
+  ul.list {
+    min-height: 800px;
   }
+    .white{
+      color:#fff;
+      text-transform: uppercase;
+    }
 }
 
+
+/deep/
+#triangle1 {
+  ul.list{
+    min-height: 400px ;
+    background: #fff;}
+  .white{
+    color:#ccc;
+    text-transform: uppercase;
+  }
+  button{
+    background: #ffda07;
+  }
+}

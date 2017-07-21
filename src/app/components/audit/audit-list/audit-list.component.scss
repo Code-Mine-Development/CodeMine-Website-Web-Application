@@ -2,18 +2,20 @@ h2, h4, span{
   text-align: center;
 }
 
-  ul.list {
+  ul.list{
     background: #fff;
+
     margin-top: 4em;
-    padding: 8em 0;
+    padding: 4em 0;
     list-style: none;
-    height: 60em;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    box-shadow: 10px 15px 15px 0px rgba(0, 0, 0, 0.1);
+    box-shadow: 10px 20px 50px 0px rgba(161, 161, 161, 0.35);
+
     border-radius:2px;
-    position: relative;
-    top:0;
-    bottom: 0;
+    li{
+      margin:2em auto;
+    }
   }
+
