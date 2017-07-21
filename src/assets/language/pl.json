@@ -210,6 +210,12 @@
       "description": "Kocha projektowanie doświadczeń użytkownika, ale ceni też dobry design, co sprawia, że idealnie nadaje się na swoje stanowisko UX/UI Designera. Fan Apple, nie w mniejszym stopniu lubiący kawę i fast-foody. Na co dzień odlicza czas pozostały do kolejnych podróży i leniuchowania na piaszczystej plaży. Nienawidzi kolejek i stania w korkach. Jest maniakiem obniżania samochodów do granic przyzwoitości."
     }
   },
+  "TECHNOLOGIES":{
+    "description": "Opis",
+    "Angular":{
+      "description": "Ze względu na klarowną separację odpowiedzialności oraz łatwość w utrzymaniu czystości kodu, na Angularze opieramy większość naszych projektów o wymagającej strukturze. Co więcej, narzędzie to pozwala nam na szybkie tworzenie aplikacji internetowych wraz z testami jednostkowymi i akceptacyjnymi, z niespotykaną wcześniej łatwością.Stworzone przez firmę Google oraz niezliczoną ilość niezależnych programistów, narzędzie to jest nieustannie rozwijane. Choć bliskie jest nam nawet jego pierwsze wydanie, dopiero od kolejnych wersji Angular rozpoczął nową erę wydajnych oraz elastycznych bibliotek, pozwalających na tworzenie niesamowitych aplikacji internetowych. Przyczyniło się do tego zwłaszcza wprowadzenie w drugiej wersji frameworku podejścia reative programming, które połączone z silnym naciskiem na technologie TypeScript, ustandaryzowało cały proces projektowy."
+    }
+  },
   "PAGETITLE":{
     "prefix": "Code-Mine"
   },

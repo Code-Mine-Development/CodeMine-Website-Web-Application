@@ -1,4 +1,4 @@
-import {Component, OnInit, Inject, HostListener} from '@angular/core';
+import {Component, OnInit, Inject, HostListener, HostBinding} from '@angular/core';
 import {DOCUMENT} from '@angular/platform-browser';
 import {Router, NavigationEnd} from '@angular/router';
 import {TranslateService} from '@ngx-translate/core';
@@ -12,6 +12,8 @@ import {HomeInformationServices} from '../../components/home-page/services/home-
 
 })
 export class HeaderComponent implements OnInit {
+
+  @HostBinding("style.display") visibility:string;
 
   navigation = [
     {
@@ -71,6 +73,7 @@ export class HeaderComponent implements OnInit {
       })
   }
 
+
   @HostListener('window:scroll', [])
   onWindowScroll() {
     this.windowScrollTop = this.document.body.scrollTop || this.document.documentElement.scrollTop;
@@ -80,6 +83,7 @@ export class HeaderComponent implements OnInit {
   parseScrollTop(){
     this.scrollTop = this.windowScrollTop > this.homeInformationScrollTop ? this.windowScrollTop : this.homeInformationScrollTop;
   }
+
 
 
 

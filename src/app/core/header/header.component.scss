@@ -11,7 +11,7 @@ div.header {
   width: 100%;
   background: white;
   height: 60px;
-  z-index: 99999999999;
+  z-index: 3000;
   top: 0;
   padding: 10px 40px;
   box-sizing: border-box;
@@ -82,7 +82,7 @@ div.header {
              background: black;
              bottom: 12px;
            }
-         }
+        }
       }
     }
 

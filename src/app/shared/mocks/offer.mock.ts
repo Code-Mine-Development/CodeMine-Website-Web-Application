@@ -39,47 +39,47 @@ export const MockOffer = [
     'technologies': [
       {
         'name': 'angular',
-        'image': 'https://angular.io/assets/images/logos/angular/angular.png'
+        'image': 'https://technology.io/assets/images/logos/technology/technology.png'
       },
       {
         'name': 'angular',
-        'image': 'https://angular.io/assets/images/logos/angular/angular.png'
+        'image': 'https://technology.io/assets/images/logos/technology/technology.png'
       },
       {
         'name': 'angular',
-        'image': 'https://angular.io/assets/images/logos/angular/angular.png'
+        'image': 'https://technology.io/assets/images/logos/technology/technology.png'
       },
       {
         'name': 'angular',
-        'image': 'https://angular.io/assets/images/logos/angular/angular.png'
+        'image': 'https://technology.io/assets/images/logos/technology/technology.png'
       },
       {
         'name': 'angular',
-        'image': 'https://angular.io/assets/images/logos/angular/angular.png'
+        'image': 'https://technology.io/assets/images/logos/technology/technology.png'
       },
       {
         'name': 'angular',
-        'image': 'https://angular.io/assets/images/logos/angular/angular.png'
+        'image': 'https://technology.io/assets/images/logos/technology/technology.png'
       },
       {
         'name': 'angular',
-        'image': 'https://angular.io/assets/images/logos/angular/angular.png'
+        'image': 'https://technology.io/assets/images/logos/technology/technology.png'
       },
       {
         'name': 'angular',
-        'image': 'https://angular.io/assets/images/logos/angular/angular.png'
+        'image': 'https://technology.io/assets/images/logos/technology/technology.png'
       },
       {
         'name': 'angular',
-        'image': 'https://angular.io/assets/images/logos/angular/angular.png'
+        'image': 'https://technology.io/assets/images/logos/technology/technology.png'
       },
       {
         'name': 'angular',
-        'image': 'https://angular.io/assets/images/logos/angular/angular.png'
+        'image': 'https://technology.io/assets/images/logos/technology/technology.png'
       },
       {
         'name': 'angular',
-        'image': 'https://angular.io/assets/images/logos/angular/angular.png'
+        'image': 'https://technology.io/assets/images/logos/technology/technology.png'
       }
     ]
   },

@@ -1,0 +1,34 @@
+{
+  "angular":{
+    "title": "Angular 4",
+    "description": "TECHNOLOGIES.Angular.description",
+    "icon": {
+      "url": ""
+    },
+    "color": "#F00000"
+  },
+  "nodejs":{
+    "title": "Node JS",
+    "description": "TECHNOLOGIES.Angular.description",
+    "icon": {
+      "url": ""
+    },
+    "color": "#F00000"
+  },
+  "typescript":{
+    "title": "TypeScript",
+    "description": "TECHNOLOGIES.Angular.description",
+    "icon": {
+      "url": ""
+    },
+    "color": "#F00000"
+  },
+  "express":{
+    "title": "Express",
+    "description": "TECHNOLOGIES.Angular.description",
+    "icon": {
+      "url": ""
+    },
+    "color": "#F00000"
+  }
+}

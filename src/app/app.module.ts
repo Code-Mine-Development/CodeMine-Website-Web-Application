@@ -27,6 +27,7 @@ import {HomeInformationServices} from './components/home-page/services/home-info
 import {HomeInformationResolver} from './components/home-page/services/home-information.resolver';
 import {AuditResolver} from './aplication/audit/services/audit.resolver';
 
+
 import {AppComponent} from './app.component';
 export function createTranslateLoader(http: Http) {
   return new TranslateHttpLoader(http, './assets/language/', '.json');
