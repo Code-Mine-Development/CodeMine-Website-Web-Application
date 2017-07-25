@@ -1,5 +1,6 @@
-import {Component, OnInit} from '@angular/core';
+import {Component, OnInit, ViewChild} from '@angular/core';
 import { ActivatedRoute, Router,  } from '@angular/router';
+import {Http} from '@angular/http';
 import { LocalizeRouterService } from 'localize-router';
 import { Technology } from '../interface/technology.interface';
 import { PreviousPositionService } from '../../../shared/services/previous-position.service';
@@ -11,6 +12,7 @@ import { PreviousPositionService } from '../../../shared/services/previous-posit
 })
 export class TechnologyComponent implements OnInit {
 
+  @ViewChild("svg") svg;
 
   private technology:Technology = <Technology>{};
 
@@ -18,9 +20,9 @@ export class TechnologyComponent implements OnInit {
   private previous:string;
 
   private URLprefix:string = '/technologies/';
+  private iconDir:string = 'assets/icons/';
 
-
-  constructor( private route:ActivatedRoute, private router:Router, private localize:LocalizeRouterService, private previousPosition:PreviousPositionService ) {
+  constructor( private route:ActivatedRoute, private router:Router, private localize:LocalizeRouterService, private previousPosition:PreviousPositionService, private http:Http) {
   }
 
   ngOnInit() {
@@ -47,6 +49,7 @@ export class TechnologyComponent implements OnInit {
     this.previous = prevKey;
 
     this.technology = technology;
+    this.getIcon(technology.icon);
   }
 
 
@@ -64,5 +67,23 @@ export class TechnologyComponent implements OnInit {
       this.router.navigateByUrl(url);
   }
 
+
+  getIcon(url:string){
+    if(url.length == 0)
+      return;
+    this.http.get(this.iconDir+url)
+      .map( (response) => ( response.text() ))
+      .map( (svgfile:string) => {
+        let m =  /\<svg[^>]*\>(.*)<\/svg>/g.exec(svgfile)
+        if(m != null)
+          return m[1];
+        return '';
+      })
+      .subscribe( (svgBody:string) => {
+        this.technology.icon = svgBody.replace(/fill="[^"]*"/g, '');
+        if( this.svg.nativeElement )
+          this.svg.nativeElement.innerHTML = svgBody.replace(/fill="[^"]*"/g, '');;
+      })
+  }
 
 }
