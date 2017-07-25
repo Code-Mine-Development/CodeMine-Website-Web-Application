@@ -4,7 +4,7 @@
 module.exports = function (config) {
   config.set({
     basePath: '',
-    frameworks: ['jasmine', '@technology/cli'],
+    frameworks: ['jasmine', '@tool/cli'],
     plugins: [
       require('karma-jasmine'),
       require('karma-chrome-launcher'),

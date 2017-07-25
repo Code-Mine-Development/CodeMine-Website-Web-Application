@@ -216,6 +216,98 @@
       "description": "Ze względu na klarowną separację odpowiedzialności oraz łatwość w utrzymaniu czystości kodu, na Angularze opieramy większość naszych projektów o wymagającej strukturze. Co więcej, narzędzie to pozwala nam na szybkie tworzenie aplikacji internetowych wraz z testami jednostkowymi i akceptacyjnymi, z niespotykaną wcześniej łatwością.Stworzone przez firmę Google oraz niezliczoną ilość niezależnych programistów, narzędzie to jest nieustannie rozwijane. Choć bliskie jest nam nawet jego pierwsze wydanie, dopiero od kolejnych wersji Angular rozpoczął nową erę wydajnych oraz elastycznych bibliotek, pozwalających na tworzenie niesamowitych aplikacji internetowych. Przyczyniło się do tego zwłaszcza wprowadzenie w drugiej wersji frameworku podejścia reative programming, które połączone z silnym naciskiem na technologie TypeScript, ustandaryzowało cały proces projektowy."
     }
   },
+  "TOOLS":{
+    "AI":{
+      "description":"Po Illustratora sięgamy najczęściej w końcowych etapach prac – tuż po dopracowaniu i zatwierdzeniu makiet UX, w programie powstaje UI, czyli warstwa wizualna danego projektu. W Illustratorze projektujemy większość elementów graficznych, począwszy od prostych ikon, a skończywszy na rozmaitych ilustracjach, które z kolei niejednokrotnie stanowią bazę do tworzenia animacji svg, wykorzystywanych w naszych interfejsach."
+    },
+    "AmazonAWS":{
+      "description":"Rozwiązania chmurowe amerykańskiej firmy Amazon pozwalają na tworzenie skalowalnych, wydajnych i bezpiecznych aplikacji w stosunkowo krótkim czasie. Wyróżniają się szerokim asortymentem usług, od baz danych, serwerów, systemów powiadomień czy kolejek zadań, aż po rozwiązania machine learning i analizy danych w czasie rzeczywistym.Wszystkie te cechy sprawiają, że Amazon AWS jest idealnym wyborem dla nowoczesnych aplikacji. Z tego względu pojawia się także w naszych projektach, opieranych na systemach automatycznego zarządzania aplikacjami, do których należy ElasticBeanstalk, czy też na systemach skonteneryzowanych takich jak Elastic Container Service wspierający Docker’a."
+    },
+    "Angular":{
+      "description":"Ze względu na klarowną separację odpowiedzialności oraz łatwość w utrzymaniu czystości kodu, na Angularze opieramy większość naszych projektów o wymagającej strukturze. Co więcej, narzędzie to pozwala nam na szybkie tworzenie aplikacji internetowych wraz z testami jednostkowymi i akceptacyjnymi, z niespotykaną wcześniej łatwością.Stworzone przez firmę Google oraz niezliczoną ilość niezależnych programistów, narzędzie to jest nieustannie rozwijane. Choć bliskie jest nam nawet jego pierwsze wydanie, dopiero od kolejnych wersji Angular rozpoczął nową erę wydajnych oraz elastycznych bibliotek, pozwalających na tworzenie niesamowitych aplikacji internetowych. Przyczyniło się do tego zwłaszcza wprowadzenie w drugiej wersji frameworku podejścia reative programming, które połączone z silnym naciskiem na technologie TypeScript, ustandaryzowało cały proces projektowy."
+    },
+    "ApacheKafka":{
+      "description":"Apache Kafka jest narzędziem umożliwiającym przechowywanie strumieni danych. Tworzy ono kolejkę wiadomości pogrupowanych w tematy, z przypisanymi identyfikatorem i czasem zdarzenia.Ogromną zaletą Apache jest jej skalowalność, wynikająca z działania na tak zwanych klastrach, możliwych do uruchomienia zarówno na jednym, jak i wielu serwerach. Ponadto idealnie sprawdza się również jako tak zwany Event Bus w przypadku aplikacji opartych o Event Sourcing."
+    },
+    "AxureRP":{
+      "description":"Axure stanowi podstawę codziennej pracy naszych UX Designerów. To rozbudowana aplikacja desktopowa, służąca w głównej mierze do tworzenia rozbudowanych prototypów interfejsów użytkownika, diagramów przepływu informacji oraz specyfikacji projektów w wyjątkowo intuicyjny sposób. Zaletą programu jest dodatkowo możliwość projektowania złożonych interakcji – animacji, dynamicznych treści, obliczeń czy warunków logicznych, bez potrzeby programowania.Przygotowane za pomocą aplikacji makiety, czynią proces projektowy bardziej efektywnym, jednocześnie pozwalając naszym klientom na lepsze zrozumienie podejmowanych prac dzięki zobrazowaniu tworzonych funkcjonalności."
+    },
+    "CircleCl":{
+      "description":"Jako jedno z trzech używanych przez nas narzędzi do automatycznego testowania zmian wprowadzanych do kodu źródłowego, Circle CI wyróżnia się ponadprzeciętną uniwersalnością. Jego przewagą są wszechstronne możliwości integracji z innymi narzędziami, takimi jak Github, Bitbucket czy Gitlab, co pozwala nam zachować dużą elastyczność działania. Atutem tego dodatku jest także atrakcyjna cena."
+    },
+    "Docker":{
+      "description":"Będący narzędziem umożliwiającym uruchamianie oprogramowania w autonomicznych kontenerach, Docker pozwala nam projektować i testować aplikacje w środowisku identycznym w porównaniu do tego, który dostępny jest w systemie produkcyjnym. Rozwiązanie to przyczynia się do zmniejszenia ilości błędów, przyspieszając tym samym proces tworzenia oprogramowania.Największą zaletą Docker’a jest jednak jego uniwersalność zwłaszcza, że wspierany jest on przez nowoczesne platformy takie jak Amazon AWS, za pośrednictwem Elastic Container Service czy Elastic Beanstalk. Pod tym kątem narzędzie to znacznie przewyższa wszystkie klasyczne rozwiązania oparte na wirtualizacji"
+    },
+    "Git":{
+      "description":"W pisanie kodu przy dużych projektach najczęściej zaangażowanych jest jednocześnie kilku deweloperów, pracujących na jednym kodzie źródłowym. Git, jako miejsce jego przechowywania, pozwala na śledzenie wszystkich modyfikacji kodu, dając również możliwość zarządzania wszystkimi utworzonymi zmianami w wygodny i czytelny sposób.Za sprawą tego narzędzia jesteśmy ponadto w stanie rozwiązać konflikty powstałe w wyniku pracy kilku programistów nad jedną funkcjonalnością, a także zapobiec całkowitej utracie kodu. To sprawia, że Git, będący obecnie najpopularniejszym systemem kontroli wersji, jest także nieodłącznym elementem każdego tworzonego przez nas projektu."
+    },
+    "Gradle":{
+      "description":"Dzięki możliwości zdefiniowania automatycznych zadań wykonywanych w trakcie zmiany kodu źródłowego w działający program, Gradle zapewnia nam pełną kontrolę nad procesem developmentu i deployu aplikacji.Narzędzie pozwala na szybkie i bezproblemowe pobieranie potrzebnych zależności, ich kompilację oraz intuicyjne zarządzanie, co znacznie uławia cały proces programowania szczególnie, że praktycznie w każdym naszym projekcie posiłkujemy się zewnętrznymi bibliotekami czy frameworkami."
+    },
+    "Grunt":{
+      "description":"Grunt jest jednym z pierwszych systemów automatyzacji pracy, zaimplementowanych w naszych aplikacjach internetowych. Choć moduł ten obecnie nie posiada już swojego miejsca w naszej wirtualnej skrzynce narzędzi, faktem jest, że wciąż pracujemy nad projektami, w których został użyty."
+    },
+    "Gulp":{
+      "description":"Podobnie jak Grunt, Gulp w erze Webpack’a jest narzędziem odsuniętym na drugi plan; nie mniej jednak, nie można zarzucić mu braku użyteczności. Jako system automatyzacji pracy programisty, pozwala na wykonanie wielu zaawansowanych zadań z ogromną łatwością, zwłaszcza w kontekście integracji z nowoczesnymi framework’ami, takimi jak Angular. Z tego powodu Gulp został wykorzystany w kilku projektach, wciąż przez nas wspieranych bądź też rozbudowywanych."
+    },
+    "Jenkins":{
+      "description":"Jenkins jest narzędziem wykorzystywanym przez nas do automatycznego testowania kodu w celu sprawdzenia zgodności wprowadzonych zmian z postawionymi wymaganiami. Jako rozwiązanie nie oferowane w chmurze, Jenkins zapewnia niesamowite możliwości konfiguracyjne, praktycznie niespotykane w innych tego typu narzędziach. Dzięki precyzyjnemu dostosowywaniu sposobu budowania oprogramowania, a także jego testowania i dostarczania, idealnie sprawdza się w projektach wymagających chirurgicznej precyzji pod względem Continous Integration. Oprócz wysokiej elastyczności, cenimy w nim również pełną kontrolę, gwarantowaną poprzez samodzielny hosting."
+    },
+    "Jira":{
+      "description":"Jako ekosystem oprogramowania pozwalającego na łatwe zarządzenie projektami IT, Jira pomaga nam utrzymać każde zlecenie w spójnych ramach, oferując nieograniczone możliwości konfiguracji, stabilność oraz bezpieczeństwo. Zbudowana przez firmę Atlassian, Jira jest kompletnym narzędziem, które z jednej strony umożliwia planowanie i realizację projektów dzięki tworzeniu i weryfikacji zadań oraz zarządzaniu dokumentami; zaś z drugiej – płynną wymianę informacji wśród całego zespołu. Ponadto, może być integrowana z innymi narzędziami – systemami kontroli wersji, kalendarzami czy systemami Continous Integration. W Jirze prowadzone są wszystkie nasze projekty, w których każdorazowo wykorzystujemy  także oferowane przez narzędzie, tablice Agile. Co ważne, platforma dostarcza także system helpdesk, dzięki któremu nasi Klienci posiadają bieżące informacje na temat poszczególnych zgłoszeń, mogąc kontrolować tym samym poziom SLA."
+    },
+    "JMeter":{
+      "description":"JMeter to rozbudowane narzędzie testowe, wyróżniające się szybkością tworzenia złożonych i niezwykle miarodajnych planów testowych, służących nam do sprawdzania wydajności aplikacji, baz danych czy skryptów. Dzięki nim możemy dowiedzieć się jak dane oprogramowanie zachowa się w ekstremalnych, niecodziennych warunkach.Istotną cechą JMeter jest również możliwość przetestowania wielu zależnych od siebie i występujących po sobie żądań. Efektem tak rozbudowanych i skrupulatnych testów są obszerne raporty, które dzięki graficznej formie prezentowania wyników, stają się wyjątkowo przystępne, co znacznie ułatwia proces wyciągania wniosków."
+    },
+    "Laravel":{
+      "description":"Choć Laravel jest stosunkowo młodym frameworkiem MVC dla języka PHP, nie przeszkodziło mu to w zdobyciu znaczącego udziału rynku otwartych rozwiązań. Mimo braku zaawansowanych i wysoce elastycznych rozwiązań charakterystycznych dla innych, używanych przez nas narzędzi tego typu, Laravel zdecydowanie wyróżnia się łatwością tworzenia prostych projektów. Z tego względu stosujemy go zazwyczaj w zespołach, które dopiero kompletują swoje doświadczenie w tym obszarze."
+    },
+    "MongoDB":{
+      "description":"MongoDB jest wydajną, nierelacyjną bazą danych (NotOnlySQL), która ponadto nie wymaga predefiniowanych schematów, co stanowi jedną z jej największych zalet. Baza wykorzystywana jest przede wszystkim do aplikacji zawierających hierarchiczne i różniące się od siebie dane. Zapewnia szybkie operacje na danych, a ponadto świetnie sprawdza się jako cache danych w strukturach intranetowych."
+    },
+    "MySQL":{
+      "description":"Bazy danych są podstawą funkcjonowania niemal każdego oprogramowania internetowego. Jako najpopularniejsza baza dostępna na rynku, MySQL jest narzędziem wysoce uniwersalnym, charakteryzującym się ponadto stosunkowo niskim kosztem utrzymania, dlatego idealnie sprawdza się przy projektach z zawężonymi wymogami hostingowymi, w których priorytetem jest również szybkość i łatwość implementacji."
+    },
+    "NPM":{
+      "description":"Będący jednym z największych źródeł bibliotek i rozwiązań Open Source dostępnych we współczesnym świecie programowania, NPM pozwala nam na wzbogacanie projektu zewnętrznymi, gotowymi rozwiązaniami, bez obaw o ich aktualność czy poprawność. Narzędzie to uważane jest za globalny standard, toteż na stałe zagościło w naszych projektach front-endowych, w których możemy wykorzystywać niemalże każdą pożądaną bibliotekę, co z kolei przekłada się na oszczędność czasu oraz lepszą wydajność."
+    },
+    "PostgreSQL":{
+      "description":"Baza danych jest jednym z najistotniejszych elementów składowych każdego oprogramowania, a jej wybór powinien być dostosowany do złożoności podejmowanego projektu. PostgreSQL, będąca dojrzałą, ale i najbardziej zaawansowaną z dostępnych na rynku, otwartą bazą, wykorzystujemy w przypadku kompleksowych i wymagających programów. Oferowane przez PostgreSQL, niemal nieograniczone możliwości dotyczące zapytań, struktur i rozszerzania jej funkcjonalności, znacznie poprawiają efektywność pracy nad projektem."
+    },
+    "RabbitMQ":{
+      "description":"RabbitMQ jest jednym z najbardziej popularnych narzędzi systemów kolejkowych, pozwalających na swobodną komunikację między rozproszonymi systemami. Również w naszych projektach systemy podzielone są na mikroserwisy, wykorzystując oparte na protokole MQTT, wewnętrzne mechanizmy do wymiany komend i zapytań pomiędzy poszczególnymi serwisami. Takie rozwiązanie pozwala nam tworzyć oprogramowanie z jednej strony wydaje, a z drugiej bezpieczne i skalowalne."
+    },
+    "ReactJS":{
+      "description":"Stworzony przez Facebooka, React JS jest innowacyjnym frameworkiem, wykorzystującym język JSX – hybrydę języka JavaScript oraz HTML. Jest niezastąpiony w przypadku małych i średnich projektów, w których zaawansowana struktura i setki narzędzi, jakie oferuje Angular, nie są wymagane. Przewagą React JS jest ponadto ogromna społeczność udostępniająca setki, jeśli nie tysiące otwartych bibliotek typu Open Source. Korzystanie z dobrych jakościowo, gotowych rozwiązań pozwala oszczędzić czas i budżet, przy jednoczesnym zapewnieniu stabilności i bezpieczeństwa."
+    },
+    "SASS":{
+      "description":"Kaskadowe arkusze stylów CSS są nieoderwalną częścią stron i aplikacji mobilnych, stanowiących największą część naszego portfolio. Tworzenie CSS’ów jest jednak zajęciem niezwykle czasochłonnym, wymagającym niemałej precyzji i uwagi, co z kolei zwiększa ryzyko wystąpienia różnych problemów, wynikających z przeoczenia pewnych detali. Jako preprocesor CSS, SASS został stworzony celem uniknięcia tych błędów, pozwalając na tworzenie ustrukturyzowanych i czytelnych arkuszy stylów w szybkim czasie. Szereg jego zalet sprawił, że używamy go na co dzień, w każdym naszym projekcie."
+    },
+    "Sketch":{
+      "description":"Sketch służy nam do projektowania interfejsów, layoutów, ikon i innych elementów graficznych. Dzięki możliwości odręcznego tworzenia ścieżek, pozwala on na budowanie skomplikowanych kształtów, łatwych do późniejszej edycji, z kolei ze względu na renderowanie powstałych elementów – na ich skalowanie bez utraty jakości. Przydatną funkcjonalnością Sketch’a jest także możliwość podglądania projektu na podłączonym do sieci lokalnej iPhonie z zainstalowaną aplikacją iOS Mirror."
+    },
+    "SonarQube":{
+      "description":"Jakość kodu źródłowego jest dla nas kwestią pierwszorzędną, a narzędzia takie jak SonarQube pomagają nad sprawować nad nią kontrolę. Platforma w łatwy sposób wymusza zgodność kodu z obowiązującymi standardami, wychwytując ponadto miejsca, będące potencjalnym źródłem problemów w przyszłości. Uniwersalność narzędzia sprawia, że jest ono wykorzystywane przez nas zespół w niemalże każdym projekcie."
+    },
+    "SpringFramework":{
+      "description":"Zarówno przy tworzeniu, jak i konfiguracji nowoczesnych aplikacji klasy enterprise, opartych na platformie Java, każdorazowo sięgamy po Spring Framework, zapewniający łatwą integrację z innymi frameworkami i bibliotekami. W myśl zasady convention over configuration, narzędzie to daje nam możliwość  zredukowania pisanego kodu do niezbędnego minimum po to, by móc całkowicie skoncentrować się na rozwiązywaniu złożonych problemów biznesowych. Niewątpliwym atutem Sping’a jest też jego bieżące udoskonalanie, wywołane dużym zainteresowaniem społeczności, jaką przy sobie skupia. Dzięki temu mamy pewność, że oferowane przez framework rozwiązania zawsze należą do innowacyjnych i z powodzeniem możemy wykorzystywać je w swoich projektach, na które składają się zwłaszcza aplikacje serwerowe dostarczające REST/RPC Api."
+    },
+    "Symfony":{
+      "description":"Symfony uznawany jest za jeden z najbardziej profesjonalnych frameworków MVC dla PHP. Współtworzony przez zaangażowane w rozwój tego języka, brazylijskie studio SensioLabs oraz niezliczoną ilość wolontariuszy z całego świata, zyskał ogromne uznanie wśród osób z branży. Czerpiąc inspiracje z Sping Framework, Symfony polega na wielu sprawdzonych wzorach i rozwiązaniach. W efekcie, narzędzie te oferuje ogromną liczbę możliwości i z powodzeniem może być zastosowane do każdego rodzaju projektu. W naszej firmie sięgamy po nie jednak zwłaszcza w przypadku realizacji ograniczonych pod względem czasu czy budżetu, w pełni wykorzystując jego zautomatyzowane działania."
+    },
+    "TravisCl":{
+      "description":"W miarę upływu ery ręcznego wysyłania plików projektów na serwer przy pomocy FTP, narzędzia Continous Integration stały się podstawą bezpiecznego aktualizowania oprogramowania. Pozwalają one na automatyczne przetestowanie kodu przed wprowadzeniem zmian, sprawdzając tym samym, czy nowe modyfikacje spełniają wszystkie wymagane kryteria i oczekiwania. Co istotne, jako jeden z najbardziej powszechnych narzędzi Continous Integration, Travis z powodzeniem może być wykorzystywany w różnych projektach i technologiach. Łatwość jego konfiguracji jest z resztą jednym z wielu argumentów, skłaniającym nas do częstego wybierania tego narzędzia."
+    },
+    "Vagrant":{
+      "description":"Podobnie jak Docker, Vagrant wykorzystywany jest do budowania wirtualnych maszyn oraz zarządzania nimi z jednego miejsca. Narzędzie to pozwala deweloperowi na utworzenie odpowiedniego dla danej aplikacji środowiska, bez względu na używany przez niego system operacyjny czy zainstalowane programy. Wirtualna maszyna powstaje po uruchomieniu wcześniej przygotowanego skryptu konfiguracyjnego. Jego umieszczenie w repozytorium kodu źródłowego projektu daje nam ponadto nieograniczoną kontrolę nad zmianami wprowadzanymi w zależnościach aplikacji."
+    },
+    "Webpack":{
+      "description":"Tworzone przez nas aplikacje i strony internetowe to złożone systemy, składające się z wielu modułów i wzajemnych zależności. Webpack pomaga nam w optymalizacji projektu, zamieniając setki plików HTML, Java Script, Type Script, elementów graficznych czy fontów, w jedną, małą paczkę, możliwą do szybkiego pobrania na urządzeniach mobilnych. Poza poprawą User Experience, Webpack wpływa także na automatyzację pracy, zwiększając efektywność naszego zespołu, który w miejsce konfiguracji projektu, może skoncentrować się na tworzeniu oprogramowania, co z kolei pozwala na lepsze wykorzystanie budżetu."
+    },
+    "ZendFramework":{
+      "description":"Jako jeden z najbardziej wspieranych przez społeczność, a zarazem najbardziej zaawansowanych frameworków, Zend jest wiodącym narzędziem wykorzystywanym w naszych projektach. Decyduje o tym wiele czynników, z których na pierwszy plan wychodzi jego modułowość, pozwalająca na niemal stuprocentowe przystosowanie architektury frameworku do naszych potrzeb. Nie bez znaczenia jest również jego fundament – ze względu na swoją powszechność, język PHP, w którym Zend został napisany, przyczynia się do uniknięcia wszelkich problemów związanych z hostingiem systemu. W swoim zespole posiadamy certyfikowanych architektów frameworku, którzy oprócz bazowania na dostępnych rozwiązaniach, tworzą własne biblioteki, w pełni dostosowane do opisywanego narzędzia. Nasi programiści są ponadto aktywnymi kontrybutorami zarówno w tym, jak i innych projektach, mogąc pochwalić się zainicjowaniem w biurze Code Mine współpracy Zend Framework 3 z Apigility. To właśnie biblioteki tego projektu umożliwiają nam tworzenie zgodnych ze standardami systemów back-endowych dostarczających REST Api, które stanowią największą liczbę naszych projektów opartych na frameworku."
+    }
+  },
   "PAGETITLE":{
     "prefix": "Code-Mine"
   },

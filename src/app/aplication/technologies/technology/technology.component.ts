@@ -2,7 +2,7 @@ import {Component, OnInit} from '@angular/core';
 import { ActivatedRoute, Router,  } from '@angular/router';
 import { LocalizeRouterService } from 'localize-router';
 import { Technology } from '../interface/technology.interface';
-import {PreviousPositionService} from '../../../shared/services/previous-position.service';
+import { PreviousPositionService } from '../../../shared/services/previous-position.service';
 
 @Component({
   selector: 'app-angular',
@@ -12,7 +12,7 @@ import {PreviousPositionService} from '../../../shared/services/previous-positio
 export class TechnologyComponent implements OnInit {
 
 
-  private technology:Technology;
+  private technology:Technology = <Technology>{};
 
   private next:string;
   private previous:string;

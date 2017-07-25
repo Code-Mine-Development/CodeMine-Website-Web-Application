@@ -5,7 +5,7 @@ import {MockLanguage} from '../../../shared/mocks/language.mock';
 
 @Component({
   selector: 'app-fake-language-wrapper',
-  template: '<app-languages [Languages]="language"></app-languages>'
+  template: '<app-tools [Languages]="language"></app-tools>'
 })
 
 class FakeWrapperLanguagesComponent {

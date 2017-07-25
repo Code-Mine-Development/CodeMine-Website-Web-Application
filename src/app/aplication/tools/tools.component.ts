@@ -10,7 +10,7 @@ import {fadeInAnimation} from "../../shared/routing.animation";
   animations:[fadeInAnimation],
   host:{ '[@fadeInAnimation]': '' }
 })
-export class LanguagesComponent implements OnInit {
+export class ToolsComponent implements OnInit {
 
   constructor() { }
 

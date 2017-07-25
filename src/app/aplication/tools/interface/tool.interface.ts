@@ -1,4 +1,4 @@
-export interface Technology{
+export interface Tool{
   title: string,
   description: string,
   icon: string,
