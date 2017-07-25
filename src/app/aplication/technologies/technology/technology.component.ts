@@ -1,7 +1,8 @@
-import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute, Router } from '@angular/router';
+import {Component, OnInit} from '@angular/core';
+import { ActivatedRoute, Router,  } from '@angular/router';
 import { LocalizeRouterService } from 'localize-router';
 import { Technology } from '../interface/technology.interface';
+import {PreviousPositionService} from '../../../shared/services/previous-position.service';
 
 @Component({
   selector: 'app-angular',
@@ -10,6 +11,7 @@ import { Technology } from '../interface/technology.interface';
 })
 export class TechnologyComponent implements OnInit {
 
+
   private technology:Technology;
 
   private next:string;
@@ -17,14 +19,16 @@ export class TechnologyComponent implements OnInit {
 
   private URLprefix:string = '/technologies/';
 
-  constructor( private route:ActivatedRoute, private router:Router, private localize:LocalizeRouterService) { }
+
+  constructor( private route:ActivatedRoute, private router:Router, private localize:LocalizeRouterService, private previousPosition:PreviousPositionService ) {
+  }
 
   ngOnInit() {
     this.route.data.subscribe(
       (data) => {
         this.parseTechnologies(data["technologies"]);
       }
-    )
+    );
   }
 
   parseTechnologies( technologies:Technology[] ){
@@ -37,7 +41,7 @@ export class TechnologyComponent implements OnInit {
         prevKey = technologiesList[technologyIndex-1] || technologiesList[technologiesList.length-1];
 
     if(!technology)
-      return this.navigateTo(this.generateLink(technologiesList[0]))
+      return this.navigateTo(this.generateLink(technologiesList[0]));
 
     this.next = nextKey;
     this.previous = prevKey;
@@ -45,12 +49,20 @@ export class TechnologyComponent implements OnInit {
     this.technology = technology;
   }
 
+
   generateLink(technology:string){
     return this.localize.translateRoute(this.URLprefix+technology);
   }
 
+  getBackLink(){
+    let previousPage = this.previousPosition.getBackTo();
+    return this.localize.translateRoute("/"+previousPage+"/");
+  }
+
+
   navigateTo(url){
       this.router.navigateByUrl(url);
   }
+
 
 }

@@ -1,3 +1,5 @@
+@import '../../../../assets/styles/mediaQueries';
+
 :host{
   height: 100vh;
   position:fixed;
@@ -7,37 +9,94 @@
   width: 100%;
   height: 100vh;
   background: #c4473a;
-  position: fixed;
+  position: fixed
 }
-.header{
-  padding-top: 25vh;
-  position: relative;
-  display: flex;
-  width: 80%;
-  margin: auto;
-  justify-content: space-between;
-  svg{
-    height: 80px;
-    margin: 0 2em;
+
+.content{
+  margin-top:40vh;
+  width:100%;
+  position:relative;
+  z-index: 3003;
+  .exit{
+    position:fixed;
+    top:5%;
+    right:5%;
+    height: 30px;
   }
+}
+
+.header{
+  margin-top:5%;
+  position:fixed;
+  top:0;
+  left:0;
+  width:100%;
+  display: flex;
+  justify-content: center;
+
+  .navigation{
+    position:absolute;
+    width:100%;
+    height:100%;
+    img{
+      height:30px;
+      position:absolute;
+      zoom:1.5;
+    }
+    .next{
+      right:5%;
+      top:45%;
+    }
+    .prev{
+      left:5%;
+      top:45%;
+    }
+  }
+
   .title{
+    margin-top:30px;
     display: flex;
     align-items: center;
+    letter-spacing: normal;
+    svg{
+      height: 80px;
+      margin: 0 2em;
+      fill:#fff;
+      filter: drop-shadow( 5px 5px 20px rgba(0,0,0,.3) )
+    }
   }
 }
 .info{
-  display: flex;
-  position: relative;
-  width: 80%;
-  margin: 0 auto 0;
+  height:60vh;
+  overflow: scroll;
+  display:flex;
   flex-wrap: wrap;
+  align-items: flex-end;
+  justify-content: center;
   .col{
-    width: 45%;
-    .desc{
-      width: 80%;
+    &.description{
+      min-height: 100%;
+      display:flex;
+      align-items: center;
     }
-    .picture{
-      background: #eee;
+    width:50%;
+    @media #{$tablet}{
+      width:100%;
     }
   }
+  .description>div{
+    width: 60%;
+    margin:0 auto;
+    @media #{$tablet}{
+      width:80%;
+    }
+    .title{
+      font-size:1.5rem;
+    }
+  }
+  .picture{
+    display:flex;
+    background: #f8f8fa;
+  }
 }
+

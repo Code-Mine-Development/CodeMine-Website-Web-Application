@@ -2,7 +2,8 @@ export interface Technology{
   title: string,
   description: string,
   icon: {
-    url: string
+    path: string
   },
+  img:string,
   color: string
 }

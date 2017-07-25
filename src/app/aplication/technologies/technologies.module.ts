@@ -18,7 +18,8 @@ import { TechnologyComponent } from './technology/technology.component'
     TranslateModule
   ],
   providers:[
-    TechnologiesService
+    TechnologiesService,
+
   ],
   declarations: [
     TechnologiesComponent,
