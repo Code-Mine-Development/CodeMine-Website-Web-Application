@@ -82,7 +82,6 @@ export class TechnologyComponent implements OnInit {
         return '';
       })
       .subscribe( (svgBody:string) => {
-        this.technology.icon = svgBody.replace(/fill=\"[^"]*"/g, '');
         if( this.svg.nativeElement )
           this.svg.nativeElement.innerHTML = svgBody.replace(/fill=\"[^"]*"/g, '');;
       })

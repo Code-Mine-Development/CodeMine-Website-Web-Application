@@ -1,5 +1,5 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
-import { LanguagesComponent } from './languages.component';
+import { LanguagesComponent } from './tools.component';
 import {Component} from '@angular/core';
 import {MockLanguage} from '../../../shared/mocks/language.mock';
 

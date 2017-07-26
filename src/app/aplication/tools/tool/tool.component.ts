@@ -83,7 +83,6 @@ export class ToolComponent implements OnInit {
           return '';
       })
       .subscribe( (svgBody:string) => {
-        this.tool.icon = svgBody.replace(/fill=\"[^"]*"/g, '');
         if( this.svg.nativeElement )
           this.svg.nativeElement.innerHTML = svgBody.replace(/fill=\"[^"]*"/g, '');;
       })

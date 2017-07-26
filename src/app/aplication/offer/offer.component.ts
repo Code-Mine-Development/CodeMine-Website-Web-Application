@@ -3,6 +3,8 @@ import {ActivatedRoute, Data} from '@angular/router';
 import {PreviousPositionService} from '../../shared/services/previous-position.service';
 import {Offer} from '../../shared/interface/offer.interface';
 import {fadeInAnimation} from "../../shared/routing.animation";
+import {Technology} from '../technologies/interface/technology.interface';
+import {Tool} from '../tools/interface/tool.interface';
 
 
 
@@ -16,6 +18,8 @@ import {fadeInAnimation} from "../../shared/routing.animation";
 
 export class OfferComponent implements OnInit {
   offer: Offer;
+  technologies: Technology[];
+  tools: Tool[];
 
   constructor(private route: ActivatedRoute, private previousPosition:PreviousPositionService) { }
 
@@ -23,6 +27,8 @@ export class OfferComponent implements OnInit {
     this.route.data
       .subscribe((data: Data) => {
         this.offer = data['offer'];
+        this.technologies = data['technologies'];
+        this.tools= data['tools'];
       });
     this.previousPosition.setBackTo("offer")
   }

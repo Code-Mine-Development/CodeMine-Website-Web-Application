@@ -74,25 +74,33 @@
   "OFFER":{
     "features":{
       "title": "We create",
-      "nr_1":{
+      "solutionToBusines":{
         "title": "Solutions to your business problems",
         "description": "Rozwiązania problemów nie zawsze są oczywiste – z tego względu pomożemy Ci znaleźć złoty środek, pomagający usprawnić procesy i polepszyć wydajność w Twojej firmie."
       },
-      "nr_2":{
+      "internalApps":{
         "title": "Internal Apps",
         "description": "Oferujemy wydajne i responsywne, zaawansowane aplikacje dla Twojej firmy, oparte na najnowszych technologiach i możliwe do integracji z systemami enterprise."
       },
-      "nr_3":{
+      "B2Capplications":{
         "title": "B2C Applications",
         "description": "Zaprojektujemy nowoczesne systemy aplikacji internetowych dla Twoich klientów, które możemy także zintegrować z mediami społecznościowymi czy systemami płatności."
       },
-      "nr_4":{
+      "socialNetworking":{
         "title": "Social Networking",
         "description": "Sieci społecznościowe to dla nas nie problem – posiadamy doświadczenie zarówno w ich budowaniu, jak i rozwiązywaniu towarzyszących im problemów."
       },
-      "nr_5":{
+      "TVApps":{
         "title": "TV Apps",
         "description": "Jeśli masz pomysł na aplikację dla Apple TV - zgłoś się do nas! Jesteśmy otwarci na wyzwania i przeanalizujemy każdą Twoją koncepcję."
+      },
+      "desktopApplications":{
+        "title": "Desktop Applications",
+        "description": "Projektujemy aplikacje desktopowe dla systemów Windows, Linux i MacOS X, charakteryzujące się wysokim stopniem kompatybilności, stabilności oraz bezpieczeństwa."
+      },
+      "mobileApps":{
+        "title": "Mobile Apps",
+        "description": "Tworzymy aplikacje mobilne dedykowane systemom iOS oraz Android, dostosowane z jednej strony do Twoich wymagań, a z drugiej – do aktualnych trendów."
       }
     },
     "technologies":{
@@ -211,12 +219,14 @@
     }
   },
   "TECHNOLOGIES":{
+    "title": "Technologie",
     "description": "Opis",
     "Angular":{
       "description": "Ze względu na klarowną separację odpowiedzialności oraz łatwość w utrzymaniu czystości kodu, na Angularze opieramy większość naszych projektów o wymagającej strukturze. Co więcej, narzędzie to pozwala nam na szybkie tworzenie aplikacji internetowych wraz z testami jednostkowymi i akceptacyjnymi, z niespotykaną wcześniej łatwością.Stworzone przez firmę Google oraz niezliczoną ilość niezależnych programistów, narzędzie to jest nieustannie rozwijane. Choć bliskie jest nam nawet jego pierwsze wydanie, dopiero od kolejnych wersji Angular rozpoczął nową erę wydajnych oraz elastycznych bibliotek, pozwalających na tworzenie niesamowitych aplikacji internetowych. Przyczyniło się do tego zwłaszcza wprowadzenie w drugiej wersji frameworku podejścia reative programming, które połączone z silnym naciskiem na technologie TypeScript, ustandaryzowało cały proces projektowy."
     }
   },
   "TOOLS":{
+    "title": "Narzędzia",
     "AI":{
       "description":"Po Illustratora sięgamy najczęściej w końcowych etapach prac – tuż po dopracowaniu i zatwierdzeniu makiet UX, w programie powstaje UI, czyli warstwa wizualna danego projektu. W Illustratorze projektujemy większość elementów graficznych, począwszy od prostych ikon, a skończywszy na rozmaitych ilustracjach, które z kolei niejednokrotnie stanowią bazę do tworzenia animacji svg, wykorzystywanych w naszych interfejsach."
     },

@@ -12,7 +12,7 @@ import {OfferResolver} from './services/offer.resolver';
 import {ArchitectureComponent} from './architecture/architecture.component';
 import {WeCreateComponent} from './weCreate/weCreate.component';
 import {TechnologiesComponent} from './technologies/technologies.component';
-import {LanguagesComponent} from './languages/languages.component';
+import {ToolsComponent} from './tools/tools.component';
 
 
 
@@ -29,7 +29,7 @@ import {LanguagesComponent} from './languages/languages.component';
     OfferComponent,
     WeCreateComponent,
     TechnologiesComponent,
-    LanguagesComponent
+    ToolsComponent
   ],
   providers: [OfferService, OfferResolver],
 })
