@@ -2,9 +2,9 @@
   "adobe-illustrator":{
     "title": "Adobe Illustrator",
     "description": "TOOLS.AI.description",
-    "icon": "",
+    "icon": "ai/ai.svg",
     "img": "assets/images/angularCode.png",
-    "color": "#F7A80D"
+    "color": "#f90"
   },
   "amazon-aws":{
     "title": "Amazon AWS",
@@ -23,23 +23,23 @@
   "apache-kafka":{
     "title": "Apache Kafka",
     "description": "TOOLS.ApacheKafka.description",
-    "icon": "",
+    "icon": "apachekafka/apachekafka.svg",
     "img": "assets/images/angularCode.png",
-    "color": "#F7A80D"
+    "color": "#000000"
   },
   "axurerp":{
     "title": "Axure RP",
     "description": "TOOLS.AxureRP.description",
-    "icon": "",
+    "icon": "axurerp/axurerp.svg",
     "img": "assets/images/angularCode.png",
-    "color": "#F7A80D"
+    "color": "#a702b1"
   },
   "circlecl":{
     "title": "CircleCL",
     "description": "TOOLS.CircleCl.description",
-    "icon": "",
+    "icon": "circlecl/circlecl.svg",
     "img": "assets/images/angularCode.png",
-    "color": "#F7A80D"
+    "color": "#0a5066"
   },
   "docker":{
     "title": "Docker",
@@ -58,9 +58,9 @@
   "gradle":{
     "title": "Gradle",
     "description": "TOOLS.Gradle.description",
-    "icon": "",
+    "icon": "gradle/gradle.svg",
     "img": "assets/images/angularCode.png",
-    "color": "#F7A80D"
+    "color": "#21cb97"
   },
   "grunt":{
     "title": "Grunt",
@@ -86,23 +86,23 @@
   "jenkins":{
     "title": "Jenkins",
     "description": "TOOLS.Jenkins.description",
-    "icon": "",
+    "icon": "jenkins/jenkins.svg",
     "img": "assets/images/angularCode.png",
-    "color": "#F7A80D"
+    "color": "#d15252"
   },
   "jira":{
     "title": "Jira",
     "description": "TOOLS.Jira.description",
-    "icon": "",
+    "icon": "jira/jira.svg",
     "img": "assets/images/angularCode.png",
     "color": "#F7A80D"
   },
   "jmeter":{
     "title": "JMeter",
     "description": "TOOLS.JMeter.description",
-    "icon": "",
+    "icon": "jmeter/jmeter.svg",
     "img": "assets/images/angularCode.png",
-    "color": "#F7A80D"
+    "color": "#ef6d3a"
   },
   "mongodb":{
     "title": "MongoDB",
@@ -121,9 +121,9 @@
   "npm":{
     "title": "NPM",
     "description": "TOOLS.NPM.description",
-    "icon": "",
+    "icon": "npm/npm.svg",
     "img": "assets/images/angularCode.png",
-    "color": "#F7A80D"
+    "color": "#cb3837"
   },
   "postgresql":{
     "title": "PostgreSQL",
@@ -135,9 +135,9 @@
   "rabbitmq":{
     "title": "RabbitMQ",
     "description": "TOOLS.RabbitMQ.description",
-    "icon": "",
+    "icon": "rabbitmq/rabbitmq.svg",
     "img": "assets/images/angularCode.png",
-    "color": "#F7A80D"
+    "color": "#f60"
   },
   "reactjs":{
     "title": "ReactJS",
@@ -156,23 +156,23 @@
   "sketch":{
     "title": "Sketch",
     "description": "TOOLS.Sketch.description",
-    "icon": "",
+    "icon": "sketch/sketch.svg",
     "img": "assets/images/angularCode.png",
-    "color": "#F7A80D"
+    "color": "#fcbd01"
   },
   "sonar-qube":{
     "title": "Sonar Qube",
     "description": "TOOLS.SonarQube.description",
-    "icon": "",
+    "icon": "sonarqube/sonarqube.svg",
     "img": "assets/images/angularCode.png",
-    "color": "#F7A80D"
+    "color": "#05a2d8"
   },
   "spring-framework":{
     "title": "Spring Framework",
     "description": "TOOLS.SpringFramework.description",
-    "icon": "",
+    "icon": "springframework/springframework.svg",
     "img": "assets/images/angularCode.png",
-    "color": "#F7A80D"
+    "color": "#6eb340"
   },
   "symfony":{
     "title": "Symfony",
@@ -191,16 +191,16 @@
   "vagrant":{
     "title": "Vagrant",
     "description": "TOOLS.Vagrant.description",
-    "icon": "",
+    "icon": "vagrant/vagrant.svg",
     "img": "assets/images/angularCode.png",
-    "color": "#F7A80D"
+    "color": "#1563ff"
   },
   "webpack":{
     "title": "Webpack",
     "description": "TOOLS.Webpack.description",
-    "icon": "",
+    "icon": "webpack/webpack.svg",
     "img": "assets/images/angularCode.png",
-    "color": "#F7A80D"
+    "color": "#8ed4f9"
   },
   "zend-framework":{
     "title": "Zend Framework",

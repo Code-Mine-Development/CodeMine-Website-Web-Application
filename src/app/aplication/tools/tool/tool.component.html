@@ -12,7 +12,7 @@
     </nav>
     <a [routerLink]="generateLink(next)"><img src="assets/images/arrows/angle_left.svg" alt="Next technology"> </a>
     <div class="title">
-      <svg #svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128">
+      <svg #svg xmlns="http://www.w3.org/2000/svg" [attr.viewBox]="viewBox">
       </svg>
       <h1>{{ tool.title }}</h1>
     </div>

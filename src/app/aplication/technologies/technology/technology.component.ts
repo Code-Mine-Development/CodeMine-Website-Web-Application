@@ -13,6 +13,7 @@ import { PreviousPositionService } from '../../../shared/services/previous-posit
 export class TechnologyComponent implements OnInit {
 
   @ViewChild("svg") svg;
+  viewBox = "0 0 128 128";
 
   private technology:Technology = <Technology>{};
 
@@ -67,23 +68,25 @@ export class TechnologyComponent implements OnInit {
       this.router.navigateByUrl(url);
   }
 
-
   getIcon(url:string){
     if(url.length == 0)
       return;
     this.http.get(this.iconDir+url)
       .map( (response) => ( response.text() ))
       .map( (svgfile:string) => {
-        let m =  /\<svg[^>]*\>(.*)<\/svg>/g.exec(svgfile)
-        if(m != null)
-          return m[1];
+        let m =  /\<svg.*viewBox\="([^"]*)[^>]*\>(.*)<\/svg>/g.exec(svgfile)
+        if(m != null) {
+          this.viewBox = m[1];
+          return m[2];
+        }
         return '';
       })
       .subscribe( (svgBody:string) => {
-        this.technology.icon = svgBody.replace(/fill="[^"]*"/g, '');
+        this.technology.icon = svgBody.replace(/fill=\"[^"]*"/g, '');
         if( this.svg.nativeElement )
-          this.svg.nativeElement.innerHTML = svgBody.replace(/fill="[^"]*"/g, '');;
+          this.svg.nativeElement.innerHTML = svgBody.replace(/fill=\"[^"]*"/g, '');;
       })
   }
+
 
 }

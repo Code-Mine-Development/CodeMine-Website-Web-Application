@@ -2,9 +2,9 @@
   "bash":{
     "title": "Bash",
     "description": "TECHNOLOGIES.bash.description",
-    "icon": "",
+    "icon": "bash/bash.svg",
     "img": "assets/images/angularCode.png",
-    "color": "#c4473a"
+    "color": "#009d96"
   },
   "html5":{
     "title": "HTML 5",
@@ -37,15 +37,15 @@
   "swift":{
     "title": "Swift",
     "description": "TECHNOLOGIES.swift.description",
-    "icon": "",
+    "icon": "swift/swift.svg",
     "img": "assets/images/angularCode.png",
-    "color": "#F0DB4F"
+    "color": "#f05138"
   },
   "typescript":{
     "title": "Type Script",
     "description": "TECHNOLOGIES.typescript.description",
-    "icon": "",
+    "icon": "typescript/typescript.svg",
     "img": "assets/images/angularCode.png",
-    "color": "#F0DB4F"
+    "color": "#0174c1"
   }
 }
