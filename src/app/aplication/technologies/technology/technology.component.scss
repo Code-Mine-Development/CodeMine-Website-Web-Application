@@ -27,6 +27,29 @@
   }
 }
 
+.home{
+  position:fixed;
+  top:5%;
+  left:5%;
+  width:37px;
+
+  z-index: 3004;
+  polygon{
+    transition:all .5s;
+  }
+  polygon:nth-child(2){
+    opacity:0;
+  }
+  &:hover{
+    polygon:nth-child(1){
+      opacity:0;
+    }
+    polygon:nth-child(2){
+      opacity:1;
+    }
+  }
+}
+
 .header{
   margin-top:5%;
   position:fixed;

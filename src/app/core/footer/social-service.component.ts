@@ -3,7 +3,7 @@ import { Component, Input, Output, EventEmitter, HostListener } from '@angular/c
 @Component({
   selector: '[app-social-service]',
   template: `
-    <a href="#"><span [class]="'fa fa-2x fa-'+socialName" aria-hidden="true"></span></a>
+    <a [href]="adress"><span [class]="'fa fa-2x fa-'+socialName" aria-hidden="true"></span></a>
   `,
   styles: [`
     :host {
@@ -27,6 +27,7 @@ export class SocialServiceComponent  {
 
   @Input('color') color:string;
   @Input('socialName') socialName:string;
+  @Input('link') adress:string;
 
   @Output('hoverColor') hoverStream = new EventEmitter();
 

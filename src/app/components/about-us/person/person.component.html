@@ -1,7 +1,7 @@
 <div id="personView" >
   <div id="personWrapper">
-<button (click)="closeButtonClicked()" >x</button>
-    <div class="bg" [ngStyle]="{'background-image': 'url(./assets/images/persons/rodo.png)'}"></div>
+    <button (click)="closeButtonClicked()" ><img src="assets/images/arrows/x.svg"></button>
+    <div class="bg" [ngStyle]="{'background-image': 'url(./assets/images/people/'+person[ActivatedDeskId || 0].image.normal+'), url(./assets/images/people/'+person[ActivatedDeskId || 0].image.funny+')'}"></div>
     <div class="desc">
       <h2>{{person[ActivatedDeskId || 0 ].name}} {{person[ActivatedDeskId || 0 ].surname}}</h2>
       <h3>{{person[ActivatedDeskId || 0 ].position}}</h3>

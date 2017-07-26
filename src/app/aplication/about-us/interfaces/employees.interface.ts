@@ -6,7 +6,10 @@ export interface Employees {
   position: string;
   description:string;
   since:number;
-  imagePath:string;
+  image:{
+    normal:string,
+    funny:string
+  };
   deskCoordinate: DeskCoordinate
 }
 

@@ -11,8 +11,8 @@ import { Component, OnChanges, Input, ViewChild, HostListener } from '@angular/c
             <style>.cls-1{fill:#ffdf00;}</style>
           </defs>
           <g id="Layer_one" data-name="layer one">
-            <polygon class="cls-1" [class.hidden] = 'homeVisible' [attr.points]="'0 25.86 25 25.86 0.05 0'"></polygon>
-            <polygon class="cls-1" [class.hidden] = '!homeVisible'[attr.points]="'0 25.86 24 25.86 24 11 11 0 0 11'"></polygon>
+            <polygon class="cls-1" [class.hidden] = 'homeVisible' [attr.points]="'0 25.86 21.89 25.86 0.05 0'"></polygon>
+            <polygon class="cls-1" [class.hidden] = '!homeVisible'[attr.points]="'0 25.86 21.89 25.86 21.89 11 11 0 0 11'"></polygon>
           </g>
         </svg>
       </div>

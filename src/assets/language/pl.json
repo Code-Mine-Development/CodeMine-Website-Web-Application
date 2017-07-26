@@ -107,7 +107,7 @@
   },
   "COMPANY":{
     "adressTitle": "Skontaktuj się z nami!",
-    "showOnMap": "Zobacz na mapie",
+    "showOnMap": "zobacz na mapie",
     "hireUs": "Hire us!",
     "describeUsYourProject": "Opisz nam swój pomysł, formularz pomoże ci sprecyzować czego będzie on dotyczył",
     "navigateToBrief": "Przejdź do briefu"
@@ -327,8 +327,7 @@
   "socialnetworking":"social-networking",
   "tvapps":"tv-apps",
 
-  "languages":"jezyki",
-
+  "tools":"narzedzia",
   "technologies":"technologie"
 }
 
