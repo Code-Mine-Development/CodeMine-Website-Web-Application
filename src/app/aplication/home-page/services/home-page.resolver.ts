@@ -6,12 +6,12 @@ import {Portfolio} from '../../portfolio/interfaces/portfolio.interface';
 
 
 @Injectable()
-export class HomePageResolver implements Resolve<Portfolio> {
+export class HomePageResolver implements Resolve<Portfolio[]> {
 
     constructor(private homePageService: PortfolioService) {}
 
     resolve(route: ActivatedRouteSnapshot,
-            state: RouterStateSnapshot): Observable<Portfolio> | Promise<Portfolio> | Portfolio {
+            state: RouterStateSnapshot): Observable<Portfolio[]> | Promise<Portfolio[]> | Portfolio[] {
         return this.homePageService.getPortfolioHomePageList();
     }
 

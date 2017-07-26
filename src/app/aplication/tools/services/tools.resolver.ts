@@ -6,7 +6,7 @@ import {Tool} from '../interface/tool.interface';
 
 
 @Injectable()
-export class TechnologiesResolver implements Resolve<Tool[]> {
+export class ToolsResolver implements Resolve<Tool[]> {
 
     constructor(private technologiesService: TechnologiesService) {}
 
