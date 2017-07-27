@@ -19,7 +19,7 @@ export class ScrollToDirective {
   private targetPosition:number = null;
   private currentPosition:number = null;
   private start:number = null;
-  private duration:number = 500;
+  private duration:number = 500
 
 
 

@@ -44,14 +44,14 @@
   "docker":{
     "title": "Docker",
     "description": "TOOLS.docker.description",
-    "icon": "docker/docker-plain.svg",
+    "icon": "docker/docker.svg",
     "img": "assets/images/angularCode.png",
     "color": "#019BC6"
   },
   "git":{
     "title": "Git",
     "description": "TOOLS.Git.description",
-    "icon": "git/git-plain.svg",
+    "icon": "git/git.svg",
     "img": "assets/images/angularCode.png",
     "color": "#F34F29"
   },
@@ -65,21 +65,21 @@
   "grunt":{
     "title": "Grunt",
     "description": "TOOLS.Grunt.description",
-    "icon": "grunt/grunt-plain.svg",
+    "icon": "grunt/grunt.svg",
     "img": "assets/images/angularCode.png",
     "color": "#FCAA1A"
   },
   "gulp":{
     "title": "Gulp",
     "description": "TOOLS.Gulp.description",
-    "icon": "gulp/gulp-plain.svg",
+    "icon": "gulp/gulp.svg",
     "img": "assets/images/angularCode.png",
     "color": "#EB4A4B"
   },
   "laravel":{
     "title": "Laravel",
     "description": "TOOLS.Laravel.description",
-    "icon": "laravel/laravel-plain.svg",
+    "icon": "laravel/laravel.svg",
     "img": "assets/images/angularCode.png",
     "color": "#FD4F31"
   },
@@ -107,14 +107,14 @@
   "mongodb":{
     "title": "MongoDB",
     "description": "TOOLS.MongoDB.description",
-    "icon": "mongodb/mongodb-plain.svg",
+    "icon": "mongodb/mongodb.svg",
     "img": "assets/images/angularCode.png",
     "color": "#4FAA41"
   },
   "mysql":{
     "title": "MySQL",
     "description": "TOOLS.MySQL.description",
-    "icon": "mysql/mysql-plain.svg",
+    "icon": "mysql/mysql.svg",
     "img": "assets/images/angularCode.png",
     "color": "#00618A"
   },
@@ -128,7 +128,7 @@
   "postgresql":{
     "title": "PostgreSQL",
     "description": "TOOLS.PostgreSQL.description",
-    "icon": "postgresql/postgresql-plain.svg",
+    "icon": "postgresql/postgresql.svg",
     "img": "assets/images/angularCode.png",
     "color": "#336791"
   },
@@ -142,14 +142,14 @@
   "reactjs":{
     "title": "ReactJS",
     "description": "TOOLS.ReactJS.description",
-    "icon": "react/react-original.svg",
+    "icon": "react/react.svg",
     "img": "assets/images/angularCode.png",
     "color": "#61DAFB"
   },
   "sass":{
     "title": "SASS",
     "description": "TOOLS.SASS.description",
-    "icon": "sass/sass-original.svg",
+    "icon": "sass/sass.svg",
     "img": "assets/images/angularCode.png",
     "color": "#CB6699"
   },
@@ -177,14 +177,14 @@
   "symfony":{
     "title": "Symfony",
     "description": "TOOLS.Symfony.description",
-    "icon": "symfony/symfony-original.svg",
+    "icon": "symfony/symfony.svg",
     "img": "assets/images/angularCode.png",
     "color": "#494949"
   },
   "traviscl":{
     "title": "TravisCL",
     "description": "TOOLS.TravisCl.description",
-    "icon": "travis/travis-plain.svg",
+    "icon": "travis/traviscl.svg",
     "img": "assets/images/angularCode.png",
     "color": "#BB2031"
   },
@@ -205,7 +205,7 @@
   "zend-framework":{
     "title": "Zend Framework",
     "description": "TOOLS.ZendFramework.description",
-    "icon": "zend/zend-plain.svg",
+    "icon": "zend/zend.svg",
     "img": "assets/images/angularCode.png",
     "color": "#68B604"
   }

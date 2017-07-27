@@ -1,7 +1,9 @@
 @import '../../../../assets/styles/mediaQueries.scss';
 
 .container {
-  width: 80%;
+  width: 100%;
+  padding:0 20px;
+  box-sizing: border-box;
   margin: 8em auto;
 }
 .header{
@@ -12,20 +14,32 @@
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  justify-content:center;
 }
 .tools-col{
-  width: 200px;
-  height: 200px;
+  @media #{$phone}{
+    width: 100%;
+  }
+  @media #{$tablet}{
+    width: 50%;
+  }
+  @media #{$phone-tablet}{
+    width: 33.33%;
+  }
+  @media #{$computer}{
+    width: 20%;
+  }
+  @media #{$xl-computer}{
+    width: 16.6%;
+  }
   box-sizing: border-box;
   border:1px solid #eee;
   background-size: cover;
   img{
-    box-sizing: border-box;
-    padding: 20%;
-    height:100%;
-    width:100%;
-    opacity: 1;
+    max-height:100%;
+    transition: .5s;
+    &:hover{
+      background: #eeeeee;
+    }
   }
 }
 .tools:after {

@@ -30,16 +30,22 @@ export class ToolComponent implements OnInit {
   ngOnInit() {
     this.route.data.subscribe(
       (data) => {
+        this.clearSvg();
         this.parseTechnologies(data["tools"]);
       }
     );
   }
 
-  parseTechnologies( technologies:Tool[] ){
+  clearSvg(){
+    if(this.svg && this.svg.nativeElement)
+      this.svg.nativeElement.innerHTML =  "";
+  }
+
+  parseTechnologies( tools:Tool[] ){
     let urlList = this.router.url.split("/"),
         urlSegment = urlList[urlList.length-1],
-        toolsList = Object.keys(technologies),
-        tool = technologies[urlSegment] || null,
+        toolsList = Object.keys(tools),
+        tool = tools[urlSegment] || null,
         toolIndex = toolsList.indexOf(urlSegment),
         nextKey = toolsList[toolIndex+1] || toolsList[0],
         prevKey = toolsList[toolIndex-1] || toolsList[toolsList.length-1];
@@ -49,7 +55,6 @@ export class ToolComponent implements OnInit {
 
     this.next = nextKey;
     this.previous = prevKey;
-
     this.tool = tool;
     this.getIcon(tool.icon);
   }

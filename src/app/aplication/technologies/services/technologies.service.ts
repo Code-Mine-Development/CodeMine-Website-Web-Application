@@ -15,7 +15,7 @@ export class TechnologiesService {
 
   getTechnologies(){
     if(this.technology)
-      return Observable.from([this.technology]);
+      return Observable.from([Object.assign({},this.technology)]);
 
     return this.http.get(url + 'technologies.json')
       .map(
