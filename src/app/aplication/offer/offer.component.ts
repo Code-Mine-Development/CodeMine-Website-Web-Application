@@ -1,10 +1,11 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit, AfterViewInit} from '@angular/core';
 import {ActivatedRoute, Data} from '@angular/router';
 import {PreviousPositionService} from '../../shared/services/previous-position.service';
 import {Offer} from '../../shared/interface/offer.interface';
 import {fadeInAnimation} from "../../shared/routing.animation";
 import {Technology} from '../technologies/interface/technology.interface';
 import {Tool} from '../tools/interface/tool.interface';
+import {ScrollToService} from '../../shared/services/scroll-to.service';
 
 
 
@@ -16,12 +17,12 @@ import {Tool} from '../tools/interface/tool.interface';
   host:{ '[@fadeInAnimation]': '' }
 })
 
-export class OfferComponent implements OnInit {
+export class OfferComponent implements OnInit, AfterViewInit {
   offer: Offer;
   technologies: Technology[];
   tools: Tool[];
 
-  constructor(private route: ActivatedRoute, private previousPosition:PreviousPositionService) { }
+  constructor(private route: ActivatedRoute, private previousPosition:PreviousPositionService, private scrollService:ScrollToService) { }
 
   ngOnInit() {
     this.route.data
@@ -30,7 +31,26 @@ export class OfferComponent implements OnInit {
         this.technologies = data['technologies'];
         this.tools= data['tools'];
       });
-    this.previousPosition.setBackTo("offer")
+    this.previousPosition.setBackTo("offer");
+  }
+
+  ngAfterViewInit(){
+    let category = this.previousPosition.getBackCategory();
+    if(!category || category == "") return;
+    console.log(category);
+    switch(category){
+      case "tools":
+        this.goToSection("offer_tools")
+            break;
+      case "technologies":
+        this.goToSection("offer_technologies")
+            break;
+    }
+  }
+
+  goToSection(section:string){
+    this.previousPosition.setBackCategory("");
+    this.scrollService.scroll(section)
   }
 
 }

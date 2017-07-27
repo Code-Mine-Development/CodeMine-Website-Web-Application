@@ -4,6 +4,7 @@ import {TranslateLoader, TranslateModule} from "@ngx-translate/core";
 import {Http} from "@angular/http";
 import {TranslateHttpLoader} from "@ngx-translate/http-loader";
 import { ScrollToDirective } from './directives/scroll-to.directive';
+import {ScrollToService} from './services/scroll-to.service';
 
 
 @NgModule({
@@ -11,6 +12,9 @@ import { ScrollToDirective } from './directives/scroll-to.directive';
     CommonModule,
     TranslateModule,
     ScrollToDirective
+  ],
+  providers:[
+    ScrollToService
   ],
   declarations: [ScrollToDirective]
 

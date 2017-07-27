@@ -3,7 +3,7 @@
 <div class="technologies">
   <div class="technologies-col"
        *ngFor="let item of keys"
-       [routerLink]="'/technologies/'+(item) | localize">
+       (click)="navigate('/technologies/'+(item))">
     <img [src]="'assets/icons/'+Technologies[item].icon" [attr.alt]="item + ' icon'">
   </div>
 </div>

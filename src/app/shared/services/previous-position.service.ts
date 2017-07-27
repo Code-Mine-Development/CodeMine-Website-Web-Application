@@ -5,7 +5,7 @@ import {Router, NavigationStart} from '@angular/router';
 export class PreviousPositionService {
 
   private backTo:string = "home";
-  private backFrom:string = "";
+  private backCategory:string = "";
 
   constructor() {
   }
@@ -15,16 +15,16 @@ export class PreviousPositionService {
     this.backTo = target;
   }
 
-  setBackFrom(target){
-    this.backFrom = target;
+  setBackCategory(target){
+    this.backCategory= target;
   }
 
   getBackTo(){
     return this.backTo;
   }
 
-  getBackFrom(){
-    return this.backFrom;
+  getBackCategory(){
+    return this.backCategory;
   }
 
 }
