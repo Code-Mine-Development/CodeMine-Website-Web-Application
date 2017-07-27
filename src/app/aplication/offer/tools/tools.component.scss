@@ -35,7 +35,8 @@
   border:1px solid #eee;
   background-size: cover;
   img{
-    max-height:100%;
+    width:100%;
+    height:100%;
     transition: .5s;
     &:hover{
       background: #eeeeee;

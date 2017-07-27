@@ -29,9 +29,15 @@ export class TechnologyComponent implements OnInit {
   ngOnInit() {
     this.route.data.subscribe(
       (data) => {
+        this.clearSvg();
         this.parseTechnologies(data["technologies"]);
       }
     );
+  }
+
+  clearSvg(){
+    if(this.svg && this.svg.nativeElement)
+      this.svg.nativeElement.innerHTML =  "";
   }
 
   parseTechnologies( technologies:Technology[] ){

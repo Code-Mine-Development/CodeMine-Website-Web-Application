@@ -9,7 +9,7 @@
   "html5":{
     "title": "HTML 5",
     "description": "TECHNOLOGIES.html5.description",
-    "icon": "html5/html5-plain.svg",
+    "icon": "html5/html5.svg",
     "img": "assets/images/angularCode.png",
     "color": "#E44D26"
   },
@@ -23,14 +23,14 @@
   "java":{
     "title": "JAVA",
     "description": "TECHNOLOGIES.java.description",
-    "icon": "java/java-plain.svg",
+    "icon": "java/java.svg",
     "img": "assets/images/angularCode.png",
     "color": "#EA2D2E"
   },
   "php":{
     "title": "PHP",
     "description": "TECHNOLOGIES.php.description",
-    "icon":  "php/php-plain.svg",
+    "icon":  "php/php.svg",
     "img": "assets/images/angularCode.png",
     "color": "#6181B6"
   },
