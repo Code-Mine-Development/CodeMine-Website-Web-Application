@@ -4,13 +4,23 @@
   </svg>
 </div>
 <section class="content">
+  <a [routerLink]="'/home' | localize">
+    <svg class="home" viewBox="0 0 21 21">
+      <defs>
+        <style>.cls-1{fill:#ffdf00;}</style>
+      </defs>
+      <g id="Layer_one" data-name="layer one">
+        <polygon class="cls-1" [attr.points]="'0,21 21,21 0,0'"></polygon>
+        <polygon class="cls-1" [attr.points]="'0,21 21,21 21,10 10,0 0,10'"></polygon>
+      </g>
+    </svg>
+  </a>
   <a [routerLink]="getBackLink()"> <img class="exit" src="assets/images/arrows/x.svg" alt="Back to main page"></a>
   <div class="header">
     <nav class="navigation">
       <a [routerLink]="generateLink(previous)"><img class="prev" src="assets/images/arrows/angle_left.svg" alt="Previous technology"> </a>
       <a [routerLink]="generateLink(next)"><img class="next" src="assets/images/arrows/angle_right.svg" alt="Next technology"> </a>
     </nav>
-    <a [routerLink]="generateLink(next)"><img src="assets/images/arrows/angle_left.svg" alt="Next technology"> </a>
     <div class="title">
       <svg #svg xmlns="http://www.w3.org/2000/svg" [attr.viewBox]="viewBox">
       </svg>

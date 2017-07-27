@@ -4,6 +4,7 @@ import { RouterModule } from '@angular/router';
 import { HttpModule } from '@angular/http';
 import { TranslateModule } from '@ngx-translate/core'
 import { ToolsRoutingModule } from './tools.routing';
+import { LocalizeRouterModule } from 'localize-router';
 
 import { ToolsComponent } from './tools.component';
 import { ToolComponent } from './tool/tool.component';
@@ -14,7 +15,8 @@ import { ToolComponent } from './tool/tool.component';
     ToolsRoutingModule,
     RouterModule,
     TranslateModule,
-    HttpModule
+    HttpModule,
+    LocalizeRouterModule
   ],
   declarations: [ ToolsComponent, ToolComponent ]
 })

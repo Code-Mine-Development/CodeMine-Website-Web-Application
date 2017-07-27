@@ -43,7 +43,7 @@
   },
   "docker":{
     "title": "Docker",
-    "description": "TOOLS.docker.description",
+    "description": "TOOLS.Docker.description",
     "icon": "docker/docker.svg",
     "img": "assets/images/angularCode.png",
     "color": "#019BC6"
