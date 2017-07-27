@@ -16,7 +16,7 @@
   "javascript":{
     "title": "JavaScript",
     "description": "TECHNOLOGIES.javascript.description",
-    "icon":  "javascript/javascript-plain.svg",
+    "icon":  "javascript/js.svg",
     "img": "assets/images/angularCode.png",
     "color": "#F0DB4F"
   },
