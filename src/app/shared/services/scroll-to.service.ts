@@ -4,44 +4,46 @@ import {DOCUMENT} from '@angular/common';
 @Injectable()
 export class ScrollToService {
 
-  private scrollingOpponent:any = null;
-  private targetPosition:number = null;
-  private currentPosition:number = null;
-  private start:number = null;
-  private duration:number = 500
+  private scrollingOpponent: any = null;
+  private targetPosition: number = null;
+  private currentPosition: number = null;
+  private start: number = null;
+  private duration: number = 500
 
   private target;
+  private onScreenLocation;
   private opponent;
 
 
-  scroll(target, opponent?){
+  scroll(target, onScreenLocation = "top", opponent?) {
     this.target = target;
     this.opponent = opponent || null;
+    this.onScreenLocation = onScreenLocation;
     this.reset();
     this.filterTarget();
     this.chooseOppenent();
     this.scrollTo();
   }
 
-  constructor(@Inject(DOCUMENT) private document){}
+  constructor(@Inject(DOCUMENT) private document) {
+  }
 
-  private reset(){
+  private reset() {
     this.scrollingOpponent = null;
     this.targetPosition = null;
     this.currentPosition = null;
     this.start = null;
   }
 
-  private chooseOppenent(){
+  private chooseOppenent() {
     this.scrollingOpponent = this.opponent ? this.opponent : this.document;
   }
 
-  private filterTarget(){
-    if(this.target === 'SiteHead')
+  private filterTarget() {
+    if (this.target === 'SiteHead')
       return;
-    this.target =  typeof this.target == 'object' ? this.target : this.document.querySelector('#'+this.target);
+    this.target = typeof this.target == 'object' ? this.target : this.document.querySelector('#' + this.target);
   }
-
 
 
   private scrollTo() {
@@ -51,7 +53,7 @@ export class ScrollToService {
   }
 
   private scrollToElement(timestamp) {
-    if(!this.start) this.start = timestamp;
+    if (!this.start) this.start = timestamp;
 
     let progress = timestamp - this.start,
       progressFactor = progress / this.duration,
@@ -61,19 +63,19 @@ export class ScrollToService {
 
     this.changeScrollTop(animationPosition);
 
-    if(this.duration > progress)
+    if (this.duration > progress)
       window.requestAnimationFrame(this.scrollToElement.bind(this))
 
   }
 
-  private getCurrentPosition(){
-    if(this.opponent)
+  private getCurrentPosition() {
+    if (this.opponent)
       return this.scrollingOpponent.scrollTop;
     return this.scrollingOpponent.body.scrollTop || this.scrollingOpponent.documentElement.scrollTop;
   }
 
   private getTargetPosition() {
-    if(this.target === "SiteHead")
+    if (this.target === "SiteHead")
       return 0;
 
     let distance = this.target.offsetTop;
@@ -83,8 +85,22 @@ export class ScrollToService {
       distance += parent.offsetTop;
       parent = parent.offsetParent;
     }
-    return distance-150;
+    return this.parseLocationDistance(distance);
   }
+
+  private parseLocationDistance(distance: number) {
+    let halfHeight = (this.opponent ? this.opponent.offsetHeight : window.innerHeight) / 2,
+        halfTargetHeight = this.target.offsetHeight/2;
+
+    if (this.onScreenLocation == "top")
+      return distance - 150;
+    else if (this.onScreenLocation == "center")
+      return distance - halfHeight + halfTargetHeight;
+    else if (this.onScreenLocation == "bottom")
+      return distance + (2 * halfHeight);
+    return distance;
+  }
+
 
   private changeScrollTop(position){
     if(this.opponent)

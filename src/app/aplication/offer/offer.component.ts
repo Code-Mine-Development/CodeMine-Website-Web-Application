@@ -3,7 +3,7 @@ import {ActivatedRoute, Data} from '@angular/router';
 import {PreviousPositionService} from '../../shared/services/previous-position.service';
 import {Offer} from '../../shared/interface/offer.interface';
 import {fadeInAnimation} from "../../shared/routing.animation";
-import {Tool} from '../tools/interface/tool.interface';
+import {OfferElementBeforePrepare} from '../offerElementsDetails/interface/offerElementBeforePrepare';
 import {ScrollToService} from '../../shared/services/scroll-to.service';
 
 
@@ -18,8 +18,8 @@ import {ScrollToService} from '../../shared/services/scroll-to.service';
 
 export class OfferComponent implements OnInit, AfterViewInit {
   offer: Offer;
-  technologies: Tool[];
-  tools: Tool[];
+  technologies: OfferElementBeforePrepare[];
+  tools: OfferElementBeforePrepare[];
 
   constructor(private route: ActivatedRoute, private previousPosition:PreviousPositionService, private scrollService:ScrollToService) { }
 

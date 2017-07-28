@@ -13,9 +13,9 @@ export class HomeInformationComponent implements OnInit, OnDestroy {
   @ViewChild('homeBox') homeBox;
   @ViewChild('sideSlider') sideSlider;
 
-  prevElement:number;
   currentElement:number = 1;
-  lastElement:number = 7;
+  private border = 0;
+  private opacity = 0;
 
   constructor(private route: ActivatedRoute, private homeInformationService:HomeInformationServices) {}
   ngOnInit() {
@@ -32,26 +32,25 @@ export class HomeInformationComponent implements OnInit, OnDestroy {
 
   scroll(event){
     this.homeInformationService.setScrollTop(event.target.scrollTop);
-    this.animateShadowBox(event);
+    this.animateShadowBox(event.target.scrollTop);
     this.showCurrentTitle(event);
   }
 
-  animateShadowBox(event){
-    let distance = 1900;
-    let positionRatio = event.target.scrollTop/distance;
-    let positionFactor = positionRatio>1 ? 1 : positionRatio;
-    this.homeBox.nativeElement.style.boxShadow = `inset 0 0 10px 10px rgba(0,0,0,${positionFactor/10})`;
-    this.sideSlider.nativeElement.style.opacity = positionFactor;
+  animateShadowBox(scrollTop){
+    let distance = 1900,
+        positionRatio = scrollTop/distance,
+        positionFactor = positionRatio > 1 ? 1 : positionRatio;
+    this.border = positionFactor/10;
+
+    this.opacity = positionFactor;
   }
+  showCurrentTitle(event) {
+    let boxes: any = document.querySelectorAll('.box');
 
-  showCurrentTitle(event){
-    let boxes:any = document.querySelectorAll('.box');
+    for (let i = 0; i < this.informations.length; i++)
+      if (event.target.scrollTop >= boxes[i].offsetTop - 650)
+        this.currentElement = i + 1;
 
-    for(let i = 0; i<this.informations.length; i++)
-    if(event.target.scrollTop >= boxes[i].offsetTop - 650){
-      this.currentElement =i + 1;
-      this.prevElement = i >0 ? i : null;
-    }
   }
 
 }

@@ -5,6 +5,7 @@ import {SharedModule} from "../../shared/shared.module";
 import {TranslateModule} from "@ngx-translate/core";
 import { BgTrianglesComponent } from './home-information/bg-triangles/bg-triangles.component';
 import { TriangleComponent } from './home-information/bg-triangles/triangle/triangle.component';
+import { HorizontalComponent } from './home-information/horizontal/horizontal.component';
 
 
 
@@ -13,6 +14,7 @@ import { TriangleComponent } from './home-information/bg-triangles/triangle/tria
       HomeInformationComponent,
       BgTrianglesComponent,
       TriangleComponent,
+      HorizontalComponent,
 
     ],
     imports: [

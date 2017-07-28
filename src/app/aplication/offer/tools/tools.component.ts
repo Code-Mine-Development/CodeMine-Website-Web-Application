@@ -2,7 +2,7 @@ import {Component, Input, OnChanges} from '@angular/core';
 import {Router} from '@angular/router';
 import {LocalizeRouterService} from 'localize-router';
 import {PreviousPositionService} from '../../../shared/services/previous-position.service';
-import {Tool} from '../../tools/interface/tool.interface';
+import {OfferElementBeforePrepare} from '../../offerElementsDetails/interface/offerElementBeforePrepare';
 
 @Component({
   selector: 'app-tools',
@@ -10,7 +10,7 @@ import {Tool} from '../../tools/interface/tool.interface';
   styleUrls: ['tools.component.scss']
 })
 export class ToolsComponent implements OnChanges{
- @Input() Tools: Tool[];
+ @Input() Tools: OfferElementBeforePrepare[];
  keys = [];
 
   constructor( private positionService:PreviousPositionService, private router:Router, private localize:LocalizeRouterService){}
