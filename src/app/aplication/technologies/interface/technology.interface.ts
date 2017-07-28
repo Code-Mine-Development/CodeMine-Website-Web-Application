@@ -1,7 +1,11 @@
-export interface Technology{
+export interface OfferElement{
   title: string,
   description: string,
-  icon: string,
+  icon: {
+    url:string,
+    svgBody:string,
+    viewBox:string
+  },
   img:string,
   color: string
 }

@@ -40,10 +40,7 @@ export class BgTrianglesComponent implements OnInit {
       random = +(Math.random() * 50).toFixed(0);
       triangle.position.y = additionalY + random;
 
-      console.log(Object.assign({},triangle));
       this.parsePosition( triangle );
-      console.log(Object.assign({},triangle));
-
       random = +Math.random().toFixed(0);
       triangle.size =  random == 1 ? size.big : size.small;
 

@@ -3,7 +3,6 @@ import {ActivatedRoute, Data} from '@angular/router';
 import {PreviousPositionService} from '../../shared/services/previous-position.service';
 import {Offer} from '../../shared/interface/offer.interface';
 import {fadeInAnimation} from "../../shared/routing.animation";
-import {Technology} from '../technologies/interface/technology.interface';
 import {Tool} from '../tools/interface/tool.interface';
 import {ScrollToService} from '../../shared/services/scroll-to.service';
 
@@ -19,7 +18,7 @@ import {ScrollToService} from '../../shared/services/scroll-to.service';
 
 export class OfferComponent implements OnInit, AfterViewInit {
   offer: Offer;
-  technologies: Technology[];
+  technologies: Tool[];
   tools: Tool[];
 
   constructor(private route: ActivatedRoute, private previousPosition:PreviousPositionService, private scrollService:ScrollToService) { }
@@ -29,7 +28,7 @@ export class OfferComponent implements OnInit, AfterViewInit {
       .subscribe((data: Data) => {
         this.offer = data['offer'];
         this.technologies = data['technologies'];
-        this.tools= data['tools'];
+        this.tools = data['tools'];
       });
     this.previousPosition.setBackTo("offer");
   }

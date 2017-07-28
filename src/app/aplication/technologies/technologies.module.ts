@@ -5,27 +5,26 @@ import { HttpModule } from '@angular/http';
 import { TranslateModule } from '@ngx-translate/core';
 import { LocalizeRouterModule } from 'localize-router';
 
-import { TechnologiesService } from './services/technologies.service';
-import { TechnologiesRoutingModule } from './technologies.routing';
-import { TechnologiesComponent } from './technologies.component';
-import { TechnologyComponent } from './technology/technology.component'
+import { OfferElementsService } from './services/technologies.service';
+import { OfferElementsRoutingModule } from './technologies.routing';
+import { OfferElementsComponent } from './technologies.component';
+import { OfferElementComponent } from './technology/technology.component'
 
 @NgModule({
   imports: [
     CommonModule,
-    TechnologiesRoutingModule,
+    OfferElementsRoutingModule,
     RouterModule,
     HttpModule,
     TranslateModule,
     LocalizeRouterModule
   ],
   providers:[
-    TechnologiesService,
-
+    OfferElementsService,
   ],
   declarations: [
-    TechnologiesComponent,
-    TechnologyComponent
+    OfferElementsComponent,
+    OfferElementComponent
   ]
 })
 export class TechnologiesModule { }

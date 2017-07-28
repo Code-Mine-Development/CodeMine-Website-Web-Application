@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import {fadeInAnimation} from "../../shared/routing.animation";
 
 @Component({
-  selector: 'app-technologies',
+  selector: 'app-offer-elements',
   template: `
     <router-outlet></router-outlet>
   `,
@@ -10,7 +10,7 @@ import {fadeInAnimation} from "../../shared/routing.animation";
   animations:[fadeInAnimation],
   host:{ '[@fadeInAnimation]': '' }
 })
-export class TechnologiesComponent implements OnInit {
+export class OfferElementsComponent implements OnInit {
 
   constructor() { }
 

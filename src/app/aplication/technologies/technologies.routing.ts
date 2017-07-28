@@ -2,15 +2,20 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { LocalizeRouterModule } from "localize-router";
 import { TechnologiesResolver } from './services/technologies.resolver';
-import { TechnologiesService } from './services/technologies.service';
+import { ToolsResolver } from './services/tools.resolver';
+import { OfferElementsService } from './services/technologies.service';
 
-import { TechnologyComponent } from './technology/technology.component';
-import { TechnologiesComponent } from "./technologies.component";
+import { OfferElementComponent } from './technology/technology.component';
 
 
 const routes: Routes = [
-  { path:'technologies', component:TechnologiesComponent, children:[
-    { path: '**', component:TechnologyComponent, resolve:{ "technologies":TechnologiesResolver}}
+  { path:'technologies', children:[
+    { path: ':id', component:OfferElementComponent, resolve:{ "offerelement":TechnologiesResolver}},
+    { path: '', component:OfferElementComponent, resolve:{ "offerelement":TechnologiesResolver}}
+  ]},
+  { path:'tools', children:[
+    { path: ':id', component:OfferElementComponent, resolve:{ "offerelement":ToolsResolver}},
+    { path: '', component:OfferElementComponent, resolve:{ "offerelement":ToolsResolver}}
   ]}
 ];
 
@@ -20,9 +25,9 @@ const routes: Routes = [
     RouterModule.forChild(routes)
   ],
   providers:[
-    TechnologiesService,
-    TechnologiesResolver
+    TechnologiesResolver,
+    OfferElementsService
   ],
   exports: [RouterModule]
 })
-export class TechnologiesRoutingModule { }
+export class OfferElementsRoutingModule { }

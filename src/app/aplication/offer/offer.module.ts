@@ -13,6 +13,8 @@ import {ArchitectureComponent} from './architecture/architecture.component';
 import {WeCreateComponent} from './weCreate/weCreate.component';
 import {TechnologiesComponent} from './technologies/technologies.component';
 import {ToolsComponent} from './tools/tools.component';
+import {TechnologiesResolver} from './services/technologies.resolver';
+import {ToolsResolver} from './services/tools.resolver';
 
 
 
@@ -31,7 +33,7 @@ import {ToolsComponent} from './tools/tools.component';
     TechnologiesComponent,
     ToolsComponent
   ],
-  providers: [OfferService, OfferResolver],
+  providers: [OfferService, OfferResolver, TechnologiesResolver, ToolsResolver],
 })
 export class OfferModule {
 }
