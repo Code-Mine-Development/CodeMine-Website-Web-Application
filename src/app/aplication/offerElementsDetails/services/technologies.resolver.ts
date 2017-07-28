@@ -1,8 +1,8 @@
 import {ActivatedRouteSnapshot, Resolve, RouterStateSnapshot} from '@angular/router';
 import {Observable} from 'rxjs/Observable';
 import {Injectable} from '@angular/core';
-import {OfferElementsService} from './technologies.service';
-import {OfferElement} from '../interface/technology.interface';
+import {OfferElementsService} from './offerElements.service';
+import {OfferElement} from '../interface/offerElement.interface';
 
 
 @Injectable()

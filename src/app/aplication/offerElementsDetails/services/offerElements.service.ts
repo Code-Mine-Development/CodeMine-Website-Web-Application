@@ -3,7 +3,7 @@ import {Http, Response} from '@angular/http';
 import {ActivatedRouteSnapshot} from '@angular/router';
 import {Observable, Subject} from 'rxjs';
 
-import {OfferElement} from '../interface/technology.interface';
+import {OfferElement} from '../interface/offerElement.interface';
 
 
 const url = 'assets/data/';

@@ -1,8 +1,8 @@
 import {ActivatedRouteSnapshot, Resolve, RouterStateSnapshot} from '@angular/router';
 import {Observable} from 'rxjs/Observable';
 import {Injectable} from '@angular/core';
-import {OfferElementsService} from './technologies.service';
-import {OfferElement} from '../interface/technology.interface';
+import {OfferElementsService} from './offerElements.service';
+import {OfferElement} from '../interface/offerElement.interface';
 
 
 @Injectable()
@@ -12,7 +12,7 @@ export class ToolsResolver implements Resolve<OfferElement> {
 
   resolve(route: ActivatedRouteSnapshot,
           state: RouterStateSnapshot): Observable<OfferElement> | Promise<OfferElement> | OfferElement {
-    return this.offerElementService.getData("technologies",route);
+    return this.offerElementService.getData("tools",route);
   }
 
 }

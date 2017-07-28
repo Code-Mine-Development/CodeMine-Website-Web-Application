@@ -5,10 +5,10 @@ import { HttpModule } from '@angular/http';
 import { TranslateModule } from '@ngx-translate/core';
 import { LocalizeRouterModule } from 'localize-router';
 
-import { OfferElementsService } from './services/technologies.service';
-import { OfferElementsRoutingModule } from './technologies.routing';
-import { OfferElementsComponent } from './technologies.component';
-import { OfferElementComponent } from './technology/technology.component'
+import { OfferElementsService } from './services/offerElements.service';
+import { OfferElementsRoutingModule } from './offerElements.routing';
+import { OfferElementsComponent } from './offerElements.component';
+import { OfferElementComponent } from './offerElement/offerelement.component'
 
 @NgModule({
   imports: [

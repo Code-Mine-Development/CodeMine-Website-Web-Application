@@ -3,9 +3,9 @@ import { Routes, RouterModule } from '@angular/router';
 import { LocalizeRouterModule } from "localize-router";
 import { TechnologiesResolver } from './services/technologies.resolver';
 import { ToolsResolver } from './services/tools.resolver';
-import { OfferElementsService } from './services/technologies.service';
+import { OfferElementsService } from './services/offerElements.service';
 
-import { OfferElementComponent } from './technology/technology.component';
+import { OfferElementComponent } from './offerElement/offerelement.component';
 
 
 const routes: Routes = [
@@ -26,6 +26,7 @@ const routes: Routes = [
   ],
   providers:[
     TechnologiesResolver,
+    ToolsResolver,
     OfferElementsService
   ],
   exports: [RouterModule]
