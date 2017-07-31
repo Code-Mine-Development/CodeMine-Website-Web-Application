@@ -106,7 +106,7 @@ export class TriangleComponent implements OnInit, OnChanges, AfterViewInit {
   }
 
   calculateScale(factor:number = 1){
-    this.calculatedScale = factor * (.6+this.size/2);
+    this.calculatedScale = factor * (1+this.size/5);
   }
 
 }

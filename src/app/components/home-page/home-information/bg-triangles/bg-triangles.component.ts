@@ -42,7 +42,7 @@ export class BgTrianglesComponent implements OnInit {
 
       this.parsePosition( triangle );
       random = +Math.random().toFixed(0);
-      triangle.size =  random == 1 ? size.big : size.small;
+      triangle.size = random == 1 ? size.big : size.small;
 
       random = +(Math.random()*5).toFixed(0);
       triangle.range = triangle.size == size.big ? 10 + random : 5 + random;
@@ -64,7 +64,7 @@ export class BgTrianglesComponent implements OnInit {
     if( triangle.position.x < 10 || triangle.position.x > 90)
       triangle.position.x  = triangle.position.x > 90 ? triangle.position.x - 10 : triangle.position.x + 10;
 
-    if( triangle.position.y < 10 || triangle.position.y > 90)
-      triangle.position.y  = triangle.position.y > 90 ? triangle.position.y - 10 : triangle.position.y + 10;
+    if( triangle.position.y < 10 || triangle.position.y > 80)
+      triangle.position.y  = triangle.position.y > 80 ? triangle.position.y - 20 : triangle.position.y + 10;
   }
 }

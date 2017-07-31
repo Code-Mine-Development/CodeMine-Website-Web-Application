@@ -176,6 +176,14 @@
     "audit": "audit",
     "contact": "kontakt"
   },
+  "ABOUT_US":{
+    "approach": {
+      "title": "nasze podejście",
+      "start": "Duży zespół nie jest miernikiem jakości świadczonych usług – są nim raczej umiejętności, pasja i zaangażowanie. Jako kilkunastoosobowy team pracujący w myśl",
+      "QDD": "Quality Driven Development",
+      "end": ", a nasze indywidualne podejście jest doceniane przez wszystkich klientów."
+    }
+  },
   "PEOPLE": {
     "worksince": "Wydobycie w Code Mine od: ",
     "year": "rok",

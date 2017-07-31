@@ -3,14 +3,39 @@
   margin: 15em auto;
   background: #f2f2f2;
   box-shadow: 10px 10px 15px 0px rgba(0, 0, 0, 0.15);
-  h3{
-    padding: 65px 0 20px 80px;
+  h2{
+    padding: 65px 0px 35px 80px;
+    margin:0;
     color:#ccc;
     text-transform: uppercase;
-    font-weight: 600;
+    font-weight: 700;
+    font-size:1.8rem;
   }
-  h2{
+  h3{
     padding: 0 80px 80px;
-    font-weight: 600;
+    font-weight: 700;
+    font-size: 3.6rem;
+    margin:0;
+  }
+  .underline{
+    text-decoration: underline;
+    position:relative;
+    transition: all .2s;
+    &:hover{
+      color:#ffdf00;
+      .tool-tip{
+        visibility: visible;
+      }
+    }
+  }
+  .tool-tip{
+    visibility: hidden;
+    position:absolute;
+    width:100%;
+    padding:10px;
+    left: 0;
+    bottom:100%;
+    background: #aeaeae;
+    transition:all .5s;
   }
 }

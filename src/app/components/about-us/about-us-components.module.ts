@@ -11,6 +11,7 @@ import { ApproachComponent } from './approach/approach.component';
 import { VideoComponent } from './video/video.component';
 import { InstagramComponent } from './instagram/instagram.component';
 import { InstagramPhotoComponent } from './instagram/instagram-photo.component';
+import { EmployeesListComponent } from './employees-list/employees-list.component';
 
 
 @NgModule({
@@ -22,7 +23,8 @@ import { InstagramPhotoComponent } from './instagram/instagram-photo.component';
     ApproachComponent,
     VideoComponent,
     InstagramComponent,
-    InstagramPhotoComponent
+    InstagramPhotoComponent,
+    EmployeesListComponent
   ],
   imports: [
     CommonModule,
@@ -37,7 +39,8 @@ import { InstagramPhotoComponent } from './instagram/instagram-photo.component';
     AboutCompanyNameComponent,
     ApproachComponent,
     VideoComponent,
-    InstagramComponent
+    InstagramComponent,
+    EmployeesListComponent
   ],
   providers: [ClosePersonService],
 })
