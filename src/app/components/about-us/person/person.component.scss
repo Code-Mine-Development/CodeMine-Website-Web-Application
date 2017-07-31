@@ -39,11 +39,11 @@
       height: 90%;
       margin:3% 0;
       background-size: contain;
-      background-position: center, -500% 0%;
+      background-position: center, 1000px 0%;
       background-repeat: no-repeat;
 
       &:hover{
-        background-position: -500% 0%, center;
+        background-position: 1000px 0%, center;
       }
     }
     .desc {

@@ -1,8 +1,6 @@
 import {NgModule} from '@angular/core';
 import {CommonModule} from '@angular/common';
 import {DeskComponent} from "./desk/desk.component";
-import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
-import {ArrowComponent} from "./arrow/arrow.component";
 import { PersonComponent } from './person/person.component';
 import {UiModule} from "../../shared/ui-elements/ui.module";
 import { DoorComponent } from './door/door.component';
@@ -12,14 +10,12 @@ import {AboutCompanyNameComponent} from "./about-company-name/about-company-name
 import { ApproachComponent } from './approach/approach.component';
 import { VideoComponent } from './video/video.component';
 import { InstagramComponent } from './instagram/instagram.component';
-import {ConnectionBackend, Jsonp} from "@angular/http";
 import { InstagramPhotoComponent } from './instagram/instagram-photo.component';
 
 
 @NgModule({
   declarations: [
     DeskComponent,
-    ArrowComponent,
     PersonComponent,
     DoorComponent,
     AboutCompanyNameComponent,
@@ -36,7 +32,6 @@ import { InstagramPhotoComponent } from './instagram/instagram-photo.component';
   ],
   exports: [
     DeskComponent,
-    ArrowComponent,
     PersonComponent,
     DoorComponent,
     AboutCompanyNameComponent,

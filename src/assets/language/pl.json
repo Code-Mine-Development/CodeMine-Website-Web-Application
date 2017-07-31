@@ -124,6 +124,7 @@
   "PORTFOLIO":{
     "addProjectTitle": "Dodaj swój projekt",
     "addProjectButton": "do formularza",
+    "checkPortfolio": "sprawdź nasze portfolio",
     "BrigterVision":{
       "title": "Brigter Vision Growth Platform",
       "description": "Aplikacja skierowana do amerykańskich terapeutów, pozwalająca na przeglądanie puli dostępnych postów oraz ich publikację w formie bloga."
@@ -176,6 +177,8 @@
     "contact": "kontakt"
   },
   "PEOPLE": {
+    "worksince": "Wydobycie w Code Mine od: ",
+    "year": "rok",
     "przemyslaw": {
       "description": "Jeden z pięciu założycieli Code Mine, oprócz programowania zajmujący się również organizacją firmowej dokumentacji. Najbardziej pokojowy łysy człowiek na ziemi, zdolny do rozwiązania każdego problemu. Wielbiciel muzyki reggae, szybkiej jazdy na deskorolce, zielonego koloru i serowej pizzy. Lubi żartować, często robiąc kawały współpracownikom. W wolnych chwilach lubi odpoczywać na działce."
     },
