@@ -7,6 +7,7 @@ import {AboutUsComponentModule} from "../../components/about-us/about-us-compone
 import {ClosePersonService} from "../../shared/services/close-person.service";
 import {TranslateModule} from "@ngx-translate/core";
 import {SharedModule} from "../../shared/shared.module";
+import { OfficeNavComponent } from './office/office-nav.component';
 
 
 @NgModule({
@@ -20,6 +21,7 @@ import {SharedModule} from "../../shared/shared.module";
   declarations: [
     AboutUsComponent,
     OfficeComponent,
+    OfficeNavComponent,
   ],
   providers: [ClosePersonService],
 })

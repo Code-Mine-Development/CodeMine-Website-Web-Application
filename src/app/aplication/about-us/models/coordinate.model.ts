@@ -58,7 +58,7 @@ export class Coordinate {
     this.deskClicked = true;
     this.showDeskOwner(index, true);
     let transformVariant = this.variant === 1 ? 'skew(0deg) rotateY(-58deg) rotateX(-8deg) scale(1, 1.3) rotateZ(14deg)'
-      : 'skew(0deg) rotateY(-71deg) rotateX(5deg) scale(1.45) rotateZ(-11deg)';
+      : 'skew(0deg) rotateY(-71deg) rotateX(5deg) scale(1.5) rotateZ(-11deg)';
 
     document.getElementById('personWrapper').style.transition = '1.8s';
 

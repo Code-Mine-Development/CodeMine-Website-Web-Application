@@ -1,9 +1,8 @@
-import {Component, OnInit, OnDestroy, NgZone, Input, OnChanges} from '@angular/core';
+import {Component, OnInit, NgZone, Input} from '@angular/core';
 import {Employees} from '../interfaces/employees.interface';
 import {MovingLayers} from '../models/movingLayers.model';
 import {MouseMove} from '../models/mouseMove.model';
 import {DoomRestyle} from '../models/doomRestyle.model';
-import {ScrollToModule} from 'ng2-scroll-to';
 
 
 @Component({
