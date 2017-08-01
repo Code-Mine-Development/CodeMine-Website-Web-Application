@@ -1,8 +1,5 @@
 
-<app-office *ngIf="modelVisible" [employees]="company.employees"></app-office>
-<app-employees-list *ngIf="!modelVisible" [employees]="company.employees"></app-employees-list>
-<app-office-nav></app-office-nav>
-
+<app-office [employees]="company.employees"></app-office>
 <app-about-company-name></app-about-company-name>
 <app-approach></app-approach>
 <app-video></app-video>

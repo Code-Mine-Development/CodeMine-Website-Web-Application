@@ -2,6 +2,7 @@ import {interact} from 'interactjs/dist/interact'
 import set = Reflect.set;
 
 export class MovingLayers {
+
   constructor() {
     interact('.draggable')
       .draggable({
@@ -15,6 +16,7 @@ export class MovingLayers {
       });
   }
   private dragMoveListener(event) {
+
     const target = event.target,
           x = (parseFloat(target.getAttribute('data-x')) || 0) + event.dx,
           y = (parseFloat(target.getAttribute('data-y')) || 0) + event.dy,
@@ -25,5 +27,20 @@ export class MovingLayers {
     target.setAttribute('data-y', y);
     bg.setAttribute('data-x', x);
     bg.setAttribute('data-y', y);
+    console.log(target.getAttribute('data-x'));
+  }
+
+  resetPosition(){
+    let x = 0,
+        y = 0,
+        bg = document.getElementById('officeBg'),
+        target = document.getElementById('deskLayer');
+
+    target.style.webkitTransform = target.style.transform = 'translate(' + x + 'px, ' + y + 'px)';
+    target.setAttribute('data-x', '0');
+    target.setAttribute('data-y', '0');
+    bg.style.webkitTransform = bg.style.transform = 'translate(' + x + 'px, ' + y + 'px)';
+    bg.setAttribute('data-x', '0');
+    bg.setAttribute('data-y', '0');
   }
 }

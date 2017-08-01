@@ -11,7 +11,12 @@ import { ApproachComponent } from './approach/approach.component';
 import { VideoComponent } from './video/video.component';
 import { InstagramComponent } from './instagram/instagram.component';
 import { InstagramPhotoComponent } from './instagram/instagram-photo.component';
-import { EmployeesListComponent } from './employees-list/employees-list.component';
+import { EmployeesListComponent } from './office/employees-list/employees-list.component';
+import { OfficeComponent } from './office/office.component';
+import { OfficeModelComponent } from './office/office-model/office-model.component';
+import { OfficeNavComponent } from './office/navigation/office-nav.component';
+import { ListIconComponent } from './office/navigation/list-icon.component';
+
 
 
 @NgModule({
@@ -24,7 +29,11 @@ import { EmployeesListComponent } from './employees-list/employees-list.componen
     VideoComponent,
     InstagramComponent,
     InstagramPhotoComponent,
-    EmployeesListComponent
+    EmployeesListComponent,
+    OfficeComponent,
+    OfficeModelComponent,
+    OfficeNavComponent,
+    ListIconComponent
   ],
   imports: [
     CommonModule,
@@ -40,7 +49,7 @@ import { EmployeesListComponent } from './employees-list/employees-list.componen
     ApproachComponent,
     VideoComponent,
     InstagramComponent,
-    EmployeesListComponent
+    OfficeComponent
   ],
   providers: [ClosePersonService],
 })

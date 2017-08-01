@@ -177,11 +177,16 @@
     "contact": "kontakt"
   },
   "ABOUT_US":{
+    "showDescription": "Zobacz Opis",
     "approach": {
       "title": "nasze podejście",
+      "definition": "Definicja",
       "start": "Duży zespół nie jest miernikiem jakości świadczonych usług – są nim raczej umiejętności, pasja i zaangażowanie. Jako kilkunastoosobowy team pracujący w myśl",
-      "QDD": "Quality Driven Development",
-      "end": ", a nasze indywidualne podejście jest doceniane przez wszystkich klientów."
+      "QDD": {
+        "title":"Quality Driven Development",
+        "description":"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore"
+      },
+      "end": "nie boimy się wyzwań, a nasze indywidualne podejście jest doceniane przez wszystkich klientów."
     }
   },
   "PEOPLE": {

@@ -1,25 +1,27 @@
-import {Component, OnInit, NgZone, Input} from '@angular/core';
+import {Component, OnInit, NgZone, Input, OnChanges} from '@angular/core';
 import {Employees} from '../interfaces/employees.interface';
-import {MovingLayers} from '../models/movingLayers.model';
-import {MouseMove} from '../models/mouseMove.model';
-import {DoomRestyle} from '../models/doomRestyle.model';
-
+import {MovingLayers} from './models/movingLayers.model';
+import {MouseMove} from './models/mouseMove.model';
+import {DoomRestyle} from './models/doomRestyle.model';
 
 @Component({
-  selector: 'app-office',
-  templateUrl: './office.component.html',
-  styleUrls: ['./office.component.scss'],
+  selector: 'app-office-model',
+  templateUrl: './office-model.component.html',
+  styleUrls: ['./office-model.component.scss']
 })
-export class OfficeComponent implements OnInit {
+export class OfficeModelComponent implements OnInit, OnChanges {
+  @Input() employees: Employees;
+  @Input() modelNavigate: string;
   topOffset: number = document.querySelector('.header')['offsetHeight'];
   windowWidth: number = window.innerWidth;
   dragging: MovingLayers = new MovingLayers();
   mouseMoving: MouseMove = new MouseMove(this.windowWidth);
   doomRestyle: DoomRestyle = new DoomRestyle();
-  @Input() employees: Employees;
+
   deskActivated:number;
 
-  constructor(ngZone: NgZone, ) {
+
+  constructor( ngZone: NgZone ) {
     window.onresize = () => {
       ngZone.run(() => {
         this.windowWidth = window.innerWidth;
@@ -28,7 +30,10 @@ export class OfficeComponent implements OnInit {
     };
   }
 
-
+  ngOnChanges(changes){
+    if(changes && changes.modelNavigate)
+      this.dragging.resetPosition();
+  }
 
   ngOnInit() {
     this.doomRestyle.restyleElement(['.header', 'body'], ['color', 'overflow'], ['black', 'auto']);
@@ -45,6 +50,6 @@ export class OfficeComponent implements OnInit {
 
   getDeskNumber(event){
     this.deskActivated = event;
-
   }
+
 }

@@ -1,4 +1,4 @@
-import {SmoothMove} from "../interfaces/smoothMove.interface";
+import {SmoothMove} from "../../interfaces/smoothMove.interface";
 
 let data: SmoothMove = {
   lFollowX: 0,

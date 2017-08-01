@@ -1,4 +1,5 @@
 <div class="wrap" id="wrap"
+     [class.minimize] = " modelNavigate == 'minimize' "
      (mousemove)="mouseMove($event)"
      (mousedown)="mouseClick(false)"
      (mouseup)="mouseClick(true)">
@@ -10,14 +11,6 @@
     <app-desk #desk *ngFor="let person of employees, let i = index" id="desk{{i}}" [index]="i" [person]="person" [people]="employees" (personActivated)="getDeskNumber($event)"></app-desk>
     <app-door></app-door>
   </div>
-
-  <app-person  [person]="employees" [ActivatedDeskId]="deskActivated"></app-person>
-
 </div>
 
-
-<div class="skip">
-  <a class="skip-btn" [appScrollTo]='aboutusTarget'><i class="fa fa-chevron-down" aria-hidden="true"></i></a>
-</div>
-
-<div #aboutusTarget></div>
+<app-person  [person]="employees" [ActivatedDeskId]="deskActivated"></app-person>

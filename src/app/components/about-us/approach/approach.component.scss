@@ -1,8 +1,27 @@
 .approach{
   width: 70%;
+  position:relative;
   margin: 15em auto;
   background: #f2f2f2;
   box-shadow: 10px 10px 15px 0px rgba(0, 0, 0, 0.15);
+  transition: all .5s;
+  &.hover{
+    background: #000000;
+    h2 span{
+      display:none;
+      &.definition{
+        display:block;
+        opacity: 1;
+      }
+    }
+    .description_swap{
+      display:none;
+    }
+    .description{
+      display:block;
+      color:#ffffff;
+    }
+  }
   h2{
     padding: 65px 0px 35px 80px;
     margin:0;
@@ -19,23 +38,29 @@
   }
   .underline{
     text-decoration: underline;
-    position:relative;
     transition: all .2s;
+    display: block;
     &:hover{
       color:#ffdf00;
-      .tool-tip{
-        visibility: visible;
-      }
     }
   }
   .tool-tip{
-    visibility: hidden;
     position:absolute;
+    z-index: 7;
     width:100%;
-    padding:10px;
+    height: 100%;
+    top:0;
     left: 0;
-    bottom:100%;
-    background: #aeaeae;
+    background: #000000;
     transition:all .5s;
+  }
+  .definition{
+    display:none;
+    opacity:0;
+  }
+  .description{
+    transition: all .5s;
+    color:#000000;
+    display:none;
   }
 }
