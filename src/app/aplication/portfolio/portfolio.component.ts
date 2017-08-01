@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {fadeInAnimation} from "../../shared/routing.animation";
+import {PreviousPositionService} from '../../shared/services/previous-position.service';
 
 @Component({
   selector: 'app-portfolio',
@@ -10,10 +11,10 @@ import {fadeInAnimation} from "../../shared/routing.animation";
 })
 export class PortfolioComponent implements OnInit {
 
-  constructor() { }
+  constructor(private previousPosition:PreviousPositionService) { }
 
   ngOnInit() {
-
+    this.previousPosition.setBackTo("portfolio")
   }
 
 }

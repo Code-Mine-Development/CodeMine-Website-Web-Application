@@ -1,7 +1,7 @@
 import {Injectable} from '@angular/core';
 import {Http, Response} from '@angular/http';
 import {HomeInformation} from '../interfaces/home-information.interface';
-import {Subject} from 'rxjs/Rx';
+import {Subject, Observable} from 'rxjs/Rx';
 
 const url = 'assets/data/';
 
@@ -9,16 +9,21 @@ const url = 'assets/data/';
 export class HomeInformationServices {
 
   private scrollTopStream = new Subject();
+  private homeInformations:HomeInformation;
 
   constructor(private http: Http) {
 
   }
 
   getInformation() {
+    if(this.homeInformations)
+      return Observable.from([this.homeInformations]);
+
     return this.http.get(url + 'home-information.json')
       .map(
         (response: Response) => {
-          return <HomeInformation>response.json();
+          this.homeInformations = <HomeInformation>response.json()
+          return this.homeInformations;
         })
   }
 

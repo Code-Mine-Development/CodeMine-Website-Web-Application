@@ -11,19 +11,19 @@ import {ClosePersonService} from '../../../shared/services/close-person.service'
     <div id="front" #desk (click)="openPersonDetails()">
       <div class="deskOwner">
         <div class="col2" id="col">
-          <img src="../../../../assets/images/persons/rodo.png" alt="Asia">
+          <img [src]="'assets/images/people/'+person.image.normal" [alt]="person.name">
         </div>
         <div class="col2">
           <div class="details">
-           <h4>{{people[index].name}}</h4>
-            <h4>{{people[index].surname}}</h4>
+           <h4>{{person.name}}</h4>
+            <h4>{{person.surname}}</h4>
           </div>
         </div>
       </div>
     </div>`,
   styleUrls: ['./desk.component.scss'],
 })
-export class DeskComponent implements OnInit, OnChanges {
+export class DeskComponent implements OnInit {
   @Input() person: Employees;
   @Input() index: number;
   @ViewChild('desk') desk;
@@ -40,32 +40,27 @@ export class DeskComponent implements OnInit, OnChanges {
     this.coordinate = new Coordinate(person.variant, person.top, person.left, this.desk);
     this.prepareCoordinates();
   }
-  ngOnChanges(){
-
-  }
   prepareCoordinates() {
-
     this.desk.nativeElement.style.top =  this.coordinate.offsetTop();
     this.desk.nativeElement.style.left = this.coordinate.offsetLeft();
     this.desk.nativeElement.style.transform = this.coordinate.transform();
-
-
   }
 
   @HostListener('mouseenter') mouseover() {
     if(this.coordinate.deskClicked == false){
-    this.coordinate.hoverDesk(this.index);
-      this.personActivated.emit(
-        this.index
-      );
-  }
+      this.coordinate.hoverDesk(this.index);
+        this.personActivated.emit(
+          this.index
+        );
+    }
   }
 
   @HostListener('mouseleave') deskBack() {
     if(this.coordinate.deskClicked == false) {
       this.coordinate.hoverOutDesk(this.index);
     }
-}
+  }
+
   openPersonDetails(){
     this.coordinate.showDetails(this.index);
   }
@@ -73,7 +68,6 @@ export class DeskComponent implements OnInit, OnChanges {
   closeCard(){
     this.prepareCoordinates();
     this.coordinate.moveDown(this.index);
-
   }
 
 }

@@ -1,0 +1,50 @@
+@import '../../../../assets/styles/mediaQueries.scss';
+
+.container {
+  width: 100%;
+  padding:0 20px;
+  box-sizing: border-box;
+  margin: 8em auto;
+}
+.header{
+  text-align: left;
+  margin-bottom: 4em;
+}
+.tools{
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
+.tools-col{
+  @media #{$phone}{
+    width: 100%;
+  }
+  @media #{$tablet}{
+    width: 50%;
+  }
+  @media #{$phone-tablet}{
+    width: 33.33%;
+  }
+  @media #{$computer}{
+    width: 20%;
+  }
+  @media #{$xl-computer}{
+    width: 16.6%;
+  }
+  box-sizing: border-box;
+  border:1px solid #eee;
+  background-size: cover;
+  img{
+    width:100%;
+    height:100%;
+    transition: .5s;
+    &:hover{
+      background: #eeeeee;
+    }
+  }
+}
+.tools:after {
+  content: "";
+  display: table;
+  clear: both;
+}

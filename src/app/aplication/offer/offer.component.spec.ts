@@ -4,7 +4,7 @@ import { OfferComponent } from './offer.component';
 import {ActivatedRoute, Data, Router} from '@angular/router';
 import {MockOffer} from '../../shared/mocks/offer.mock';
 import {WeCreateComponent} from './weCreate/weCreate.component';
-import {LanguagesComponent} from './languages/languages.component';
+import {LanguagesComponent} from './tools/tools.component';
 import {TechnologiesComponent} from './technologies/technologies.component';
 import {ArchitectureComponent} from './architecture/architecture.component';
 

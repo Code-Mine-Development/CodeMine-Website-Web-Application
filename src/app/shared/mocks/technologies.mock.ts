@@ -3,47 +3,47 @@ export const MockTechnologies = {
   'technologies': [
     {
       'name': 'angular',
-      'image': 'https://angular.io/assets/images/logos/angular/angular.png'
+      'image': 'https://tool.io/assets/images/logos/tool/tool.png'
     },
     {
       'name': 'angular',
-      'image': 'https://angular.io/assets/images/logos/angular/angular.png'
+      'image': 'https://tool.io/assets/images/logos/tool/tool.png'
     },
     {
       'name': 'angular',
-      'image': 'https://angular.io/assets/images/logos/angular/angular.png'
+      'image': 'https://tool.io/assets/images/logos/tool/tool.png'
     },
     {
       'name': 'angular',
-      'image': 'https://angular.io/assets/images/logos/angular/angular.png'
+      'image': 'https://tool.io/assets/images/logos/tool/tool.png'
     },
     {
       'name': 'angular',
-      'image': 'https://angular.io/assets/images/logos/angular/angular.png'
+      'image': 'https://tool.io/assets/images/logos/tool/tool.png'
     },
     {
       'name': 'angular',
-      'image': 'https://angular.io/assets/images/logos/angular/angular.png'
+      'image': 'https://tool.io/assets/images/logos/tool/tool.png'
     },
     {
       'name': 'angular',
-      'image': 'https://angular.io/assets/images/logos/angular/angular.png'
+      'image': 'https://tool.io/assets/images/logos/tool/tool.png'
     },
     {
       'name': 'angular',
-      'image': 'https://angular.io/assets/images/logos/angular/angular.png'
+      'image': 'https://tool.io/assets/images/logos/tool/tool.png'
     },
     {
       'name': 'angular',
-      'image': 'https://angular.io/assets/images/logos/angular/angular.png'
+      'image': 'https://tool.io/assets/images/logos/tool/tool.png'
     },
     {
       'name': 'angular',
-      'image': 'https://angular.io/assets/images/logos/angular/angular.png'
+      'image': 'https://tool.io/assets/images/logos/tool/tool.png'
     },
     {
       'name': 'angular',
-      'image': 'https://angular.io/assets/images/logos/angular/angular.png'
+      'image': 'https://tool.io/assets/images/logos/tool/tool.png'
     }
   ]
 }

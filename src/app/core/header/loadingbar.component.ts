@@ -1,11 +1,11 @@
-import { Component, OnInit, ChangeDetectorRef } from '@angular/core';
-import { trigger, state, style, transition,animate } from '@angular/animations';
+import {Component, OnInit} from '@angular/core';
+import { trigger, state, style, transition,animate,keyframes } from '@angular/animations';
 import { Router, NavigationStart, NavigationEnd } from '@angular/router';
 
 @Component({
   selector: 'app-loadingbar',
   template: `
-    <div [@loading]="state" (@loading.done)="onDone($event)"></div>
+    <div [@loading]="state" ></div>
   `,
   styles: [`
     :host{
@@ -23,23 +23,21 @@ import { Router, NavigationStart, NavigationEnd } from '@angular/router';
   `],
   animations:[
     trigger('loading',[
-      state('0', style({
-        width:'0%'
-      })),
       state('50', style({
         width:'50%'
       })),
       state('100',style({
-        width:'100%'
+        width:'0%'
       })),
-      transition('0 => 50',[
+      transition('100 => 50',[
         animate('1000ms ease-in-out')
       ]),
       transition('50 => 100',[
-        animate('1250ms ease-in-out')
-      ]),
-      transition('100 => 0',[
-        animate('0ms')
+        animate('1250ms ease-in-out', keyframes([
+          style({width: '50%', offset:.0}),
+          style({width: '100%', offset:.9}),
+          style({width: '0%', offset:1})
+        ]))
       ])
     ])
   ]
@@ -59,10 +57,6 @@ export class LoadingComponent implements OnInit {
     });
   }
 
-  onDone(event){
-    if(event.toState == '100')
-      this.state = '0';
-  }
 
   ngOnInit() {
   }

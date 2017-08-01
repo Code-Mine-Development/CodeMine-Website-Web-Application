@@ -3,127 +3,39 @@
     "title": "OFFER.features.title",
     "features":[
       {
-        "name": "OFFER.features.nr_1.title",
+        "name": "OFFER.features.solutionToBusines.title",
         "image": "https://images.pexels.com/photos/23049/pexels-photo.jpg?w=1260&h=750&auto=compress&cs=tinysrgb",
-        "description": "OFFER.features.nr_1.description",
-        "href": "solutionstoyourbusinessproblems"
+        "description": "OFFER.features.solutionToBusines.description"
       },
       {
-        "name": "OFFER.features.nr_2.title",
+        "name": "OFFER.features.internalApps.title",
         "image": "https://images.pexels.com/photos/23049/pexels-photo.jpg?w=1260&h=750&auto=compress&cs=tinysrgb",
-        "description": "OFFER.features.nr_2.description",
-        "href": "internalapps"
+        "description": "OFFER.features.internalApps.description"
       },
       {
-        "name": "OFFER.features.nr_3.title",
+        "name": "OFFER.features.B2Capplications.title",
         "image": "https://images.pexels.com/photos/23049/pexels-photo.jpg?w=1260&h=750&auto=compress&cs=tinysrgb",
-        "description": "OFFER.features.nr_3.description",
-        "href": "b2capplications"
+        "description": "OFFER.features.B2Capplications.description"
       },
       {
-        "name": "OFFER.features.nr_4.title",
+        "name": "OFFER.features.socialNetworking.title",
         "image": "https://images.pexels.com/photos/23049/pexels-photo.jpg?w=1260&h=750&auto=compress&cs=tinysrgb",
-        "description": "OFFER.features.nr_4.description",
-        "href": "socialnetworking"
+        "description": "OFFER.features.socialNetworking.description"
       },
       {
-        "name": "OFFER.features.nr_5.title",
+        "name": "OFFER.features.TVApps.title",
         "image": "https://images.pexels.com/photos/23049/pexels-photo.jpg?w=1260&h=750&auto=compress&cs=tinysrgb",
-        "description": "OFFER.features.nr_5.description",
-        "href": "tvapps"
-      }
-    ]
-  },
-  {
-    "title": "OFFER.technologies.title",
-    "technologies": [
-      {
-        "name": "angular",
-        "image": "https://angular.io/assets/images/logos/angular/angular.png",
-        "href": "angular"
+        "description": "OFFER.features.TVApps.description"
       },
       {
-        "name": "angular",
-        "image": "https://angular.io/assets/images/logos/angular/angular.png",
-        "href": "angular"
+        "name": "OFFER.features.desktopApplications.title",
+        "image": "https://images.pexels.com/photos/23049/pexels-photo.jpg?w=1260&h=750&auto=compress&cs=tinysrgb",
+        "description": "OFFER.features.desktopApplications.description"
       },
       {
-        "name": "angular",
-        "image": "https://angular.io/assets/images/logos/angular/angular.png"
-      },
-      {
-        "name": "angular",
-        "image": "https://angular.io/assets/images/logos/angular/angular.png"
-      },
-      {
-        "name": "angular",
-        "image": "https://angular.io/assets/images/logos/angular/angular.png"
-      },
-      {
-        "name": "angular",
-        "image": "https://angular.io/assets/images/logos/angular/angular.png"
-      },
-      {
-        "name": "angular",
-        "image": "https://angular.io/assets/images/logos/angular/angular.png"
-      },
-      {
-        "name": "angular",
-        "image": "https://angular.io/assets/images/logos/angular/angular.png"
-      },
-      {
-        "name": "angular",
-        "image": "https://angular.io/assets/images/logos/angular/angular.png"
-      },
-      {
-        "name": "angular",
-        "image": "https://angular.io/assets/images/logos/angular/angular.png"
-      },
-      {
-        "name": "angular",
-        "image": "https://angular.io/assets/images/logos/angular/angular.png"
-      }
-    ]
-  },
-  {
-    "title": "OFFER.languages.title",
-    "languages": [
-      {
-        "name": "NodeJs",
-        "image": "https://cdn2.iconfinder.com/data/icons/nodejs-1/512/nodejs-512.png",
-        "href": "nodejs"
-      },
-      {
-        "name": "NodeJs",
-        "image": "https://cdn2.iconfinder.com/data/icons/nodejs-1/512/nodejs-512.png"
-      },
-      {
-        "name": "NodeJs",
-        "image": "https://cdn2.iconfinder.com/data/icons/nodejs-1/512/nodejs-512.png"
-      },
-      {
-        "name": "NodeJs",
-        "image": "https://cdn2.iconfinder.com/data/icons/nodejs-1/512/nodejs-512.png"
-      },
-      {
-        "name": "NodeJs",
-        "image": "https://cdn2.iconfinder.com/data/icons/nodejs-1/512/nodejs-512.png"
-      },
-      {
-        "name": "NodeJs",
-        "image": "https://cdn2.iconfinder.com/data/icons/nodejs-1/512/nodejs-512.png"
-      },
-      {
-        "name": "NodeJs",
-        "image": "https://cdn2.iconfinder.com/data/icons/nodejs-1/512/nodejs-512.png"
-      },
-      {
-        "name": "NodeJs",
-        "image": "https://cdn2.iconfinder.com/data/icons/nodejs-1/512/nodejs-512.png"
-      },
-      {
-        "name": "NodeJs",
-        "image": "https://cdn2.iconfinder.com/data/icons/nodejs-1/512/nodejs-512.png"
+        "name": "OFFER.features.mobileApps.title",
+        "image": "https://images.pexels.com/photos/23049/pexels-photo.jpg?w=1260&h=750&auto=compress&cs=tinysrgb",
+        "description": "OFFER.features.mobileApps.description"
       }
     ]
   },

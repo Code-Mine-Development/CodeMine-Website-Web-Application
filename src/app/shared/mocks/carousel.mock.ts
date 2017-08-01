@@ -13,26 +13,26 @@ export const MockCarousel = [
             {
                 'title': 'Technology1',
                 'description': 'Description1',
-                'thumbnail': 'https://just4fun.io/content/images/2016/05/angular.png',
-                'mainImage': 'https://just4fun.io/content/images/2016/05/angular.png'
+                'thumbnail': 'https://just4fun.io/content/images/2016/05/tool.png',
+                'mainImage': 'https://just4fun.io/content/images/2016/05/tool.png'
             },
             {
                 'title': 'Technology2',
                 'description': 'Description2',
-                'thumbnail': 'https://just4fun.io/content/images/2016/05/angular.png',
-                'mainImage': 'https://just4fun.io/content/images/2016/05/angular.png'
+                'thumbnail': 'https://just4fun.io/content/images/2016/05/tool.png',
+                'mainImage': 'https://just4fun.io/content/images/2016/05/tool.png'
             },
             {
                 'title': 'Technology3',
                 'description': 'Description3',
-                'thumbnail': 'https://just4fun.io/content/images/2016/05/angular.png',
-                'mainImage': 'https://just4fun.io/content/images/2016/05/angular.png'
+                'thumbnail': 'https://just4fun.io/content/images/2016/05/tool.png',
+                'mainImage': 'https://just4fun.io/content/images/2016/05/tool.png'
             },
             {
                 'title': 'Technology4',
                 'description': 'Description4',
-                'thumbnail': 'https://just4fun.io/content/images/2016/05/angular.png',
-                'mainImage': 'https://just4fun.io/content/images/2016/05/angular.png'
+                'thumbnail': 'https://just4fun.io/content/images/2016/05/tool.png',
+                'mainImage': 'https://just4fun.io/content/images/2016/05/tool.png'
             }
         ],
         'homePage': true

@@ -21,8 +21,6 @@ export class AppComponent implements OnInit {
     const browserLang = this.translate.getBrowserLang();
     const currentLang = this.localize.parser.currentLang;
     const defaultLang = this.checkLanguages( browserLang, languages )? browserLang : 'pl';
-
-
     this.translate.addLangs(languages);
 
     if( this.checkLanguages( currentLang, languages ) )

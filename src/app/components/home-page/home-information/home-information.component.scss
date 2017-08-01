@@ -6,6 +6,8 @@
   overflow: scroll;
   height: 85vh;
   margin: 100px 80px;
+  position:relative;
+  z-index:8;
 
   .slogan-wrapper {
     height: 85vh;
@@ -98,43 +100,4 @@
       height: 50vh;
     }
   }
-}
-.horizontal {
-  color:#333;
-  position: absolute;
-  top: 0;
-  right: 0px;
-  height: 85vh;
-  width: 80px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  margin-top: 90px;
-  text-align: center;
-  opacity: 0;
-  overflow-x: hidden;
-  h3{
-    height: 10px;
-    width:100%
-  }
-
-    .sliderMain {
-      height: 25vh;
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-    .sliderTitle{
-      transform: rotate(-90deg);
-      p{
-        width: 20vh;
-      }
-    }
-  }
-}
-
-.borderDiv {
-  height: 20vh;
-  width: 1px;
-  border-right: 1px solid #333;
-  margin: auto;
 }

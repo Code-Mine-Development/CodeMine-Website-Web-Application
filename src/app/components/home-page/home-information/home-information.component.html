@@ -1,4 +1,9 @@
-<div #homeBox class="section-start" (scroll)="scroll($event)">
+<app-bg-triangles></app-bg-triangles>
+<div class="section-start"
+    (scroll)="scroll($event)"
+    [ngStyle] = "{'box-shadow':'inset 0 0 10px 10px rgba(0,0,0,'+border+')'}"
+     #homeBox
+>
   <div class="slogan-wrapper">
     <h2 >{{ 'HOME.motto.title' | translate}} <br> {{ 'HOME.motto.subtitle' | translate}}</h2>
   </div>
@@ -25,17 +30,10 @@
       <button class="btn btn-yellow btn-shadow btn-large">{{ 'HOME.button.text' | translate }}</button>
     </div>
   </div>
-  <div #sideSlider class="horizontal">
-    <h3 [appScrollTo]="'home_information_'+(prevElement-1)" [appScrollToOpponent]="homeBox" >{{prevElement}}</h3>
-    <div class="borderDiv"></div>
-    <div class="sliderMain">
-      <h3>{{currentElement}}</h3>
-      <div class="sliderTitle">
-        <p>{{informations[currentElement-1].title | translate}}</p>
-      </div>
-    </div>
-    <div class="borderDiv"></div>
-    <h3 [appScrollTo]="'home_information_'+(lastElement-1)" [appScrollToOpponent]="homeBox">{{lastElement}}</h3>
-  </div>
 </div>
-
+<app-horizontal
+  [ngStyle] = "{ 'opacity': opacity }"
+  [currentElement]="currentElement"
+  [informations]="informations"
+  [scrollOpponent]="homeBox">
+</app-horizontal>

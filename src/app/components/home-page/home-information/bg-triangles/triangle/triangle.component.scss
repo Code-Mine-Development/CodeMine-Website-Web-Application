@@ -1,0 +1,11 @@
+:host{
+  position: absolute;
+  width:32px;
+  height:32px;
+  transition: transform 2s ease-in-out;
+}
+
+svg{
+  width:100%;
+  height: 100%;
+}

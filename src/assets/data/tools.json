@@ -1,0 +1,212 @@
+{
+  "adobe-illustrator":{
+    "title": "Adobe Illustrator",
+    "description": "TOOLS.AI.description",
+    "icon": "ai/ai.svg",
+    "img": "assets/images/angularCode.png",
+    "color": "#f90"
+  },
+  "amazon-aws":{
+    "title": "Amazon AWS",
+    "description": "TOOLS.AmazonAWS.description",
+    "icon": "amazonwebservices/amazonwebservices-original.svg",
+    "img": "assets/images/angularCode.png",
+    "color": "#F7A80D"
+  },
+  "angular":{
+    "title": "Angular",
+    "description": "TOOLS.Angular.description",
+    "icon": "angularjs/angularjs-plain.svg",
+    "img": "assets/images/angularCode.png",
+    "color": "#C4473A"
+  },
+  "apache-kafka":{
+    "title": "Apache Kafka",
+    "description": "TOOLS.ApacheKafka.description",
+    "icon": "apachekafka/apachekafka.svg",
+    "img": "assets/images/angularCode.png",
+    "color": "#000000"
+  },
+  "axurerp":{
+    "title": "Axure RP",
+    "description": "TOOLS.AxureRP.description",
+    "icon": "axurerp/axurerp.svg",
+    "img": "assets/images/angularCode.png",
+    "color": "#a702b1"
+  },
+  "circlecl":{
+    "title": "CircleCL",
+    "description": "TOOLS.CircleCl.description",
+    "icon": "circlecl/circlecl.svg",
+    "img": "assets/images/angularCode.png",
+    "color": "#0a5066"
+  },
+  "docker":{
+    "title": "Docker",
+    "description": "TOOLS.Docker.description",
+    "icon": "docker/docker.svg",
+    "img": "assets/images/angularCode.png",
+    "color": "#019BC6"
+  },
+  "git":{
+    "title": "Git",
+    "description": "TOOLS.Git.description",
+    "icon": "git/git.svg",
+    "img": "assets/images/angularCode.png",
+    "color": "#F34F29"
+  },
+  "gradle":{
+    "title": "Gradle",
+    "description": "TOOLS.Gradle.description",
+    "icon": "gradle/gradle.svg",
+    "img": "assets/images/angularCode.png",
+    "color": "#21cb97"
+  },
+  "grunt":{
+    "title": "Grunt",
+    "description": "TOOLS.Grunt.description",
+    "icon": "grunt/grunt.svg",
+    "img": "assets/images/angularCode.png",
+    "color": "#FCAA1A"
+  },
+  "gulp":{
+    "title": "Gulp",
+    "description": "TOOLS.Gulp.description",
+    "icon": "gulp/gulp.svg",
+    "img": "assets/images/angularCode.png",
+    "color": "#EB4A4B"
+  },
+  "laravel":{
+    "title": "Laravel",
+    "description": "TOOLS.Laravel.description",
+    "icon": "laravel/laravel.svg",
+    "img": "assets/images/angularCode.png",
+    "color": "#FD4F31"
+  },
+  "jenkins":{
+    "title": "Jenkins",
+    "description": "TOOLS.Jenkins.description",
+    "icon": "jenkins/jenkins.svg",
+    "img": "assets/images/angularCode.png",
+    "color": "#d15252"
+  },
+  "jira":{
+    "title": "Jira",
+    "description": "TOOLS.Jira.description",
+    "icon": "jira/jira.svg",
+    "img": "assets/images/angularCode.png",
+    "color": "#F7A80D"
+  },
+  "jmeter":{
+    "title": "JMeter",
+    "description": "TOOLS.JMeter.description",
+    "icon": "jmeter/jmeter.svg",
+    "img": "assets/images/angularCode.png",
+    "color": "#ef6d3a"
+  },
+  "mongodb":{
+    "title": "MongoDB",
+    "description": "TOOLS.MongoDB.description",
+    "icon": "mongodb/mongodb.svg",
+    "img": "assets/images/angularCode.png",
+    "color": "#4FAA41"
+  },
+  "mysql":{
+    "title": "MySQL",
+    "description": "TOOLS.MySQL.description",
+    "icon": "mysql/mysql.svg",
+    "img": "assets/images/angularCode.png",
+    "color": "#00618A"
+  },
+  "npm":{
+    "title": "NPM",
+    "description": "TOOLS.NPM.description",
+    "icon": "npm/npm.svg",
+    "img": "assets/images/angularCode.png",
+    "color": "#cb3837"
+  },
+  "postgresql":{
+    "title": "PostgreSQL",
+    "description": "TOOLS.PostgreSQL.description",
+    "icon": "postgresql/postgresql.svg",
+    "img": "assets/images/angularCode.png",
+    "color": "#336791"
+  },
+  "rabbitmq":{
+    "title": "RabbitMQ",
+    "description": "TOOLS.RabbitMQ.description",
+    "icon": "rabbitmq/rabbitmq.svg",
+    "img": "assets/images/angularCode.png",
+    "color": "#f60"
+  },
+  "reactjs":{
+    "title": "ReactJS",
+    "description": "TOOLS.ReactJS.description",
+    "icon": "react/react.svg",
+    "img": "assets/images/angularCode.png",
+    "color": "#61DAFB"
+  },
+  "sass":{
+    "title": "SASS",
+    "description": "TOOLS.SASS.description",
+    "icon": "sass/sass.svg",
+    "img": "assets/images/angularCode.png",
+    "color": "#CB6699"
+  },
+  "sketch":{
+    "title": "Sketch",
+    "description": "TOOLS.Sketch.description",
+    "icon": "sketch/sketch.svg",
+    "img": "assets/images/angularCode.png",
+    "color": "#fcbd01"
+  },
+  "sonar-qube":{
+    "title": "Sonar Qube",
+    "description": "TOOLS.SonarQube.description",
+    "icon": "sonarqube/sonarqube.svg",
+    "img": "assets/images/angularCode.png",
+    "color": "#05a2d8"
+  },
+  "spring-framework":{
+    "title": "Spring Framework",
+    "description": "TOOLS.SpringFramework.description",
+    "icon": "springframework/springframework.svg",
+    "img": "assets/images/angularCode.png",
+    "color": "#6eb340"
+  },
+  "symfony":{
+    "title": "Symfony",
+    "description": "TOOLS.Symfony.description",
+    "icon": "symfony/symfony.svg",
+    "img": "assets/images/angularCode.png",
+    "color": "#494949"
+  },
+  "traviscl":{
+    "title": "TravisCL",
+    "description": "TOOLS.TravisCl.description",
+    "icon": "travis/traviscl.svg",
+    "img": "assets/images/angularCode.png",
+    "color": "#BB2031"
+  },
+  "vagrant":{
+    "title": "Vagrant",
+    "description": "TOOLS.Vagrant.description",
+    "icon": "vagrant/vagrant.svg",
+    "img": "assets/images/angularCode.png",
+    "color": "#1563ff"
+  },
+  "webpack":{
+    "title": "Webpack",
+    "description": "TOOLS.Webpack.description",
+    "icon": "webpack/webpack.svg",
+    "img": "assets/images/angularCode.png",
+    "color": "#8ed4f9"
+  },
+  "zend-framework":{
+    "title": "Zend Framework",
+    "description": "TOOLS.ZendFramework.description",
+    "icon": "zend/zend.svg",
+    "img": "assets/images/angularCode.png",
+    "color": "#68B604"
+  }
+}

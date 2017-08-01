@@ -5,7 +5,7 @@ import {TechnologiesComponent} from './technologies.component';
 
 @Component({
   selector: 'app-fake-technologies-wrapper',
-  template: '<app-technologies [Technologies]="technologies"></app-technologies>'
+  template: '<app-offerElementsDetails [Technologies]="offerElementsDetails"></app-offerElementsDetails>'
 })
 
 class FakeWrapperTechnologiesComponent {
