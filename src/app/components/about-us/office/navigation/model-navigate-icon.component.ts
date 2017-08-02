@@ -3,7 +3,7 @@ import {Component, OnInit, EventEmitter, Output, Input} from '@angular/core';
 @Component({
   selector: 'app-model-navigate-icon',
   template: `
-    <svg viewBox="0 0 100 100" [class.active]="state == 'minimize'" (click)="stateChange.emit(state == 'maximize' ? 'minimize' : 'maximize')">
+    <svg viewBox="0 0 100 100" [class.active]="state == 'maximize'" (click)="stateChange.emit(state == 'maximize' ? 'minimize' : 'maximize')">
       <rect class="bg" x="1" y="1" width="98" height="98"/>
       <polyline class="corner" points="22.51 40.17 22.51 22.51 40.06 22.51"/>
       <polyline class="corner" points="59.94 22.51 77.48 22.51 77.48 40.06"/>
@@ -32,8 +32,13 @@ import {Component, OnInit, EventEmitter, Output, Input} from '@angular/core';
     }
     .active .corner{
       transform-origin: 50% 50%;
+      transform: rotate(-180deg);
+    }
+    .active .corner:nth-of-type(odd){
+      transform-origin: 50% 50%;
       transform: rotate(180deg);
     }
+    
   `]
 })
 export class ModelNavigateIconComponent implements OnInit {

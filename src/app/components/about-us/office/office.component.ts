@@ -1,4 +1,4 @@
-import {Component, OnInit, Input, HostListener, OnChanges} from '@angular/core';
+import {Component, OnInit, Input, HostListener} from '@angular/core';
 import {Employees} from './interfaces/employees.interface';
 
 @Component({
@@ -6,7 +6,7 @@ import {Employees} from './interfaces/employees.interface';
   templateUrl: 'office.component.html',
   styleUrls: ['office.component.scss'],
 })
-export class OfficeComponent implements OnInit, OnChanges {
+export class OfficeComponent implements OnInit {
   @HostListener('window:resize', ['$event']) onWindowResize(){
     this.checkSize();
   }
@@ -16,7 +16,7 @@ export class OfficeComponent implements OnInit, OnChanges {
   private breakPoint = 800;
 
   private modelVisible = false;
-  private listVisible = true;
+  private listVisible = false;
   private modelStatus = "maximize";
 
   constructor( ) {}
@@ -25,10 +25,6 @@ export class OfficeComponent implements OnInit, OnChanges {
     this.checkSize();
   }
 
-  ngOnChanges(){
-    console.log(this.listVisible);
-    console.log(this.modelStatus);
-  }
 
   checkSize(){
     this.modelVisible = window.innerWidth > this.breakPoint;

@@ -1,13 +1,27 @@
 import {Component, OnInit, NgZone, Input, OnChanges} from '@angular/core';
+import {trigger, animate, transition, style} from '@angular/animations';
 import {Employees} from '../interfaces/employees.interface';
 import {MovingLayers} from './models/movingLayers.model';
 import {MouseMove} from './models/mouseMove.model';
 import {DoomRestyle} from './models/doomRestyle.model';
 
+
 @Component({
   selector: 'app-office-model',
   templateUrl: './office-model.component.html',
-  styleUrls: ['./office-model.component.scss']
+  styleUrls: ['./office-model.component.scss'],
+  animations:[
+    trigger("JumpIn",[
+      transition(":enter",[
+        style({transform: "scale(0.3)", opacity:0, position: 'absolute'}),
+        animate( '.5s .3s ease-in-out', style({transform: "*", opacity:1}))
+      ]),
+      transition(":leave",[
+        animate( '.5s ease-in-out', style({transform: "scale(0.3)", opacity:0, position: 'absolute'}))
+      ])
+    ])
+  ],
+  host:{ '[@JumpIn]':'' }
 })
 export class OfficeModelComponent implements OnInit, OnChanges {
   @Input() employees: Employees;
