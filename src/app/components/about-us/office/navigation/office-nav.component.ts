@@ -6,8 +6,9 @@ import {Component, OnInit, Input, Output, EventEmitter} from '@angular/core';
     <nav>
       <ul>
             <li>
-              <img [hidden]="showListStatus" (click)="setShowListStatus(true)" src="assets/images/office-nav/lista.svg" alt="navigate to list">
-              <img [hidden]="!showListStatus" (click)="setShowListStatus(false)" src="assets/images/office-nav/mapa.svg" alt="navigate to map">
+              <app-list-icon [state]="showListStatus" (stateChange)="setShowListStatus($event)"></app-list-icon>
+              <!--<img [hidden]="showListStatus" (click)="setShowListStatus(true)" src="assets/images/office-nav/lista.svg" alt="navigate to list">-->
+              <!--<img [hidden]="!showListStatus" (click)="setShowListStatus(false)" src="assets/images/office-nav/mapa.svg" alt="navigate to map">-->
              </li>
             <li *ngIf="checkFirefox()">
               <img [class.disabled]="showListStatus" [hidden]="modelStatus != 'maximize'" (click)="setModelNavigate('minimize')" src="assets/images/office-nav/pomniejsz.svg" alt="navigate to big map">
