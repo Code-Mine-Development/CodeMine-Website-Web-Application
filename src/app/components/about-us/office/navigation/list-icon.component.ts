@@ -8,7 +8,7 @@ import {Component, OnInit, Input, Output, EventEmitter, OnChanges} from '@angula
       <circle class="circle" cx="26.58" cy="26.31" r="5.81"/>
       <circle class="circle" cx="26.58" cy="50" r="5.81"/>
       <circle class="circle" cx="26.58" cy="73.71" r="5.81"/>
-      <line *ngFor="let line of FirstStatePoints" class="line" [attr.x1]="line.start.x" [attr.y1]="line.start.y" [attr.x2]="line.end.x" [attr.y2]="line.end.y"/>
+      <line *ngFor="let line of currentStatePoints" class="line" [attr.x1]="line.start.x" [attr.y1]="line.start.y" [attr.x2]="line.end.x" [attr.y2]="line.end.y"/>
     </svg>
   `,
   styles: [`
@@ -47,9 +47,9 @@ import {Component, OnInit, Input, Output, EventEmitter, OnChanges} from '@angula
 export class ListIconComponent implements OnInit, OnChanges {
   @Input() state:boolean;
   @Output() stateChange = new EventEmitter();
-  private duration = 500;
+  private duration = 300;
 
-  private FirstStatePoints = [
+  readonly FirstStatePoints = [
     {
       start: { x: 41.82, y: 26.30 },
       end: { x:79.23, y:26.30}
@@ -63,7 +63,7 @@ export class ListIconComponent implements OnInit, OnChanges {
       end: { x:79.23, y:73.01}
     }
   ];
-  private SecondStatePoint = [
+  readonly SecondStatePoint = [
     {
       start: { x: 0, y: 100 },
       end: { x:50, y:50}
@@ -81,32 +81,33 @@ export class ListIconComponent implements OnInit, OnChanges {
   private currentAnimationDistance;
   private RAF;
   private start;
+  private progress;
 
   constructor() { }
 
   ngOnInit() {
-    this.currentStatePoints = Object.assign(!this.state ? this.FirstStatePoints: this.SecondStatePoint);
+    this.currentStatePoints = this.copyObject((!this.state ? this.FirstStatePoints: this.SecondStatePoint));
   }
 
   ngOnChanges(){
     if(!this.currentStatePoints)
       return;
-
     this.animatePosition()
   }
 
   animatePosition(){
+
     if(this.RAF)
       window.cancelAnimationFrame(this.RAF);
     this.getDistance();
     this.start = null;
+    this.progress = null;
     this.RAF = window.requestAnimationFrame(this.animationProgress.bind(this))
   }
 
   private getDistance(){
     this.currentAnimationDistance = [];
-    let target = this.state ? this.FirstStatePoints : this.SecondStatePoint;
-
+    let target =  this.copyObject(!this.state? this.FirstStatePoints.slice() : this.SecondStatePoint);
     target.forEach(
       ( point, index ) => {
         this.currentAnimationDistance.push({
@@ -121,7 +122,6 @@ export class ListIconComponent implements OnInit, OnChanges {
         })
 
       });
-    console.log(this.currentAnimationDistance);
   }
 
   private animationProgress(timestamp){
@@ -136,11 +136,29 @@ export class ListIconComponent implements OnInit, OnChanges {
   }
 
   setPoints(progress){
-    this.currentStatePoints.forEach(
-      ( point, index ) => {
-        // tutej to ciulstwonn
+    let currentAdd = progress - (this.progress || 0);
+    this.progress = progress;
+    this.currentStatePoints = this.currentStatePoints.map(
+      ( line, index ) => {
+        line.start.x += (this.currentAnimationDistance[index].start.x * currentAdd);
+        line.start.y += (this.currentAnimationDistance[index].start.y * currentAdd);
+        line.end.y += (this.currentAnimationDistance[index].end.y * currentAdd);
+        line.end.x += (this.currentAnimationDistance[index].end.x * currentAdd);
+        return line;
       }
     )
+  }
+
+  copyObject( object ){
+    if( object instanceof  Object ){
+      let objCopy = Object.assign( object instanceof Array? [] : {}, object),
+          keys = Object.keys(objCopy);
+      keys.forEach( (key) => {
+        if(objCopy[key] instanceof Object)
+          objCopy[key] = this.copyObject(objCopy[key])
+      });
+      return objCopy;
+    }
   }
 
 }

@@ -7,13 +7,10 @@ import {Component, OnInit, Input, Output, EventEmitter} from '@angular/core';
       <ul>
             <li>
               <app-list-icon [state]="showListStatus" (stateChange)="setShowListStatus($event)"></app-list-icon>
-              <!--<img [hidden]="showListStatus" (click)="setShowListStatus(true)" src="assets/images/office-nav/lista.svg" alt="navigate to list">-->
-              <!--<img [hidden]="!showListStatus" (click)="setShowListStatus(false)" src="assets/images/office-nav/mapa.svg" alt="navigate to map">-->
              </li>
             <li *ngIf="checkFirefox()">
-              <img [class.disabled]="showListStatus" [hidden]="modelStatus != 'maximize'" (click)="setModelNavigate('minimize')" src="assets/images/office-nav/pomniejsz.svg" alt="navigate to big map">
-              <img [class.disabled]="showListStatus" [hidden]="modelStatus != 'minimize'" (click)="setModelNavigate('maximize')" src="assets/images/office-nav/powieksz.svg" alt="navigate to small map">
-            </li>
+              <app-model-navigate-icon [class.disabled]="showListStatus" [state]="modelStatus" (stateChange)="setModelNavigate($event)"></app-model-navigate-icon>
+             </li>
       </ul>
     </nav>
   `,
@@ -34,6 +31,8 @@ import {Component, OnInit, Input, Output, EventEmitter} from '@angular/core';
       height: 68px;
       padding: 15px 0 0;
       cursor: pointer;
+      transition:opacity .3s;
+      opacity:1;
     }
     img{
       width:100%;

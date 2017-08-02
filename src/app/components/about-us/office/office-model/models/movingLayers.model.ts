@@ -27,7 +27,6 @@ export class MovingLayers {
     target.setAttribute('data-y', y);
     bg.setAttribute('data-x', x);
     bg.setAttribute('data-y', y);
-    console.log(target.getAttribute('data-x'));
   }
 
   resetPosition(){

@@ -16,6 +16,7 @@ import { OfficeComponent } from './office/office.component';
 import { OfficeModelComponent } from './office/office-model/office-model.component';
 import { OfficeNavComponent } from './office/navigation/office-nav.component';
 import { ListIconComponent } from './office/navigation/list-icon.component';
+import { ModelNavigateIconComponent } from './office/navigation/model-navigate-icon.component';
 
 
 
@@ -33,7 +34,8 @@ import { ListIconComponent } from './office/navigation/list-icon.component';
     OfficeComponent,
     OfficeModelComponent,
     OfficeNavComponent,
-    ListIconComponent
+    ListIconComponent,
+    ModelNavigateIconComponent
   ],
   imports: [
     CommonModule,
