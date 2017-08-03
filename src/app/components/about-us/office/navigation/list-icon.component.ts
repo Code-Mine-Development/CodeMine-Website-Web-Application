@@ -66,15 +66,15 @@ export class ListIconComponent implements OnInit, OnChanges {
   readonly SecondStatePoint = [
     {
       start: { x: 0, y: 100 },
-      end: { x:50, y:50}
+      end: { x:50, y:65}
     },
     {
       start: { x: 50, y: 0 },
-      end: { x:50, y:50}
+      end: { x:50, y:65}
     },
     {
       start: { x: 100, y: 100 },
-      end: { x:50, y:50}
+      end: { x:50, y:65}
     }
   ];
   private currentStatePoints;
@@ -107,7 +107,7 @@ export class ListIconComponent implements OnInit, OnChanges {
 
   private getDistance(){
     this.currentAnimationDistance = [];
-    let target =  this.copyObject(!this.state? this.FirstStatePoints.slice() : this.SecondStatePoint);
+    let target =  this.copyObject(!this.state? this.FirstStatePoints : this.SecondStatePoint);
     target.forEach(
       ( point, index ) => {
         this.currentAnimationDistance.push({
@@ -136,17 +136,17 @@ export class ListIconComponent implements OnInit, OnChanges {
   }
 
   setPoints(progress){
-    let currentAdd = progress - (this.progress || 0);
+    let currentAdd = progress - (this.progress || 0)
     this.progress = progress;
     this.currentStatePoints = this.currentStatePoints.map(
       ( line, index ) => {
-        line.start.x += (this.currentAnimationDistance[index].start.x * currentAdd);
-        line.start.y += (this.currentAnimationDistance[index].start.y * currentAdd);
-        line.end.y += (this.currentAnimationDistance[index].end.y * currentAdd);
-        line.end.x += (this.currentAnimationDistance[index].end.x * currentAdd);
+        line.start.x += +(this.currentAnimationDistance[index].start.x * currentAdd).toFixed(2);
+        line.start.y += +(this.currentAnimationDistance[index].start.y * currentAdd).toFixed(2);
+        line.end.y += +(this.currentAnimationDistance[index].end.y * currentAdd).toFixed(2);
+        line.end.x += +(this.currentAnimationDistance[index].end.x * currentAdd).toFixed(2);
         return line;
       }
-    )
+    );
   }
 
   copyObject( object ){

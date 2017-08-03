@@ -6,8 +6,9 @@ import {TranslateModule} from "@ngx-translate/core";
 import { BgTrianglesComponent } from './home-information/bg-triangles/bg-triangles.component';
 import { TriangleComponent } from './home-information/bg-triangles/triangle/triangle.component';
 import { HorizontalComponent } from './home-information/horizontal/horizontal.component';
-
-
+import { HomeInformationContentComponent } from './home-information/home-information-content/home-information-content.component';
+import { InformationComponent } from './home-information/home-information-content/information/information.component';
+import { ScrollControllerService } from './services/scroll-controller.service'
 
 @NgModule({
     declarations: [
@@ -15,6 +16,8 @@ import { HorizontalComponent } from './home-information/horizontal/horizontal.co
       BgTrianglesComponent,
       TriangleComponent,
       HorizontalComponent,
+      HomeInformationContentComponent,
+      InformationComponent,
 
     ],
     imports: [
@@ -22,11 +25,12 @@ import { HorizontalComponent } from './home-information/horizontal/horizontal.co
         TranslateModule,
         SharedModule
     ],
-    exports: [
-      HomeInformationComponent,
-
+    providers:[
+      ScrollControllerService
     ],
-    providers: [],
+    exports: [
+      HomeInformationComponent
+    ],
 })
 export class HomePageComponentModule {
 }

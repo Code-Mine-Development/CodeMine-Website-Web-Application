@@ -13,11 +13,11 @@ import {DoomRestyle} from './models/doomRestyle.model';
   animations:[
     trigger("JumpIn",[
       transition(":enter",[
-        style({transform: "scale(0.3)", opacity:0, position: 'absolute'}),
-        animate( '.5s .3s ease-in-out', style({transform: "*", opacity:1}))
+        style({opacity:0, position: 'absolute'}),
+        animate( '.5s .3s ease-in-out', style({ opacity:1}))
       ]),
       transition(":leave",[
-        animate( '.5s ease-in-out', style({transform: "scale(0.3)", opacity:0, position: 'absolute'}))
+        animate( '.5s ease-in-out', style({opacity:0, position: 'absolute'}))
       ])
     ])
   ],

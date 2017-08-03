@@ -12,7 +12,7 @@ import {DOCUMENT} from '@angular/common';
     trigger('slideDown',[
       transition(':enter',[
         style({ transform:"translateY(-100%)" }),
-        animate('.5s .3s ease-in-out', style({ transform:"translateY(0)"}))
+        animate('.5s ease-in-out', style({ transform:"translateY(0)"}))
       ]),
       transition(':leave',[
         animate('.5s ease-in-out', style({ transform:"translateY(-150%)"}))
