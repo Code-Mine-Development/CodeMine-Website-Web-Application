@@ -1,5 +1,5 @@
 <div class="section-home">
-  <app-home-information></app-home-information>
+  <app-home-information [escapeComponent]="homeTarget"></app-home-information>
   <div class="skip">
     <a class="skip-btn" [appScrollTo]='homeTarget'><i class="fa fa-chevron-down" aria-hidden="true"></i></a>
   </div>

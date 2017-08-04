@@ -1,13 +1,13 @@
 <app-bg-triangles></app-bg-triangles>
-<div class="section-start"
-    (scroll)="scroll($event)"
-    [ngStyle] = "{'box-shadow':'inset 0 0 10px 10px rgba(0,0,0,'+border+')'}"
-     #homeBox>
-  <app-home-information-content [scrollTop]="scrollTop"></app-home-information-content>
-</div>
+<app-home-information-content mouseWheel
+                              (mouseWheelUp)="wheelDirectory('up')"
+                              (mouseWheelDown)="wheelDirectory('down')">
+</app-home-information-content>
+
+<!--</div>-->
 <!--<app-horizontal-->
-  <!--[ngStyle] = "{ 'opacity': opacity }"-->
-  <!--[currentElement]="currentElement"-->
-  <!--[informations]="informations"-->
-  <!--[scrollOpponent]="homeBox">-->
+<!--[ngStyle] = "{ 'opacity': opacity }"-->
+<!--[currentElement]="currentElement"-->
+<!--[informations]="informations"-->
+<!--[scrollOpponent]="homeBox">-->
 <!--</app-horizontal>-->

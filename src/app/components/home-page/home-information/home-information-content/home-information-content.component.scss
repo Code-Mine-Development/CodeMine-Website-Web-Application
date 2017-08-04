@@ -1,15 +1,12 @@
-.slogan-wrapper {
+:host{
+  display:block;
+  overflow: hidden;
   height: 85vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  overflow: scroll;
-  text-align: center;
+  margin: 100px 80px;
+  position:relative;
+  z-index:8;
+  transition: box-shadow .5s;
+  &.border{
+    box-shadow:inset 0 0 10px 10px rgba(0,0,0,0.1);
+  }
 }
-
-.start-slogan {
-  font-size: 3em;
-  text-align: center;
-  font-weight: 500;
-}
-

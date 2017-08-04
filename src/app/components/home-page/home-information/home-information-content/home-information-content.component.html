@@ -1,37 +1,9 @@
-<div class="slogan-wrapper">
-  <h2 >{{ 'HOME.motto.title' | translate}} <br> {{ 'HOME.motto.subtitle' | translate}}</h2>
-</div>
-<div class="box-start">
-  <h2 class="header" >{{ 'HOME.howWeWork.title' | translate}}</h2>
-  <p class="text" >{{ 'HOME.howWeWork.description' | translate}}</p>
-</div>
-
-<section #informationsBox>
-  <app-information [test]="1"></app-information>
-  <app-information [test]="2"></app-information>
-  <app-information [test]="3"></app-information>
-  <app-information [test]="4"></app-information>
-  <app-information [test]="5"></app-information>
-  <app-information [test]="6"></app-information>
-  <app-information [test]="7"></app-information>
-</section>
-
-
-<!--<div [id]="'home_information_'+i" class="row box" *ngFor="let information of informations, let i = index">-->
-  <!--<div class="col-box box-image"></div>-->
-  <!--<div class="col-box-text box-text">-->
-    <!--<h1 class="box-header">{{information.title | translate}}</h1>-->
-    <!--<p class="text">{{information.description | translate}}</p>-->
-    <!--<button class="btn btn-yellow btn-large btn-shadow" *ngIf="information.more_info.active">{{information.more_info.message | translate}}</button>-->
-  <!--</div>-->
-<!--</div>-->
-<div class="box-center">
-  <div class="row">
-    <div class="box-center-text">
-      <h1 class="box-header">{{ 'HOME.button.label' | translate }}</h1>
-    </div>
-  </div>
-  <div class="row">
-    <button class="btn btn-yellow btn-shadow btn-large">{{ 'HOME.button.text' | translate }}</button>
-  </div>
-</div>
+<app-slogan-section></app-slogan-section>
+<app-information [test]="1"></app-information>
+<app-information [test]="2"></app-information>
+<app-information [test]="3"></app-information>
+<app-information [test]="4"></app-information>
+<app-information [test]="5"></app-information>
+<app-information [test]="6"></app-information>
+<app-information [test]="7"></app-information>
+<app-cta-to-form></app-cta-to-form>

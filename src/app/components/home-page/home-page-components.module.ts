@@ -8,7 +8,10 @@ import { TriangleComponent } from './home-information/bg-triangles/triangle/tria
 import { HorizontalComponent } from './home-information/horizontal/horizontal.component';
 import { HomeInformationContentComponent } from './home-information/home-information-content/home-information-content.component';
 import { InformationComponent } from './home-information/home-information-content/information/information.component';
-import { ScrollControllerService } from './services/scroll-controller.service'
+import { ScrollController } from './services/scroll.controller'
+import { MouseWheelDirective } from './directive/mouseWheel.directive';
+import { SloganSectionComponent } from './home-information/home-information-content/slogan-section/slogan-section.component';
+import { CtaToFormComponent } from './home-information/home-information-content/cta-to-form/cta-to-form.component';
 
 @NgModule({
     declarations: [
@@ -18,7 +21,9 @@ import { ScrollControllerService } from './services/scroll-controller.service'
       HorizontalComponent,
       HomeInformationContentComponent,
       InformationComponent,
-
+      MouseWheelDirective,
+      SloganSectionComponent,
+      CtaToFormComponent
     ],
     imports: [
         CommonModule,
@@ -26,7 +31,7 @@ import { ScrollControllerService } from './services/scroll-controller.service'
         SharedModule
     ],
     providers:[
-      ScrollControllerService
+      ScrollController
     ],
     exports: [
       HomeInformationComponent

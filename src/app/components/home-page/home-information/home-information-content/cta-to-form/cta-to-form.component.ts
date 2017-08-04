@@ -1,14 +1,13 @@
-import {Component, OnInit, Input, ElementRef,} from '@angular/core';
+import {Component, ElementRef} from '@angular/core';
 import {ScrollController} from '../../../services/scroll.controller';
 import {ComponentTemplate} from '../component.template';
 
 @Component({
-  selector: 'app-information',
-  templateUrl: './information.component.html',
-  styleUrls: ['./information.component.scss']
+  selector: 'app-cta-to-form',
+  templateUrl: './cta-to-form.component.html',
+  styleUrls: ['./cta-to-form.component.scss']
 })
-export class InformationComponent extends ComponentTemplate {
-  @Input('test') test;
+export class CtaToFormComponent extends ComponentTemplate {
 
   constructor( scrollController:ScrollController, element:ElementRef) {
     super( scrollController,scrollController.getElementsQuantity()+1, element);
@@ -26,5 +25,4 @@ export class InformationComponent extends ComponentTemplate {
       cb();
     }, 1500 )
   }
-
 }
