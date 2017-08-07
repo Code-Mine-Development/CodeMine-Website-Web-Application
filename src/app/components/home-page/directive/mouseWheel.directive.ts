@@ -17,7 +17,11 @@ export class MouseWheelDirective {
     this.mouseWheelFunc(event);
   }
 
-  // @HostListener('ontouchmove', ['$event'])
+  @HostListener('touchmove', ['$event']) touchmove(event:any) {
+    this.mobileTouchFunc(event);
+  }
+
+  private mobileTouchPosition = 0;
 
   mouseWheelFunc(event: any) {
     var event = window.event || event; // old IE support
@@ -27,6 +31,25 @@ export class MouseWheelDirective {
     } else if(delta < 0) {
       this.mouseWheelDown.emit(event);
     }
+    // for IE
+    event.returnValue = false;
+    // for Chrome and Firefox
+    if(event.preventDefault) {
+      event.preventDefault();
+    }
+  }
+
+  mobileTouchFunc(event:any){
+    let touch = event.touches[0];
+
+    if(touch.screenY > this.mobileTouchPosition + 20){
+      this.mobileTouchPosition = touch.screenY;
+      this.mouseWheelUp.emit(event);
+    }else if(touch.screenY < this.mobileTouchPosition - 20){
+      this.mobileTouchPosition = touch.screenY;
+      this.mouseWheelDown.emit(event);
+    }
+
     // for IE
     event.returnValue = false;
     // for Chrome and Firefox

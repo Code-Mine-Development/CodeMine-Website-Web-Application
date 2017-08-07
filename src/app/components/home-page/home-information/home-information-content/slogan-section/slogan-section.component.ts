@@ -1,5 +1,5 @@
 import {Component, OnInit, ElementRef} from '@angular/core';
-import {ComponentTemplate} from '../component.template';
+import {ComponentTemplate, registerElement} from '../component.template';
 import {ScrollController} from '../../../services/scroll.controller';
 
 @Component({
@@ -23,21 +23,21 @@ import {ScrollController} from '../../../services/scroll.controller';
 })
 export class SloganSectionComponent extends ComponentTemplate{
   constructor( scrollController:ScrollController, element:ElementRef) {
-    scrollController.resetElementQuantity();
-    super( scrollController, 1, element);
-
+    super( scrollController, element);
   }
 
-  animateHide(){
-    setTimeout( ()=> {
-      console.log("animationHide")
-    }, 500 )
+  animateHide(id:number){
   }
 
-  animateShow(cb){
+  animateShow(id, cb){
     setTimeout( ()=> {
-      console.log("animationShow");
       cb();
-    }, 500 )
+    }, 1500 )
+  }
+
+  registerElements():[registerElement]{
+    return [
+        { localId: 1, title:"test slogan title" }
+      ]
   }
 }

@@ -16,12 +16,13 @@ export class HomeInformationContentComponent implements OnDestroy{
 
   constructor( private scrollControllerService:ScrollController ) {
     this.scrollPositionSubscriber = this.scrollControllerService.getCurrentElementStream().subscribe(
-      (value) => {
-        if(value == 1)
+      (value:any) => {
+        if(value.id == 1)
           return this.borderVisible = false;
         this.borderVisible = true;
       }
     )
+    this.scrollControllerService.resetElementQuantity();
   }
 
   ngOnDestroy(){

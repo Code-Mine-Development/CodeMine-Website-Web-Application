@@ -1,12 +1,12 @@
-<div class="horizontal">
-  <h3 [appScrollTo]="'home_information_'+(prevElement-1)" [appScrollToOpponent]="scrollOpponent" [appLocationOnScreenAfterScrolling]="'center'" >{{prevElement}}</h3>
+<div class="horizontal" [class.hidden]="!element || element.id === 1">
+  <p class="pointer" (click)="moveToPrev()">{{element?.id-1}}</p>
   <div class="borderDiv"></div>
   <div class="sliderMain">
-    <h3>{{currentElement}}</h3>
+    <p>{{element?.id}}</p>
     <div class="sliderTitle">
-      <p>{{informations[currentElement-1].title | translate}}</p>
+      <h3>{{element?.title + '.shortCut' | translate}}</h3>
     </div>
   </div>
   <div class="borderDiv"></div>
-  <h3 [appScrollTo]="'home_information_'+(lastElement-1)" [appScrollToOpponent]="scrollOpponent" [appLocationOnScreenAfterScrolling]="'center'">{{lastElement}}</h3>
+  <p  class="pointer" (click)="moveToLast()">{{element?.quantity}}</p>
 </div>

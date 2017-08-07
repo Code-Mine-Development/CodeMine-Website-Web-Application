@@ -12,6 +12,8 @@ import { ScrollController } from './services/scroll.controller'
 import { MouseWheelDirective } from './directive/mouseWheel.directive';
 import { SloganSectionComponent } from './home-information/home-information-content/slogan-section/slogan-section.component';
 import { CtaToFormComponent } from './home-information/home-information-content/cta-to-form/cta-to-form.component';
+import { FirstGroupComponent } from './home-information/home-information-content/first-group/first-group.component';
+import { HowWeWorkComponent } from './home-information/home-information-content/first-group/components/how-we-work.component';
 
 @NgModule({
     declarations: [
@@ -23,7 +25,9 @@ import { CtaToFormComponent } from './home-information/home-information-content/
       InformationComponent,
       MouseWheelDirective,
       SloganSectionComponent,
-      CtaToFormComponent
+      CtaToFormComponent,
+      FirstGroupComponent,
+      HowWeWorkComponent
     ],
     imports: [
         CommonModule,

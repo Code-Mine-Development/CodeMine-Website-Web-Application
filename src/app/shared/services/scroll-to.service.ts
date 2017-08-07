@@ -20,8 +20,6 @@ export class ScrollToService {
     this.target = target;
     this.opponent = opponent || null;
     this.onScreenLocation = onScreenLocation;
-    this.filterTarget();
-    this.chooseOppenent();
     this.scrollTo();
     this.animationEndCallBack = animationEndCallBack;
   }
@@ -54,6 +52,8 @@ export class ScrollToService {
   private scrollTo() {
     if(this.start)
       return;
+    this.filterTarget();
+    this.chooseOppenent();
     this.targetPosition = this.getTargetPosition();
     this.currentPosition = this.getCurrentPosition();
     window.requestAnimationFrame(this.scrollToElement.bind(this));
@@ -114,6 +114,8 @@ export class ScrollToService {
   private changeScrollTop(position){
     if(this.opponent)
       return this.scrollingOpponent.scrollTop = position;
+    if(!this.scrollingOpponent)
+      return;
     this.scrollingOpponent.body.scrollTop = position;
     this.scrollingOpponent.documentElement.scrollTop = position;
   }

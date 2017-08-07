@@ -34,14 +34,14 @@ export class HomeInformationComponent implements OnInit, OnDestroy, AfterViewIni
   ngOnInit() {
     let prevElement = 1;
 
-    this.scrollCurrentElementSubscriber = this.scrollController.getCurrentElementStream().subscribe( (val:number) => {
-      if(prevElement > val && val == 1) {
+    this.scrollCurrentElementSubscriber = this.scrollController.getCurrentElementStream().subscribe( (value:any) => {
+      if(prevElement > value.id && value.id == 1) {
         this.simulateScroll(scrollSimulation.show);
       }
-      else if( prevElement == 1 && val > 1){
+      else if( prevElement == 1 && value.id > 1){
         this.simulateScroll(scrollSimulation.hide);
       }
-      prevElement = val;
+      prevElement = value.id;
     });
 
     this.route.data

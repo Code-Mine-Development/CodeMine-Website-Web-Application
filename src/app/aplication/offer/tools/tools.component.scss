@@ -13,7 +13,6 @@
 .tools{
   display: flex;
   flex-wrap: wrap;
-  align-items: center;
 }
 .tools-col{
   @media #{$phone}{
@@ -43,9 +42,4 @@
       background: #eeeeee;
     }
   }
-}
-.tools:after {
-  content: "";
-  display: table;
-  clear: both;
 }

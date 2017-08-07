@@ -2,6 +2,10 @@ import { Injectable } from '@angular/core';
 import { Subject } from 'rxjs';
 import { ScrollToService } from '../../../shared/services/scroll-to.service';
 
+interface InformationElement{
+  id:number,
+  title:string
+}
 
 @Injectable()
 export class ScrollController {
@@ -10,6 +14,7 @@ export class ScrollController {
   $currentElement = new Subject();
   elementsQuantity = 0;
   escapeElement;
+  title = [];
 
   animationInProgress = false;
 
@@ -34,23 +39,28 @@ export class ScrollController {
   resetElementQuantity(){
     this.elementsQuantity = 0;
     this.currentElement = 1;
-    this.$currentElement.next(1);
+    this.$currentElement.next(<InformationElement>{ id: this.currentElement, title: this.title[this.currentElement]});
   }
 
-  registerElement(){
+  registerElement(title:string){
     this.elementsQuantity++;
+    this.title[this.elementsQuantity] = title;
+    return this.elementsQuantity;
   }
-
-
-
 
 
   move(directory){
     this.setScrollDirectory(directory);
   }
 
+  moveToLast(){
+    this.currentElement = this.getElementsQuantity();
+    this.$currentElement.next(<InformationElement>{ id: this.currentElement, title: this.title[this.currentElement]});
+    this.animationInProgress = true;
+  }
+
   getCurrentElementStream(){
-    return this.$currentElement.startWith(this.currentElement);
+    return this.$currentElement.startWith(<InformationElement>{ id: this.currentElement, title: this.title[this.currentElement]});
   }
 
   getElementsQuantity(){
@@ -68,7 +78,7 @@ export class ScrollController {
       return this.escapeFromInformations();
 
     this.currentElement++;
-    this.$currentElement.next(this.currentElement);
+    this.$currentElement.next(<InformationElement>{ id: this.currentElement, title: this.title[this.currentElement]});
     this.animationInProgress = true;
   }
 
@@ -77,12 +87,11 @@ export class ScrollController {
       return;
 
     this.currentElement--;
-    this.$currentElement.next(this.currentElement);
+    this.$currentElement.next(<InformationElement>{ id: this.currentElement, title: this.title[this.currentElement]});
     this.animationInProgress = true;
   }
 
   private escapeFromInformations(){
-    console.log(this.escapeElement);
     if(this.escapeElement)
       this.scrollToService.scroll(this.escapeElement);
   }

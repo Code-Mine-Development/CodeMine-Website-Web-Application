@@ -34,6 +34,7 @@
     },
     "howWeWork":{
         "title":"Jak pracujemy?",
+        "shortCut": "Jak pracujemy?",
         "description": "Gwarantem skuteczności proponowanych przez nas rozwiązań, jest niezmienny proces ich realizacji,składający się z kilku poszczególnych etapów, zaprezentowanych poniżej."
     },
     "button": {
@@ -42,32 +43,39 @@
     },
     "language":{
       "title": "Tworzymy jednolity język komunikacji",
+      "shortCut": "Język komunikacji",
       "description": "W celu zapewnienia efektywnej komunikacji, punktem wyjścia każdego realizowanego przez nas projektu jest stworzenie kompletnego słownika pojęć typowych dla obszaru biznesowego, w jakim porusza się nasz klient."
     },
     "knowledge":{
       "title": "Zdobywamy wiedzę biznesową",
+      "shortCut": "Wiedza biznesowa",
       "description": "Uważamy, że zrozumienie branży to podstawa, dlatego kolejnym etapem jest wyczerpująca rozmowa z klientem, pozwalająca nam na wyodrębnienie najistotniejszych elementów, zachowań i modeli, potrzebnych do stworzenia nowego systemu."
     },
     "logic":{
       "title": "Tworzymy logikę biznesową",
+      "shortCut": "Logika biznesowa",
       "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
     },
     "specyfication":{
       "title": "Tworzymy szczegółową specyfikację projektu",
+      "shortCut": "Specyfikacja",
       "description": "Posiadawszy wymaganą wiedzę, zagłębiamy się w projekt, tworząc jego szczegółową specyfikację. Zakłada ona głównie opracowanie ścieżek użytkownika i modelowanie jego zachowań, opisanie działania poszczególnych komponentów systemu oraz stworzenie poglądowych diagramów."
     },
     "implementation":{
       "title": "Implementujemy",
+      "shortCut": "Implementacja",
       "description": "Następnym etapem projektu jest implementacja zaprogramowanego interfejsu użytkownika, a więc integracja wcześniej napisanego kodu logiki biznesowej z warstwą aplikacyjną oprogramowania. Tak przygotowany system przechodzi szereg testów, mających potwierdzić jego zgodność z początkowymi założeniami.",
       "message": "Sprawdź ofertę"
     },
     "secoundImplementation":{
       "title": "Wdrażamy",
+      "shortCut": "Wdrażanie",
       "description": "Po pozytywnym przejściu wszystkich testów, software zostaje uruchomiony, a my przechodzimy do szkolenia klienta z zakresu jego funkcjonowania, przekazując tym samym wcześniej skompletowaną, szczegółową dokumentację.",
       "message": "Sprawdź realizację"
     },
     "support":{
       "title": "Wspieramy",
+      "shortCut": "Wsparcie",
       "description": "„Go live” systemu nie oznacza końca współpracy. Po oddaniu projektu zapewniamy naszym klientom wsparcie, obejmujące między innymi kwestie związane z drobnymi zmianami, modernizacją oprogramowania czy fachowym doradztwem w jego potencjalnych kierunkach rozwoju.",
       "message": "Poznaj nasz zespół"
     }

@@ -1,24 +1,32 @@
-import {Component, OnInit, Input, OnChanges} from '@angular/core';
+import {Component, OnInit} from '@angular/core';
+import {ScrollController} from '../../services/scroll.controller';
 
 @Component({
   selector: 'app-horizontal',
   templateUrl: 'horizontal.component.html',
   styleUrls: ['horizontal.component.scss']
 })
-export class HorizontalComponent implements OnInit, OnChanges {
-  @Input() informations;
-  @Input() currentElement;
-  @Input() scrollOpponent;
+export class HorizontalComponent implements OnInit {
 
-  prevElement = 0;
-  lastElement = 0;
-  constructor() { }
+  private element;
+
+  constructor( private scrollController:ScrollController ) {
+    scrollController.getCurrentElementStream().subscribe(
+      (element)=>{
+        this.element = element;
+        this.element.quantity = scrollController.getElementsQuantity();
+      }
+    )
+  }
 
   ngOnInit() {
   }
 
-  ngOnChanges(){
-    this.prevElement = this.currentElement - 1 > 0 ? this.currentElement - 1 : null;
-    this.lastElement = this.informations.length;
+  moveToLast(){
+    this.scrollController.moveToLast();
+  }
+
+  moveToPrev(){
+    this.scrollController.move('up');
   }
 }

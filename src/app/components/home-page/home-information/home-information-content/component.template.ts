@@ -1,17 +1,28 @@
 import {ScrollController} from '../../services/scroll.controller';
 import {ElementRef, OnDestroy} from '@angular/core';
 
+export interface registerElement{
+  localId:number,
+  title:string
+}
+
+interface localRegisterElement{
+  id:number,
+  localId:number,
+  title:string
+}
 
 export abstract class ComponentTemplate implements OnDestroy {
 
   private duration = 500;
   private prevElement;
   private streamSubscriber;
+  private localRegisteredList:[localRegisterElement] = <[localRegisterElement]>new Array();
 
-  constructor( private scrollController:ScrollController, private elementIndex:number, private element:ElementRef ){
-    scrollController.registerElement();
+  constructor( private scrollController:ScrollController, private element:ElementRef ){
+    this.localRegisterElements();
     this.streamSubscriber = scrollController.getCurrentElementStream().subscribe(
-      (index) => this.parseCurrentElement(index)
+      (index:any) => this.parseCurrentElement(index.id)
     )
   }
 
@@ -20,33 +31,61 @@ export abstract class ComponentTemplate implements OnDestroy {
       this.streamSubscriber.unsubscribe();
   }
 
+  private localRegisterElements(){
+    let elementsList = this.registerElements();
+
+      elementsList.forEach(
+        (localRegister)=>{
+          let id = this.scrollController.registerElement(localRegister.title);
+          this.localRegisteredList.push({
+            id,
+            title:localRegister.title,
+            localId: localRegister.localId
+          })
+        }
+      );
+  }
+
   private parseCurrentElement(index){
-    if(index === this.elementIndex)
-      this.show()
-    else if( this.prevElement === this.elementIndex )
+    let elementIndex = this.localRegisteredList.find( (element:localRegisterElement) => (element.id === index)),
+        prevIndex = this.localRegisteredList.find( (element:localRegisterElement) => (element.id === this.prevElement));
+
+
+    if(elementIndex) {
+      this.show(elementIndex.localId)
+      if(prevIndex)
+        this.hide(prevIndex.localId)
+      else
+        this.sliteToShow();
+    }
+    else if( prevIndex )
       this.checkHideDirectory(index);
 
     this.prevElement = index;
   }
 
   private checkHideDirectory(index){
+
     if(index > this.prevElement)
       this.slideUp();
     else
       this.slideDown()
-    this.hide();
+
+    this.hide(this.prevElement);
   }
 
-  private show(){
+  private show(id){
+    this.animateShow( id, ()=>{ this.scrollController.animationEnd() })
+  }
+
+  private hide(id){
+    this.animateHide( id );
+  }
+
+  private sliteToShow(){
     this.element.nativeElement.style.transition = 'top '+this.duration+'ms';
     this.element.nativeElement.style.top = "0";
-    this.animateShow( ()=>{ this.scrollController.animationEnd() })
   }
-
-  private hide(){
-    this.animateHide();
-  }
-
 
   private slideUp(){
     this.element.nativeElement.style.transition = 'top '+this.duration+'ms';
@@ -56,10 +95,12 @@ export abstract class ComponentTemplate implements OnDestroy {
   private slideDown(){
     this.element.nativeElement.style.transition = 'top '+this.duration+'ms';
     this.element.nativeElement.style.top = "100%";
+    console.log("scroll down");
   }
 
-  abstract animateShow(callback);
-  abstract animateHide();
+  abstract animateShow(id, callback);
+  abstract animateHide(id);
+  abstract registerElements():[registerElement];
 
 
 }

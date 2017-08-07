@@ -1,6 +1,6 @@
 import {Component, ElementRef} from '@angular/core';
 import {ScrollController} from '../../../services/scroll.controller';
-import {ComponentTemplate} from '../component.template';
+import {ComponentTemplate, registerElement} from '../component.template';
 
 @Component({
   selector: 'app-cta-to-form',
@@ -10,19 +10,23 @@ import {ComponentTemplate} from '../component.template';
 export class CtaToFormComponent extends ComponentTemplate {
 
   constructor( scrollController:ScrollController, element:ElementRef) {
-    super( scrollController,scrollController.getElementsQuantity()+1, element);
+    super( scrollController, element);
   }
 
-  animateHide(){
-    setTimeout( ()=> {
-      console.log("animationHide")
-    }, 1500 )
+  animateHide(id:number){
+    console.log("hide",id);
   }
 
-  animateShow(cb){
+  animateShow(id, cb){
+    console.log("show",id);
     setTimeout( ()=> {
-      console.log("animationShow");
       cb();
     }, 1500 )
+  }
+
+  registerElements():[registerElement]{
+    return [
+      { localId: 1, title:"test slogan title" }
+    ]
   }
 }
