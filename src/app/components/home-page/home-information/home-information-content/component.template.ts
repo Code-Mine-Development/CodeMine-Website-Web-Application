@@ -14,10 +14,11 @@ interface localRegisterElement{
 
 export abstract class ComponentTemplate implements OnDestroy {
 
-  private duration = 500;
+  private duration = 1500;
   private prevElement;
   private streamSubscriber;
   private localRegisteredList:[localRegisterElement] = <[localRegisterElement]>new Array();
+  private isVisible = false;
 
   constructor( private scrollController:ScrollController, private element:ElementRef ){
     this.localRegisterElements();
@@ -61,6 +62,9 @@ export abstract class ComponentTemplate implements OnDestroy {
     else if( prevIndex )
       this.checkHideDirectory(index);
 
+    console.log(elementIndex,prevIndex);
+
+    this.isVisible = elementIndex ? true : false;
     this.prevElement = index;
   }
 
@@ -83,19 +87,18 @@ export abstract class ComponentTemplate implements OnDestroy {
   }
 
   private sliteToShow(){
-    this.element.nativeElement.style.transition = 'top '+this.duration+'ms';
+    this.element.nativeElement.style.transition = 'all '+this.duration+'ms ease-in-out';
     this.element.nativeElement.style.top = "0";
   }
 
   private slideUp(){
-    this.element.nativeElement.style.transition = 'top '+this.duration+'ms';
+    this.element.nativeElement.style.transition = 'all '+this.duration+'ms ease-in-out';
     this.element.nativeElement.style.top = "-100%";
   }
 
   private slideDown(){
-    this.element.nativeElement.style.transition = 'top '+this.duration+'ms';
+    this.element.nativeElement.style.transition = 'all '+this.duration+'ms ease-in-out';
     this.element.nativeElement.style.top = "100%";
-    console.log("scroll down");
   }
 
   abstract animateShow(id, callback);

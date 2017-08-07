@@ -1,4 +1,4 @@
-import {Component, ElementRef} from '@angular/core';
+import {Component, ElementRef, HostBinding} from '@angular/core';
 import {ComponentTemplate, registerElement} from '../component.template';
 import {ScrollController} from '../../../services/scroll.controller';
 
@@ -9,6 +9,14 @@ import {ScrollController} from '../../../services/scroll.controller';
 })
 export class FirstGroupComponent extends ComponentTemplate {
 
+  @HostBinding('style.transform') transform;
+  @HostBinding('style.transition') transition;
+
+  animateId:number;
+
+  private slideDuration = 1500;
+  private slides = 3;
+
   constructor( scrollController:ScrollController, element:ElementRef) {
     super( scrollController, element);
   }
@@ -17,11 +25,11 @@ export class FirstGroupComponent extends ComponentTemplate {
   }
 
   animateShow(id, animationEnd){
+    this.animateSlides(id);
     setTimeout( animationEnd, 1500 );
   }
 
   animateHide(id){
-    console.log(id);
   }
 
   registerElements():[registerElement]{
@@ -30,6 +38,10 @@ export class FirstGroupComponent extends ComponentTemplate {
       { localId: 2, title:"HOME.language" },
       { localId: 3, title:"HOME.knowledge" }
     ]
+  }
+
+  animateSlides(slide){
+    this.transform = 'translateY(-'+ 100/this.slides * (slide-1) +'%)';
   }
 
 }

@@ -12,14 +12,26 @@ import { Component, OnInit } from '@angular/core';
     :host{
       height: 85vh;
       width:100%;
-      display:block;
+      display:flex;
     }
     article{
-      width:55.3%;
+      width:50%;
       margin:auto;
-      background: #F2F2F0;
-      padding: 20px;
-      /*transform: translateY(-50%)*/
+      background: #f2f2f2;
+      box-sizing: border-box;
+      text-align: center;
+      padding:60px 60px;
+      box-shadow: 10px 20px 50px RGBA(161,161,161,0.35);
+    }
+    h1{
+      margin:0 0 20px;
+      font-size:4.8rem;
+    }
+    p{
+      font-weight: 700;
+      font-size: 2.4rem;
+      word-break: normal;
+      margin:0;
     }
   `]
 })

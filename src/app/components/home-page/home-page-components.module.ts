@@ -14,6 +14,8 @@ import { SloganSectionComponent } from './home-information/home-information-cont
 import { CtaToFormComponent } from './home-information/home-information-content/cta-to-form/cta-to-form.component';
 import { FirstGroupComponent } from './home-information/home-information-content/first-group/first-group.component';
 import { HowWeWorkComponent } from './home-information/home-information-content/first-group/components/how-we-work.component';
+import { KnowledgeComponent } from './home-information/home-information-content/first-group/components/knowledge/knowledge.component';
+import { LanguageComponent } from './home-information/home-information-content/first-group/components/language/language.component';
 
 @NgModule({
     declarations: [
@@ -27,7 +29,9 @@ import { HowWeWorkComponent } from './home-information/home-information-content/
       SloganSectionComponent,
       CtaToFormComponent,
       FirstGroupComponent,
-      HowWeWorkComponent
+      HowWeWorkComponent,
+      KnowledgeComponent,
+      LanguageComponent
     ],
     imports: [
         CommonModule,
