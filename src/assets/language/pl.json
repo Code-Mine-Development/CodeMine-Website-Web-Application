@@ -56,10 +56,20 @@
       "shortCut": "Logika biznesowa",
       "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
     },
-    "specyfication":{
+    "specification":{
       "title": "Tworzymy szczegółową specyfikację projektu",
       "shortCut": "Specyfikacja",
       "description": "Posiadawszy wymaganą wiedzę, zagłębiamy się w projekt, tworząc jego szczegółową specyfikację. Zakłada ona głównie opracowanie ścieżek użytkownika i modelowanie jego zachowań, opisanie działania poszczególnych komponentów systemu oraz stworzenie poglądowych diagramów."
+    },
+    "UX":{
+      "title": "Rysujemy makiety UX",
+      "shortCut": "Rysujemy UX",
+      "description": "Specyfikacja projektu jest podstawą do stworzenia przez nas interaktywnego prototypu interfejsu. Korzystając z posiadanej wiedzy o User Experience, oraz zgromadzonych pojęć dotyczących procesów biznesowych charakterystycznych dla branży klienta, dopracowujemy hierarchie działań i informacji systemu, kładąc nacisk przede wszystkim na wygodę użytkowników (Task Driven UI)."
+    },
+    "UI":{
+      "title": "Tworzymy designy",
+      "shortCut": "Design",
+      "description": "Po pracach nad funkcjonalnościami systemu nadchodzi czas na projektowanie jego warstwy wizualnej. Zawsze dbamy o to, by nasze designy z jednej strony ściśle korespondowały z wartościami marki klienta, a z drugiej – wpisywały w aktualne trendy."
     },
     "implementation":{
       "title": "Implementujemy",
@@ -67,7 +77,7 @@
       "description": "Następnym etapem projektu jest implementacja zaprogramowanego interfejsu użytkownika, a więc integracja wcześniej napisanego kodu logiki biznesowej z warstwą aplikacyjną oprogramowania. Tak przygotowany system przechodzi szereg testów, mających potwierdzić jego zgodność z początkowymi założeniami.",
       "message": "Sprawdź ofertę"
     },
-    "secoundImplementation":{
+    "secondImplementation":{
       "title": "Wdrażamy",
       "shortCut": "Wdrażanie",
       "description": "Po pozytywnym przejściu wszystkich testów, software zostaje uruchomiony, a my przechodzimy do szkolenia klienta z zakresu jego funkcjonowania, przekazując tym samym wcześniej skompletowaną, szczegółową dokumentację.",

@@ -1,8 +1,8 @@
 <app-how-we-work></app-how-we-work>
-<app-language></app-language>
-<app-knowledge></app-knowledge>
-<svg class="line" viewBox="0 0 1 1500">
-  <line x1="0" y1="0" x2="0" y2="1500" stroke="#000000" stroke-width="3px"></line>
+<app-language [animation]="animationFirstSlide"></app-language>
+<app-knowledge [animation]="animationSecondSlide"></app-knowledge>
+<svg class="line" id="line_first">
+  <line x1="0" y1="0" x2="0" y2="1500" stroke="#000000" stroke-width="6px"></line>
 </svg>
 <div class="bg-triangle">
   <svg  viewBox="0 0 100 100">

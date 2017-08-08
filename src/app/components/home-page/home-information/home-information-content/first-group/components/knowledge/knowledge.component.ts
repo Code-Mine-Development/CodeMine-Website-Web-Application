@@ -1,4 +1,4 @@
-import {Component, OnInit, AfterViewInit} from '@angular/core';
+import {Component, AfterViewInit, Input, OnChanges} from '@angular/core';
 import * as Vivus from 'vivus';
 
 @Component({
@@ -6,22 +6,25 @@ import * as Vivus from 'vivus';
   templateUrl: './knowledge.component.html',
   styleUrls: ['./knowledge.component.scss']
 })
-export class KnowledgeComponent implements OnInit, AfterViewInit {
+export class KnowledgeComponent implements OnChanges, AfterViewInit {
 
+  @Input('animation') animation;
+  private svg;
   constructor() { }
 
-  private vivus;
 
-  ngOnInit() {
+
+  ngOnChanges() {
+    if(!this.svg)
+      return;
+
+    if(this.animation)
+      return this.svg.play();
+    return this.svg.reset().stop();
   }
 
   ngAfterViewInit(){
-    this.vivus = new Vivus('test_svg_draw', {type:'scenario', file: 'assets/images/home-svg/2.svg'}, (test)=> console.log("test",test));
-  }
-
-  animate(){
-    this.vivus.reset();
-    this.vivus.play();
+    this.svg = new Vivus('test_svg_draw', {type: 'scenario', file: 'assets/images/home-svg/wiedza.svg'});
   }
 
 }
