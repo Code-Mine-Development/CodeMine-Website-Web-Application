@@ -26,6 +26,11 @@ export class SloganSectionComponent extends ComponentTemplate{
     super( scrollController, element);
   }
 
+  ngAfterViewInit(){
+
+  }
+
+
   animateHide(id:number){
   }
 

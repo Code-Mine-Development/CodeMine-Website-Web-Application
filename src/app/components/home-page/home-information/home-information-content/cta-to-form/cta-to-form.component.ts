@@ -13,6 +13,10 @@ export class CtaToFormComponent extends ComponentTemplate {
     super( scrollController, element);
   }
 
+  ngAfterViewInit(){
+
+  }
+
   animateHide(id:number){
     console.log("hide",id);
   }

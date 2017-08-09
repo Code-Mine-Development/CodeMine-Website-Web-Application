@@ -10,6 +10,7 @@ export class KnowledgeComponent implements OnChanges, AfterViewInit {
 
   @Input('animation') animation;
   private svg;
+  private visible = false;
   constructor() { }
 
 
@@ -18,9 +19,13 @@ export class KnowledgeComponent implements OnChanges, AfterViewInit {
     if(!this.svg)
       return;
 
-    if(this.animation)
+    if(this.animation) {
+      this.visible = true;
       return this.svg.play();
-    return this.svg.reset().stop();
+    }
+    this.visible = false;
+    setTimeout( ()=>this.svg.reset().stop(), 300)
+
   }
 
   ngAfterViewInit(){

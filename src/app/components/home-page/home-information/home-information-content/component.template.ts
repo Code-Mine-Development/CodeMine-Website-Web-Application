@@ -63,9 +63,9 @@ export abstract class ComponentTemplate implements OnDestroy, AfterViewInit {
       this.slideToShow();
     } else if (elementIndex && this.isVisible) {
       this.emitShow(elementIndex.localId, directory);
-      this.emitHide(prevIndex.localId);
+      this.emitHide(prevIndex.localId,directory);
     } else if (!elementIndex && this.isVisible) {
-      this.emitHide(prevIndex.localId);
+      this.emitHide(prevIndex.localId,directory);
       this.hideGroupBox(index);
     }
 
@@ -87,8 +87,8 @@ export abstract class ComponentTemplate implements OnDestroy, AfterViewInit {
     }, directory)
   }
 
-  private emitHide(id) {
-    this.animateHide(id);
+  private emitHide(id, directory) {
+    this.animateHide(id, directory);
   }
 
   private slideToShow() {
@@ -103,13 +103,13 @@ export abstract class ComponentTemplate implements OnDestroy, AfterViewInit {
   }
 
   private slideDown() {
-    this.element.nativeElement.style.transition = 'all ' + this.duration + 'ms ease-in-out';
+    this.element.nativeElement.style.transition = 'all ' + this.duration + 'ms ease-in-out ';
     this.element.nativeElement.style.top = '100%';
   }
 
   abstract animateShow(id, callback, directory);
 
-  abstract animateHide(id);
+  abstract animateHide(id, directory);
 
   abstract registerElements(): [registerElement];
 

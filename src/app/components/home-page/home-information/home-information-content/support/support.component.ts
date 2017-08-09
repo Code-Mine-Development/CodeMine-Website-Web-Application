@@ -11,6 +11,7 @@ import * as Vivus from 'vivus';
 export class SupportComponent extends ComponentTemplate {
 
   private svg;
+  private visible = false;
 
   constructor( scrollController:ScrollController, element:ElementRef) {
     super( scrollController, element);
@@ -21,10 +22,13 @@ export class SupportComponent extends ComponentTemplate {
     this.svg = new Vivus('support_svg_draw', {type: 'scenario', file: 'assets/images/home-svg/parasol.svg'});
   }
 
-  animateHide(id){
+  animateHide(id, direction){
+    if(direction === 'up')
+      this.visible = false;
   }
 
   animateShow(id, cb, direction){
+    this.visible = true;
     if(direction === 'down')
       this.svg.reset().play(1);
 

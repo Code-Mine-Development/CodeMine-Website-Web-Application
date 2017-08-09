@@ -13,6 +13,9 @@ export class UiUxComponent extends ComponentTemplate {
     super( scrollController, element);
   }
 
+  ngAfterViewInit(){
+
+  }
 
   animateHide(id){
 

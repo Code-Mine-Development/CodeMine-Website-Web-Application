@@ -11,6 +11,7 @@ import * as Vivus from 'vivus';
 export class SecondImplementationComponent extends ComponentTemplate {
 
   private svg;
+  private visible = false;
 
   constructor( scrollController:ScrollController, element:ElementRef) {
     super( scrollController, element);
@@ -21,13 +22,17 @@ export class SecondImplementationComponent extends ComponentTemplate {
     this.svg = new Vivus('SecImplementation_svg_draw', {type: 'scenario', file: 'assets/images/home-svg/rakieta.svg'});
   }
 
-  animateHide(id){
+  animateHide(id, direction){
+    if(direction === 'up')
+      setTimeout( () => this.visible = false, 1000 );
   }
 
   animateShow(id, cb, direction){
-    if(direction === 'down')
-      this.svg.reset().play(1);
-
+    this.visible = true;
+    if(direction === 'down') {
+      this.svg.reset().stop();
+      setTimeout(()=>this.svg.play(1), 1000);
+    }
     setTimeout( ()=> {
       cb();
     }, 1500 )
