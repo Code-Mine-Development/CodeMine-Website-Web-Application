@@ -37,9 +37,11 @@
         "shortCut": "Jak pracujemy?",
         "description": "Gwarantem skuteczności proponowanych przez nas rozwiązań, jest niezmienny proces ich realizacji,składający się z kilku poszczególnych etapów, zaprezentowanych poniżej."
     },
-    "button": {
-      "label": "CTA do formularza",
-      "text": "CTA"
+    "hireUs": {
+      "title": "Hire us",
+      "shortCut": "Hire us",
+      "description": "Przejdź do kontaktu lub wypełnij krótki formularz odpowiadając na kilka pytań dotyczących Twojego pomysłu na projekt.",
+      "buttonText": "Przejdź do briefu"
     },
     "language":{
       "title": "Tworzymy jednolity język komunikacji",

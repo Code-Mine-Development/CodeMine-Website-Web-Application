@@ -1,7 +1,22 @@
 :host{
   width: 100%;
   height: 85vh;
-  display:block;
+  display:flex;
   overflow: hidden;
-  position:absolute;
+  justify-content: center;
+  align-items: center;
+}
+section{
+  max-width: 700px;
+  text-align: center;
+  button{
+    text-transform: uppercase;
+    background: #ffdf00;
+    padding: 20px 45px;
+    font-weight: 700;
+    font-size:16px;
+    margin-top: 40px;
+    outline:none;
+    border: none;
+  }
 }

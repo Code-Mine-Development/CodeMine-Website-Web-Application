@@ -11,10 +11,9 @@ import { ScrollController } from './services/scroll.controller'
 import { MouseWheelDirective } from './directive/mouseWheel.directive';
 import { SloganSectionComponent } from './home-information/home-information-content/slogan-section/slogan-section.component';
 import { CtaToFormComponent } from './home-information/home-information-content/cta-to-form/cta-to-form.component';
-import { FirstGroupComponent } from './home-information/home-information-content/first-group/first-group.component';
-import { HowWeWorkComponent } from './home-information/home-information-content/first-group/components/how-we-work.component';
-import { KnowledgeComponent } from './home-information/home-information-content/first-group/components/knowledge/knowledge.component';
-import { LanguageComponent } from './home-information/home-information-content/first-group/components/language/language.component';
+import { HowWeWorkComponent } from './home-information/home-information-content/how-we-work/how-we-work.component';
+import { KnowledgeComponent } from './home-information/home-information-content/knowledge/knowledge.component';
+import { LanguageComponent } from './home-information/home-information-content/language/language.component';
 import { SpecificationComponent } from './home-information/home-information-content/specification/specification.component';
 import { UiUxComponent } from './home-information/home-information-content/ui-ux/ui-ux.component';
 import { LogicComponent } from './home-information/home-information-content/logic/logic.component';
@@ -32,7 +31,6 @@ import { SupportComponent } from './home-information/home-information-content/su
       MouseWheelDirective,
       SloganSectionComponent,
       CtaToFormComponent,
-      FirstGroupComponent,
       HowWeWorkComponent,
       KnowledgeComponent,
       LanguageComponent,

@@ -30,7 +30,7 @@ export class CtaToFormComponent extends ComponentTemplate {
 
   registerElements():[registerElement]{
     return [
-      { localId: 1, title:"test slogan title" }
+      { localId: 1, title:"HOME.hireUs" }
     ]
   }
 }

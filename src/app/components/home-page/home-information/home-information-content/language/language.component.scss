@@ -6,6 +6,8 @@
   align-items: center;
   &>*{
     width:50%;
+    position:relative;
+    z-index: 25;
   }
   &>.svg_section{
     position:relative;
@@ -17,6 +19,9 @@
       transform: translate(8%, -50%);
       max-width: 600px;
       width:100%;
+      &.hidden{
+        opacity:0;
+      }
     }
   }
   &>.text-section{
@@ -24,4 +29,15 @@
     padding: 0 5%;
   }
 }
-
+.bg-triangle{
+  position:absolute;
+  z-index:23;
+  bottom:0;
+  left:0;
+  width:100%;
+  display:flex;
+  align-items: flex-end;
+  &> svg{
+    width:100%;
+  }
+}

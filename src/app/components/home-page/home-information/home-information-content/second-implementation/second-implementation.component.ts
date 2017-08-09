@@ -31,7 +31,7 @@ export class SecondImplementationComponent extends ComponentTemplate {
     this.visible = true;
     if(direction === 'down') {
       this.svg.reset().stop();
-      setTimeout(()=>this.svg.play(1), 1000);
+      setTimeout(()=>this.svg.play(.5), 1000);
     }
     setTimeout( ()=> {
       cb();

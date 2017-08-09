@@ -24,14 +24,16 @@ export class SupportComponent extends ComponentTemplate {
 
   animateHide(id, direction){
     if(direction === 'up')
-      this.visible = false;
+      setTimeout( () => this.visible = false, 1000 );
   }
 
   animateShow(id, cb, direction){
     this.visible = true;
     if(direction === 'down')
-      this.svg.reset().play(1);
-
+    {
+      this.svg.reset().stop();
+      setTimeout(()=>this.svg.play(.7), 1000);
+    }
     setTimeout( ()=> {
       cb();
     }, 1500 )

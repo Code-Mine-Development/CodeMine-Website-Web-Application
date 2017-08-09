@@ -17,6 +17,11 @@ export class MouseWheelDirective {
     this.mouseWheelFunc(event);
   }
 
+  @HostListener('touchstart',['$event']) touchstart(event:any){
+    let touch = event.touches[0];
+    this.mobileTouchPosition = touch.screenY;
+  }
+
   @HostListener('touchmove', ['$event']) touchmove(event:any) {
     this.mobileTouchFunc(event);
   }

@@ -10,7 +10,6 @@ import {ScrollController} from '../../../services/scroll.controller';
   `,
   styles: [`
     :host{
-      position:absolute;
       width:100%;
       height: 85vh;
       display: flex;
