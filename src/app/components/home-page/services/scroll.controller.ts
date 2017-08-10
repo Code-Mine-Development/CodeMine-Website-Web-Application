@@ -25,7 +25,6 @@ export class ScrollController {
   setScrollDirectory(directory){
     if(this.animationInProgress)
       return;
-    console.log("after:",directory);
     if(directory == "up")
       this.moveUp();
     else
@@ -39,7 +38,6 @@ export class ScrollController {
   resetElementQuantity(){
     this.elementsQuantity = 0;
     this.currentElement = 1;
-    this.$currentElement.next(<InformationElement>{ id: this.currentElement, title: this.title[this.currentElement]});
   }
 
   registerElement(title:string){
@@ -60,7 +58,7 @@ export class ScrollController {
   }
 
   getCurrentElementStream(){
-    return this.$currentElement.startWith(<InformationElement>{ id: this.currentElement, title: this.title[this.currentElement]});
+    return this.$currentElement.asObservable();
   }
 
   getElementsQuantity(){
@@ -76,6 +74,8 @@ export class ScrollController {
   private moveDown(){
     if(this.currentElement === this.elementsQuantity)
       return this.escapeFromInformations();
+
+    console.log(this.currentElement);
 
     this.currentElement++;
     this.$currentElement.next(<InformationElement>{ id: this.currentElement, title: this.title[this.currentElement]});
