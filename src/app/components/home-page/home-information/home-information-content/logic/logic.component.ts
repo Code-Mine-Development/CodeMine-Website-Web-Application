@@ -34,7 +34,7 @@ export class LogicComponent extends ComponentTemplate {
     this.visible = true;
     if(direction === 'down') {
       this.svg.reset().stop();
-      setTimeout(()=>this.svg.play(1.2), 1500);
+      setTimeout(()=>this.svg.play(1.2), 1000);
     }
 
     setTimeout( ()=> {
