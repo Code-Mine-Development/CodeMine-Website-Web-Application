@@ -5,12 +5,22 @@
   margin: 7.5vh 80px;
   position:relative;
   z-index:8;
-  transition: box-shadow .5s;
-  &.border{
-    box-shadow:inset 0 0 10px 10px rgba(0,0,0,0.1);
-  }
 
+  &.border{
+    &>.borderDiv{
+      box-shadow:inset 0 0 10px 10px rgba(0,0,0,0.1);
+    }
+  }
+  .borderDiv{
+    position: absolute;
+    left:0;
+    top:0;
+    width:100%;
+    height: 100%;
+    transition: box-shadow .5s;
+    pointer-events: none;
+  }
   &>*{
-    transition: transform 1.5s;
+    transition: transform 1.5s, background 0.7s;
   }
 }

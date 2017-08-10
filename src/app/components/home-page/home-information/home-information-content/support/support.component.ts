@@ -28,15 +28,20 @@ export class SupportComponent extends ComponentTemplate {
   }
 
   animateShow(id, cb, direction){
-    this.visible = true;
+    if(direction === 'up' && !this.visible)
+      this.svg.setFrameProgress(1);
+
     if(direction === 'down')
     {
       this.svg.reset().stop();
-      setTimeout(()=>this.svg.play(.7), 1000);
+      setTimeout(()=>this.svg.play(1.5), 1000);
     }
+
     setTimeout( ()=> {
       cb();
-    }, 1500 )
+    }, 1500 );
+
+    this.visible = true;
   }
 
   registerElements():[registerElement]{

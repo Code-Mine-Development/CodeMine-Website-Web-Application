@@ -1,4 +1,4 @@
-import {Component, ElementRef, OnInit} from '@angular/core';
+import {Component, ElementRef, OnInit, QueryList, HostBinding} from '@angular/core';
 import {ComponentTemplate, registerElement} from "../component.template";
 import {ScrollController} from "../../../services/scroll.controller";
 import * as Vivus from "vivus";
@@ -10,9 +10,13 @@ import * as Vivus from "vivus";
 })
 export class UiUxComponent extends ComponentTemplate {
 
+  @HostBinding('style.background') background;
 
-  private svg;
+  private svgUX;
+  private svgUI;
   private visible = false;
+  private UiVisible = false;
+
 
   constructor( scrollController:ScrollController, element:ElementRef) {
     super( scrollController, element);
@@ -20,25 +24,58 @@ export class UiUxComponent extends ComponentTemplate {
 
 
   ngAfterViewInit(){
-    this.svg = new Vivus('UXUI_svg_draw', {type: 'scenario', file: 'assets/images/home-svg/UX.svg'});
+    this.svgUX = new Vivus('UX_svg_draw', {type: 'scenario', file: 'assets/images/home-svg/UX.svg'});
+    this.svgUI = new Vivus('UI_svg_draw', {type: 'scenario', file: 'assets/images/home-svg/UI.svg'});
   }
 
   animateHide(id, direction){
-    if(direction === 'up')
+    if(id == 1 && direction === 'up')
       setTimeout( () => this.visible = false, 1000 );
+    else if(id == 2 && direction === 'up')
+      this.hideUI();
   }
 
-  animateShow(id, cb, direction){
+  animateShow(id, cb, direction) {
+    if (id == 2 && direction === 'up' && !this.visible)
+      this.instantShow();
+
     this.visible = true;
-    if(direction === 'down')
-    {
-      this.svg.reset().stop();
-      setTimeout(()=>this.svg.play(.7), 1000);
-    }
+
+    if( id == 1 && direction === 'down')
+      this.animateUX();
+    else if(id == 2 && direction === 'down' )
+      this.animateUI();
+
     setTimeout( ()=> {
       cb();
     }, 1500 )
+
   }
+
+  hideUI(){
+    this.UiVisible = false;
+    this.background = '#fff';
+  }
+
+  animateUX(){
+    this.svgUX.reset().stop();
+    setTimeout(()=>this.svgUX.play(2), 1000);
+  }
+
+  animateUI(){
+    this.UiVisible = true;
+    this.background = '#000';
+    this.svgUI.reset().stop();
+    setTimeout(()=>this.svgUI.play(2), 50);
+  }
+
+  instantShow(){
+    this.svgUI.setFrameProgress(1);
+    this.svgUX.setFrameProgress(1);
+    this.UiVisible = true;
+    this.background = '#000';
+  }
+
 
   registerElements():[registerElement]{
     return [

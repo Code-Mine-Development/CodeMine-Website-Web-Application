@@ -29,6 +29,8 @@ export class ImplementationComponent extends ComponentTemplate {
   }
 
   animateShow(id, cb, direction){
+    if(direction === 'up' && !this.visible)
+      this.svg.setFrameProgress(1);
     this.visible = true;
     if(direction === 'down') {
       this.svg.reset().stop();

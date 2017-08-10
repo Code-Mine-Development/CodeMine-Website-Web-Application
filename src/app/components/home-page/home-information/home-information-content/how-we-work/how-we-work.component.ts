@@ -90,7 +90,7 @@ export class HowWeWorkComponent extends ComponentTemplate{
 
   registerElements():[registerElement]{
     return [
-      { localId: 1, title:"test slogan title" }
+      { localId: 1, title:"HOME.howWeWork" }
     ]
   }
 }

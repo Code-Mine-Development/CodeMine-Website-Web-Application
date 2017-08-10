@@ -25,7 +25,7 @@ export class ScrollController {
   setScrollDirectory(directory){
     if(this.animationInProgress)
       return;
-
+    console.log("after:",directory);
     if(directory == "up")
       this.moveUp();
     else

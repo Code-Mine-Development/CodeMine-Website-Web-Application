@@ -13,9 +13,8 @@
     &.hidden{
       opacity:0;
     }
-    &>div{
-      max-width: 600px;
-      width:90%;
+    &>div{  width:90%;
+      max-width: 700px;
       position: absolute;
       top:-1%;
       right:4.7%;
