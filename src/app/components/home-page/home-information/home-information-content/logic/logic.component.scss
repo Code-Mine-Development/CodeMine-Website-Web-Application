@@ -1,3 +1,5 @@
+@import "../../../../../../assets/styles/mediaQueries";
+
 :host{
   display:flex;
   width:100%;
@@ -14,12 +16,24 @@
       opacity:0;
     }
     &>div{
-      max-width: 500px;
       width:90%;
       position: absolute;
       top:-1%;
       right:0%;
       transform: translateX(-19%);
+      @media screen and (min-width: 1050px){
+        max-width: 450px;
+        transform: translateX(-12%);
+      }
+      @media screen and (min-width: 1280px){
+        max-width: 550px;
+        transform: translateX(-12%);
+      }
+      @media screen and (min-width: 1500px){
+        max-width: 700px;
+        transform: translateX(-12%);
+      }
+
     }
   }
   &>section{

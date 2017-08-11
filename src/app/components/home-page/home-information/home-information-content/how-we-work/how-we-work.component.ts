@@ -1,4 +1,4 @@
-import {Component, OnInit, ElementRef} from '@angular/core';
+import {Component, OnInit, ElementRef, HostListener, ChangeDetectorRef} from '@angular/core';
 import {ComponentTemplate, registerElement} from '../component.template';
 import {ScrollController} from '../../../services/scroll.controller';
 import * as Vivus from 'vivus';
@@ -11,8 +11,16 @@ import * as Vivus from 'vivus';
       <p>{{'HOME.howWeWork.description' | translate}}</p>
      </article>
      <div class="background">
-       <svg class="line" id="line_first">
-          <line x1="0" y1="0" x2="0" y2="1500" stroke="#000000" stroke-width="6px"></line>
+       <svg xmlns="http://www.w3.org/2000/svg"  class="line" id="line_first" viewBox="0 0 400 600">
+          <g isolation = 'isolate' [class.hidden]="mobile">
+             <line class="curve_line"  x1="200.5" y1="0" x2="200.5" y2="600" ></line>
+          </g>
+          <g isolation="isolate" [class.hidden]="!mobile">
+             <polyline class="curve_line"  points="200 0 200 300 272 300 272 600" ></polyline>
+          </g>
+       </svg>
+       <svg class="bg-triangle" viewBox="0 0 100 100">
+          <polygon fill="#ffdf01" points="0 0 100 100 0 100"></polygon>
        </svg>
      </div>
   `,
@@ -21,6 +29,7 @@ import * as Vivus from 'vivus';
       height: 85vh;
       width:100%;
       display:flex;
+      flex-wrap: wrap;
       position:relative;
      }
       
@@ -53,44 +62,86 @@ import * as Vivus from 'vivus';
       width:100%;
       height: 170vh;
     }
-    .line{
+    #line_first{
       position:absolute;
       z-index: 24;
-      left:50%;
+      left:0%;
       top:25%;
-      width:7px;
-      height:50%;
+      width:100%;
+      height:45%;
+    }
+
+    
+    .bg-triangle{
+      position:absolute;
+      z-index: 20;
+      bottom:0;
+      left:0;
+      width:100%;
+      display:flex;
+      align-items: flex-end;
+    }    
+    .curve_line{
+      stroke-miterlimit: 10;
+      stroke:#000000;
+      fill:none;
+      stroke-width: 2px;
+    }
+    .hidden{
+      display:none;
+    }
+    @media screen and (min-width: 1280px){
+        .curve_line{
+          stroke-width: 3px;
+        }
+    }
+    @media screen and (max-width: 1050px){
+        #line_first{
+          height:50%;
+        }
     }
   `]
 })
-export class HowWeWorkComponent extends ComponentTemplate{
+export class HowWeWorkComponent extends ComponentTemplate {
+
+  @HostListener('window:resize', ['$event']) resize(event) {
+    this.checkScreen();
+  }
+
 
   private svg;
+  private breakPoint = 1050;
+  private mobile = false;
 
-  constructor( scrollController:ScrollController, element:ElementRef) {
-    super( scrollController, element);
+  constructor(scrollController: ScrollController, element: ElementRef, private chengeDetector: ChangeDetectorRef) {
+    super(scrollController, element);
   }
 
-  ngAfterViewInit(){
-    this.svg = new Vivus('line_first',{ start:'manual' })
+  ngAfterViewInit() {
+    this.svg = new Vivus('line_first', {start: 'manual'});
+    this.checkScreen();
   }
 
+  checkScreen() {
+    this.mobile = window.innerWidth <= this.breakPoint;
+    this.chengeDetector.detectChanges()
+  }
 
-  animateHide(id:number, directory){
-    if(directory === "down"){
-      this.svg.reset().play(.7);
+  animateHide(id: number, directory) {
+    if (directory === "down") {
+      this.svg.reset().play(this.mobile ? 1.6 : 1);
     }
   }
 
-  animateShow(id, cb, directory){
-    setTimeout( ()=> {
+  animateShow(id, cb, directory) {
+    setTimeout(() => {
       cb();
-    }, 1500 )
+    }, 1500)
   }
 
-  registerElements():[registerElement]{
+  registerElements(): [registerElement] {
     return [
-      { localId: 1, title:"HOME.howWeWork" }
+      {localId: 1, title: "HOME.howWeWork"}
     ]
   }
 }
