@@ -7,7 +7,7 @@ import {OfferElement} from '../interface/offerElement.interface';
 
 
 const url = 'assets/data/';
-const iconDir: string = 'assets/icons/';
+const iconDir = 'assets/icons/';
 
 @Injectable()
 export class OfferElementsService {
@@ -18,8 +18,8 @@ export class OfferElementsService {
   constructor(private http: Http) {
   }
 
-  getData(fileName: string, route: ActivatedRouteSnapshot):Observable<OfferElement> {
-    let elementName = route.params.id || null;
+  getData(fileName: string, route: ActivatedRouteSnapshot): Observable<OfferElement> {
+    const elementName = route.params.id || null;
 
     this.getJson(fileName)
       .subscribe((elements) => {
@@ -82,7 +82,7 @@ export class OfferElementsService {
       .map((response) => ( response.text() ))
       .map((svgBody) => (svgBody.replace(/fill=\"[^"]*"/g, '')))
       .map((svgfile: string) => {
-        let m = /\<svg.*viewBox\="([^"]*)[^>]*\>(.*)<\/svg>/g.exec(svgfile)
+        const m = /\<svg.*viewBox\="([^"]*)[^>]*\>(.*)<\/svg>/g.exec(svgfile)
         if (m != null) {
           return {
             url: url,

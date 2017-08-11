@@ -18,7 +18,7 @@ export class OfficeComponent implements OnInit {
   mouseMoving: MouseMove = new MouseMove(this.windowWidth);
   doomRestyle: DoomRestyle = new DoomRestyle();
   @Input() employees: Employees;
-  deskActivated:number;
+  deskActivated: number;
 
   constructor(ngZone: NgZone, ) {
     window.onresize = () => {

@@ -22,21 +22,21 @@ import { Component, OnChanges, Input, ViewChild, HostListener } from '@angular/c
 })
 export class LogoComponent implements OnChanges {
 
-  @Input() scrollTop:number;
-  @ViewChild("triangle") triangle;
-  @HostListener("mouseenter") mouseEnter(){
+  @Input() scrollTop: number;
+  @ViewChild('triangle') triangle;
+  @HostListener('mouseenter') mouseEnter(){
     this.homeVisible = true;
     this.checkHomeVisible();
   };
-  @HostListener("mouseleave") mouseLeave(){
+  @HostListener('mouseleave') mouseLeave(){
     this.homeVisible = false;
     this.checkHomeVisible();
   };
 
-  homeVisible:boolean = false;
-  hidden:boolean = false;
-  triangleOnPosition:boolean = false;
-  triangleChangeDirectoryPoint:number = 500;
+  homeVisible = false;
+  hidden = false;
+  triangleOnPosition = false;
+  triangleChangeDirectoryPoint = 500;
 
   constructor(  ) {}
 
@@ -50,11 +50,11 @@ export class LogoComponent implements OnChanges {
   }
 
   triangleAnimation() {
-    let targetPosition = [-80,-120],
+    const targetPosition = [-80, -120],
         scrollTopRatio = this.scrollTop / this.triangleChangeDirectoryPoint,
-        moveFactor = scrollTopRatio > 1 ? 1: scrollTopRatio,
-        xTranslation = targetPosition[0]*this.EasingFunctions.easeInOutCubic(moveFactor),
-        yTranslation = targetPosition[1]*this.EasingFunctions.easeInOutCubic(moveFactor),
+        moveFactor = scrollTopRatio > 1 ? 1 : scrollTopRatio,
+        xTranslation = targetPosition[0] * this.EasingFunctions.easeInOutCubic(moveFactor),
+        yTranslation = targetPosition[1] * this.EasingFunctions.easeInOutCubic(moveFactor),
         yMultipler = this.parseTriangleAnimationPath(moveFactor),
         angle = this.EasingFunctions.easeInOutCubic(moveFactor) * 360;
 
@@ -63,14 +63,14 @@ export class LogoComponent implements OnChanges {
     this.checkHomeVisible();
   }
 
-  parseTriangleAnimationPath(position:number){
-    if(position > 1)
+  parseTriangleAnimationPath(position: number){
+    if (position > 1)
       return 1;
-    return position*position;
+    return position * position;
   }
 
-  setTriangleTransform(x:number,y:number,angle:number){
-    if(this.triangle)
+  setTriangleTransform(x: number, y: number, angle: number){
+    if (this.triangle)
       this.triangle.nativeElement.style.transform = `translate(${x}px,${y}px) rotateZ(${angle}deg)`;
   }
 
@@ -78,13 +78,13 @@ export class LogoComponent implements OnChanges {
 
 
   checkHomeVisible(){
-    if(!this.triangleOnPosition)
+    if (!this.triangleOnPosition)
       this.homeVisible = false;
   }
 
 
   private EasingFunctions = {
-    easeInOutCubic: function (t) { return t<.5 ? 4*t*t*t : (t-1)*(2*t-2)*(2*t-2)+1 },
+    easeInOutCubic: function (t) { return t < .5 ? 4 * t * t * t : (t - 1) * (2 * t - 2) * (2 * t - 2) + 1 },
   }
 
 

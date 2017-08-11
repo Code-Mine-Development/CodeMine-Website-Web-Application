@@ -1,14 +1,14 @@
 import { Component, OnInit } from '@angular/core';
 import {Company} from '../../shared/interface/company.interface';
 import {ActivatedRoute, Data} from '@angular/router';
-import {fadeInAnimation} from "../../shared/routing.animation";
+import {fadeInAnimation} from '../../shared/routing.animation';
 
 @Component({
   selector: 'app-about-us',
   templateUrl: './about-us.component.html',
   styleUrls: ['./about-us.component.scss'],
-  animations:[fadeInAnimation],
-  host:{ '[@fadeInAnimation]': '' }
+  animations: [fadeInAnimation],
+  host: { '[@fadeInAnimation]': '' }
 })
 export class AboutUsComponent implements OnInit {
   company: Company;

@@ -8,7 +8,7 @@ import { Component, HostBinding, HostListener, ElementRef, AfterViewInit, Input,
     </svg>
     {{ (source == 0 ? item.task : item.benefit) | translate }}
   `,
-  styles:[`
+  styles: [`
     @keyframes jumpIn {
         0%{
           opacity: 0;
@@ -44,27 +44,27 @@ import { Component, HostBinding, HostListener, ElementRef, AfterViewInit, Input,
           stroke-dasharray: 100;
           stroke-dashoffset: 100;
         }
-      
+
       @keyframes draw-tick {
         0% {
           stroke-dashoffset: 100; }
         100% {
-          stroke-dashoffset: 0; } 
+          stroke-dashoffset: 0; }
         }
 
   `]
 
 })
 export class AuditDetailsDirective implements AfterViewInit{
-  @Input() source:number;
+  @Input() source: number;
   @Input() item;
 
-  @HostBinding("style.animation") animation = "";
+  @HostBinding('style.animation') animation = '';
 
   // private element;
-  @HostListener("window:scroll",['$event'])
+  @HostListener('window:scroll', ['$event'])
   onWindowScroll(event){
-    let scrollPosition = window.pageYOffset,
+    const scrollPosition = window.pageYOffset,
         activateLevel = window.innerHeight * 0.9;
     this.checkPosition(scrollPosition + activateLevel);
   }
@@ -73,12 +73,12 @@ export class AuditDetailsDirective implements AfterViewInit{
   private height = 0;
   private element;
 
-  constructor(elem:ElementRef) {
+  constructor(elem: ElementRef) {
     this.element = elem.nativeElement;
   }
 
   ngAfterViewInit(){
-    this.tick = this.element.querySelector(".tick");
+    this.tick = this.element.querySelector('.tick');
     this.position = this.parsePosition();
     this.height = this.element.height;
   }
@@ -87,20 +87,20 @@ export class AuditDetailsDirective implements AfterViewInit{
     let offset = this.element.offsetTop,
         parent = this.element.offsetParent
 
-    while(parent){
-      offset+= parent.offsetTop;
+    while (parent){
+      offset += parent.offsetTop;
       parent = parent.offsetParent;
     }
     return offset;
   }
 
   checkPosition(scrollPosition){
-    if(scrollPosition >= this.position)
+    if (scrollPosition >= this.position)
       this.animate();
   }
 
   animate(){
-    this.animation = "jumpIn 1s forwards";
-    this.tick.style.animation = "draw-tick 2s .5s forwards";
+    this.animation = 'jumpIn 1s forwards';
+    this.tick.style.animation = 'draw-tick 2s .5s forwards';
   }
 }

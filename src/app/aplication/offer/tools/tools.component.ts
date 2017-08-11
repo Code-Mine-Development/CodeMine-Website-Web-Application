@@ -13,16 +13,16 @@ export class ToolsComponent implements OnChanges{
  @Input() Tools: OfferElementBeforePrepare[];
  keys = [];
 
-  constructor( private positionService:PreviousPositionService, private router:Router, private localize:LocalizeRouterService){}
+  constructor( private positionService: PreviousPositionService, private router: Router, private localize: LocalizeRouterService){}
 
 
   ngOnChanges(){
     this.keys = Object.keys(this.Tools);
   }
 
-  navigate(url:string){
-    this.positionService.setBackCategory("tools");
-    let link:string = <string>this.localize.translateRoute(url);
+  navigate(url: string){
+    this.positionService.setBackCategory('tools');
+    const link: string = <string>this.localize.translateRoute(url);
     this.router.navigateByUrl(link);
   }
 

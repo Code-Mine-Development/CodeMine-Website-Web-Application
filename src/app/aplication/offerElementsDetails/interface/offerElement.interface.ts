@@ -2,10 +2,10 @@ export interface OfferElement{
   title: string,
   description: string,
   icon: {
-    url:string,
-    svgBody:string,
-    viewBox:string
+    url: string,
+    svgBody: string,
+    viewBox: string
   },
-  img:string,
+  img: string,
   color: string
 }

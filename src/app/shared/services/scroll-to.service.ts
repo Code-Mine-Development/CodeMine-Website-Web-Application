@@ -8,14 +8,14 @@ export class ScrollToService {
   private targetPosition: number = null;
   private currentPosition: number = null;
   private start: number = null;
-  private duration: number = 500
+  private duration = 500
 
   private target;
   private onScreenLocation;
   private opponent;
 
 
-  scroll(target, onScreenLocation = "top", opponent?) {
+  scroll(target, onScreenLocation = 'top', opponent?) {
     this.target = target;
     this.opponent = opponent || null;
     this.onScreenLocation = onScreenLocation;
@@ -47,7 +47,7 @@ export class ScrollToService {
 
 
   private scrollTo() {
-    if(this.start)
+    if (this.start)
       return;
     this.targetPosition = this.getTargetPosition();
     this.currentPosition = this.getCurrentPosition();
@@ -57,7 +57,7 @@ export class ScrollToService {
   private scrollToElement(timestamp) {
     if (!this.start) this.start = timestamp;
 
-    let progress = timestamp - this.start,
+    const progress = timestamp - this.start,
       progressFactor = progress / this.duration,
       progressFactorWithEasing = Math.sqrt(progressFactor),
       distance = this.targetPosition - this.currentPosition,
@@ -78,7 +78,7 @@ export class ScrollToService {
   }
 
   private getTargetPosition() {
-    if (this.target === "SiteHead")
+    if (this.target === 'SiteHead')
       return 0;
 
     let distance = this.target.offsetTop;
@@ -92,21 +92,21 @@ export class ScrollToService {
   }
 
   private parseLocationDistance(distance: number) {
-    let halfHeight = (this.opponent ? this.opponent.offsetHeight : window.innerHeight) / 2,
-        halfTargetHeight = this.target.offsetHeight/2;
+    const halfHeight = (this.opponent ? this.opponent.offsetHeight : window.innerHeight) / 2,
+        halfTargetHeight = this.target.offsetHeight / 2;
 
-    if (this.onScreenLocation == "top")
+    if (this.onScreenLocation == 'top')
       return distance - 60;
-    else if (this.onScreenLocation == "center")
+    else if (this.onScreenLocation == 'center')
       return distance - halfHeight + halfTargetHeight;
-    else if (this.onScreenLocation == "bottom")
+    else if (this.onScreenLocation == 'bottom')
       return distance + (2 * halfHeight);
     return distance;
   }
 
 
   private changeScrollTop(position){
-    if(this.opponent)
+    if (this.opponent)
       return this.scrollingOpponent.scrollTop = position;
     this.scrollingOpponent.body.scrollTop = position;
     this.scrollingOpponent.documentElement.scrollTop = position;

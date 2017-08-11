@@ -9,8 +9,8 @@ import * as Instafeed from 'instafeed.js';
 export class InstagramComponent implements OnInit {
 
   private feed;
-  private imgLimit:number = 12;
-  private imagesData:Array<any> = [];
+  private imgLimit = 12;
+  private imagesData: Array<any> = [];
 
   constructor() { }
 
@@ -21,8 +21,8 @@ export class InstagramComponent implements OnInit {
       accessToken: '2235823138.4c422c8.abac6c5259ae4c3db191820f178aa940',
       resolution: 'standard_resolution',
       limit: this.imgLimit,
-      mock:true,
-      success:(response)=>{
+      mock: true,
+      success: (response) => {
         this.imagesData = response.data;
       }
     });

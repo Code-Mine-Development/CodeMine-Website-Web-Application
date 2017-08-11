@@ -16,7 +16,7 @@ export class PortfolioService {
     }
 
     getPortfolioList() {
-        if(this.portfolio)
+        if (this.portfolio)
           return Observable.from([this.portfolio]);
 
         return this.http.get(url + 'portfolio.json')
@@ -32,15 +32,15 @@ export class PortfolioService {
     }
 
     getPortfolioHomePageList() {
-      if(this.portfolio)
+      if (this.portfolio)
         return Observable.from([this.portfolio])
-                        .map((portfolio:Portfolio[]) => (portfolio.filter( (portfolio:Portfolio) => (portfolio.homePage))));
+                        .map((portfolio: Portfolio[]) => (portfolio.filter( (portfolio: Portfolio) => (portfolio.homePage))));
 
         return this.http.get(url + 'portfolio.json')
             .map( (response: Response) => {
                     const portfolio: Portfolio[] = response.json();
                     this.portfolio = portfolio;
-                    return portfolio.filter( (portfolio:Portfolio) => (portfolio.homePage));
+                    return portfolio.filter( (portfolio: Portfolio) => (portfolio.homePage));
                 })
     }
 

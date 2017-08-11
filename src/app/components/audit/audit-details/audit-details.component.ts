@@ -1,6 +1,6 @@
 import {Component, OnInit, Input, ViewChild, AfterViewInit} from '@angular/core';
 import {Audit} from '../../../aplication/audit/interfaces/audit.interface';
-import {DrawBackgroundService} from "../../../shared/services/draw-background.service";
+import {DrawBackgroundService} from '../../../shared/services/draw-background.service';
 
 
 @Component({

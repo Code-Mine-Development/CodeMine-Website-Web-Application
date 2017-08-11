@@ -1,6 +1,6 @@
 import {Component, NgZone} from '@angular/core';
 import {ContactService} from '../../aplication/contact/services/contact.service';
-import {Company} from "../../shared/interface/company.interface";
+import {Company} from '../../shared/interface/company.interface';
 
 @Component({
   selector: 'app-footer',
@@ -8,16 +8,16 @@ import {Company} from "../../shared/interface/company.interface";
   styleUrls: ['./footer.component.scss']
 })
 export class FooterComponent {
-  company:Company = <Company>{ phone: "", email: ""};
-  private backgroundColor:string = '#000000'
+  company: Company = <Company>{ phone: '', email: ''};
+  private backgroundColor = '#000000'
 
-  constructor(contact:ContactService){
-    contact.getCompany().subscribe((company) =>{
+  constructor(contact: ContactService){
+    contact.getCompany().subscribe((company) => {
       this.company = company;
     })
   }
 
-  changeBg(color:string){
+  changeBg(color: string){
     this.backgroundColor = color;
   }
 
