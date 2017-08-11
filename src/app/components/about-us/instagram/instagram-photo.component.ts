@@ -16,7 +16,7 @@ import { Component, OnInit, Input } from '@angular/core';
       </figure>
     </a>
   `,
-  styleUrls:['./instagram-photo.component.scss']
+  styleUrls: ['./instagram-photo.component.scss']
 })
 export class InstagramPhotoComponent implements OnInit {
 

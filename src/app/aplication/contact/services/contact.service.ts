@@ -9,14 +9,14 @@ const url = 'assets/data/';
 @Injectable()
 export class ContactService {
 
-    private contact:Company;
+    private contact: Company;
 
     constructor(private http: Http) {
 
     }
 
     getCompany() {
-        if(this.contact)
+        if (this.contact)
           return Observable.from([this.contact]);
         return this.http.get(url + 'company.json')
             .map(

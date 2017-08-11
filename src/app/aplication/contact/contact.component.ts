@@ -1,14 +1,14 @@
 import { Component, OnInit } from '@angular/core';
 import {ActivatedRoute, Data} from '@angular/router';
 import {Company} from '../../shared/interface/company.interface';
-import {fadeInAnimation} from "../../shared/routing.animation";
+import {fadeInAnimation} from '../../shared/routing.animation';
 
 @Component ({
   selector: 'app-contact',
   templateUrl: 'contact.component.html',
   styleUrls: ['contact.component.scss'],
-  animations:[fadeInAnimation],
-  host:{ '[@fadeInAnimation]': '' }
+  animations: [fadeInAnimation],
+  host: { '[@fadeInAnimation]': '' }
 })
 
 export class ContactComponent implements OnInit {

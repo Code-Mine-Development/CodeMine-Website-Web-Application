@@ -9,14 +9,14 @@ const url = 'assets/data/';
 @Injectable()
 export class AuditService {
 
-    private audits:Audit;
+    private audits: Audit;
 
     constructor(private http: Http) {
 
     }
 
-    getAudit():Observable<Audit> {
-        if(this.audits)
+    getAudit(): Observable<Audit> {
+        if (this.audits)
           return Observable.from([this.audits])
 
         return this.http.get(url + 'audyt.json')

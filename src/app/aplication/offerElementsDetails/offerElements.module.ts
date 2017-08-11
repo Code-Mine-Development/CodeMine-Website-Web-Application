@@ -19,7 +19,7 @@ import { OfferElementComponent } from './offerElement/offerelement.component'
     TranslateModule,
     LocalizeRouterModule
   ],
-  providers:[
+  providers: [
     OfferElementsService,
   ],
   declarations: [

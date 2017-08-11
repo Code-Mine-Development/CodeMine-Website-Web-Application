@@ -1,6 +1,6 @@
 import {Component, HostListener, Input, OnInit} from '@angular/core';
-import {ClosePersonService} from "../../../shared/services/close-person.service";
-import {Employees} from "../../../aplication/about-us/interfaces/employees.interface";
+import {ClosePersonService} from '../../../shared/services/close-person.service';
+import {Employees} from '../../../aplication/about-us/interfaces/employees.interface';
 
 @Component({
   selector: 'app-person',
@@ -10,7 +10,7 @@ import {Employees} from "../../../aplication/about-us/interfaces/employees.inter
 export class PersonComponent implements OnInit {
   @Input() ActivatedDeskId;
   @Input() person: Employees;
-  constructor(private closePersonService:ClosePersonService) { }
+  constructor(private closePersonService: ClosePersonService) { }
 
   ngOnInit() {
   }

@@ -12,7 +12,7 @@ import {LocalizeRouterService} from 'localize-router';
 export class PortfolioListComponent implements OnInit {
     portfolio: Portfolio;
 
-    constructor(private route: ActivatedRoute, private router: Router, private localize:LocalizeRouterService) {
+    constructor(private route: ActivatedRoute, private router: Router, private localize: LocalizeRouterService) {
     }
 
     ngOnInit() {
@@ -23,7 +23,7 @@ export class PortfolioListComponent implements OnInit {
     }
 
     showDetails(index: number): void {
-        let translatedPath:any = this.localize.translateRoute(AppRoutingProvider.portfolioDetail(index))
+        const translatedPath: any = this.localize.translateRoute(AppRoutingProvider.portfolioDetail(index))
         this.router.navigate(translatedPath, {relativeTo: this.route})
     }
 

@@ -29,10 +29,10 @@ export class DeskComponent implements OnInit {
   @ViewChild('desk') desk;
   coordinate: Coordinate;
   @Output() personActivated = new EventEmitter<number>();
-  @Input() people:Employees;
+  @Input() people: Employees;
 
-  constructor(private closePersonService:ClosePersonService) {
-   this.closePersonService.registerCloseFunction().subscribe(()=>this.closeCard());
+  constructor(private closePersonService: ClosePersonService) {
+   this.closePersonService.registerCloseFunction().subscribe(() => this.closeCard());
   }
 
   ngOnInit() {
@@ -47,7 +47,7 @@ export class DeskComponent implements OnInit {
   }
 
   @HostListener('mouseenter') mouseover() {
-    if(this.coordinate.deskClicked == false){
+    if (this.coordinate.deskClicked == false){
       this.coordinate.hoverDesk(this.index);
         this.personActivated.emit(
           this.index
@@ -56,7 +56,7 @@ export class DeskComponent implements OnInit {
   }
 
   @HostListener('mouseleave') deskBack() {
-    if(this.coordinate.deskClicked == false) {
+    if (this.coordinate.deskClicked == false) {
       this.coordinate.hoverOutDesk(this.index);
     }
   }

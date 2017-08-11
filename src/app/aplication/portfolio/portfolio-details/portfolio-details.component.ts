@@ -2,7 +2,7 @@ import {Component, OnInit, ViewChild} from '@angular/core';
 import {PortfolioService} from '../services/portfolio.service';
 import {Portfolio} from '../interfaces/portfolio.interface';
 import {Params, ActivatedRoute} from '@angular/router';
-import {DrawBackgroundService} from "../../../shared/services/draw-background.service";
+import {DrawBackgroundService} from '../../../shared/services/draw-background.service';
 
 @Component({
   selector: 'app-portfolio-details',
@@ -18,7 +18,7 @@ export class PortfolioDetailsComponent implements OnInit {
 
 
 
-  constructor(private service: PortfolioService, private route: ActivatedRoute, private drawBackgroundService : DrawBackgroundService) {
+  constructor(private service: PortfolioService, private route: ActivatedRoute, private drawBackgroundService: DrawBackgroundService) {
   }
 
   ngOnInit() {

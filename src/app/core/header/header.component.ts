@@ -13,42 +13,42 @@ import {HomeInformationServices} from '../../components/home-page/services/home-
 })
 export class HeaderComponent implements OnInit {
 
-  @HostBinding("style.display") visibility:string;
+  @HostBinding('style.display') visibility: string;
 
   navigation = [
     {
-      "title": 'NAVIGATION.about_as',
-      "href": 'aboutus'
+      'title': 'NAVIGATION.about_as',
+      'href': 'aboutus'
     },
     {
-      "title":'NAVIGATION.portfolio',
-      "href": 'portfolio'
+      'title': 'NAVIGATION.portfolio',
+      'href': 'portfolio'
     },
     {
-      "title":'NAVIGATION.offer',
-      "href":'offer'
+      'title': 'NAVIGATION.offer',
+      'href': 'offer'
     },
     {
-      "title":'NAVIGATION.audit',
-      "href":'audit'
+      'title': 'NAVIGATION.audit',
+      'href': 'audit'
     },
     {
-      "title": 'NAVIGATION.contact',
-      "href": 'contact'
+      'title': 'NAVIGATION.contact',
+      'href': 'contact'
     }
   ];
 
-  scrollTop: number = 0;
-  windowScrollTop: number = 0;
-  homeInformationScrollTop : number = 0;
+  scrollTop = 0;
+  windowScrollTop = 0;
+  homeInformationScrollTop = 0;
   opacity: number;
 
   constructor(@Inject(DOCUMENT)
               private document: Document,
               private router: Router,
               private translate: TranslateService,
-              private localize:LocalizeRouterService,
-              private scrollInformationService:HomeInformationServices
+              private localize: LocalizeRouterService,
+              private scrollInformationService: HomeInformationServices
             ) {}
 
   changeLanguage(event: Event, lang: string) {
@@ -67,7 +67,7 @@ export class HeaderComponent implements OnInit {
     });
 
     this.scrollInformationService.getScrollTopStream()
-      .subscribe( (scrollTop:number) => {
+      .subscribe( (scrollTop: number) => {
         this.homeInformationScrollTop = scrollTop;
         this.parseScrollTop();
       })

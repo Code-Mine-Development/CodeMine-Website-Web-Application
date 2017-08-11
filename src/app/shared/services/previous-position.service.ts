@@ -4,8 +4,8 @@ import {Router, NavigationStart} from '@angular/router';
 @Injectable()
 export class PreviousPositionService {
 
-  private backTo:string = "home";
-  private backCategory:string = "";
+  private backTo = 'home';
+  private backCategory = '';
 
   constructor() {
   }
@@ -16,7 +16,7 @@ export class PreviousPositionService {
   }
 
   setBackCategory(target){
-    this.backCategory= target;
+    this.backCategory = target;
   }
 
   getBackTo(){
