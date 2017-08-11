@@ -9,14 +9,14 @@ const url = 'assets/data/';
 export class HomeInformationServices {
 
   private scrollTopStream = new Subject();
-  private homeInformations:HomeInformation;
+  private homeInformations: HomeInformation;
 
   constructor(private http: Http) {
 
   }
 
   getInformation() {
-    if(this.homeInformations)
+    if (this.homeInformations)
       return Observable.from([this.homeInformations]);
 
     return this.http.get(url + 'home-information.json')

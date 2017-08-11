@@ -1,7 +1,7 @@
-import {_document} from "@angular/platform-browser/src/browser";
+import {_document} from '@angular/platform-browser/src/browser';
 export class Coordinate {
 
-  deskClicked: boolean = false;
+  deskClicked = false;
 
   constructor(public variant: number, public top: number, public left: number, public front) {
   }
@@ -21,8 +21,8 @@ export class Coordinate {
   }
 
   showDeskOwner(index, value) {
-    let deskOwner = <HTMLElement>document.getElementsByClassName("deskOwner")[index];
-    value == true ? deskOwner.style.opacity = "1" : deskOwner.style.opacity = "0";
+    const deskOwner = <HTMLElement>document.getElementsByClassName('deskOwner')[index];
+    value == true ? deskOwner.style.opacity = '1' : deskOwner.style.opacity = '0';
   }
 
   offsetTop(): string {
@@ -57,7 +57,7 @@ export class Coordinate {
   showDetails(index) {
     this.deskClicked = true;
     this.showDeskOwner(index, true);
-    let transformVariant = this.variant === 1 ? 'skew(0deg) rotateY(-58deg) rotateX(-8deg) scale(1, 1.3) rotateZ(14deg)'
+    const transformVariant = this.variant === 1 ? 'skew(0deg) rotateY(-58deg) rotateX(-8deg) scale(1, 1.3) rotateZ(14deg)'
       : 'skew(0deg) rotateY(-71deg) rotateX(5deg) scale(1.45) rotateZ(-11deg)';
 
     document.getElementById('personWrapper').style.transition = '1.8s';
@@ -90,8 +90,8 @@ export class Coordinate {
 
     //enlarge card
     setTimeout(() => {
-      document.getElementById('personView').style.transform = "scale(1)";
-      document.getElementById('personView').style.transition = ".2s ease-in";
+      document.getElementById('personView').style.transform = 'scale(1)';
+      document.getElementById('personView').style.transition = '.2s ease-in';
 
     }, 400);
   }

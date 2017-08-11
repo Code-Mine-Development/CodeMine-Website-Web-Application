@@ -17,11 +17,11 @@ export class DrawBackgroundService {
 
     ctx.beginPath();
 
-    let r =  1000;
-    let theta = 225;
+    const r =  1000;
+    const theta = 225;
 
-    ctx.moveTo(canvas.width/4,  canvas.height);
-    ctx.lineTo(canvas.width/4 + r *Math.cos(Math.PI * theta / 180.0),  canvas.height + r * Math.sin(Math.PI * theta / 180.0));
+    ctx.moveTo(canvas.width / 4,  canvas.height);
+    ctx.lineTo(canvas.width / 4 + r * Math.cos(Math.PI * theta / 180.0),  canvas.height + r * Math.sin(Math.PI * theta / 180.0));
     ctx.lineTo(0, canvas.height);
     ctx.closePath();
 
@@ -51,16 +51,16 @@ export class DrawBackgroundService {
     canvas1.width = window.innerWidth;
     canvas1.height = triangle1.offsetHeight;
 
-    let r =  4500;
-    let theta = 45;
-    let theta2 = 225;
+    const r =  4500;
+    const theta = 45;
+    const theta2 = 225;
 
-    ctx1.moveTo(0,0);
-    ctx1.lineTo(canvas1.width/4, 0);
-    ctx1.lineTo(canvas1.width/5 + r * Math.cos(Math.PI * theta / 180.0),  r * Math.sin(Math.PI * theta / 180.0));
+    ctx1.moveTo(0, 0);
+    ctx1.lineTo(canvas1.width / 4, 0);
+    ctx1.lineTo(canvas1.width / 5 + r * Math.cos(Math.PI * theta / 180.0),  r * Math.sin(Math.PI * theta / 180.0));
     ctx1.lineTo(canvas1.width, canvas1.height);
-    ctx1.lineTo(canvas1.width/5, canvas1.height);
-    ctx1.lineTo(canvas1.width/5 + r *Math.cos(Math.PI * theta2 / 180.0), canvas1.height +   r * Math.sin(Math.PI * theta2 / 180.0));
+    ctx1.lineTo(canvas1.width / 5, canvas1.height);
+    ctx1.lineTo(canvas1.width / 5 + r * Math.cos(Math.PI * theta2 / 180.0), canvas1.height +   r * Math.sin(Math.PI * theta2 / 180.0));
     ctx1.closePath();
 
     ctx1.fillStyle = '#ffda07';
@@ -85,8 +85,8 @@ export class DrawBackgroundService {
     canvas2.width = window.innerWidth;
     canvas2.height = triangle2.offsetHeight;
 
-    ctx2.moveTo(canvas1.width/5, 0);
-    ctx2.lineTo(canvas1.width/5 + r * Math.cos(Math.PI * theta / 180.0),  r * Math.sin(Math.PI * theta / 180.0));
+    ctx2.moveTo(canvas1.width / 5, 0);
+    ctx2.lineTo(canvas1.width / 5 + r * Math.cos(Math.PI * theta / 180.0),  r * Math.sin(Math.PI * theta / 180.0));
     ctx2.lineTo(canvas2.width, 0);
     ctx2.closePath();
     ctx2.fillStyle = '#ffda07';

@@ -1,6 +1,6 @@
-import {SmoothMove} from "../interfaces/smoothMove.interface";
+import {SmoothMove} from '../interfaces/smoothMove.interface';
 
-let data: SmoothMove = {
+const data: SmoothMove = {
   lFollowX: 0,
   lMouseX: 0,
   lFollowY: 0,
@@ -19,7 +19,7 @@ function animation() {
 
   const bg = document.getElementById('officeBg'),
     desks = document.getElementById('deskLayer');
-  if(!bg && !desks)
+  if (!bg && !desks)
     return;
   bg['style']['transform'] = data.translate;
   desks['style']['transform'] = data.translate;

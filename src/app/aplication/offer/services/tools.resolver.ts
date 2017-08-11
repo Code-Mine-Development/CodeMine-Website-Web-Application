@@ -12,7 +12,7 @@ export class ToolsResolver implements Resolve<OfferElement> {
 
   resolve(route: ActivatedRouteSnapshot,
           state: RouterStateSnapshot): Observable<OfferElement> | Promise<OfferElement> | OfferElement {
-    return this.offerElementsService.getJson("tools");
+    return this.offerElementsService.getJson('tools');
   }
 
 }

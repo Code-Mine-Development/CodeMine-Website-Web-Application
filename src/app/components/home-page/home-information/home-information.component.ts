@@ -16,11 +16,11 @@ export class HomeInformationComponent implements OnInit, OnDestroy {
   @ViewChild('homeBox') homeBox;
   @ViewChild('sideSlider') sideSlider;
 
-  currentElement:number = 1;
+  currentElement = 1;
   private border = 0;
   private opacity = 0;
 
-  constructor(@Inject(DOCUMENT) private document, private route: ActivatedRoute, private homeInformationService:HomeInformationServices, private scrollToService:ScrollToService ) {}
+  constructor(@Inject(DOCUMENT) private document, private route: ActivatedRoute, private homeInformationService: HomeInformationServices, private scrollToService: ScrollToService ) {}
   ngOnInit() {
     this.route.data
       .subscribe((data: Data) => {
@@ -40,21 +40,21 @@ export class HomeInformationComponent implements OnInit, OnDestroy {
   }
 
   scrollingBackDetector(){
-    if(this.getScrollTopPosition() > 0)
-      this.scrollToService.scroll("SiteHead");
+    if (this.getScrollTopPosition() > 0)
+      this.scrollToService.scroll('SiteHead');
   }
 
   animateShadowBox(scrollTop){
-    let distance = 1900,
-        positionRatio = scrollTop/distance,
+    const distance = 1900,
+        positionRatio = scrollTop / distance,
         positionFactor = positionRatio > 1 ? 1 : positionRatio;
-    this.border = positionFactor/10;
+    this.border = positionFactor / 10;
 
     this.opacity = positionFactor;
   }
 
   showCurrentTitle(event) {
-    let boxes: any = document.querySelectorAll('.box');
+    const boxes: any = document.querySelectorAll('.box');
 
     for (let i = 0; i < this.informations.length; i++)
       if (event.target.scrollTop >= boxes[i].offsetTop - 650)

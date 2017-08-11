@@ -12,7 +12,7 @@ export class TechnologiesResolver implements Resolve<OfferElement> {
 
     resolve(route: ActivatedRouteSnapshot,
             state: RouterStateSnapshot): Observable<OfferElement> | Promise<OfferElement> | OfferElement {
-        return this.offerElementService.getData("technologies",route);
+        return this.offerElementService.getData('technologies', route);
     }
 
 }
