@@ -7,7 +7,7 @@ import {LocalizeRouterService} from 'localize-router';
   template: `
     <div class="wrapper">
       <img src="assets/images/logo.png" alt="" [class.hidden]="!logoVisible">
-      <div #triangle class="triangle-svg" >
+      <div #triangle class="triangle-svg" [class.animate-logo]="!logoVisible">
         <svg viewBox="0 0 21.89 25.89">
           <defs>
             <style>.cls-1{fill:#ffdf00;}</style>
@@ -39,8 +39,6 @@ export class LogoComponent implements OnChanges {
 
   homeVisible = false;
   logoVisible = false;
-  triangleOnPosition = false;
-  triangleChangeDirectoryPoint = 500;
 
   hidden = false;
 
@@ -49,49 +47,19 @@ export class LogoComponent implements OnChanges {
   }
 
   ngOnChanges(){
-    this.opacityAnimation();
-    this.triangleAnimation();
+    this.logoAnimation();
   }
 
-  opacityAnimation() {
+  logoAnimation() {
     this.logoVisible = this.hidden ? false : this.scrollTop < 100;
-  }
-
-  triangleAnimation() {
-    const targetPosition = [-80, -120],
-        scrollTopRatio = this.hidden ? 1 : this.scrollTop / this.triangleChangeDirectoryPoint,
-        moveFactor = scrollTopRatio > 1 ? 1 : scrollTopRatio,
-        xTranslation = targetPosition[0] * this.EasingFunctions.easeInOutCubic(moveFactor),
-        yTranslation = targetPosition[1] * this.EasingFunctions.easeInOutCubic(moveFactor),
-        yMultipler = this.parseTriangleAnimationPath(moveFactor),
-        angle = this.EasingFunctions.easeInOutCubic(moveFactor) * 360;
-
-    this.triangleOnPosition = scrollTopRatio > 1;
-    this.setTriangleTransform(xTranslation, yTranslation * yMultipler, angle);
-    this.checkHomeVisible();
-  }
-
-  parseTriangleAnimationPath(position: number){
-    if (position > 1)
-      return 1;
-    return position * position;
-  }
-
-  setTriangleTransform(x: number, y: number, angle: number){
-    if (this.triangle)
-      this.triangle.nativeElement.style.transform = `translate(${x}px,${y}px) rotateZ(${angle}deg)`;
   }
 
 
   checkHomeVisible(){
-    if (!this.triangleOnPosition)
+    if (this.logoVisible)
       this.homeVisible = false;
   }
 
-
-  private EasingFunctions = {
-    easeInOutCubic: function (t) { return t < .5 ? 4 * t * t * t : (t - 1) * (2 * t - 2) * (2 * t - 2) + 1 },
-  }
 
   checkHomeRoute(){
     this.router.events.subscribe( (state) => {
@@ -102,8 +70,7 @@ export class LogoComponent implements OnChanges {
         else
           this.hidden = false;
 
-        this.triangleAnimation();
-        this.opacityAnimation();
+        this.logoAnimation();
       }
     })
   }

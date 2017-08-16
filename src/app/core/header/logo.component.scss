@@ -28,6 +28,8 @@
     z-index: 999999999999;
     width:32px;
     height:32px;
+    transform-origin: top right;
+    transition: transform .7s ease-in-out;
   }
   svg{
     width:32px;
@@ -35,6 +37,9 @@
     polygon{
       transition:all .5s;
     }
+  }
+  .animate-logo{
+    transform: translate(-80px,-120px) rotateZ(360deg);
   }
 }
 
