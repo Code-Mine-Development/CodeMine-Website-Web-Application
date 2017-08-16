@@ -77,7 +77,7 @@ export class ListIconComponent implements OnInit, OnChanges {
       end: { x:50, y:65}
     }
   ];
-  private currentStatePoints;
+  currentStatePoints;
   private currentAnimationDistance;
   private RAF;
   private start;

@@ -9,12 +9,12 @@
 
           <h1 class="contact-box-header">{{'COMPANY.adressTitle' | translate}}</h1>
           <div class="row contact text">
-            <div class="contact-email">{{company.email }}</div>
-            <div class="contact-phone">{{company.phone }}</div>
+            <div class="contact-email">{{company?.email }}</div>
+            <div class="contact-phone">{{company?.phone }}</div>
           </div>
           <div class="row address text">
-            <div>{{company.street }} {{company.apartment}}</div>
-            <div>{{company.city}}, {{company.country}}</div>
+            <div>{{company?.street }} {{company?.apartment}}</div>
+            <div>{{company?.city}}, {{company?.country}}</div>
           </div>
           <div class="row localization text">
             <div class="contact-local">{{'COMPANY.showOnMap' | translate}}</div>

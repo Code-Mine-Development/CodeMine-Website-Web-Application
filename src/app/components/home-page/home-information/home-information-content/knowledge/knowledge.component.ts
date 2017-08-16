@@ -1,4 +1,4 @@
-import {Component, AfterViewInit, Input, OnChanges, ElementRef} from '@angular/core';
+import {Component, AfterViewInit, Input, OnChanges, ElementRef, HostBinding} from '@angular/core';
 import * as Vivus from 'vivus';
 import {ComponentTemplate, registerElement} from '../component.template';
 import {ScrollController} from '../../../services/scroll.controller';
@@ -10,8 +10,10 @@ import {ScrollController} from '../../../services/scroll.controller';
 })
 export class KnowledgeComponent extends ComponentTemplate {
 
+  @HostBinding('class.horizontal') horizontal;
+
   private svg;
-  private visible = false;
+  visible = false;
 
   constructor( scrollController:ScrollController, element:ElementRef) {
     super( scrollController, element);

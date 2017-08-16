@@ -15,9 +15,9 @@ export class OfficeComponent implements OnInit {
 
   private breakPoint = 800;
 
-  private modelVisible = false;
-  private listVisible = false;
-  private modelStatus = "maximize";
+  modelVisible = false;
+  listVisible = false;
+  modelStatus = "maximize";
 
   constructor( ) {}
 

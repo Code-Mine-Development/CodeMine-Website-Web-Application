@@ -1,8 +1,8 @@
 <footer class="footer" [ngStyle]="{'background-color':backgroundColor}">
   <section class="footer_bar">
     <section class="footer_vcard">
-      <p>{{company.email}}</p>
-      <p>{{company.phone}}</p>
+      <p>{{company?.email}}</p>
+      <p>{{company?.phone}}</p>
     </section>
     <div class="footer_slideTop">
       <span aria-hidden="true" class="fa fa-chevron-up fa-3x" [appScrollTo]="'SiteHead'" ></span>

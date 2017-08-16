@@ -8,8 +8,8 @@ import {Company} from '../../shared/interface/company.interface';
   styleUrls: ['./footer.component.scss']
 })
 export class FooterComponent {
-  company: Company = <Company>{ phone: '', email: ''};
-  private backgroundColor = '#000000'
+  company: Company;
+  backgroundColor = '#000000'
 
   constructor(contact: ContactService){
     contact.getCompany().subscribe((company) => {

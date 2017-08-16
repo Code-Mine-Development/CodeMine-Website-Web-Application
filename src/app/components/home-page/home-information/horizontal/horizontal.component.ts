@@ -1,4 +1,4 @@
-import {Component, OnInit} from '@angular/core';
+import {Component, HostListener, AfterViewInit} from '@angular/core';
 import {ScrollController} from '../../services/scroll.controller';
 
 @Component({
@@ -6,9 +6,16 @@ import {ScrollController} from '../../services/scroll.controller';
   templateUrl: 'horizontal.component.html',
   styleUrls: ['horizontal.component.scss']
 })
-export class HorizontalComponent implements OnInit {
+export class HorizontalComponent implements AfterViewInit {
 
-  private element;
+  @HostListener('window:resize',['$event']) resize(){
+    this.checkScreen();
+  }
+
+  element;
+  private breakPoint = 500;
+  private verticalBreakPoint = 800;
+  hidden = false;
 
   constructor( private scrollController:ScrollController ) {
     scrollController.getCurrentElementStream().subscribe(
@@ -19,7 +26,15 @@ export class HorizontalComponent implements OnInit {
     )
   }
 
-  ngOnInit() {
+  ngAfterViewInit() {
+    this.checkScreen();
+  }
+
+  checkScreen(){
+    if(window.innerWidth < window.innerHeight)
+      this.hidden =  window.innerWidth <= this.breakPoint;
+    else
+      this.hidden =  window.innerWidth <= this.verticalBreakPoint;
   }
 
   moveToLast(){

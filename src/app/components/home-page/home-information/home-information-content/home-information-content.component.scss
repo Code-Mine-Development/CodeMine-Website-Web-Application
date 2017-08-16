@@ -1,3 +1,5 @@
+@import "../../../../../assets/styles/mediaQueries";
+
 :host{
   display:block;
   overflow: hidden;
@@ -5,6 +7,14 @@
   margin: 7.5vh 80px;
   position:relative;
   z-index:8;
+  @media #{$phone}{
+    margin: 7.5vh 0;
+  }
+  @media #{$tablet}{
+    &.vertical{
+      margin: 7.5vh 0;
+    }
+  }
 
   &.border{
     &>.borderDiv{

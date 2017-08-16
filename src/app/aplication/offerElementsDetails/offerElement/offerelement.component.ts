@@ -14,7 +14,7 @@ export class OfferElementComponent implements OnInit {
   @ViewChild('svg') svg;
   viewBox = '0 0 128 128';
 
-  private offerElement: OfferElement;
+  offerElement: OfferElement;
 
   constructor( private route: ActivatedRoute, private previousPositionService: PreviousPositionService, private localize: LocalizeRouterService ) {
   }

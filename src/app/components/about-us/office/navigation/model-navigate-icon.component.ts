@@ -43,7 +43,7 @@ import {Component, OnInit, EventEmitter, Output, Input} from '@angular/core';
 })
 export class ModelNavigateIconComponent implements OnInit {
 
-  @Input() state:boolean;
+  @Input() state:string;
   @Output() stateChange = new EventEmitter();
 
   constructor() { }

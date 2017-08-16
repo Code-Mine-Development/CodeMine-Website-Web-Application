@@ -10,7 +10,7 @@ export class InstagramComponent implements OnInit {
 
   private feed;
   private imgLimit = 12;
-  private imagesData: Array<any> = [];
+  imagesData: Array<any> = [];
 
   constructor() { }
 

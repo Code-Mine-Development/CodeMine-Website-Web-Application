@@ -23,7 +23,7 @@ export class HomeInformationComponent implements OnInit, OnDestroy, AfterViewIni
   informations: HomeInformation[];
   private simulateScrollFrame;
   private scrollSimulationDuration = 500;
-  private scrollSimulationLength = window.innerHeight || 1000;
+  private scrollSimulationLength = window.innerHeight < 500 ? 500 : window.innerHeight;
 
   private scrollCurrentElementSubscriber;
 
@@ -67,6 +67,7 @@ export class HomeInformationComponent implements OnInit, OnDestroy, AfterViewIni
             position = state === scrollSimulation.show ? this.scrollSimulationLength - this.scrollSimulationLength * progress : this.scrollSimulationLength * progress;
 
         this.homeInformationService.setScrollTop(position);
+        console.log(timestamp, progress);
         if( timestamp < start + this.scrollSimulationDuration)
           this.simulateScrollFrame = window.requestAnimationFrame(scrollAnimationFunction.bind(this));
         else

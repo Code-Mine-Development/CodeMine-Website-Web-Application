@@ -8,17 +8,7 @@ import {ScrollController} from '../../../services/scroll.controller';
       <h2 >{{ 'HOME.motto.title' | translate}} <br> {{ 'HOME.motto.subtitle' | translate}}</h2>
     
   `,
-  styles: [`
-    :host{
-      width:100%;
-      height: 85vh;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      text-align: center;
-    }
-    
-  `]
+  styleUrls: ['./slogan-section.component.scss']
 })
 export class SloganSectionComponent extends ComponentTemplate{
   constructor( scrollController:ScrollController, element:ElementRef) {

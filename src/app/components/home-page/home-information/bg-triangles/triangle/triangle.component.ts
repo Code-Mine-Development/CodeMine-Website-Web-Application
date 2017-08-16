@@ -29,7 +29,7 @@ export class TriangleComponent implements OnInit, OnChanges, AfterViewInit {
   private maxTransformDistance = 70;
   private hidePoint = 200;
   private randomMovingInterval;
-  private calculatedScale = .6;
+  calculatedScale = .6;
 
   constructor( private scrollService: HomeInformationServices) { }
 

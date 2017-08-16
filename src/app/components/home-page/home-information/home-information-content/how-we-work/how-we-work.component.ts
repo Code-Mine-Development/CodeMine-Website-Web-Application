@@ -15,9 +15,6 @@ import * as Vivus from 'vivus';
           <g isolation = 'isolate' [class.hidden]="mobile">
              <line class="curve_line"  x1="200.5" y1="0" x2="200.5" y2="600" ></line>
           </g>
-          <g isolation="isolate" [class.hidden]="!mobile">
-             <polyline class="curve_line"  points="200 0 200 300 272 300 272 600" ></polyline>
-          </g>
        </svg>
        <svg class="bg-triangle" viewBox="0 0 100 100">
           <polygon fill="#ffdf01" points="0 0 100 100 0 100"></polygon>
@@ -96,10 +93,34 @@ import * as Vivus from 'vivus';
         }
     }
     @media screen and (max-width: 1050px){
-        #line_first{
-          height:50%;
-        }
+      article{
+        width:80%;
+      }
     }
+    @media screen and (max-width: 500px){
+      article{
+        padding: 20px 20px; 
+      }
+      h1{
+        font-size: 3.6rem;
+      }
+      p{
+        font-size: 1.6rem;
+        padding:0 5%;
+      }
+    }
+    @media only screen and (max-width: 800px) and (max-height: 500px){
+      h1{
+        font-size:3.6rem;
+      }
+      p{
+        font-size:1.6rem;
+      }
+      article{
+        padding: 10px 60px 20px; 
+      }
+    }
+
   `]
 })
 export class HowWeWorkComponent extends ComponentTemplate {
@@ -111,7 +132,7 @@ export class HowWeWorkComponent extends ComponentTemplate {
 
   private svg;
   private breakPoint = 1050;
-  private mobile = false;
+  mobile = false;
 
   constructor(scrollController: ScrollController, element: ElementRef, private chengeDetector: ChangeDetectorRef) {
     super(scrollController, element);

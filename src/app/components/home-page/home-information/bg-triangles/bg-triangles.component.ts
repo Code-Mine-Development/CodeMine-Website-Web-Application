@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, HostListener, AfterViewInit} from '@angular/core';
 import {Point} from "../../../../shared/interface/point.interface";
 
 interface Triangle{
@@ -18,14 +18,28 @@ enum size{
   templateUrl: './bg-triangles.component.html',
   styleUrls: ['./bg-triangles.component.scss']
 })
-export class BgTrianglesComponent implements OnInit {
+export class BgTrianglesComponent implements AfterViewInit {
+
+  @HostListener('window:resize',['$event']) resize(){
+    this.checkScreen();
+  }
+
+
+  private breakPoint = 1050;
 
   triangles:Array<Triangle> = new Array();
 
   constructor() { }
 
-  ngOnInit() {
-    this.triangleGenerator(8);
+  ngAfterViewInit() {
+    this.checkScreen();
+  }
+
+  checkScreen(){
+    if(window.innerWidth <= this.breakPoint)
+      this.triangles = new Array();
+    else
+      this.triangleGenerator(8)
   }
 
   triangleGenerator( count:number ){
@@ -44,8 +58,8 @@ export class BgTrianglesComponent implements OnInit {
       random = +Math.random().toFixed(0);
       triangle.size = random == 1 ? size.big : size.small;
 
-      random = +(Math.random()*5).toFixed(0);
-      triangle.range = triangle.size == size.big ? 10 + random : 5 + random;
+      random = +(Math.random()*25).toFixed(0);
+      triangle.range = triangle.size == size.big ? 25 + random : 5 + random;
 
       random = +Math.random().toFixed(0);
 

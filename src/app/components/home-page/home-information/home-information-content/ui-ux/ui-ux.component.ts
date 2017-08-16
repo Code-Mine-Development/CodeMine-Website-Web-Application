@@ -14,8 +14,8 @@ export class UiUxComponent extends ComponentTemplate {
 
   private svgUX;
   private svgUI;
-  private visible = false;
-  private UiVisible = false;
+  visible = false;
+  UiVisible = false;
 
 
   constructor( scrollController:ScrollController, element:ElementRef) {

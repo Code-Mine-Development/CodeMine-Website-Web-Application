@@ -1,3 +1,4 @@
+@import "../../../../../../assets/styles/mediaQueries";
 :host{
   display:flex;
   width:100%;
@@ -5,6 +6,13 @@
   position:relative;
   transition: background .7s;
   align-items: center;
+  flex-wrap: wrap;
+  @media #{$home-information-mobile} {
+    align-items: flex-start;
+  }
+  @media #{$home-information-vertical-mobile} {
+    align-items: center;
+  }
   .hidden{
     opacity:0;
   }
@@ -15,6 +23,15 @@
     padding:5%;
     position:relative;
     transition: opacity 300ms;
+    @media #{$home-information-mobile} {
+      position: initial;
+      height: auto;
+      padding:0;
+      width:100%;
+    }
+    @media #{$home-information-vertical-mobile}{
+      width: 35% ;
+    }
 
     &>div{
       width:90%;
@@ -22,6 +39,18 @@
       top:-1%;
       right:0%;
       transform: translateX(-5.4%);
+      @media #{$home-information-mobile} {
+        position:initial;
+        margin:0 auto;
+        width:70%;
+        transform: translate(0,-1.5%);
+        &.hidden{
+          position: absolute;
+        }
+      }
+      @media #{$home-information-vertical-mobile}{
+        width: 100% ;
+      }
     }
   }
   &>section{
@@ -30,6 +59,34 @@
     box-sizing: border-box;
     padding-right: 5%;
     transition: color .7s;
+    @media #{$home-information-mobile} {
+      width:100%;
+      padding:0 10%;
+    }
+    @media #{$home-information-vertical-mobile}{
+      width: 65%;
+      padding: 0 5%;
+      margin-top: 30px;
+      h2{
+        font-size: 24px;
+        margin:0 0 10px;
+      }
+      p{
+        margin:0;
+      }
+    }
+    @media #{$home-information-vertical-mobile-iphone5}{
+      padding:0 2% 0 5%;
+    }
+    @media #{$phone}{
+      h2{
+        font-size: 24px;
+        margin:0 0 10px;
+      }
+      p{
+        margin:0;
+      }
+    }
   }
 }
 

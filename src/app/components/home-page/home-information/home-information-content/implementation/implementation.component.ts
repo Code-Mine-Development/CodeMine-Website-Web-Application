@@ -12,7 +12,7 @@ import * as Vivus from 'vivus';
 export class ImplementationComponent extends ComponentTemplate {
 
   private svg;
-  private visible = false;
+  visible = false;
 
   constructor( scrollController:ScrollController, element:ElementRef) {
     super( scrollController, element);
