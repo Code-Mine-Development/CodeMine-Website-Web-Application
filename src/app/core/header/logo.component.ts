@@ -1,10 +1,12 @@
 import { Component, OnChanges, Input, ViewChild, HostListener } from '@angular/core';
+import {Router, NavigationStart, NavigationEnd} from '@angular/router';
+import {LocalizeRouterService} from 'localize-router';
 
 @Component({
   selector: 'app-logo',
   template: `
     <div class="wrapper">
-      <img src="assets/images/logo.png" alt="" [class.hidden]="hidden">
+      <img src="assets/images/logo.png" alt="" [class.hidden]="!logoVisible">
       <div #triangle class="triangle-svg" >
         <svg viewBox="0 0 21.89 25.89">
           <defs>
@@ -36,11 +38,15 @@ export class LogoComponent implements OnChanges {
   @ViewChild('triangle') triangle;
 
   homeVisible = false;
-  hidden = false;
+  logoVisible = false;
   triangleOnPosition = false;
   triangleChangeDirectoryPoint = 500;
 
-  constructor(  ) {}
+  hidden = false;
+
+  constructor( private router:Router, private localize:LocalizeRouterService ) {
+    this.checkHomeRoute();
+  }
 
   ngOnChanges(){
     this.opacityAnimation();
@@ -48,13 +54,12 @@ export class LogoComponent implements OnChanges {
   }
 
   opacityAnimation() {
-    this.hidden = this.scrollTop > 100;
+    this.logoVisible = this.hidden ? false : this.scrollTop < 100;
   }
 
   triangleAnimation() {
-    console.log(this.scrollTop)
     const targetPosition = [-80, -120],
-        scrollTopRatio = this.scrollTop / this.triangleChangeDirectoryPoint,
+        scrollTopRatio = this.hidden ? 1 : this.scrollTop / this.triangleChangeDirectoryPoint,
         moveFactor = scrollTopRatio > 1 ? 1 : scrollTopRatio,
         xTranslation = targetPosition[0] * this.EasingFunctions.easeInOutCubic(moveFactor),
         yTranslation = targetPosition[1] * this.EasingFunctions.easeInOutCubic(moveFactor),
@@ -87,6 +92,22 @@ export class LogoComponent implements OnChanges {
   private EasingFunctions = {
     easeInOutCubic: function (t) { return t < .5 ? 4 * t * t * t : (t - 1) * (2 * t - 2) * (2 * t - 2) + 1 },
   }
+
+  checkHomeRoute(){
+    this.router.events.subscribe( (state) => {
+      if(state instanceof NavigationEnd) {
+        let translatedLink = this.localize.translateRoute('/home');
+        if( translatedLink !== state.urlAfterRedirects )
+          this.hidden = true;
+        else
+          this.hidden = false;
+
+        this.triangleAnimation();
+        this.opacityAnimation();
+      }
+    })
+  }
+
 
 
 }
