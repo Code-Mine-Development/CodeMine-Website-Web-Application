@@ -8,7 +8,7 @@ import {LocalizeRouterModule} from 'localize-router';
 import {TranslateModule} from '@ngx-translate/core';
 
 const portfolioRoutes: Routes = [
-    {path: 'portfolio', component: PortfolioComponent, resolve: {portfolio: PortfolioResolver}, children: [
+    {path: '', component: PortfolioComponent, resolve: {portfolio: PortfolioResolver}, children: [
         {path: '', component: PortfolioListComponent},
         {path: ':id', component: PortfolioDetailsComponent},
     ]},

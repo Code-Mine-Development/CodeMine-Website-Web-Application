@@ -4,19 +4,22 @@ import {PortfolioProjectComponent} from './portfolio-project/portfolio-project.c
 import {UiModule} from '../../shared/ui-elements/ui.module';
 import {SharedModule} from '../../shared/shared.module';
 import {TranslateModule} from '@ngx-translate/core';
+import { BrighterVisionGrowthPlatformComponent } from './details-section/brighter-vision-growth-platform/brighter-vision-growth-platform.component';
 
 @NgModule({
     declarations: [
-        PortfolioProjectComponent
+        PortfolioProjectComponent,
+        BrighterVisionGrowthPlatformComponent
     ],
     imports: [
         CommonModule,
         UiModule,
-        TranslateModule
+        TranslateModule,
+        SharedModule
     ],
     exports: [
         PortfolioProjectComponent,
-        SharedModule
+        BrighterVisionGrowthPlatformComponent
     ],
     providers: [],
 })

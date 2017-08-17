@@ -19,8 +19,8 @@ export const appRoutes: Routes = [
     }
   },
   {path: 'contact', loadChildren: './aplication/contact/contact.module#ContactModule'},
-  // {path: 'portfolio', loadChildren: './aplication/portfolio/portfolio.module#PortfolioModule'},
-  // {path: 'offer', loadChildren: './aplication/offer/offer.module#OfferModule'},
+  {path: 'portfolio', loadChildren: './aplication/portfolio/portfolio.module#PortfolioModule'},
+  {path: 'offer', loadChildren: './aplication/offer/offer.module#OfferModule'},
   {path: 'audit', loadChildren: './aplication/audit/audit.module#AuditModule'},
   {path: 'aboutus', loadChildren: './aplication/about-us/about-us.module#AboutUsModule'},
   {path: 'not-found', component: PageNotFoundComponent},
@@ -30,8 +30,8 @@ export const appRoutes: Routes = [
 
 @NgModule({
   imports: [
-    LocalizeRouterModule.forRoot(appRoutes),
-    RouterModule.forRoot(appRoutes, {preloadingStrategy: PreloadAllModules})
+    RouterModule.forRoot(appRoutes, {preloadingStrategy: PreloadAllModules}),
+    LocalizeRouterModule.forRoot(appRoutes)
   ],
   exports: [RouterModule]
 })
