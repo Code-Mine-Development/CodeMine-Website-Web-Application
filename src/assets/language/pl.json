@@ -198,6 +198,7 @@
   },
   "ABOUT_US":{
     "showDescription": "Zobacz Opis",
+    "closeDescription": "Ukryj Opis",
     "approach": {
       "title": "nasze podejście",
       "definition": "Definicja",

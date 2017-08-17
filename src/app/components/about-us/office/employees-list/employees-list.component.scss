@@ -3,13 +3,12 @@
   width: 100%;
   height: 100%;
   overflow: scroll;
-  margin: 170px auto 0;
+  margin: 60px auto 0;
   &::-webkit-scrollbar {
     display: none;
   }
   @media #{$xl-computer}{
     width:80%;
-    margin-top: 60px;
   }
 }
 ul{
@@ -19,16 +18,27 @@ ul{
   padding: 0 6.25%;
   li{
     display:flex;
+    justify-content: space-around;
     width:100%;
+    position:relative;
     @media #{$computer}{
       width:50%;
+    }
+    &>div{
+      flex:.65;
+      @media #{$phone} {
+        flex:.5;
+      }
     }
   }
   h1{
     font-size: 3.6rem;
     font-weight:bold;
-    cursor:pointer;
+
     margin-bottom:0;
+    @media #{$phone} {
+      font-size: 2.4rem;
+    }
   }
   h2{
     font-size: 2.4rem;
@@ -45,21 +55,50 @@ ul{
     margin-top:42px;
     font-size: 1.6rem;
     font-weight: bold;
+    cursor:pointer;
+    &:hover{
+      transition:visibility 5s;
+      &>.person-description{
+        visibility:visible;
+      }
+    }
   }
 }
 
 figure{
-  padding: 30px;
   margin: 0;
-  width: 130px;
-  height: 130px;
-  overflow: hidden;
+  position:relative;
+  flex:.5;
   figcaption{
     display:none;
   }
-  img{
-    width: 100%;
-    height: 100%;
-    border-radius: 50%;
+  @media #{$tablet} {
+    flex:.35;
   }
+  img{
+    position:absolute;
+    top:30px;
+    right:30px;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    @media #{$home-information-mobile} {
+      width: 130px;
+      height: 130px;
+    }
+    @media #{$phone} {
+      right:-5px;
+    }
+  }
+}
+
+.person-description{
+  position:absolute;
+  left:0;
+  top:0;
+  z-index: 1;
+  width:100%;
+  min-height: 100%;
+  background: #ffdb4a;
+  visibility:hidden;
 }

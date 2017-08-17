@@ -90,7 +90,7 @@ export class Coordinate {
 
     //enlarge card
     setTimeout(() => {
-      document.getElementById('personView').style.transform = "scale(1)";
+      document.getElementById('personView').style.transform = "scale(1) translateX(-50%)";
       document.getElementById('personView').style.transition = ".2s ease-in";
 
     }, 400);
@@ -105,7 +105,7 @@ export class Coordinate {
     document.getElementById('personWrapper').style.transition = '0.3s';
     setTimeout(() => {
       document.getElementById('personView').classList.remove('active');
-      document.getElementById('personView').style.transform = 'scale(0.4)';
+      document.getElementById('personView').style.transform = 'scale(0.4) translateX(-50%)';
     }, 50);
   }
 
