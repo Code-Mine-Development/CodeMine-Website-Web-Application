@@ -10,6 +10,7 @@ export class HomeInformationServices {
 
   private scrollTopStream = new Subject();
   private homeInformations: HomeInformation;
+  private scrollTop = 0;
 
   constructor(private http: Http) {
 
@@ -29,9 +30,12 @@ export class HomeInformationServices {
 
   setScrollTop(scrollTop){
     this.scrollTopStream.next(scrollTop);
+    this.scrollTop = scrollTop;
   }
 
   getScrollTopStream(){
+    if(this.scrollTop)
+      return this.scrollTopStream.startWith(this.scrollTop);
     return this.scrollTopStream.asObservable();
   }
 

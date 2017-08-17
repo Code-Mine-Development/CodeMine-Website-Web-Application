@@ -8,7 +8,7 @@ import {Company} from '../../../shared/interface/company.interface';
   styleUrls: ['contact-info.component.scss']
 })
 export class ContactInfoComponent {
-  @Input() company: Company[];
+  @Input() company: Company;
 
   constructor() {}
 }

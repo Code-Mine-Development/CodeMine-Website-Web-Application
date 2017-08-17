@@ -1,0 +1,12 @@
+
+  <div [class.hidden]="!visible">
+    <div id="UX_svg_draw" [class.hidden]="UiVisible"></div>
+    <div id="UI_svg_draw" [class.hidden]="!UiVisible"></div>
+  </div>
+
+  <section>
+    <h2 [class.textHidden]="UiVisible">{{'HOME.UX.title' | translate}}</h2>
+    <p [class.textHidden]="UiVisible">{{'HOME.UX.description' | translate}}</p>
+    <h2 [class.textHidden]="!UiVisible" class="text-white">{{'HOME.UI.title' | translate}}</h2>
+    <p [class.textHidden]="!UiVisible" class="text-white">{{'HOME.UI.description' | translate}}</p>
+  </section>

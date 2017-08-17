@@ -10,7 +10,7 @@ import {DrawBackgroundService} from '../../../shared/services/draw-background.se
 
 })
 export class AuditDetailsComponent implements OnInit, AfterViewInit {
-  @Input() audit: Audit[];
+  @Input() audit: Audit;
   @ViewChild('Canvas1') canvasRef1;
   @ViewChild('Canvas2') canvasRef2;
   @Input() indexID: number;

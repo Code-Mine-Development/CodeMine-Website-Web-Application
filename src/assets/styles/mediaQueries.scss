@@ -3,6 +3,7 @@ $computer: "only screen and (min-width: 992px)";
 $tablet: "only screen and (max-width: 799px)";
 $phone-tablet: "only screen and (min-width: 800px)";
 $phone: "only screen and (max-width: 500px)";
-
-
+$home-information-mobile: "only screen and (max-width: 1050px)";
+$home-information-vertical-mobile: 'only screen and (max-width: 1050px) and (orientation: landscape)';
+$home-information-vertical-mobile-iphone5: 'only screen and (max-width: 800px) and (max-height: 400px)';
 

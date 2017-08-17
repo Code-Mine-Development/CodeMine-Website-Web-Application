@@ -13,7 +13,6 @@
 .tools{
   display: flex;
   flex-wrap: wrap;
-  align-items: center;
 }
 .tools-col{
   @media #{$phone}{
@@ -31,6 +30,7 @@
   @media #{$xl-computer}{
     width: 16.6%;
   }
+  cursor:pointer;
   box-sizing: border-box;
   border:1px solid #eee;
   background-size: cover;
@@ -42,9 +42,4 @@
       background: #eeeeee;
     }
   }
-}
-.tools:after {
-  content: "";
-  display: table;
-  clear: both;
 }

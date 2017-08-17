@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, HostListener } from '@angular/core';
 import {Company} from '../../shared/interface/company.interface';
 import {ActivatedRoute, Data} from '@angular/router';
 import {fadeInAnimation} from '../../shared/routing.animation';
@@ -11,6 +11,7 @@ import {fadeInAnimation} from '../../shared/routing.animation';
   host: { '[@fadeInAnimation]': '' }
 })
 export class AboutUsComponent implements OnInit {
+
   company: Company;
 
   constructor(private route: ActivatedRoute) { }
@@ -21,5 +22,6 @@ export class AboutUsComponent implements OnInit {
         this.company = data['company'];
       });
   }
+
 
 }

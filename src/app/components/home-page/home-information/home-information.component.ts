@@ -1,64 +1,97 @@
-import {Component, OnInit, OnDestroy, ViewChild, Inject} from '@angular/core';
+import {Component, OnInit, OnDestroy, ViewChild, Inject, AfterViewInit, Input} from '@angular/core';
 import {ActivatedRoute, Data} from '@angular/router';
 import {HomeInformation} from '../interfaces/home-information.interface';
 import {HomeInformationServices} from '../services/home-information.service';
 import {DOCUMENT} from '@angular/common';
 import {ScrollToService} from '../../../shared/services/scroll-to.service';
+import {ScrollController} from '../services/scroll.controller';
 
+enum scrollSimulation{
+    show,
+    hide
+}
 
 @Component({
   selector: 'app-home-information',
   templateUrl: 'home-information.component.html',
   styleUrls: ['home-information.component.scss']
 })
-export class HomeInformationComponent implements OnInit, OnDestroy {
+export class HomeInformationComponent implements OnInit, OnDestroy, AfterViewInit {
+
+  @Input('escapeComponent') escapeComponent;
+
   informations: HomeInformation[];
-  @ViewChild('homeBox') homeBox;
-  @ViewChild('sideSlider') sideSlider;
+  private simulateScrollFrame;
+  private scrollSimulationDuration = 500;
+  private scrollSimulationLength = window.innerHeight < 500 ? 500 : window.innerHeight;
 
-  currentElement = 1;
-  private border = 0;
-  private opacity = 0;
+  private scrollCurrentElementSubscriber;
 
-  constructor(@Inject(DOCUMENT) private document, private route: ActivatedRoute, private homeInformationService: HomeInformationServices, private scrollToService: ScrollToService ) {}
+
+
+  constructor(@Inject(DOCUMENT) private document, private route: ActivatedRoute, private homeInformationService:HomeInformationServices, private scrollToService:ScrollToService, private scrollController:ScrollController ) {}
+
   ngOnInit() {
+    let prevElement = 1;
+
+    this.scrollCurrentElementSubscriber = this.scrollController.getCurrentElementStream().subscribe( (value:any) => {
+      if(prevElement > value.id && value.id == 1) {
+        this.simulateScroll(scrollSimulation.show);
+      }
+      else if( prevElement == 1 && value.id > 1){
+        this.simulateScroll(scrollSimulation.hide);
+      }
+      prevElement = value.id;
+    });
+
     this.route.data
       .subscribe((data: Data) => {
         this.informations = data['homeInformation'];
       });
   }
 
-  ngOnDestroy(){
-    this.homeInformationService.setScrollTop(0);
+  ngAfterViewInit(){
+    this.scrollController.setEscapeElement(this.escapeComponent);
   }
 
-  scroll(event){
-    this.homeInformationService.setScrollTop(event.target.scrollTop);
-    this.animateShadowBox(event.target.scrollTop);
-    this.showCurrentTitle(event);
+  simulateScroll(state){
+
+    if(this.simulateScrollFrame)
+      return;
+
+    let start;
+
+    const scrollAnimationFunction = timestamp => {
+        if(!start) start = timestamp;
+        let progress = (timestamp - start)/this.scrollSimulationDuration,
+            position = state === scrollSimulation.show ? this.scrollSimulationLength - this.scrollSimulationLength * progress : this.scrollSimulationLength * progress;
+
+        this.homeInformationService.setScrollTop(position);
+        console.log(timestamp, progress);
+        if( timestamp < start + this.scrollSimulationDuration)
+          this.simulateScrollFrame = window.requestAnimationFrame(scrollAnimationFunction.bind(this));
+        else
+          this.simulateScrollFrame = null;
+    };
+
+    this.simulateScrollFrame = window.requestAnimationFrame(scrollAnimationFunction.bind(this));
+  }
+
+  ngOnDestroy(){
+    this.homeInformationService.setScrollTop(0);
+    if(this.scrollCurrentElementSubscriber)
+      this.scrollCurrentElementSubscriber.unsubscribe()
+  }
+
+  wheelDirectory(directory:string){
+    this.scrollController.setScrollDirectory(directory);
     this.scrollingBackDetector();
   }
 
+
   scrollingBackDetector(){
-    if (this.getScrollTopPosition() > 0)
-      this.scrollToService.scroll('SiteHead');
-  }
-
-  animateShadowBox(scrollTop){
-    const distance = 1900,
-        positionRatio = scrollTop / distance,
-        positionFactor = positionRatio > 1 ? 1 : positionRatio;
-    this.border = positionFactor / 10;
-
-    this.opacity = positionFactor;
-  }
-
-  showCurrentTitle(event) {
-    const boxes: any = document.querySelectorAll('.box');
-
-    for (let i = 0; i < this.informations.length; i++)
-      if (event.target.scrollTop >= boxes[i].offsetTop - 650)
-        this.currentElement = i + 1;
+    if(this.getScrollTopPosition() > 0)
+      this.scrollToService.scroll("SiteHead");
   }
 
   getScrollTopPosition(){

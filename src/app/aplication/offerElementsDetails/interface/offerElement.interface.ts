@@ -7,5 +7,7 @@ export interface OfferElement{
     viewBox: string
   },
   img: string,
-  color: string
+  color: string,
+  prevUrl?:string,
+  nextUrl?:string
 }

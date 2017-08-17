@@ -1,0 +1,65 @@
+@import '../../../../../assets/styles/mediaQueries.scss';
+:host{
+  width: 100%;
+  height: 100%;
+  overflow: scroll;
+  margin: 170px auto 0;
+  &::-webkit-scrollbar {
+    display: none;
+  }
+  @media #{$xl-computer}{
+    width:80%;
+    margin-top: 60px;
+  }
+}
+ul{
+  display:flex;
+  flex-wrap: wrap;
+  letter-spacing: normal;
+  padding: 0 6.25%;
+  li{
+    display:flex;
+    width:100%;
+    @media #{$computer}{
+      width:50%;
+    }
+  }
+  h1{
+    font-size: 3.6rem;
+    font-weight:bold;
+    cursor:pointer;
+    margin-bottom:0;
+  }
+  h2{
+    font-size: 2.4rem;
+    font-weight: normal;
+    margin:10px 0 20px;
+  }
+  hr{
+    border: none;
+    border-bottom: 4px solid #000;
+    width: 30px;
+    margin:0;
+  }
+  p{
+    margin-top:42px;
+    font-size: 1.6rem;
+    font-weight: bold;
+  }
+}
+
+figure{
+  padding: 30px;
+  margin: 0;
+  width: 130px;
+  height: 130px;
+  overflow: hidden;
+  figcaption{
+    display:none;
+  }
+  img{
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+  }
+}

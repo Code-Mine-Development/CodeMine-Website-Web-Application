@@ -1,6 +1,14 @@
-<div class="approach">
-  <h3>nasze podejście</h3>
-  <h2>Duży zespół nie jest miernikiem jakości świadczonych usług – są nim raczej umiejętności, pasja i zaangażowanie.
-    Jako kilkunastoosobowy team pracujący w myśl <span class="underline">Quality Driven Development</span>, nie boimy się wyzwań,
-    a nasze indywidualne podejście jest doceniane przez wszystkich klientów.</h2>
+<div class="approach" [class.hover]="hover">
+  <h2>
+    <span>{{ 'ABOUT_US.approach.title' | translate }}</span>
+    <span class="definition" >{{ 'ABOUT_US.approach.definition' | translate }}</span>
+  </h2>
+  <h3>
+    <span>{{ 'ABOUT_US.approach.start' | translate }}</span>
+    <span class="underline" (mouseenter)="hover = true" (mouseleave)="hover = false">
+      {{ 'ABOUT_US.approach.QDD.title' | translate }},
+    </span>
+    <span class="description_swap">{{ 'ABOUT_US.approach.end' | translate }}.</span>
+    <span class="description">{{ 'ABOUT_US.approach.QDD.description' | translate }}</span>
+  </h3>
 </div>

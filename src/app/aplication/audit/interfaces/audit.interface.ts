@@ -2,6 +2,8 @@ export interface Audit {
     title: string;
     image: string;
     description: string;
-    tasks: Array<Object>;
-    benefits: Array<Object>;
+    items:[{
+      task:string,
+      benefit:string
+    }]
 }

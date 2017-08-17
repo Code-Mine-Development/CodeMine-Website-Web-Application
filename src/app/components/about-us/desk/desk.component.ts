@@ -3,7 +3,7 @@ import {
   ViewChild
 } from '@angular/core';
 import {Employees} from '../../../aplication/about-us/interfaces/employees.interface';
-import {Coordinate} from '../../../aplication/about-us/models/coordinate.model';
+import {Coordinate} from '../office/office-model/models/coordinate.model';
 import {ClosePersonService} from '../../../shared/services/close-person.service'
 @Component({
   selector: 'app-desk',

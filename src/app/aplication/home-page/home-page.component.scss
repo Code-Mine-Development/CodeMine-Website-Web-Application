@@ -1,3 +1,4 @@
+@import "../../../assets/styles/mediaQueries";
 :host{
   display: flex;
   flex-direction: column;
@@ -13,7 +14,9 @@
     position: absolute;
     bottom: 15px;
     width: 100%;
-
+    @media #{$home-information-vertical-mobile}{
+      bottom:0;
+    }
     &-text {
       font-size: 1.6em;
     }

@@ -46,7 +46,7 @@ export class HeaderComponent implements OnInit {
   constructor(@Inject(DOCUMENT)
               private document: Document,
               private router: Router,
-              private translate: TranslateService,
+              public translate: TranslateService,
               private localize: LocalizeRouterService,
               private scrollInformationService: HomeInformationServices
             ) {}

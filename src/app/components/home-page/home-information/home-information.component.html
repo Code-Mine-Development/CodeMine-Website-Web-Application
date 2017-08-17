@@ -1,39 +1,7 @@
 <app-bg-triangles></app-bg-triangles>
-<div class="section-start"
-    (scroll)="scroll($event)"
-    [ngStyle] = "{'box-shadow':'inset 0 0 10px 10px rgba(0,0,0,'+border+')'}"
-     #homeBox
->
-  <div class="slogan-wrapper">
-    <h2 >{{ 'HOME.motto.title' | translate}} <br> {{ 'HOME.motto.subtitle' | translate}}</h2>
-  </div>
-  <div class="box-start">
-    <h2 class="header" >{{ 'HOME.howWeWork.title' | translate}}</h2>
-    <p class="text" >{{ 'HOME.howWeWork.description' | translate}}</p>
-  </div>
+<app-home-information-content mouseWheel
+                              (mouseWheelUp)="wheelDirectory('up')"
+                              (mouseWheelDown)="wheelDirectory('down')">
+</app-home-information-content>
 
-  <div [id]="'home_information_'+i" class="row box" *ngFor="let information of informations, let i = index">
-    <div class="col-box box-image"></div>
-    <div class="col-box-text box-text">
-      <h1 class="box-header">{{information.title | translate}}</h1>
-      <p class="text">{{information.description | translate}}</p>
-      <button class="btn btn-yellow btn-large btn-shadow" *ngIf="information.more_info.active">{{information.more_info.message | translate}}</button>
-    </div>
-  </div>
-  <div class="box-center">
-    <div class="row">
-      <div class="box-center-text">
-      <h1 class="box-header">{{ 'HOME.button.label' | translate }}</h1>
-      </div>
-    </div>
-    <div class="row">
-      <button class="btn btn-yellow btn-shadow btn-large">{{ 'HOME.button.text' | translate }}</button>
-    </div>
-  </div>
-</div>
-<app-horizontal
-  [ngStyle] = "{ 'opacity': opacity }"
-  [currentElement]="currentElement"
-  [informations]="informations"
-  [scrollOpponent]="homeBox">
-</app-horizontal>
+<app-horizontal></app-horizontal>

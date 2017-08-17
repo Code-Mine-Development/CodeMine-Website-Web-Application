@@ -12,7 +12,7 @@ import { Component, OnChanges, Input, ViewChild, HostListener } from '@angular/c
           </defs>
           <g id="Layer_one" data-name="layer one">
             <polygon class="cls-1" [class.hidden] = 'homeVisible' [attr.points]="'0 25.86 21.89 25.86 0.05 0'"></polygon>
-            <polygon class="cls-1" [class.hidden] = '!homeVisible'[attr.points]="'0 25.86 21.89 25.86 21.89 11 11 0 0 11'"></polygon>
+            <polygon class="cls-1" [class.hidden] = '!homeVisible' [attr.points]="'0 25.86 21.89 25.86 21.89 11 11 0 0 11'"></polygon>
           </g>
         </svg>
       </div>
@@ -22,8 +22,7 @@ import { Component, OnChanges, Input, ViewChild, HostListener } from '@angular/c
 })
 export class LogoComponent implements OnChanges {
 
-  @Input() scrollTop: number;
-  @ViewChild('triangle') triangle;
+
   @HostListener('mouseenter') mouseEnter(){
     this.homeVisible = true;
     this.checkHomeVisible();
@@ -32,6 +31,9 @@ export class LogoComponent implements OnChanges {
     this.homeVisible = false;
     this.checkHomeVisible();
   };
+
+  @Input() scrollTop: number;
+  @ViewChild('triangle') triangle;
 
   homeVisible = false;
   hidden = false;
@@ -50,6 +52,7 @@ export class LogoComponent implements OnChanges {
   }
 
   triangleAnimation() {
+    console.log(this.scrollTop)
     const targetPosition = [-80, -120],
         scrollTopRatio = this.scrollTop / this.triangleChangeDirectoryPoint,
         moveFactor = scrollTopRatio > 1 ? 1 : scrollTopRatio,
@@ -73,8 +76,6 @@ export class LogoComponent implements OnChanges {
     if (this.triangle)
       this.triangle.nativeElement.style.transform = `translate(${x}px,${y}px) rotateZ(${angle}deg)`;
   }
-
-  check
 
 
   checkHomeVisible(){
