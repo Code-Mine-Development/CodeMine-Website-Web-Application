@@ -21,27 +21,16 @@ export class HomeInformationComponent implements OnInit, OnDestroy, AfterViewIni
   @Input('escapeComponent') escapeComponent;
 
   informations: HomeInformation[];
-  private simulateScrollFrame;
-  private scrollSimulationDuration = 500;
-  private scrollSimulationLength = window.innerHeight < 500 ? 500 : window.innerHeight;
-
   private scrollCurrentElementSubscriber;
 
 
 
   constructor(@Inject(DOCUMENT) private document, private route: ActivatedRoute, private homeInformationService:HomeInformationServices, private scrollToService:ScrollToService, private scrollController:ScrollController ) {}
 
-  ngOnInit() {
-    let prevElement = 1;
+  ngOnInit(){
 
     this.scrollCurrentElementSubscriber = this.scrollController.getCurrentElementStream().subscribe( (value:any) => {
-      if(prevElement > value.id && value.id == 1) {
-        this.simulateScroll(scrollSimulation.show);
-      }
-      else if( prevElement == 1 && value.id > 1){
-        this.simulateScroll(scrollSimulation.hide);
-      }
-      prevElement = value.id;
+      this.homeInformationService.setScrollTop(value.id);
     });
 
     this.route.data
@@ -54,30 +43,8 @@ export class HomeInformationComponent implements OnInit, OnDestroy, AfterViewIni
     this.scrollController.setEscapeElement(this.escapeComponent);
   }
 
-  simulateScroll(state){
-
-    if(this.simulateScrollFrame)
-      return;
-
-    let start;
-
-    const scrollAnimationFunction = timestamp => {
-        if(!start) start = timestamp;
-        let progress = (timestamp - start)/this.scrollSimulationDuration,
-            position = state === scrollSimulation.show ? this.scrollSimulationLength - this.scrollSimulationLength * progress : this.scrollSimulationLength * progress;
-
-        this.homeInformationService.setScrollTop(position);
-        if( timestamp < start + this.scrollSimulationDuration)
-          this.simulateScrollFrame = window.requestAnimationFrame(scrollAnimationFunction.bind(this));
-        else
-          this.simulateScrollFrame = null;
-    };
-
-    this.simulateScrollFrame = window.requestAnimationFrame(scrollAnimationFunction.bind(this));
-  }
-
   ngOnDestroy(){
-    this.homeInformationService.setScrollTop(0);
+    this.homeInformationService.setScrollTop(1);
     if(this.scrollCurrentElementSubscriber)
       this.scrollCurrentElementSubscriber.unsubscribe()
   }

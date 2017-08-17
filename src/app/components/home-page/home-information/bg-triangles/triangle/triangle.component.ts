@@ -1,6 +1,7 @@
 import {Component, HostBinding, Input, OnChanges, HostListener, OnInit, AfterViewInit} from '@angular/core';
 import {Point} from '../../../../../shared/interface/point.interface';
 import {HomeInformationServices} from '../../../services/home-information.service';
+import {DomSanitizer} from '@angular/platform-browser';
 
 @Component({
   selector: 'app-triangle',
@@ -14,6 +15,7 @@ export class TriangleComponent implements OnInit, OnChanges, AfterViewInit {
   @HostBinding("style.left") positionX;
   @HostBinding("style.transform") transform;
   @HostBinding("style.z-index") zindex;
+  @HostBinding("style.transition") transition;
 
   @HostListener("window:mousemove", ['$event']) mouseMove(event){
     this.followMouse(event.x, event.y)
@@ -27,7 +29,7 @@ export class TriangleComponent implements OnInit, OnChanges, AfterViewInit {
 
   private maxPositionDistance = 100;
   private maxTransformDistance = 70;
-  private hidePoint = 200;
+  private hideAnimationDuration = 1000;
   private randomMovingInterval;
   calculatedScale = .6;
 
@@ -41,14 +43,14 @@ export class TriangleComponent implements OnInit, OnChanges, AfterViewInit {
   ngOnInit() {
     this.zindex = this.size == 1 ? 5 : 4;
     this.scrollService.getScrollTopStream().subscribe(
-      (scrollTop:number) => {
-        this.scrollHideAnimation(scrollTop);
-      }
-    )
+      (place:number) => {
+        this.scrollHideAnimation(place);
+      });
   }
 
   ngAfterViewInit(){
     this.randomMoving();
+
   }
 
   followMouse( x, y ){
@@ -81,17 +83,22 @@ export class TriangleComponent implements OnInit, OnChanges, AfterViewInit {
     }, 2000)
   }
 
-  scrollHideAnimation(scrollTop:number){
+  scrollHideAnimation(place:number){
     let windowHeight = window.innerHeight,
         elementPosition = (parseInt(this.positionY)/100 * windowHeight),
         elementDistanceToBottom = windowHeight - elementPosition < 0 ? 0 : windowHeight - elementPosition,
-        animationDistance = elementDistanceToBottom < this.hidePoint ? elementDistanceToBottom : this.hidePoint,
-        animationFactor = scrollTop > (elementDistanceToBottom - animationDistance) ? (scrollTop - (elementDistanceToBottom - animationDistance)) / animationDistance : 0;
+        animationDuration = this.hideAnimationDuration * ( elementDistanceToBottom / windowHeight );
 
-    if(animationFactor > 1) animationFactor = 1;
-
-    this.opacity = 1 - animationFactor;
-    this.calculateScale( 1 - animationFactor);
+    setTimeout( () => {
+      if(place !== 1){
+        this.calculateScale(0);
+        this.opacity = 0;
+      }
+      else{
+        this.opacity = 1;
+        this.calculateScale(1);
+      }
+    }, place === 1 ? this.hideAnimationDuration - animationDuration: animationDuration )
 
   }
 

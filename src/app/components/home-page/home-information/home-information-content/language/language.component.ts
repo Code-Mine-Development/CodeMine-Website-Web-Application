@@ -1,6 +1,6 @@
 import {
   AfterViewInit, Component, EventEmitter, Input, OnChanges, OnInit, Output, ElementRef,
-  HostListener, HostBinding
+  HostListener, HostBinding, ChangeDetectorRef
 } from '@angular/core';
 import * as Vivus from 'vivus';
 import {registerElement, ComponentTemplate} from '../component.template';
@@ -19,8 +19,6 @@ export class LanguageComponent extends ComponentTemplate {
     if(this.svg && this.visible) this.svg.setFrameProgress(1);
   }
 
-  @HostBinding('class.horizontal') horizontalClass;
-  @HostBinding('class.vertical') verticalClass;
 
   visible = false;
   mobile;
@@ -51,11 +49,6 @@ export class LanguageComponent extends ComponentTemplate {
   }
 
   checkScreen(){
-    if(window.innerWidth < window.innerHeight)
-      this.horizontalClass = true;
-    else
-      this.horizontalClass = false;
-
     return window.innerWidth <= this.breakPoint;
   }
 

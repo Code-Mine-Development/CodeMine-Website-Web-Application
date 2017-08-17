@@ -1,5 +1,4 @@
-import {Component, Input, OnDestroy, HostBinding, HostListener, AfterViewInit} from '@angular/core';
-import {HomeInformation} from '../../interfaces/home-information.interface';
+import {Component, OnDestroy, HostBinding, HostListener, OnInit} from '@angular/core';
 import {ScrollController} from '../../services/scroll.controller';
 
 @Component({
@@ -7,7 +6,7 @@ import {ScrollController} from '../../services/scroll.controller';
   templateUrl: './home-information-content.component.html',
   styleUrls: ['./home-information-content.component.scss']
 })
-export class HomeInformationContentComponent implements OnDestroy, AfterViewInit{
+export class HomeInformationContentComponent implements OnDestroy, OnInit{
 
   @HostListener('window:resize', ['$event']) resize(event) {
     this.checkScreen();
@@ -30,7 +29,7 @@ export class HomeInformationContentComponent implements OnDestroy, AfterViewInit
     this.scrollControllerService.resetElementQuantity();
   }
 
-  ngAfterViewInit(){
+  ngOnInit(){
     this.checkScreen();
   }
 

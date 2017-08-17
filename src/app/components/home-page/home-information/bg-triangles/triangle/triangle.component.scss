@@ -2,7 +2,7 @@
   position: absolute;
   width:32px;
   height:32px;
-  transition: transform 2s ease-in-out;
+  transition: opacity 1s, transform 2s ease-in-out
 }
 
 svg{
