@@ -1,0 +1,36 @@
+:host{
+  width:100%;
+  header{
+    width:100%;
+    display:flex;
+    justify-content: space-between;
+    margin-top:90px;
+    figcaption, h1{
+      display:none;
+    }
+
+    figure {
+      width:30%;
+      display:flex;
+      img {
+        width:100%;
+      }
+      &.small{
+        img{
+          width: 80px;
+          height: 80px;
+        }
+        figcaption{
+          display: block;
+          font-size: 3.6rem;
+          font-weight: bold;
+          padding-left: 35px ;
+        }
+      }
+    }
+
+    p{
+      max-width: 400px;
+    }
+  }
+}

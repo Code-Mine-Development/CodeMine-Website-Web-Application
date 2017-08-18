@@ -18,10 +18,10 @@ export class HomeInformationContentComponent implements OnDestroy, OnInit{
 
   private scrollPositionSubscriber;
 
-  constructor( private scrollControllerService:ScrollController ) {
+  constructor( private scrollControllerService: ScrollController ) {
     this.scrollPositionSubscriber = this.scrollControllerService.getCurrentElementStream().subscribe(
-      (value:any) => {
-        if(value.id == 1)
+      (value: any) => {
+        if (value.id == 1)
           return this.borderVisible = false;
         this.borderVisible = true;
       }
@@ -38,7 +38,7 @@ export class HomeInformationContentComponent implements OnDestroy, OnInit{
   }
 
   private checkScreen(){
-    if(window.innerWidth > window.innerHeight)
+    if (window.innerWidth > window.innerHeight)
       this.vertical = true;
     else
       this.vertical = false;

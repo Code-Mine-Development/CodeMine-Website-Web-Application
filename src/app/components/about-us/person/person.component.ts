@@ -8,20 +8,25 @@ import {Employees} from '../../../aplication/about-us/interfaces/employees.inter
   styleUrls: ['./person.component.scss']
 })
 export class PersonComponent implements OnInit {
+
   @Input() ActivatedDeskId;
   @Input() person: Employees;
-  constructor(private closePersonService: ClosePersonService) { }
 
-  ngOnInit() {
-  }
-  closeButtonClicked(){
-    this.closePersonService.triggerClose();
+  constructor(private closePersonService: ClosePersonService) {
   }
 
   @HostListener('window:keydown', ['$event']) closePerson(event) {
-    if (event.keyCode == 27)
+    if (event.keyCode === 27) {
       this.closePersonService.triggerClose();
+    }
+  }
 
+  ngOnInit() {
   }
+
+  closeButtonClicked() {
+    this.closePersonService.triggerClose();
   }
+
+}
 

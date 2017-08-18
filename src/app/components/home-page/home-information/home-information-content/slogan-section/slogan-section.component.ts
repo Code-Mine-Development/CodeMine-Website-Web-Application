@@ -6,12 +6,12 @@ import {ScrollController} from '../../../services/scroll.controller';
   selector: 'app-slogan-section',
   template: `
       <h2 >{{ 'HOME.motto.title' | translate}} <br> {{ 'HOME.motto.subtitle' | translate}}</h2>
-    
+
   `,
   styleUrls: ['./slogan-section.component.scss']
 })
 export class SloganSectionComponent extends ComponentTemplate{
-  constructor( scrollController:ScrollController, element:ElementRef) {
+  constructor( scrollController: ScrollController, element: ElementRef) {
     super( scrollController, element);
   }
 
@@ -20,18 +20,18 @@ export class SloganSectionComponent extends ComponentTemplate{
   }
 
 
-  animateHide(id:number){
+  animateHide(id: number){
   }
 
   animateShow(id, cb){
-    setTimeout( ()=> {
+    setTimeout( () => {
       cb();
     }, 1500 )
   }
 
-  registerElements():[registerElement]{
+  registerElements(): [registerElement]{
     return [
-        { localId: 1, title:"test slogan title" }
+        { localId: 1, title: 'test slogan title' }
       ]
   }
 }

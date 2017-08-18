@@ -29,8 +29,8 @@ export class MovingLayers {
     bg.setAttribute('data-y', y);
   }
 
-  resetPosition(){
-    let x = 0,
+  resetPosition() {
+    const x = 0,
         y = 0,
         bg = document.getElementById('officeBg'),
         target = document.getElementById('deskLayer');

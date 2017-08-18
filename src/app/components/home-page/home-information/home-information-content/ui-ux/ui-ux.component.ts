@@ -1,7 +1,7 @@
 import {Component, ElementRef, OnInit, QueryList, HostBinding} from '@angular/core';
-import {ComponentTemplate, registerElement} from "../component.template";
-import {ScrollController} from "../../../services/scroll.controller";
-import * as Vivus from "vivus";
+import {ComponentTemplate, registerElement} from '../component.template';
+import {ScrollController} from '../../../services/scroll.controller';
+import * as Vivus from 'vivus';
 
 @Component({
   selector: 'app-ui-ux',
@@ -18,7 +18,7 @@ export class UiUxComponent extends ComponentTemplate {
   UiVisible = false;
 
 
-  constructor( scrollController:ScrollController, element:ElementRef) {
+  constructor( scrollController: ScrollController, element: ElementRef) {
     super( scrollController, element);
   }
 
@@ -29,9 +29,9 @@ export class UiUxComponent extends ComponentTemplate {
   }
 
   animateHide(id, direction){
-    if(id == 1 && direction === 'up')
+    if (id == 1 && direction === 'up')
       setTimeout( () => this.visible = false, 1000 );
-    else if(id == 2 && direction === 'up')
+    else if (id == 2 && direction === 'up')
       this.hideUI();
   }
 
@@ -41,12 +41,12 @@ export class UiUxComponent extends ComponentTemplate {
 
     this.visible = true;
 
-    if( id == 1 && direction === 'down')
+    if ( id == 1 && direction === 'down')
       this.animateUX();
-    else if(id == 2 && direction === 'down' )
+    else if (id == 2 && direction === 'down' )
       this.animateUI();
 
-    setTimeout( ()=> {
+    setTimeout( () => {
       cb();
     }, 1500 )
 
@@ -59,14 +59,14 @@ export class UiUxComponent extends ComponentTemplate {
 
   animateUX(){
     this.svgUX.reset().stop();
-    setTimeout(()=>this.svgUX.play(2), 1000);
+    setTimeout(() => this.svgUX.play(2), 1000);
   }
 
   animateUI(){
     this.UiVisible = true;
     this.background = '#000';
     this.svgUI.reset().stop();
-    setTimeout(()=>this.svgUI.play(2), 50);
+    setTimeout(() => this.svgUI.play(2), 50);
   }
 
   instantShow(){
@@ -77,10 +77,10 @@ export class UiUxComponent extends ComponentTemplate {
   }
 
 
-  registerElements():[registerElement]{
+  registerElements(): [registerElement]{
     return [
-      { localId: 1, title:"HOME.UX" },
-      { localId: 2, title:"HOME.UI" }
+      { localId: 1, title: 'HOME.UX' },
+      { localId: 2, title: 'HOME.UI' }
     ]
   }
 }

@@ -1,0 +1,4 @@
+<section *ngFor="let text of texts">
+  <h2 [class.hidden]="!text.title">{{ text.title | translate}}</h2>
+  <p>{{ text.description | translate}}</p>
+</section>

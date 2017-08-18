@@ -8,7 +8,7 @@ export class ScrollToService {
   private targetPosition: number = null;
   private currentPosition: number = null;
   private start: number = null;
-  private duration: number = 500;
+  private duration = 500;
 
   private target;
   private onScreenLocation;
@@ -16,7 +16,7 @@ export class ScrollToService {
 
   private animationEndCallBack;
 
-  scroll(target, onScreenLocation = "top", opponent?, animationEndCallBack?) {
+  scroll(target, onScreenLocation = 'top', opponent?, animationEndCallBack?) {
     this.target = target;
     this.opponent = opponent || null;
     this.onScreenLocation = onScreenLocation;
@@ -28,7 +28,7 @@ export class ScrollToService {
   }
 
   private reset() {
-    if(this.animationEndCallBack)
+    if (this.animationEndCallBack)
       this.animationEndCallBack();
 
     this.scrollingOpponent = null;
@@ -50,7 +50,7 @@ export class ScrollToService {
 
 
   private scrollTo() {
-    if(this.start)
+    if (this.start)
       return;
     this.filterTarget();
     this.chooseOppenent();
@@ -61,7 +61,7 @@ export class ScrollToService {
 
   private scrollToElement(timestamp) {
     if (!this.start) this.start = timestamp;
-    let progress = timestamp - this.start,
+    const progress = timestamp - this.start,
       progressFactor = progress / this.duration,
       progressFactorWithEasing = Math.sqrt(progressFactor),
       distance = this.targetPosition - this.currentPosition,
@@ -84,7 +84,7 @@ export class ScrollToService {
     if (typeof this.target === 'number' )
         return this.target;
 
-    if (this.target === "SiteHead")
+    if (this.target === 'SiteHead')
       return 0;
 
     let distance = this.target.offsetTop;
@@ -98,23 +98,23 @@ export class ScrollToService {
   }
 
   private parseLocationDistance(distance: number) {
-    let halfHeight = (this.opponent ? this.opponent.offsetHeight : window.innerHeight) / 2,
-        halfTargetHeight = this.target.offsetHeight/2;
+    const halfHeight = (this.opponent ? this.opponent.offsetHeight : window.innerHeight) / 2,
+        halfTargetHeight = this.target.offsetHeight / 2;
 
-    if (this.onScreenLocation == "top")
+    if (this.onScreenLocation == 'top')
       return distance - 60;
-    else if (this.onScreenLocation == "center")
+    else if (this.onScreenLocation == 'center')
       return distance - halfHeight + halfTargetHeight;
-    else if (this.onScreenLocation == "bottom")
+    else if (this.onScreenLocation == 'bottom')
       return distance + (2 * halfHeight);
     return distance;
   }
 
 
   private changeScrollTop(position){
-    if(this.opponent)
+    if (this.opponent)
       return this.scrollingOpponent.scrollTop = position;
-    if(!this.scrollingOpponent)
+    if (!this.scrollingOpponent)
       return;
     this.scrollingOpponent.body.scrollTop = position;
     this.scrollingOpponent.documentElement.scrollTop = position;

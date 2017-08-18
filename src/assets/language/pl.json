@@ -145,41 +145,109 @@
     "addProjectTitle": "Dodaj swój projekt",
     "addProjectButton": "do formularza",
     "checkPortfolio": "sprawdź nasze portfolio",
-    "BrigterVision":{
+    "BrighterVision":{
       "title": "Brigter Vision Growth Platform",
-      "description": "Aplikacja skierowana do amerykańskich terapeutów, pozwalająca na przeglądanie puli dostępnych postów oraz ich publikację w formie bloga."
+      "shortDescription": "Aplikacja skierowana do amerykańskich terapeutów, pozwalająca na przeglądanie puli dostępnych postów oraz ich publikację w formie bloga.",
+      "description": {
+        "part1": "Brighter Vision Growth Platform jest odpowiedzią na zjawisko braku czasu poświęconego na marketing – jak chociażby prowadzenie bloga, zauważalnego wśród amerykańskich terapeutów, którzy całą swoją energię przeznaczają na zarządzanie własną praktyką, dbając o każdy, nawet najmniejszy szczegół.",
+        "postBooking": "Rezerwacja postów",
+        "part2": "Aplikacja pozwala na przeglądanie gotowych, dostępnych postów oraz na ich publikację na blogu opartym o Wordpressa w wybranym przez siebie terminie. Jej sercem jest prezentujący zarówno opublikowane, jak i przyszłe posty, ogromny kalendarz, szczegółowo dopracowany pod kątem UI oraz UX.",
+        "part3": "Dzięki dobrej kategoryzacji, a także świetnemu mechanizmowi rezerwowania postów, użytkownik jest w stanie zarezerwować wybraną publikację przy pomocy zaledwie trzech kliknięć.",
+        "calendar": "Kalendarz",
+        "businessModel": "Model biznesowy",
+        "part4": "Zważywszy na model biznesowy, który obok darmowych, zakłada również płatne posty, aplikacja została zintegrowana z systemem płatności Chargify. Użytkownik ma do wyboru wykupienie pojedynczych publikacji lub też miesięcznych subskrypcji. Posty darmowe przyznawane są z kolei miesięcznie, mając określony limit.",
+        "part5": "Każdy user dostaje trzy bezpłatne publikacje, które w przypadku niewykorzystania, przechodzą na kolejny miesiąc. Łącznie, użytkownik może uzbierać pokaźną sumę publikacji, których historię może łatwo podejrzeć dzięki zastosowanemu systemowi zliczania sald podobnych do systemów bankowości, opartemu na założeniach Event Sourcingu.",
+        "archLangTools": "Architektura / języki / narzędzia",
+        "part6": "Pod względem architektury, Growth Platform skupia dwie aplikacje – serwerową oraz kliencką. Aplikacja serwerowa (back-endowa) napisana została w języku PHP, z wykorzystywaniem Zend Framework 2 i odpowiada za kluczowe działania, do których należą głównie publikacja postów, zarządzanie saldem klienta czy zarządzanie publikacjami. ",
+        "part7": "Z kolei napisana przy użyciu AngularJS, aplikacja kliencka przyjmuje formę panelu administracyjnego, wykorzystującego komunikację REST API, dostarczaną przez wcześniej wspomnianą, aplikacja serwerową."
+      }
     },
     "telecom":{
       "title": "E-commerce dla telecomu",
-      "description": "Samodzielne moduły oprogramowania przyczyniające się do stworzenia nowoczesnej platformy e-commerce dla wiodących operatorów telekomunikacyjnych w Europie."
+      "shortDescription": "Samodzielne moduły oprogramowania przyczyniające się do stworzenia nowoczesnej platformy e-commerce dla wiodących operatorów telekomunikacyjnych w Europie.",
+      "description":{
+        "part1": "Od początku 2017 roku współpracujemy z dostawcą oprogramowania, rozpowszechniającego swoje rozwiązania wśród wielu wiodących firm z branży telekomunikacyjnej na rynku niemieckim, holenderskim, indyjskim oraz tureckim.",
+        "part2": "Udostępniając czterech działających autonomicznie pracowników, naszym zadaniem jest dostarczanie klientowi samodzielnych modułów oprogramowania, finalnie przekazywanych zewnętrznym zespołom. Z tego względu, na każdym kroku czeka na nas sporo wyzwań, z których głównymi są wymóg zdolności naszych mikroserwisów do integracji z wieloma, często przestarzałymi rozwiązaniami klasy eneterprise; mnogość obecnych i wymaganych technologii oraz narzędzi (PHP, Java, C#, Apache Kafka, PostgreSQL, Microsoft BizTalk, Magento); czy praca z enigmatycznymi formatami danych.",
+        "part3": "Zarówno tworzone w JAVIE i PHP mikroserwisy, jak i pisane w technologii ReactJS, aplikacje internetowe, przyczyniają się do stworzenia przez naszego klienta nowoczesnej platformy e-commerce dla operatorów telekomunikacyjnych. Nasze aplikacje to starannie zaprojektowane komponenty, korzystające ponadto z rozwiązań takich jak CQRS czy Event Sourcing.",
+        "part4": "Jedną z kluczowych realizacji w ramach tego projektu jest stworzenie systemów katalogowych, pozwalających na integrację wielu istniejących baz danych klientów w jedno wygodne narzędzie. Rozwiązanie to jest szczególnie istotne z perspektywy operatorów, którzy kupując inną firmę, nie są w stanie łatwo połączyć wielu baz z systemami rozpoznawania dostępności usług we wskazanych adresach czy katalogami produktów."
+      }
     },
     "exchange":{
       "title": "Internetowy system wymiany walut",
-      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+      "shortDescription": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+      "description":{
+
+      }
     },
     "MDLinking":{
       "title": "MDLinking",
-      "description": "Sieć społecznościowa umożliwiająca prywatną komunikację lekarzy z całego świata i przyczyniająca się do polepszania jakości opieki medycznej."
+      "shortDescription": "Sieć społecznościowa umożliwiająca prywatną komunikację lekarzy z całego świata i przyczyniająca się do polepszania jakości opieki medycznej.",
+      "description":{
+        "part1": "MDLinking to platforma umożliwiająca prywatną komunikację między lekarzami z całego świata, przyczyniając się do polepszania jakości opieki medycznej. Serwis pozwala na wzajemną konsultację i dzielenie się wiedzą wśród specjalistów w zamkniętym i bezpiecznym środowisku, a utworzone profile użytkowników funkcjonują ponadto jako wizytówki/ CV dla potencjalnych pracodawców.",
+        "web": "Sieć powiązań",
+        "part2": "Celem ułatwienia użytkownikom serwisu odnajdywania znajomych z branży oraz wchodzenia z nimi w relacje, stworzyliśmy inteligentny system rekomendacji potencjalnych kontaktów, który na drodze określenia stopnia prawdopodobieństwa znajomości, bierze pod uwagę czynniki takie jak historia zawodowa, miejsce pracy i zamieszkania czy zainteresowania.",
+        "intensiveCare": "Oddziały intensywnej opieki",
+        "part3": "Poza siecią społecznościową, równie istotnym założeniem aplikacji było przyspieszenie komunikacji pomiędzy szpitalami w utworzonych grupach, dlatego zaprojektowaliśmy system pozwalający także na zlokalizowanie wolnych miejsc na oddziałach intensywnej opieki.",
+        "intensiveCare2": "Intensywnej opieki",
+        "intensiveCareManagement": "Proces zarządzania oddziałem intensywnej opieki",
+        "part4": "Naszą rolą było zaprojektowanie od podstaw elastycznej platformy, zgodnej zarówno z wymaganiami biznesowymi klienta, jak i metodologią Domain Driven Design, a także możliwej do poszerzania o nowe funkcjonalności w miarę rozwoju serwisu.",
+        "specification": "Specyfikacja",
+        "part5": "Mając przed sobą tak angażujący i długofalowy projekt, na samym początku skupiliśmy się na stworzeniu jego dokładnej specyfikacji oraz rozpisaniu scenariuszy użycia samego serwisu. Wymagało to od nas nie tylko znajomości wymogów klienta, ale przede wszystkim zrozumienia języka branży medycznej i planów rozwoju aplikacji tak, by nie tylko znać jej potrzeby, ale także zdawać sobie sprawę, z czego one wynikają.",
+        "logic": "Logika biznesowa",
+        "part6": "W następnym etapie przystąpiliśmy do modelowania logiki biznesowej. Tablica, marker, kartka i ołówek w połączeniu z solidną burzą mózgów, pozwoliły nam wyróżnić główne modele, aktorów oraz zachowania, jakie powinien przejawiać tworzony system.",
+        "part7": "Znając już podstawy jego działania, zaczęliśmy programować aplikację od strony back-endowej, stosując  język PHP i Zend Framework, połączone z bazą danych PostgreSQL. Następnie, po stworzeniu precyzyjnych makiet interfejsu użytkownika, mogliśmy przejść do prac nad częścią front-edową i jej integracją z REST API. Dla aplikacji dla użytkowników wykorzystaliśmy framework AngularJS, zaś dla panelu administracyjnego – TypeScript.",
+        "architecture": "Architektura",
+        "part8": "Pod względem architektury, aplikacja MDLinking złożona jest z zestawów niezależnych modułów, komunikujących się przy pomocy RabbitMQ. Każdy z nich posiada swój własny zbiór odpowiedzialności, dzięki czemu moduł odpowiedzialny za użytkowników i ich profile nie jest zależny od części dotyczącej instytucji czy relacji między użytkownikami. Innymi słowy, modyfikacje jednego modułu nie wpływają na pozostałe, co zwiększa szybkość pracy, przy jednoczesnym zmniejszaniu ryzyka błędów.",
+        "part9": "Ważną kwestią w przypadku MDLinking jest także bezpieczeństwo aplikacji, będące priorytetem od samego początku jej tworzenia. Podyktowane jest to faktem przechowywania w bazie wielu danych wrażliwych, jak również plików przedstawiających dowody tożsamości czy potwierdzenia uprawnień, wykorzystywanych do weryfikacji autentyczności zakładanych kont. Dzięki implementacji licznych mechanizmów bezpieczeństwa, wszystkie dane aplikacji przechowywane są w zaszyfrowanej formie w bezpiecznych magazynach, dostarczanych przez Amazon AWS, dających nam możliwość dostosowania dostępu do informacji tak, by nie wpadły one w niepowołane ręce.",
+        "part10": "W trakcie prac, wraz z biegiem czasu i rozwojem platformy, jej oryginalny model znacznie ewoluował. Wyróżnialiśmy coraz to nowsze odpowiedzialności i zachowania, upraszczając tym samym istniejące, co tylko dowodzi złożoności projektu."
+      }
     },
     "MidOceanBrands":{
       "title": "Mid Ocean Brands Reporting System",
-      "description": "Kompleksowe narzędzie służące do planowania wydajności produkcji dla firmy zajmującej się wykonywaniem nadruków graficzne na różnego rodzaju gadżetach."
+      "shortDescription": "Kompleksowe narzędzie służące do planowania wydajności produkcji dla firmy zajmującej się wykonywaniem nadruków graficzne na różnego rodzaju gadżetach.",
+      "description":{
+        "part1": "Zarządzanie procesem produkcyjnym na dużą skalę jest zadaniem nie tylko pracochłonnym, ale też wysoce skomplikowanym, szczególnie, kiedy głównym używanym narzędziem staje się Microsoft Excel. Tak było w przypadku Mid Ocean Brands – firmy zajmującej się profesjonalnym nadrukiem materiałów graficznych na różnorakich gadżetach, która obecnie może już cieszyć się lepszym, zaproponowanym przez nas rozwiązaniem.",
+        "part2": "W zastępstwie dla dokumentów excelowych, dla naszego klienta stworzyliśmy narzędzie pozwalające zaplanować wydajność produkcji na określony czas, a także przedstawiające istotne dane w formie wykresów i raportów. Tym sposobem, rozproszone w wielu arkuszach kalkulacyjnych dane, aktualnie znajdują się w jednym miejscu, wyróżniając się przy tym przyjaznym interfejsem.",
+        "part3": "Pierwszym etapem prac było otrzymanie od klienta kilku przykładowych plików, wyeksportowanych z używanego przez niego, oprogramowania SAP. Na ich podstawie, przystąpiliśmy do projektowania głównej funkcjonalności aplikacji, umożliwiającej importowanie danych z plików zawierających nie tylko różną strukturę danych, ale również odmienne formatowanie. Efektem końcowym stało się narzędzie, pozwalające z jednej strony na łatwe dodawanie nowych parserów treści, a z drugiej na dopasowanie ustawień importu indywidualnie do każdego z plików, przy jednoczesnym sprawdzaniu wprowadzanych danych pod kątem poprawności ich formatu oraz struktury. Wszystko to zostało opatrzone przejrzystym wyglądem, w pełni dostosowanym do potrzeb klienta.",
+        "part4": "Stworzone oprogramowanie oparte zostało o Java 8 Spring Application – aplikację serwerową wystawiającą REST API, połączoną z magazynem danych PostgreSQL, a także aplikację kliencką stworzoną w ReactJS i komunikującą się z częścią serwerową poprzez API. Projekt wykorzystywał także technologię VirtualBox, umożliwiającą konfigurację wirtualnej maszyny, niezbędnej do uruchomienia aplikacji.",
+        "part5": "Aplikacja stosowana jest przede wszystkim w celu wprowadzania danych oraz planowania produkcji przez administratora, niemniej jednak, jej przeznaczenie obejmuje także halę produkcyjną, gdzie w czasie rzeczywistym na ekranach prezentuje ona aktualny stan produkcji oraz plan zamówień na najbliższe dni."
+      }
     },
     "SmartHome":{
       "title": "System zarządzania inteligentnymi domami",
-      "description": "System do zarządzania inteligentnymi domami, konieczny do dostosowania do nowych wymagań technologicznych."
+      "shortDescription": "System do zarządzania inteligentnymi domami, konieczny do dostosowania do nowych wymagań technologicznych.",
+      "description":{
+        "part1": "W 2016 roku mieliśmy okazję współtworzyć oprogramowanie do zarządzania inteligentnymi domami dla naszego norweskiego klienta, będącego jednym z wiodących dostawców tego typu rozwiązań na swoim rynku. Po fuzji, w jaką wszedł on wraz z drugą największą firmą z tej samej branży, niezbędne okazało się dostosowanie istniejącego oprogramowania do komunikacji z urządzeniami obsługującymi protokół ZigBee.",
+        "part2": "Poza przystosowaniem systemów zarządzania do nowych możliwości, oferowanych przez urządzenia działające w systemie ZigBee, do naszych głównych zadań należały bieżąca kontrola kodu źródłowego oraz zapewnienie wstecznej kompatybilności dla istniejących klientów. Do zadań projektowych używaliśmy zwłaszcza frameworku Symfony 2, Redis’a oraz bazy PostgreSQL.",
+        "part3": "Po skutecznym procesie adaptacji, z przyjemnością przekazaliśmy oprogramowanie w ręce programistów ze strony naszego klienta, którzy mogli zająć się rozwijaniem systemu na miejscu, mając bezpośredni dostęp do wszystkich urządzeń i klientów."
+      }
     },
     "Tandarts":{
       "title": "Tandarts.com",
-      "description": "Aplikacja zrzeszająca praktyki dentystyczne na terenie Holandii, pozwalająca użytkownikom wyszukać najlepszych specjalistów z okolicy i bezpośrednio umówić się na wizytę."
+      "shortDescription": "Aplikacja zrzeszająca praktyki dentystyczne na terenie Holandii, pozwalająca użytkownikom wyszukać najlepszych specjalistów z okolicy i bezpośrednio umówić się na wizytę.",
+      "description":{
+        "part1": "Tandarts to aplikacja zrzeszająca praktyki dentystyczne na terenie Holandii. Za jej pomocą użytkownicy mogą wyszukiwać najlepszych dentystów ze swojej okolicy, jak również przy pomocy kilku kliknięć bezpośrednio umawiać się na wizyty do specjalistów, a także weryfikować jakość świadczonych przez nich usług dzięki kompleksowemu systemowi ocen.",
+        "part2": "Rolą naszego zespołu było przygotowanie szkieletu systemu, który w późniejszej fazie, po doprowadzeniu go przez nas do fazy MVP (Minimum Viable Product), został przejęty przez holenderską grupę deweloperską, występującą z ramienia klienta. Taka specyfika pracy wymusiła na nas zastosowanie głównie prostych narzędzi, nie stanowiących problemu dla zastępujących nas programistów, z których wiodącym okazał się być framework Laravel (PHP) połączony z bazą PostgreSQL.",
+        "part3": "Prace nad projektem rozpoczęły się od długich konsultacji z klientem oraz innymi ekspertami z branży dentystycznej, których owocem stała się starannie zaprojektowana logika biznesowa. Celem było w końcu stworzenie systemu, który nie tylko spełni wszystkie wymagania biznesowe, ale okaże się być również łatwy w rozwoju dla zespołu nieuczestniczącego w jego początkowym projektowaniu. Z tego względu dużą wagę przywiązywaliśmy także do szczegółowej dokumentacji projektu, finalnie przekazanej klientowi.",
+        "part4": "Następujący po planowaniu, proces implementacji przebiegł niezwykle sprawnie. Pomimo ograniczeń Laravela w postaci ilości możliwych do wykorzystania, wcześniej stworzonych przez nas dla innych frameworków narzędzi, przygotowaliśmy masę nowych rozwiązań, wpasowujących się w specyfikę projektu."
+      }
     },
     "Tripbuzz":{
       "title": "Tripbuzz",
-      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+      "shortDescription": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+      "description":{
+        "part1": ""
+      }
     },
     "ZorgIndicator":{
       "title": "ZorgIndicator",
-      "description": "Platforma umożliwiająca pacjentom wyszukanie najlepszych szpitali w okolicy, z uwzględnieniem ich oceny, statystyk w leczeniu oraz liczby wolnych łóżek."
+      "shortDescription": "Platforma umożliwiająca pacjentom wyszukanie najlepszych szpitali w okolicy, z uwzględnieniem ich oceny, statystyk w leczeniu oraz liczby wolnych łóżek.",
+      "description":{
+        "part1": "Jako platforma pomagająca w wyszukiwaniu najlepszych szpitali w okolicy, ZorgIndicator został zbudowany z myślą o pacjentach chcących w przystępny sposób uzyskać informacje o ilości szpitalnych łóżek, statystykach w leczeniu chorób czy ocenach innych pacjentów dla danej jednostki.",
+        "part2": "Platforma składa się z dwóch komponentów – użytkownika i administratora szpitala, z czego użytkownik może wyszukiwać szpitale po geolokalizacji, sprawdzać ich statystyki i przyznawać oceny; natomiast administrator jest w stanie edytować dane kontaktowe placówki, zarządzając ponadto widocznością związanych z nią lekarzy.",
+        "part3": "Oprócz oceny samych szpitali, za pośrednictwem ZorgIndicator możliwe jest także ocenianie poszczególnych specjalistów. Dzięki platformie, pacjenci mają więc pewność zarówno w kwestii kompetencji lekarzy, jak również poziomu obsługi w jednostkach medycznych.",
+        "part4": "Naszym celem było zachowanie jak największej elastyczności platformy, w celu umożliwienia jej dalszej rozbudowy o nowe funkcjonalności w przyszłości. Z tego względu ZorgIndicator został zaprojektowany zgodnie z metodologią Domain Driven Design, na back-endzie wykorzystując język PHP wsparty frameworkiem Laravel, zaś na front-endzie framework Bootstrap oraz bibliotekę JQuery. W pełni responsywna całość opiera się na bazie danych PostgreSQL, funkcjonując na serwerach AWS."
+      }
     }
   },
   "UTILITIES": {

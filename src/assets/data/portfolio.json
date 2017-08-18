@@ -1,10 +1,125 @@
 [
   {
+    "link":"mdlinking",
     "title":"PORTFOLIO.MDLinking.title",
-    "shortDescription": "Sieć społecznościowa umożliwiająca prywatną komunikację lekarzy z całego świata",
+    "shortDescription": "PORTFOLIO.MDLinking.shortDescription",
     "description": "PORTFOLIO.MDLinking.description",
     "mainImage":"../assets/images/mdlinking-carousel.jpg",
-    "thumbnail": "../assets/images/mdlinking-carousel.jpg",
+    "thumbnail": "../assets/images/portfolio-images/mdlinking_logo.svg",
+    "detailsTemplate":[
+      {
+        "section": "header",
+        "description": "PORTFOLIO.MDLinking.description"
+      },
+      {
+        "section": "image",
+        "title": "Home",
+        "image": "../assets/images/mdlinking-carousel.jpg"
+      },
+      {
+        "section": "text",
+        "align": "left",
+        "text":[
+          {
+            "title": "PORTFOLIO.MDLinking.description.web",
+            "description": "PORTFOLIO.MDLinking.description.part2"
+          }
+        ]
+      },
+      {
+        "section": "4Images",
+        "title": null,
+        "images": [
+          "../assets/images/portfolio-images/tripbuzz-presentation.svg",
+          "../assets/images/portfolio-images/tripbuzz-presentation.svg",
+          "../assets/images/portfolio-images/tripbuzz-presentation.svg",
+          "../assets/images/portfolio-images/tripbuzz-presentation.svg"
+        ]
+      },
+      {
+        "section": "text",
+        "align": "left",
+        "text":[
+          {
+            "title": "PORTFOLIO.MDLinking.description.intensiveCare",
+            "description": "PORTFOLIO.MDLinking.description.part3"
+          }
+        ]
+      },
+      {
+        "section": "image",
+        "title": "PORTFOLIO.MDLinking.description.intensiveCare2",
+        "image": "../assets/images/mdlinking-carousel.jpg"
+      },
+      {
+        "section": "image",
+        "title": null,
+        "image": "../assets/images/mdlinking-carousel.jpg"
+      },
+      {
+        "section": "image",
+        "title": "PORTFOLIO.MDLinking.description.intensiveCareManagement",
+        "image": "../assets/images/mdlinking-carousel.jpg"
+      },
+      {
+        "section": "text",
+        "align": "left",
+        "text":[
+          {
+            "title": "DDD",
+            "description": "PORTFOLIO.MDLinking.description.part4"
+          },
+          {
+            "title": "PORTFOLIO.MDLinking.description.specification",
+            "description": "PORTFOLIO.MDLinking.description.part5"
+          }
+        ]
+      },
+      {
+        "section": "image",
+        "title": null,
+        "image": "../assets/images/mdlinking-carousel.jpg"
+      },
+      {
+        "section": "text",
+        "align": "left",
+        "text":[
+          {
+            "title": "PORTFOLIO.MDLinking.description.logic",
+            "description": "PORTFOLIO.MDLinking.description.part6"
+          }
+        ]
+      },
+      {
+        "section": "image",
+        "title": null,
+        "image": "../assets/images/mdlinking-carousel.jpg"
+      },
+      {
+        "section": "text",
+        "align": "left",
+        "text":[
+          {
+            "title": "PORTFOLIO.MDLinking.description.logic",
+            "description": "PORTFOLIO.MDLinking.description.part7"
+          },
+          {
+            "title": "PORTFOLIO.MDLinking.description.architecture",
+            "description": "PORTFOLIO.MDLinking.description.part8"
+          }
+        ]
+      },
+      {
+        "section": "text",
+        "align": "center",
+        "text":[
+          {
+            "title": null,
+            "description": "PORTFOLIO.MDLinking.description.part9"
+          }
+        ]
+      }
+    ],
     "tags":{
       "products":["prod1","prod2","prod3"],
       "technology":["tech1","tech2","tech3"],
@@ -40,11 +155,82 @@
   },
 
   {
-    "title":"PORTFOLIO.BrigterVision.title",
+    "link":"brigter-vision-growth-platform",
+    "title":"PORTFOLIO.BrighterVision.title",
     "subtitle": "Platform for healthcare professionals",
-    "description": "PORTFOLIO.BrigterVision.description",
+    "description": "PORTFOLIO.BrighterVision.description",
     "mainImage":"http://blog.oxforddictionaries.com/wp-content/uploads/mountain-names.jpg",
     "thumbnail": "http://blog.oxforddictionaries.com/wp-content/uploads/mountain-names.jpg",
+    "detailsTemplate": [
+      {
+        "section": "header",
+        "title": "PORTFOLIO.BrighterVision.title",
+        "description": "PORTFOLIO.BrighterVision.description.part1"
+      },
+      {
+        "section": "image",
+        "title": "Home",
+        "image": "../assets/images/mdlinking-carousel.jpg"
+      },
+      {
+        "section": "text",
+        "align": "left",
+        "text":[
+          {
+            "title": "PORTFOLIO.BrighterVision.description.postBooking",
+            "description": "PORTFOLIO.BrighterVision.description.part2"
+          },
+          {
+            "title": null,
+            "description": "PORTFOLIO.BrighterVision.description.part3"
+          }
+        ]
+      },
+      {
+        "section": "4images",
+        "title": "PORTFOLIO.BrighterVision.description.calendar",
+        "images": [
+          "../assets/images/portfolio-images/tripbuzz-presentation.png",
+          "../assets/images/portfolio-images/tripbuzz-presentation.png",
+          "../assets/images/portfolio-images/tripbuzz-presentation.png",
+          "../assets/images/portfolio-images/tripbuzz-presentation.png"
+        ]
+      },
+      {
+        "section": "text",
+        "align": "left",
+        "text":[
+          {
+            "title": "PORTFOLIO.BrighterVision.description.businessModel",
+            "description": "PORTFOLIO.BrighterVision.description.part4"
+          },
+          {
+            "title": null,
+            "description": "PORTFOLIO.BrighterVision.description.part5"
+          }
+        ]
+      },
+      {
+        "section": "image",
+        "title": null,
+        "small": true,
+        "image": "../assets/images/mdlinking-carousel.jpg"
+      },
+      {
+        "section": "text",
+        "align": "left",
+        "text":[
+          {
+            "title": "PORTFOLIO.BrighterVision.description.archLangTools",
+            "description": "PORTFOLIO.BrighterVision.description.part6"
+          },
+          {
+            "title": null,
+            "description": "PORTFOLIO.BrighterVision.description.part7"
+          }
+        ]
+      }
+    ],
     "tags":{
       "products":["prod1","prod2","prod3"],
       "technology":["tech1","tech2","tech3"],
@@ -67,6 +253,7 @@
     "homePage":true
   },
   {
+    "link":"telecom",
     "title":"PORTFOLIO.telecom.title",
     "subtitle": "Platform for healthcare professionals",
     "description": "PORTFOLIO.telecom.description",
@@ -94,6 +281,7 @@
     "homePage":true
   },
   {
+    "link":"exchange",
     "title":"PORTFOLIO.exchange.title",
     "subtitle": "Platform for healthcare professionals",
     "description": "PORTFOLIO.exchange.description",
@@ -115,6 +303,7 @@
     "homePage":true
   },
   {
+    "link":"mid-ocean-brands",
     "title":"PORTFOLIO.MidOceanBrands.title",
     "subtitle": "Platform for healthcare professionals",
     "description": "PORTFOLIO.MidOceanBrands.description",
@@ -136,6 +325,7 @@
     "homePage":false
   },
   {
+    "link": "smart-home",
     "title":"PORTFOLIO.SmartHome.title",
     "subtitle": "Platform for healthcare professionals",
     "description": "PORTFOLIO.SmartHome.description",
@@ -157,6 +347,7 @@
     "homePage":false
   },
   {
+    "link":"tandarts",
     "title":"PORTFOLIO.Tandarts.title",
     "subtitle": "Platform for healthcare professionals",
     "description": "PORTFOLIO.Tandarts.description",
@@ -178,6 +369,7 @@
     "homePage":false
   },
   {
+    "link":"tripbuzz",
     "title":"PORTFOLIO.Tripbuzz.title",
     "subtitle": "Platform for healthcare professionals",
     "description": "PORTFOLIO.Tripbuzz.description",
@@ -199,6 +391,7 @@
     "homePage":false
   },
   {
+    "link":"zorgindicator",
     "title":"PORTFOLIO.ZorgIndicator.title",
     "subtitle": "Platform for healthcare professionals",
     "description": "PORTFOLIO.ZorgIndicator.description",

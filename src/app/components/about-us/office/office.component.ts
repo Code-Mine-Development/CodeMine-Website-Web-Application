@@ -7,35 +7,34 @@ import {Employees} from './interfaces/employees.interface';
   styleUrls: ['office.component.scss'],
 })
 export class OfficeComponent implements OnInit {
-  @HostListener('window:resize', ['$event']) onWindowResize(){
-    this.checkSize();
-  }
 
   @Input() employees: Employees;
+  modelVisible = false;
+  listVisible = false;
+  modelStatus = 'maximize';
 
   private breakPoint = 800;
 
-  modelVisible = false;
-  listVisible = false;
-  modelStatus = "maximize";
+  constructor() {
+  }
 
-  constructor( ) {}
+  @HostListener('window:resize', ['$event']) onWindowResize() {
+    this.checkSize();
+  }
 
   ngOnInit() {
     this.checkSize();
   }
 
-
-  checkSize(){
+  checkSize() {
     this.modelVisible = window.innerWidth > this.breakPoint;
   }
 
-  setModelNavigate(status){
-    console.log(status);
+  setModelNavigate(status) {
     this.modelStatus = status;
   }
 
-  setListVisible(status){
+  setListVisible(status) {
     this.listVisible = status;
   }
 

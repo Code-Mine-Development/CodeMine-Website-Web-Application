@@ -1,8 +1,8 @@
 import {Component, OnInit, ViewChild} from '@angular/core';
-import { ActivatedRoute,  } from '@angular/router';
-import { LocalizeRouterService } from 'localize-router';
-import { OfferElement } from '../interface/offerElement.interface';
-import { PreviousPositionService } from '../../../shared/services/previous-position.service';
+import {ActivatedRoute} from '@angular/router';
+import {LocalizeRouterService} from 'localize-router';
+import {OfferElement} from '../interface/offerElement.interface';
+import {PreviousPositionService} from '../../../shared/services/previous-position.service';
 
 @Component({
   selector: 'app-angular',
@@ -16,7 +16,9 @@ export class OfferElementComponent implements OnInit {
 
   offerElement: OfferElement;
 
-  constructor( private route: ActivatedRoute, private previousPositionService: PreviousPositionService, private localize: LocalizeRouterService ) {
+  constructor(private route: ActivatedRoute,
+              private previousPositionService: PreviousPositionService,
+              private localize: LocalizeRouterService) {
   }
 
   ngOnInit() {
@@ -28,7 +30,8 @@ export class OfferElementComponent implements OnInit {
       }
     );
   }
-  getBackLink(){
+
+  getBackLink() {
     const previousPage = this.previousPositionService.getBackTo();
     return this.localize.translateRoute('/' + previousPage + '/');
   }

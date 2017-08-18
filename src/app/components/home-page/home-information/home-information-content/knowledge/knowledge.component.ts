@@ -15,7 +15,7 @@ export class KnowledgeComponent extends ComponentTemplate {
   private svg;
   visible = false;
 
-  constructor( scrollController:ScrollController, element:ElementRef) {
+  constructor( scrollController: ScrollController, element: ElementRef) {
     super( scrollController, element);
   }
 
@@ -24,28 +24,28 @@ export class KnowledgeComponent extends ComponentTemplate {
   }
 
   animateHide(id, direction){
-    if(direction === 'up')
+    if (direction === 'up')
       setTimeout( () => this.visible = false, 1000 );
   }
 
   animateShow(id, cb, direction){
-    if(direction === 'up' && !this.visible)
+    if (direction === 'up' && !this.visible)
       this.svg.setFrameProgress(1);
     this.visible = true;
-    if(direction === 'down') {
+    if (direction === 'down') {
       this.svg.reset().stop();
-      setTimeout(()=>this.svg.play(1.3), 1000);
+      setTimeout(() => this.svg.play(1.3), 1000);
     }
 
-    setTimeout( ()=> {
+    setTimeout( () => {
       cb();
     }, 1500 )
   }
 
 
-  registerElements():[registerElement]{
+  registerElements(): [registerElement]{
     return [
-      { localId: 1, title:"HOME.knowledge" }
+      { localId: 1, title: 'HOME.knowledge' }
     ]
   }
 

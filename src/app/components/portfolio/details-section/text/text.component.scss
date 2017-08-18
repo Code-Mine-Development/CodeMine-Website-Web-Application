@@ -1,0 +1,18 @@
+:host{
+  display:flex;
+  justify-content: space-around;
+  margin: 100px 0;
+  section{
+    max-width: 300px;
+    h2{
+      font-size:1.6rem;
+      margin-bottom: 20px;
+      &.hidden{
+        margin-bottom: 55px;
+        visibility: hidden;
+      }
+    }
+    p{
+    }
+  }
+}

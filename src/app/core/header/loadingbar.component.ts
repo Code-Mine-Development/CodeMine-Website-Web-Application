@@ -1,6 +1,6 @@
 import {Component, OnInit} from '@angular/core';
-import { trigger, state, style, transition, animate, keyframes } from '@angular/animations';
-import { Router, NavigationStart, NavigationEnd } from '@angular/router';
+import {trigger, state, style, transition, animate, keyframes} from '@angular/animations';
+import {Router, NavigationStart, NavigationEnd} from '@angular/router';
 
 @Component({
   selector: 'app-loadingbar',
@@ -47,11 +47,10 @@ export class LoadingComponent implements OnInit {
   state = '0';
 
   constructor(private router: Router) {
-    router.events.subscribe( (status) => {
-      if (status instanceof NavigationStart){
+    router.events.subscribe((status) => {
+      if (status instanceof NavigationStart) {
         this.state = '50';
-      }
-      else if (status instanceof NavigationEnd){
+      } else if (status instanceof NavigationEnd) {
         this.state = '100';
       }
     });

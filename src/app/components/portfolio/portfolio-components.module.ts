@@ -4,12 +4,19 @@ import {PortfolioProjectComponent} from './portfolio-project/portfolio-project.c
 import {UiModule} from '../../shared/ui-elements/ui.module';
 import {SharedModule} from '../../shared/shared.module';
 import {TranslateModule} from '@ngx-translate/core';
-import { BrighterVisionGrowthPlatformComponent } from './details-section/brighter-vision-growth-platform/brighter-vision-growth-platform.component';
+
+import { PortfolioDetailsHeaderComponent } from './details-section/header/header.component';
+import { ImageComponent } from './details-section/image/image.component';
+import { TextComponent } from './details-section/text/text.component';
+import { ImagesComponent } from './details-section/images/images.component';
 
 @NgModule({
     declarations: [
         PortfolioProjectComponent,
-        BrighterVisionGrowthPlatformComponent
+        PortfolioDetailsHeaderComponent,
+        ImageComponent,
+        TextComponent,
+        ImagesComponent
     ],
     imports: [
         CommonModule,
@@ -19,7 +26,10 @@ import { BrighterVisionGrowthPlatformComponent } from './details-section/brighte
     ],
     exports: [
         PortfolioProjectComponent,
-        BrighterVisionGrowthPlatformComponent
+        PortfolioDetailsHeaderComponent,
+        ImageComponent,
+        TextComponent,
+        ImagesComponent
     ],
     providers: [],
 })

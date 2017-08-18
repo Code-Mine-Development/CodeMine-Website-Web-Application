@@ -1,4 +1,4 @@
-import { Component, OnChanges, Input, ViewChild, HostListener } from '@angular/core';
+import {Component, OnChanges, Input, ViewChild, HostListener} from '@angular/core';
 import {Router, NavigationStart, NavigationEnd} from '@angular/router';
 import {LocalizeRouterService} from 'localize-router';
 
@@ -24,16 +24,6 @@ import {LocalizeRouterService} from 'localize-router';
 })
 export class LogoComponent implements OnChanges {
 
-
-  @HostListener('mouseenter') mouseEnter(){
-    this.homeVisible = true;
-    this.checkHomeVisible();
-  };
-  @HostListener('mouseleave') mouseLeave(){
-    this.homeVisible = false;
-    this.checkHomeVisible();
-  };
-
   @Input() scrollTop: number;
   @ViewChild('triangle') triangle;
 
@@ -42,11 +32,21 @@ export class LogoComponent implements OnChanges {
 
   hidden = false;
 
-  constructor( private router:Router, private localize:LocalizeRouterService ) {
+  constructor(private router: Router, private localize: LocalizeRouterService) {
     this.checkHomeRoute();
   }
 
-  ngOnChanges(){
+  @HostListener('mouseenter') mouseEnter() {
+    this.homeVisible = true;
+    this.checkHomeVisible();
+  };
+
+  @HostListener('mouseleave') mouseLeave() {
+    this.homeVisible = false;
+    this.checkHomeVisible();
+  };
+
+  ngOnChanges() {
     this.logoAnimation();
   }
 
@@ -55,26 +55,28 @@ export class LogoComponent implements OnChanges {
   }
 
 
-  checkHomeVisible(){
-    if (this.logoVisible)
+  checkHomeVisible() {
+    if (this.logoVisible){
       this.homeVisible = false;
+    }
   }
 
 
-  checkHomeRoute(){
-    this.router.events.subscribe( (state) => {
-      if(state instanceof NavigationEnd) {
-        let translatedLink = this.localize.translateRoute('/home');
-        if( translatedLink !== state.urlAfterRedirects )
-          this.hidden = true;
-        else
-          this.hidden = false;
+  checkHomeRoute() {
+    this.router.events.subscribe((state) => {
+      if (state instanceof NavigationEnd) {
 
+        const translatedLink = this.localize.translateRoute('/home');
+
+        if (translatedLink !== state.urlAfterRedirects){
+          this.hidden = true;
+        } else {
+          this.hidden = false;
+        }
         this.logoAnimation();
       }
     })
   }
-
 
 
 }

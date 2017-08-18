@@ -10,17 +10,18 @@ import {Technologies} from '../../../shared/interface/technologies.interface';
   templateUrl: './technologies.component.html',
   styleUrls: ['./technologies.component.scss']
 })
-export class TechnologiesComponent implements OnChanges{
- @Input() Technologies: Technologies;
- keys = []
+export class TechnologiesComponent implements OnChanges {
+  @Input() Technologies: Technologies;
+  keys = [];
 
- constructor( private positionService: PreviousPositionService, private router: Router, private localize: LocalizeRouterService){}
+  constructor(private positionService: PreviousPositionService, private router: Router, private localize: LocalizeRouterService) {
+  }
 
- ngOnChanges(){
-   this.keys = Object.keys(this.Technologies);
- }
+  ngOnChanges() {
+    this.keys = Object.keys(this.Technologies);
+  }
 
-  navigate(url: string){
+  navigate(url: string) {
     this.positionService.setBackCategory('technologies');
     const link: string = <string>this.localize.translateRoute(url);
     this.router.navigateByUrl(link);

@@ -7,7 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ApproachComponent implements OnInit {
 
-  hover:boolean = false;
+  hover = false;
 
   constructor() { }
 

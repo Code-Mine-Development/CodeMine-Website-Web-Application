@@ -18,7 +18,8 @@ import { SpecificationComponent } from './home-information/home-information-cont
 import { UiUxComponent } from './home-information/home-information-content/ui-ux/ui-ux.component';
 import { LogicComponent } from './home-information/home-information-content/logic/logic.component';
 import { ImplementationComponent } from './home-information/home-information-content/implementation/implementation.component';
-import { SecondImplementationComponent } from './home-information/home-information-content/second-implementation/second-implementation.component';
+import { SecondImplementationComponent } from
+  './home-information/home-information-content/second-implementation/second-implementation.component';
 import { SupportComponent } from './home-information/home-information-content/support/support.component';
 
 @NgModule({
@@ -46,7 +47,7 @@ import { SupportComponent } from './home-information/home-information-content/su
         TranslateModule,
         SharedModule
     ],
-    providers:[
+    providers: [
       ScrollController
     ],
     exports: [

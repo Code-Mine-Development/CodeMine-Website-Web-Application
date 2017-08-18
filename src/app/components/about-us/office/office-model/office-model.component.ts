@@ -10,18 +10,18 @@ import {DoomRestyle} from './models/doomRestyle.model';
   selector: 'app-office-model',
   templateUrl: './office-model.component.html',
   styleUrls: ['./office-model.component.scss'],
-  animations:[
-    trigger("JumpIn",[
-      transition(":enter",[
-        style({opacity:0, position: 'absolute'}),
-        animate( '.5s .3s ease-in-out', style({ opacity:1}))
+  animations: [
+    trigger('JumpIn', [
+      transition(':enter', [
+        style({opacity: 0, position: 'absolute'}),
+        animate( '.5s .3s ease-in-out', style({ opacity: 1}))
       ]),
-      transition(":leave",[
-        animate( '.5s ease-in-out', style({opacity:0, position: 'absolute'}))
+      transition(':leave', [
+        animate( '.5s ease-in-out', style({opacity: 0, position: 'absolute'}))
       ])
     ])
   ],
-  host:{ '[@JumpIn]':'' }
+  host: { '[@JumpIn]': '' }
 })
 export class OfficeModelComponent implements OnInit, OnChanges {
   @Input() employees: Employees;
@@ -32,7 +32,7 @@ export class OfficeModelComponent implements OnInit, OnChanges {
   mouseMoving: MouseMove = new MouseMove(this.windowWidth);
   doomRestyle: DoomRestyle = new DoomRestyle();
 
-  deskActivated:number;
+  deskActivated: number;
 
 
   constructor( ngZone: NgZone ) {
@@ -44,9 +44,10 @@ export class OfficeModelComponent implements OnInit, OnChanges {
     };
   }
 
-  ngOnChanges(changes){
-    if(changes && changes.modelNavigate)
+  ngOnChanges(changes) {
+    if (changes && changes.modelNavigate) {
       this.dragging.resetPosition();
+    }
   }
 
   ngOnInit() {
@@ -62,7 +63,7 @@ export class OfficeModelComponent implements OnInit, OnChanges {
     this.mouseMoving.setMove(value)
   }
 
-  getDeskNumber(event){
+  getDeskNumber(event) {
     this.deskActivated = event;
   }
 

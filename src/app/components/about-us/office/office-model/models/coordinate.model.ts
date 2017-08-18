@@ -1,7 +1,7 @@
-import {_document} from "@angular/platform-browser/src/browser";
+import {_document} from '@angular/platform-browser/src/browser';
 export class Coordinate {
 
-  deskClicked: boolean = false;
+  deskClicked = false;
 
   constructor(public variant: number, public top: number, public left: number, public front) {
   }
@@ -21,8 +21,8 @@ export class Coordinate {
   }
 
   showDeskOwner(index, value) {
-    let deskOwner = <HTMLElement>document.getElementsByClassName("deskOwner")[index];
-    value == true ? deskOwner.style.opacity = "1" : deskOwner.style.opacity = "0";
+    const deskOwner = <HTMLElement>document.getElementsByClassName('deskOwner')[index];
+    deskOwner.style.opacity = value ? '1' : '0';
   }
 
   offsetTop(): string {
@@ -33,19 +33,19 @@ export class Coordinate {
     return this.left + 'px';
   }
 
-  //on hover
+  // on hover
   hoverDesk(index) {
 
-    // // pull table
+    // pull table
     this.front.nativeElement.style.transition = '0.2s';
     this.front.nativeElement.style.top = this.top - 25 + 'px';
 
-    //show owner
+    // show owner
     this.showDeskOwner(index, true);
 
   }
 
-  //hover Out
+  // hover Out
   hoverOutDesk(index) {
     this.front.nativeElement.style.top = this.top + 'px';
     this.showDeskOwner(index, false);
@@ -53,11 +53,11 @@ export class Coordinate {
   }
 
 
-  //on Click desk
+  // on Click desk
   showDetails(index) {
     this.deskClicked = true;
     this.showDeskOwner(index, true);
-    let transformVariant = this.variant === 1 ? 'skew(0deg) rotateY(-58deg) rotateX(-8deg) scale(1, 1.3) rotateZ(14deg)'
+    const transformVariant = this.variant === 1 ? 'skew(0deg) rotateY(-58deg) rotateX(-8deg) scale(1, 1.3) rotateZ(14deg)'
       : 'skew(0deg) rotateY(-71deg) rotateX(5deg) scale(1.5) rotateZ(-11deg)';
 
     document.getElementById('personWrapper').style.transition = '1.8s';
@@ -74,7 +74,7 @@ export class Coordinate {
     const divH = d.offsetHeight;
     const bg = document.getElementById('officeBg');
 
-   //get table to the center
+    // get table to the center
     setTimeout(() => {
       d.style.position = 'absolute';
       d.style.top = (h / 2) - (divH / 2) - (+bg.getAttribute('data-y')) + 'px';
@@ -82,21 +82,21 @@ export class Coordinate {
       d.style.transform = 'scale(1.5)';
     }, 300);
 
-    //show little card
+    // show little card
     setTimeout(() => {
       this.front.nativeElement.style.opacity = '0';
       document.getElementById('personView').classList.add('active');
     }, 320);
 
-    //enlarge card
+    // enlarge card
     setTimeout(() => {
-      document.getElementById('personView').style.transform = "scale(1) translateX(-50%)";
-      document.getElementById('personView').style.transition = ".2s ease-in";
+      document.getElementById('personView').style.transform = 'scale(1) translateX(-50%)';
+      document.getElementById('personView').style.transition = '.2s ease-in';
 
     }, 400);
   }
 
-//put desk back
+// put desk back
   moveDown(index): void {
     this.deskClicked = false;
     this.front.nativeElement.style.opacity = '1';

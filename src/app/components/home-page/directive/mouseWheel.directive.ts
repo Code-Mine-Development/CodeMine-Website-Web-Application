@@ -17,40 +17,40 @@ export class MouseWheelDirective {
     this.mouseWheelFunc(event);
   }
 
-  @HostListener('touchstart',['$event']) touchstart(event:any){
-    let touch = event.touches[0];
+  @HostListener('touchstart', ['$event']) touchstart(event: any){
+    const touch = event.touches[0];
     this.mobileTouchPosition = touch.screenY;
   }
 
-  @HostListener('touchmove', ['$event']) touchmove(event:any) {
+  @HostListener('touchmove', ['$event']) touchmove(event: any) {
     this.mobileTouchFunc(event);
   }
 
   private mobileTouchPosition = 0;
 
-  mouseWheelFunc(event: any) {
-    var event = window.event || event; // old IE support
-    var delta = Math.max(-1, Math.min(1, (event.wheelDelta || -event.detail)));
-    if(delta > 0) {
+  mouseWheelFunc(e: any) {
+    const event = window.event || e; // old IE support
+    const delta = Math.max(-1, Math.min(1, (event.wheelDelta || -event.detail)));
+    if (delta > 0) {
       this.mouseWheelUp.emit(event);
-    } else if(delta < 0) {
+    } else if (delta < 0) {
       this.mouseWheelDown.emit(event);
     }
     // for IE
     event.returnValue = false;
     // for Chrome and Firefox
-    if(event.preventDefault) {
+    if (event.preventDefault) {
       event.preventDefault();
     }
   }
 
-  mobileTouchFunc(event:any){
-    let touch = event.touches[0];
+  mobileTouchFunc(event: any){
+    const touch = event.touches[0];
 
-    if(touch.screenY > this.mobileTouchPosition + 20){
+    if (touch.screenY > this.mobileTouchPosition + 20){
       this.mobileTouchPosition = touch.screenY;
       this.mouseWheelUp.emit(event);
-    }else if(touch.screenY < this.mobileTouchPosition - 20){
+    }else if (touch.screenY < this.mobileTouchPosition - 20){
       this.mobileTouchPosition = touch.screenY;
       this.mouseWheelDown.emit(event);
     }
@@ -58,7 +58,7 @@ export class MouseWheelDirective {
     // for IE
     event.returnValue = false;
     // for Chrome and Firefox
-    if(event.preventDefault) {
+    if (event.preventDefault) {
       event.preventDefault();
     }
   }

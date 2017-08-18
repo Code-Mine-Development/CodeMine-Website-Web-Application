@@ -16,7 +16,7 @@ export class LanguageComponent extends ComponentTemplate {
 
   @HostListener('window:resize', ['$event']) resize(event) {
     this.loadSVG();
-    if(this.svg && this.visible) this.svg.setFrameProgress(1);
+    if (this.svg && this.visible) this.svg.setFrameProgress(1);
   }
 
 
@@ -28,7 +28,7 @@ export class LanguageComponent extends ComponentTemplate {
   private breakPoint = 1050;
 
 
-  constructor( scrollController:ScrollController, element:ElementRef) {
+  constructor( scrollController: ScrollController, element: ElementRef) {
     super( scrollController, element);
   }
 
@@ -38,10 +38,10 @@ export class LanguageComponent extends ComponentTemplate {
   }
 
   loadSVG(){
-    let isMobile = this.checkScreen(),
+    const isMobile = this.checkScreen(),
         file = isMobile ? 'assets/images/home-svg/jezyk-mobile.svg' : 'assets/images/home-svg/jezyk.svg';
-    if(isMobile !== this.mobile) {
-      if(this.svg) this.cleanSVGBox();
+    if (isMobile !== this.mobile) {
+      if (this.svg) this.cleanSVGBox();
       this.svg = new Vivus('section_2_svg', {type: 'scenario', start: 'manual', file});
     }
 
@@ -58,27 +58,27 @@ export class LanguageComponent extends ComponentTemplate {
   }
 
   animateHide(id, direction){
-    if(direction === 'up')
+    if (direction === 'up')
       setTimeout( () => this.visible = false, 1000 );
   }
 
   animateShow(id, cb, direction){
-    if(direction === 'up' && !this.visible)
+    if (direction === 'up' && !this.visible)
       this.svg.setFrameProgress(1);
     this.visible = true;
-    if(direction === 'down') {
+    if (direction === 'down') {
       this.svg.reset().stop();
-      setTimeout(()=>this.svg.play(1.5), 1000);
+      setTimeout(() => this.svg.play(1.5), 1000);
     }
 
-    setTimeout( ()=> {
+    setTimeout( () => {
       cb();
     }, 1500 )
   }
 
-  registerElements():[registerElement]{
+  registerElements(): [registerElement]{
     return [
-      { localId: 1, title:"HOME.language" }
+      { localId: 1, title: 'HOME.language' }
     ]
   }
 

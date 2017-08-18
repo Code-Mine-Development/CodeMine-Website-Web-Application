@@ -11,8 +11,18 @@ section{
   padding-left:4%;
   flex:.65;
   transition: background .5s;
+  @media #{$phone}{
+    flex:.55;
+  }
   &.desc-visible{
     background: #ffdb4a;
+    @media #{$phone}{
+      position:absolute;
+      left:0;
+      top:0;
+      width:100%;
+      z-index: 25;
+    }
     .description{
       visibility: visible;
       opacity: 1;
@@ -68,7 +78,7 @@ p{
   }
 
   .description{
-    padding: 0 4% 3%;
+    padding: 0 4% 5%;
     box-sizing: border-box;
     display:block;
     position:absolute;
@@ -98,6 +108,9 @@ figure{
   @media #{$tablet} {
     flex:.35;
   }
+  @media #{$phone}{
+    flex:.45;
+  }
   img{
     position:absolute;
     top:30px;
@@ -110,7 +123,8 @@ figure{
       height: 130px;
     }
     @media #{$phone} {
-      right:-5px;
+      left:50%;
+      transform:translateX(-50%);
     }
   }
 }

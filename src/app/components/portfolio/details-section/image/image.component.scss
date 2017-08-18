@@ -1,0 +1,19 @@
+:host{
+  width:100%;
+  &>figure{
+    width:100%;
+    margin: 24px 0;
+    &.small{
+      padding:0 14.9%;
+      box-sizing: border-box;
+    }
+    figcaption{
+      font-size:1.6rem;
+      font-weight: bold;
+      margin-bottom: 20px;
+    }
+    img{
+      width:100%;
+    }
+  }
+}

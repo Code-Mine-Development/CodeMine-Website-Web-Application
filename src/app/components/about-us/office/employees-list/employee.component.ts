@@ -21,10 +21,10 @@ import {Component, OnInit, Input} from '@angular/core';
         <span class="description">
             {{person.description | translate}}
             <!--<span class="since">{{'PEOPLE.worksince' | translate}} {{people}} </span>-->
-        </span> 
+        </span>
       </p>
     </section>
-    
+
   `,
   styleUrls: ['./employee.component.scss']
 })
@@ -39,11 +39,11 @@ export class EmployeeComponent implements OnInit {
   ngOnInit() {
   }
 
-  show(){
+  show() {
     this.descriptionVisible = true;
   }
 
-  hide(){
+  hide() {
     this.descriptionVisible = false;
   }
 

@@ -9,7 +9,7 @@ import {ComponentTemplate, registerElement} from '../component.template';
 })
 export class CtaToFormComponent extends ComponentTemplate {
 
-  constructor( scrollController:ScrollController, element:ElementRef) {
+  constructor( scrollController: ScrollController, element: ElementRef) {
     super( scrollController, element);
   }
 
@@ -17,20 +17,20 @@ export class CtaToFormComponent extends ComponentTemplate {
 
   }
 
-  animateHide(id:number){
-    console.log("hide",id);
+  animateHide(id: number){
+    console.log('hide', id);
   }
 
   animateShow(id, cb){
-    console.log("show",id);
-    setTimeout( ()=> {
+    console.log('show', id);
+    setTimeout( () => {
       cb();
     }, 1500 )
   }
 
-  registerElements():[registerElement]{
+  registerElements(): [registerElement]{
     return [
-      { localId: 1, title:"HOME.hireUs" }
+      { localId: 1, title: 'HOME.hireUs' }
     ]
   }
 }

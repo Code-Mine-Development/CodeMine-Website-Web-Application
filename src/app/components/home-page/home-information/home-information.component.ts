@@ -25,11 +25,11 @@ export class HomeInformationComponent implements OnInit, OnDestroy, AfterViewIni
 
 
 
-  constructor(@Inject(DOCUMENT) private document, private route: ActivatedRoute, private homeInformationService:HomeInformationServices, private scrollToService:ScrollToService, private scrollController:ScrollController ) {}
+  constructor(@Inject(DOCUMENT) private document, private route: ActivatedRoute, private homeInformationService: HomeInformationServices, private scrollToService: ScrollToService, private scrollController: ScrollController ) {}
 
   ngOnInit(){
 
-    this.scrollCurrentElementSubscriber = this.scrollController.getCurrentElementStream().subscribe( (value:any) => {
+    this.scrollCurrentElementSubscriber = this.scrollController.getCurrentElementStream().subscribe( (value: any) => {
       this.homeInformationService.setScrollTop(value.id);
     });
 
@@ -45,19 +45,19 @@ export class HomeInformationComponent implements OnInit, OnDestroy, AfterViewIni
 
   ngOnDestroy(){
     this.homeInformationService.setScrollTop(1);
-    if(this.scrollCurrentElementSubscriber)
+    if (this.scrollCurrentElementSubscriber)
       this.scrollCurrentElementSubscriber.unsubscribe()
   }
 
-  wheelDirectory(directory:string){
+  wheelDirectory(directory: string){
     this.scrollController.setScrollDirectory(directory);
     this.scrollingBackDetector();
   }
 
 
   scrollingBackDetector(){
-    if(this.getScrollTopPosition() > 0)
-      this.scrollToService.scroll("SiteHead");
+    if (this.getScrollTopPosition() > 0)
+      this.scrollToService.scroll('SiteHead');
   }
 
   getScrollTopPosition(){

@@ -27,8 +27,8 @@ export class PortfolioService {
                 })
     }
 
-    getPortfolioDetails(index: number): Portfolio {
-        return this.portfolio[index];
+    getPortfolioDetails(index: string): Portfolio {
+        return this.portfolio.find((project) => (project.link === index ));
     }
 
     getPortfolioHomePageList() {

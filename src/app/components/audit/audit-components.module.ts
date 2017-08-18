@@ -7,26 +7,25 @@ import {TranslateModule} from '@ngx-translate/core';
 
 
 import {DrawBackgroundService} from '../../shared/services/draw-background.service';
-import {AuditDetailsDirective} from './audit-list/audit-list-element.component';
-
+import {AuditListElementComponent} from './audit-list/audit-list-element.component';
 
 
 @NgModule({
-    declarations: [
-        AuditDetailsComponent,
-        AuditListComponent,
-      AuditDetailsDirective
-    ],
-    imports: [
-        CommonModule,
-        TranslateModule
-    ],
-    exports: [
-        AuditDetailsComponent,
-        AuditListComponent,
-        SharedModule
-    ],
-    providers: [DrawBackgroundService],
+  declarations: [
+    AuditDetailsComponent,
+    AuditListComponent,
+    AuditListElementComponent
+  ],
+  imports: [
+    CommonModule,
+    TranslateModule
+  ],
+  exports: [
+    AuditDetailsComponent,
+    AuditListComponent,
+    SharedModule
+  ],
+  providers: [DrawBackgroundService],
 })
 export class AuditComponentModule {
 }

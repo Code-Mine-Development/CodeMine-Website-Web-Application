@@ -10,7 +10,7 @@ import {TranslateModule} from '@ngx-translate/core';
 const portfolioRoutes: Routes = [
     {path: '', component: PortfolioComponent, resolve: {portfolio: PortfolioResolver}, children: [
         {path: '', component: PortfolioListComponent},
-        {path: ':id', component: PortfolioDetailsComponent},
+        {path: ':id',  component: PortfolioDetailsComponent},
     ]},
 ];
 

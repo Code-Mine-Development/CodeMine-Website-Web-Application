@@ -1,6 +1,6 @@
-import {SmoothMove} from "../../interfaces/smoothMove.interface";
+import {SmoothMove} from '../../interfaces/smoothMove.interface';
 
-let data: SmoothMove = {
+const data: SmoothMove = {
   lFollowX: 0,
   lMouseX: 0,
   lFollowY: 0,
@@ -19,8 +19,11 @@ function animation() {
 
   const bg = document.getElementById('officeBg'),
     desks = document.getElementById('deskLayer');
-  if(!bg && !desks)
+
+  if (!bg && !desks) {
     return;
+  }
+
   bg['style']['transform'] = data.translate;
   desks['style']['transform'] = data.translate;
   requestId = window.requestAnimationFrame(animation);
@@ -45,6 +48,7 @@ function stop() {
 export class MouseMove {
   constructor(public windowWidth: number) {
   }
+
   move(event) {
     const bg = document.getElementById('officeBg');
 
@@ -53,9 +57,11 @@ export class MouseMove {
     data.lFollowX = (15 * data.lMouseX) / 100 + (+bg.getAttribute('data-x'));
     data.lFollowY = (15 * data.lMouseY) / 100 + (+bg.getAttribute('data-y'));
   }
+
   playAnimation() {
     animation();
   }
+
   changeWidth(width: number) {
     this.windowWidth = width;
   }
