@@ -25,7 +25,7 @@
     "description": "TOOLS.ApacheKafka.description",
     "icon": "apachekafka/apachekafka.svg",
     "img": "assets/images/angularCode.png",
-    "color": "#000000"
+    "color": "#494949"
   },
   "axurerp":{
     "title": "Axure RP",
@@ -95,7 +95,7 @@
     "description": "TOOLS.Jira.description",
     "icon": "jira/jira.svg",
     "img": "assets/images/angularCode.png",
-    "color": "#F7A80D"
+    "color": "#205081"
   },
   "jmeter":{
     "title": "JMeter",

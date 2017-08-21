@@ -27,7 +27,7 @@
         ]
       },
       {
-        "section": "4Images",
+        "section": "4images",
         "title": null,
         "images": [
           "../assets/images/portfolio-images/tripbuzz-presentation.svg",
@@ -125,31 +125,18 @@
       "technology":["tech1","tech2","tech3"],
       "languages":["lang1","lang1","lang1"]
     },
+    "tools":[
+      "angular",
+      "gulp",
+      "npm"
+    ],
     "technologies":[
-      {
-        "title":"Technology1",
-        "description":"Description1",
-        "thumbnail":"https://just4fun.io/content/images/2016/05/angular.png",
-        "mainImage":"https://just4fun.io/content/images/2016/05/angular.png"
-      },
-      {
-        "title":"Technology2",
-        "description":"Description2",
-        "thumbnail":"https://just4fun.io/content/images/2016/05/angular.png",
-        "mainImage":"https://just4fun.io/content/images/2016/05/angular.png"
-      },
-      {
-        "title":"Technology3",
-        "description":"Description3",
-        "thumbnail":"https://just4fun.io/content/images/2016/05/angular.png",
-        "mainImage":"https://just4fun.io/content/images/2016/05/angular.png"
-      },
-      {
-        "title":"Technology4",
-        "description":"Description4",
-        "thumbnail":"https://just4fun.io/content/images/2016/05/angular.png",
-        "mainImage":"https://just4fun.io/content/images/2016/05/angular.png"
-      }
+      "bash",
+      "html5",
+      "swify",
+      "typescript",
+      "java",
+      "php"
     ],
     "homePage":true
   },
@@ -229,6 +216,9 @@
             "description": "PORTFOLIO.BrighterVision.description.part7"
           }
         ]
+      },
+      {
+        "section": "architecture"
       }
     ],
     "tags":{
@@ -236,19 +226,18 @@
       "technology":["tech1","tech2","tech3"],
       "languages":["lang1","lang1","lang1"]
     },
+    "tools":[
+      "angular",
+      "gulp",
+      "npm"
+    ],
     "technologies":[
-      {
-        "title":"Technology1",
-        "description":"Description1",
-        "thumbnail":"https://a0.awsstatic.com/main/images/logos/aws_logo_179x109.gif",
-        "mainImage":"https://a0.awsstatic.com/main/images/logos/aws_logo_179x109.gif"
-      },
-      {
-        "title":"Technology2",
-        "description":"Description2",
-        "thumbnail":"https://a0.awsstatic.com/main/images/logos/aws_logo_179x109.gif",
-        "mainImage":"https://a0.awsstatic.com/main/images/logos/aws_logo_179x109.gif"
-      }
+      "bash",
+      "html5",
+      "swify",
+      "typescript",
+      "java",
+      "php"
     ],
     "homePage":true
   },

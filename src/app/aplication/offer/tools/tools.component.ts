@@ -3,6 +3,7 @@ import {Router} from '@angular/router';
 import {LocalizeRouterService} from 'localize-router';
 import {PreviousPositionService} from '../../../shared/services/previous-position.service';
 import {OfferElementBeforePrepare} from '../../offerElementsDetails/interface/offerElementBeforePrepare';
+import {OfferThumbnail} from '../../../shared/interface/offerThumbnail.interface';
 
 @Component({
   selector: 'app-tools',
@@ -11,14 +12,25 @@ import {OfferElementBeforePrepare} from '../../offerElementsDetails/interface/of
 })
 export class ToolsComponent implements OnChanges {
   @Input() Tools: OfferElementBeforePrepare[];
-  keys = [];
+  elements: [OfferThumbnail];
 
   constructor(private positionService: PreviousPositionService, private router: Router, private localize: LocalizeRouterService) {
   }
 
 
   ngOnChanges() {
-    this.keys = Object.keys(this.Tools);
+    this.elements = <[OfferThumbnail]>[];
+    this.parseTechnologies();
+  }
+
+  parseTechnologies() {
+    Object.keys(this.Tools).forEach((key) => {
+      this.elements.push({
+        key: key,
+        icon: this.Tools[key].icon,
+        url: '/tools/' + key
+      })
+    });
   }
 
   navigate(url: string) {

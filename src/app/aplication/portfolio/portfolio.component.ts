@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import {fadeInAnimation} from '../../shared/routing.animation';
 import {PreviousPositionService} from '../../shared/services/previous-position.service';
 
+
 @Component({
   selector: 'app-portfolio',
   templateUrl: 'portfolio.component.html',

@@ -1,10 +1,6 @@
 <div class="container">
   <div class="header"><h2>{{'TOOLS.title' | translate}}</h2></div>
   <div class="tools">
-    <div class="tools-col"
-         *ngFor="let item of keys"
-         (click)="navigate('/tools/'+(item))">
-      <img [src]="'assets/icons/' + Tools[item].icon" [attr.alt]="item + 'icon'">
-    </div>
+    <app-offer-thumbnails [elements]="elements" (navigate)="navigate($event)"></app-offer-thumbnails>
   </div>
 </div>

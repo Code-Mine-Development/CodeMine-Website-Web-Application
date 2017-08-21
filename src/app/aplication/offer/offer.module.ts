@@ -3,6 +3,7 @@ import {CommonModule} from '@angular/common';
 import {HttpModule} from '@angular/http';
 import {TranslateModule} from '@ngx-translate/core';
 import {LocalizeRouterModule} from 'localize-router';
+import {UiModule} from '../../shared/ui-elements/ui.module'
 
 import {OfferComponent} from './offer.component';
 import {OfferRoutingModule} from './offer.routing';
@@ -18,13 +19,15 @@ import {ToolsResolver} from './services/tools.resolver';
 
 
 
+
 @NgModule({
   imports: [
     CommonModule,
     OfferRoutingModule,
     HttpModule,
     TranslateModule,
-    LocalizeRouterModule
+    LocalizeRouterModule,
+    UiModule
   ],
   declarations: [
     ArchitectureComponent,

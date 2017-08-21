@@ -9,6 +9,7 @@ import { PortfolioDetailsHeaderComponent } from './details-section/header/header
 import { ImageComponent } from './details-section/image/image.component';
 import { TextComponent } from './details-section/text/text.component';
 import { ImagesComponent } from './details-section/images/images.component';
+import { ArchitectureComponent } from './details-section/architecture/architecture.component';
 
 @NgModule({
     declarations: [
@@ -16,7 +17,8 @@ import { ImagesComponent } from './details-section/images/images.component';
         PortfolioDetailsHeaderComponent,
         ImageComponent,
         TextComponent,
-        ImagesComponent
+        ImagesComponent,
+        ArchitectureComponent
     ],
     imports: [
         CommonModule,
@@ -29,7 +31,8 @@ import { ImagesComponent } from './details-section/images/images.component';
         PortfolioDetailsHeaderComponent,
         ImageComponent,
         TextComponent,
-        ImagesComponent
+        ImagesComponent,
+        ArchitectureComponent
     ],
     providers: [],
 })

@@ -1,11 +1,19 @@
+@import "../../../../../assets/styles/mediaQueries";
 :host{
   width:100%;
   &>figure{
     width:100%;
-    margin: 24px 0;
+    margin: 24px auto;
     &.small{
-      padding:0 14.9%;
+      width:840px;
       box-sizing: border-box;
+      @media #{$home-information-mobile}{
+        width:100%;
+        padding: 0 5%;
+      }
+      @media #{$mobile}{
+        padding: 0;
+      }
     }
     figcaption{
       font-size:1.6rem;

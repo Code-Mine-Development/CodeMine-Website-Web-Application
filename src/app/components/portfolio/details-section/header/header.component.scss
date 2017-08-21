@@ -1,8 +1,10 @@
+@import "../../../../../assets/styles/mediaQueries";
 :host{
   width:100%;
   header{
     width:100%;
     display:flex;
+    flex-wrap: wrap;
     justify-content: space-between;
     margin-top:90px;
     figcaption, h1{
@@ -12,6 +14,7 @@
     figure {
       width:30%;
       display:flex;
+      margin: 0;
       img {
         width:100%;
       }
@@ -25,12 +28,35 @@
           font-size: 3.6rem;
           font-weight: bold;
           padding-left: 35px ;
+
+
+        }
+        @media #{$phone} {
+          figcaption{
+            font-size:2.4rem;
+            box-sizing: border-box;
+            width:70%;
+          }
+          img{
+            width: 60px;
+            height: 60px;
+          }
         }
       }
     }
-
-    p{
-      max-width: 400px;
+    div{
+      width:50%;
+      p{
+        max-width: 400px;
+      }
+    }
+    @media #{$mobile}{
+      figure, div{
+        width:100%;
+      }
+      div p{
+        max-width: 100%;
+      }
     }
   }
 }
