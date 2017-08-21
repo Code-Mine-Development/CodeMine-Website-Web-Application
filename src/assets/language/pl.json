@@ -56,17 +56,19 @@
     "logic":{
       "title": "Tworzymy logikę biznesową",
       "shortCut": "Logika biznesowa",
-      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+      "description": "Po przemyśleniu i zaprojektowaniu modeli działania, następnym krokiem jest przystąpienie do ich programowania. Warto podkreślić, że nasze koncepty testujemy tylko i wyłącznie na prawdziwym kodzie."
     },
     "specification":{
       "title": "Tworzymy szczegółową specyfikację projektu",
       "shortCut": "Specyfikacja",
-      "description": "Posiadawszy wymaganą wiedzę, zagłębiamy się w projekt, tworząc jego szczegółową specyfikację. Zakłada ona głównie opracowanie ścieżek użytkownika i modelowanie jego zachowań, opisanie działania poszczególnych komponentów systemu oraz stworzenie poglądowych diagramów."
+      "description": "Posiadawszy wymaganą wiedzę, zagłębiamy się w projekt, tworząc jego szczegółową specyfikację. Zakłada ona głównie opracowanie ścieżek użytkownika i modelowanie jego zachowań, opisanie działania poszczególnych komponentów systemu oraz stworzenie poglądowych diagramów.",
+      "shortDescription": "Zagłębiamy się w projekt, tworząc jego specyfikację. Zakłada ona głównie opracowanie ścieżek użytkownika i modelowanie jego zachowań, opisanie działania poszczególnych komponentów systemu oraz stworzenie poglądowych diagramów."
     },
     "UX":{
       "title": "Rysujemy makiety UX",
       "shortCut": "Rysujemy UX",
-      "description": "Specyfikacja projektu jest podstawą do stworzenia przez nas interaktywnego prototypu interfejsu. Korzystając z posiadanej wiedzy o User Experience, oraz zgromadzonych pojęć dotyczących procesów biznesowych charakterystycznych dla branży klienta, dopracowujemy hierarchie działań i informacji systemu, kładąc nacisk przede wszystkim na wygodę użytkowników (Task Driven UI)."
+      "description": "Specyfikacja projektu jest podstawą do stworzenia przez nas interaktywnego prototypu interfejsu. Korzystając z posiadanej wiedzy o User Experience, oraz zgromadzonych pojęć dotyczących procesów biznesowych charakterystycznych dla branży klienta, dopracowujemy hierarchie działań i informacji systemu, kładąc nacisk przede wszystkim na wygodę użytkowników (Task Driven UI).",
+      "shortDescription": "Korzystając z posiadanej wiedzy o User Experience, oraz zgromadzonych pojęć dotyczących procesów biznesowych charakterystycznych dla branży klienta, dopracowujemy hierarchie działań i informacji systemu, kładąc nacisk przede wszystkim na wygodę użytkowników."
     },
     "UI":{
       "title": "Tworzymy designy",
@@ -77,6 +79,7 @@
       "title": "Implementujemy",
       "shortCut": "Implementacja",
       "description": "Następnym etapem projektu jest implementacja zaprogramowanego interfejsu użytkownika, a więc integracja wcześniej napisanego kodu logiki biznesowej z warstwą aplikacyjną oprogramowania. Tak przygotowany system przechodzi szereg testów, mających potwierdzić jego zgodność z początkowymi założeniami.",
+      "shortDescription": "Następnym etapem projektu jest integracja wcześniej napisanego kodu logiki biznesowej z warstwą aplikacyjną oprogramowania. Tak przygotowany system przechodzi szereg testów, mających potwierdzić jego zgodność z początkowymi założeniami.",
       "message": "Sprawdź ofertę"
     },
     "secondImplementation":{
@@ -89,6 +92,7 @@
       "title": "Wspieramy",
       "shortCut": "Wsparcie",
       "description": "„Go live” systemu nie oznacza końca współpracy. Po oddaniu projektu zapewniamy naszym klientom wsparcie, obejmujące między innymi kwestie związane z drobnymi zmianami, modernizacją oprogramowania czy fachowym doradztwem w jego potencjalnych kierunkach rozwoju.",
+      "shortDescription": "Po oddaniu projektu zapewniamy naszym klientom wsparcie, obejmujące między innymi kwestie związane z drobnymi zmianami, modernizacją oprogramowania czy fachowym doradztwem w jego potencjalnych kierunkach rozwoju.",
       "message": "Poznaj nasz zespół"
     }
   },
