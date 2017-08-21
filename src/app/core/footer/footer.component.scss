@@ -8,7 +8,7 @@
   width: 100%;
   z-index: -100;
   overflow-x: hidden;
-  @media #{$phone}, #{$tablet}{
+  @media #{$tablet}{
     z-index: 1;
     position: relative;
     height: 300px;
@@ -25,9 +25,6 @@
     margin:0;
   }
 
-  @media #{$phone}, #{$tablet} {
-    height: 380px;
-  }
 }
 
 .footer_bar{
