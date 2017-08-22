@@ -6,7 +6,8 @@
 
   <section>
     <h2 [class.textHidden]="UiVisible">{{'HOME.UX.title' | translate}}</h2>
-    <p [class.textHidden]="UiVisible">{{'HOME.UX.description' | translate}}</p>
+    <p class="text_long" [class.textHidden]="UiVisible">{{'HOME.UX.description' | translate}}</p>
+    <p class="text_short" [class.textHidden]="UiVisible">{{'HOME.UX.shortDescription' | translate}}</p>
     <h2 [class.textHidden]="!UiVisible" class="text-white">{{'HOME.UI.title' | translate}}</h2>
     <p [class.textHidden]="!UiVisible" class="text-white">{{'HOME.UI.description' | translate}}</p>
   </section>

@@ -1,4 +1,4 @@
-<app-portfolio-project [ngClass]="{'right': i %2!==0}" *ngFor="let project of portfolio, let i = index" [project]="project" (onAction)="showDetails(i)"></app-portfolio-project>
+<app-portfolio-project [ngClass]="{'right': i %2!==0}" *ngFor="let project of portfolio, let i = index" [project]="project" (onAction)="showDetails(project.link)"></app-portfolio-project>
 <div class="cta">
   <h2>{{'PORTFOLIO.addProjectTitle'| translate}}</h2>
   <app-button [title]="'PORTFOLIO.addProjectButton'| translate" [color]="'#169bd5'" [hover]="'#000000'"></app-button>

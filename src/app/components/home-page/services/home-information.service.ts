@@ -34,7 +34,7 @@ export class HomeInformationServices {
   }
 
   getScrollTopStream(){
-    if(this.scrollTop)
+    if (this.scrollTop)
       return this.scrollTopStream.startWith(this.scrollTop);
     return this.scrollTopStream.asObservable();
   }

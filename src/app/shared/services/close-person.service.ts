@@ -1,18 +1,20 @@
-import { Injectable } from '@angular/core';
+import {Injectable} from '@angular/core';
 import {Subject} from 'rxjs/Subject';
 
 @Injectable()
 export class ClosePersonService {
   private onClose = new Subject();
 
-  registerCloseFunction(){
-   return this.onClose.asObservable();
+  registerCloseFunction() {
+    return this.onClose.asObservable();
   }
 
-  triggerClose(){
+  triggerClose() {
 
-      this.onClose.next('any');
+    this.onClose.next('any');
   }
-  constructor() { }
+
+  constructor() {
+  }
 
 }

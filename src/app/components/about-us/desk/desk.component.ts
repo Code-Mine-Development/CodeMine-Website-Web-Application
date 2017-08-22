@@ -32,7 +32,7 @@ export class DeskComponent implements OnInit {
   @Input() people: Employees;
 
   constructor(private closePersonService: ClosePersonService) {
-   this.closePersonService.registerCloseFunction().subscribe(() => this.closeCard());
+    this.closePersonService.registerCloseFunction().subscribe(() => this.closeCard());
   }
 
   ngOnInit() {
@@ -40,32 +40,33 @@ export class DeskComponent implements OnInit {
     this.coordinate = new Coordinate(person.variant, person.top, person.left, this.desk);
     this.prepareCoordinates();
   }
+
   prepareCoordinates() {
-    this.desk.nativeElement.style.top =  this.coordinate.offsetTop();
+    this.desk.nativeElement.style.top = this.coordinate.offsetTop();
     this.desk.nativeElement.style.left = this.coordinate.offsetLeft();
     this.desk.nativeElement.style.transform = this.coordinate.transform();
   }
 
   @HostListener('mouseenter') mouseover() {
-    if (this.coordinate.deskClicked == false){
+    if (!this.coordinate.deskClicked) {
       this.coordinate.hoverDesk(this.index);
-        this.personActivated.emit(
-          this.index
-        );
+      this.personActivated.emit(
+        this.index
+      );
     }
   }
 
   @HostListener('mouseleave') deskBack() {
-    if (this.coordinate.deskClicked == false) {
+    if (!this.coordinate.deskClicked) {
       this.coordinate.hoverOutDesk(this.index);
     }
   }
 
-  openPersonDetails(){
+  openPersonDetails() {
     this.coordinate.showDetails(this.index);
   }
 
-  closeCard(){
+  closeCard() {
     this.prepareCoordinates();
     this.coordinate.moveDown(this.index);
   }

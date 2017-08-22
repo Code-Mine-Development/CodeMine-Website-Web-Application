@@ -1,3 +1,4 @@
+@import "../../../../assets/styles/mediaQueries";
 .approach{
   width: 70%;
   position:relative;
@@ -5,6 +6,9 @@
   background: #f2f2f2;
   box-shadow: 10px 10px 15px 0px rgba(0, 0, 0, 0.15);
   transition: all .5s;
+  @media #{$tablet} {
+    width:80%;
+  }
   &.hover{
     background: #000000;
     h2 span{
@@ -29,12 +33,27 @@
     text-transform: uppercase;
     font-weight: 700;
     font-size:1.8rem;
+    @media #{$tablet} {
+      padding: 45px 40px 15px 40px;
+    }
+    @media #{$phone}{
+      font-size: 1.6rem;
+    }
   }
   h3{
     padding: 0 80px 80px;
     font-weight: 700;
     font-size: 3.6rem;
     margin:0;
+    @media #{$tablet} {
+      padding: 0 40px 40px ;
+    }
+    @media only screen and (max-width: 600px){
+      font-size: 2.8rem;
+    }
+    @media #{$phone}{
+      font-size: 1.8rem;
+    }
   }
   .underline{
     text-decoration: underline;

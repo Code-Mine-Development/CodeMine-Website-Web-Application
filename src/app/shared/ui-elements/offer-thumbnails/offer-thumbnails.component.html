@@ -1,0 +1,5 @@
+<div class="column"
+     *ngFor="let item of elements"
+     (click)="onClick(item.url)">
+  <img [src]="'assets/icons/'+item.icon" [attr.alt]="item.key + ' icon'">
+</div>

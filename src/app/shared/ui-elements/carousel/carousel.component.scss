@@ -1,49 +1,11 @@
-.carousel {
+:host{
+  display:block;
+  width:100%;
   overflow: hidden;
-  margin-top: 40px;
-  color: #fff;
+  position:relative;
+  padding:150px 0;
+}
 
-  &-list {
-   display: flex;
-   list-style: none;
-   min-height: 600px;
-   margin: 0;
-   padding: 0;
-   width: 100%;
-
-   &-item {
-     min-width: 100%;
-     background-repeat: no-repeat;
-     background-size: cover;
-     transition: 1.5s;
-     position: relative;
-
-     .carousel-desc {
-       display: flex;
-       flex-direction: column;
-       justify-content: center;
-       align-items: center;
-       height: 100%;
-
-       .overlay {
-         position: absolute;
-         top: 0;
-         bottom: 0;
-         width: 100%;
-         background-color: rgba(0,0,0, 0.3);
-       }
-
-       h1 {
-         font-weight: bold;
-         font-size: 4.8em;
-         margin: 0;
-       }
-
-       h1, h3, a {
-         text-align: center;
-         z-index: 150;
-       }
-     }
-   }
-  }
+.btn{
+  margin-top:50px;
 }

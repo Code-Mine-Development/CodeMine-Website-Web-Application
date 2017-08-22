@@ -5,7 +5,7 @@
       <p>{{company?.phone}}</p>
     </section>
     <div class="footer_slideTop">
-      <span aria-hidden="true" class="fa fa-chevron-up fa-3x" [appScrollTo]="'SiteHead'" ></span>
+      <span aria-hidden="true" class="fa fa-chevron-up fa-3x" [appScrollTo]="'SiteHead'"></span>
     </div>
   </section>
   <section class="footer_content">
@@ -13,7 +13,9 @@
       <div class="footer_triangle">
         <svg viewBox="0 0 21.89 25.89">
           <defs>
-            <style>.cls-1{fill:#ffdf00;}</style>
+            <style>.cls-1 {
+              fill: #ffdf00;
+            }</style>
           </defs>
           <g data-name="layer one" id="Layer_one">
             <polygon class="cls-1" points="0 25.86 23 25.86 0.05 0"></polygon>
@@ -22,11 +24,15 @@
       </div>
       <p>Copyrights 2017</p>
     </section>
-    <ul class="footer_socialmedia" >
-      <li app-social-service [color]="'#ff0099'" [link]="'https://www.instagram.com/codemine/'" [socialName]="'instagram'" (hoverColor)="changeBg($event)"></li>
-      <li app-social-service [color]="'#3333ff'" [link]="'https://www.facebook.com/codeminedevelopment/'" [socialName]="'facebook'"  (hoverColor)="changeBg($event)" ></li>
-      <li app-social-service [color]="'#6699ff'" [link]="'https://www.linkedin.com/company/code-mine'" [socialName]="'linkedin'"  (hoverColor)="changeBg($event)" ></li>
-      <li app-social-service [color]="'#1da1f3'" [link]="'https://twitter.com/codeminedev'" [socialName]="'twitter'"  (hoverColor)="changeBg($event)" ></li>
+    <ul class="footer_socialmedia">
+      <li app-social-service [color]="'#ff0099'" [link]="'https://www.instagram.com/codemine/'"
+          [socialName]="'instagram'" (hoverColor)="changeBg($event)"></li>
+      <li app-social-service [color]="'#3333ff'" [link]="'https://www.facebook.com/codeminedevelopment/'"
+          [socialName]="'facebook'" (hoverColor)="changeBg($event)"></li>
+      <li app-social-service [color]="'#6699ff'" [link]="'https://www.linkedin.com/company/code-mine'"
+          [socialName]="'linkedin'" (hoverColor)="changeBg($event)"></li>
+      <li app-social-service [color]="'#1da1f3'" [link]="'https://twitter.com/codeminedev'" [socialName]="'twitter'"
+          (hoverColor)="changeBg($event)"></li>
     </ul>
   </section>
 </footer>

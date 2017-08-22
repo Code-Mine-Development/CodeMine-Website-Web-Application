@@ -7,13 +7,12 @@ import {OfferElementBeforePrepare} from '../offerElementsDetails/interface/offer
 import {ScrollToService} from '../../shared/services/scroll-to.service';
 
 
-
-@Component ({
+@Component({
   selector: 'app-offer',
   templateUrl: 'offer.component.html',
   styleUrls: ['offer.component.scss'],
   animations: [fadeInAnimation],
-  host: { '[@fadeInAnimation]': '' }
+  host: {'[@fadeInAnimation]': ''}
 })
 
 export class OfferComponent implements OnInit, AfterViewInit {
@@ -21,7 +20,8 @@ export class OfferComponent implements OnInit, AfterViewInit {
   technologies: OfferElementBeforePrepare[];
   tools: OfferElementBeforePrepare[];
 
-  constructor(private route: ActivatedRoute, private previousPosition: PreviousPositionService, private scrollService: ScrollToService) { }
+  constructor(private route: ActivatedRoute, private previousPosition: PreviousPositionService, private scrollService: ScrollToService) {
+  }
 
   ngOnInit() {
     this.route.data
@@ -33,21 +33,23 @@ export class OfferComponent implements OnInit, AfterViewInit {
     this.previousPosition.setBackTo('offer');
   }
 
-  ngAfterViewInit(){
+  ngAfterViewInit() {
     const category = this.previousPosition.getBackCategory();
-    if (!category || category == '') return;
-    console.log(category);
-    switch (category){
+    if (!category || category === ''){
+      return;
+    }
+
+    switch (category) {
       case 'tools':
-        this.goToSection('offer_tools')
-            break;
+        this.goToSection('offer_tools');
+        break;
       case 'technologies':
-        this.goToSection('offer_technologies')
-            break;
+        this.goToSection('offer_technologies');
+        break;
     }
   }
 
-  goToSection(section: string){
+  goToSection(section: string) {
     this.previousPosition.setBackCategory('');
     this.scrollService.scroll(section)
   }

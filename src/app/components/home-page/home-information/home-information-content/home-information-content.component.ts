@@ -1,5 +1,4 @@
-import {Component, Input, OnDestroy, HostBinding, HostListener, AfterViewInit} from '@angular/core';
-import {HomeInformation} from '../../interfaces/home-information.interface';
+import {Component, OnDestroy, HostBinding, HostListener, OnInit} from '@angular/core';
 import {ScrollController} from '../../services/scroll.controller';
 
 @Component({
@@ -7,7 +6,7 @@ import {ScrollController} from '../../services/scroll.controller';
   templateUrl: './home-information-content.component.html',
   styleUrls: ['./home-information-content.component.scss']
 })
-export class HomeInformationContentComponent implements OnDestroy, AfterViewInit{
+export class HomeInformationContentComponent implements OnDestroy, OnInit{
 
   @HostListener('window:resize', ['$event']) resize(event) {
     this.checkScreen();
@@ -19,10 +18,10 @@ export class HomeInformationContentComponent implements OnDestroy, AfterViewInit
 
   private scrollPositionSubscriber;
 
-  constructor( private scrollControllerService:ScrollController ) {
+  constructor( private scrollControllerService: ScrollController ) {
     this.scrollPositionSubscriber = this.scrollControllerService.getCurrentElementStream().subscribe(
-      (value:any) => {
-        if(value.id == 1)
+      (value: any) => {
+        if (value.id == 1)
           return this.borderVisible = false;
         this.borderVisible = true;
       }
@@ -30,7 +29,7 @@ export class HomeInformationContentComponent implements OnDestroy, AfterViewInit
     this.scrollControllerService.resetElementQuantity();
   }
 
-  ngAfterViewInit(){
+  ngOnInit(){
     this.checkScreen();
   }
 
@@ -39,7 +38,7 @@ export class HomeInformationContentComponent implements OnDestroy, AfterViewInit
   }
 
   private checkScreen(){
-    if(window.innerWidth > window.innerHeight)
+    if (window.innerWidth > window.innerHeight)
       this.vertical = true;
     else
       this.vertical = false;

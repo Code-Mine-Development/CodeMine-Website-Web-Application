@@ -3,6 +3,7 @@ import {Router} from '@angular/router';
 import {LocalizeRouterService} from 'localize-router';
 import {PreviousPositionService} from '../../../shared/services/previous-position.service';
 import {Technologies} from '../../../shared/interface/technologies.interface';
+import {OfferThumbnail} from '../../../shared/interface/offerThumbnail.interface';
 
 
 @Component({
@@ -10,17 +11,29 @@ import {Technologies} from '../../../shared/interface/technologies.interface';
   templateUrl: './technologies.component.html',
   styleUrls: ['./technologies.component.scss']
 })
-export class TechnologiesComponent implements OnChanges{
- @Input() Technologies: Technologies;
- keys = []
+export class TechnologiesComponent implements OnChanges {
+  @Input() Technologies: Technologies;
+  elements: [OfferThumbnail];
 
- constructor( private positionService: PreviousPositionService, private router: Router, private localize: LocalizeRouterService){}
+  constructor(private positionService: PreviousPositionService, private router: Router, private localize: LocalizeRouterService) {
+  }
 
- ngOnChanges(){
-   this.keys = Object.keys(this.Technologies);
- }
+  ngOnChanges() {
+    this.elements = <[OfferThumbnail]>[];
+    this.parseTechnologies();
+  }
 
-  navigate(url: string){
+  parseTechnologies(){
+    Object.keys(this.Technologies).forEach((key) => {
+      this.elements.push({
+        key: key,
+        icon: this.Technologies[key].icon,
+        url: '/technologies/'+key
+      })
+    });
+  }
+
+  navigate(url: string) {
     this.positionService.setBackCategory('technologies');
     const link: string = <string>this.localize.translateRoute(url);
     this.router.navigateByUrl(link);

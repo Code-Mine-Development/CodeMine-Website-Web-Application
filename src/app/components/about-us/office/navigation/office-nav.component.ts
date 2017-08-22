@@ -1,4 +1,4 @@
-import {Component, OnInit, Input, Output, EventEmitter} from '@angular/core';
+import {Component, Input, Output, EventEmitter} from '@angular/core';
 
 @Component({
   selector: 'app-office-nav',
@@ -6,10 +6,13 @@ import {Component, OnInit, Input, Output, EventEmitter} from '@angular/core';
     <nav>
       <ul>
             <li>
-              <app-list-icon [state]="showListStatus" (stateChange)="setShowListStatus($event)"></app-list-icon>
+              <app-list-icon [state]="showList" (stateChange)="setShowListStatus($event)"></app-list-icon>
              </li>
             <li *ngIf="checkFirefox()">
-              <app-model-navigate-icon [class.disabled]="showListStatus" [state]="modelStatus" (stateChange)="setModelNavigate($event)"></app-model-navigate-icon>
+              <app-model-navigate-icon [class.disabled]="showList"
+                                       [state]="modelNavigate"
+                                       (stateChange)="setModelNavigate($event)"
+                                       ></app-model-navigate-icon>
              </li>
       </ul>
     </nav>
@@ -43,31 +46,32 @@ import {Component, OnInit, Input, Output, EventEmitter} from '@angular/core';
     }
   `]
 })
-export class OfficeNavComponent{
+export class OfficeNavComponent {
 
-  @Output("showListChange") changeShowListStatus = new EventEmitter();
-  @Output("modelNavigateChange") changeModelStatus = new EventEmitter();
+  @Output() showListChange = new EventEmitter();
+  @Output() modelNavigateChange = new EventEmitter();
 
-  @Input("showList") showListStatus:boolean;
-  @Input("modelNavigate") modelStatus:string;
+  @Input() showList: boolean;
+  @Input() modelNavigate: string;
 
   constructor() { }
 
-  setShowListStatus(status){
-    this.showListStatus = status;
-    this.changeShowListStatus.emit(this.showListStatus);
-  }
-  setModelNavigate(status){
-    if(this.showListStatus)
-      return;
-    this.modelStatus = status;
-    this.changeModelStatus.emit(this.modelStatus);
+  setShowListStatus(status) {
+    this.showList = status;
+    this.showListChange.emit(this.showList);
   }
 
-  checkFirefox(){
-    if(navigator.userAgent.toLowerCase().indexOf('firefox') !== -1)
-      return false;
-    return true;
+  setModelNavigate(status) {
+    if (this.showList) {
+      return;
+    }
+
+    this.modelNavigate = status;
+    this.modelNavigateChange.emit(this.modelNavigate);
+  }
+
+  checkFirefox() {
+    return navigator.userAgent.toLowerCase().indexOf('firefox') === -1;
   }
 
 }

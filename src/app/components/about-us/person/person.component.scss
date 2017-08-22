@@ -1,27 +1,36 @@
 @import "../../../../assets/styles/colors";
+@import "../../../../assets/styles/mediaQueries";
+
 
 #personView {
-  background: $desk;
   height: 600px;
-  width: 60%;
-  border-radius: 3px;
-  box-shadow: 0 0 15px 15px rgba(0,0,0,0.1);
+  max-width: 1150px;
+  width:100%;
+
   position: absolute;
+  left:50%;
   top:20vh;
-  left:20%;
   display: none;
   opacity: 0;
   transition: .3s;
-  transform: scale(0.3);
+  transform: scale(0.3) translateX(-50%);
+  padding:0 80px;
+  box-sizing: border-box;
+
   #personWrapper {
+    background: $desk;
     height:100%;
     box-sizing: border-box;
-    padding: 25px;
+    box-shadow: 0 0 15px 15px rgba(0,0,0,0.1);
+    padding: 45px;
     width: 100%;
     display: flex;
     flex-direction: row;
     align-items: center;
     position: relative;
+    strong{
+      font-size:1.6rem;
+    }
     button{
       position: absolute;
       right: 1.5%;
@@ -33,12 +42,12 @@
       img{
         width:25px;
       }
+
     }
     .bg {
       width: 45%;
-      height: 90%;
-      margin:3% 0;
-      background-size: contain;
+      height: 100%;
+      background-size:cover;
       background-position: center, 1000px 0%;
       background-repeat: no-repeat;
 

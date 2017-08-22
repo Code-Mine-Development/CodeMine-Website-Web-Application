@@ -1,223 +1,1034 @@
 [
   {
-    "title":"PORTFOLIO.MDLinking.title",
-    "shortDescription": "Sieć społecznościowa umożliwiająca prywatną komunikację lekarzy z całego świata",
+    "link": "mdlinking",
+    "title": "PORTFOLIO.MDLinking.title",
+    "subTitle": "Platform for healthcare professionals",
+    "shortDescription": "PORTFOLIO.MDLinking.shortDescription",
     "description": "PORTFOLIO.MDLinking.description",
-    "mainImage":"../assets/images/mdlinking-carousel.jpg",
-    "thumbnail": "../assets/images/mdlinking-carousel.jpg",
-    "tags":{
-      "products":["prod1","prod2","prod3"],
-      "technology":["tech1","tech2","tech3"],
-      "languages":["lang1","lang1","lang1"]
-    },
-    "technologies":[
+    "mainImage": "../assets/images/mdlinking-carousel.jpg",
+    "thumbnail": "../assets/images/portfolio-images/mdlinking_logo.svg",
+    "detailsTemplate": [
       {
-        "title":"Technology1",
-        "description":"Description1",
-        "thumbnail":"https://just4fun.io/content/images/2016/05/angular.png",
-        "mainImage":"https://just4fun.io/content/images/2016/05/angular.png"
+        "section": "header",
+        "description": "PORTFOLIO.MDLinking.description.part1"
       },
       {
-        "title":"Technology2",
-        "description":"Description2",
-        "thumbnail":"https://just4fun.io/content/images/2016/05/angular.png",
-        "mainImage":"https://just4fun.io/content/images/2016/05/angular.png"
+        "section": "image",
+        "title": "Home",
+        "image": "../assets/images/mdlinking-carousel.jpg"
       },
       {
-        "title":"Technology3",
-        "description":"Description3",
-        "thumbnail":"https://just4fun.io/content/images/2016/05/angular.png",
-        "mainImage":"https://just4fun.io/content/images/2016/05/angular.png"
+        "section": "text",
+        "align": "left",
+        "text": [
+          {
+            "title": "PORTFOLIO.MDLinking.description.web",
+            "description": "PORTFOLIO.MDLinking.description.part2"
+          }
+        ]
       },
       {
-        "title":"Technology4",
-        "description":"Description4",
-        "thumbnail":"https://just4fun.io/content/images/2016/05/angular.png",
-        "mainImage":"https://just4fun.io/content/images/2016/05/angular.png"
+        "section": "4images",
+        "title": null,
+        "images": [
+          "../assets/images/portfolio-images/tripbuzz-presentation.svg",
+          "../assets/images/portfolio-images/tripbuzz-presentation.svg",
+          "../assets/images/portfolio-images/tripbuzz-presentation.svg",
+          "../assets/images/portfolio-images/tripbuzz-presentation.svg"
+        ]
+      },
+      {
+        "section": "text",
+        "align": "left",
+        "text": [
+          {
+            "title": "PORTFOLIO.MDLinking.description.intensiveCare",
+            "description": "PORTFOLIO.MDLinking.description.part3"
+          }
+        ]
+      },
+      {
+        "section": "image",
+        "title": "PORTFOLIO.MDLinking.description.intensiveCare2",
+        "image": "../assets/images/mdlinking-carousel.jpg"
+      },
+      {
+        "section": "image",
+        "title": null,
+        "image": "../assets/images/mdlinking-carousel.jpg"
+      },
+      {
+        "section": "image",
+        "title": "PORTFOLIO.MDLinking.description.intensiveCareManagement",
+        "image": "../assets/images/mdlinking-carousel.jpg"
+      },
+      {
+        "section": "text",
+        "align": "center",
+        "text": [
+          {
+            "title": "DDD",
+            "description": "PORTFOLIO.MDLinking.description.part4"
+          },
+          {
+            "title": "PORTFOLIO.MDLinking.description.specification",
+            "description": "PORTFOLIO.MDLinking.description.part5"
+          }
+        ]
+      },
+      {
+        "section": "image",
+        "title": null,
+        "image": "../assets/images/mdlinking-carousel.jpg"
+      },
+      {
+        "section": "text",
+        "align": "left",
+        "text": [
+          {
+            "title": "PORTFOLIO.MDLinking.description.logic",
+            "description": "PORTFOLIO.MDLinking.description.part6"
+          }
+        ]
+      },
+      {
+        "section": "image",
+        "title": null,
+        "image": "../assets/images/mdlinking-carousel.jpg"
+      },
+      {
+        "section": "text",
+        "align": "center",
+        "text": [
+          {
+            "title": "PORTFOLIO.MDLinking.description.logic",
+            "description": "PORTFOLIO.MDLinking.description.part7"
+          },
+          {
+            "title": "PORTFOLIO.MDLinking.description.architecture",
+            "description": "PORTFOLIO.MDLinking.description.part8"
+          }
+        ]
+      },
+      {
+        "section": "text",
+        "align": "center",
+        "text": [
+          {
+            "title": null,
+            "description": "PORTFOLIO.MDLinking.description.part9"
+          }
+        ]
+      },
+      {
+        "section": "architecture"
       }
     ],
-    "homePage":true
+    "tags": {
+      "products": [
+        "prod1",
+        "prod2",
+        "prod3"
+      ],
+      "technology": [
+        "tech1",
+        "tech2",
+        "tech3"
+      ],
+      "languages": [
+        "lang1",
+        "lang1",
+        "lang1"
+      ]
+    },
+    "tools": [
+      "angular",
+      "gulp",
+      "npm"
+    ],
+    "technologies": [
+      "bash",
+      "html5",
+      "swify",
+      "typescript",
+      "java",
+      "php"
+    ],
+    "homePage": true
   },
-
   {
-    "title":"PORTFOLIO.BrigterVision.title",
-    "subtitle": "Platform for healthcare professionals",
-    "description": "PORTFOLIO.BrigterVision.description",
-    "mainImage":"http://blog.oxforddictionaries.com/wp-content/uploads/mountain-names.jpg",
+    "link": "brigter-vision-growth-platform",
+    "title": "PORTFOLIO.BrighterVision.title",
+    "subTitle": "Platform for healthcare professionals",
+    "description": "PORTFOLIO.BrighterVision.description",
+    "mainImage": "http://blog.oxforddictionaries.com/wp-content/uploads/mountain-names.jpg",
     "thumbnail": "http://blog.oxforddictionaries.com/wp-content/uploads/mountain-names.jpg",
-    "tags":{
-      "products":["prod1","prod2","prod3"],
-      "technology":["tech1","tech2","tech3"],
-      "languages":["lang1","lang1","lang1"]
-    },
-    "technologies":[
+    "detailsTemplate": [
       {
-        "title":"Technology1",
-        "description":"Description1",
-        "thumbnail":"https://a0.awsstatic.com/main/images/logos/aws_logo_179x109.gif",
-        "mainImage":"https://a0.awsstatic.com/main/images/logos/aws_logo_179x109.gif"
+        "section": "header",
+        "title": "PORTFOLIO.BrighterVision.title",
+        "description": "PORTFOLIO.BrighterVision.description.part1"
       },
       {
-        "title":"Technology2",
-        "description":"Description2",
-        "thumbnail":"https://a0.awsstatic.com/main/images/logos/aws_logo_179x109.gif",
-        "mainImage":"https://a0.awsstatic.com/main/images/logos/aws_logo_179x109.gif"
+        "section": "image",
+        "title": "Home",
+        "image": "../assets/images/mdlinking-carousel.jpg"
+      },
+      {
+        "section": "text",
+        "align": "left",
+        "text": [
+          {
+            "title": "PORTFOLIO.BrighterVision.description.postBooking",
+            "description": "PORTFOLIO.BrighterVision.description.part2"
+          },
+          {
+            "title": null,
+            "description": "PORTFOLIO.BrighterVision.description.part3"
+          }
+        ]
+      },
+      {
+        "section": "4images",
+        "title": "PORTFOLIO.BrighterVision.description.calendar",
+        "images": [
+          "../assets/images/portfolio-images/tripbuzz-presentation.png",
+          "../assets/images/portfolio-images/tripbuzz-presentation.png",
+          "../assets/images/portfolio-images/tripbuzz-presentation.png",
+          "../assets/images/portfolio-images/tripbuzz-presentation.png"
+        ]
+      },
+      {
+        "section": "text",
+        "align": "left",
+        "text": [
+          {
+            "title": "PORTFOLIO.BrighterVision.description.businessModel",
+            "description": "PORTFOLIO.BrighterVision.description.part4"
+          },
+          {
+            "title": null,
+            "description": "PORTFOLIO.BrighterVision.description.part5"
+          }
+        ]
+      },
+      {
+        "section": "image",
+        "title": null,
+        "small": true,
+        "image": "../assets/images/mdlinking-carousel.jpg"
+      },
+      {
+        "section": "text",
+        "align": "left",
+        "text": [
+          {
+            "title": "PORTFOLIO.BrighterVision.description.archLangTools",
+            "description": "PORTFOLIO.BrighterVision.description.part6"
+          },
+          {
+            "title": null,
+            "description": "PORTFOLIO.BrighterVision.description.part7"
+          }
+        ]
+      },
+      {
+        "section": "architecture"
       }
     ],
-    "homePage":true
+    "tags": {
+      "products": [
+        "prod1",
+        "prod2",
+        "prod3"
+      ],
+      "technology": [
+        "tech1",
+        "tech2",
+        "tech3"
+      ],
+      "languages": [
+        "lang1",
+        "lang1",
+        "lang1"
+      ]
+    },
+    "tools": [
+      "angular",
+      "gulp",
+      "npm"
+    ],
+    "technologies": [
+      "bash",
+      "html5",
+      "swify",
+      "typescript",
+      "java",
+      "php"
+    ],
+    "homePage": true
   },
   {
-    "title":"PORTFOLIO.telecom.title",
-    "subtitle": "Platform for healthcare professionals",
+    "link": "telecom",
+    "title": "PORTFOLIO.telecom.title",
+    "subTitle": "Platform for healthcare professionals",
     "description": "PORTFOLIO.telecom.description",
-    "mainImage":"https://steamuserimages-a.akamaihd.net/ugc/25087975291817161/4B01A1274CA990A3577CC37E1DAA72F88DE353F8/",
-    "thumbnail": "https://steamuserimages-a.akamaihd.net/ugc/25087975291817161/4B01A1274CA990A3577CC37E1DAA72F88DE353F8/",
-    "tags":{
-      "products":["prod1","prod2","prod3"],
-      "technology":["tech1","tech2","tech3"],
-      "languages":["lang1","lang1","lang1"]
-    },
-    "technologies":[
+    "mainImage": "http://blog.oxforddictionaries.com/wp-content/uploads/mountain-names.jpg",
+    "thumbnail": "http://blog.oxforddictionaries.com/wp-content/uploads/mountain-names.jpg",
+    "detailsTemplate": [
       {
-        "title":"Technology1",
-        "description":"Description1",
-        "thumbnail":"https://upload.wikimedia.org/wikipedia/commons/thumb/d/d9/Node.js_logo.svg/1200px-Node.js_logo.svg.png",
-        "mainImage":"https://upload.wikimedia.org/wikipedia/commons/thumb/d/d9/Node.js_logo.svg/1200px-Node.js_logo.svg.png"
+        "section": "header",
+        "title": "PORTFOLIO.telecom.title",
+        "description": "PORTFOLIO.telecom.description.part1"
       },
       {
-        "title":"Technology2",
-        "description":"Description2",
-        "thumbnail":"https://upload.wikimedia.org/wikipedia/commons/thumb/d/d9/Node.js_logo.svg/1200px-Node.js_logo.svg.png",
-        "mainImage":"https://upload.wikimedia.org/wikipedia/commons/thumb/d/d9/Node.js_logo.svg/1200px-Node.js_logo.svg.png"
+        "section": "image",
+        "title": "Home",
+        "image": "../assets/images/mdlinking-carousel.jpg"
+      },
+      {
+        "section": "text",
+        "align": "left",
+        "text": [
+          {
+            "title": "PORTFOLIO.telecom.description.postBooking",
+            "description": "PORTFOLIO.telecom.description.part2"
+          }
+        ]
+      },
+      {
+        "section": "icons",
+        "icons": [
+          {
+            "icon":"../assets/images/portfolio-images/example_icon.png",
+            "description": "PORTFOLIO.telecom.description.part3"
+          },
+          {
+            "icon":"../assets/images/portfolio-images/example_icon.png",
+            "description": "PORTFOLIO.telecom.description.part4"
+          },
+          {
+            "icon":"../assets/images/portfolio-images/example_icon.png",
+            "description": "PORTFOLIO.telecom.description.part5"
+          }
+        ]
+      },
+      {
+        "section": "text",
+        "align": "left",
+        "text": [
+          {
+            "title": "PORTFOLIO.telecom.description.build",
+            "description": "PORTFOLIO.telecom.description.part6"
+          }
+        ]
+      },
+      {
+        "section": "image",
+        "title": null,
+        "small": true,
+        "image": "../assets/images/mdlinking-carousel.jpg"
+      },
+      {
+        "section": "text",
+        "align": "left",
+        "text": [
+          {
+            "title": "PORTFOLIO.telecom.description.OurMission",
+            "description": "PORTFOLIO.telecom.description.part7"
+          },
+          {
+            "title": null,
+            "description": "PORTFOLIO.telecom.description.part8"
+          }
+        ]
+      },
+      {
+        "section": "architecture"
       }
     ],
-    "homePage":true
+    "tags": {
+      "products": [
+        "prod1",
+        "prod2",
+        "prod3"
+      ],
+      "technology": [
+        "tech1",
+        "tech2",
+        "tech3"
+      ],
+      "languages": [
+        "lang1",
+        "lang1",
+        "lang1"
+      ]
+    },
+    "tools": [
+      "angular",
+      "gulp",
+      "npm"
+    ],
+    "technologies": [
+      "bash",
+      "html5",
+      "swify",
+      "typescript",
+      "java",
+      "php"
+    ],
+    "homePage": true
   },
   {
-    "title":"PORTFOLIO.exchange.title",
-    "subtitle": "Platform for healthcare professionals",
+    "link": "exchange",
+    "title": "PORTFOLIO.exchange.title",
+    "subTitle": "Platform for healthcare professionals",
     "description": "PORTFOLIO.exchange.description",
-    "mainImage":"https://static.pexels.com/photos/23049/pexels-photo.jpg",
-    "thumbnail": "https://static.pexels.com/photos/23049/pexels-photo.jpg",
-    "tags":{
-      "products":["prod1","prod2","prod3"],
-      "technology":["tech1","tech2","tech3"],
-      "languages":["lang1","lang1","lang1"]
-    },
-    "technologies":[
+    "mainImage": "http://blog.oxforddictionaries.com/wp-content/uploads/mountain-names.jpg",
+    "thumbnail": "http://blog.oxforddictionaries.com/wp-content/uploads/mountain-names.jpg",
+    "detailsTemplate": [
       {
-        "title":"Technology2",
-        "description":"Description2",
-        "thumbnail":"https://upload.wikimedia.org/wikipedia/commons/thumb/d/d9/Node.js_logo.svg/1200px-Node.js_logo.svg.png",
-        "mainImage":"https://upload.wikimedia.org/wikipedia/commons/thumb/d/d9/Node.js_logo.svg/1200px-Node.js_logo.svg.png"
+        "section": "header",
+        "title": "PORTFOLIO.BrighterVision.title",
+        "description": "PORTFOLIO.BrighterVision.description.part1"
+      },
+      {
+        "section": "image",
+        "title": "Home",
+        "image": "../assets/images/mdlinking-carousel.jpg"
+      },
+      {
+        "section": "text",
+        "align": "left",
+        "text": [
+          {
+            "title": "PORTFOLIO.BrighterVision.description.postBooking",
+            "description": "PORTFOLIO.BrighterVision.description.part2"
+          },
+          {
+            "title": null,
+            "description": "PORTFOLIO.BrighterVision.description.part3"
+          }
+        ]
+      },
+      {
+        "section": "4images",
+        "title": "PORTFOLIO.BrighterVision.description.calendar",
+        "images": [
+          "../assets/images/portfolio-images/tripbuzz-presentation.png",
+          "../assets/images/portfolio-images/tripbuzz-presentation.png",
+          "../assets/images/portfolio-images/tripbuzz-presentation.png",
+          "../assets/images/portfolio-images/tripbuzz-presentation.png"
+        ]
+      },
+      {
+        "section": "text",
+        "align": "left",
+        "text": [
+          {
+            "title": "PORTFOLIO.BrighterVision.description.businessModel",
+            "description": "PORTFOLIO.BrighterVision.description.part4"
+          },
+          {
+            "title": null,
+            "description": "PORTFOLIO.BrighterVision.description.part5"
+          }
+        ]
+      },
+      {
+        "section": "image",
+        "title": null,
+        "small": true,
+        "image": "../assets/images/mdlinking-carousel.jpg"
+      },
+      {
+        "section": "text",
+        "align": "left",
+        "text": [
+          {
+            "title": "PORTFOLIO.BrighterVision.description.archLangTools",
+            "description": "PORTFOLIO.BrighterVision.description.part6"
+          },
+          {
+            "title": null,
+            "description": "PORTFOLIO.BrighterVision.description.part7"
+          }
+        ]
+      },
+      {
+        "section": "architecture"
       }
     ],
-    "homePage":true
+    "tags": {
+      "products": [
+        "prod1",
+        "prod2",
+        "prod3"
+      ],
+      "technology": [
+        "tech1",
+        "tech2",
+        "tech3"
+      ],
+      "languages": [
+        "lang1",
+        "lang1",
+        "lang1"
+      ]
+    },
+    "tools": [
+      "angular",
+      "zend-framework",
+      "postgresql",
+      "amazon-aws",
+      "rabbitmq"
+    ],
+    "technologies": [
+      "php",
+      "javascript"
+    ],
+    "homePage": true
   },
   {
-    "title":"PORTFOLIO.MidOceanBrands.title",
-    "subtitle": "Platform for healthcare professionals",
+    "link": "mid-ocean-brands",
+    "title": "PORTFOLIO.MidOceanBrands.title",
+    "subTitle": "Platform for healthcare professionals",
     "description": "PORTFOLIO.MidOceanBrands.description",
-    "mainImage":"https://static.pexels.com/photos/23049/pexels-photo.jpg",
-    "thumbnail": "https://static.pexels.com/photos/23049/pexels-photo.jpg",
-    "tags":{
-      "products":["prod1","prod2","prod3"],
-      "technology":["tech1","tech2","tech3"],
-      "languages":["lang1","lang1","lang1"]
-    },
-    "technologies":[
+    "mainImage": "http://blog.oxforddictionaries.com/wp-content/uploads/mountain-names.jpg",
+    "thumbnail": "http://blog.oxforddictionaries.com/wp-content/uploads/mountain-names.jpg",
+    "detailsTemplate": [
       {
-        "title":"Technology2",
-        "description":"Description2",
-        "thumbnail":"https://upload.wikimedia.org/wikipedia/commons/thumb/d/d9/Node.js_logo.svg/1200px-Node.js_logo.svg.png",
-        "mainImage":"https://upload.wikimedia.org/wikipedia/commons/thumb/d/d9/Node.js_logo.svg/1200px-Node.js_logo.svg.png"
+        "section": "header",
+        "title": "PORTFOLIO.MidOceanBrands.title",
+        "description": "PORTFOLIO.MidOceanBrands.description.part1"
+      },
+      {
+        "section": "image",
+        "title": "Home",
+        "image": "../assets/images/mdlinking-carousel.jpg"
+      },
+      {
+        "section": "text",
+        "align": "left",
+        "text": [
+          {
+            "title": "PORTFOLIO.BrighterVision.description.postBooking",
+            "description": "PORTFOLIO.BrighterVision.description.part2"
+          },
+          {
+            "title": null,
+            "description": "PORTFOLIO.BrighterVision.description.part3"
+          }
+        ]
+      },
+      {
+        "section": "2images",
+        "images": [
+          {
+            "title": "PORTFOLIO.MidOceanBrands.description.before",
+            "url": "../assets/images/portfolio-images/tripbuzz-presentation.png"
+          },
+          {
+            "title": "PORTFOLIO.MidOceanBrands.description.after",
+            "url": "../assets/images/portfolio-images/tripbuzz-presentation.png"
+          }
+        ]
+      },
+      {
+        "section": "text",
+        "align": "left",
+        "text": [
+          {
+            "title": "PORTFOLIO.MidOceanBrands.description.process",
+            "description": "PORTFOLIO.MidOceanBrands.description.part4"
+          },
+          {
+            "title": null,
+            "description": "PORTFOLIO.MidOceanBrands.description.part5"
+          }
+        ]
+      },
+      {
+        "section": "image",
+        "title": null,
+        "small": true,
+        "image": "../assets/images/mdlinking-carousel.jpg"
+      },
+      {
+        "section": "image",
+        "title": null,
+        "small": true,
+        "image": "../assets/images/mdlinking-carousel.jpg"
+      },
+      {
+        "section": "image",
+        "title": null,
+        "small": true,
+        "image": "../assets/images/mdlinking-carousel.jpg"
+      },
+      {
+        "section": "text",
+        "align": "left",
+        "text": [
+          {
+            "title": "PORTFOLIO.MidOceanBrands.description.technologies",
+            "description": "PORTFOLIO.MidOceanBrands.description.part5"
+          }
+        ]
+      },
+      {
+        "section": "text",
+        "align": "left",
+        "text": [
+          {
+            "title": "PORTFOLIO.MidOceanBrands.description.technologies",
+            "description": "PORTFOLIO.MidOceanBrands.description.part6"
+          }
+        ]
+      },
+      {
+        "section": "architecture"
       }
     ],
-    "homePage":false
+    "tags": {
+      "products": [
+        "prod1",
+        "prod2",
+        "prod3"
+      ],
+      "technology": [
+        "tech1",
+        "tech2",
+        "tech3"
+      ],
+      "languages": [
+        "lang1",
+        "lang1",
+        "lang1"
+      ]
+    },
+    "tools": [
+      "spring-framework",
+      "reactjs",
+      "postgresql"
+    ],
+    "technologies": [
+      "java"
+    ],
+    "homePage": true
   },
   {
-    "title":"PORTFOLIO.SmartHome.title",
-    "subtitle": "Platform for healthcare professionals",
+    "link": "smart-home",
+    "title": "PORTFOLIO.SmartHome.title",
+    "subTitle": "Platform for healthcare professionals",
     "description": "PORTFOLIO.SmartHome.description",
-    "mainImage":"https://static.pexels.com/photos/23049/pexels-photo.jpg",
-    "thumbnail": "https://static.pexels.com/photos/23049/pexels-photo.jpg",
-    "tags":{
-      "products":["prod1","prod2","prod3"],
-      "technology":["tech1","tech2","tech3"],
-      "languages":["lang1","lang1","lang1"]
-    },
-    "technologies":[
+    "mainImage": "http://blog.oxforddictionaries.com/wp-content/uploads/mountain-names.jpg",
+    "thumbnail": "http://blog.oxforddictionaries.com/wp-content/uploads/mountain-names.jpg",
+    "detailsTemplate": [
       {
-        "title":"Technology2",
-        "description":"Description2",
-        "thumbnail":"https://upload.wikimedia.org/wikipedia/commons/thumb/d/d9/Node.js_logo.svg/1200px-Node.js_logo.svg.png",
-        "mainImage":"https://upload.wikimedia.org/wikipedia/commons/thumb/d/d9/Node.js_logo.svg/1200px-Node.js_logo.svg.png"
+        "section": "header",
+        "title": "PORTFOLIO.BrighterVision.title",
+        "description": "PORTFOLIO.BrighterVision.description.part1"
+      },
+      {
+        "section": "image",
+        "title": "Home",
+        "image": "../assets/images/mdlinking-carousel.jpg"
+      },
+      {
+        "section": "text",
+        "align": "left",
+        "text": [
+          {
+            "title": "PORTFOLIO.BrighterVision.description.postBooking",
+            "description": "PORTFOLIO.BrighterVision.description.part2"
+          },
+          {
+            "title": null,
+            "description": "PORTFOLIO.BrighterVision.description.part3"
+          }
+        ]
+      },
+      {
+        "section": "4images",
+        "title": "PORTFOLIO.BrighterVision.description.calendar",
+        "images": [
+          "../assets/images/portfolio-images/tripbuzz-presentation.png",
+          "../assets/images/portfolio-images/tripbuzz-presentation.png",
+          "../assets/images/portfolio-images/tripbuzz-presentation.png",
+          "../assets/images/portfolio-images/tripbuzz-presentation.png"
+        ]
+      },
+      {
+        "section": "text",
+        "align": "left",
+        "text": [
+          {
+            "title": "PORTFOLIO.BrighterVision.description.businessModel",
+            "description": "PORTFOLIO.BrighterVision.description.part4"
+          },
+          {
+            "title": null,
+            "description": "PORTFOLIO.BrighterVision.description.part5"
+          }
+        ]
+      },
+      {
+        "section": "image",
+        "title": null,
+        "small": true,
+        "image": "../assets/images/mdlinking-carousel.jpg"
+      },
+      {
+        "section": "text",
+        "align": "left",
+        "text": [
+          {
+            "title": "PORTFOLIO.BrighterVision.description.archLangTools",
+            "description": "PORTFOLIO.BrighterVision.description.part6"
+          },
+          {
+            "title": null,
+            "description": "PORTFOLIO.BrighterVision.description.part7"
+          }
+        ]
+      },
+      {
+        "section": "architecture"
       }
     ],
-    "homePage":false
+    "tags": {
+      "products": [
+        "prod1",
+        "prod2",
+        "prod3"
+      ],
+      "technology": [
+        "tech1",
+        "tech2",
+        "tech3"
+      ],
+      "languages": [
+        "lang1",
+        "lang1",
+        "lang1"
+      ]
+    },
+    "tools": [
+      "symfony",
+      "postgresql"
+    ],
+    "technologies": [
+      "php"
+    ],
+    "homePage": true
   },
   {
-    "title":"PORTFOLIO.Tandarts.title",
-    "subtitle": "Platform for healthcare professionals",
+    "link": "tandarts",
+    "title": "PORTFOLIO.Tandarts.title",
+    "subTitle": "Platform for healthcare professionals",
     "description": "PORTFOLIO.Tandarts.description",
-    "mainImage":"https://static.pexels.com/photos/23049/pexels-photo.jpg",
-    "thumbnail": "https://static.pexels.com/photos/23049/pexels-photo.jpg",
-    "tags":{
-      "products":["prod1","prod2","prod3"],
-      "technology":["tech1","tech2","tech3"],
-      "languages":["lang1","lang1","lang1"]
-    },
-    "technologies":[
+    "mainImage": "http://blog.oxforddictionaries.com/wp-content/uploads/mountain-names.jpg",
+    "thumbnail": "http://blog.oxforddictionaries.com/wp-content/uploads/mountain-names.jpg",
+    "detailsTemplate": [
       {
-        "title":"Technology2",
-        "description":"Description2",
-        "thumbnail":"https://upload.wikimedia.org/wikipedia/commons/thumb/d/d9/Node.js_logo.svg/1200px-Node.js_logo.svg.png",
-        "mainImage":"https://upload.wikimedia.org/wikipedia/commons/thumb/d/d9/Node.js_logo.svg/1200px-Node.js_logo.svg.png"
+        "section": "header",
+        "title": "PORTFOLIO.Tandarts.title",
+        "description": "PORTFOLIO.Tandarts.description.part1"
+      },
+      {
+        "section": "image",
+        "title": "Home",
+        "image": "../assets/images/mdlinking-carousel.jpg"
+      },
+      {
+        "section": "text",
+        "align": "left",
+        "text": [
+          {
+            "title": "PORTFOLIO.Tandarts.description.tools",
+            "description": "PORTFOLIO.Tandarts.description.part2"
+          },
+          {
+            "title": null,
+            "description": "PORTFOLIO.Tandarts.description.part3"
+          }
+        ]
+      },
+      {
+        "section": "architecture"
+      },
+      {
+        "section": "text",
+        "align": "left",
+        "text": [
+          {
+            "title": "PORTFOLIO.Tandarts.description.process",
+            "description": "PORTFOLIO.Tandarts.description.part4"
+          },
+          {
+            "title": null,
+            "description": "PORTFOLIO.Tandarts.description.part5"
+          }
+        ]
+      },
+      {
+        "section": "2images",
+        "images": [
+          {
+            "title": "PORTFOLIO.Tandarts.description.creatingProcess",
+            "url": "../assets/images/mdlinking-carousel.jpg"
+          },
+          {
+            "title": null,
+            "url": "../assets/images/mdlinking-carousel.jpg"
+          }
+        ]
       }
     ],
-    "homePage":false
+    "tags": {
+      "products": [
+        "prod1",
+        "prod2",
+        "prod3"
+      ],
+      "technology": [
+        "tech1",
+        "tech2",
+        "tech3"
+      ],
+      "languages": [
+        "lang1",
+        "lang1",
+        "lang1"
+      ]
+    },
+    "tools": [
+      "laravel",
+      "postgresql"
+    ],
+    "technologies": [
+      "php"
+    ],
+    "homePage": false
   },
   {
-    "title":"PORTFOLIO.Tripbuzz.title",
-    "subtitle": "Platform for healthcare professionals",
+    "link": "tripbuzz",
+    "title": "PORTFOLIO.Tripbuzz.title",
+    "subTitle": "Platform for healthcare professionals",
     "description": "PORTFOLIO.Tripbuzz.description",
-    "mainImage":"https://static.pexels.com/photos/23049/pexels-photo.jpg",
-    "thumbnail": "https://static.pexels.com/photos/23049/pexels-photo.jpg",
-    "tags":{
-      "products":["prod1","prod2","prod3"],
-      "technology":["tech1","tech2","tech3"],
-      "languages":["lang1","lang1","lang1"]
-    },
-    "technologies":[
+    "mainImage": "http://blog.oxforddictionaries.com/wp-content/uploads/mountain-names.jpg",
+    "thumbnail": "http://blog.oxforddictionaries.com/wp-content/uploads/mountain-names.jpg",
+    "detailsTemplate": [
       {
-        "title":"Technology2",
-        "description":"Description2",
-        "thumbnail":"https://upload.wikimedia.org/wikipedia/commons/thumb/d/d9/Node.js_logo.svg/1200px-Node.js_logo.svg.png",
-        "mainImage":"https://upload.wikimedia.org/wikipedia/commons/thumb/d/d9/Node.js_logo.svg/1200px-Node.js_logo.svg.png"
+        "section": "header",
+        "title": "PORTFOLIO.BrighterVision.title",
+        "description": "PORTFOLIO.BrighterVision.description.part1"
+      },
+      {
+        "section": "image",
+        "title": "Home",
+        "image": "../assets/images/mdlinking-carousel.jpg"
+      },
+      {
+        "section": "text",
+        "align": "left",
+        "text": [
+          {
+            "title": "PORTFOLIO.BrighterVision.description.postBooking",
+            "description": "PORTFOLIO.BrighterVision.description.part2"
+          },
+          {
+            "title": null,
+            "description": "PORTFOLIO.BrighterVision.description.part3"
+          }
+        ]
+      },
+      {
+        "section": "4images",
+        "title": "PORTFOLIO.BrighterVision.description.calendar",
+        "images": [
+          "../assets/images/portfolio-images/tripbuzz-presentation.png",
+          "../assets/images/portfolio-images/tripbuzz-presentation.png",
+          "../assets/images/portfolio-images/tripbuzz-presentation.png",
+          "../assets/images/portfolio-images/tripbuzz-presentation.png"
+        ]
+      },
+      {
+        "section": "text",
+        "align": "left",
+        "text": [
+          {
+            "title": "PORTFOLIO.BrighterVision.description.businessModel",
+            "description": "PORTFOLIO.BrighterVision.description.part4"
+          },
+          {
+            "title": null,
+            "description": "PORTFOLIO.BrighterVision.description.part5"
+          }
+        ]
+      },
+      {
+        "section": "image",
+        "title": null,
+        "small": true,
+        "image": "../assets/images/mdlinking-carousel.jpg"
+      },
+      {
+        "section": "text",
+        "align": "left",
+        "text": [
+          {
+            "title": "PORTFOLIO.BrighterVision.description.archLangTools",
+            "description": "PORTFOLIO.BrighterVision.description.part6"
+          },
+          {
+            "title": null,
+            "description": "PORTFOLIO.BrighterVision.description.part7"
+          }
+        ]
+      },
+      {
+        "section": "architecture"
       }
     ],
-    "homePage":false
+    "tags": {
+      "products": [
+        "prod1",
+        "prod2",
+        "prod3"
+      ],
+      "technology": [
+        "tech1",
+        "tech2",
+        "tech3"
+      ],
+      "languages": [
+        "lang1",
+        "lang1",
+        "lang1"
+      ]
+    },
+    "tools": [
+      "angular",
+      "gulp",
+      "npm"
+    ],
+    "technologies": [
+      "bash",
+      "html5",
+      "swify",
+      "typescript",
+      "java",
+      "php"
+    ],
+    "homePage": true
   },
   {
-    "title":"PORTFOLIO.ZorgIndicator.title",
-    "subtitle": "Platform for healthcare professionals",
+    "link": "zorgindicator",
+    "title": "PORTFOLIO.ZorgIndicator.title",
+    "subTitle": "Platform for healthcare professionals",
     "description": "PORTFOLIO.ZorgIndicator.description",
-    "mainImage":"https://static.pexels.com/photos/23049/pexels-photo.jpg",
-    "thumbnail": "https://static.pexels.com/photos/23049/pexels-photo.jpg",
-    "tags":{
-      "products":["prod1","prod2","prod3"],
-      "technology":["tech1","tech2","tech3"],
-      "languages":["lang1","lang1","lang1"]
-    },
-    "technologies":[
+    "mainImage": "http://blog.oxforddictionaries.com/wp-content/uploads/mountain-names.jpg",
+    "thumbnail": "http://blog.oxforddictionaries.com/wp-content/uploads/mountain-names.jpg",
+    "detailsTemplate": [
       {
-        "title":"Technology2",
-        "description":"Description2",
-        "thumbnail":"https://upload.wikimedia.org/wikipedia/commons/thumb/d/d9/Node.js_logo.svg/1200px-Node.js_logo.svg.png",
-        "mainImage":"https://upload.wikimedia.org/wikipedia/commons/thumb/d/d9/Node.js_logo.svg/1200px-Node.js_logo.svg.png"
+        "section": "header",
+        "title": "PORTFOLIO.BrighterVision.title",
+        "description": "PORTFOLIO.BrighterVision.description.part1"
+      },
+      {
+        "section": "image",
+        "title": "Home",
+        "image": "../assets/images/mdlinking-carousel.jpg"
+      },
+      {
+        "section": "text",
+        "align": "left",
+        "text": [
+          {
+            "title": "PORTFOLIO.BrighterVision.description.postBooking",
+            "description": "PORTFOLIO.BrighterVision.description.part2"
+          },
+          {
+            "title": null,
+            "description": "PORTFOLIO.BrighterVision.description.part3"
+          }
+        ]
+      },
+      {
+        "section": "4images",
+        "title": "PORTFOLIO.BrighterVision.description.calendar",
+        "images": [
+          "../assets/images/portfolio-images/tripbuzz-presentation.png",
+          "../assets/images/portfolio-images/tripbuzz-presentation.png",
+          "../assets/images/portfolio-images/tripbuzz-presentation.png",
+          "../assets/images/portfolio-images/tripbuzz-presentation.png"
+        ]
+      },
+      {
+        "section": "text",
+        "align": "left",
+        "text": [
+          {
+            "title": "PORTFOLIO.BrighterVision.description.businessModel",
+            "description": "PORTFOLIO.BrighterVision.description.part4"
+          },
+          {
+            "title": null,
+            "description": "PORTFOLIO.BrighterVision.description.part5"
+          }
+        ]
+      },
+      {
+        "section": "image",
+        "title": null,
+        "small": true,
+        "image": "../assets/images/mdlinking-carousel.jpg"
+      },
+      {
+        "section": "text",
+        "align": "left",
+        "text": [
+          {
+            "title": "PORTFOLIO.BrighterVision.description.archLangTools",
+            "description": "PORTFOLIO.BrighterVision.description.part6"
+          },
+          {
+            "title": null,
+            "description": "PORTFOLIO.BrighterVision.description.part7"
+          }
+        ]
+      },
+      {
+        "section": "architecture"
       }
     ],
-    "homePage":false
+    "tags": {
+      "products": [
+        "prod1",
+        "prod2",
+        "prod3"
+      ],
+      "technology": [
+        "tech1",
+        "tech2",
+        "tech3"
+      ],
+      "languages": [
+        "lang1",
+        "lang1",
+        "lang1"
+      ]
+    },
+    "tools": [
+      "postgresql",
+      "amazon-aws"
+    ],
+    "technologies": [
+      "php",
+      "javascript"
+    ],
+    "homePage": false
   }
-
 ]

@@ -8,7 +8,7 @@ import {ScrollController} from '../../services/scroll.controller';
 })
 export class HorizontalComponent implements AfterViewInit {
 
-  @HostListener('window:resize',['$event']) resize(){
+  @HostListener('window:resize', ['$event']) resize(){
     this.checkScreen();
   }
 
@@ -17,9 +17,9 @@ export class HorizontalComponent implements AfterViewInit {
   private verticalBreakPoint = 800;
   hidden = false;
 
-  constructor( private scrollController:ScrollController ) {
+  constructor( private scrollController: ScrollController ) {
     scrollController.getCurrentElementStream().subscribe(
-      (element)=>{
+      (element) => {
         this.element = element;
         this.element.quantity = scrollController.getElementsQuantity();
       }
@@ -31,7 +31,7 @@ export class HorizontalComponent implements AfterViewInit {
   }
 
   checkScreen(){
-    if(window.innerWidth < window.innerHeight)
+    if (window.innerWidth < window.innerHeight)
       this.hidden =  window.innerWidth <= this.breakPoint;
     else
       this.hidden =  window.innerWidth <= this.verticalBreakPoint;

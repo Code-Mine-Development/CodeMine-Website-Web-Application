@@ -1,0 +1,26 @@
+@import "../../../../../assets/styles/mediaQueries";
+:host{
+  display:flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin: 100px 0;
+  section{
+    padding:0 40px;
+    max-width: 520px;
+    @media #{$mobile}{
+      max-width: 100%;
+      padding: 0;
+    }
+    h2{
+      font-size:1.6rem;
+      margin-bottom: 20px;
+      &.hidden{
+        margin-bottom: 55px;
+        visibility: hidden;
+        @media #{$mobile}{
+          display:none;
+        }
+      }
+    }
+  }
+}

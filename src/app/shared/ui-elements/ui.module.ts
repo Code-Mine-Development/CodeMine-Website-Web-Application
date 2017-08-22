@@ -8,13 +8,19 @@ import {SharedModule} from '../shared.module';
 import {TranslateModule} from '@ngx-translate/core';
 import {LocalizeRouterModule} from 'localize-router';
 import {RouterModule} from '@angular/router';
+import { OfferThumbnailsComponent } from './offer-thumbnails/offer-thumbnails.component';
+import { CarouselElementTextComponent } from './carousel/carousel-element-text.component';
+import { CarouselElementImageComponent } from './carousel/carousel-element-image.component';
 
 @NgModule({
     declarations: [
         CarouselComponent,
         ButtonComponent,
         SquareImageComponent,
-        CloseComponent
+        CloseComponent,
+        OfferThumbnailsComponent,
+        CarouselElementTextComponent,
+        CarouselElementImageComponent
     ],
     imports: [
         CommonModule,
@@ -27,7 +33,8 @@ import {RouterModule} from '@angular/router';
         ButtonComponent,
         SharedModule,
         CloseComponent,
-        SquareImageComponent
+        SquareImageComponent,
+        OfferThumbnailsComponent
     ],
     providers: [],
 })

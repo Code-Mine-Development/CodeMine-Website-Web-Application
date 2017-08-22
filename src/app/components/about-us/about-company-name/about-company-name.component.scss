@@ -1,14 +1,19 @@
+@import "../../../../assets/styles/mediaQueries";
 .row{
   width: 70%;
   padding-top: 5vh;
   margin: auto;
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
 
   .col3{
     width: 30%;
-    p{
-      font-weight:bold;
+    p {
+      font-weight: bold;
+    }
+    @media #{$tablet}{
+      width:100%;
     }
   }
 }

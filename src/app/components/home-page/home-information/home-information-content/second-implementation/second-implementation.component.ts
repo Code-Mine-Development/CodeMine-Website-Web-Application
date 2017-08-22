@@ -1,6 +1,6 @@
 import {Component, ElementRef, OnInit} from '@angular/core';
-import {ComponentTemplate, registerElement} from "../component.template";
-import {ScrollController} from "../../../services/scroll.controller";
+import {ComponentTemplate, registerElement} from '../component.template';
+import {ScrollController} from '../../../services/scroll.controller';
 import * as Vivus from 'vivus';
 
 @Component({
@@ -13,7 +13,7 @@ export class SecondImplementationComponent extends ComponentTemplate {
   private svg;
   visible = false;
 
-  constructor( scrollController:ScrollController, element:ElementRef) {
+  constructor( scrollController: ScrollController, element: ElementRef) {
     super( scrollController, element);
   }
 
@@ -23,27 +23,27 @@ export class SecondImplementationComponent extends ComponentTemplate {
   }
 
   animateHide(id, direction){
-    if(direction === 'up')
+    if (direction === 'up')
       setTimeout( () => this.visible = false, 1000 );
   }
 
   animateShow(id, cb, direction){
-    if(direction === 'up' && !this.visible)
+    if (direction === 'up' && !this.visible)
       this.svg.setFrameProgress(1);
     this.visible = true;
-    if(direction === 'down') {
+    if (direction === 'down') {
       this.svg.reset().stop();
-      setTimeout(()=>this.svg.play(2), 1000);
+      setTimeout(() => this.svg.play(2), 1000);
     }
-    setTimeout( ()=> {
+    setTimeout( () => {
       cb();
     }, 1500 )
   }
 
 
-  registerElements():[registerElement]{
+  registerElements(): [registerElement]{
     return [
-      { localId: 1, title:"HOME.secondImplementation" }
+      { localId: 1, title: 'HOME.secondImplementation' }
     ]
   }
 }

@@ -1,4 +1,4 @@
-export interface OfferElement{
+export interface OfferElement {
   title: string,
   description: string,
   icon: {
@@ -8,6 +8,6 @@ export interface OfferElement{
   },
   img: string,
   color: string,
-  prevUrl?:string,
-  nextUrl?:string
+  prevUrl?: string,
+  nextUrl?: string
 }

@@ -3,8 +3,8 @@ import { Subject } from 'rxjs';
 import { ScrollToService } from '../../../shared/services/scroll-to.service';
 
 interface InformationElement{
-  id:number,
-  title:string
+  id: number,
+  title: string
 }
 
 @Injectable()
@@ -18,14 +18,14 @@ export class ScrollController {
 
   animationInProgress = false;
 
-  constructor( private scrollToService:ScrollToService ){}
+  constructor( private scrollToService: ScrollToService ){}
 
 
 
   setScrollDirectory(directory){
-    if(this.animationInProgress)
+    if (this.animationInProgress)
       return;
-    if(directory == "up")
+    if (directory == 'up')
       this.moveUp();
     else
       this.moveDown();
@@ -40,7 +40,7 @@ export class ScrollController {
     this.currentElement = 1;
   }
 
-  registerElement(title:string){
+  registerElement(title: string){
     this.elementsQuantity++;
     this.title[this.elementsQuantity] = title;
     return this.elementsQuantity;
@@ -72,7 +72,7 @@ export class ScrollController {
 
 
   private moveDown(){
-    if(this.currentElement === this.elementsQuantity)
+    if (this.currentElement === this.elementsQuantity)
       return this.escapeFromInformations();
 
     console.log(this.currentElement);
@@ -83,7 +83,7 @@ export class ScrollController {
   }
 
   private moveUp(){
-    if(this.currentElement === 1)
+    if (this.currentElement === 1)
       return;
 
     this.currentElement--;
@@ -92,7 +92,7 @@ export class ScrollController {
   }
 
   private escapeFromInformations(){
-    if(this.escapeElement)
+    if (this.escapeElement)
       this.scrollToService.scroll(this.escapeElement);
   }
 

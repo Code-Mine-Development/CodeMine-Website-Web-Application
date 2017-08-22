@@ -10,7 +10,7 @@ import {OfferComponent} from './offer.component';
 
 
 const offerRoutes: Routes = [
-  { path: 'offer', component: OfferComponent, resolve: {
+  { path: '', component: OfferComponent, resolve: {
     offer: OfferResolver,
     tools: ToolsResolver,
     technologies: TechnologiesResolver

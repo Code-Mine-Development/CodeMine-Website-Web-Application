@@ -59,9 +59,12 @@
     box-sizing: border-box;
     padding-right: 5%;
     transition: color .7s;
+    .text_short{
+      display:none;
+    }
     @media #{$home-information-mobile} {
       width:100%;
-      padding:0 10%;
+      padding:0 5%;
     }
     @media #{$home-information-vertical-mobile}{
       width: 65%;
@@ -73,6 +76,12 @@
       }
       p{
         margin:0;
+        &.text_short{
+          display:block;
+        }
+        &.text_long{
+          display:none;
+        }
       }
     }
     @media #{$home-information-vertical-mobile-iphone5}{
@@ -85,6 +94,12 @@
       }
       p{
         margin:0;
+        &.text_short{
+          display:block;
+        }
+        &.text_long{
+          display:none;
+        }
       }
     }
   }

@@ -5,18 +5,40 @@ import {UiModule} from '../../shared/ui-elements/ui.module';
 import {SharedModule} from '../../shared/shared.module';
 import {TranslateModule} from '@ngx-translate/core';
 
+import { PortfolioDetailsHeaderComponent } from './details-section/header/header.component';
+import { ImageComponent } from './details-section/image/image.component';
+import { TextComponent } from './details-section/text/text.component';
+import { ImagesComponent } from './details-section/images/images.component';
+import { ArchitectureComponent } from './details-section/architecture/architecture.component';
+import { IconsComponent } from './details-section/icons/icons.component';
+import { TwoImagesComponent } from './details-section/two-images/two-images.component';
+
 @NgModule({
     declarations: [
-        PortfolioProjectComponent
+        PortfolioProjectComponent,
+        PortfolioDetailsHeaderComponent,
+        ImageComponent,
+        TextComponent,
+        ImagesComponent,
+        ArchitectureComponent,
+        IconsComponent,
+        TwoImagesComponent
     ],
     imports: [
         CommonModule,
         UiModule,
-        TranslateModule
+        TranslateModule,
+        SharedModule
     ],
     exports: [
         PortfolioProjectComponent,
-        SharedModule
+        PortfolioDetailsHeaderComponent,
+        ImageComponent,
+        TextComponent,
+        ImagesComponent,
+        ArchitectureComponent,
+        IconsComponent,
+        TwoImagesComponent
     ],
     providers: [],
 })

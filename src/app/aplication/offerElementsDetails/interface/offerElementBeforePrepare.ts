@@ -1,4 +1,4 @@
-export interface OfferElementBeforePrepare{
+export interface OfferElementBeforePrepare {
   title: string,
   description: string,
   icon: string,

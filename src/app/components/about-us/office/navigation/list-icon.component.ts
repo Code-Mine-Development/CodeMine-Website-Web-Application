@@ -8,7 +8,12 @@ import {Component, OnInit, Input, Output, EventEmitter, OnChanges} from '@angula
       <circle class="circle" cx="26.58" cy="26.31" r="5.81"/>
       <circle class="circle" cx="26.58" cy="50" r="5.81"/>
       <circle class="circle" cx="26.58" cy="73.71" r="5.81"/>
-      <line *ngFor="let line of currentStatePoints" class="line" [attr.x1]="line.start.x" [attr.y1]="line.start.y" [attr.x2]="line.end.x" [attr.y2]="line.end.y"/>
+      <line class="line"
+            *ngFor="let line of currentStatePoints"
+            [attr.x1]="line.start.x"
+            [attr.y1]="line.start.y"
+            [attr.x2]="line.end.x"
+            [attr.y2]="line.end.y"/>
     </svg>
   `,
   styles: [`
@@ -35,7 +40,7 @@ import {Component, OnInit, Input, Output, EventEmitter, OnChanges} from '@angula
       stroke-width:2px;
       fill:#fff;
     }
-    
+
     .active .circle{
         transform: translate(-300%, -300%);
       }
@@ -45,36 +50,36 @@ import {Component, OnInit, Input, Output, EventEmitter, OnChanges} from '@angula
   `]
 })
 export class ListIconComponent implements OnInit, OnChanges {
-  @Input() state:boolean;
+  @Input() state: boolean;
   @Output() stateChange = new EventEmitter();
   private duration = 300;
 
   readonly FirstStatePoints = [
     {
       start: { x: 41.82, y: 26.30 },
-      end: { x:79.23, y:26.30}
+      end: { x: 79.23, y: 26.30}
     },
     {
       start: { x: 41.82, y: 50 },
-      end: { x:79.23, y:50}
+      end: { x: 79.23, y: 50}
     },
     {
       start: { x: 41.82, y: 73.01 },
-      end: { x:79.23, y:73.01}
+      end: { x: 79.23, y: 73.01}
     }
   ];
   readonly SecondStatePoint = [
     {
       start: { x: 0, y: 100 },
-      end: { x:50, y:65}
+      end: { x: 50, y: 65}
     },
     {
       start: { x: 50, y: 0 },
-      end: { x:50, y:65}
+      end: { x: 50, y: 65}
     },
     {
       start: { x: 100, y: 100 },
-      end: { x:50, y:65}
+      end: { x: 50, y: 65}
     }
   ];
   currentStatePoints;
@@ -86,28 +91,31 @@ export class ListIconComponent implements OnInit, OnChanges {
   constructor() { }
 
   ngOnInit() {
-    this.currentStatePoints = this.copyObject((!this.state ? this.FirstStatePoints: this.SecondStatePoint));
+    this.currentStatePoints = this.copyObject( (!this.state ? this.FirstStatePoints : this.SecondStatePoint) );
   }
 
-  ngOnChanges(){
-    if(!this.currentStatePoints)
+  ngOnChanges() {
+    if (!this.currentStatePoints) {
       return;
-    this.animatePosition()
+    }
+
+    this.animatePosition();
   }
 
-  animatePosition(){
-
-    if(this.RAF)
+  animatePosition() {
+    if (this.RAF) {
       window.cancelAnimationFrame(this.RAF);
+    }
+
     this.getDistance();
     this.start = null;
     this.progress = null;
     this.RAF = window.requestAnimationFrame(this.animationProgress.bind(this))
   }
 
-  private getDistance(){
+  private getDistance() {
     this.currentAnimationDistance = [];
-    let target =  this.copyObject(!this.state? this.FirstStatePoints : this.SecondStatePoint);
+    const target =  this.copyObject(!this.state ? this.FirstStatePoints : this.SecondStatePoint);
     target.forEach(
       ( point, index ) => {
         this.currentAnimationDistance.push({
@@ -119,24 +127,27 @@ export class ListIconComponent implements OnInit, OnChanges {
             x: point.end.x - this.currentStatePoints[index].end.x,
             y: point.end.y - this.currentStatePoints[index].end.y
           }
-        })
-
+        });
       });
   }
 
-  private animationProgress(timestamp){
-    if(!this.start) this.start = timestamp;
-    let end = this.start + this.duration,
+  private animationProgress(timestamp) {
+    if (!this.start) {
+      this.start = timestamp;
+    }
+
+    const end = this.start + this.duration,
         progress = (timestamp - this.start) / this.duration;
 
     this.setPoints(progress);
 
-    if( timestamp < end )
+    if ( timestamp < end ) {
       this.RAF = window.requestAnimationFrame(this.animationProgress.bind(this))
+    }
   }
 
-  setPoints(progress){
-    let currentAdd = progress - (this.progress || 0)
+  setPoints(progress) {
+    const currentAdd = progress - (this.progress || 0)
     this.progress = progress;
     this.currentStatePoints = this.currentStatePoints.map(
       ( line, index ) => {
@@ -149,13 +160,14 @@ export class ListIconComponent implements OnInit, OnChanges {
     );
   }
 
-  copyObject( object ){
-    if( object instanceof  Object ){
-      let objCopy = Object.assign( object instanceof Array? [] : {}, object),
+  copyObject( object ) {
+    if ( object instanceof  Object ) {
+      const objCopy = Object.assign( object instanceof Array ? [] : {}, object ),
           keys = Object.keys(objCopy);
       keys.forEach( (key) => {
-        if(objCopy[key] instanceof Object)
+        if (objCopy[key] instanceof Object) {
           objCopy[key] = this.copyObject(objCopy[key])
+        }
       });
       return objCopy;
     }

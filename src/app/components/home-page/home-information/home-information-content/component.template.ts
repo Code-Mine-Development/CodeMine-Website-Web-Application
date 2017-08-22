@@ -58,9 +58,9 @@ export abstract class ComponentTemplate implements OnDestroy, AfterViewInit {
       this.emitShow(elementIndex.localId, directory)
     } else if (elementIndex && this.isVisible) {
       this.emitShow(elementIndex.localId, directory);
-      this.emitHide(prevIndex.localId,directory);
+      this.emitHide(prevIndex.localId, directory);
     } else if (!elementIndex && this.isVisible) {
-      this.emitHide(prevIndex.localId,directory);
+      this.emitHide(prevIndex.localId, directory);
     }
 
 
@@ -80,7 +80,7 @@ export abstract class ComponentTemplate implements OnDestroy, AfterViewInit {
   }
 
   private setPosition(index) {
-    let amount = index > 6 ? (index-2)*100 : (index-1)*100;
+    const amount = index > 6 ? (index - 2) * 100 : (index - 1) * 100;
     this.element.nativeElement.style.transform = `translateY(-${amount}%)`;
   }
 

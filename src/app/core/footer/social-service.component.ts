@@ -1,9 +1,9 @@
-import { Component, Input, Output, EventEmitter, HostListener } from '@angular/core';
+import {Component, Input, Output, EventEmitter, HostListener} from '@angular/core';
 
 @Component({
   selector: '[app-social-service]',
   template: `
-    <a [href]="adress"><span [class]="'fa fa-2x fa-'+socialName" aria-hidden="true"></span></a>
+    <a [href]="link"><span [class]="'fa fa-2x fa-'+socialName" aria-hidden="true"></span></a>
   `,
   styles: [`
     :host {
@@ -14,26 +14,28 @@ import { Component, Input, Output, EventEmitter, HostListener } from '@angular/c
      }
   `]
 })
-export class SocialServiceComponent  {
+export class SocialServiceComponent {
 
-  private defaultColor = '#000000'
-
-  @HostListener('mouseenter') enter(){
-    this.mouse('enter');
-  }
-  @HostListener('mouseleave') leave(){
-    this.mouse('leave');
-  }
-
-  @Input('color') color: string;
-  @Input('socialName') socialName: string;
-  @Input('link') adress: string;
+  @Input() color: string;
+  @Input() socialName: string;
+  @Input() link: string;
 
   @Output('hoverColor') hoverStream = new EventEmitter();
 
-  constructor() { }
+  private defaultColor = '#000000';
 
-  mouse(state: string){
+  constructor() {
+  }
+
+  @HostListener('mouseenter') enter() {
+    this.mouse('enter');
+  }
+
+  @HostListener('mouseleave') leave() {
+    this.mouse('leave');
+  }
+
+  mouse(state: string) {
     const color = state === 'enter' ? this.color : this.defaultColor;
     this.hoverStream.emit(color);
   }

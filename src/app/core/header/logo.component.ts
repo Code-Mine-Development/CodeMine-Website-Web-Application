@@ -1,11 +1,13 @@
-import { Component, OnChanges, Input, ViewChild, HostListener } from '@angular/core';
+import {Component, OnChanges, Input, ViewChild, HostListener} from '@angular/core';
+import {Router, NavigationStart, NavigationEnd} from '@angular/router';
+import {LocalizeRouterService} from 'localize-router';
 
 @Component({
   selector: 'app-logo',
   template: `
     <div class="wrapper">
-      <img src="assets/images/logo.png" alt="" [class.hidden]="hidden">
-      <div #triangle class="triangle-svg" >
+      <img src="assets/images/logo.png" alt="" [class.hidden]="!logoVisible">
+      <div #triangle class="triangle-svg" [class.animate-logo]="!logoVisible">
         <svg viewBox="0 0 21.89 25.89">
           <defs>
             <style>.cls-1{fill:#ffdf00;}</style>
@@ -22,70 +24,58 @@ import { Component, OnChanges, Input, ViewChild, HostListener } from '@angular/c
 })
 export class LogoComponent implements OnChanges {
 
-
-  @HostListener('mouseenter') mouseEnter(){
-    this.homeVisible = true;
-    this.checkHomeVisible();
-  };
-  @HostListener('mouseleave') mouseLeave(){
-    this.homeVisible = false;
-    this.checkHomeVisible();
-  };
-
   @Input() scrollTop: number;
   @ViewChild('triangle') triangle;
 
   homeVisible = false;
+  logoVisible = false;
+
   hidden = false;
-  triangleOnPosition = false;
-  triangleChangeDirectoryPoint = 500;
 
-  constructor(  ) {}
-
-  ngOnChanges(){
-    this.opacityAnimation();
-    this.triangleAnimation();
+  constructor(private router: Router, private localize: LocalizeRouterService) {
+    this.checkHomeRoute();
   }
 
-  opacityAnimation() {
-    this.hidden = this.scrollTop > 100;
-  }
-
-  triangleAnimation() {
-    console.log(this.scrollTop)
-    const targetPosition = [-80, -120],
-        scrollTopRatio = this.scrollTop / this.triangleChangeDirectoryPoint,
-        moveFactor = scrollTopRatio > 1 ? 1 : scrollTopRatio,
-        xTranslation = targetPosition[0] * this.EasingFunctions.easeInOutCubic(moveFactor),
-        yTranslation = targetPosition[1] * this.EasingFunctions.easeInOutCubic(moveFactor),
-        yMultipler = this.parseTriangleAnimationPath(moveFactor),
-        angle = this.EasingFunctions.easeInOutCubic(moveFactor) * 360;
-
-    this.triangleOnPosition = scrollTopRatio > 1;
-    this.setTriangleTransform(xTranslation, yTranslation * yMultipler, angle);
+  @HostListener('mouseenter') mouseEnter() {
+    this.homeVisible = true;
     this.checkHomeVisible();
+  };
+
+  @HostListener('mouseleave') mouseLeave() {
+    this.homeVisible = false;
+    this.checkHomeVisible();
+  };
+
+  ngOnChanges() {
+    this.logoAnimation();
   }
 
-  parseTriangleAnimationPath(position: number){
-    if (position > 1)
-      return 1;
-    return position * position;
-  }
-
-  setTriangleTransform(x: number, y: number, angle: number){
-    if (this.triangle)
-      this.triangle.nativeElement.style.transform = `translate(${x}px,${y}px) rotateZ(${angle}deg)`;
+  logoAnimation() {
+    this.logoVisible = this.hidden ? false : this.scrollTop < 100;
   }
 
 
-  checkHomeVisible(){
-    if (!this.triangleOnPosition)
+  checkHomeVisible() {
+    if (this.logoVisible){
       this.homeVisible = false;
+    }
   }
 
 
-  private EasingFunctions = {
-    easeInOutCubic: function (t) { return t < .5 ? 4 * t * t * t : (t - 1) * (2 * t - 2) * (2 * t - 2) + 1 },
+  checkHomeRoute() {
+    this.router.events.subscribe((state) => {
+      if (state instanceof NavigationEnd) {
+
+        const translatedLink = this.localize.translateRoute('/home');
+
+        if (translatedLink !== state.urlAfterRedirects){
+          this.hidden = true;
+        } else {
+          this.hidden = false;
+        }
+        this.logoAnimation();
+      }
+    })
   }
 
 

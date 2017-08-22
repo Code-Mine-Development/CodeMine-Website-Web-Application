@@ -22,9 +22,10 @@ export class PortfolioListComponent implements OnInit {
             });
     }
 
-    showDetails(index: number): void {
-        const translatedPath: any = this.localize.translateRoute(AppRoutingProvider.portfolioDetail(index))
-        this.router.navigate(translatedPath, {relativeTo: this.route})
+    showDetails(index: string): void {
+
+        const translatedPath: any = this.localize.translateRoute('/portfolio/' + index);
+        this.router.navigateByUrl(translatedPath)
     }
 
 }

@@ -8,7 +8,7 @@
   width: 100%;
   z-index: -100;
   overflow-x: hidden;
-  @media #{$phone}, #{$tablet}{
+  @media #{$tablet}{
     z-index: 1;
     position: relative;
     height: 300px;
@@ -24,10 +24,6 @@
   h1 {
     margin:0;
   }
-
-  @media #{$phone}, #{$tablet} {
-    height: 380px;
-  }
 }
 
 .footer_bar{
@@ -35,25 +31,29 @@
   color:#AEAEAE;
   background: #f2f2f2;
   display:flex;
-
+  justify-content: space-between;
+  position:relative;
   .footer_vcard{
     display:flex;
-    flex:.9;
+    width:65%;
     box-sizing: border-box;
-    justify-content: flex-start;
+    justify-content: space-around;
     align-items: center;
     p{
       text-align: center;
-      padding:15px 11%;
-      @media #{$phone}{
-        padding: 15px 2%;
-      }
+      padding:15px 0;
+    }
+    @media #{$xl-computer}{
+      width:50%;
+    }
+    @media #{$home-information-mobile}{
+      width:75%;
     }
   }
 
   .footer_slideTop{
     display:flex;
-    flex:.1;
+    width:10%;
     align-items: center;
     justify-content: flex-end;
       span{

@@ -12,35 +12,30 @@ import {DOCUMENT} from '@angular/common';
     trigger('slideDown', [
       transition(':enter', [
         style({transform: 'translateY(-100%)'}),
-        animate('.5s ease-in-out', style({transform: "translateY(0)"}))
+        animate('.5s ease-in-out', style({transform: 'translateY(0)'}))
       ]),
       transition(':leave', [
-        animate('.5s ease-in-out', style({transform: "translateY(-150%)"}))
+        animate('.5s ease-in-out', style({transform: 'translateY(-150%)'}))
       ])
     ])
   ],
   host: {'[@slideDown]': ''}
 })
-export class EmployeesListComponent implements OnInit {
+export class EmployeesListComponent {
 
-  @Input('employees') people: Employees;
+  @Input() employees: Employees;
 
   @HostListener('scroll', ['$event'])
   OnScroll() {
-    if (this.checkTopPosition())
+    if (this.checkTopPosition()) {
       this.scrollService.scroll('SiteHead');
+    }
   }
-
 
   constructor(@Inject(DOCUMENT) private document, private scrollService: ScrollToService) {
-  }
-
-  ngOnInit() {
-
   }
 
   checkTopPosition() {
     return (this.document.body.scrollTop || this.document.documentElement.scrollTop) > 0;
   }
-
 }

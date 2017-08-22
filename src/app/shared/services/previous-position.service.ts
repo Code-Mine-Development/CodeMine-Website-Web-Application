@@ -1,5 +1,4 @@
-import { Injectable } from '@angular/core';
-import {Router, NavigationStart} from '@angular/router';
+import {Injectable} from '@angular/core';
 
 @Injectable()
 export class PreviousPositionService {
@@ -11,19 +10,19 @@ export class PreviousPositionService {
   }
 
 
-  setBackTo(target){
+  setBackTo(target) {
     this.backTo = target;
   }
 
-  setBackCategory(target){
+  setBackCategory(target) {
     this.backCategory = target;
   }
 
-  getBackTo(){
+  getBackTo() {
     return this.backTo;
   }
 
-  getBackCategory(){
+  getBackCategory() {
     return this.backCategory;
   }
 

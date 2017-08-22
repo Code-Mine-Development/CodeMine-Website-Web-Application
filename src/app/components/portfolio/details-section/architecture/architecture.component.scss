@@ -1,0 +1,13 @@
+@import "../../../../../assets/styles/mediaQueries";
+:host{
+  margin:100px -40px;
+  display:block;
+  @media #{$phone}{
+    margin:100px 0;
+  }
+}
+/deep/{
+  .column{
+    background: #ffffff;
+  }
+}

@@ -29,8 +29,8 @@ import * as Vivus from 'vivus';
       flex-wrap: wrap;
       position:relative;
      }
-      
-  
+
+
     article{
       position:relative;
       z-index: 25;
@@ -68,7 +68,7 @@ import * as Vivus from 'vivus';
       height:45%;
     }
 
-    
+
     .bg-triangle{
       position:absolute;
       z-index: 20;
@@ -77,7 +77,7 @@ import * as Vivus from 'vivus';
       width:100%;
       display:flex;
       align-items: flex-end;
-    }    
+    }
     .curve_line{
       stroke-miterlimit: 10;
       stroke:#000000;
@@ -99,7 +99,7 @@ import * as Vivus from 'vivus';
     }
     @media screen and (max-width: 500px){
       article{
-        padding: 20px 20px; 
+        padding: 20px 20px;
       }
       h1{
         font-size: 3.6rem;
@@ -117,7 +117,7 @@ import * as Vivus from 'vivus';
         font-size:1.6rem;
       }
       article{
-        padding: 10px 60px 20px; 
+        padding: 10px 60px 20px;
       }
     }
 
@@ -149,7 +149,7 @@ export class HowWeWorkComponent extends ComponentTemplate {
   }
 
   animateHide(id: number, directory) {
-    if (directory === "down") {
+    if (directory === 'down') {
       this.svg.reset().play(this.mobile ? 1.6 : 1);
     }
   }
@@ -162,7 +162,7 @@ export class HowWeWorkComponent extends ComponentTemplate {
 
   registerElements(): [registerElement] {
     return [
-      {localId: 1, title: "HOME.howWeWork"}
+      {localId: 1, title: 'HOME.howWeWork'}
     ]
   }
 }

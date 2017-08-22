@@ -67,8 +67,8 @@ export class HeaderComponent implements OnInit {
     });
 
     this.scrollInformationService.getScrollTopStream()
-      .subscribe( (scrollTop: number) => {
-        this.homeInformationScrollTop = scrollTop;
+      .subscribe( (place: number) => {
+        this.homeInformationScrollTop = (place - 1) * 101;
         this.parseScrollTop();
       })
   }

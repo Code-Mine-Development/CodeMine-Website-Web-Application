@@ -1,7 +1,8 @@
 import {Injectable} from '@angular/core';
 import {Http, Response} from '@angular/http';
 import {ActivatedRouteSnapshot} from '@angular/router';
-import {Observable, Subject} from 'rxjs';
+import {Observable} from 'rxjs/Observable';
+import {Subject} from 'rxjs/Subject';
 
 import {OfferElement} from '../interface/offerElement.interface';
 
@@ -24,14 +25,15 @@ export class OfferElementsService {
     this.getJson(fileName)
       .subscribe((elements) => {
         return this.prepareElement(elements, elementName)
-      })
+      });
 
     return this.stream.first();
   }
 
   getJson(fileName: string) {
-    if (this.elements[fileName])
+    if (this.elements[fileName]) {
       return this.copyObject(fileName);
+    }
 
     return this.http.get(url + fileName + '.json')
       .map(
@@ -50,28 +52,30 @@ export class OfferElementsService {
   }
 
   prepareElement(elements, elementName: string) {
-    let keys = Object.keys(elements),
-      elementIndex = elementName ? keys.findIndex((name) => (name == elementName)) : 0,
+    const keys = Object.keys(elements);
+    let elementIndex = elementName ? keys.findIndex((name) => (name === elementName)) : 0,
       element;
 
-    if (elementIndex < 0) elementIndex = 0;
+    if (elementIndex < 0) {
+      elementIndex = 0;
+    }
 
     element = Object.assign({}, elements[keys[elementIndex]]);
     element.nextUrl = keys[elementIndex + 1] || keys[0];
     element.prevUrl = keys[elementIndex - 1] || keys[keys.length - 1];
 
-    if (element.icon.length == 0) {
+    if (element.icon.length === 0) {
       element.icon = {};
       return this.stream.next(element);
     }
 
-    this.getIcon(element.icon).subscribe(
+    this.getIcon(<string>element.icon).subscribe(
       (iconObj) => {
         element.icon = iconObj;
         this.stream.next(element);
       },
       (e) => {
-        element.icon = { url: element.icon };
+        element.icon = {url: element.icon};
         this.stream.next(element);
       }
     );
@@ -80,9 +84,9 @@ export class OfferElementsService {
   getIcon(url: string) {
     return this.http.get(iconDir + url)
       .map((response) => ( response.text() ))
-      .map((svgBody) => (svgBody.replace(/fill=\"[^"]*"/g, '')))
-      .map((svgfile: string) => {
-        const m = /\<svg.*viewBox\="([^"]*)[^>]*\>(.*)<\/svg>/g.exec(svgfile)
+      .map((svgBody) => ( svgBody.replace(/fill="[^"]*"/g, '') ))
+      .map((svgFile: string) => {
+        const m = /<svg.*viewBox="([^"]*)[^>]*>(.*)<\/svg>/g.exec(svgFile);
         if (m != null) {
           return {
             url: url,
@@ -90,7 +94,7 @@ export class OfferElementsService {
             svgBody: m[2]
           };
         }
-        return { url : url };
+        return {url: url};
       });
   }
 
