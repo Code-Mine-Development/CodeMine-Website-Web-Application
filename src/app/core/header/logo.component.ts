@@ -56,7 +56,7 @@ export class LogoComponent implements OnChanges {
 
 
   checkHomeVisible() {
-    if (this.logoVisible){
+    if (this.logoVisible) {
       this.homeVisible = false;
     }
   }
@@ -68,7 +68,7 @@ export class LogoComponent implements OnChanges {
 
         const translatedLink = this.localize.translateRoute('/home');
 
-        if (translatedLink !== state.urlAfterRedirects){
+        if (translatedLink !== state.urlAfterRedirects) {
           this.hidden = true;
         } else {
           this.hidden = false;

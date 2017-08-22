@@ -75,6 +75,9 @@
   height: 280px;
   box-sizing: border-box;
   padding: 0 10%;
+  @media #{$mobile} {
+    padding: 0 5%;
+  }
   color:#FFFFFF;
   .footer_copyright{
     color: #FFFFFF;

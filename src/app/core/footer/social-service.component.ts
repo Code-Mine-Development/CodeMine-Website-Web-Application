@@ -1,9 +1,9 @@
 import {Component, Input, Output, EventEmitter, HostListener} from '@angular/core';
 
 @Component({
-  selector: '[app-social-service]',
+  selector: 'app-social-service',
   template: `
-    <a [href]="link"><span [class]="'fa fa-2x fa-'+socialName" aria-hidden="true"></span></a>
+    <a [href]="link"><span [class]="'fa fa-3x fa-'+socialName" aria-hidden="true"></span></a>
   `,
   styles: [`
     :host {
