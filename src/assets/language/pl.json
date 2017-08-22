@@ -171,9 +171,16 @@
       "shortDescription": "Samodzielne moduły oprogramowania przyczyniające się do stworzenia nowoczesnej platformy e-commerce dla wiodących operatorów telekomunikacyjnych w Europie.",
       "description":{
         "part1": "Od początku 2017 roku współpracujemy z dostawcą oprogramowania, rozpowszechniającego swoje rozwiązania wśród wielu wiodących firm z branży telekomunikacyjnej na rynku niemieckim, holenderskim, indyjskim oraz tureckim.",
-        "part2": "Udostępniając czterech działających autonomicznie pracowników, naszym zadaniem jest dostarczanie klientowi samodzielnych modułów oprogramowania, finalnie przekazywanych zewnętrznym zespołom. Z tego względu, na każdym kroku czeka na nas sporo wyzwań, z których głównymi są wymóg zdolności naszych mikroserwisów do integracji z wieloma, często przestarzałymi rozwiązaniami klasy eneterprise; mnogość obecnych i wymaganych technologii oraz narzędzi (PHP, Java, C#, Apache Kafka, PostgreSQL, Microsoft BizTalk, Magento); czy praca z enigmatycznymi formatami danych.",
-        "part3": "Zarówno tworzone w JAVIE i PHP mikroserwisy, jak i pisane w technologii ReactJS, aplikacje internetowe, przyczyniają się do stworzenia przez naszego klienta nowoczesnej platformy e-commerce dla operatorów telekomunikacyjnych. Nasze aplikacje to starannie zaprojektowane komponenty, korzystające ponadto z rozwiązań takich jak CQRS czy Event Sourcing.",
-        "part4": "Jedną z kluczowych realizacji w ramach tego projektu jest stworzenie systemów katalogowych, pozwalających na integrację wielu istniejących baz danych klientów w jedno wygodne narzędzie. Rozwiązanie to jest szczególnie istotne z perspektywy operatorów, którzy kupując inną firmę, nie są w stanie łatwo połączyć wielu baz z systemami rozpoznawania dostępności usług we wskazanych adresach czy katalogami produktów."
+        "postBooking": "Rezerwacja postów",
+        "part2": "Udostępniając czterech działających autonomicznie pracowników, naszym zadaniem jest dostarczanie klientowi samodzielnych modułów oprogramowania, finalnie przekazywanych zewnętrznym zespołom. Z tego względu, na każdym kroku czeka na nas sporo wyzwań, z których głównymi są:",
+        "part3": "wymóg zdolności naszych mikroserwisów do integracji z wieloma, często przestarzałymi rozwiązaniami klasy eneterprise; ",
+        "part4": "mnogość obecnych i wymaganych technologii oraz narzędzi (PHP, Java, C#, Apache Kafka, PostgreSQL, Microsoft BizTalk, Magento);",
+        "part5": "czy praca z enigmatycznymi formatami danych",
+        "build": "Budowa",
+        "part6": "Zarówno tworzone w JAVIE i PHP mikroserwisy, jak i pisane w technologii ReactJS, aplikacje internetowe, przyczyniają się do stworzenia przez naszego klienta nowoczesnej platformy e-commerce dla operatorów telekomunikacyjnych. Nasze aplikacje to starannie zaprojektowane komponenty, korzystające ponadto z rozwiązań takich jak CQRS czy Event Sourcing.",
+        "OurMission": "Nasze zadanie",
+        "part7": "Jedną z kluczowych realizacji w ramach tego projektu jest stworzenie systemów katalogowych, pozwalających na integrację wielu istniejących baz danych klientów w jedno wygodne narzędzie.",
+        "part8": "Rozwiązanie to jest szczególnie istotne z perspektywy operatorów, którzy kupując inną firmę, nie są w stanie łatwo połączyć wielu baz z systemami rozpoznawania dostępności usług we wskazanych adresach czy katalogami produktów."
       }
     },
     "exchange":{
@@ -210,11 +217,16 @@
       "title": "Mid Ocean Brands Reporting System",
       "shortDescription": "Kompleksowe narzędzie służące do planowania wydajności produkcji dla firmy zajmującej się wykonywaniem nadruków graficzne na różnego rodzaju gadżetach.",
       "description":{
+        "before": "Przed",
+        "after": "Po",
+        "process": "Proces",
+        "technologies": "Technologie",
         "part1": "Zarządzanie procesem produkcyjnym na dużą skalę jest zadaniem nie tylko pracochłonnym, ale też wysoce skomplikowanym, szczególnie, kiedy głównym używanym narzędziem staje się Microsoft Excel. Tak było w przypadku Mid Ocean Brands – firmy zajmującej się profesjonalnym nadrukiem materiałów graficznych na różnorakich gadżetach, która obecnie może już cieszyć się lepszym, zaproponowanym przez nas rozwiązaniem.",
         "part2": "W zastępstwie dla dokumentów excelowych, dla naszego klienta stworzyliśmy narzędzie pozwalające zaplanować wydajność produkcji na określony czas, a także przedstawiające istotne dane w formie wykresów i raportów. Tym sposobem, rozproszone w wielu arkuszach kalkulacyjnych dane, aktualnie znajdują się w jednym miejscu, wyróżniając się przy tym przyjaznym interfejsem.",
-        "part3": "Pierwszym etapem prac było otrzymanie od klienta kilku przykładowych plików, wyeksportowanych z używanego przez niego, oprogramowania SAP. Na ich podstawie, przystąpiliśmy do projektowania głównej funkcjonalności aplikacji, umożliwiającej importowanie danych z plików zawierających nie tylko różną strukturę danych, ale również odmienne formatowanie. Efektem końcowym stało się narzędzie, pozwalające z jednej strony na łatwe dodawanie nowych parserów treści, a z drugiej na dopasowanie ustawień importu indywidualnie do każdego z plików, przy jednoczesnym sprawdzaniu wprowadzanych danych pod kątem poprawności ich formatu oraz struktury. Wszystko to zostało opatrzone przejrzystym wyglądem, w pełni dostosowanym do potrzeb klienta.",
-        "part4": "Stworzone oprogramowanie oparte zostało o Java 8 Spring Application – aplikację serwerową wystawiającą REST API, połączoną z magazynem danych PostgreSQL, a także aplikację kliencką stworzoną w ReactJS i komunikującą się z częścią serwerową poprzez API. Projekt wykorzystywał także technologię VirtualBox, umożliwiającą konfigurację wirtualnej maszyny, niezbędnej do uruchomienia aplikacji.",
-        "part5": "Aplikacja stosowana jest przede wszystkim w celu wprowadzania danych oraz planowania produkcji przez administratora, niemniej jednak, jej przeznaczenie obejmuje także halę produkcyjną, gdzie w czasie rzeczywistym na ekranach prezentuje ona aktualny stan produkcji oraz plan zamówień na najbliższe dni."
+        "part3": "Pierwszym etapem prac było otrzymanie od klienta kilku przykładowych plików, wyeksportowanych z używanego przez niego, oprogramowania SAP. Na ich podstawie, przystąpiliśmy do projektowania głównej funkcjonalności aplikacji, umożliwiającej importowanie danych z plików zawierających nie tylko różną strukturę danych, ale również odmienne formatowanie.",
+        "part4": "Efektem końcowym stało się narzędzie, pozwalające z jednej strony na łatwe dodawanie nowych parserów treści, a z drugiej na dopasowanie ustawień importu indywidualnie do każdego z plików, przy jednoczesnym sprawdzaniu wprowadzanych danych pod kątem poprawności ich formatu oraz struktury. Wszystko to zostało opatrzone przejrzystym wyglądem, w pełni dostosowanym do potrzeb klienta.",
+        "part5": "Stworzone oprogramowanie oparte zostało o Java 8 Spring Application – aplikację serwerową wystawiającą REST API, połączoną z magazynem danych PostgreSQL, a także aplikację kliencką stworzoną w ReactJS i komunikującą się z częścią serwerową poprzez API. Projekt wykorzystywał także technologię VirtualBox, umożliwiającą konfigurację wirtualnej maszyny, niezbędnej do uruchomienia aplikacji.",
+        "part6": "Aplikacja stosowana jest przede wszystkim w celu wprowadzania danych oraz planowania produkcji przez administratora, niemniej jednak, jej przeznaczenie obejmuje także halę produkcyjną, gdzie w czasie rzeczywistym na ekranach prezentuje ona aktualny stan produkcji oraz plan zamówień na najbliższe dni."
       }
     },
     "SmartHome":{
@@ -230,10 +242,15 @@
       "title": "Tandarts.com",
       "shortDescription": "Aplikacja zrzeszająca praktyki dentystyczne na terenie Holandii, pozwalająca użytkownikom wyszukać najlepszych specjalistów z okolicy i bezpośrednio umówić się na wizytę.",
       "description":{
+        "tools": "Narzędzia",
+        "process": "Proces",
+        "creatingProcess": "Proces tworzenia własnej sieci powiązań",
         "part1": "Tandarts to aplikacja zrzeszająca praktyki dentystyczne na terenie Holandii. Za jej pomocą użytkownicy mogą wyszukiwać najlepszych dentystów ze swojej okolicy, jak również przy pomocy kilku kliknięć bezpośrednio umawiać się na wizyty do specjalistów, a także weryfikować jakość świadczonych przez nich usług dzięki kompleksowemu systemowi ocen.",
-        "part2": "Rolą naszego zespołu było przygotowanie szkieletu systemu, który w późniejszej fazie, po doprowadzeniu go przez nas do fazy MVP (Minimum Viable Product), został przejęty przez holenderską grupę deweloperską, występującą z ramienia klienta. Taka specyfika pracy wymusiła na nas zastosowanie głównie prostych narzędzi, nie stanowiących problemu dla zastępujących nas programistów, z których wiodącym okazał się być framework Laravel (PHP) połączony z bazą PostgreSQL.",
-        "part3": "Prace nad projektem rozpoczęły się od długich konsultacji z klientem oraz innymi ekspertami z branży dentystycznej, których owocem stała się starannie zaprojektowana logika biznesowa. Celem było w końcu stworzenie systemu, który nie tylko spełni wszystkie wymagania biznesowe, ale okaże się być również łatwy w rozwoju dla zespołu nieuczestniczącego w jego początkowym projektowaniu. Z tego względu dużą wagę przywiązywaliśmy także do szczegółowej dokumentacji projektu, finalnie przekazanej klientowi.",
-        "part4": "Następujący po planowaniu, proces implementacji przebiegł niezwykle sprawnie. Pomimo ograniczeń Laravela w postaci ilości możliwych do wykorzystania, wcześniej stworzonych przez nas dla innych frameworków narzędzi, przygotowaliśmy masę nowych rozwiązań, wpasowujących się w specyfikę projektu."
+        "part2": "Rolą naszego zespołu było przygotowanie szkieletu systemu, który w późniejszej fazie, po doprowadzeniu go przez nas do fazy MVP (Minimum Viable Product), został przejęty przez holenderską grupę deweloperską, występującą z ramienia klienta. ",
+        "part3": "Taka specyfika pracy wymusiła na nas zastosowanie głównie prostych narzędzi, nie stanowiących problemu dla zastępujących nas programistów, z których wiodącym okazał się być framework Laravel (PHP) połączony z bazą PostgreSQL.",
+        "part4": "Prace nad projektem rozpoczęły się od długich konsultacji z klientem oraz innymi ekspertami z branży dentystycznej, których owocem stała się starannie zaprojektowana logika biznesowa. Celem było w końcu stworzenie systemu, który nie tylko spełni wszystkie wymagania biznesowe, ale okaże się być również łatwy w rozwoju dla zespołu nieuczestniczącego w jego początkowym projektowaniu. ",
+        "part5": "Z tego względu dużą wagę przywiązywaliśmy także do szczegółowej dokumentacji projektu, finalnie przekazanej klientowi.",
+        "part6": "Następujący po planowaniu, proces implementacji przebiegł niezwykle sprawnie. Pomimo ograniczeń Laravela w postaci ilości możliwych do wykorzystania, wcześniej stworzonych przez nas dla innych frameworków narzędzi, przygotowaliśmy masę nowych rozwiązań, wpasowujących się w specyfikę projektu."
       }
     },
     "Tripbuzz":{

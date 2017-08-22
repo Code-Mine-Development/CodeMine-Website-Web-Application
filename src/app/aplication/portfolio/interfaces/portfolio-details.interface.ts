@@ -6,11 +6,17 @@ export interface PortfolioDetails {
       text?:[text],
       images?:[string],
       image?:string,
-      small?:boolean
+      small?:boolean,
+      icons?:[icon]
     }];
 }
 
 interface text{
   title:string,
+  description:string
+}
+
+interface icon{
+  icon:string,
   description:string
 }

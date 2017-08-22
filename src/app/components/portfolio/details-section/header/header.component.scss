@@ -28,8 +28,6 @@
           font-size: 3.6rem;
           font-weight: bold;
           padding-left: 35px ;
-
-
         }
         @media #{$phone} {
           figcaption{
@@ -47,10 +45,10 @@
     div{
       width:50%;
       p{
-        max-width: 400px;
+        max-width: 520px;
       }
     }
-    @media #{$mobile}{
+    @media #{$tablet}{
       figure, div{
         width:100%;
       }

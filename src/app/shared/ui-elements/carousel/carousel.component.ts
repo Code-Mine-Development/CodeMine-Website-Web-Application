@@ -11,28 +11,28 @@ export class CarouselComponent implements OnInit, OnDestroy {
   @Input() timeout = 5000;
   @Input() transition = 1000;
   @Input() data: Portfolio[];
-  interval;
 
-  constructor() { }
+  interval;
+  currentElement: number = 0;
+
+  constructor() {
+  }
 
   ngOnInit() {
-    this.animateCarousel();
+    if (this.data.length > 0) {
+      this.animateCarousel();
+    }
   }
 
   animateCarousel() {
     this.interval = setInterval(() => {
-      this.items.forEach((child) => {
-        child.nativeElement.style.transform = 'translateX(-' + window.innerWidth + 'px)';
-      });
-      setTimeout(() => {
-        const first = this.data.shift();
-        this.data.push(first);
-        this.items.forEach((child) => {
-          child.nativeElement.style.transform = 'translateX(0px)';
-        });
-      }, this.transition);
-    }, this.timeout);
+      this.currentElement++;
+      if (this.currentElement + 1 > this.data.length) {
+        this.currentElement = 0;
+      }
+    }, 3000)
   }
+
   ngOnDestroy() {
     clearInterval(this.interval);
   }

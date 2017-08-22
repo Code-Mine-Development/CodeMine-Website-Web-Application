@@ -10,6 +10,8 @@ import { ImageComponent } from './details-section/image/image.component';
 import { TextComponent } from './details-section/text/text.component';
 import { ImagesComponent } from './details-section/images/images.component';
 import { ArchitectureComponent } from './details-section/architecture/architecture.component';
+import { IconsComponent } from './details-section/icons/icons.component';
+import { TwoImagesComponent } from './details-section/two-images/two-images.component';
 
 @NgModule({
     declarations: [
@@ -18,7 +20,9 @@ import { ArchitectureComponent } from './details-section/architecture/architectu
         ImageComponent,
         TextComponent,
         ImagesComponent,
-        ArchitectureComponent
+        ArchitectureComponent,
+        IconsComponent,
+        TwoImagesComponent
     ],
     imports: [
         CommonModule,
@@ -32,7 +36,9 @@ import { ArchitectureComponent } from './details-section/architecture/architectu
         ImageComponent,
         TextComponent,
         ImagesComponent,
-        ArchitectureComponent
+        ArchitectureComponent,
+        IconsComponent,
+        TwoImagesComponent
     ],
     providers: [],
 })

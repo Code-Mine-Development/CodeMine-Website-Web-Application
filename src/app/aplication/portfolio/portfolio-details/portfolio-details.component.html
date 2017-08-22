@@ -1,14 +1,19 @@
+
+<div class="bg"></div>
+<svg class="topTriangle" viewBox="0,0 100,100">
+  <polygon class="huge_screen" points="0,0 100,0 100,100" fill="#ffffff"></polygon>
+</svg>
+<svg class="bottomTriangle" viewBox="0,0 100,100">
+  <polygon class="huge_screen" points="0,0 0,100 100,100" fill="#ffffff"></polygon>
+</svg>
+
 <section *ngFor="let element of details.detailsTemplate" [ngSwitch]="element.section">
   <app-portfolio-details-header *ngSwitchCase="'header'" [description]="element.description"  [logo]="details.thumbnail" [title]="element.title"></app-portfolio-details-header>
   <app-image *ngSwitchCase="'image'" [image]="element.image" [title]="element.title" [small]="element.small"></app-image>
   <app-text *ngSwitchCase="'text'" [texts]="element.text" [align]="element.align"></app-text>
   <app-images *ngSwitchCase="'4images'" [title]="element.title" [images]="element.images"></app-images>
   <app-architecture *ngSwitchCase="'architecture'" [tools]="tools" [technologies]="technologies" [currentTechnologies]="details.technologies" [currentTools]="details.tools" (navigate)="navigate($event)"></app-architecture>
-</section>
+  <app-icons *ngSwitchCase="'icons'" [icons]="element.icons"></app-icons>
+  <app-two-images *ngSwitchCase="'2images'" [images]="element.images"></app-two-images>
 
-<svg viewBox="0,0 100,900">
-  <polygon class="huge_screen" points="0,0 100,100 100,250 0,150" fill="#ffdf00"></polygon>
-  <polygon class="medium_screen" points="0,0 100,100 100,300 0,200" fill="#ffdf00"></polygon>
-  <polygon class="small_screen" points="0,0 100,100 100,500 0,400" fill="#ffdf00"></polygon>
-  <polygon class="extra_small_screen" points="0,0 100,100 100,900 0,800" fill="#ffdf00"></polygon>
-</svg>
+</section>

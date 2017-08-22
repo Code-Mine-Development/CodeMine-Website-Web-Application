@@ -9,6 +9,8 @@ import {TranslateModule} from '@ngx-translate/core';
 import {LocalizeRouterModule} from 'localize-router';
 import {RouterModule} from '@angular/router';
 import { OfferThumbnailsComponent } from './offer-thumbnails/offer-thumbnails.component';
+import { CarouselElementTextComponent } from './carousel/carousel-element-text.component';
+import { CarouselElementImageComponent } from './carousel/carousel-element-image.component';
 
 @NgModule({
     declarations: [
@@ -16,7 +18,9 @@ import { OfferThumbnailsComponent } from './offer-thumbnails/offer-thumbnails.co
         ButtonComponent,
         SquareImageComponent,
         CloseComponent,
-        OfferThumbnailsComponent
+        OfferThumbnailsComponent,
+        CarouselElementTextComponent,
+        CarouselElementImageComponent
     ],
     imports: [
         CommonModule,

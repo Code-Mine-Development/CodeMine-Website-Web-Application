@@ -1,12 +1,7 @@
-<div class="carousel">
-    <ul class="carousel-list">
-        <li class="carousel-list-item" #item *ngFor="let image of data" [ngStyle]="{'background-image': 'url(' + image.mainImage + ')', 'transition': 'all ' + (transition/1000) + 's'}">
-          <div class="carousel-desc">
-            <div class="overlay"></div>
-            <h1>{{image.title | translate}}</h1>
-            <h3>{{image.subtitle | translate}}</h3>
-            <a [routerLink]="'/portfolio' | localize" routerLinkActive="active" class="btn btn-large btn-white">{{'PORTFOLIO.checkPortfolio' | translate}}</a>
-          </div>
-        </li>
-    </ul>
-</div>
+<app-carousel-element-text [title]="data[currentElement].title" [subTitle]="data[currentElement].subTitle"></app-carousel-element-text>
+<app-carousel-element-image *ngFor="let image of data; let i = index"
+                            [title]="image.title"
+                            [imgUrl]="image.mainImage"
+                            [index]="i"
+                            [currentIndex]="currentElement"></app-carousel-element-image>
+

@@ -1,0 +1,6 @@
+<section>
+  <figure *ngFor="let image of images">
+    <figcaption *ngIf="image.title">{{image.title | translate}}</figcaption>
+    <img [class.margin]="!image.title" [src]="image.url" alt="Portfolio detail presentation image">
+  </figure>
+</section>

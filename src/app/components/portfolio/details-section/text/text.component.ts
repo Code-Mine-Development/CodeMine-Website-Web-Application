@@ -1,18 +1,21 @@
-import {Component, OnInit, Input} from '@angular/core';
+import {Component, OnInit, Input, HostBinding, OnChanges} from '@angular/core';
 
 @Component({
   selector: 'app-text',
   templateUrl: './text.component.html',
   styleUrls: ['./text.component.scss']
 })
-export class TextComponent implements OnInit {
+export class TextComponent implements OnChanges {
+
+  @HostBinding('class.align-left') alignClass;
 
   @Input() texts:[{}];
   @Input() align:string;
 
   constructor() { }
 
-  ngOnInit() {
+  ngOnChanges() {
+    this.alignClass = this.align === "left";
   }
 
 }
