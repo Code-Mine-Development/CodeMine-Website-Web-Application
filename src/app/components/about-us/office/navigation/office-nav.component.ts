@@ -70,7 +70,7 @@ export class OfficeNavComponent {
     this.modelNavigateChange.emit(this.modelNavigate);
   }
 
-  private checkFirefox() {
+  checkFirefox() {
     return navigator.userAgent.toLowerCase().indexOf('firefox') === -1;
   }
 
