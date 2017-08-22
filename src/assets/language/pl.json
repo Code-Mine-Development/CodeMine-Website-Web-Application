@@ -151,6 +151,7 @@
     "checkPortfolio": "sprawdź nasze portfolio",
     "BrighterVision":{
       "title": "Brigter Vision Growth Platform",
+      "subTitle":"Aplikacja dla amerykańskich terapeutów",
       "shortDescription": "Aplikacja skierowana do amerykańskich terapeutów, pozwalająca na przeglądanie puli dostępnych postów oraz ich publikację w formie bloga.",
       "description": {
         "part1": "Brighter Vision Growth Platform jest odpowiedzią na zjawisko braku czasu poświęconego na marketing – jak chociażby prowadzenie bloga, zauważalnego wśród amerykańskich terapeutów, którzy całą swoją energię przeznaczają na zarządzanie własną praktyką, dbając o każdy, nawet najmniejszy szczegół.",
@@ -168,6 +169,7 @@
     },
     "telecom":{
       "title": "E-commerce dla telecomu",
+      "subTitle":"Platforma e-commerce dla wiodących operatorów telekomunikacyjnych w Europie",
       "shortDescription": "Samodzielne moduły oprogramowania przyczyniające się do stworzenia nowoczesnej platformy e-commerce dla wiodących operatorów telekomunikacyjnych w Europie.",
       "description":{
         "part1": "Od początku 2017 roku współpracujemy z dostawcą oprogramowania, rozpowszechniającego swoje rozwiązania wśród wielu wiodących firm z branży telekomunikacyjnej na rynku niemieckim, holenderskim, indyjskim oraz tureckim.",
@@ -185,6 +187,7 @@
     },
     "exchange":{
       "title": "Internetowy system wymiany walut",
+      "subTitle":"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
       "shortDescription": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
       "description":{
 
@@ -192,6 +195,7 @@
     },
     "MDLinking":{
       "title": "MDLinking",
+      "subTitle":"Sieć społecznościowa dla lekarzy z całego świata",
       "shortDescription": "Sieć społecznościowa umożliwiająca prywatną komunikację lekarzy z całego świata i przyczyniająca się do polepszania jakości opieki medycznej.",
       "description":{
         "part1": "MDLinking to platforma umożliwiająca prywatną komunikację między lekarzami z całego świata, przyczyniając się do polepszania jakości opieki medycznej. Serwis pozwala na wzajemną konsultację i dzielenie się wiedzą wśród specjalistów w zamkniętym i bezpiecznym środowisku, a utworzone profile użytkowników funkcjonują ponadto jako wizytówki/ CV dla potencjalnych pracodawców.",
@@ -215,6 +219,7 @@
     },
     "MidOceanBrands":{
       "title": "Mid Ocean Brands Reporting System",
+      "subTitle":"Planowanie wydajnej produkcji",
       "shortDescription": "Kompleksowe narzędzie służące do planowania wydajności produkcji dla firmy zajmującej się wykonywaniem nadruków graficzne na różnego rodzaju gadżetach.",
       "description":{
         "before": "Przed",
@@ -231,6 +236,7 @@
     },
     "SmartHome":{
       "title": "System zarządzania inteligentnymi domami",
+      "subTitle":"System dostosowany do nowych wymagań technologicznych",
       "shortDescription": "System do zarządzania inteligentnymi domami, konieczny do dostosowania do nowych wymagań technologicznych.",
       "description":{
         "part1": "W 2016 roku mieliśmy okazję współtworzyć oprogramowanie do zarządzania inteligentnymi domami dla naszego norweskiego klienta, będącego jednym z wiodących dostawców tego typu rozwiązań na swoim rynku. Po fuzji, w jaką wszedł on wraz z drugą największą firmą z tej samej branży, niezbędne okazało się dostosowanie istniejącego oprogramowania do komunikacji z urządzeniami obsługującymi protokół ZigBee.",
@@ -240,6 +246,7 @@
     },
     "Tandarts":{
       "title": "Tandarts.com",
+      "subTitle":"Aplikacja zrzeszająca praktyki dentystyczne na terenie Holandii",
       "shortDescription": "Aplikacja zrzeszająca praktyki dentystyczne na terenie Holandii, pozwalająca użytkownikom wyszukać najlepszych specjalistów z okolicy i bezpośrednio umówić się na wizytę.",
       "description":{
         "tools": "Narzędzia",
@@ -255,6 +262,7 @@
     },
     "Tripbuzz":{
       "title": "Tripbuzz",
+      "subTitle":"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
       "shortDescription": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
       "description":{
         "part1": ""
@@ -262,6 +270,7 @@
     },
     "ZorgIndicator":{
       "title": "ZorgIndicator",
+      "subTitle":"Platforma umożliwiająca pacjentom wyszukanie najlepszych szpitali w okolicy",
       "shortDescription": "Platforma umożliwiająca pacjentom wyszukanie najlepszych szpitali w okolicy, z uwzględnieniem ich oceny, statystyk w leczeniu oraz liczby wolnych łóżek.",
       "description":{
         "part1": "Jako platforma pomagająca w wyszukiwaniu najlepszych szpitali w okolicy, ZorgIndicator został zbudowany z myślą o pacjentach chcących w przystępny sposób uzyskać informacje o ilości szpitalnych łóżek, statystykach w leczeniu chorób czy ocenach innych pacjentów dla danej jednostki.",

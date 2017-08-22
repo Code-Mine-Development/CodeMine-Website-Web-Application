@@ -15,7 +15,7 @@ export class CarouselComponent implements OnInit, OnDestroy {
   @Output() navigate = new EventEmitter();
 
   interval;
-  currentElement: number = 0;
+  currentElement = 0;
 
   constructor() {
   }

@@ -10,7 +10,7 @@ export interface Portfolio extends Tags, PortfolioDetails {
     description: string;
     mainImage: string;
     thumbnail: string;
-    technologies:[string];
-    tools:[string];
+    technologies: [string];
+    tools: [string];
     homePage: boolean;
 }

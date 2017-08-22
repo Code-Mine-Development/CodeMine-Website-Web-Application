@@ -23,8 +23,7 @@ export class PortfolioDetailsComponent implements OnInit {
               private route: ActivatedRoute,
               private router: Router,
               private localize: LocalizeRouterService,
-              private prevPosition:PreviousPositionService
-              ) {
+              private prevPosition: PreviousPositionService) {
   }
 
   ngOnInit() {
@@ -34,7 +33,7 @@ export class PortfolioDetailsComponent implements OnInit {
 
   }
 
-  parseParams(){
+  parseParams() {
     this.route.params
       .subscribe(
         (params: Params) => {
@@ -44,24 +43,24 @@ export class PortfolioDetailsComponent implements OnInit {
       );
   }
 
-  setTechnologiesAndTools(){
+  setTechnologiesAndTools() {
     this.route.data.subscribe((data) => {
       this.technologies = data['technologies'];
       this.tools = data['tools'];
     });
   }
 
-  checkDetails(details: Portfolio, id:string) {
+  checkDetails(details: Portfolio, id: string) {
     const link = <string>this.localize.translateRoute('/portfolio');
     if (!details) {
       return this.router.navigateByUrl(link);
     }
-    this.prevPosition.setBackTo("/portfolio/"+id);
+    this.prevPosition.setBackTo('/portfolio/' + id);
     this.details = details;
   }
 
-  navigate( url:string ){
-    let translatedUrl = <string> this.localize.translateRoute(url);
+  navigate(url: string) {
+    const translatedUrl = <string> this.localize.translateRoute(url);
     this.router.navigateByUrl(translatedUrl);
   }
 }

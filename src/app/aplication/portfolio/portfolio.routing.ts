@@ -10,7 +10,7 @@ import {TechnologiesResolver} from '../offer/services/technologies.resolver';
 import {ToolsResolver} from '../offer/services/tools.resolver';
 
 const portfolioRoutes: Routes = [
-    {path: '', component: PortfolioComponent, resolve: { portfolio: PortfolioResolver },children: [
+    {path: '', component: PortfolioComponent, resolve: { portfolio: PortfolioResolver }, children: [
         {path: '', component: PortfolioListComponent },
         {path: ':id',  component: PortfolioDetailsComponent,
           resolve: {

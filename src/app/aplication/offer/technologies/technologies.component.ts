@@ -23,12 +23,12 @@ export class TechnologiesComponent implements OnChanges {
     this.parseTechnologies();
   }
 
-  parseTechnologies(){
+  parseTechnologies() {
     Object.keys(this.Technologies).forEach((key) => {
       this.elements.push({
         key: key,
         icon: this.Technologies[key].icon,
-        url: '/technologies/'+key
+        url: '/technologies/' + key
       })
     });
   }

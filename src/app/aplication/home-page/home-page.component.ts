@@ -26,8 +26,8 @@ export class HomePageComponent implements OnInit {
       });
   }
 
-  onNavigate(url:string){
-    let translate = <string> this.localize.translateRoute(url);
+  onNavigate(url: string){
+    const translate = <string> this.localize.translateRoute(url);
     this.router.navigateByUrl(translate);
   }
 }
