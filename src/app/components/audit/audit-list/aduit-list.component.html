@@ -1,15 +1,11 @@
 <h2>{{title}}</h2>
 <span class="white"><h4>{{listTitle}}</h4></span>
-<div class="column" id="column "
-    >
-<ul class="list">
-  <li
-    class="listItem"
-    *ngFor="let item of listData"
-    app-list-element
-    [item]="item"
-    [source]="source"
-  >
-  </li>
-</ul>
+<div class="column" id="column ">
+  <div class="list">
+    <app-list-element
+      class="listItem"
+      *ngFor="let item of listData"
+      [item]="item"
+      [source]="source"></app-list-element>
+  </div>
 </div>

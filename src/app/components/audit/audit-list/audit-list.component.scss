@@ -1,10 +1,13 @@
 h2, h4, span{
   text-align: center;
 }
-
-  ul.list{
+  .column{
+    height: 85%;
+  }
+  div.list{
     background: #fff;
-
+    height:100%;
+    box-sizing: border-box;
     margin-top: 4em;
     padding: 4em 0;
     list-style: none;
@@ -14,8 +17,5 @@ h2, h4, span{
     box-shadow: 10px 20px 50px 0px rgba(161, 161, 161, 0.35);
 
     border-radius:2px;
-    li{
-      margin:2em auto;
-    }
   }
 

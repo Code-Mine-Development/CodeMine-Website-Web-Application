@@ -20,7 +20,7 @@ export class SocialServiceComponent {
   @Input() socialName: string;
   @Input() link: string;
 
-  @Output('hoverColor') hoverStream = new EventEmitter();
+  @Output() hoverColor = new EventEmitter();
 
   private defaultColor = '#000000';
 
@@ -37,6 +37,6 @@ export class SocialServiceComponent {
 
   mouse(state: string) {
     const color = state === 'enter' ? this.color : this.defaultColor;
-    this.hoverStream.emit(color);
+    this.hoverColor.emit(color);
   }
 }
