@@ -1,11 +1,12 @@
+@import "../../../../assets/styles/mediaQueries";
 :host{
-  display:block;
+  display:flex;
   width:100%;
   overflow: hidden;
   position:relative;
-  padding:150px 0;
-}
-
-.btn{
-  margin-top:50px;
+  min-height: 600px;
+  align-items: center;
+  @media #{$home-information-vertical-mobile}{
+    min-height: 300px;
+  }
 }

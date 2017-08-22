@@ -1,12 +1,12 @@
 import {Component, HostBinding, HostListener, ElementRef, AfterViewInit, Input} from '@angular/core';
 
 @Component({
-  selector: '[app-list-element]',
+  selector: 'app-list-element',
   template: `
     <svg viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
       <path class="tick" d="M1 25l14 14L47 7"/>
     </svg>
-    {{ (source == 0 ? item.task : item.benefit) | translate }}
+    {{ (source === 0 ? item.task : item.benefit) | translate }}
   `,
   styles: [`
     @keyframes jumpIn {
@@ -25,7 +25,7 @@ import {Component, HostBinding, HostListener, ElementRef, AfterViewInit, Input} 
       }
     :host{
         width: 80%;
-        margin:0 auto;
+        margin:2em auto;
         display: inline-flex;
         position: relative;
         opacity:0;
