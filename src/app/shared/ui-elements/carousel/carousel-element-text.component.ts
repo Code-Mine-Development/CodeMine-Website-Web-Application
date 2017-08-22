@@ -1,4 +1,4 @@
-import {Component, OnInit, Input, OnChanges} from '@angular/core';
+import {Component, OnInit, Input, OnChanges, Output, EventEmitter} from '@angular/core';
 import {trigger, transition, animate, state, style, keyframes} from '@angular/animations';
 
 @Component({
@@ -6,7 +6,7 @@ import {trigger, transition, animate, state, style, keyframes} from '@angular/an
   template: `
     <h1 [@text-fade]="title" >{{parsedTitle | translate}}</h1>
     <h3 [@text-fade]="title" >{{subTitle | translate}}</h3>
-    <button type="button" class="btn btn-large btn-white">{{'PORTFOLIO.checkPortfolio' | translate}}</button>
+    <button (click)="onNavigate()" type="button" class="btn btn-large btn-white">{{'PORTFOLIO.checkPortfolio' | translate}}</button>
   `,
   styleUrls: ['./carousel-element-text.component.scss'],
   animations: [
@@ -23,6 +23,7 @@ export class CarouselElementTextComponent implements OnChanges {
 
   @Input() title: string;
   @Input() subTitle: string;
+  @Output() navigate = new EventEmitter();
   parsedTitle: string;
 
   constructor() {
@@ -32,6 +33,10 @@ export class CarouselElementTextComponent implements OnChanges {
     setTimeout( () => {
       this.parsedTitle = this.title;
     }, 500)
+  }
+
+  onNavigate(){
+    this.navigate.emit();
   }
 
 }

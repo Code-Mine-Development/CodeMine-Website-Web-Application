@@ -1,4 +1,4 @@
-<app-carousel-element-text [title]="data[currentElement].title" [subTitle]="data[currentElement].subTitle"></app-carousel-element-text>
+<app-carousel-element-text [title]="data[currentElement].title" [subTitle]="data[currentElement].subTitle" (navigate)="onNavigate()"></app-carousel-element-text>
 <app-carousel-element-image *ngFor="let image of data; let i = index"
                             [title]="image.title"
                             [imgUrl]="image.mainImage"
