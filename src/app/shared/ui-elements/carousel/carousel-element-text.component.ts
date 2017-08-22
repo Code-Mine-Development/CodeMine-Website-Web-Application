@@ -5,16 +5,16 @@ import {trigger, transition, animate, state, style, keyframes} from '@angular/an
   selector: 'app-carousel-element-text',
   template: `
     <h1 [@text-fade]="title" >{{parsedTitle | translate}}</h1>
-    <h3 [@text-fade]="title" >{{subTitle | translate}}</h3>
+    <h3 [@text-fade]="title" >{{parsedSubTitle | translate}}</h3>
     <button (click)="onNavigate()" type="button" class="btn btn-large btn-white">{{'PORTFOLIO.checkPortfolio' | translate}}</button>
   `,
   styleUrls: ['./carousel-element-text.component.scss'],
   animations: [
     trigger('text-fade', [
-      transition("* => *", animate('1s ease-in-out', keyframes([
-        style({opacity: 1, offset:0}),
-        style({opacity: 0, offset:.5}),
-        style({opacity: 1, offset:1})
+      transition('* => *', animate('1s ease-in-out', keyframes([
+        style({opacity: 1, offset: 0}),
+        style({opacity: 0, offset: .5}),
+        style({opacity: 1, offset: 1})
       ])))
     ])
   ]
@@ -25,6 +25,7 @@ export class CarouselElementTextComponent implements OnChanges {
   @Input() subTitle: string;
   @Output() navigate = new EventEmitter();
   parsedTitle: string;
+  parsedSubTitle: string;
 
   constructor() {
   }
@@ -32,6 +33,7 @@ export class CarouselElementTextComponent implements OnChanges {
   ngOnChanges() {
     setTimeout( () => {
       this.parsedTitle = this.title;
+      this.parsedSubTitle = this.subTitle;
     }, 500)
   }
 

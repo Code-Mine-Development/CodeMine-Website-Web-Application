@@ -12,10 +12,10 @@ import {trigger, transition, animate, state, style} from '@angular/animations';
   styleUrls: ['./carousel-element-image.component.scss'],
   animations: [
     trigger('sliderAnimation', [
-      state("hidden", style({left: '-100%'})),
-      state("visible", style({left: '0%'})),
-      transition("* => hidden", animate('1s ease-in-out')),
-      transition("hidden => visible", [
+      state('hidden', style({left: '-100%'})),
+      state('visible', style({left: '0%'})),
+      transition('* => hidden', animate('1s ease-in-out')),
+      transition('hidden => visible', [
         style({left: '100%'}),
         animate('1s ease-in-out')
       ])

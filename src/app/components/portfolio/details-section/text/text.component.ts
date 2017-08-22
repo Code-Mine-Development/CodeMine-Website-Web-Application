@@ -9,13 +9,13 @@ export class TextComponent implements OnChanges {
 
   @HostBinding('class.align-left') alignClass;
 
-  @Input() texts:[{}];
-  @Input() align:string;
+  @Input() texts: [{}];
+  @Input() align: string;
 
   constructor() { }
 
   ngOnChanges() {
-    this.alignClass = this.align === "left";
+    this.alignClass = this.align === 'left';
   }
 
 }

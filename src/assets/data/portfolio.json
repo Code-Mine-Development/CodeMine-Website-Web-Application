@@ -2,7 +2,7 @@
   {
     "link": "mdlinking",
     "title": "PORTFOLIO.MDLinking.title",
-    "subTitle": "Platform for healthcare professionals",
+    "subTitle": "PORTFOLIO.MDLinking.subTitle",
     "shortDescription": "PORTFOLIO.MDLinking.shortDescription",
     "description": "PORTFOLIO.MDLinking.description",
     "mainImage": "../assets/images/mdlinking-carousel.jpg",
@@ -159,7 +159,7 @@
   {
     "link": "brigter-vision-growth-platform",
     "title": "PORTFOLIO.BrighterVision.title",
-    "subTitle": "Platform for healthcare professionals",
+    "subTitle": "PORTFOLIO.BrighterVision.subTitle",
     "description": "PORTFOLIO.BrighterVision.description",
     "mainImage": "http://blog.oxforddictionaries.com/wp-content/uploads/mountain-names.jpg",
     "thumbnail": "http://blog.oxforddictionaries.com/wp-content/uploads/mountain-names.jpg",
@@ -271,7 +271,7 @@
   {
     "link": "telecom",
     "title": "PORTFOLIO.telecom.title",
-    "subTitle": "Platform for healthcare professionals",
+    "subTitle": "PORTFOLIO.telecom.subTitle",
     "description": "PORTFOLIO.telecom.description",
     "mainImage": "http://blog.oxforddictionaries.com/wp-content/uploads/mountain-names.jpg",
     "thumbnail": "http://blog.oxforddictionaries.com/wp-content/uploads/mountain-names.jpg",
@@ -382,7 +382,7 @@
   {
     "link": "exchange",
     "title": "PORTFOLIO.exchange.title",
-    "subTitle": "Platform for healthcare professionals",
+    "subTitle": "PORTFOLIO.exchange.subTitle",
     "description": "PORTFOLIO.exchange.description",
     "mainImage": "http://blog.oxforddictionaries.com/wp-content/uploads/mountain-names.jpg",
     "thumbnail": "http://blog.oxforddictionaries.com/wp-content/uploads/mountain-names.jpg",
@@ -492,7 +492,7 @@
   {
     "link": "mid-ocean-brands",
     "title": "PORTFOLIO.MidOceanBrands.title",
-    "subTitle": "Platform for healthcare professionals",
+    "subTitle": "PORTFOLIO.MidOceanBrands.subTitle",
     "description": "PORTFOLIO.MidOceanBrands.description",
     "mainImage": "http://blog.oxforddictionaries.com/wp-content/uploads/mountain-names.jpg",
     "thumbnail": "http://blog.oxforddictionaries.com/wp-content/uploads/mountain-names.jpg",
@@ -620,7 +620,7 @@
   {
     "link": "smart-home",
     "title": "PORTFOLIO.SmartHome.title",
-    "subTitle": "Platform for healthcare professionals",
+    "subTitle": "PORTFOLIO.SmartHome.subTitle",
     "description": "PORTFOLIO.SmartHome.description",
     "mainImage": "http://blog.oxforddictionaries.com/wp-content/uploads/mountain-names.jpg",
     "thumbnail": "http://blog.oxforddictionaries.com/wp-content/uploads/mountain-names.jpg",
@@ -726,7 +726,7 @@
   {
     "link": "tandarts",
     "title": "PORTFOLIO.Tandarts.title",
-    "subTitle": "Platform for healthcare professionals",
+    "subTitle": "PORTFOLIO.Tandarts.subTitle",
     "description": "PORTFOLIO.Tandarts.description",
     "mainImage": "http://blog.oxforddictionaries.com/wp-content/uploads/mountain-names.jpg",
     "thumbnail": "http://blog.oxforddictionaries.com/wp-content/uploads/mountain-names.jpg",
@@ -815,7 +815,7 @@
   {
     "link": "tripbuzz",
     "title": "PORTFOLIO.Tripbuzz.title",
-    "subTitle": "Platform for healthcare professionals",
+    "subTitle": "PORTFOLIO.Tripbuzz.subTitle",
     "description": "PORTFOLIO.Tripbuzz.description",
     "mainImage": "http://blog.oxforddictionaries.com/wp-content/uploads/mountain-names.jpg",
     "thumbnail": "http://blog.oxforddictionaries.com/wp-content/uploads/mountain-names.jpg",
@@ -927,7 +927,7 @@
   {
     "link": "zorgindicator",
     "title": "PORTFOLIO.ZorgIndicator.title",
-    "subTitle": "Platform for healthcare professionals",
+    "subTitle": "PORTFOLIO.ZorgIndicator.subTitle",
     "description": "PORTFOLIO.ZorgIndicator.description",
     "mainImage": "http://blog.oxforddictionaries.com/wp-content/uploads/mountain-names.jpg",
     "thumbnail": "http://blog.oxforddictionaries.com/wp-content/uploads/mountain-names.jpg",

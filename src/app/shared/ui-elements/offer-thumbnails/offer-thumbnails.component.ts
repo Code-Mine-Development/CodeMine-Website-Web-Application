@@ -8,7 +8,7 @@ import {OfferThumbnail} from '../../interface/offerThumbnail.interface';
 })
 export class OfferThumbnailsComponent implements OnInit {
 
-  @Input() elements:[OfferThumbnail];
+  @Input() elements: [OfferThumbnail];
   @Output() navigate = new EventEmitter();
 
   constructor() { }
@@ -17,7 +17,7 @@ export class OfferThumbnailsComponent implements OnInit {
     console.log(this.elements);
   }
 
-  onClick(url:string){
+  onClick(url: string){
     this.navigate.next(url);
   }
 }

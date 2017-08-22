@@ -15,10 +15,11 @@ export class ArchitectureComponent implements OnChanges {
 
   @Output() navigate = new EventEmitter();
 
-  elements:[OfferThumbnail];
+  elements: [OfferThumbnail];
 
 
-  constructor() { }
+  constructor() {
+  }
 
   ngOnChanges() {
     this.elements = <[OfferThumbnail]>[];
@@ -26,23 +27,23 @@ export class ArchitectureComponent implements OnChanges {
     this.parseTools();
   }
 
-  parseTechnologies(){
-    Object.keys(this.technologies).forEach( (key:string) => {
-      if(this.currentTechnologies.find( (currentKey) => (currentKey === key))) {
-        this.pushObject("technologies", key, this.technologies[key]);
+  parseTechnologies() {
+    Object.keys(this.technologies).forEach((key: string) => {
+      if (this.currentTechnologies.find((currentKey) => (currentKey === key))) {
+        this.pushObject('technologies', key, this.technologies[key]);
       }
     })
   }
 
-  parseTools(){
-    Object.keys(this.tools).forEach( (key:string) => {
-      if(this.currentTools.find( (currentKey) => (currentKey === key))) {
-        this.pushObject("tools", key, this.tools[key]);
+  parseTools() {
+    Object.keys(this.tools).forEach((key: string) => {
+      if (this.currentTools.find((currentKey) => (currentKey === key))) {
+        this.pushObject('tools', key, this.tools[key]);
       }
     })
   }
 
-  pushObject(urlSegment:string, key:string, object){
+  pushObject(urlSegment: string, key: string, object) {
     this.elements.push({
       key: key,
       url: `/${urlSegment}/${key}`,
@@ -50,7 +51,7 @@ export class ArchitectureComponent implements OnChanges {
     })
   }
 
-  onNavigate(url:string) {
+  onNavigate(url: string) {
     this.navigate.emit(url);
   }
 

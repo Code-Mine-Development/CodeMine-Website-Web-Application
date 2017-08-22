@@ -61,6 +61,7 @@ export class OfferElementsService {
     }
 
     element = Object.assign({}, elements[keys[elementIndex]]);
+
     element.nextUrl = keys[elementIndex + 1] || keys[0];
     element.prevUrl = keys[elementIndex - 1] || keys[keys.length - 1];
 
@@ -69,7 +70,7 @@ export class OfferElementsService {
       return this.stream.next(element);
     }
 
-    this.getIcon(<string>element.icon).subscribe(
+    this.getIcon(element.icon).subscribe(
       (iconObj) => {
         element.icon = iconObj;
         this.stream.next(element);
@@ -81,8 +82,8 @@ export class OfferElementsService {
     );
   }
 
-  getIcon(url: string) {
-    return this.http.get(iconDir + url)
+  getIcon(link: string) {
+    return this.http.get(iconDir + link)
       .map((response) => ( response.text() ))
       .map((svgBody) => ( svgBody.replace(/fill="[^"]*"/g, '') ))
       .map((svgFile: string) => {

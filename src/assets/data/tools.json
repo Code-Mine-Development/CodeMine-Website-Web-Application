@@ -39,7 +39,7 @@
     "description": "TOOLS.CircleCl.description",
     "icon": "circlecl/circlecl.svg",
     "img": "assets/images/angularCode.png",
-    "color": "#0a5066"
+    "color": "#026A82"
   },
   "docker":{
     "title": "Docker",
@@ -95,7 +95,7 @@
     "description": "TOOLS.Jira.description",
     "icon": "jira/jira.svg",
     "img": "assets/images/angularCode.png",
-    "color": "#205081"
+    "color": "#276191"
   },
   "jmeter":{
     "title": "JMeter",
