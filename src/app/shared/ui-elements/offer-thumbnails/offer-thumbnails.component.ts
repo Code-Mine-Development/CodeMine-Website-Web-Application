@@ -6,16 +6,12 @@ import {OfferThumbnail} from '../../interface/offerThumbnail.interface';
   templateUrl: './offer-thumbnails.component.html',
   styleUrls: ['./offer-thumbnails.component.scss']
 })
-export class OfferThumbnailsComponent implements OnInit {
+export class OfferThumbnailsComponent {
 
   @Input() elements: [OfferThumbnail];
   @Output() navigate = new EventEmitter();
 
   constructor() { }
-
-  ngOnInit() {
-    console.log(this.elements);
-  }
 
   onClick(url: string){
     this.navigate.next(url);

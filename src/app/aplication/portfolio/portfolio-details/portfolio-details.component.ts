@@ -3,7 +3,7 @@ import {PortfolioService} from '../services/portfolio.service';
 import {Portfolio} from '../interfaces/portfolio.interface';
 import {Params, ActivatedRoute, Router} from '@angular/router';
 import {LocalizeRouterService} from 'localize-router';
-import {OfferElementBeforePrepare} from '../../offerElementsDetails/interface/offerElementBeforePrepare';
+
 import {PreviousPositionService} from '../../../shared/services/previous-position.service';
 
 @Component({
@@ -14,8 +14,8 @@ import {PreviousPositionService} from '../../../shared/services/previous-positio
 export class PortfolioDetailsComponent implements OnInit {
 
   details: Portfolio;
-  technologies: {OfferElementBeforePrepare};
-  tools: {OfferElementBeforePrepare};
+  technologies: {};
+  tools: {};
   id: string;
 
 
@@ -27,10 +27,8 @@ export class PortfolioDetailsComponent implements OnInit {
   }
 
   ngOnInit() {
-
     this.parseParams();
     this.setTechnologiesAndTools();
-
   }
 
   parseParams() {
@@ -63,5 +61,6 @@ export class PortfolioDetailsComponent implements OnInit {
     const translatedUrl = <string> this.localize.translateRoute(url);
     this.router.navigateByUrl(translatedUrl);
   }
+
 }
 
