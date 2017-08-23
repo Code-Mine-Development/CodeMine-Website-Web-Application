@@ -1,4 +1,4 @@
-import {Component, OnChanges, Input, ViewChild, HostListener} from '@angular/core';
+import {Component, OnChanges, Input, ViewChild, HostListener, ChangeDetectorRef} from '@angular/core';
 import {Router, NavigationStart, NavigationEnd} from '@angular/router';
 import {LocalizeRouterService} from 'localize-router';
 
@@ -7,15 +7,13 @@ import {LocalizeRouterService} from 'localize-router';
   template: `
     <div class="wrapper">
       <img src="assets/images/logo.png" alt="" [class.hidden]="!logoVisible">
-      <div #triangle class="triangle-svg" [class.animate-logo]="!logoVisible">
-        <svg viewBox="0 0 21.89 25.89">
+      <div class="triangle-svg" [class.animate-logo]="!logoVisible">
+        <svg viewBox="0 0 25 25">
           <defs>
             <style>.cls-1{fill:#ffdf00;}</style>
           </defs>
-          <g id="Layer_one" data-name="layer one">
-            <polygon class="cls-1" [class.hidden] = 'homeVisible' [attr.points]="'0 25.86 21.89 25.86 0.05 0'"></polygon>
-            <polygon class="cls-1" [class.hidden] = '!homeVisible' [attr.points]="'0 25.86 21.89 25.86 21.89 11 11 0 0 11'"></polygon>
-          </g>
+          <polygon class="cls-1" [class.hidden] = 'homeVisible' [attr.points]="'0,25 25,25 0,0'"></polygon>
+          <polygon class="cls-1" [class.hidden] = '!homeVisible' [attr.points]="'0,10 0,25 25,25 25,10 12.5,0'"></polygon>
         </svg>
       </div>
     </div>
@@ -25,14 +23,13 @@ import {LocalizeRouterService} from 'localize-router';
 export class LogoComponent implements OnChanges {
 
   @Input() scrollTop: number;
-  @ViewChild('triangle') triangle;
 
   homeVisible = false;
   logoVisible = false;
 
   hidden = false;
 
-  constructor(private router: Router, private localize: LocalizeRouterService) {
+  constructor(private router: Router, private localize: LocalizeRouterService, private detect: ChangeDetectorRef) {
     this.checkHomeRoute();
   }
 
@@ -51,7 +48,9 @@ export class LogoComponent implements OnChanges {
   }
 
   logoAnimation() {
+    this.homeVisible = false;
     this.logoVisible = this.hidden ? false : this.scrollTop < 100;
+    this.checkHomeVisible();
   }
 
 
@@ -73,6 +72,7 @@ export class LogoComponent implements OnChanges {
         } else {
           this.hidden = false;
         }
+
         this.logoAnimation();
       }
     })

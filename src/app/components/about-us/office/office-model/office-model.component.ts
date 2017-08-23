@@ -26,7 +26,6 @@ import {DoomRestyle} from './models/doomRestyle.model';
 export class OfficeModelComponent implements OnInit, OnChanges {
   @Input() employees: Employees;
   @Input() modelNavigate: string;
-  topOffset: number = document.querySelector('.header')['offsetHeight'];
   windowWidth: number = window.innerWidth;
   dragging: MovingLayers = new MovingLayers();
   mouseMoving: MouseMove = new MouseMove(this.windowWidth);
@@ -51,7 +50,7 @@ export class OfficeModelComponent implements OnInit, OnChanges {
   }
 
   ngOnInit() {
-    this.doomRestyle.restyleElement(['.header', 'body'], ['color', 'overflow'], ['black', 'auto']);
+    // this.doomRestyle.restyleElement(['.header', 'body'], ['color', 'overflow'], ['black', 'auto']);
     this.mouseMoving.playAnimation();
   }
 

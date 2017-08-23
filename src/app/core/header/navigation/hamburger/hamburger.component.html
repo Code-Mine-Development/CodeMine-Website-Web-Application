@@ -15,3 +15,5 @@
 <section class="languages" [class.active]="active">
   <p [class.active]="translate.currentLang === lang" *ngFor="let lang of translate.getLangs()" (click)="onLanguageChange(lang)"> {{ 'NAVIGATION.'+lang | translate}}</p>
 </section>
+
+<div class="background" [class.active]="active"></div>
