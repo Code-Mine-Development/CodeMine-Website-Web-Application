@@ -15,7 +15,7 @@ import {TwoImagesComponent} from './details-section/two-images/two-images.compon
 @Component({
   selector: 'app-portfolio-details-generator',
   template: ``,
-  styleUrls: ['./portfolio-details-generator.component.scss']
+  styles: ['']
 })
 export class PortfolioDetailsGeneratorComponent implements OnInit, OnDestroy {
 
