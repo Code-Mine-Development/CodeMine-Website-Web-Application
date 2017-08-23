@@ -6,10 +6,11 @@
     "shortDescription": "PORTFOLIO.MDLinking.shortDescription",
     "description": "PORTFOLIO.MDLinking.description",
     "mainImage": "../assets/images/mdlinking-carousel.jpg",
-    "thumbnail": "../assets/images/portfolio-images/mdlinking_logo.svg",
+    "thumbnail": "../assets/icons/mdlinking/MDlinking.svg",
     "detailsTemplate": [
       {
         "section": "header",
+        "title": "PORTFOLIO.MDLinking.title",
         "description": "PORTFOLIO.MDLinking.description.part1"
       },
       {
@@ -162,7 +163,7 @@
     "subTitle": "PORTFOLIO.BrighterVision.subTitle",
     "description": "PORTFOLIO.BrighterVision.description",
     "mainImage": "http://blog.oxforddictionaries.com/wp-content/uploads/mountain-names.jpg",
-    "thumbnail": "http://blog.oxforddictionaries.com/wp-content/uploads/mountain-names.jpg",
+    "thumbnail": "../assets/icons/brighter/Brighter.svg",
     "detailsTemplate": [
       {
         "section": "header",
@@ -495,7 +496,7 @@
     "subTitle": "PORTFOLIO.MidOceanBrands.subTitle",
     "description": "PORTFOLIO.MidOceanBrands.description",
     "mainImage": "http://blog.oxforddictionaries.com/wp-content/uploads/mountain-names.jpg",
-    "thumbnail": "http://blog.oxforddictionaries.com/wp-content/uploads/mountain-names.jpg",
+    "thumbnail": "../assets/icons/midocean/MidOcean.svg",
     "detailsTemplate": [
       {
         "section": "header",
