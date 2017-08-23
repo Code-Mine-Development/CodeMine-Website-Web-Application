@@ -6,20 +6,35 @@
   justify-content: space-between;
   width:100%;
   height:60px;
-  position:fixed;
   left:0;
   top:0;
   z-index: 10000;
+  &.active{
+    position:fixed;
+    height: 100vh;
+  }
+  &>*{
+    position:relative;
+    z-index: 10001;
+  }
+}
+
+.background{
+  pointer-events: none;
+  position:fixed;
+  z-index: 10000;
+  top:0;
+  left:0;
+  width:100%;
+  height: 100vh;
   transition: background .5s;
   &.active{
+    pointer-events: initial;
     background: #000000;
-    height: 100vh;
   }
 }
 
 .hamburger{
-  margin-top:20px;
-  margin-right:20px;
   width:36px;
   height:36px;
   display:flex;
@@ -35,6 +50,8 @@
   }
 
   &.active{
+    margin-top:20px;
+    margin-right:20px;
     transform:scale(1.2) translateX(-46%);
     .first{
       transform: rotate(-133deg) translate(-46%);
