@@ -1,4 +1,4 @@
-import {Component, Input, EventEmitter, Output, OnChanges} from '@angular/core';
+import {Component, Input, EventEmitter, Output, OnChanges, OnInit} from '@angular/core';
 import {OfferThumbnail} from '../../../../shared/interface/offerThumbnail.interface';
 
 @Component({
@@ -6,7 +6,7 @@ import {OfferThumbnail} from '../../../../shared/interface/offerThumbnail.interf
   templateUrl: './architecture.component.html',
   styleUrls: ['./architecture.component.scss']
 })
-export class ArchitectureComponent implements OnChanges {
+export class ArchitectureComponent implements OnInit {
 
   @Input() tools;
   @Input() technologies;
@@ -21,7 +21,7 @@ export class ArchitectureComponent implements OnChanges {
   constructor() {
   }
 
-  ngOnChanges() {
+  ngOnInit() {
     this.elements = <[OfferThumbnail]>[];
     this.parseTechnologies();
     this.parseTools();

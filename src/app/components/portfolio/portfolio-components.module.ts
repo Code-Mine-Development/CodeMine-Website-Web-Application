@@ -12,6 +12,7 @@ import { ImagesComponent } from './details-section/images/images.component';
 import { ArchitectureComponent } from './details-section/architecture/architecture.component';
 import { IconsComponent } from './details-section/icons/icons.component';
 import { TwoImagesComponent } from './details-section/two-images/two-images.component';
+import { PortfolioDetailsGeneratorComponent } from './portfolio-details-generator.component';
 
 @NgModule({
     declarations: [
@@ -22,7 +23,8 @@ import { TwoImagesComponent } from './details-section/two-images/two-images.comp
         ImagesComponent,
         ArchitectureComponent,
         IconsComponent,
-        TwoImagesComponent
+        TwoImagesComponent,
+        PortfolioDetailsGeneratorComponent
     ],
     imports: [
         CommonModule,
@@ -32,15 +34,18 @@ import { TwoImagesComponent } from './details-section/two-images/two-images.comp
     ],
     exports: [
         PortfolioProjectComponent,
-        PortfolioDetailsHeaderComponent,
-        ImageComponent,
-        TextComponent,
-        ImagesComponent,
-        ArchitectureComponent,
-        IconsComponent,
-        TwoImagesComponent
+        PortfolioDetailsGeneratorComponent
     ],
     providers: [],
+    entryComponents: [
+      PortfolioDetailsHeaderComponent,
+      ImageComponent,
+      TextComponent,
+      ImagesComponent,
+      ArchitectureComponent,
+      IconsComponent,
+      TwoImagesComponent,
+    ]
 })
 export class PortfolioComponentModule {
 }
