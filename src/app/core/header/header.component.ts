@@ -15,29 +15,6 @@ export class HeaderComponent implements OnInit {
 
   @HostBinding('style.display') visibility: string;
 
-  navigation = [
-    {
-      'title': 'NAVIGATION.about_as',
-      'href': 'aboutus'
-    },
-    {
-      'title': 'NAVIGATION.portfolio',
-      'href': 'portfolio'
-    },
-    {
-      'title': 'NAVIGATION.offer',
-      'href': 'offer'
-    },
-    {
-      'title': 'NAVIGATION.audit',
-      'href': 'audit'
-    },
-    {
-      'title': 'NAVIGATION.contact',
-      'href': 'contact'
-    }
-  ];
-
   scrollTop = 0;
   windowScrollTop = 0;
   homeInformationScrollTop = 0;
@@ -46,16 +23,9 @@ export class HeaderComponent implements OnInit {
   constructor(@Inject(DOCUMENT)
               private document: Document,
               private router: Router,
-              public translate: TranslateService,
-              private localize: LocalizeRouterService,
               private scrollInformationService: HomeInformationServices
             ) {}
 
-  changeLanguage(event: Event, lang: string) {
-    event.preventDefault();
-    this.localize.changeLanguage(lang);
-    this.translate.use(lang);
-  }
 
   ngOnInit() {
     this.router.events.subscribe((evt) => {

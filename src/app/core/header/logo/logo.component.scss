@@ -1,7 +1,9 @@
-@import "../../../assets/styles/colors.scss";
-@import "../../../assets/styles/mixins.scss";
-@import '../../../assets/styles/mediaQueries';
-
+@import "../../../../assets/styles/colors";
+@import "../../../../assets/styles/mixins";
+@import '../../../../assets/styles/mediaQueries';
+:host{
+  width:15%;
+}
 
 .wrapper {
   position: relative;
@@ -25,7 +27,7 @@
     position: absolute;
     bottom: 0;
     right: 0;
-    z-index: 999999999999;
+    z-index: 3500;
     width:32px;
     height:32px;
     transform-origin: top right;

@@ -1,0 +1,17 @@
+<div class="navbar">
+  <ul>
+    <li>
+      <div class="dropdown">
+        <div class="dropbtn">{{ translate.currentLang }}</div>
+        <div class="dropdown-content">
+          <a href="#" (click)="onChangeLanguage($event, lang)" *ngFor="let lang of translate.getLangs()" >
+            <span *ngIf="lang!= translate.currentLang">{{lang}}</span>
+          </a>
+        </div>
+      </div>
+    </li>
+    <li *ngFor="let nav of navigation" routerLinkActive="active">
+      <span [routerLink]="'/'+ nav.href | localize">{{ nav.title | translate }}</span>
+    </li>
+  </ul>
+</div>

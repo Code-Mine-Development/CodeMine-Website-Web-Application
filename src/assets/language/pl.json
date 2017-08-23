@@ -292,7 +292,11 @@
     "portfolio": "portfolio",
     "offer": "oferta",
     "audit": "audit",
-    "contact": "kontakt"
+    "contact": "kontakt",
+    "pl": "polski",
+    "en": "english",
+    "de": "deutch",
+    "nor": "norsk"
   },
   "ABOUT_US":{
     "showDescription": "Zobacz Opis",
