@@ -20,7 +20,7 @@ import {LocalizeRouterService} from 'localize-router';
       </div>
     </div>
   `,
-  styleUrls: ['./logo.component.scss']
+  styleUrls: ['logo.component.scss']
 })
 export class LogoComponent implements OnChanges {
 

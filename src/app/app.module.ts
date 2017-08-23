@@ -27,6 +27,7 @@ import {AuditResolver} from './aplication/audit/services/audit.resolver';
 import {PreviousPositionService} from './shared/services/previous-position.service'
 
 import {AppComponent} from './app.component';
+
 export function createTranslateLoader(http: Http) {
   return new TranslateHttpLoader(http, './assets/language/', '.json');
 }
@@ -34,8 +35,7 @@ export function createTranslateLoader(http: Http) {
 
 @NgModule({
   declarations: [
-    AppComponent,
-
+    AppComponent
   ],
   imports: [
     BrowserModule,
