@@ -18,6 +18,8 @@
     margin-top:50px;
     transition: all .5s;
     outline: none;
+    box-shadow: 7px 10px 30px rgba(161,161,161,.35);
+    text-shadow: 3px 3px 15px rgba(51, 51, 51, 0.64);
     &:hover{
       background: #ffffff;
       color:#000000;

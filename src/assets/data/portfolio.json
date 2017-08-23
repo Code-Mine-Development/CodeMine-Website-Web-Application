@@ -267,7 +267,7 @@
       "java",
       "php"
     ],
-    "homePage": true
+    "homePage": false
   },
   {
     "link": "telecom",
@@ -378,7 +378,7 @@
       "java",
       "php"
     ],
-    "homePage": true
+    "homePage": false
   },
   {
     "link": "exchange",
@@ -488,7 +488,7 @@
       "php",
       "javascript"
     ],
-    "homePage": true
+    "homePage": false
   },
   {
     "link": "mid-ocean-brands",
@@ -616,7 +616,7 @@
     "technologies": [
       "java"
     ],
-    "homePage": true
+    "homePage": false
   },
   {
     "link": "smart-home",
@@ -722,7 +722,7 @@
     "technologies": [
       "php"
     ],
-    "homePage": true
+    "homePage": false
   },
   {
     "link": "tandarts",
@@ -923,7 +923,7 @@
       "java",
       "php"
     ],
-    "homePage": true
+    "homePage": false
   },
   {
     "link": "zorgindicator",
@@ -1030,6 +1030,6 @@
       "php",
       "javascript"
     ],
-    "homePage": false
+    "homePage": true
   }
 ]
