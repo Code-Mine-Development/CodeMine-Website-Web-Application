@@ -2,7 +2,8 @@
 
 :host{
   position:relative;
-  padding-bottom: 5%;
+  padding: 20px;
+  box-sizing: border-box;
   width:50%;
   display:flex;
   justify-content: center;
@@ -13,22 +14,13 @@
     width:25%;
   }
 }
-figure{
-  width:150px;
-  height:150px;
+figure, a{
+  width:100%;
+  height:100%;
   overflow: hidden;
   position:relative;
   font-size: 1rem;
   margin:0;
-  @media #{$phone-tablet}{
-    width: 250px;
-    height: 250px;
-    font-size: 1.2rem;
-  }
-  @media #{$xl-computer}{
-    width:290px;
-    height:290px;
-  }
 }
 img{
   position: absolute;
