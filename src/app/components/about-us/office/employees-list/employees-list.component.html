@@ -1,5 +1,5 @@
 <ul>
   <li *ngFor="let person of employees">
-    <app-employee [person]="person"></app-employee>
+    <app-employee [person]="person" (visible)="setVisible($event)" [currentVisible]="currentVisible"></app-employee>
   </li>
 </ul>

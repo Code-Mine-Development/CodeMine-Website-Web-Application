@@ -25,6 +25,11 @@ export class EmployeesListComponent {
 
   @Input() employees: Employees;
 
+  currentVisible = "";
+
+  constructor(@Inject(DOCUMENT) private document, private scrollService: ScrollToService) {
+  }
+
   @HostListener('scroll', ['$event'])
   OnScroll() {
     if (this.checkTopPosition()) {
@@ -32,10 +37,11 @@ export class EmployeesListComponent {
     }
   }
 
-  constructor(@Inject(DOCUMENT) private document, private scrollService: ScrollToService) {
-  }
-
   checkTopPosition() {
     return (this.document.body.scrollTop || this.document.documentElement.scrollTop) > 0;
+  }
+
+  setVisible(person){
+    this.currentVisible = person;
   }
 }
