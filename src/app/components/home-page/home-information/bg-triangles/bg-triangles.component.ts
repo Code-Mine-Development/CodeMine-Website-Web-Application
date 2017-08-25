@@ -39,7 +39,7 @@ export class BgTrianglesComponent implements AfterViewInit {
     if (window.innerWidth <= this.breakPoint)
       this.triangles = new Array();
     else
-      this.triangleGenerator(8)
+      this.triangleGenerator(7)
   }
 
   triangleGenerator( count: number ){
@@ -58,8 +58,8 @@ export class BgTrianglesComponent implements AfterViewInit {
       random = +Math.random().toFixed(0);
       triangle.size = random == 1 ? size.big : size.small;
 
-      random = +(Math.random() * 25).toFixed(0);
-      triangle.range = triangle.size == size.big ? 25 + random : 5 + random;
+      random = +(Math.random() * 15).toFixed(0);
+      triangle.range = triangle.size == size.big ? 10 + random : 5 + random;
 
       random = +Math.random().toFixed(0);
 

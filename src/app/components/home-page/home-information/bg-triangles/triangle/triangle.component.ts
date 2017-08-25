@@ -31,7 +31,7 @@ export class TriangleComponent implements OnInit, OnChanges, AfterViewInit {
   private maxTransformDistance = 70;
   private hideAnimationDuration = 1000;
   private randomMovingInterval;
-  calculatedScale = .6;
+  calculatedScale = 1;
 
   constructor( private scrollService: HomeInformationServices) { }
 
@@ -113,7 +113,7 @@ export class TriangleComponent implements OnInit, OnChanges, AfterViewInit {
   }
 
   calculateScale(factor: number = 1){
-    this.calculatedScale = factor * (1 + this.size / 5);
+    this.calculatedScale = factor * (this.size === 2 ? 1 : .7);
   }
 
 }
