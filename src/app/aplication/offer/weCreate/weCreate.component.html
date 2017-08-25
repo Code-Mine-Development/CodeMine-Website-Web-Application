@@ -4,10 +4,11 @@
 
   <div class="row">
     <div class="col" *ngFor="let item of WeCreate.features">
-      <div class="col-img" [routerLink]="'/wecreate/'+item.href | localize"
-           [ngStyle]="{'background-image': 'url(' + item.image + ')'}"></div>
-      <h3>{{item.name | translate}}</h3>
-      <p>{{item.description | translate }}</p>
+      <div class="col-img" [ngStyle]="{'background-image': 'url(' + item.image + ')'}"></div>
+      <div class="col-text">
+        <h3>{{item.name | translate}}</h3>
+        <p>{{item.description | translate }}</p>
+      </div>
     </div>
   </div>
 </div>

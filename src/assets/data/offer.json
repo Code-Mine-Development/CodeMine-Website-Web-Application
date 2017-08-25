@@ -36,6 +36,11 @@
         "name": "OFFER.features.mobileApps.title",
         "image": "https://images.pexels.com/photos/23049/pexels-photo.jpg?w=1260&h=750&auto=compress&cs=tinysrgb",
         "description": "OFFER.features.mobileApps.description"
+      },
+      {
+        "name": "OFFER.features.openForNew.title",
+        "image": "https://images.pexels.com/photos/23049/pexels-photo.jpg?w=1260&h=750&auto=compress&cs=tinysrgb",
+        "description": "OFFER.features.openForNew.description"
       }
     ]
   },
