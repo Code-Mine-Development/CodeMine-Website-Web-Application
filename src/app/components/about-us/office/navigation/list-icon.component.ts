@@ -1,4 +1,5 @@
 import {Component, OnInit, Input, Output, EventEmitter, OnChanges} from '@angular/core';
+import {IconModel} from './icons.model';
 
 @Component({
   selector: 'app-list-icon',
@@ -52,53 +53,29 @@ import {Component, OnInit, Input, Output, EventEmitter, OnChanges} from '@angula
 export class ListIconComponent implements OnInit, OnChanges {
   @Input() state: boolean;
   @Output() stateChange = new EventEmitter();
-  private duration = 300;
 
-  readonly FirstStatePoints = [
-    {
-      start: { x: 41.82, y: 26.30 },
-      end: { x: 79.23, y: 26.30}
-    },
-    {
-      start: { x: 41.82, y: 50 },
-      end: { x: 79.23, y: 50}
-    },
-    {
-      start: { x: 41.82, y: 73.01 },
-      end: { x: 79.23, y: 73.01}
-    }
-  ];
-  readonly SecondStatePoint = [
-    {
-      start: { x: 0, y: 100 },
-      end: { x: 50, y: 65}
-    },
-    {
-      start: { x: 50, y: 0 },
-      end: { x: 50, y: 65}
-    },
-    {
-      start: { x: 100, y: 100 },
-      end: { x: 50, y: 65}
-    }
-  ];
+  private iconModel = new IconModel();
+
+  private duration = 300;
   currentStatePoints;
   private currentAnimationDistance;
   private RAF;
   private start;
   private progress;
 
-  constructor() { }
+
+  constructor() {
+
+  }
 
   ngOnInit() {
-    this.currentStatePoints = this.copyObject( (!this.state ? this.FirstStatePoints : this.SecondStatePoint) );
+    this.currentStatePoints = !this.state ? this.iconModel.getListIcon() : this.iconModel.getModelIcon();
   }
 
   ngOnChanges() {
     if (!this.currentStatePoints) {
       return;
     }
-
     this.animatePosition();
   }
 
@@ -115,9 +92,9 @@ export class ListIconComponent implements OnInit, OnChanges {
 
   private getDistance() {
     this.currentAnimationDistance = [];
-    const target =  this.copyObject(!this.state ? this.FirstStatePoints : this.SecondStatePoint);
+    const target = !this.state ? this.iconModel.getListIcon() : this.iconModel.getModelIcon();
     target.forEach(
-      ( point, index ) => {
+      (point, index) => {
         this.currentAnimationDistance.push({
           start: {
             x: point.start.x - this.currentStatePoints[index].start.x,
@@ -137,40 +114,27 @@ export class ListIconComponent implements OnInit, OnChanges {
     }
 
     const end = this.start + this.duration,
-        progress = (timestamp - this.start) / this.duration;
+      progress = (timestamp - this.start) / this.duration;
 
-    this.setPoints(progress);
+    this.setPoints(progress > 1 ? 1 : progress);
 
-    if ( timestamp < end ) {
+    if (timestamp < end) {
       this.RAF = window.requestAnimationFrame(this.animationProgress.bind(this))
     }
   }
 
   setPoints(progress) {
-    const currentAdd = progress - (this.progress || 0)
+    const currentAdd = progress - (this.progress || 0);
     this.progress = progress;
     this.currentStatePoints = this.currentStatePoints.map(
-      ( line, index ) => {
+      (line, index) => {
         line.start.x += +(this.currentAnimationDistance[index].start.x * currentAdd).toFixed(2);
         line.start.y += +(this.currentAnimationDistance[index].start.y * currentAdd).toFixed(2);
         line.end.y += +(this.currentAnimationDistance[index].end.y * currentAdd).toFixed(2);
         line.end.x += +(this.currentAnimationDistance[index].end.x * currentAdd).toFixed(2);
         return line;
-      }
-    );
+      })
   }
 
-  copyObject( object ) {
-    if ( object instanceof  Object ) {
-      const objCopy = Object.assign( object instanceof Array ? [] : {}, object ),
-          keys = Object.keys(objCopy);
-      keys.forEach( (key) => {
-        if (objCopy[key] instanceof Object) {
-          objCopy[key] = this.copyObject(objCopy[key])
-        }
-      });
-      return objCopy;
-    }
-  }
 
 }

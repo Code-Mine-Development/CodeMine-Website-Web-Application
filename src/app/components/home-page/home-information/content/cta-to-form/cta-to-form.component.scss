@@ -12,16 +12,6 @@ section{
   max-width: 700px;
   text-align: center;
   padding: 0 5%;
-  button{
-    text-transform: uppercase;
-    background: #ffdf00;
-    padding: 20px 45px;
-    font-weight: 700;
-    font-size:16px;
-    margin-top: 40px;
-    outline:none;
-    border: none;
-  }
   @media #{$home-information-vertical-mobile}{
     h1{
       font-size:3.6rem;
@@ -33,7 +23,6 @@ section{
     }
     button{
       margin-top:20px;
-      padding: 10px 25px;
     }
   }
 }

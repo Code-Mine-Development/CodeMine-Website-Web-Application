@@ -1,10 +1,8 @@
-import {Component, OnInit, NgZone, Input, OnChanges} from '@angular/core';
+import {Component, OnInit, NgZone, Input, OnChanges, ViewChild, HostListener, AfterViewInit} from '@angular/core';
 import {trigger, animate, transition, style} from '@angular/animations';
 import {Employees} from '../interfaces/employees.interface';
 import {MovingLayers} from './models/movingLayers.model';
 import {MouseMove} from './models/mouseMove.model';
-import {DoomRestyle} from './models/doomRestyle.model';
-
 
 @Component({
   selector: 'app-office-model',
@@ -23,24 +21,28 @@ import {DoomRestyle} from './models/doomRestyle.model';
   ],
   host: { '[@JumpIn]': '' }
 })
-export class OfficeModelComponent implements OnInit, OnChanges {
+export class OfficeModelComponent implements OnInit, OnChanges, AfterViewInit {
   @Input() employees: Employees;
   @Input() modelNavigate: string;
+
+  @ViewChild('background') background;
+  @ViewChild('deskLayer') deskLayer;
+
   windowWidth: number = window.innerWidth;
   dragging: MovingLayers = new MovingLayers();
   mouseMoving: MouseMove = new MouseMove(this.windowWidth);
-  doomRestyle: DoomRestyle = new DoomRestyle();
 
-  deskActivated: number;
+  activeDeskPerson:Employees =  <Employees>{};
 
 
-  constructor( ngZone: NgZone ) {
-    window.onresize = () => {
-      ngZone.run(() => {
-        this.windowWidth = window.innerWidth;
-        this.mouseMoving.changeWidth(window.innerWidth);
-      });
-    };
+  constructor( private ngZone: NgZone ) {
+  }
+
+  @HostListener('window:resize',['$event']) onResize(){
+    this.ngZone.run(() => {
+      this.windowWidth = window.innerWidth;
+      this.mouseMoving.changeWidth(window.innerWidth);
+    });
   }
 
   ngOnChanges(changes) {
@@ -49,8 +51,12 @@ export class OfficeModelComponent implements OnInit, OnChanges {
     }
   }
 
+  ngAfterViewInit(){
+    this.mouseMoving.setElements(this.background, this.deskLayer);
+    this.dragging.setElements(this.background, this.deskLayer);
+  }
+
   ngOnInit() {
-    // this.doomRestyle.restyleElement(['.header', 'body'], ['color', 'overflow'], ['black', 'auto']);
     this.mouseMoving.playAnimation();
   }
 
@@ -62,8 +68,15 @@ export class OfficeModelComponent implements OnInit, OnChanges {
     this.mouseMoving.setMove(value)
   }
 
-  getDeskNumber(event) {
-    this.deskActivated = event;
+  getActivePerson(event) {
+    if(this.activeDeskPerson && this.activeDeskPerson.name){
+      return;
+    }
+    this.activeDeskPerson = event;
+  }
+
+  closePersonDetails(){
+    this.activeDeskPerson = <Employees>{};
   }
 
 }

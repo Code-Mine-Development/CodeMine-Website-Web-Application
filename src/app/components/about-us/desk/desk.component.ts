@@ -1,6 +1,6 @@
 import {
   Component, EventEmitter, HostBinding, HostListener, Input, OnChanges, OnInit, Output,
-  ViewChild
+  ViewChild, ElementRef
 } from '@angular/core';
 import {Employees} from '../../../aplication/about-us/interfaces/employees.interface';
 import {Coordinate} from '../office/office-model/models/coordinate.model';
@@ -8,7 +8,7 @@ import {ClosePersonService} from '../../../shared/services/close-person.service'
 @Component({
   selector: 'app-desk',
   template: `
-    <div id="front" #desk (click)="openPersonDetails()">
+    <div class="front" [class.horizontal]="person.deskCoordinate.variant === 1" #desk (click)="throwOpenPersonDetails()">
       <div class="deskOwner">
         <div class="col2" id="col">
           <img [src]="'assets/images/people/'+person.image.normal" [alt]="person.name">
@@ -23,52 +23,53 @@ import {ClosePersonService} from '../../../shared/services/close-person.service'
     </div>`,
   styleUrls: ['./desk.component.scss'],
 })
-export class DeskComponent implements OnInit {
+export class DeskComponent implements OnInit, OnChanges {
   @Input() person: Employees;
-  @Input() index: number;
+  @Input() bg: Element;
+  @Input() activePerson;
+  @Output() personActivated = new EventEmitter();
+
   @ViewChild('desk') desk;
   coordinate: Coordinate;
-  @Output() personActivated = new EventEmitter<number>();
-  @Input() people: Employees;
 
-  constructor(private closePersonService: ClosePersonService) {
+  constructor(private closePersonService: ClosePersonService, private elementRef: ElementRef) {
     this.closePersonService.registerCloseFunction().subscribe(() => this.closeCard());
   }
 
   ngOnInit() {
-    const person = this.person.deskCoordinate;
-    this.coordinate = new Coordinate(person.variant, person.top, person.left, this.desk);
+    this.coordinate = new Coordinate(this.person.deskCoordinate, this.elementRef, this.bg);
     this.prepareCoordinates();
+  }
+
+  ngOnChanges() {
+    if (this.activePerson && this.activePerson.name === this.person.name && this.activePerson.surname === this.person.surname) {
+      this.openCard();
+    } else {
+      this.closeCard();
+    }
   }
 
   prepareCoordinates() {
-    this.desk.nativeElement.style.top = this.coordinate.offsetTop();
-    this.desk.nativeElement.style.left = this.coordinate.offsetLeft();
-    this.desk.nativeElement.style.transform = this.coordinate.transform();
+
+    this.elementRef.nativeElement.style.top = this.coordinate.offsetTop();
+    this.elementRef.nativeElement.style.left = this.coordinate.offsetLeft();
+    this.elementRef.nativeElement.style.transform = this.coordinate.transform();
   }
 
-  @HostListener('mouseenter') mouseover() {
-    if (!this.coordinate.deskClicked) {
-      this.coordinate.hoverDesk(this.index);
-      this.personActivated.emit(
-        this.index
-      );
-    }
+  throwOpenPersonDetails() {
+    this.personActivated.emit(this.person);
   }
 
-  @HostListener('mouseleave') deskBack() {
-    if (!this.coordinate.deskClicked) {
-      this.coordinate.hoverOutDesk(this.index);
-    }
-  }
-
-  openPersonDetails() {
-    this.coordinate.showDetails(this.index);
+  openCard() {
+    this.coordinate.showDetails();
   }
 
   closeCard() {
+    if(!this.coordinate){
+      return;
+    }
     this.prepareCoordinates();
-    this.coordinate.moveDown(this.index);
+    this.coordinate.moveDown();
   }
 
 }

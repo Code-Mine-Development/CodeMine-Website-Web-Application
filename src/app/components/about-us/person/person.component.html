@@ -1,13 +1,12 @@
 <div id="personView" >
   <div id="personWrapper">
     <button (click)="closeButtonClicked()" ><img src="assets/images/arrows/x.svg"></button>
-    <div class="bg" [ngStyle]="{'background-image': 'url(./assets/images/people/'+person[ActivatedDeskId || 0].image.normal+'), url(./assets/images/people/'+person[ActivatedDeskId || 0].image.funny+')'}"></div>
+    <div class="bg" *ngIf="visibleElement?.image" [ngStyle]="{'background-image': 'url(./assets/images/people/'+visibleElement?.image?.normal+'), url(./assets/images/people/'+visibleElement?.image?.funny+')'}"></div>
     <div class="desc">
-      <h2>{{person[ActivatedDeskId || 0 ].name}} {{person[ActivatedDeskId || 0 ].surname}}</h2>
-      <h3>{{person[ActivatedDeskId || 0 ].position}}</h3>
+      <h2>{{visibleElement?.name}} {{visibleElement?.surname}}</h2>
+      <h3>{{visibleElement?.position}}</h3>
       <hr>
-      <p>{{person[ActivatedDeskId || 0 ].description | translate}}</p>
-      <strong>{{'PEOPLE.worksince' | translate}}<span>{{person[ActivatedDeskId || 0 ].since}} rok</span></strong>
+      <p>{{visibleElement?.description | translate}}</p>
     </div>
   </div>
 </div>

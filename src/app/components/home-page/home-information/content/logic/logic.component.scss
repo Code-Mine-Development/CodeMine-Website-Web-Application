@@ -70,11 +70,15 @@
       width: 65%;
       padding: 0 5%;
       h2{
-        font-size: 24px;
         margin:0 0 10px;
       }
       p{
         margin:0;
+      }
+    }
+    @media #{$home-information-vertical-small-mobile}{
+      h2{
+        font-size:2.4rem;
       }
     }
     @media #{$phone}{

@@ -1,16 +1,16 @@
 <div class="wrap" id="wrap"
-     [class.minimize] = " modelNavigate == 'minimize' "
+     [class.minimize]=" modelNavigate == 'minimize' "
      (mousemove)="mouseMove($event)"
      (mousedown)="mouseClick(false)"
      (mouseup)="mouseClick(true)">
-  <div id="officeBg"
-       [ngStyle]="{'background-image': 'url(./assets/images/office.svg)'}" >
+  <div #background [ngStyle]="{'background-image': 'url(./assets/images/office.svg)'}">
   </div>
 
-  <div id="deskLayer" class="draggable">
-    <app-desk #desk *ngFor="let person of employees, let i = index" id="desk{{i}}" [index]="i" [person]="person" [people]="employees" (personActivated)="getDeskNumber($event)"></app-desk>
+  <div #deskLayer class="draggable">
+    <app-desk #desk *ngFor="let person of employees, let i = index" [activePerson]="activeDeskPerson" [bg]="background"
+              [person]="person" (personActivated)="getActivePerson($event)"></app-desk>
     <app-door></app-door>
   </div>
 </div>
 
-<app-person  [person]="employees" [ActivatedDeskId]="deskActivated"></app-person>
+<app-person [person]="activeDeskPerson" (close)="closePersonDetails()"></app-person>

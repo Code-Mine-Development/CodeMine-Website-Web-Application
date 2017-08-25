@@ -1,11 +1,11 @@
-import { Component, OnInit, Input } from '@angular/core';
+import {Component, Input, HostListener, ElementRef, HostBinding} from '@angular/core';
 
 @Component({
   selector: 'app-instagram-photo',
   template: `
     <a [href]="image.link">
       <figure>
-        <img [src]="image.images.standard_resolution.url" alt="instagram photo" >
+        <img [src]="image.images.standard_resolution.url" alt="instagram photo" (load)="loaded()" >
         <figcaption>{{image.caption.text}}</figcaption>
          <div class="cover">
            <p>
@@ -18,13 +18,27 @@ import { Component, OnInit, Input } from '@angular/core';
   `,
   styleUrls: ['./instagram-photo.component.scss']
 })
-export class InstagramPhotoComponent implements OnInit {
+export class InstagramPhotoComponent {
 
   @Input() image;
+  @HostBinding('style.height') height;
 
-  constructor() { }
+  constructor( private elementRef: ElementRef ) { }
 
-  ngOnInit() {
+  @HostListener('window:resize',['$event']) resize(){
+    this.setHeight();
+  }
+
+  loaded(){
+    this.setHeight()
+  }
+
+  setHeight(){
+    this.height = this.getWidth();
+  }
+
+  getWidth(){
+    return window.getComputedStyle(this.elementRef.nativeElement).width;
   }
 
 }

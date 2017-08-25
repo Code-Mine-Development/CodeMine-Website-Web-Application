@@ -1,4 +1,4 @@
-import {Component, OnInit, Input} from '@angular/core';
+import {Component, OnInit, Input, Output, EventEmitter, OnChanges} from '@angular/core';
 
 @Component({
   selector: 'app-employee',
@@ -28,23 +28,33 @@ import {Component, OnInit, Input} from '@angular/core';
   `,
   styleUrls: ['./employee.component.scss']
 })
-export class EmployeeComponent implements OnInit {
+export class EmployeeComponent implements OnChanges {
 
-  @Input('person') person;
+  @Input() person;
+  @Input() currentVisible;
+  @Output() visible = new EventEmitter();
 
   descriptionVisible = false;
 
   constructor() { }
 
-  ngOnInit() {
+  ngOnChanges() {
+    if(this.currentVisible !== this.getId()){
+      this.descriptionVisible = false;
+    }
   }
 
   show() {
     this.descriptionVisible = true;
+    this.visible.emit(this.getId());
   }
 
   hide() {
     this.descriptionVisible = false;
+  }
+
+  getId(){
+    return this.person.name+this.person.surname;
   }
 
 }

@@ -13,8 +13,8 @@
       "description": "PEOPLE.przemyslaw.description",
       "since": 5,
       "deskCoordinate": {
-        "top": 323,
-        "left": 1170,
+        "top": 322,
+        "left": 1169,
         "variant": 1
       },
       "image":{
@@ -34,7 +34,7 @@
       },
       "deskCoordinate": {
         "top": 542,
-        "left": 791,
+        "left": 790,
         "variant": 1
       }
     },
@@ -50,7 +50,7 @@
       },
       "deskCoordinate": {
         "top": 644,
-        "left": 614,
+        "left": 613,
         "variant": 1
       }
     },
@@ -66,7 +66,7 @@
       },
       "deskCoordinate": {
         "top": 691,
-        "left": 532,
+        "left": 531,
         "variant": 1
       }
     },
@@ -82,7 +82,7 @@
       },
       "deskCoordinate": {
         "top": 435,
-        "left": 1384,
+        "left": 1383,
         "variant": 1
       }
     },
@@ -114,7 +114,7 @@
       },
       "deskCoordinate": {
         "top": 897,
-        "left": 176,
+        "left": 175,
         "variant": 1
       }
     },
@@ -130,7 +130,7 @@
       },
       "deskCoordinate": {
         "top": 944,
-        "left": 94,
+        "left": 93,
         "variant": 1
       }
     },
@@ -209,8 +209,8 @@
         "funny":"_V3B0392.jpg"
       },
       "deskCoordinate": {
-        "top": 1043,
-        "left": 267,
+        "top": 1044,
+        "left": 266,
         "variant": 1
       }
     },
