@@ -11,28 +11,27 @@ const data: SmoothMove = {
   translate: '0px'
 };
 let requestId;
+let background;
+let deskLayer;
 
 function animation() {
   data.x += (data.lFollowX - data.x) * data.friction;
   data.y += (data.lFollowY - data.y) * data.friction;
   data.translate = 'translate(' + data.x + 'px, ' + data.y + 'px)';
 
-  const bg = document.getElementById('officeBg'),
-    desks = document.getElementById('deskLayer');
-
-  if (!bg && !desks) {
+  if (!background && !deskLayer) {
     return;
   }
-
-  bg['style']['transform'] = data.translate;
-  desks['style']['transform'] = data.translate;
+  background['style']['transform'] = data.translate;
+  deskLayer['style']['transform'] = data.translate;
   requestId = window.requestAnimationFrame(animation);
 }
 
-function start() {
-  const bg = document.getElementById('officeBg');
+function start(bg, desk) {
   data.x = +bg.getAttribute('data-x');
   data.y = +bg.getAttribute('data-y');
+  background = bg;
+  deskLayer = desk;
   if (!requestId) {
     requestId = window.requestAnimationFrame(animation);
   }
@@ -46,12 +45,22 @@ function stop() {
 }
 
 export class MouseMove {
+  private background;
+  private deskLayer;
+
   constructor(public windowWidth: number) {
   }
 
-  move(event) {
-    const bg = document.getElementById('officeBg');
+  setElements(bg, deskLayer) {
+    this.background = bg.nativeElement;
+    this.deskLayer = deskLayer.nativeElement;
+  }
 
+  move(event) {
+    if(!this.background){
+      return;
+    }
+    const bg = this.background;
     data.lMouseX = Math.max(-100, Math.min(100, this.windowWidth / 2 - event.clientX));
     data.lMouseY = Math.max(-100, Math.min(100, this.windowWidth / 2 - event.clientY));
     data.lFollowX = (15 * data.lMouseX) / 100 + (+bg.getAttribute('data-x'));
@@ -59,6 +68,9 @@ export class MouseMove {
   }
 
   playAnimation() {
+    if(!this.background){
+      return;
+    }
     animation();
   }
 
@@ -67,6 +79,9 @@ export class MouseMove {
   }
 
   setMove(value: boolean) {
-    !value ? stop() : start();
+    if(!this.background){
+      return;
+    }
+    !value ? stop() : start(this.background, this.deskLayer);
   }
 }

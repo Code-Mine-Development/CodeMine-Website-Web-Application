@@ -124,7 +124,7 @@ export class ListIconComponent implements OnInit, OnChanges {
   }
 
   setPoints(progress) {
-    const currentAdd = progress - (this.progress || 0)
+    const currentAdd = progress - (this.progress || 0);
     this.progress = progress;
     this.currentStatePoints = this.currentStatePoints.map(
       (line, index) => {

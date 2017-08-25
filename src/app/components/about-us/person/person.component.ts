@@ -1,4 +1,4 @@
-import {Component, HostListener, Input, OnInit} from '@angular/core';
+import {Component, HostListener, Input, EventEmitter, Output, OnChanges, HostBinding} from '@angular/core';
 import {ClosePersonService} from '../../../shared/services/close-person.service';
 import {Employees} from '../../../aplication/about-us/interfaces/employees.interface';
 
@@ -7,10 +7,14 @@ import {Employees} from '../../../aplication/about-us/interfaces/employees.inter
   templateUrl: './person.component.html',
   styleUrls: ['./person.component.scss']
 })
-export class PersonComponent implements OnInit {
+export class PersonComponent implements OnChanges {
 
-  @Input() ActivatedDeskId;
   @Input() person: Employees;
+  @Output() close = new EventEmitter();
+
+  @HostBinding('class.visible') visible;
+
+  visibleElement;
 
   constructor(private closePersonService: ClosePersonService) {
   }
@@ -21,11 +25,17 @@ export class PersonComponent implements OnInit {
     }
   }
 
-  ngOnInit() {
+  ngOnChanges() {
+    if( this.person && this.person.name ){
+      this.visible = true;
+      this.visibleElement = this.person
+    } else {
+      this.visible = false;
+    }
   }
 
   closeButtonClicked() {
-    this.closePersonService.triggerClose();
+    this.close.emit();
   }
 
 }

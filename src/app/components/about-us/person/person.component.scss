@@ -6,14 +6,15 @@
   height: 600px;
   max-width: 1150px;
   width:100%;
-
+  pointer-events: none;
   position: absolute;
   left:50%;
   top:20vh;
-  display: none;
+  visibility: hidden;
   opacity: 0;
-  transition: .3s;
+  transition-duration: .7s;
   transform: scale(0.3) translateX(-50%);
+  transform-origin: left center;
   padding:0 80px;
   box-sizing: border-box;
 
@@ -21,7 +22,7 @@
     background: $desk;
     height:100%;
     box-sizing: border-box;
-    box-shadow: 0 0 15px 15px rgba(0,0,0,0.1);
+    box-shadow: 7px 10px 30px rgba(0, 0, 0, 0.1);
     padding: 45px;
     width: 100%;
     display: flex;
@@ -75,15 +76,13 @@
     }
   }
 }
-#personView.active{
-  display: block;
-  animation:fadeIn .3s forwards;
-}
-@keyframes fadeIn {
-  from {
-    opacity:0
-  }
-  to{
-    opacity:1;
+
+:host.visible{
+  #personView{
+    transition-delay: .3s;
+    visibility: visible;
+    opacity: 1;
+    pointer-events: initial;
+    transform: scale(1) translateX(-50%);
   }
 }
