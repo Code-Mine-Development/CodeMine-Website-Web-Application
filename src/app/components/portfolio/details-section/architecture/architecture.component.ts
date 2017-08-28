@@ -47,7 +47,8 @@ export class ArchitectureComponent implements OnInit {
     this.elements.push({
       key: key,
       url: `/${urlSegment}/${key}`,
-      icon: object.icon
+      icon: object.icon,
+      color: object.color
     })
   }
 

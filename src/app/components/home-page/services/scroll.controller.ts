@@ -1,8 +1,8 @@
-import { Injectable } from '@angular/core';
-import { Subject } from 'rxjs';
-import { ScrollToService } from '../../../shared/services/scroll-to.service';
+import {Injectable} from '@angular/core';
+import {Subject} from 'rxjs/Subject';
+import {ScrollToService} from '../../../shared/services/scroll-to.service';
 
-interface InformationElement{
+interface InformationElement {
   id: number,
   title: string
 }
@@ -18,82 +18,85 @@ export class ScrollController {
 
   animationInProgress = false;
 
-  constructor( private scrollToService: ScrollToService ){}
-
-
-
-  setScrollDirectory(directory){
-    if (this.animationInProgress)
-      return;
-    if (directory == 'up')
-      this.moveUp();
-    else
-      this.moveDown();
+  constructor(private scrollToService: ScrollToService) {
   }
 
-  setEscapeElement(escapeElement){
+
+  setScrollDirectory(directory) {
+    if (this.animationInProgress) {
+      return;
+    }
+
+    if (directory === 'up') {
+      this.moveUp();
+    } else {
+      this.moveDown();
+    }
+  }
+
+  setEscapeElement(escapeElement) {
     this.escapeElement = escapeElement;
   }
 
-  resetElementQuantity(){
+  resetElementQuantity() {
     this.elementsQuantity = 0;
     this.currentElement = 1;
   }
 
-  registerElement(title: string){
+  registerElement(title: string) {
     this.elementsQuantity++;
     this.title[this.elementsQuantity] = title;
     return this.elementsQuantity;
   }
 
 
-  move(directory){
+  move(directory) {
     this.setScrollDirectory(directory);
   }
 
-  moveToLast(){
+  moveToLast() {
     this.currentElement = this.getElementsQuantity();
-    this.$currentElement.next(<InformationElement>{ id: this.currentElement, title: this.title[this.currentElement]});
+    this.$currentElement.next(<InformationElement>{id: this.currentElement, title: this.title[this.currentElement]});
     this.animationInProgress = true;
   }
 
-  getCurrentElementStream(){
+  getCurrentElementStream() {
     return this.$currentElement.asObservable();
   }
 
-  getElementsQuantity(){
+  getElementsQuantity() {
     return this.elementsQuantity;
   }
 
-  animationEnd(){
+  animationEnd() {
     this.animationInProgress = false;
   }
 
 
-
-  private moveDown(){
-    if (this.currentElement === this.elementsQuantity)
+  private moveDown() {
+    if (this.currentElement === this.elementsQuantity) {
       return this.escapeFromInformations();
-
-    console.log(this.currentElement);
+    }
 
     this.currentElement++;
-    this.$currentElement.next(<InformationElement>{ id: this.currentElement, title: this.title[this.currentElement]});
+    this.$currentElement.next(<InformationElement>{id: this.currentElement, title: this.title[this.currentElement]});
     this.animationInProgress = true;
   }
 
-  private moveUp(){
-    if (this.currentElement === 1)
+  private moveUp() {
+    if (this.currentElement === 1) {
       return;
+    }
 
     this.currentElement--;
-    this.$currentElement.next(<InformationElement>{ id: this.currentElement, title: this.title[this.currentElement]});
+    this.$currentElement.next(<InformationElement>{id: this.currentElement, title: this.title[this.currentElement]});
     this.animationInProgress = true;
   }
 
-  private escapeFromInformations(){
-    if (this.escapeElement)
+  private escapeFromInformations() {
+    if (this.escapeElement) {
       this.scrollToService.scroll(this.escapeElement);
+    }
   }
 
 }

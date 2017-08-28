@@ -51,13 +51,13 @@ export class MouseMove {
   constructor(public windowWidth: number) {
   }
 
-  setElements(bg, deskLayer) {
+  setElements(bg, desk) {
     this.background = bg.nativeElement;
-    this.deskLayer = deskLayer.nativeElement;
+    this.deskLayer = desk.nativeElement;
   }
 
   move(event) {
-    if(!this.background){
+    if (!this.background) {
       return;
     }
     const bg = this.background;
@@ -68,7 +68,7 @@ export class MouseMove {
   }
 
   playAnimation() {
-    if(!this.background){
+    if (!this.background) {
       return;
     }
     animation();
@@ -79,7 +79,7 @@ export class MouseMove {
   }
 
   setMove(value: boolean) {
-    if(!this.background){
+    if (!this.background) {
       return;
     }
     !value ? stop() : start(this.background, this.deskLayer);

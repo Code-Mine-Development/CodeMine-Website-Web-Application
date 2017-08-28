@@ -20,21 +20,21 @@
   <a [routerLink]="getBackLink()">
     <img class="exit" src="assets/images/arrows/x.svg" alt="Back to main page">
   </a>
-  <a [routerLink]="'../' + offerElement.prevUrl | localize">
-    <img class="prev" src="assets/images/arrows/angle_left.svg" alt="Previous">
-  </a>
-  <a [routerLink]="'../' + offerElement.nextUrl | localize">
-    <img class="next" src="assets/images/arrows/angle_right.svg" alt="Next">
-  </a>
 </nav>
 <section class="content">
   <div class="info">
     <div class="title-row">
+      <a [routerLink]="'../' + offerElement.prevUrl | localize">
+        <img class="prev" src="assets/images/arrows/angle_left.svg" alt="Previous">
+      </a>
       <div class="title">
         <svg #svg xmlns="http://www.w3.org/2000/svg" [attr.viewBox]="offerElement.icon.viewBox">
         </svg>
         <h1>{{ offerElement.title }}</h1>
       </div>
+      <a [routerLink]="'../' + offerElement.nextUrl | localize">
+        <img class="next" src="assets/images/arrows/angle_right.svg" alt="Next">
+      </a>
     </div>
     <div class="row">
       <div class="col description">
@@ -45,9 +45,9 @@
 
       </div>
       <div class="col picture">
-          <div>
-            <img [src]="offerElement.img">
-          </div>
+        <div>
+          <img [src]="offerElement.img">
+        </div>
       </div>
     </div>
   </div>

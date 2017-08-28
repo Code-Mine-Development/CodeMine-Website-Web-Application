@@ -11,12 +11,13 @@ export class FullSizeComponent implements OnInit {
   @Input() navigation;
   @Output() changeLanguage = new EventEmitter();
 
-  constructor( public translate: TranslateService ) { }
+  constructor(public translate: TranslateService) {
+  }
 
   ngOnInit() {
   }
 
-  onChangeLanguage(event, lang){
+  onChangeLanguage(event, lang) {
     event.preventDefault();
     this.changeLanguage.emit(lang);
   }

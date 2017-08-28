@@ -36,7 +36,7 @@ export class Coordinate {
       divW = this.front.nativeElement.offsetWidth,
       divH = this.front.nativeElement.offsetHeight,
       computedBg = window.getComputedStyle(this.background),
-      bgTop = (parseInt(computedBg.height) - h) / 2;
+      bgTop = (parseInt(computedBg.height, 10) - h) / 2;
 
     this.front.nativeElement.style.transform = transformVariant;
     // get table to the center

@@ -1,14 +1,14 @@
 import {Component, HostListener, AfterViewInit} from '@angular/core';
 import {Point} from '../../../../shared/interface/point.interface';
 
-interface Triangle{
+interface Triangle {
   position: Point,
   range: number,
   size: number,
   color: string
 }
 
-enum size{
+enum size {
   small = 1,
   big
 }
@@ -20,65 +20,67 @@ enum size{
 })
 export class BgTrianglesComponent implements AfterViewInit {
 
-  @HostListener('window:resize', ['$event']) resize(){
-    this.checkScreen();
-  }
-
-
   private breakPoint = 1050;
 
   triangles: Array<Triangle> = new Array();
 
-  constructor() { }
+  constructor() {
+  }
+
+  @HostListener('window:resize', ['$event']) resize() {
+    this.checkScreen();
+  }
 
   ngAfterViewInit() {
     this.checkScreen();
   }
 
-  checkScreen(){
-    if (window.innerWidth <= this.breakPoint)
+  checkScreen() {
+    if (window.innerWidth <= this.breakPoint) {
       this.triangles = new Array();
-    else
+    } else {
       this.triangleGenerator(7)
+    }
   }
 
-  triangleGenerator( count: number ){
-    while (this.triangles.length < count){
-      let triangle: Triangle = <Triangle>{},
-        random: number = +(Math.random() * 50).toFixed(0),
+  triangleGenerator(count: number) {
+    while (this.triangles.length < count) {
+      const triangle: Triangle = <Triangle>{},
         section = Math.floor(this.triangles.length / (count / 4)),
-        additionalX = (section == 1 || section == 3) ? 50 : 0,
-        additionalY = (section == 2 || section == 3) ? 50 : 0;
+        additionalX = (section === 1 || section === 3) ? 50 : 0,
+        additionalY = (section === 2 || section === 3) ? 50 : 0;
 
-      triangle.position = { x: additionalX + random, y: 0 }
+      let random: number = +(Math.random() * 50).toFixed(0);
+
+      triangle.position = {x: additionalX + random, y: 0}
       random = +(Math.random() * 50).toFixed(0);
       triangle.position.y = additionalY + random;
 
-      this.parsePosition( triangle );
+      this.parsePosition(triangle);
       random = +Math.random().toFixed(0);
-      triangle.size = random == 1 ? size.big : size.small;
+      triangle.size = random === 1 ? size.big : size.small;
 
       random = +(Math.random() * 10).toFixed(0);
-      triangle.range = triangle.size == size.big ? 10 + random : 5 + random;
+      triangle.range = triangle.size === size.big ? 10 + random : 5 + random;
 
       random = +Math.random().toFixed(0);
 
-      triangle.color = random == 1 ? '#ffdf00' : '#000000';
+      triangle.color = random === 1 ? '#ffdf00' : '#000000';
       this.triangles.push(triangle);
     }
   }
 
-  parsePosition(triangle: Triangle){
-    if ( triangle.position.x > 30 && triangle.position.x < 70 )
-      triangle.position.x  = triangle.position.x > 50 ? triangle.position.x + 20 : triangle.position.x - 20;
+  parsePosition(triangle: Triangle) {
+    if (triangle.position.x > 30 && triangle.position.x < 70) {
+      triangle.position.x = triangle.position.x > 50 ? triangle.position.x + 20 : triangle.position.x - 20;
+    } else if (triangle.position.y > 40 && triangle.position.x < 60) {
+      triangle.position.y = triangle.position.y > 50 ? triangle.position.y + 10 : triangle.position.y - 10;
+    }
 
-    if ( triangle.position.y > 40 && triangle.position.x < 60 )
-      triangle.position.y  = triangle.position.y > 50 ? triangle.position.y + 10 : triangle.position.y - 10;
-
-    if ( triangle.position.x < 10 || triangle.position.x > 90)
-      triangle.position.x  = triangle.position.x > 90 ? triangle.position.x - 10 : triangle.position.x + 10;
-
-    if ( triangle.position.y < 10 || triangle.position.y > 80)
-      triangle.position.y  = triangle.position.y > 80 ? triangle.position.y - 20 : triangle.position.y + 10;
+    if (triangle.position.x < 10 || triangle.position.x > 90) {
+      triangle.position.x = triangle.position.x > 90 ? triangle.position.x - 10 : triangle.position.x + 10;
+    } else if (triangle.position.y < 10 || triangle.position.y > 80) {
+      triangle.position.y = triangle.position.y > 80 ? triangle.position.y - 20 : triangle.position.y + 10;
+    }
   }
 }

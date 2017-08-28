@@ -6,6 +6,7 @@
 }
 
 .column {
+
   @media #{$phone}{
     width: 100%;
   }
@@ -21,6 +22,7 @@
   @media #{$xl-computer}{
     width: 16.6%;
   }
+  position:relative;
   cursor: pointer;
   box-sizing: border-box;
   border: 1px solid #eee;
@@ -29,9 +31,40 @@
     width: 100%;
     height: 100%;
     transition: .5s;
-    &:hover {
-      background: #eeeeee;
+  }
+  .hover{
+    position:absolute;
+    left:0;
+    top:0;
+    width:100%;
+    visibility: hidden;
+    opacity: 0;
+    transition: .5s;
+  }
+  div.hover{
+    height: 100%;
+    background: #ffdf00;
+  }
+
+  h2.hover{
+    top:50%;
+    transform: translateY(-50%);
+    font-size: 2.4rem;
+    font-weight: bold;
+    text-align: center;
+    margin:0;
+    color:#ffffff;
+    &:first-letter{
+      text-transform: uppercase;
     }
+  }
+  &:hover h2.hover{
+    opacity: 1;
+    visibility: visible;
+  }
+  &:hover div.hover{
+    opacity: .8;
+    visibility: visible;
   }
 }
 

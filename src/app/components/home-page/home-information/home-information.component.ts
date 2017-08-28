@@ -6,11 +6,6 @@ import {DOCUMENT} from '@angular/common';
 import {ScrollToService} from '../../../shared/services/scroll-to.service';
 import {ScrollController} from '../services/scroll.controller';
 
-enum scrollSimulation{
-    show,
-    hide
-}
-
 @Component({
   selector: 'app-home-information',
   templateUrl: 'home-information.component.html',
@@ -24,12 +19,16 @@ export class HomeInformationComponent implements OnInit, OnDestroy, AfterViewIni
   private scrollCurrentElementSubscriber;
 
 
+  constructor(@Inject(DOCUMENT) private document,
+              private route: ActivatedRoute,
+              private homeInformationService: HomeInformationServices,
+              private scrollToService: ScrollToService,
+              private scrollController: ScrollController) {
+  }
 
-  constructor(@Inject(DOCUMENT) private document, private route: ActivatedRoute, private homeInformationService: HomeInformationServices, private scrollToService: ScrollToService, private scrollController: ScrollController ) {}
+  ngOnInit() {
 
-  ngOnInit(){
-
-    this.scrollCurrentElementSubscriber = this.scrollController.getCurrentElementStream().subscribe( (value: any) => {
+    this.scrollCurrentElementSubscriber = this.scrollController.getCurrentElementStream().subscribe((value: any) => {
       this.homeInformationService.setScrollTop(value.id);
     });
 
@@ -39,28 +38,30 @@ export class HomeInformationComponent implements OnInit, OnDestroy, AfterViewIni
       });
   }
 
-  ngAfterViewInit(){
+  ngAfterViewInit() {
     this.scrollController.setEscapeElement(this.escapeComponent);
   }
 
-  ngOnDestroy(){
+  ngOnDestroy() {
     this.homeInformationService.setScrollTop(1);
-    if (this.scrollCurrentElementSubscriber)
+    if (this.scrollCurrentElementSubscriber) {
       this.scrollCurrentElementSubscriber.unsubscribe()
+    }
   }
 
-  wheelDirectory(directory: string){
+  wheelDirectory(directory: string) {
     this.scrollController.setScrollDirectory(directory);
     this.scrollingBackDetector();
   }
 
 
-  scrollingBackDetector(){
-    if (this.getScrollTopPosition() > 0)
+  scrollingBackDetector() {
+    if (this.getScrollTopPosition() > 0) {
       this.scrollToService.scroll('SiteHead');
+    }
   }
 
-  getScrollTopPosition(){
+  getScrollTopPosition() {
     return this.document.body.scrollTop || this.document.documentElement.scrollTop;
   }
 

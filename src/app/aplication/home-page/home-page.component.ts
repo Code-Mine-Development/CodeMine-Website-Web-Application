@@ -6,17 +6,18 @@ import {fadeInAnimation} from '../../shared/routing.animation';
 import {LocalizeRouterService} from 'localize-router';
 
 @Component({
-    selector: 'app-home-page',
-    templateUrl: 'home-page.component.html',
-    styleUrls: ['home-page.component.scss'],
-    animations: [fadeInAnimation],
-    host: { '[@fadeInAnimation]': '' }
+  selector: 'app-home-page',
+  templateUrl: 'home-page.component.html',
+  styleUrls: ['home-page.component.scss'],
+  animations: [fadeInAnimation],
+  host: {'[@fadeInAnimation]': ''}
 })
 export class HomePageComponent implements OnInit {
-    carousel: Portfolio;
-    company: Company;
+  carousel: Portfolio;
+  company: Company;
 
-  constructor(private route: ActivatedRoute, private router: Router, private localize: LocalizeRouterService) {}
+  constructor(private route: ActivatedRoute, private router: Router, private localize: LocalizeRouterService) {
+  }
 
   ngOnInit() {
     this.route.data
@@ -26,7 +27,7 @@ export class HomePageComponent implements OnInit {
       });
   }
 
-  onNavigate(url: string){
+  onNavigate(url: string) {
     const translate = <string> this.localize.translateRoute(url);
     this.router.navigateByUrl(translate);
   }

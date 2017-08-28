@@ -1,5 +1,5 @@
-import {Component, OnInit, ElementRef, HostListener, ChangeDetectorRef} from '@angular/core';
-import {ComponentTemplate, registerElement} from '../component.template';
+import {Component, OnInit, ElementRef, HostListener, ChangeDetectorRef, AfterViewInit} from '@angular/core';
+import {ComponentTemplate, RegisterElement} from '../component.template';
 import {ScrollController} from '../../../services/scroll.controller';
 import * as Vivus from 'vivus';
 
@@ -123,11 +123,7 @@ import * as Vivus from 'vivus';
 
   `]
 })
-export class HowWeWorkComponent extends ComponentTemplate {
-
-  @HostListener('window:resize', ['$event']) resize(event) {
-    this.checkScreen();
-  }
+export class HowWeWorkComponent extends ComponentTemplate implements AfterViewInit {
 
 
   private svg;
@@ -136,6 +132,10 @@ export class HowWeWorkComponent extends ComponentTemplate {
 
   constructor(scrollController: ScrollController, element: ElementRef, private chengeDetector: ChangeDetectorRef) {
     super(scrollController, element);
+  }
+
+  @HostListener('window:resize', ['$event']) resize(event) {
+    this.checkScreen();
   }
 
   ngAfterViewInit() {
@@ -160,7 +160,7 @@ export class HowWeWorkComponent extends ComponentTemplate {
     }, 1500)
   }
 
-  registerElements(): [registerElement] {
+  registerElements(): [RegisterElement] {
     return [
       {localId: 1, title: 'HOME.howWeWork'}
     ]

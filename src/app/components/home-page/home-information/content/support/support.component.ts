@@ -1,5 +1,5 @@
 import {Component, ElementRef, OnInit, AfterViewInit} from '@angular/core';
-import {ComponentTemplate, registerElement} from '../component.template';
+import {ComponentTemplate, RegisterElement} from '../component.template';
 import {ScrollController} from '../../../services/scroll.controller';
 import * as Vivus from 'vivus';
 
@@ -23,13 +23,13 @@ export class SupportComponent extends ComponentTemplate implements AfterViewInit
   }
 
   animateHide(id, direction) {
-    if (direction === 'up'){
+    if (direction === 'up') {
       setTimeout(() => this.visible = false, 1000);
     }
   }
 
   animateShow(id, cb, direction) {
-    if (direction === 'up' && !this.visible){
+    if (direction === 'up' && !this.visible) {
       this.svg.setFrameProgress(1);
     }
 
@@ -44,7 +44,7 @@ export class SupportComponent extends ComponentTemplate implements AfterViewInit
     this.visible = true;
   }
 
-  registerElements(): [registerElement] {
+  registerElements(): [RegisterElement] {
     return [
       {localId: 1, title: 'HOME.support'}
     ]

@@ -11,9 +11,10 @@ export class OfferThumbnailsComponent {
   @Input() elements: [OfferThumbnail];
   @Output() navigate = new EventEmitter();
 
-  constructor() { }
+  constructor() {
+  }
 
-  onClick(url: string){
+  onClick(url: string) {
     this.navigate.next(url);
   }
 }

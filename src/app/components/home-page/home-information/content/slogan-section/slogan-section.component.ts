@@ -1,5 +1,5 @@
-import {Component, OnInit, ElementRef} from '@angular/core';
-import {ComponentTemplate, registerElement} from '../component.template';
+import {Component, OnInit, ElementRef, AfterViewInit} from '@angular/core';
+import {ComponentTemplate, RegisterElement} from '../component.template';
 import {ScrollController} from '../../../services/scroll.controller';
 
 @Component({
@@ -10,28 +10,27 @@ import {ScrollController} from '../../../services/scroll.controller';
   `,
   styleUrls: ['./slogan-section.component.scss']
 })
-export class SloganSectionComponent extends ComponentTemplate{
-  constructor( scrollController: ScrollController, element: ElementRef) {
-    super( scrollController, element);
+export class SloganSectionComponent extends ComponentTemplate implements AfterViewInit {
+  constructor(scrollController: ScrollController, element: ElementRef) {
+    super(scrollController, element);
   }
 
-  ngAfterViewInit(){
-
+  ngAfterViewInit() {
   }
 
 
-  animateHide(id: number){
+  animateHide(id: number) {
   }
 
-  animateShow(id, cb){
-    setTimeout( () => {
+  animateShow(id, cb) {
+    setTimeout(() => {
       cb();
-    }, 1500 )
+    }, 1500)
   }
 
-  registerElements(): [registerElement]{
+  registerElements(): [RegisterElement] {
     return [
-        { localId: 1, title: 'test slogan title' }
-      ]
+      {localId: 1, title: 'test slogan title'}
+    ]
   }
 }

@@ -47,21 +47,19 @@
         opacity: 1;
       }
     }
+    @media #{$phone}{
+      top: 20px;
+      left: 20px;
+    }
   }
   .exit {
     top: 40px;
     right: 40px;
     height: 30px;
-  }
-  .next {
-    right: 40px;
-    top: 120px;
-    height: 45px;
-  }
-  .prev {
-    left: 40px;
-    top: 120px;
-    height: 45px;
+    @media #{$phone}{
+      top: 20px;
+      right: 20px;
+    }
   }
 }
 
@@ -127,6 +125,8 @@
     width: 100%;
     display: flex;
     justify-content: center;
+    align-items: center;
+    position:relative;
     padding: 60px 0 0;
     .title {
       width: 100%;
@@ -138,6 +138,40 @@
         height: 160px;
         fill: #fff;
         filter: drop-shadow(5px 5px 20px rgba(0, 0, 0, .3))
+      }
+      @media #{$phone}{
+        h1{
+          font-size: 3.6rem;
+          margin-left: -15px;
+        }
+        svg{
+          height: 100px;
+        }
+      }
+      @media only screen and (max-width: 350px){
+        h1{
+          font-size: 2.4rem;
+          margin-left: -5px;
+        }
+        svg{
+          height: 90px;
+        }
+      }
+    }
+    .next, .prev{
+      height: 45px;
+
+    }
+    .next {
+      margin-right: 40px;
+      @media #{$phone}{
+        margin-right: 20px ;
+      }
+    }
+    .prev {
+      margin-left: 40px;
+      @media #{$phone}{
+        margin-left: 20px ;
       }
     }
   }

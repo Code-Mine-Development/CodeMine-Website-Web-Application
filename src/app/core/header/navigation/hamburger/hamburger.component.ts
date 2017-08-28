@@ -13,16 +13,17 @@ export class HamburgerComponent implements OnInit {
 
   @HostBinding('class.active') active = false;
 
-  constructor( public translate: TranslateService ) { }
+  constructor(public translate: TranslateService) {
+  }
 
   ngOnInit() {
   }
 
-  toggleHamburger(){
+  toggleHamburger() {
     this.active = !this.active;
   }
 
-  onLanguageChange(lang){
+  onLanguageChange(lang) {
     this.changeLanguage.emit(lang);
   }
 

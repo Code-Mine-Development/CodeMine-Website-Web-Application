@@ -23,8 +23,8 @@ export class HeaderComponent implements OnInit {
   constructor(@Inject(DOCUMENT)
               private document: Document,
               private router: Router,
-              private scrollInformationService: HomeInformationServices
-            ) {}
+              private scrollInformationService: HomeInformationServices) {
+  }
 
 
   ngOnInit() {
@@ -37,7 +37,7 @@ export class HeaderComponent implements OnInit {
     });
 
     this.scrollInformationService.getScrollTopStream()
-      .subscribe( (place: number) => {
+      .subscribe((place: number) => {
         this.homeInformationScrollTop = (place - 1) * 101;
         this.parseScrollTop();
       })
@@ -50,11 +50,9 @@ export class HeaderComponent implements OnInit {
     this.parseScrollTop();
   }
 
-  parseScrollTop(){
+  parseScrollTop() {
     this.scrollTop = this.windowScrollTop > this.homeInformationScrollTop ? this.windowScrollTop : this.homeInformationScrollTop;
   }
-
-
 
 
 }

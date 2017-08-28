@@ -34,10 +34,10 @@ export class PortfolioDetailsGeneratorComponent implements OnInit, OnDestroy {
   }
 
   ngOnDestroy() {
-    if(!this.refs){
+    if (!this.refs) {
       return;
     }
-    this.refs.forEach( (ref:ComponentRef<any>) => {
+    this.refs.forEach((ref: ComponentRef<any>) => {
       ref.destroy();
     });
   }
@@ -59,7 +59,7 @@ export class PortfolioDetailsGeneratorComponent implements OnInit, OnDestroy {
     if (section.section !== 'header') {
       return;
     }
-    let ref: ComponentRef<PortfolioDetailsHeaderComponent> = this.createElement(PortfolioDetailsHeaderComponent);
+    const ref: ComponentRef<PortfolioDetailsHeaderComponent> = this.createElement(PortfolioDetailsHeaderComponent);
     ref.instance.logo = this.details.thumbnail;
     ref.instance.title = section.title;
     ref.instance.description = section.description;
@@ -69,7 +69,7 @@ export class PortfolioDetailsGeneratorComponent implements OnInit, OnDestroy {
     if (section.section !== 'image') {
       return;
     }
-    let ref: ComponentRef<ImageComponent> = this.createElement(ImageComponent);
+    const ref: ComponentRef<ImageComponent> = this.createElement(ImageComponent);
     ref.instance.image = section.image;
     ref.instance.title = section.title;
     ref.instance.small = section.small;
@@ -80,7 +80,7 @@ export class PortfolioDetailsGeneratorComponent implements OnInit, OnDestroy {
     if (section.section !== 'text') {
       return;
     }
-    let ref: ComponentRef<TextComponent> = this.createElement(TextComponent);
+    const ref: ComponentRef<TextComponent> = this.createElement(TextComponent);
     ref.instance.texts = section.text;
     ref.instance.align = section.align;
   }
@@ -89,7 +89,7 @@ export class PortfolioDetailsGeneratorComponent implements OnInit, OnDestroy {
     if (section.section !== '4images') {
       return;
     }
-    let ref: ComponentRef<ImagesComponent> = this.createElement(ImagesComponent);
+    const ref: ComponentRef<ImagesComponent> = this.createElement(ImagesComponent);
     ref.instance.title = section.title;
     ref.instance.images = section.images;
   }
@@ -98,12 +98,12 @@ export class PortfolioDetailsGeneratorComponent implements OnInit, OnDestroy {
     if (section.section !== 'architecture') {
       return;
     }
-    let ref: ComponentRef<ArchitectureComponent> = this.createElement(ArchitectureComponent);
+    const ref: ComponentRef<ArchitectureComponent> = this.createElement(ArchitectureComponent);
     ref.instance.technologies = this.technologies;
     ref.instance.tools = this.tools;
     ref.instance.currentTechnologies = this.details.technologies;
     ref.instance.currentTools = this.details.tools;
-    ref.instance.navigate.subscribe((url:string) => {
+    ref.instance.navigate.subscribe((url: string) => {
       this.navigate.emit(url);
     });
   }
@@ -112,7 +112,7 @@ export class PortfolioDetailsGeneratorComponent implements OnInit, OnDestroy {
     if (section.section !== 'icons') {
       return;
     }
-    let ref: ComponentRef<IconsComponent> = this.createElement(IconsComponent);
+    const ref: ComponentRef<IconsComponent> = this.createElement(IconsComponent);
     ref.instance.icons = section.icons;
   }
 
@@ -120,7 +120,7 @@ export class PortfolioDetailsGeneratorComponent implements OnInit, OnDestroy {
     if (section.section !== '2images') {
       return;
     }
-    let ref: ComponentRef<TwoImagesComponent> = this.createElement(TwoImagesComponent);
+    const ref: ComponentRef<TwoImagesComponent> = this.createElement(TwoImagesComponent);
     ref.instance.images = section.images;
   }
 

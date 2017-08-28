@@ -28,7 +28,8 @@ export class TechnologiesComponent implements OnChanges {
       this.elements.push({
         key: key,
         icon: this.Technologies[key].icon,
-        url: '/technologies/' + key
+        url: '/technologies/' + key,
+        color: this.Technologies[key].color
       })
     });
   }

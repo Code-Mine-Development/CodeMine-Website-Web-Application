@@ -28,7 +28,8 @@ export class ToolsComponent implements OnChanges {
       this.elements.push({
         key: key,
         icon: this.Tools[key].icon,
-        url: '/tools/' + key
+        url: '/tools/' + key,
+        color: this.Tools[key].color
       })
     });
   }
