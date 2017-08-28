@@ -14,7 +14,7 @@ export class CarouselComponent implements OnInit, OnDestroy {
   @Output() navigate = new EventEmitter();
 
   interval;
-  currentElement: number = 0;
+  currentElement = 0;
 
   constructor() {
   }
@@ -38,7 +38,7 @@ export class CarouselComponent implements OnInit, OnDestroy {
     clearInterval(this.interval);
   }
 
-  onNavigate(){
+  onNavigate() {
     this.navigate.emit('/portfolio');
   }
 }

@@ -9,15 +9,15 @@ import {Company} from '../../shared/interface/company.interface';
 })
 export class FooterComponent {
   company: Company;
-  backgroundColor = '#000000'
+  backgroundColor = '#000000';
 
-  constructor(contact: ContactService){
+  constructor(contact: ContactService) {
     contact.getCompany().subscribe((company) => {
       this.company = company;
     })
   }
 
-  changeBg(color: string){
+  changeBg(color: string) {
     this.backgroundColor = color;
   }
 

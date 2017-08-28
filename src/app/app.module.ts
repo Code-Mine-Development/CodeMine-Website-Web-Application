@@ -10,9 +10,6 @@ import {LocalizeRouterService} from 'localize-router';
 
 import {AppRoutingModule} from './app-routing.module';
 import {CoreModule} from './core/core-module';
-import {OfferModule} from './aplication/offer/offer.module';
-import {AuditModule} from './aplication/audit/audit.module';
-import {PortfolioModule} from './aplication/portfolio/portfolio.module';
 import {TechnologiesModule} from './aplication/offerElementsDetails/offerElements.module';
 
 import {ContactResolver} from './aplication/contact/services/contact.resolver';
@@ -49,9 +46,6 @@ export function createTranslateLoader(http: Http) {
     CommonModule,
     HttpModule,
     CoreModule,
-    PortfolioModule,
-    OfferModule,
-    AuditModule,
     BrowserAnimationsModule,
     AppRoutingModule,
     TechnologiesModule

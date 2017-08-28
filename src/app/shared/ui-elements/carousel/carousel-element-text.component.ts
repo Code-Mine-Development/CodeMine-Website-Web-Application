@@ -14,10 +14,10 @@ import {trigger, transition, animate, state, style, keyframes} from '@angular/an
   styleUrls: ['./carousel-element-text.component.scss'],
   animations: [
     trigger('text-fade', [
-      transition("* => *", animate('1s ease-in-out', keyframes([
-        style({opacity: 1, offset:0}),
-        style({opacity: 0, offset:.5}),
-        style({opacity: 1, offset:1})
+      transition('* => *', animate('1s ease-in-out', keyframes([
+        style({opacity: 1, offset: 0}),
+        style({opacity: 0, offset: .5}),
+        style({opacity: 1, offset: 1})
       ])))
     ])
   ]
@@ -26,7 +26,7 @@ export class CarouselElementTextComponent implements OnChanges {
 
   @Input() title: string;
   @Input() subTitle: string;
-  @Output() navigate =  new EventEmitter();
+  @Output() navigate = new EventEmitter();
   parsedTitle: string;
   parsedSubTitle: string;
 
@@ -34,13 +34,13 @@ export class CarouselElementTextComponent implements OnChanges {
   }
 
   ngOnChanges() {
-    setTimeout( () => {
+    setTimeout(() => {
       this.parsedTitle = this.title;
       this.parsedSubTitle = this.subTitle;
     }, 500)
   }
 
-  onNavigate(){
+  onNavigate() {
     this.navigate.emit();
   }
 

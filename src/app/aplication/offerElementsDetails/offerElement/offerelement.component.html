@@ -3,11 +3,13 @@
     <polygon points="20,0 50,0 50,30" style="fill:white;"/>
   </svg>
 </div>
-<section class="content">
+<nav class="navigation">
   <a [routerLink]="'/home' | localize">
     <svg class="home" viewBox="0 0 21 21">
       <defs>
-        <style>.cls-1{fill:#ffdf00;}</style>
+        <style>.cls-1 {
+          fill: #ffdf00;
+        }</style>
       </defs>
       <g id="Layer_one" data-name="layer one">
         <polygon class="cls-1" [attr.points]="'0,21 21,21 0,0'"></polygon>
@@ -15,30 +17,37 @@
       </g>
     </svg>
   </a>
-  <a [routerLink]="getBackLink()"> <img class="exit" src="assets/images/arrows/x.svg" alt="Back to main page"></a>
-  <div class="header">
-    <nav class="navigation">
-      <a [routerLink]="'../' + offerElement.prevUrl | localize"><img class="prev" src="assets/images/arrows/angle_left.svg" alt="Previous"> </a>
-      <a [routerLink]="'../' + offerElement.nextUrl | localize"><img class="next" src="assets/images/arrows/angle_right.svg" alt="Next"> </a>
-    </nav>
-    <div class="title">
-      <svg #svg xmlns="http://www.w3.org/2000/svg" [attr.viewBox]="offerElement.icon.viewBox">
-      </svg>
-      <h1>{{ offerElement.title }}</h1>
-    </div>
-
-  </div>
+  <a [routerLink]="getBackLink()">
+    <img class="exit" src="assets/images/arrows/x.svg" alt="Back to main page">
+  </a>
+</nav>
+<section class="content">
   <div class="info">
-    <div class="col description">
-      <div>
-        <div class="title"><h4>{{ 'TECHNOLOGIES.description' | translate}}</h4></div>
-        <div class="desc"><p>{{offerElement.description | translate}}</p></div>
+    <div class="title-row">
+      <a [routerLink]="'../' + offerElement.prevUrl | localize">
+        <img class="prev" src="assets/images/arrows/angle_left.svg" alt="Previous">
+      </a>
+      <div class="title">
+        <svg #svg xmlns="http://www.w3.org/2000/svg" [attr.viewBox]="offerElement.icon.viewBox">
+        </svg>
+        <h1>{{ offerElement.title }}</h1>
       </div>
-
+      <a [routerLink]="'../' + offerElement.nextUrl | localize">
+        <img class="next" src="assets/images/arrows/angle_right.svg" alt="Next">
+      </a>
     </div>
-    <div class="col">
-      <div class="picture">
-        <img [src]="offerElement.img">
+    <div class="row">
+      <div class="col description">
+        <div>
+          <div class="title"><h4>{{ 'TECHNOLOGIES.description' | translate}}</h4></div>
+          <div class="desc"><p>{{offerElement.description | translate}}</p></div>
+        </div>
+
+      </div>
+      <div class="col picture">
+        <div>
+          <img [src]="offerElement.img">
+        </div>
       </div>
     </div>
   </div>

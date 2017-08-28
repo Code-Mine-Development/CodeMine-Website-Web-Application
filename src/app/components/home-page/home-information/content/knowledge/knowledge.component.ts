@@ -1,6 +1,6 @@
 import {Component, AfterViewInit, Input, OnChanges, ElementRef, HostBinding} from '@angular/core';
 import * as Vivus from 'vivus';
-import {ComponentTemplate, registerElement} from '../component.template';
+import {ComponentTemplate, RegisterElement} from '../component.template';
 import {ScrollController} from '../../../services/scroll.controller';
 
 @Component({
@@ -8,47 +8,47 @@ import {ScrollController} from '../../../services/scroll.controller';
   templateUrl: 'knowledge.component.html',
   styleUrls: ['knowledge.component.scss']
 })
-export class KnowledgeComponent extends ComponentTemplate {
+export class KnowledgeComponent extends ComponentTemplate implements AfterViewInit {
 
   @HostBinding('class.horizontal') horizontal;
 
   private svg;
   visible = false;
 
-  constructor( scrollController: ScrollController, element: ElementRef) {
-    super( scrollController, element);
+  constructor(scrollController: ScrollController, element: ElementRef) {
+    super(scrollController, element);
   }
 
-  ngAfterViewInit(){
+  ngAfterViewInit() {
     this.svg = new Vivus('test_svg_draw', {type: 'scenario', file: 'assets/images/home-svg/wiedza.svg'});
   }
 
-  animateHide(id, direction){
-    if (direction === 'up')
-      setTimeout( () => this.visible = false, 1000 );
+  animateHide(id, direction) {
+    if (direction === 'up') {
+      setTimeout(() => this.visible = false, 1000);
+    }
   }
 
-  animateShow(id, cb, direction){
-    if (direction === 'up' && !this.visible)
+  animateShow(id, cb, direction) {
+    if (direction === 'up' && !this.visible) {
       this.svg.setFrameProgress(1);
-    this.visible = true;
-    if (direction === 'down') {
+    } else if (direction === 'down') {
       this.svg.reset().stop();
       setTimeout(() => this.svg.play(1.3), 1000);
     }
-
-    setTimeout( () => {
+    setTimeout(() => {
       cb();
-    }, 1500 )
+    }, 1500);
+
+    this.visible = true;
   }
 
 
-  registerElements(): [registerElement]{
+  registerElements(): [RegisterElement] {
     return [
-      { localId: 1, title: 'HOME.knowledge' }
+      {localId: 1, title: 'HOME.knowledge'}
     ]
   }
-
 
 
 }

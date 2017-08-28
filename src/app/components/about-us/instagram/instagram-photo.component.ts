@@ -23,21 +23,22 @@ export class InstagramPhotoComponent {
   @Input() image;
   @HostBinding('style.height') height;
 
-  constructor( private elementRef: ElementRef ) { }
+  constructor(private elementRef: ElementRef) {
+  }
 
-  @HostListener('window:resize',['$event']) resize(){
+  @HostListener('window:resize', ['$event']) resize() {
     this.setHeight();
   }
 
-  loaded(){
+  loaded() {
     this.setHeight()
   }
 
-  setHeight(){
+  setHeight() {
     this.height = this.getWidth();
   }
 
-  getWidth(){
+  getWidth() {
     return window.getComputedStyle(this.elementRef.nativeElement).width;
   }
 

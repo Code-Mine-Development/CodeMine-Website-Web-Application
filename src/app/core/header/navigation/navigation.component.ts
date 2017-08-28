@@ -42,9 +42,10 @@ export class NavigationComponent implements OnInit {
     }
   ];
 
-  constructor( private localize: LocalizeRouterService, private translate: TranslateService) { }
+  constructor(private localize: LocalizeRouterService, private translate: TranslateService) {
+  }
 
-  @HostListener('window:resize',['$event']) onResize(event){
+  @HostListener('window:resize', ['$event']) onResize(event) {
     this.checkSize();
   }
 
@@ -59,7 +60,7 @@ export class NavigationComponent implements OnInit {
   }
 
 
-  checkSize(){
+  checkSize() {
     this.mobile = window.innerWidth < 760;
   }
 }

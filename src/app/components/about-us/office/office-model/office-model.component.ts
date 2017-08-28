@@ -12,14 +12,14 @@ import {MouseMove} from './models/mouseMove.model';
     trigger('JumpIn', [
       transition(':enter', [
         style({opacity: 0, position: 'absolute'}),
-        animate( '.5s .3s ease-in-out', style({ opacity: 1}))
+        animate('.5s .3s ease-in-out', style({opacity: 1}))
       ]),
       transition(':leave', [
-        animate( '.5s ease-in-out', style({opacity: 0, position: 'absolute'}))
+        animate('.5s ease-in-out', style({opacity: 0, position: 'absolute'}))
       ])
     ])
   ],
-  host: { '[@JumpIn]': '' }
+  host: {'[@JumpIn]': ''}
 })
 export class OfficeModelComponent implements OnInit, OnChanges, AfterViewInit {
   @Input() employees: Employees;
@@ -32,13 +32,13 @@ export class OfficeModelComponent implements OnInit, OnChanges, AfterViewInit {
   dragging: MovingLayers = new MovingLayers();
   mouseMoving: MouseMove = new MouseMove(this.windowWidth);
 
-  activeDeskPerson:Employees =  <Employees>{};
+  activeDeskPerson: Employees = <Employees>{};
 
 
-  constructor( private ngZone: NgZone ) {
+  constructor(private ngZone: NgZone) {
   }
 
-  @HostListener('window:resize',['$event']) onResize(){
+  @HostListener('window:resize', ['$event']) onResize() {
     this.ngZone.run(() => {
       this.windowWidth = window.innerWidth;
       this.mouseMoving.changeWidth(window.innerWidth);
@@ -51,7 +51,7 @@ export class OfficeModelComponent implements OnInit, OnChanges, AfterViewInit {
     }
   }
 
-  ngAfterViewInit(){
+  ngAfterViewInit() {
     this.mouseMoving.setElements(this.background, this.deskLayer);
     this.dragging.setElements(this.background, this.deskLayer);
   }
@@ -69,13 +69,13 @@ export class OfficeModelComponent implements OnInit, OnChanges, AfterViewInit {
   }
 
   getActivePerson(event) {
-    if(this.activeDeskPerson && this.activeDeskPerson.name){
+    if (this.activeDeskPerson && this.activeDeskPerson.name) {
       return;
     }
     this.activeDeskPerson = event;
   }
 
-  closePersonDetails(){
+  closePersonDetails() {
     this.activeDeskPerson = <Employees>{};
   }
 

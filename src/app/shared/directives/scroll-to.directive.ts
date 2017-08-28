@@ -1,19 +1,19 @@
-import {Directive, HostListener, Inject, Input} from '@angular/core';
-import {DOCUMENT} from '@angular/platform-browser';
-import { ScrollToService } from '../services/scroll-to.service';
+import {Directive, HostListener, Input} from '@angular/core';
+import {ScrollToService} from '../services/scroll-to.service';
 
 @Directive({
   selector: '[appScrollTo]'
 })
 export class ScrollToDirective {
-  @Input('appScrollTo') target: any;
-  @Input('appScrollToOpponent') opponent: any;
-  @Input('appLocationOnScreenAfterScrolling') location: any;
+  @Input() appScrollTo: any;
+  @Input() appScrollToOpponent: any;
+  @Input() appLocationOnScreenAfterScrolling: any;
 
   @HostListener('click') scroll() {
-    this.scrollToService.scroll(this.target, this.location, this.opponent);
+    this.scrollToService.scroll(this.appScrollTo, this.appLocationOnScreenAfterScrolling, this.appScrollToOpponent);
   }
 
-  constructor( private scrollToService: ScrollToService){}
+  constructor(private scrollToService: ScrollToService) {
+  }
 
 }

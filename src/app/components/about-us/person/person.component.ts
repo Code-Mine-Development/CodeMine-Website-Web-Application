@@ -26,7 +26,7 @@ export class PersonComponent implements OnChanges {
   }
 
   ngOnChanges() {
-    if( this.person && this.person.name ){
+    if (this.person && this.person.name) {
       this.visible = true;
       this.visibleElement = this.person
     } else {

@@ -65,7 +65,7 @@ export class DeskComponent implements OnInit, OnChanges {
   }
 
   closeCard() {
-    if(!this.coordinate){
+    if (!this.coordinate) {
       return;
     }
     this.prepareCoordinates();

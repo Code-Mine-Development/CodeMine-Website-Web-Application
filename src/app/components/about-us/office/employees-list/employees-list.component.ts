@@ -25,7 +25,7 @@ export class EmployeesListComponent {
 
   @Input() employees: Employees;
 
-  currentVisible = "";
+  currentVisible = '';
 
   constructor(@Inject(DOCUMENT) private document, private scrollService: ScrollToService) {
   }
@@ -41,7 +41,7 @@ export class EmployeesListComponent {
     return (this.document.body.scrollTop || this.document.documentElement.scrollTop) > 0;
   }
 
-  setVisible(person){
+  setVisible(person) {
     this.currentVisible = person;
   }
 }

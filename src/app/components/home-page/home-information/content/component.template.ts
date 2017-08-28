@@ -1,7 +1,7 @@
 import {ScrollController} from '../../services/scroll.controller';
 import {AfterViewInit, ElementRef, OnDestroy} from '@angular/core';
 
-export interface registerElement {
+export interface RegisterElement {
   localId: number,
   title: string
 }
@@ -16,7 +16,7 @@ export abstract class ComponentTemplate implements OnDestroy, AfterViewInit {
 
   private prevElement;
   private streamSubscriber;
-  private localRegisteredList: [LocalRegisterElement] = <[LocalRegisterElement]>new Array();
+  private localRegisteredList: [LocalRegisterElement] = <[LocalRegisterElement]>[];
   private isVisible = false;
 
   constructor(private scrollController: ScrollController, private element: ElementRef) {
@@ -27,8 +27,9 @@ export abstract class ComponentTemplate implements OnDestroy, AfterViewInit {
   }
 
   ngOnDestroy() {
-    if (this.streamSubscriber)
+    if (this.streamSubscriber) {
       this.streamSubscriber.unsubscribe();
+    }
   }
 
 
@@ -88,7 +89,7 @@ export abstract class ComponentTemplate implements OnDestroy, AfterViewInit {
 
   abstract animateHide(id, directory);
 
-  abstract registerElements(): [registerElement];
+  abstract registerElements(): [RegisterElement];
 
   abstract ngAfterViewInit();
 }

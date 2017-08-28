@@ -36,10 +36,11 @@ export class EmployeeComponent implements OnChanges {
 
   descriptionVisible = false;
 
-  constructor() { }
+  constructor() {
+  }
 
   ngOnChanges() {
-    if(this.currentVisible !== this.getId()){
+    if (this.currentVisible !== this.getId()) {
       this.descriptionVisible = false;
     }
   }
@@ -53,8 +54,8 @@ export class EmployeeComponent implements OnChanges {
     this.descriptionVisible = false;
   }
 
-  getId(){
-    return this.person.name+this.person.surname;
+  getId() {
+    return this.person.name + this.person.surname;
   }
 
 }

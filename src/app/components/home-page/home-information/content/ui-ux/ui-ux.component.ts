@@ -1,5 +1,5 @@
-import {Component, ElementRef, OnInit, QueryList, HostBinding} from '@angular/core';
-import {ComponentTemplate, registerElement} from '../component.template';
+import {Component, ElementRef, HostBinding, AfterViewInit} from '@angular/core';
+import {ComponentTemplate, RegisterElement} from '../component.template';
 import {ScrollController} from '../../../services/scroll.controller';
 import * as Vivus from 'vivus';
 
@@ -8,7 +8,7 @@ import * as Vivus from 'vivus';
   templateUrl: './ui-ux.component.html',
   styleUrls: ['./ui-ux.component.scss']
 })
-export class UiUxComponent extends ComponentTemplate {
+export class UiUxComponent extends ComponentTemplate implements AfterViewInit {
 
   @HostBinding('style.background') background;
 
@@ -17,59 +17,57 @@ export class UiUxComponent extends ComponentTemplate {
   visible = false;
   UiVisible = false;
 
-
-  constructor( scrollController: ScrollController, element: ElementRef) {
-    super( scrollController, element);
+  constructor(scrollController: ScrollController, element: ElementRef) {
+    super(scrollController, element);
   }
 
 
-  ngAfterViewInit(){
+  ngAfterViewInit() {
     this.svgUX = new Vivus('UX_svg_draw', {type: 'scenario', file: 'assets/images/home-svg/UX.svg'});
     this.svgUI = new Vivus('UI_svg_draw', {type: 'scenario', file: 'assets/images/home-svg/UI.svg'});
   }
 
-  animateHide(id, direction){
-    if (id == 1 && direction === 'up')
-      setTimeout( () => this.visible = false, 1000 );
-    else if (id == 2 && direction === 'up')
+  animateHide(id, direction) {
+    if (id === 1 && direction === 'up') {
+      setTimeout(() => this.visible = false, 1000);
+    } else if (id === 2 && direction === 'up') {
       this.hideUI();
+    }
   }
 
   animateShow(id, cb, direction) {
-    if (id == 2 && direction === 'up' && !this.visible)
+    if (id === 2 && direction === 'up' && !this.visible) {
       this.instantShow();
-
-    this.visible = true;
-
-    if ( id == 1 && direction === 'down')
+    } else if (id === 1 && direction === 'down') {
       this.animateUX();
-    else if (id == 2 && direction === 'down' )
+    } else if (id === 2 && direction === 'down') {
       this.animateUI();
+    }
 
-    setTimeout( () => {
+    setTimeout(() => {
       cb();
-    }, 1500 )
-
+    }, 1500)
+    this.visible = true;
   }
 
-  hideUI(){
+  hideUI() {
     this.UiVisible = false;
     this.background = '#fff';
   }
 
-  animateUX(){
+  animateUX() {
     this.svgUX.reset().stop();
     setTimeout(() => this.svgUX.play(2), 1000);
   }
 
-  animateUI(){
+  animateUI() {
     this.UiVisible = true;
     this.background = '#000';
     this.svgUI.reset().stop();
     setTimeout(() => this.svgUI.play(2), 50);
   }
 
-  instantShow(){
+  instantShow() {
     this.svgUI.setFrameProgress(1);
     this.svgUX.setFrameProgress(1);
     this.UiVisible = true;
@@ -77,10 +75,10 @@ export class UiUxComponent extends ComponentTemplate {
   }
 
 
-  registerElements(): [registerElement]{
+  registerElements(): [RegisterElement] {
     return [
-      { localId: 1, title: 'HOME.UX' },
-      { localId: 2, title: 'HOME.UI' }
+      {localId: 1, title: 'HOME.UX'},
+      {localId: 2, title: 'HOME.UI'}
     ]
   }
 }

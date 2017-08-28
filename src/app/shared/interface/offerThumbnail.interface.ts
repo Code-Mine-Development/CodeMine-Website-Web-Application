@@ -1,5 +1,6 @@
-export interface OfferThumbnail{
+export interface OfferThumbnail {
   key: string,
   url: string,
-  icon: string
+  icon: string,
+  color: string
 }

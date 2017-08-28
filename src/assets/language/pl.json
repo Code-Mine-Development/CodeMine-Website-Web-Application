@@ -126,6 +126,10 @@
       "mobileApps":{
         "title": "Mobile Apps",
         "description": "Tworzymy aplikacje mobilne dedykowane systemom iOS oraz Android, dostosowane z jednej strony do Twoich wymagań, a z drugiej – do aktualnych trendów."
+      },
+      "openForNew":{
+        "title": "?",
+        "description": "Jesteśmy otwarci na nowe wyzwania"
       }
     },
     "technologies":{

@@ -17,8 +17,9 @@ export class HomeInformationServices {
   }
 
   getInformation() {
-    if (this.homeInformations)
+    if (this.homeInformations) {
       return Observable.from([this.homeInformations]);
+    }
 
     return this.http.get(url + 'home-information.json')
       .map(
@@ -28,14 +29,15 @@ export class HomeInformationServices {
         })
   }
 
-  setScrollTop(scrollTop){
+  setScrollTop(scrollTop) {
     this.scrollTopStream.next(scrollTop);
     this.scrollTop = scrollTop;
   }
 
-  getScrollTopStream(){
-    if (this.scrollTop)
+  getScrollTopStream() {
+    if (this.scrollTop) {
       return this.scrollTopStream.startWith(this.scrollTop);
+    }
     return this.scrollTopStream.asObservable();
   }
 
