@@ -6,7 +6,8 @@ import {UiModule} from '../../shared/ui-elements/ui.module';
 import {PortfolioComponentModule} from '../../components/portfolio/portfolio-components.module';
 import {PortfolioDetailsComponent} from './portfolio-details/portfolio-details.component';
 import {PortfolioListComponent} from './portfolio-list/portfolio-list.component';
-import {PortfolioService} from './services/portfolio.service';
+import {TechnologiesResolver} from '../offer/services/technologies.resolver';
+import {ToolsResolver} from '../offer/services/tools.resolver';
 
 import {DrawBackgroundService} from '../../shared/services/draw-background.service';
 import {SharedModule} from '../../shared/shared.module';
@@ -28,7 +29,7 @@ import {SharedModule} from '../../shared/shared.module';
         SharedModule
     ],
     exports: [],
-    providers: [DrawBackgroundService]
+    providers: [DrawBackgroundService, ToolsResolver, TechnologiesResolver]
 })
 export class PortfolioModule {
 }

@@ -73,6 +73,7 @@ export class PortfolioDetailsGeneratorComponent implements OnInit, OnDestroy {
     ref.instance.image = section.image;
     ref.instance.title = section.title;
     ref.instance.small = section.small;
+    ref.instance.video = section.video;
   }
 
 

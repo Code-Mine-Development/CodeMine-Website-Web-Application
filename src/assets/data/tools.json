@@ -3,14 +3,17 @@
     "title": "Adobe Illustrator",
     "description": "TOOLS.AI.description",
     "icon": "ai/ai.svg",
-    "img": "assets/images/angularCode.png",
+    "movie": {
+      "movieFrameUrl": "assets/images/angularCode.png",
+      "movieUrl": "assets/videos/tools/AdobeIllustrator-movie_small.mp4"
+    },
     "color": "#f90"
   },
   "amazon-aws":{
     "title": "Amazon AWS",
     "description": "TOOLS.AmazonAWS.description",
     "icon": "amazonwebservices/amazonwebservices-original.svg",
-    "img": "assets/images/angularCode.png",
+    "img": "assets/images/testcode.png",
     "color": "#F7A80D"
   },
   "angular":{

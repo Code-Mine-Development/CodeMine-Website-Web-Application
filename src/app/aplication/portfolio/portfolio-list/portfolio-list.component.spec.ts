@@ -51,7 +51,7 @@ describe('PortfolioListComponent', () => {
   });
 
   it('should change routing', fakeAsync(() => {
-    component.showDetails(1);
+    component.showDetails('mdlinking');
     tick();
     expect(router.navigate).toHaveBeenCalledWith(['/portfolio/', 1], {relativeTo: MockRoutingData});
 

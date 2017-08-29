@@ -8,6 +8,31 @@ import {UiModule} from '../../shared/ui-elements/ui.module';
 import {ContactComponentModule} from '../../components/contact/contact-components.module';
 import {MockCompany} from '../../shared/mocks/company.mock';
 import {MockCarousel} from '../../shared/mocks/carousel.mock';
+import {Component} from '@angular/core';
+import {LocalizeRouterModule, LocalizeRouterService} from 'localize-router';
+import {HomeInformationServices} from '../../components/home-page/services/home-information.service';
+import {ScrollController} from '../../components/home-page/services/scroll.controller';
+
+@Component({
+  selector: "app-bg-triangles",
+  template: "test",
+  styles: []
+})
+class bgComponent{}
+
+@Component({
+  selector: "app-home-information-content",
+  template: "test",
+  styles: []
+})
+class infoContent{}
+
+@Component({
+  selector: "app-horizontal",
+  template: "test",
+  styles: []
+})
+class horizontalComponent{}
 
 describe('HomePageComponent', () => {
     let component: HomePageComponent;
@@ -18,8 +43,8 @@ describe('HomePageComponent', () => {
 
     beforeEach(async(() => {
         TestBed.configureTestingModule({
-            declarations: [HomePageComponent, HomeInformationComponent],
-            imports: [CommonModule, RouterTestingModule, UiModule, ContactComponentModule],
+            declarations: [HomePageComponent, HomeInformationComponent, bgComponent, infoContent, horizontalComponent],
+            imports: [CommonModule, RouterTestingModule, UiModule, ContactComponentModule, LocalizeRouterModule],
             providers: [
                 {
                     provide: ActivatedRoute,
@@ -32,7 +57,12 @@ describe('HomePageComponent', () => {
                         }
                     }
                 },
-                {provide: Router, useValue: router}
+                {provide: Router, useValue: router},
+              { provide: LocalizeRouterService, useValue: {
+
+              } },
+              HomeInformationServices,
+              ScrollController
             ]
         })
             .compileComponents();

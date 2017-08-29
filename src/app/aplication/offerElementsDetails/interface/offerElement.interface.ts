@@ -6,8 +6,14 @@ export interface OfferElement {
     svgBody: string,
     viewBox: string
   },
-  img: string,
   color: string,
+  img?: string,
+  movie?: movie,
   prevUrl?: string,
   nextUrl?: string
+}
+
+interface movie{
+  movieFrameUrl: string,
+  movieUrl: string
 }

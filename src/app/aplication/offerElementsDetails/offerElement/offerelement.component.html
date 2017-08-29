@@ -44,11 +44,16 @@
         </div>
 
       </div>
-      <div class="col picture">
+      <section class="col picture">
         <div>
-          <img [src]="offerElement.img">
+          <img *ngIf="offerElement?.img" [src]="offerElement?.img">
+          <video *ngIf="offerElement?.movie" [src]="offerElement?.movie.movieUrl" [attr.poster]="offerElement?.movie.movieFrameUrl" autoplay loop>
+            Sorry your browser does not support video
+          </video>
+          <img class="laptop" src="assets/images/komputer.svg">
         </div>
-      </div>
+
+      </section>
     </div>
   </div>
 

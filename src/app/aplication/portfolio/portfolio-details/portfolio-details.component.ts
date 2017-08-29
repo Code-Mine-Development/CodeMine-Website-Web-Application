@@ -5,11 +5,14 @@ import {Params, ActivatedRoute, Router} from '@angular/router';
 import {LocalizeRouterService} from 'localize-router';
 
 import {PreviousPositionService} from '../../../shared/services/previous-position.service';
+import {fadeInAnimation} from '../../../shared/routing.animation';
 
 @Component({
   selector: 'app-portfolio-details',
   templateUrl: './portfolio-details.component.html',
-  styleUrls: ['./portfolio-details.component.scss']
+  styleUrls: ['./portfolio-details.component.scss'],
+  animations: [fadeInAnimation],
+  host: { '[@fadeInAnimation]': '' }
 })
 export class PortfolioDetailsComponent implements OnInit {
 

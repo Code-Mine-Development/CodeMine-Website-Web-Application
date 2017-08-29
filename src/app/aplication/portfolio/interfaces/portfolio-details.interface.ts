@@ -7,7 +7,8 @@ export interface PortfolioDetails {
     images?: [string],
     image?: string,
     small?: boolean,
-    icons?: [Icon]
+    icons?: [Icon],
+    video?: Video
   }];
 }
 
@@ -19,4 +20,10 @@ interface Text {
 interface Icon {
   icon: string,
   description: string
+}
+
+
+interface Video {
+  image:string,
+  videoUrl:string
 }
