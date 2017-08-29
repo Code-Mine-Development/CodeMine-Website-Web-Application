@@ -24,6 +24,6 @@ interface Icon {
 
 
 interface Video {
-  image:string,
-  videoUrl:string
+  image: string,
+  videoUrl: string
 }

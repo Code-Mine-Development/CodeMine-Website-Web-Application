@@ -1,4 +1,4 @@
-import {AfterViewInit, Component, OnInit, ViewChild} from '@angular/core';
+import {AfterViewInit, Component, OnInit, ViewChild, HostListener} from '@angular/core';
 import {Audit} from './interfaces/audit.interface';
 import {ActivatedRoute, Data} from '@angular/router';
 import {fadeInAnimation} from '../../shared/routing.animation';
@@ -9,7 +9,7 @@ import {DrawBackgroundService} from '../../shared/services/draw-background.servi
   templateUrl: 'audit.component.html',
   styleUrls: ['audit.component.scss'],
   animations: [fadeInAnimation],
-  host: { '[@fadeInAnimation]': '' }
+  host: {'[@fadeInAnimation]': ''}
 })
 export class AuditComponent implements OnInit, AfterViewInit {
   @ViewChild('canvas') canvasRef;
@@ -18,21 +18,23 @@ export class AuditComponent implements OnInit, AfterViewInit {
   constructor(private route: ActivatedRoute, private drawBackgroundService: DrawBackgroundService) {
   }
 
+  @HostListener('window:resize', ['$event']) onResize() {
+    this.resizeBackground()
+  }
+
   ngOnInit() {
     this.route.data
       .subscribe((data: Data) => {
         this.audits = data['audit'];
       });
-    }
+  }
+
   ngAfterViewInit() {
-
-    if (document.getElementById('triangle-head')) {
-      setTimeout(() => {
-        this.drawBackgroundService.AuditBackground(this.canvasRef)
-      }, 1);
-
+    if (this.canvasRef.nativeElement) {
+      this.resizeBackground();
     }
   }
+
   resizeBackground() {
     this.drawBackgroundService.AuditBackground(this.canvasRef)
   }

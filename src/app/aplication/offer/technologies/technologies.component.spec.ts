@@ -1,42 +1,65 @@
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
-import {Component} from '@angular/core';
-import {MockTechnologies} from '../../../shared/mocks/technologies.mock';
+import {async, ComponentFixture, TestBed} from '@angular/core/testing';
+import {Router} from '@angular/router';
+import {TranslateModule} from '@ngx-translate/core';
+import {LocalizeRouterService} from 'localize-router';
+
 import {TechnologiesComponent} from './technologies.component';
 
-@Component({
-  selector: 'app-fake-technologies-wrapper',
-  template: '<app-offerElementsDetails [Technologies]="offerElementsDetails"></app-offerElementsDetails>'
-})
+import {OfferThumbnailsComponent} from '../../../shared/ui-elements/offer-thumbnails/offer-thumbnails.component';
+import {PreviousPositionService} from '../../../shared/services/previous-position.service';
+import {MockTechnologies} from '../../../shared/mocks/technologies.mock';
 
-class FakeWrapperTechnologiesComponent {
-  technologies = MockTechnologies;
-}
+
 
 describe('TechnologiesComponent', () => {
   let component: TechnologiesComponent;
-  let fixture: ComponentFixture<FakeWrapperTechnologiesComponent>;
+  let fixture: ComponentFixture<TechnologiesComponent>;
 
-  let fakeComponent: TechnologiesComponent;
-  let fakeFixture: ComponentFixture<TechnologiesComponent>;
+  const router = {
+    navigateByUrl: jasmine.createSpy('navigateByUrl')
+  }
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ FakeWrapperTechnologiesComponent, TechnologiesComponent ],
+      imports: [
+        TranslateModule.forRoot()
+      ],
+      declarations: [
+        TechnologiesComponent,
+        OfferThumbnailsComponent
+      ],
+      providers: [
+        PreviousPositionService,
+        {provide: Router, useValue: router},
+        {
+          provide: LocalizeRouterService,
+          useValue: {
+            translateRoute: (val) => val
+          }
+        },
+      ]
     })
       .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(FakeWrapperTechnologiesComponent);
-    component = fixture.debugElement.children[0].componentInstance;
-
-    fakeFixture = TestBed.createComponent(TechnologiesComponent);
-    fakeComponent = fakeFixture.componentInstance;
-    fakeComponent.Technologies = component.Technologies;
+    fixture = TestBed.createComponent(TechnologiesComponent);
+    component = fixture.componentInstance;
+    component.Technologies = MockTechnologies;
+    component.ngOnChanges();
     fixture.detectChanges();
   });
 
   it('should be created', () => {
     expect(component).toBeTruthy();
   });
+
+  it('should have parsed elements', () => {
+    expect(component.elements[0].key).toBe('bash');
+  });
+
+  it('should navigate', () => {
+    component.navigate('test');
+    expect(router.navigateByUrl).toHaveBeenCalledWith('test');
+  })
 });

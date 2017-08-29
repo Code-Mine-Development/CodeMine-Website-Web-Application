@@ -6,14 +6,15 @@ import {TranslateModule, TranslateLoader} from '@ngx-translate/core'
 import {AboutUsComponent} from './about-us.component';
 import {AboutUsComponentModule} from '../../components/about-us/about-us-components.module';
 
-import { MockCompany } from '../../shared/mocks/company.mock'
+import {MockCompany} from '../../shared/mocks/company.mock'
+import {Mock} from 'protractor/built/driverProviders';
 
 
 const ActivatedRouteMock = {
-  data: Observable.of(MockCompany)
-}
+    data: Observable.of({company: MockCompany})
+  }
 
-let translations: any = {"TEST": "This is a test"};
+const translations: any = {'TEST': 'This is a test'};
 class FakeLoader implements TranslateLoader {
   getTranslation(lang: string): Observable<any> {
     return Observable.of(translations);
@@ -21,7 +22,7 @@ class FakeLoader implements TranslateLoader {
 }
 
 
-fdescribe('AboutUsComponent', () => {
+describe('AboutUsComponent', () => {
   let component: AboutUsComponent;
   let fixture: ComponentFixture<AboutUsComponent>;
 
@@ -46,14 +47,16 @@ fdescribe('AboutUsComponent', () => {
   beforeEach(() => {
     fixture = TestBed.createComponent(AboutUsComponent);
     component = fixture.componentInstance;
-    console.log(component.company);
     fixture.detectChanges();
-    console.log(component.company);
-    console.log(component);
   });
 
-  it('should be created', () => {
+  it('should be created', async(() => {
     expect(component).toBeTruthy();
-  });
+  }));
+
+  it('should get datas', () => {
+    expect(component.company).toBe(MockCompany);
+  })
+
 });
 

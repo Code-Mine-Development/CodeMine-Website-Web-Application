@@ -2,15 +2,7 @@ import {async, TestBed, inject} from '@angular/core/testing';
 import {HttpModule, XHRBackend, ResponseOptions, Response} from '@angular/http';
 import {MockBackend} from '@angular/http/testing';
 import {ContactService} from './contact.service';
-
-const MockCompany = {
-  'country': 'Poland',
-  'city': 'Katowice',
-  'street': '3 maja',
-  'apartment': '18/3',
-  'email': 'office@code-mine.com',
-  'phone': '+48 723 21 67'
-};
+import {MockCompany} from '../../../shared/mocks/company.mock';
 
 describe('ContactService', () => {
   beforeEach(async(() => {

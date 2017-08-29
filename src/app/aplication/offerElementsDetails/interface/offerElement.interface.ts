@@ -8,12 +8,12 @@ export interface OfferElement {
   },
   color: string,
   img?: string,
-  movie?: movie,
+  movie?: Movie,
   prevUrl?: string,
   nextUrl?: string
 }
 
-interface movie{
+interface Movie {
   movieFrameUrl: string,
   movieUrl: string
 }
