@@ -50,7 +50,7 @@ describe('PortfolioService', () => {
                     expect(portfolio[0].title).toEqual('Mountain1');
                     expect(portfolio[1].title).toEqual('Mountain2');
                     expect(portfolio[0].technologies.length).toBeGreaterThan(0);
-                    expect(portfolioService.getPortfolioDetails(1)).toEqual(MockPortfolio[1]);
+                    expect(portfolioService.getPortfolioDetails('mdlinking')).toEqual(MockPortfolio[1]);
                 });
             }));
     });

@@ -38,7 +38,10 @@ export class OfferComponent implements OnInit, AfterViewInit {
     if (!category || category === '') {
       return;
     }
+    this.parseCategory(category);
+  }
 
+  parseCategory(category) {
     switch (category) {
       case 'tools':
         this.goToSection('offer_tools');

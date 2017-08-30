@@ -1,49 +1,9 @@
 export const MockTechnologies = {
-  'title': 'Technologies',
-  'technologies': [
-    {
-      'name': 'angular',
-      'image': 'https://tool.io/assets/images/logos/tool/tool.png'
-    },
-    {
-      'name': 'angular',
-      'image': 'https://tool.io/assets/images/logos/tool/tool.png'
-    },
-    {
-      'name': 'angular',
-      'image': 'https://tool.io/assets/images/logos/tool/tool.png'
-    },
-    {
-      'name': 'angular',
-      'image': 'https://tool.io/assets/images/logos/tool/tool.png'
-    },
-    {
-      'name': 'angular',
-      'image': 'https://tool.io/assets/images/logos/tool/tool.png'
-    },
-    {
-      'name': 'angular',
-      'image': 'https://tool.io/assets/images/logos/tool/tool.png'
-    },
-    {
-      'name': 'angular',
-      'image': 'https://tool.io/assets/images/logos/tool/tool.png'
-    },
-    {
-      'name': 'angular',
-      'image': 'https://tool.io/assets/images/logos/tool/tool.png'
-    },
-    {
-      'name': 'angular',
-      'image': 'https://tool.io/assets/images/logos/tool/tool.png'
-    },
-    {
-      'name': 'angular',
-      'image': 'https://tool.io/assets/images/logos/tool/tool.png'
-    },
-    {
-      'name': 'angular',
-      'image': 'https://tool.io/assets/images/logos/tool/tool.png'
-    }
-  ]
+  'bash': {
+    'title': 'Bash',
+    'description': 'TECHNOLOGIES.bash.description',
+    'icon': 'bash/bash.svg',
+    'img': 'assets/images/angularCode.png',
+    'color': '#009d96'
+  }
 }

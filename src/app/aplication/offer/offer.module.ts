@@ -10,7 +10,6 @@ import {OfferRoutingModule} from './offer.routing';
 import {OfferService} from './services/offer.service';
 import {OfferResolver} from './services/offer.resolver';
 
-import {ArchitectureComponent} from './architecture/architecture.component';
 import {WeCreateComponent} from './weCreate/weCreate.component';
 import {TechnologiesComponent} from './technologies/technologies.component';
 import {ToolsComponent} from './tools/tools.component';
@@ -30,7 +29,6 @@ import {ToolsResolver} from './services/tools.resolver';
     UiModule
   ],
   declarations: [
-    ArchitectureComponent,
     OfferComponent,
     WeCreateComponent,
     TechnologiesComponent,

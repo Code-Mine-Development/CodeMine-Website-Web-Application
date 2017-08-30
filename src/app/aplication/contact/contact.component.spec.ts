@@ -1,8 +1,11 @@
 import {async, ComponentFixture, TestBed} from '@angular/core/testing';
-import {ContactComponent} from './contact.component';
-import {ContactInfoComponent} from '../../components/contact/contact-info/contact-info.component';
 import {ActivatedRoute, Data, Router} from '@angular/router';
+import {ContactComponent} from './contact.component';
+
 import {MockCompany} from '../../shared/mocks/company.mock';
+import {ContactComponentModule} from '../../components/contact/contact-components.module';
+import {TranslateModule} from '@ngx-translate/core';
+import {NoopAnimationsModule} from '@angular/platform-browser/animations';
 
 describe('ContactComponent', () => {
     let component: ContactComponent;
@@ -15,7 +18,12 @@ describe('ContactComponent', () => {
 
     beforeEach(async(() => {
         TestBed.configureTestingModule({
-            declarations: [ContactComponent, ContactInfoComponent],
+            imports: [
+              ContactComponentModule,
+              TranslateModule.forRoot(),
+              NoopAnimationsModule
+            ],
+            declarations: [ContactComponent],
             providers: [
                 {
                     provide: ActivatedRoute,

@@ -1,4 +1,5 @@
 <figure [class.small]="small">
   <figcaption *ngIf="title">{{ title | translate }}</figcaption>
-  <img [src]="image" alt="project home screen picture" />
+  <img *ngIf="image" [src]="image" alt="project home screen picture" />
+  <video *ngIf="video" autoplay loop [src]="video?.videoUrl" [attr.picture]="video?.image"></video>
 </figure>

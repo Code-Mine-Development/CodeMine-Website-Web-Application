@@ -1,11 +1,10 @@
 
 export interface Technologies {
-  title: string;
-  technologies: Array<LanguagesEntity>;
-}
-
-
-interface LanguagesEntity {
-  image: string;
-  name: string;
+  [key: string]: {
+    title: string,
+    description: string,
+    icon: string,
+    img: string,
+    color: string
+  }
 }

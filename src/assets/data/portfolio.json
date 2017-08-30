@@ -506,19 +506,18 @@
       {
         "section": "image",
         "title": "Home",
-        "image": "../assets/images/mdlinking-carousel.jpg"
+        "video": {
+          "image": "../assets/images/portfolio-images/midocean_1.mov.jpg",
+          "videoUrl": "../assets/videos/portfolio-details/midocean_1.mp4"
+        }
       },
       {
         "section": "text",
         "align": "left",
         "text": [
           {
-            "title": "PORTFOLIO.BrighterVision.description.postBooking",
-            "description": "PORTFOLIO.BrighterVision.description.part2"
-          },
-          {
-            "title": null,
-            "description": "PORTFOLIO.BrighterVision.description.part3"
+            "title": "PORTFOLIO.MidOceanBrands.description.interface",
+            "description": "PORTFOLIO.MidOceanBrands.description.part2"
           }
         ]
       },
@@ -541,11 +540,11 @@
         "text": [
           {
             "title": "PORTFOLIO.MidOceanBrands.description.process",
-            "description": "PORTFOLIO.MidOceanBrands.description.part4"
+            "description": "PORTFOLIO.MidOceanBrands.description.part3"
           },
           {
             "title": null,
-            "description": "PORTFOLIO.MidOceanBrands.description.part5"
+            "description": "PORTFOLIO.MidOceanBrands.description.part4"
           }
         ]
       },
@@ -553,7 +552,10 @@
         "section": "image",
         "title": null,
         "small": true,
-        "image": "../assets/images/mdlinking-carousel.jpg"
+        "video": {
+          "image": "../assets/images/portfolio-images/midocean_2.mov.jpg",
+          "videoUrl": "../assets/videos/portfolio-details/midocean_2.mp4"
+        }
       },
       {
         "section": "image",
@@ -565,7 +567,10 @@
         "section": "image",
         "title": null,
         "small": true,
-        "image": "../assets/images/mdlinking-carousel.jpg"
+        "video": {
+          "image": "../assets/images/portfolio-images/midocean_3.mov.jpg",
+          "videoUrl": "../assets/videos/portfolio-details/midocean_3.mp4"
+        }
       },
       {
         "section": "text",
@@ -574,15 +579,9 @@
           {
             "title": "PORTFOLIO.MidOceanBrands.description.technologies",
             "description": "PORTFOLIO.MidOceanBrands.description.part5"
-          }
-        ]
-      },
-      {
-        "section": "text",
-        "align": "left",
-        "text": [
+          },
           {
-            "title": "PORTFOLIO.MidOceanBrands.description.technologies",
+            "title": "PORTFOLIO.MidOceanBrands.description.application",
             "description": "PORTFOLIO.MidOceanBrands.description.part6"
           }
         ]
