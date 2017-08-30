@@ -41,6 +41,7 @@ export class PortfolioService {
       .map((response: Response) => {
         const portfolio: Portfolio[] = response.json();
         this.portfolio = portfolio;
+        console.log(portfolio);
         return portfolio.filter((portfolio_elem: Portfolio) => (portfolio_elem.homePage));
       })
   }

@@ -1,10 +1,9 @@
 import {
-  Component, EventEmitter, HostBinding, HostListener, Input, OnChanges, OnInit, Output,
+  Component, EventEmitter, Input, OnChanges, OnInit, Output,
   ViewChild, ElementRef
 } from '@angular/core';
 import {Employees} from '../../../aplication/about-us/interfaces/employees.interface';
 import {Coordinate} from '../office/office-model/models/coordinate.model';
-import {ClosePersonService} from '../../../shared/services/close-person.service'
 @Component({
   selector: 'app-desk',
   template: `
@@ -15,7 +14,7 @@ import {ClosePersonService} from '../../../shared/services/close-person.service'
         </div>
         <div class="col2">
           <div class="details">
-           <h4>{{person.name}}</h4>
+           <h4>{{person.name}}</h4>a
             <h4>{{person.surname}}</h4>
           </div>
         </div>
@@ -32,8 +31,7 @@ export class DeskComponent implements OnInit, OnChanges {
   @ViewChild('desk') desk;
   coordinate: Coordinate;
 
-  constructor(private closePersonService: ClosePersonService, private elementRef: ElementRef) {
-    this.closePersonService.registerCloseFunction().subscribe(() => this.closeCard());
+  constructor(private elementRef: ElementRef) {
   }
 
   ngOnInit() {
@@ -50,7 +48,6 @@ export class DeskComponent implements OnInit, OnChanges {
   }
 
   prepareCoordinates() {
-
     this.elementRef.nativeElement.style.top = this.coordinate.offsetTop();
     this.elementRef.nativeElement.style.left = this.coordinate.offsetLeft();
     this.elementRef.nativeElement.style.transform = this.coordinate.transform();

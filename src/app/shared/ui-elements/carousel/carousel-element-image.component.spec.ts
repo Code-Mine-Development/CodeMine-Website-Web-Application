@@ -1,6 +1,7 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { CarouselElementImageComponent } from './carousel-element-image.component';
+import {NoopAnimationsModule} from '@angular/platform-browser/animations';
 
 describe('CarouselElementImageComponent', () => {
   let component: CarouselElementImageComponent;
@@ -8,6 +9,9 @@ describe('CarouselElementImageComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
+      imports:[
+        NoopAnimationsModule
+      ],
       declarations: [ CarouselElementImageComponent ]
     })
     .compileComponents();

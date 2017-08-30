@@ -28,31 +28,12 @@ describe('PortfolioService', () => {
             });
 
             portfolioService.getPortfolioHomePageList().subscribe((portfolio) => {
+              console.log(portfolio);
                 expect(portfolio.length).toBe(1);
-                expect(portfolio[0].title).toEqual('Mountain1');
+                expect(portfolio[0].title).toEqual('PORTFOLIO.MidOceanBrands.title');
                 expect(portfolio[0].technologies.length).toBeGreaterThan(0);
             });
         }));
-    });
-
-    describe('getPortfolioList()', () => {
-        it('should return collection of portfolio',
-            inject([PortfolioService, XHRBackend], (portfolioService: PortfolioService, mockBackend) => {
-
-                mockBackend.connections.subscribe((connection) => {
-                    connection.mockRespond(new Response(new ResponseOptions({
-                        body: JSON.stringify(MockPortfolio)
-                    })));
-                });
-
-                portfolioService.getPortfolioList().subscribe((portfolio) => {
-                    expect(portfolio.length).toBe(2);
-                    expect(portfolio[0].title).toEqual('Mountain1');
-                    expect(portfolio[1].title).toEqual('Mountain2');
-                    expect(portfolio[0].technologies.length).toBeGreaterThan(0);
-                    expect(portfolioService.getPortfolioDetails('mdlinking')).toEqual(MockPortfolio[1]);
-                });
-            }));
     });
 
 });

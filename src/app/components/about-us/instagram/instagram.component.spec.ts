@@ -1,6 +1,7 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { InstagramComponent } from './instagram.component';
+import {InstagramPhotoComponent} from './instagram-photo.component';
 
 describe('InstagramComponent', () => {
   let component: InstagramComponent;
@@ -8,7 +9,7 @@ describe('InstagramComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ InstagramComponent ]
+      declarations: [ InstagramComponent, InstagramPhotoComponent ]
     })
     .compileComponents();
   }));

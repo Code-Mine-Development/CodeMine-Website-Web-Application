@@ -4,7 +4,6 @@ import {DeskComponent} from './desk/desk.component';
 import { PersonComponent } from './person/person.component';
 import {UiModule} from '../../shared/ui-elements/ui.module';
 import { DoorComponent } from './door/door.component';
-import {ClosePersonService} from '../../shared/services/close-person.service';
 import {ScrollToModule} from 'ng2-scroll-to';
 import {AboutCompanyNameComponent} from './about-company-name/about-company-name.component';
 import { ApproachComponent } from './approach/approach.component';
@@ -55,7 +54,6 @@ import { EmployeeComponent } from './office/employees-list/employee.component';
     InstagramComponent,
     OfficeComponent
   ],
-  providers: [ClosePersonService],
 })
 export class AboutUsComponentModule {
 }

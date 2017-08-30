@@ -1,6 +1,7 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { PortfolioDetailsHeaderComponent } from './header.component';
+import {TranslateModule} from '@ngx-translate/core';
 
 describe('HeaderComponent', () => {
   let component: PortfolioDetailsHeaderComponent;
@@ -8,6 +9,9 @@ describe('HeaderComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
+      imports: [
+        TranslateModule.forRoot()
+      ],
       declarations: [ PortfolioDetailsHeaderComponent ]
     })
     .compileComponents();

@@ -3,7 +3,6 @@ import {CommonModule} from '@angular/common';
 import {AboutUsComponent} from './about-us.component';
 import {AboutUsRoutingModule} from './about-us.routing.module';
 import {AboutUsComponentModule} from '../../components/about-us/about-us-components.module';
-import {ClosePersonService} from '../../shared/services/close-person.service';
 import {TranslateModule} from '@ngx-translate/core';
 import {SharedModule} from '../../shared/shared.module';
 
@@ -18,8 +17,7 @@ import {SharedModule} from '../../shared/shared.module';
   ],
   declarations: [
     AboutUsComponent
-  ],
-  providers: [ClosePersonService],
+  ]
 })
 export class AboutUsModule {
 }

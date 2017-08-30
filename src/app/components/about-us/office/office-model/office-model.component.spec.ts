@@ -1,6 +1,11 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { OfficeModelComponent } from './office-model.component';
+import {DeskComponent} from '../../desk/desk.component';
+import {DoorComponent} from '../../door/door.component';
+import {PersonComponent} from '../../person/person.component';
+import {TranslateModule} from '@ngx-translate/core';
+import {NoopAnimationsModule} from '@angular/platform-browser/animations';
 
 describe('OfficeModelComponent', () => {
   let component: OfficeModelComponent;
@@ -8,7 +13,11 @@ describe('OfficeModelComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ OfficeModelComponent ]
+      imports: [
+        TranslateModule.forRoot(),
+        NoopAnimationsModule
+      ],
+      declarations: [ OfficeModelComponent, DeskComponent, DoorComponent, PersonComponent ]
     })
     .compileComponents();
   }));

@@ -69,7 +69,7 @@ export class AppComponent implements OnInit {
     const urlPartsList = url.split('/'),
       subPage = urlPartsList[urlPartsList.length - 1];
 
-    return subPage.replace('-', ' ');
+    return subPage.split('-').join(' ');
   }
 
   setTitle(prefix: string, page: string) {

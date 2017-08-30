@@ -11,7 +11,7 @@ import {OfferThumbnail} from '../../../shared/interface/offerThumbnail.interface
   styleUrls: ['tools.component.scss']
 })
 export class ToolsComponent implements OnChanges {
-  @Input() Tools: OfferElementBeforePrepare[];
+  @Input() Tools: OfferElementBeforePrepare;
   elements: [OfferThumbnail];
 
   constructor(private positionService: PreviousPositionService, private router: Router, private localize: LocalizeRouterService) {

@@ -2,6 +2,10 @@ import {async, ComponentFixture, TestBed} from '@angular/core/testing';
 import { CarouselComponent } from './carousel.component';
 import {Observable} from 'rxjs/Observable';
 import {Component} from '@angular/core';
+import {CarouselElementTextComponent} from './carousel-element-text.component';
+import {CarouselElementImageComponent} from './carousel-element-image.component';
+import {NoopAnimationsModule} from '@angular/platform-browser/animations';
+import {TranslateModule} from '@ngx-translate/core';
 
 const MockCarouselData = [
   {
@@ -77,7 +81,11 @@ describe('CarouselComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [FakeWrapperCarouselComponent, CarouselComponent ]
+      imports:[
+        NoopAnimationsModule,
+        TranslateModule.forRoot()
+      ],
+      declarations: [FakeWrapperCarouselComponent, CarouselComponent, CarouselElementTextComponent, CarouselElementImageComponent ]
     })
     .compileComponents();
   }));
