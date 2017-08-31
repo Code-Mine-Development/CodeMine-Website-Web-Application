@@ -173,7 +173,7 @@
       {
         "section": "image",
         "title": "Home",
-        "image": "../assets/images/mdlinking-carousel.jpg"
+        "image": "../assets/images/portfolio-images"
       },
       {
         "section": "text",
@@ -301,15 +301,15 @@
         "section": "icons",
         "icons": [
           {
-            "icon":"../assets/images/portfolio-images/example_icon.png",
+            "icon": "../assets/images/portfolio-images/example_icon.png",
             "description": "PORTFOLIO.telecom.description.part3"
           },
           {
-            "icon":"../assets/images/portfolio-images/example_icon.png",
+            "icon": "../assets/images/portfolio-images/example_icon.png",
             "description": "PORTFOLIO.telecom.description.part4"
           },
           {
-            "icon":"../assets/images/portfolio-images/example_icon.png",
+            "icon": "../assets/images/portfolio-images/example_icon.png",
             "description": "PORTFOLIO.telecom.description.part5"
           }
         ]

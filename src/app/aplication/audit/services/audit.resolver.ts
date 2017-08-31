@@ -8,12 +8,11 @@ import {Audit} from '../interfaces/audit.interface';
 @Injectable()
 export class AuditResolver implements Resolve<Audit> {
 
-    constructor(private auditService: AuditService) {
+  constructor(private auditService: AuditService) {
+  }
 
-    }
-
-    resolve(route: ActivatedRouteSnapshot,
-             state: RouterStateSnapshot): Observable<Audit> | Promise<Audit> | Audit {
-    return  this.auditService.getAudit();
-}
+  resolve(route: ActivatedRouteSnapshot,
+          state: RouterStateSnapshot): Observable<Audit> | Promise<Audit> | Audit {
+    return this.auditService.getAudit();
+  }
 }
