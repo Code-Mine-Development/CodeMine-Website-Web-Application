@@ -1,6 +1,7 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
-
+import {NoopAnimationsModule} from '@angular/platform-browser/animations';
 import { DoorComponent } from './door.component';
+
 
 describe('DoorComponent', () => {
   let component: DoorComponent;
@@ -8,6 +9,7 @@ describe('DoorComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
+      imports: [ NoopAnimationsModule ],
       declarations: [ DoorComponent ]
     })
     .compileComponents();

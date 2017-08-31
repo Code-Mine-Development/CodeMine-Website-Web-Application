@@ -1,6 +1,8 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { HomeInformationContentComponent } from './home-information-content.component';
+import {HomePageComponentModule} from '../../home-page-components.module';
+import {TranslateModule} from '@ngx-translate/core';
 
 describe('HomeInformationContentComponent', () => {
   let component: HomeInformationContentComponent;
@@ -8,7 +10,11 @@ describe('HomeInformationContentComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ HomeInformationContentComponent ]
+      imports: [
+        HomePageComponentModule,
+        TranslateModule.forRoot()
+      ],
+      declarations: []
     })
     .compileComponents();
   }));

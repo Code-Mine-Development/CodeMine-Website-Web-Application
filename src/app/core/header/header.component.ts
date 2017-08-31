@@ -1,8 +1,6 @@
 import {Component, OnInit, Inject, HostListener, HostBinding} from '@angular/core';
 import {DOCUMENT} from '@angular/platform-browser';
 import {Router, NavigationEnd} from '@angular/router';
-import {TranslateService} from '@ngx-translate/core';
-import {LocalizeRouterService} from 'localize-router';
 import {HomeInformationServices} from '../../components/home-page/services/home-information.service';
 
 @Component({

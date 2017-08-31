@@ -1,6 +1,10 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { EmployeeComponent } from './employee.component';
+import {TranslateModule} from '@ngx-translate/core';
+import {MockCompany} from '../../../../shared/mocks/company.mock';
+
+
 
 describe('EmployeeComponent', () => {
   let component: EmployeeComponent;
@@ -8,6 +12,7 @@ describe('EmployeeComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
+      imports:[ TranslateModule.forRoot() ],
       declarations: [ EmployeeComponent ]
     })
     .compileComponents();
@@ -16,6 +21,8 @@ describe('EmployeeComponent', () => {
   beforeEach(() => {
     fixture = TestBed.createComponent(EmployeeComponent);
     component = fixture.componentInstance;
+    component.person = MockCompany.employees[0];
+    component.currentVisible = {};
     fixture.detectChanges();
   });
 

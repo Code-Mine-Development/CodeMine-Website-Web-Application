@@ -506,6 +506,7 @@
       {
         "section": "image",
         "title": "Home",
+        "star": true,
         "video": {
           "image": "../assets/images/portfolio-images/midocean_1.mov.jpg",
           "videoUrl": "../assets/videos/portfolio-details/midocean_1.mp4"
@@ -526,11 +527,12 @@
         "images": [
           {
             "title": "PORTFOLIO.MidOceanBrands.description.before",
-            "url": "../assets/images/portfolio-images/tripbuzz-presentation.png"
+            "url": "../assets/images/portfolio-images/midocean_3.jpg"
           },
           {
+            "star": true,
             "title": "PORTFOLIO.MidOceanBrands.description.after",
-            "url": "../assets/images/portfolio-images/tripbuzz-presentation.png"
+            "url": "../assets/images/portfolio-images/midocean_2.png"
           }
         ]
       },
@@ -552,6 +554,7 @@
         "section": "image",
         "title": null,
         "small": true,
+        "star": true,
         "video": {
           "image": "../assets/images/portfolio-images/midocean_2.mov.jpg",
           "videoUrl": "../assets/videos/portfolio-details/midocean_2.mp4"
@@ -561,7 +564,7 @@
         "section": "image",
         "title": null,
         "small": true,
-        "image": "../assets/images/mdlinking-carousel.jpg"
+        "image": "../assets/images/portfolio-images/midocean_1.png"
       },
       {
         "section": "image",
@@ -588,6 +591,9 @@
       },
       {
         "section": "architecture"
+      },
+      {
+        "section": "starInfo"
       }
     ],
     "tags": {

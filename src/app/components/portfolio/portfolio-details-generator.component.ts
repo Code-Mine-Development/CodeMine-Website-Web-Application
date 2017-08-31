@@ -10,6 +10,7 @@ import {ImagesComponent} from './details-section/images/images.component';
 import {ArchitectureComponent} from './details-section/architecture/architecture.component';
 import {IconsComponent} from './details-section/icons/icons.component';
 import {TwoImagesComponent} from './details-section/two-images/two-images.component';
+import {StarInfoComponent} from './details-section/star-info/star-info.component';
 
 
 @Component({
@@ -52,6 +53,7 @@ export class PortfolioDetailsGeneratorComponent implements OnInit, OnDestroy {
       this.generateArchitecture(section);
       this.generateIcons(section);
       this.generate2images(section);
+      this.generateStarInfo(section);
     })
   }
 
@@ -123,6 +125,13 @@ export class PortfolioDetailsGeneratorComponent implements OnInit, OnDestroy {
     }
     const ref: ComponentRef<TwoImagesComponent> = this.createElement(TwoImagesComponent);
     ref.instance.images = section.images;
+  }
+
+  generateStarInfo(section) {
+    if (section.section !== 'starInfo') {
+      return;
+    }
+    const ref: ComponentRef<StarInfoComponent> = this.createElement(StarInfoComponent);
   }
 
   private createElement(elementClass) {

@@ -1,7 +1,9 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 import {Component} from '@angular/core';
+import {TranslateModule} from '@ngx-translate/core';
 import {WeCreateComponent} from './weCreate.component';
 import {MockFeatures} from '../../../shared/mocks/features.mock';
+
 
 @Component({
   selector: 'app-fake-we-create-wrapper',
@@ -21,6 +23,9 @@ describe('WeCreateComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
+      imports: [
+        TranslateModule.forRoot()
+      ],
       declarations: [ FakeWrapperWeCreateComponent, WeCreateComponent],
     })
       .compileComponents();

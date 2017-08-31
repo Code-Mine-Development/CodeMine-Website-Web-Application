@@ -1,6 +1,8 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { CarouselElementTextComponent } from './carousel-element-text.component';
+import {NoopAnimationsModule} from '@angular/platform-browser/animations';
+import {TranslateModule} from '@ngx-translate/core';
 
 describe('CarouselElementTextComponent', () => {
   let component: CarouselElementTextComponent;
@@ -8,6 +10,10 @@ describe('CarouselElementTextComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
+      imports:[
+        NoopAnimationsModule,
+        TranslateModule.forRoot()
+      ],
       declarations: [ CarouselElementTextComponent ]
     })
     .compileComponents();

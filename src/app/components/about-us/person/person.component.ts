@@ -1,5 +1,4 @@
 import {Component, HostListener, Input, EventEmitter, Output, OnChanges, HostBinding} from '@angular/core';
-import {ClosePersonService} from '../../../shared/services/close-person.service';
 import {Employees} from '../../../aplication/about-us/interfaces/employees.interface';
 
 @Component({
@@ -16,12 +15,12 @@ export class PersonComponent implements OnChanges {
 
   visibleElement;
 
-  constructor(private closePersonService: ClosePersonService) {
+  constructor() {
   }
 
   @HostListener('window:keydown', ['$event']) closePerson(event) {
     if (event.keyCode === 27) {
-      this.closePersonService.triggerClose();
+      this.closeButtonClicked();
     }
   }
 

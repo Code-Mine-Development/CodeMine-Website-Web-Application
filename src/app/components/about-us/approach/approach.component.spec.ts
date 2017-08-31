@@ -1,6 +1,7 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { ApproachComponent } from './approach.component';
+import {TranslateModule} from '@ngx-translate/core';
 
 describe('ApproachComponent', () => {
   let component: ApproachComponent;
@@ -8,6 +9,9 @@ describe('ApproachComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
+      imports: [
+        TranslateModule.forRoot()
+      ],
       declarations: [ ApproachComponent ]
     })
     .compileComponents();

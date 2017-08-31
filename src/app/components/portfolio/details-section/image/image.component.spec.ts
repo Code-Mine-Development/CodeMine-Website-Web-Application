@@ -1,6 +1,7 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { ImageComponent } from './image.component';
+import {TranslateModule} from '@ngx-translate/core';
 
 describe('ImageComponent', () => {
   let component: ImageComponent;
@@ -8,6 +9,9 @@ describe('ImageComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
+      imports: [
+        TranslateModule.forRoot()
+      ],
       declarations: [ ImageComponent ]
     })
     .compileComponents();

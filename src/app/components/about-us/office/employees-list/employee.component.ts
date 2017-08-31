@@ -20,7 +20,6 @@ import {Component, OnInit, Input, Output, EventEmitter, OnChanges} from '@angula
         </button>
         <span class="description">
             {{person.description | translate}}
-            <!--<span class="since">{{'PEOPLE.worksince' | translate}} {{people}} </span>-->
         </span>
       </p>
     </section>

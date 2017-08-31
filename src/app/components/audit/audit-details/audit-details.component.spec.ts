@@ -4,6 +4,9 @@ import { AuditDetailsComponent } from './audit-details.component';
 import {Component} from '@angular/core';
 import {MockAudit} from '../../../shared/mocks/audit.mock';
 import {AuditListComponent} from '../audit-list/aduit-list.component'
+import {TranslateModule} from '@ngx-translate/core';
+import {AuditListElementComponent} from '../audit-list/audit-list-element.component';
+import {DrawBackgroundService} from '../../../shared/services/draw-background.service';
 
 @Component({
     selector: 'app-fake-audit-wrapper',
@@ -23,7 +26,11 @@ describe('AuditDetailsComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ FakeWrapperAuditDetailsComponent, AuditDetailsComponent, AuditListComponent ],
+      imports: [
+        TranslateModule.forRoot()
+      ],
+      declarations: [ FakeWrapperAuditDetailsComponent, AuditDetailsComponent, AuditListComponent, AuditListElementComponent ],
+      providers: [ DrawBackgroundService ]
     })
     .compileComponents();
   }));

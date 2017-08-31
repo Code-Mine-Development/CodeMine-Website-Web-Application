@@ -13,6 +13,7 @@ import { ArchitectureComponent } from './details-section/architecture/architectu
 import { IconsComponent } from './details-section/icons/icons.component';
 import { TwoImagesComponent } from './details-section/two-images/two-images.component';
 import { PortfolioDetailsGeneratorComponent } from './portfolio-details-generator.component';
+import { StarInfoComponent } from './details-section/star-info/star-info.component';
 
 @NgModule({
     declarations: [
@@ -24,7 +25,8 @@ import { PortfolioDetailsGeneratorComponent } from './portfolio-details-generato
         ArchitectureComponent,
         IconsComponent,
         TwoImagesComponent,
-        PortfolioDetailsGeneratorComponent
+        PortfolioDetailsGeneratorComponent,
+        StarInfoComponent
     ],
     imports: [
         CommonModule,
@@ -45,6 +47,7 @@ import { PortfolioDetailsGeneratorComponent } from './portfolio-details-generato
       ArchitectureComponent,
       IconsComponent,
       TwoImagesComponent,
+      StarInfoComponent
     ]
 })
 export class PortfolioComponentModule {

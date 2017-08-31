@@ -1,6 +1,7 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { IconsComponent } from './icons.component';
+import {TranslateModule} from '@ngx-translate/core';
 
 describe('IconsComponent', () => {
   let component: IconsComponent;
@@ -8,6 +9,9 @@ describe('IconsComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
+      imports: [
+        TranslateModule.forRoot()
+      ],
       declarations: [ IconsComponent ]
     })
     .compileComponents();

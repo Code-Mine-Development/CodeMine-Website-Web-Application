@@ -40,8 +40,7 @@ import {NavigationComponent} from './header/navigation/navigation.component';
         HomePageComponentModule,
         ScrollToModule.forRoot(),
         SharedModule,
-        LocalizeRouterModule,
-
+        LocalizeRouterModule
     ],
     exports: [
         HeaderComponent,

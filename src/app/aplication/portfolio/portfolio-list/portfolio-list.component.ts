@@ -1,7 +1,6 @@
 import {Component, OnInit} from '@angular/core';
 import {Data, ActivatedRoute, Router} from '@angular/router';
 import {Portfolio} from '../interfaces/portfolio.interface';
-import {AppRoutingProvider} from '../../../app-routing-provider';
 import {LocalizeRouterService} from 'localize-router';
 
 @Component({
@@ -23,7 +22,6 @@ export class PortfolioListComponent implements OnInit {
     }
 
     showDetails(index: string): void {
-
         const translatedPath: any = this.localize.translateRoute('/portfolio/' + index);
         this.router.navigateByUrl(translatedPath)
     }

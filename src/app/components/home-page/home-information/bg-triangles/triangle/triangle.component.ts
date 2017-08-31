@@ -16,10 +16,10 @@ export class TriangleComponent implements OnInit, OnChanges, AfterViewInit {
   @HostBinding('style.z-index') zindex;
   @HostBinding('style.transition') transition;
 
-  @Input('position') position: Point;
-  @Input('size') size: number;
-  @Input('range') range: number;
-  @Input('color') color: string;
+  @Input() position: Point;
+  @Input() size: number;
+  @Input() range: number;
+  @Input() color: string;
 
   private maxPositionDistance = 100;
   private maxTransformDistance = 70;

@@ -1,9 +1,11 @@
 import {async, ComponentFixture, TestBed, fakeAsync, tick} from '@angular/core/testing';
-import { PortfolioListComponent } from './portfolio-list.component';
+import {PortfolioListComponent} from './portfolio-list.component';
 import {ActivatedRoute, Data, Router} from '@angular/router';
 import {MockPortfolio} from 'app/shared/mocks/portfolio.mock';
 import {PortfolioProjectComponent} from '../../../components/portfolio/portfolio-project/portfolio-project.component';
 import {UiModule} from '../../../shared/ui-elements/ui.module';
+import {LocalizeRouterService} from 'localize-router';
+import {TranslateModule} from '@ngx-translate/core';
 
 const MockRoutingData = {
   data: {
@@ -18,22 +20,31 @@ describe('PortfolioListComponent', () => {
   let fixture: ComponentFixture<PortfolioListComponent>;
 
   const router = {
-    navigate: jasmine.createSpy('navigate')
+    navigateByUrl: jasmine.createSpy('navigateByUrl')
   };
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ PortfolioListComponent, PortfolioProjectComponent ],
-      imports: [UiModule],
+      declarations: [PortfolioListComponent, PortfolioProjectComponent],
+      imports: [
+        UiModule,
+        TranslateModule.forRoot()
+      ],
       providers: [
         {
           provide: ActivatedRoute,
           useValue: MockRoutingData,
         },
-        {provide: Router, useValue: router}
-      ]
+        {provide: Router, useValue: router},
+        {
+          provide: LocalizeRouterService,
+          useValue: {
+            translateRoute: (val) => val
+          }
+        }
+        ]
     })
-    .compileComponents();
+      .compileComponents();
   }));
 
   beforeEach(() => {
@@ -53,7 +64,7 @@ describe('PortfolioListComponent', () => {
   it('should change routing', fakeAsync(() => {
     component.showDetails('mdlinking');
     tick();
-    expect(router.navigate).toHaveBeenCalledWith(['/portfolio/', 1], {relativeTo: MockRoutingData});
+    expect(router.navigateByUrl).toHaveBeenCalledWith('/portfolio/mdlinking');
 
   }));
 
