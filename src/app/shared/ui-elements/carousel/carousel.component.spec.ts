@@ -81,7 +81,7 @@ describe('CarouselComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      imports:[
+      imports: [
         NoopAnimationsModule,
         TranslateModule.forRoot()
       ],

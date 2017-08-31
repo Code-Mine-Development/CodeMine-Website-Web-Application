@@ -1,11 +1,12 @@
+import {Input, Directive} from '@angular/core';
 import {async, ComponentFixture, TestBed} from '@angular/core/testing';
+import {TranslateModule} from '@ngx-translate/core';
+import {Observable} from 'rxjs/Observable';
 
 import {FooterComponent} from './footer.component';
-import {TranslateModule} from '@ngx-translate/core';
-import {Input, Directive} from '@angular/core';
 import {SocialServiceComponent} from './social-service.component';
+
 import {ContactService} from '../../aplication/contact/services/contact.service';
-import {Observable} from 'rxjs';
 import {MockCompany} from '../../shared/mocks/company.mock';
 
 @Directive({
@@ -26,9 +27,11 @@ describe('FooterComponent', () => {
       ],
       declarations: [FooterComponent, ScrollDirective, SocialServiceComponent],
       providers: [
-        { provide: ContactService, useValue: {
+        {
+          provide: ContactService, useValue: {
           getCompany: () => Observable.of(MockCompany)
-        }}
+        }
+        }
       ]
     })
       .compileComponents();

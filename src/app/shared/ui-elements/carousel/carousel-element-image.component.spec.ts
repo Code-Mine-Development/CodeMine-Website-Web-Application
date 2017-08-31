@@ -9,7 +9,7 @@ describe('CarouselElementImageComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      imports:[
+      imports: [
         NoopAnimationsModule
       ],
       declarations: [ CarouselElementImageComponent ]

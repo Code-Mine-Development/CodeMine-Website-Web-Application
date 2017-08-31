@@ -1,6 +1,6 @@
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import {async, ComponentFixture, TestBed} from '@angular/core/testing';
 
-import { BgTrianglesComponent } from './bg-triangles.component';
+import {BgTrianglesComponent} from './bg-triangles.component';
 import {Component, Input} from '@angular/core';
 import {Point} from '../../../../shared/interface/point.interface';
 
@@ -9,7 +9,7 @@ import {Point} from '../../../../shared/interface/point.interface';
   template: 'test',
   styles: []
 })
-class Triangles{
+class TrianglesMockComponent {
   @Input('position') position: Point;
   @Input('size') size: number;
   @Input('range') range: number;
@@ -22,9 +22,9 @@ describe('BgTrianglesComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ BgTrianglesComponent, Triangles ]
+      declarations: [BgTrianglesComponent, TrianglesMockComponent]
     })
-    .compileComponents();
+      .compileComponents();
   }));
 
   beforeEach(() => {

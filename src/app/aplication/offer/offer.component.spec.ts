@@ -15,8 +15,6 @@ import {PreviousPositionService} from '../../shared/services/previous-position.s
 import {ScrollToService} from '../../shared/services/scroll-to.service';
 import {MockTools} from '../../shared/mocks/tools.mock';
 import {MockTechnologies} from '../../shared/mocks/technologies.mock';
-import {Observable} from 'rxjs';
-
 
 
 describe('OfferComponent', () => {
