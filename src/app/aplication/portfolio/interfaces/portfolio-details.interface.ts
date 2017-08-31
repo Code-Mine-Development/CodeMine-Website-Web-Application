@@ -28,7 +28,7 @@ interface Video {
   videoUrl: string
 }
 
-interface Images{
-  url:string,
-  title:string
+interface Images {
+  url: string,
+  title: string
 }

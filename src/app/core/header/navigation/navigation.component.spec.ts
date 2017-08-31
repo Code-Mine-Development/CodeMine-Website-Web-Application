@@ -11,7 +11,7 @@ import {LocalizeRouterService} from 'localize-router';
 @Pipe ({
   name: 'localize'
 })
-class localizePipeMock implements PipeTransform {
+class LocalizePipeMock implements PipeTransform {
   transform(value: string) {
     return value;
   }
@@ -30,7 +30,7 @@ describe('NavigationComponent', () => {
         RouterTestingModule,
         TranslateModule.forRoot()
       ],
-      declarations: [ NavigationComponent, HamburgerComponent, FullSizeComponent, localizePipeMock ],
+      declarations: [ NavigationComponent, HamburgerComponent, FullSizeComponent, LocalizePipeMock ],
       providers: [
         {provide: LocalizeRouterService, useValue: localizeRouterMock}
       ]

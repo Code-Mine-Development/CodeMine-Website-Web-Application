@@ -83,12 +83,12 @@ describe('PortfolioDetailsComponent', () => {
   }));
 
   it('should navigate to portfolio', () => {
-    component.checkDetails(null,'Not found');
+    component.checkDetails(null, 'Not found');
     expect(router.navigateByUrl).toHaveBeenCalledWith('/portfolio')
   });
 
   it('should navigate to portfolio', () => {
-    component.checkDetails(null,'Not found');
+    component.checkDetails(null, 'Not found');
     expect(router.navigateByUrl).toHaveBeenCalledWith('/portfolio')
   });
 

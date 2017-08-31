@@ -1,15 +1,15 @@
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import {async, ComponentFixture, TestBed} from '@angular/core/testing';
 
-import { HamburgerComponent } from './hamburger.component';
+import {HamburgerComponent} from './hamburger.component';
 import {PipeTransform, Pipe} from '@angular/core';
 import {TranslateModule} from '@ngx-translate/core';
 import {RouterTestingModule} from '@angular/router/testing';
 
 
-@Pipe ({
+@Pipe({
   name: 'localize'
 })
-class localizePipeMock implements PipeTransform {
+class LocalizePipeMock implements PipeTransform {
   transform(value: string) {
     return value;
   }
@@ -26,9 +26,9 @@ describe('HamburgerComponent', () => {
         RouterTestingModule,
         TranslateModule.forRoot()
       ],
-      declarations: [ HamburgerComponent, localizePipeMock ]
+      declarations: [HamburgerComponent, LocalizePipeMock]
     })
-    .compileComponents();
+      .compileComponents();
   }));
 
   beforeEach(() => {

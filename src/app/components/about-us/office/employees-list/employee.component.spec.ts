@@ -12,7 +12,7 @@ describe('EmployeeComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      imports:[ TranslateModule.forRoot() ],
+      imports: [ TranslateModule.forRoot() ],
       declarations: [ EmployeeComponent ]
     })
     .compileComponents();

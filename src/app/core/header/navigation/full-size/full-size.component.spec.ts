@@ -1,14 +1,14 @@
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
-import { FullSizeComponent } from './full-size.component';
+import {async, ComponentFixture, TestBed} from '@angular/core/testing';
+import {FullSizeComponent} from './full-size.component';
 import {Pipe, PipeTransform} from '@angular/core';
 import {RouterTestingModule} from '@angular/router/testing';
 import {TranslateModule} from '@ngx-translate/core';
 
-@Pipe ({
+@Pipe({
   name: 'localize'
 })
-class localizePipeMock implements PipeTransform{
-  transform(value:string){
+class LocalizePipeMock implements PipeTransform {
+  transform(value: string) {
     return value;
   }
 }
@@ -23,9 +23,9 @@ describe('FullSizeComponent', () => {
         RouterTestingModule,
         TranslateModule.forRoot()
       ],
-      declarations: [ FullSizeComponent, localizePipeMock ]
+      declarations: [FullSizeComponent, LocalizePipeMock]
     })
-    .compileComponents();
+      .compileComponents();
   }));
 
   beforeEach(() => {

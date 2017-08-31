@@ -1,13 +1,13 @@
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import {async, ComponentFixture, TestBed} from '@angular/core/testing';
 import {Component} from '@angular/core';
 import {TranslateModule} from '@ngx-translate/core';
 
-import { DeskComponent } from './desk.component';
+import {DeskComponent} from './desk.component';
 import {MockCompany} from '../../../shared/mocks/company.mock';
 
 
 @Component({
-  selector: 'BG',
+  selector: 'app-bg',
   template: 'test',
   styles: [`
     :host{
@@ -17,7 +17,8 @@ import {MockCompany} from '../../../shared/mocks/company.mock';
     }
   `]
 })
-class BackGround{}
+class BackgroundMockComponent {
+}
 
 describe('DeskComponent', () => {
   let component: DeskComponent;
@@ -28,13 +29,13 @@ describe('DeskComponent', () => {
       imports: [
         TranslateModule.forRoot()
       ],
-      declarations: [ DeskComponent, BackGround ],
+      declarations: [DeskComponent, BackgroundMockComponent],
     })
-    .compileComponents();
+      .compileComponents();
   }));
 
   beforeEach(() => {
-    const background = TestBed.createComponent(BackGround);
+    const background = TestBed.createComponent(BackgroundMockComponent);
     fixture = TestBed.createComponent(DeskComponent);
 
     component = fixture.componentInstance;

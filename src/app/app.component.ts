@@ -68,7 +68,6 @@ export class AppComponent implements OnInit {
   parseUrl(url: string) {
     const urlPartsList = url.split('/'),
       subPage = urlPartsList[urlPartsList.length - 1];
-
     return subPage.split('-').join(' ');
   }
 

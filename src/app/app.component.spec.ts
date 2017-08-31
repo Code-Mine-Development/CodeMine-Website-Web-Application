@@ -36,7 +36,7 @@ describe('AppComponent', () => {
       addLangs: jasmine.createSpy('addLangs'),
       use: jasmine.createSpy('use'),
       setDefaultLang: jasmine.createSpy('setDefaultLang'),
-      get: () => Observable.of("Test Prefix")
+      get: () => Observable.of('Test Prefix')
     },
     routerMock = {
       events: new Subject()
@@ -110,7 +110,7 @@ describe('AppComponent', () => {
   })
 
   it('title should be changed', fakeAsync(() => {
-    TestBed.get(Router).events.next(new NavigationEnd(1, "test", "test/page"));
+    TestBed.get(Router).events.next(new NavigationEnd(1, 'test', 'test/page'));
     tick();
     expect(titleService.setTitle).toHaveBeenCalledWith('Test Prefix | page')
 
