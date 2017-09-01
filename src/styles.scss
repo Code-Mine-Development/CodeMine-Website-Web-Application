@@ -2,14 +2,47 @@
 @import "assets/styles/layout.scss";
 @import "assets/styles/rwd.scss";
 
-body{
-  margin:0;
+body {
+  margin: 0;
 }
 
-app-audit{
+app-audit {
   width: 100%;
 }
 
-app-offer{
+app-offer {
   width: 100%;
 }
+
+.container {
+  display:block;
+  margin-right: auto;
+  margin-left: auto;
+  padding-right: 15px;
+  padding-left: 15px;
+  width: 100%;
+  box-sizing: border-box;
+  @media (min-width: 576px) {
+    max-width: 540px;
+  }
+  @media (min-width: 768px) {
+    max-width: 720px;
+  }
+  @media (min-width: 992px) {
+    max-width: 960px;
+  }
+  @media (min-width: 1200px) {
+    max-width: 1140px;
+  }
+  @media (min-width: 1400px) {
+    max-width: 1300px;
+  }
+}
+
+
+
+
+
+
+
+

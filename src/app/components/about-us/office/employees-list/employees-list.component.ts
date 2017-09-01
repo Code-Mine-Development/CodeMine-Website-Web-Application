@@ -1,4 +1,4 @@
-import {Component, OnInit, Input, HostListener, Inject} from '@angular/core';
+import {Component, Input, HostListener, Inject} from '@angular/core';
 import {trigger, animate, transition, style} from '@angular/animations';
 import {Employees} from '../interfaces/employees.interface';
 import {ScrollToService} from '../../../../shared/services/scroll-to.service';
@@ -31,7 +31,8 @@ export class EmployeesListComponent {
   }
 
   @HostListener('scroll', ['$event'])
-  OnScroll() {
+  onScroll() {
+    console.log(this.checkTopPosition());
     if (this.checkTopPosition()) {
       this.scrollService.scroll('SiteHead');
     }

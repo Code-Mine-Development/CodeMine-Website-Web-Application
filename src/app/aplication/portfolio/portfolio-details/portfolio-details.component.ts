@@ -1,4 +1,4 @@
-import {Component, OnInit} from '@angular/core';
+import {Component, OnInit, HostBinding} from '@angular/core';
 import {PortfolioService} from '../services/portfolio.service';
 import {Portfolio} from '../interfaces/portfolio.interface';
 import {Params, ActivatedRoute, Router} from '@angular/router';
@@ -15,6 +15,8 @@ import {fadeInAnimation} from '../../../shared/routing.animation';
   host: { '[@fadeInAnimation]': '' }
 })
 export class PortfolioDetailsComponent implements OnInit {
+
+  @HostBinding('class.container') container = true;
 
   details: Portfolio;
   technologies: {};

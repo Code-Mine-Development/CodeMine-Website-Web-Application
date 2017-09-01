@@ -1,0 +1,17 @@
+:host {
+  height: 5000px;
+}
+
+.image {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 70%;
+  height: auto;
+  padding: 80px;
+  box-sizing: border-box;
+  display: none;
+  &.visible {
+    display: block;
+  }
+}

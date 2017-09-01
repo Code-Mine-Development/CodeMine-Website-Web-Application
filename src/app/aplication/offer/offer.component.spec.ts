@@ -85,5 +85,8 @@ describe('OfferComponent', () => {
     fixture.componentInstance.parseCategory('tools');
     expect(fixture.componentInstance.goToSection).toHaveBeenCalled();
     expect(fixture.componentInstance.goToSection).toHaveBeenCalledWith('offer_tools');
+    fixture.componentInstance.parseCategory('technologies');
+    expect(fixture.componentInstance.goToSection).toHaveBeenCalledTimes(2);
+    expect(fixture.componentInstance.goToSection).toHaveBeenCalledWith('offer_technologies');
   })
 });

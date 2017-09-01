@@ -5,6 +5,7 @@
   & > figure {
     width: 100%;
     margin: 24px auto;
+    box-sizing: border-box;
 
     &.small {
       width: 840px;

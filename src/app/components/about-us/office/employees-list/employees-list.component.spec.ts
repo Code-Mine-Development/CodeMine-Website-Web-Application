@@ -5,6 +5,7 @@ import {EmployeesListComponent} from './employees-list.component';
 import {EmployeeComponent} from './employee.component';
 import {ScrollToService} from '../../../../shared/services/scroll-to.service';
 import {NoopAnimationsModule} from '@angular/platform-browser/animations';
+import {DOCUMENT} from '@angular/common';
 
 describe('EmployeesListComponent', () => {
   let component: EmployeesListComponent;
@@ -13,6 +14,7 @@ describe('EmployeesListComponent', () => {
   const scrollToServiceMock = {
     scroll: jasmine.createSpy('scroll')
   }
+  const documentMock = document;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
@@ -22,7 +24,8 @@ describe('EmployeesListComponent', () => {
       ],
       declarations: [EmployeesListComponent, EmployeeComponent],
       providers: [
-        {provide: ScrollToService, useValue: scrollToServiceMock}
+        {provide: ScrollToService, useValue: scrollToServiceMock},
+        {provide: DOCUMENT, useValue: documentMock}
       ]
     })
       .compileComponents();
@@ -37,4 +40,15 @@ describe('EmployeesListComponent', () => {
   it('should be created', () => {
     expect(component).toBeTruthy();
   });
+
+  it('should detect scroll top', () => {
+    expect(component.checkTopPosition()).toBe(false);
+  });
+
+  it('should scroll top ', () => {
+
+    spyOn(component, 'checkTopPosition').and.returnValue(true);
+    component.onScroll();
+    expect(scrollToServiceMock.scroll).toHaveBeenCalled()
+  })
 });

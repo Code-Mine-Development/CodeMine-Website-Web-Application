@@ -49,4 +49,12 @@ describe('DeskComponent', () => {
   it('should be created', () => {
     expect(component).toBeTruthy();
   });
+
+  it('should open card', () => {
+    component.activePerson = MockCompany.employees[0];
+    spyOn(component.coordinate, 'showDetails');
+    fixture.detectChanges();
+    component.ngOnChanges();
+    expect(component.coordinate.showDetails).toHaveBeenCalled();
+  })
 });

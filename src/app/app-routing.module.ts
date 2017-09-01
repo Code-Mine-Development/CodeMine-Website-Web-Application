@@ -23,6 +23,7 @@ export const appRoutes: Routes = [
   {path: 'offer', loadChildren: './aplication/offer/offer.module#OfferModule'},
   {path: 'audit', loadChildren: './aplication/audit/audit.module#AuditModule'},
   {path: 'aboutus', loadChildren: './aplication/about-us/about-us.module#AboutUsModule'},
+  {path: 'test', loadChildren: './aplication/test/test.module#TestModule'},
   {path: 'not-found', component: PageNotFoundComponent},
   {path: '**', redirectTo: '/not-found'}
 ];
