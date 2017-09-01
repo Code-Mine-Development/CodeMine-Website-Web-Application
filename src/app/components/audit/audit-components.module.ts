@@ -20,7 +20,8 @@ import {AuditHeadComponent} from './audit-head/audit-head.component';
   ],
   imports: [
     CommonModule,
-    TranslateModule
+    TranslateModule,
+    SharedModule
   ],
   exports: [
     AuditDetailsComponent,
@@ -29,5 +30,5 @@ import {AuditHeadComponent} from './audit-head/audit-head.component';
   ],
   providers: [DrawBackgroundService],
 })
-export class AuditComponentModule {
+export class AuditComponentModule{
 }
