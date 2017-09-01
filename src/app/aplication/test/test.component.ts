@@ -49,7 +49,7 @@ export class TestComponent implements OnInit {
 
   generateVideo() {
     for (let i = 0; i < this.videoFrames; i++) {
-      this.createFrame('assets/testImages//midocean_1004' + this.parseId(i) + '.png')
+      this.createFrame('assets/testImages/midocean_1004' + this.parseId(i) + '.png')
     }
   }
 
