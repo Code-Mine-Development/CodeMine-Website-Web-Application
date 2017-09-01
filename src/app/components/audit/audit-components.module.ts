@@ -8,13 +8,15 @@ import {TranslateModule} from '@ngx-translate/core';
 
 import {DrawBackgroundService} from '../../shared/services/draw-background.service';
 import {AuditListElementComponent} from './audit-list/audit-list-element.component';
+import {AuditHeadComponent} from './audit-head/audit-head.component';
 
 
 @NgModule({
   declarations: [
     AuditDetailsComponent,
     AuditListComponent,
-    AuditListElementComponent
+    AuditListElementComponent,
+    AuditHeadComponent
   ],
   imports: [
     CommonModule,
