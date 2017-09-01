@@ -1,18 +1,2 @@
-<div id="triangle-head">
-  <div class="section-audit">
-    <div class="row">
-
-      <div [appScrollTo]='"triangle"+id' class="column" *ngFor="let audit of audits, let id=index">
-        <img [src]="audit.image" alt="">
-        <div class="title">
-          <div class="little-triangle"></div>
-          <h3>{{audit.title | translate }}</h3>
-          <i class="fa fa-chevron-down"></i>
-          <p>{{'AUDIT.move' | translate}}</p>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-<canvas #canvas></canvas>
-<app-audit-details *ngFor="let audit of audits, let id = index" [audit]="audit" [indexID]="id"></app-audit-details>
+<app-audit-head [audits]="audits" [scrollTarget]="targets"></app-audit-head>
+<app-audit-details #target *ngFor="let audit of audits, let id = index" [audit]="audit"></app-audit-details>

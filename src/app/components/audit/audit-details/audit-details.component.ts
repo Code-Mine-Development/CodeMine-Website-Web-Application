@@ -11,8 +11,6 @@ import {DrawBackgroundService} from '../../../shared/services/draw-background.se
 })
 export class AuditDetailsComponent implements OnInit, AfterViewInit {
   @Input() audit: Audit;
-  @ViewChild('Canvas1') canvasRef1;
-  @ViewChild('Canvas2') canvasRef2;
   @Input() indexID: number;
 
   constructor(private drawBackgroundService: DrawBackgroundService) {
@@ -22,19 +20,13 @@ export class AuditDetailsComponent implements OnInit, AfterViewInit {
   };
 
   ngAfterViewInit() {
-
-    if (this.audit && document.getElementById('triangle0') && document.getElementById('triangle1')) {
-      setTimeout(() => {
-
-        this.drawBackgroundService.AuditDetailsBackground(this.canvasRef1, this.canvasRef2);
-
-
-      }, 20);
-    }
+    this.resizeBackground();
   }
 
   resizeBackground() {
-    this.drawBackgroundService.AuditDetailsBackground(this.canvasRef1, this.canvasRef2)
+  //   if (this.audit && this.canvasRef1.nativeElement && this.canvasRef2.nativeElement) {
+  //     this.drawBackgroundService.AuditDetailsBackground(this.canvasRef1, this.canvasRef2)
+  //   }
   }
 
 

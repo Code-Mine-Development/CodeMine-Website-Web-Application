@@ -3,29 +3,8 @@
 .container{
   width: 90%;
   margin: auto;
-
 }
 
-canvas{
-  display: none;
-}
-
-#triangle0{
-  width: 100%;
-  background-repeat: no-repeat;
-  opacity: 0;
-  animation: bgFadeIn 2s  forwards;
-  overflow:hidden;
-}
-
-#triangle1{
-  width: 100%;
-  background-repeat: no-repeat;
-  padding-top: 10%;
-  opacity: 0;
-  animation: bgFadeIn 1s forwards;
-  overflow:hidden;
-}
 .usability-panel{
   padding-top: 12em;
   h1{

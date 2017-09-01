@@ -1,21 +1,19 @@
-
-<div class="section-usability" id="{{'triangle'+indexID}}" (window:resize)="resizeBackground()" >
-  <canvas #Canvas1></canvas>
-  <canvas #Canvas2></canvas>
+<div class="section-usability">
   <div class="container">
-  <div class="usability-panel">
-    <span class="white"><h3 class="usability-panel-header">{{'AUDIT.title' | translate}}</h3></span>
-    <h1 class="usability-panel-header">{{audit?.title | translate}}</h1>
-    <p class="usability-panel-text">{{audit?.description  | translate}}</p>
-    <div class="usability-table">
-      <app-list class="list1" id="list1" [title]="'UTILITIES.tasks' | translate" [source]="1" [listData]="audit?.items" [listTitle]="audit?.title| translate"></app-list>
-      <app-list class='list2' id="list2" [title]="'UTILITIES.benefits' | translate" [source]="0" [listData]="audit?.items" [listTitle]="audit?.title | translate"></app-list>
-    </div>
+    <div class="usability-panel">
+      <span class="white"><h3 class="usability-panel-header">{{'AUDIT.title' | translate}}</h3></span>
+      <h1 class="usability-panel-header">{{audit?.title | translate}}</h1>
+      <p class="usability-panel-text">{{audit?.description | translate}}</p>
+      <div class="usability-table">
+        <app-list class="list1" id="list1" [title]="'UTILITIES.tasks' | translate" [source]="1"
+                  [listData]="audit?.items" [listTitle]="audit?.title| translate"></app-list>
+        <app-list class='list2' id="list2" [title]="'UTILITIES.benefits' | translate" [source]="0"
+                  [listData]="audit?.items" [listTitle]="audit?.title | translate"></app-list>
+      </div>
       <div class="details">
         <h3>{{'UTILITIES.showDetails' | translate}}</h3>
         <button>{{'UTILITIES.sendRequest' | translate}}</button>
       </div>
     </div>
   </div>
-
-
+</div>
