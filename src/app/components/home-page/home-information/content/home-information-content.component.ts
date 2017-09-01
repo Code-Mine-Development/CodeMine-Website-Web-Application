@@ -25,23 +25,12 @@ export class HomeInformationContentComponent implements OnDestroy, OnInit {
     this.scrollControllerService.resetElementQuantity();
   }
 
-  @HostListener('window:resize', ['$event']) resize(event) {
-    this.checkScreen();
-  }
-
+  // @HostBinding()
+  
   ngOnInit() {
-    this.checkScreen();
   }
 
   ngOnDestroy() {
     this.scrollPositionSubscriber.unsubscribe();
-  }
-
-  private checkScreen() {
-    if (window.innerWidth > window.innerHeight) {
-      this.vertical = true;
-    } else {
-      this.vertical = false;
-    }
   }
 }

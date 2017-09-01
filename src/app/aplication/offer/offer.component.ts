@@ -35,10 +35,9 @@ export class OfferComponent implements OnInit, AfterViewInit {
 
   ngAfterViewInit() {
     const category = this.previousPosition.getBackCategory();
-    if (!category || category === '') {
-      return;
+    if (category && category.length > 0) {
+      this.parseCategory(category);
     }
-    this.parseCategory(category);
   }
 
   parseCategory(category) {

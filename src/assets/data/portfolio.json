@@ -173,7 +173,7 @@
       {
         "section": "image",
         "title": "Home",
-        "image": "../assets/images/portfolio-images"
+        "image": "../assets/images/portfolio-images/brighter_1.png"
       },
       {
         "section": "text",
@@ -193,10 +193,10 @@
         "section": "4images",
         "title": "PORTFOLIO.BrighterVision.description.calendar",
         "images": [
-          "../assets/images/portfolio-images/tripbuzz-presentation.png",
-          "../assets/images/portfolio-images/tripbuzz-presentation.png",
-          "../assets/images/portfolio-images/tripbuzz-presentation.png",
-          "../assets/images/portfolio-images/tripbuzz-presentation.png"
+          "../assets/images/portfolio-images/brighter_2.png",
+          "../assets/images/portfolio-images/brighter_3.png",
+          "../assets/images/portfolio-images/brighter_4.png",
+          "../assets/images/portfolio-images/brighter_5.png"
         ]
       },
       {
@@ -217,7 +217,7 @@
         "section": "image",
         "title": null,
         "small": true,
-        "image": "../assets/images/mdlinking-carousel.jpg"
+        "image": "../assets/images/portfolio-images/brighter_1.png"
       },
       {
         "section": "text",

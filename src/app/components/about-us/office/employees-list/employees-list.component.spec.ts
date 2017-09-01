@@ -41,9 +41,14 @@ describe('EmployeesListComponent', () => {
     expect(component).toBeTruthy();
   });
 
-  // it('should scroll top ', () => {
-  //   component.onScroll();
-  //   spyOn(component, 'checkTopPosition').and.returnValues('sraka');
-  //   expect(component.).toHaveBeenCalledWith('SiteHead')
-  // })
+  it('should detect scroll top', () => {
+    expect(component.checkTopPosition()).toBe(false);
+  });
+
+  it('should scroll top ', () => {
+
+    spyOn(component, 'checkTopPosition').and.returnValue(true);
+    component.onScroll();
+    expect(scrollToServiceMock.scroll).toHaveBeenCalled()
+  })
 });
