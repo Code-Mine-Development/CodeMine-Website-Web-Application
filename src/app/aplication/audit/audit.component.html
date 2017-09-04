@@ -1,2 +1,2 @@
-<app-audit-head [audits]="audits" [scrollTarget]="targets"></app-audit-head>
+<app-audit-head [audits]="audits" (scrollTo)="scrollTo($event)"></app-audit-head>
 <app-audit-details #target *ngFor="let audit of audits, let id = index" [audit]="audit"></app-audit-details>

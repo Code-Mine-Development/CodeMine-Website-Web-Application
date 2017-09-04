@@ -11,7 +11,7 @@
       "task_4": "Badanie elastyczności kodu w perspektywie ewolucji wymagań biznesowych",
       "task_5": "Badania realnego nakładu zasobów",
       "benefit_1": "Identyfikacja problemów dotyczących czytelności kodu wraz z listą rekomendacji w związku z ich poprawą, przyczyniającą się do zwiększenia wydajności zespołowej pracy nad projektem",
-      "benefit_2": "Identyfikacja problemów związanych z błędnym zastosowaniem wzorców projektowych, negatywnie rzutujących na jakość projektu oraz jego bezpieczny rozwój; przyczyniająca się do przyspieszenia tempa pracy nad projektem i znacznych oszczędności w przyszłości",
+      "benefit_2": "Identyfikacja problemów związanych z błędnym zastosowaniem wzorców projektowych, negatywnie rzutujących na jakość projektu oraz jego bezpieczny rozwój przyczyniająca się do przyspieszenia tempa pracy nad projektem i znacznych oszczędności w przyszłości",
       "benefit_3": "Ocena wykorzystania zewnętrznych bibliotek, w tym zabezpieczania projektu przed dokonującymi się w nich zmianami, wpływająca na wydajność oraz neutralizację problemów z bezpieczeństwem",
       "benefit_4": "Ocena poziomu elastyczności narażonego na modyfikacje kodu, pozwalająca podjąć decyzję o jego zwiększeniu, przyczyniającego się z kolei do oszczędzenia czasu i pieniędzy",
       "benefit_5": "Ocena wielkości nakładu zasobów ludzkich i czasowych, niezbędnych do wykonania projektu, pozwalająca określić realia otrzymanej od wykonawcy wyceny"
@@ -292,6 +292,7 @@
     "benefits": "Korzyści",
     "showDetails": "Chcesz poznać więcej szczegółów ?",
     "sendRequest": "Wyślij zapytanie",
+    "navigateToContact": "Przejdź do kontaktu",
     "technologies": "Technologie"
   },
   "NAVIGATION":{

@@ -1,11 +1,12 @@
 import {
   AfterViewInit, Component, OnInit, ViewChild, HostListener, ElementRef, Renderer2,
-  ViewChildren
+  ViewChildren, ContentChild, ContentChildren, ViewContainerRef
 } from '@angular/core';
 import {Audit} from './interfaces/audit.interface';
 import {ActivatedRoute, Data} from '@angular/router';
 import {fadeInAnimation} from '../../shared/routing.animation';
 import {DrawBackgroundService} from '../../shared/services/draw-background.service';
+import {ScrollToService} from '../../shared/services/scroll-to.service';
 
 @Component({
   selector: 'app-audit',
@@ -18,10 +19,18 @@ import {DrawBackgroundService} from '../../shared/services/draw-background.servi
 })
 export class AuditComponent implements OnInit, AfterViewInit {
 
-  @ViewChildren('target') targets;
+  @ViewChildren('target', {read: ElementRef}) targets;
   audits: Audit[];
 
-  constructor(private route: ActivatedRoute, private drawBackgroundService: DrawBackgroundService, private elementRef: ElementRef, private renderer: Renderer2) {
+  constructor(private route: ActivatedRoute,
+              private drawBackgroundService: DrawBackgroundService,
+              private elementRef: ElementRef,
+              private renderer: Renderer2,
+              private scrollToService: ScrollToService) {
+  }
+
+  @HostListener('window:resize',[]) onResize(){
+    this.drawBackgroundService.drawAuditBackground(this.elementRef, this.targets.toArray()[0], this.renderer);
   }
 
   ngOnInit() {
@@ -32,7 +41,11 @@ export class AuditComponent implements OnInit, AfterViewInit {
   }
 
   ngAfterViewInit() {
-    this.drawBackgroundService.drawAuditBackground(this.elementRef, this.renderer);
+    this.drawBackgroundService.drawAuditBackground(this.elementRef, this.targets.toArray()[0], this.renderer);
+  }
+
+  scrollTo(sectionId: string) {
+    this.scrollToService.scroll(this.targets.toArray()[sectionId].nativeElement);
   }
 
 }

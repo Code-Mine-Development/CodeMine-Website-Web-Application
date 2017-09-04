@@ -6,11 +6,12 @@ export class DrawBackgroundService {
   constructor() {
   }
 
-  drawAuditBackground(elementRef: ElementRef, renderer: Renderer2) {
+  drawAuditBackground(elementRef: ElementRef, targetElement: ElementRef, renderer: Renderer2) {
     const marginTop = this.getMarginTop(),
       canvas = renderer.createElement('canvas'),
       ctx = canvas.getContext('2d'),
-      computedStyle = window.getComputedStyle(elementRef.nativeElement);
+      computedStyle = window.getComputedStyle(elementRef.nativeElement),
+      triangleEnd = targetElement.nativeElement.offsetHeight + targetElement.nativeElement.offsetTop;
 
     canvas.width = window.innerWidth;
     canvas.height = parseInt(computedStyle.height, 10);
@@ -18,9 +19,9 @@ export class DrawBackgroundService {
     ctx.beginPath();
 
     ctx.moveTo(0, marginTop);
-    ctx.lineTo(window.innerWidth, marginTop+window.innerWidth);
-    ctx.lineTo(0, marginTop+window.innerWidth);
-    ctx.lineTo(0, marginTop+window.innerWidth);
+    ctx.lineTo(window.innerWidth, marginTop + window.innerWidth);
+    ctx.lineTo(window.innerWidth, triangleEnd);
+    ctx.lineTo(0, triangleEnd);
 
     ctx.closePath();
 
@@ -28,8 +29,7 @@ export class DrawBackgroundService {
     ctx.fill();
 
     let urlImages = canvas.toDataURL();
-    renderer.setStyle(elementRef.nativeElement, 'background', 'url('+urlImages+')');
-    // elementRef.nativeElement.style.background = urlImages;
+    renderer.setStyle(elementRef.nativeElement, 'background', 'url(' + urlImages + ')');
   }
 
   private getMarginTop() {
