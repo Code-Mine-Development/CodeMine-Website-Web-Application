@@ -29,7 +29,7 @@ export class AuditComponent implements OnInit, AfterViewInit {
               private scrollToService: ScrollToService) {
   }
 
-  @HostListener('window:resize',[]) onResize(){
+  @HostListener('window:resize', []) onResize() {
     this.drawBackgroundService.drawAuditBackground(this.elementRef, this.targets.toArray()[0], this.renderer);
   }
 

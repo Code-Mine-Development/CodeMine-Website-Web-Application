@@ -11,6 +11,8 @@ import {AuditListComponent} from '../../components/audit/audit-list/aduit-list.c
 import {AuditListElementComponent} from '../../components/audit/audit-list/audit-list-element.component';
 import {DrawBackgroundService} from '../../shared/services/draw-background.service';
 import {NoopAnimationsModule} from '@angular/platform-browser/animations';
+import {AuditHeadComponent} from '../../components/audit/audit-head/audit-head.component';
+import {ScrollToService} from '../../shared/services/scroll-to.service';
 
 @Directive({
   selector: '[appScrollTo]'
@@ -26,12 +28,12 @@ describe('AuditComponent', () => {
   let nativeElement;
 
   const DrawBackgroundServiceMock = {
-    AuditBackground: jasmine.createSpy('AuditBackground'),
-    AuditDetailsBackground: () => {
-    }
+    drawAuditBackground: jasmine.createSpy('AuditBackground')
   }, router = {
     navigate: jasmine.createSpy('navigate')
-  };
+  }, scrollToServiceMock = {
+    scroll: jasmine.createSpy('navigate')
+  }
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
@@ -39,7 +41,14 @@ describe('AuditComponent', () => {
         TranslateModule.forRoot(),
         NoopAnimationsModule
       ],
-      declarations: [AuditComponent, AuditDetailsComponent, AuditListComponent, AuditListElementComponent, ScrollDirective],
+      declarations: [
+        AuditComponent,
+        AuditDetailsComponent,
+        AuditListComponent,
+        AuditListElementComponent,
+        AuditHeadComponent,
+        ScrollDirective
+      ],
       providers: [
         {
           provide: ActivatedRoute,
@@ -52,7 +61,8 @@ describe('AuditComponent', () => {
           }
         },
         {provide: Router, useValue: router},
-        {provide: DrawBackgroundService, useValue: DrawBackgroundServiceMock}
+        {provide: DrawBackgroundService, useValue: DrawBackgroundServiceMock},
+        {provide: ScrollToService, useValue: scrollToServiceMock}
       ]
     })
       .compileComponents();
@@ -75,16 +85,16 @@ describe('AuditComponent', () => {
   });
 
   it('should draw background triangle', () => {
-    expect(DrawBackgroundServiceMock.AuditBackground).toHaveBeenCalled();
+    expect(DrawBackgroundServiceMock.drawAuditBackground).toHaveBeenCalled();
   });
 
 
   it('should redraw background', () => {
-    DrawBackgroundServiceMock.AuditBackground.calls.reset();
+    DrawBackgroundServiceMock.drawAuditBackground.calls.reset();
     window.dispatchEvent(new Event('resize'));
-    expect(DrawBackgroundServiceMock.AuditBackground).toHaveBeenCalled();
+    expect(DrawBackgroundServiceMock.drawAuditBackground).toHaveBeenCalled();
     window.dispatchEvent(new Event('resize'));
-    expect(DrawBackgroundServiceMock.AuditBackground).toHaveBeenCalledTimes(2);
+    expect(DrawBackgroundServiceMock.drawAuditBackground).toHaveBeenCalledTimes(2);
   })
 
 });

@@ -28,7 +28,7 @@ export class DrawBackgroundService {
     ctx.fillStyle = '#ffda07';
     ctx.fill();
 
-    let urlImages = canvas.toDataURL();
+    const urlImages = canvas.toDataURL();
     renderer.setStyle(elementRef.nativeElement, 'background', 'url(' + urlImages + ')');
   }
 

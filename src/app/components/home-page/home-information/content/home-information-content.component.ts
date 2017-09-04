@@ -26,7 +26,7 @@ export class HomeInformationContentComponent implements OnDestroy, OnInit {
   }
 
   // @HostBinding()
-  
+
   ngOnInit() {
   }
 

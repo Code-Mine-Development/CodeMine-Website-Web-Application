@@ -9,25 +9,15 @@ import {DrawBackgroundService} from '../../../shared/services/draw-background.se
   styleUrls: ['audit-details.component.scss'],
 
 })
-export class AuditDetailsComponent implements OnInit, AfterViewInit {
+export class AuditDetailsComponent implements OnInit {
   @Input() audit: Audit;
-  @Input() indexID: number;
 
-  constructor(private drawBackgroundService: DrawBackgroundService) {
+  constructor() {
   }
 
   ngOnInit() {
   };
 
-  ngAfterViewInit() {
-    this.resizeBackground();
-  }
-
-  resizeBackground() {
-  //   if (this.audit && this.canvasRef1.nativeElement && this.canvasRef2.nativeElement) {
-  //     this.drawBackgroundService.AuditDetailsBackground(this.canvasRef1, this.canvasRef2)
-  //   }
-  }
 
 
 }

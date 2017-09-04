@@ -5,16 +5,18 @@ import {Component, Input, AfterViewInit, Output, EventEmitter} from '@angular/co
   templateUrl: './audit-head.component.html',
   styleUrls: ['./audit-head.component.scss']
 })
-export class AuditHeadComponent implements  AfterViewInit {
+export class AuditHeadComponent implements AfterViewInit {
 
   @Input() audits;
   @Output() scrollTo = new EventEmitter();
 
-  constructor() { }
+  constructor() {
+  }
 
-  ngAfterViewInit() {}
+  ngAfterViewInit() {
+  }
 
-  onClick(id){
+  onClick(id) {
     this.scrollTo.emit(id);
   }
 
