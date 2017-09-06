@@ -1,0 +1,32 @@
+<section class="container">
+  <app-portfolio-details-header [title]="detail.title" [description]="'PORTFOLIO.Tripbuzz.description.part1'" [logo]="detail.thumbnail"></app-portfolio-details-header>
+</section>
+
+<section class="wrapper">
+  <section class="container home-image">
+    <figure>
+      <figcaption> Home image </figcaption>
+      <img src="assets/images/portfolio-images/tripbuzz_1.png" alt="Tripbuzz home image">
+    </figure>
+  </section>
+  <section class="container goal">
+    <h3>{{'PORTFOLIO.sectionTitles.goal' | translate}}</h3>
+    <p>
+      <span>{{'PORTFOLIO.Tripbuzz.description.part2' | translate}}</span>
+      <span>{{'PORTFOLIO.Tripbuzz.description.part3' | translate}}</span>
+    </p>
+  </section>
+
+  <section class="goal-images">
+    <figure>
+      <figcaption> Tripbuzz goal images </figcaption>
+      <img src="assets/images/portfolio-images/tripbuzz_2.png" alt="images">
+      <video autoplay loop src="assets/videos/portfolio-details/TripBuzz_1.mp4" poster="assets/images/portfolio-images/tripbuzz_1.png"></video>
+    </figure>
+  </section>
+
+  <section class="container architecture">
+    <h3>{{'PORTFOLIO.sectionTitles.technologies' | translate}}</h3>
+    <app-architecture [currentTechnologies]="detail.technologies" [currentTools]="detail.tools" [technologies]="technologies" [tools]="tools" (navigate)="navigate($event)"></app-architecture>
+  </section>
+</section>

@@ -4,13 +4,15 @@ import {PortfolioComponent} from './portfolio.component';
 import {PortfolioRoutingModule} from './portfolio.routing';
 import {UiModule} from '../../shared/ui-elements/ui.module';
 import {PortfolioComponentModule} from '../../components/portfolio/portfolio-components.module';
-import {PortfolioDetailsComponent} from './portfolio-details/portfolio-details.component';
 import {PortfolioListComponent} from './portfolio-list/portfolio-list.component';
 import {TechnologiesResolver} from '../offer/services/technologies.resolver';
 import {ToolsResolver} from '../offer/services/tools.resolver';
 
 import {DrawBackgroundService} from '../../shared/services/draw-background.service';
 import {SharedModule} from '../../shared/shared.module';
+import { MidOceanComponent } from './portfolio-details/mid-ocean/mid-ocean.component';
+import { TandartsComponent } from './portfolio-details/tandarts/tandarts.component';
+import { TripbuzzComponent } from './portfolio-details/tripbuzz/tripbuzz.component';
 
 
 
@@ -18,8 +20,10 @@ import {SharedModule} from '../../shared/shared.module';
 @NgModule({
     declarations: [
         PortfolioComponent,
-        PortfolioDetailsComponent,
-        PortfolioListComponent
+        PortfolioListComponent,
+        MidOceanComponent,
+        TandartsComponent,
+        TripbuzzComponent
     ],
     imports: [
         CommonModule,

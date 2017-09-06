@@ -32,21 +32,15 @@
     margin: 40px auto;
     app-list{
       width:80%;
+      margin:0 auto;
+      &:nth-of-type(2){
+        margin-top: 20px;
+      }
     }
   }
   .details{
     padding: 200px 0;
     text-align:center;
-    //button{
-    //  background: #fff;
-    //  border: none;
-    //  padding: 9px 35px;
-    //  text-transform: uppercase;
-    //  font-weight: bold;
-    //  cursor: pointer;
-    //  font-size: 1.4em;
-    //  box-shadow: 7px 10px 30px rgba(161, 161, 161, 0.3);
-    //}
   }
 }
 
@@ -56,6 +50,9 @@
     .usability-table{
       app-list{
         width: 46%;
+        &:nth-of-type(2){
+          margin-top: 0;
+        }
       }
     }
   }

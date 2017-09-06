@@ -22,6 +22,7 @@ import {HomeInformationServices} from './components/home-page/services/home-info
 import {HomeInformationResolver} from './components/home-page/services/home-information.resolver';
 import {AuditResolver} from './aplication/audit/services/audit.resolver';
 import {PreviousPositionService} from './shared/services/previous-position.service'
+import {GoogleAnalyticsEventService} from './shared/services/google-analytics-event.service';
 
 import {AppComponent} from './app.component';
 
@@ -64,7 +65,8 @@ export function createTranslateLoader(http: Http) {
     TranslateStore,
     LocalizeRouterService,
     Title,
-    PreviousPositionService
+    PreviousPositionService,
+    GoogleAnalyticsEventService
   ],
   bootstrap: [AppComponent]
 })

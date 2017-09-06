@@ -1,4 +1,4 @@
-import {Component, OnInit, HostBinding} from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import {fadeInAnimation} from '../../shared/routing.animation';
 import {PreviousPositionService} from '../../shared/services/previous-position.service';
 
@@ -11,8 +11,6 @@ import {PreviousPositionService} from '../../shared/services/previous-position.s
   host: { '[@fadeInAnimation]': '' }
 })
 export class PortfolioComponent implements OnInit {
-
-  @HostBinding('class.container') container = true;
 
   constructor(private previousPosition: PreviousPositionService) { }
 

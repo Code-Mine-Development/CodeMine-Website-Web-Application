@@ -1,4 +1,10 @@
-
+:host{
+  width:100%;
+  display: block;
+  overflow: hidden;
+  letter-spacing: initial;
+  position: relative;
+}
 .cta{
     height: 50vh;
     display: flex;

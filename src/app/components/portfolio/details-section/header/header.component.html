@@ -1,10 +1,12 @@
 <header>
-  <h1>{{title | translate}}</h1>
-  <figure [class.small]="title">
-    <img [src]="logo" alt="project logo">
-    <figcaption>{{title | translate}}</figcaption>
-  </figure>
-  <div>
+  <div class="title">
+    <h1>{{title | translate}}</h1>
+    <figure>
+      <img [src]="logo" alt="project logo">
+      <figcaption>{{title | translate}}</figcaption>
+    </figure>
+  </div>
+  <div class="text">
     <p>{{description | translate}}</p>
   </div>
 </header>

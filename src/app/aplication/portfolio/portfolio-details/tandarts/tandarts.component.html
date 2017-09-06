@@ -1,0 +1,46 @@
+<section class="container">
+  <app-portfolio-details-header [title]="'PORTFOLIO.Tandarts.title'"
+                                [description]="'PORTFOLIO.Tandarts.description.part1'"
+                                [logo]="detail?.thumbnail"></app-portfolio-details-header>
+</section>
+<section class="wrapper">
+
+  <figure class="container home-video">
+    <figcaption>Home</figcaption>
+    <img src="assets/images/portfolio-images/tandarts_mov_1.png" alt="home image">
+  </figure>
+
+  <section class="container center tools">
+    <article>
+      <h3>{{'PORTFOLIO.sectionTitles.tools' | translate}}</h3>
+      <p>{{'PORTFOLIO.Tandarts.description.part2' | translate}}</p>
+    </article>
+  </section>
+
+  <section class="container architecture">
+    <app-architecture [tools]="tools" [currentTools]="detail?.tools" [technologies]="technologies" [currentTechnologies]="detail?.technologies" (navigate)="navigate($event)"></app-architecture>
+  </section>
+
+  <section class="container process">
+    <h3>{{'PORTFOLIO.sectionTitles.process' | translate}}</h3>
+    <p>{{'PORTFOLIO.Tandarts.description.part3' | translate}}</p>
+    <p>{{'PORTFOLIO.Tandarts.description.part4' | translate}}</p>
+  </section>
+
+  <section class="end-images">
+    <figure>
+      <video class="video-first" autoplay loop src="assets/videos/portfolio-details/tandarts_1.mov"
+                   poster="assets/images/portfolio-images/tandarts_mov_1.png"></video>
+      <video class="video-second" autoplay loop src="assets/videos/portfolio-details/tandarts_2.mp4"
+             poster="assets/images/portfolio-images/tandarts_mov_1.png"></video>
+      <img class="background" src="assets/images/portfolio-images/tandarts_image.png" alt="tandarts image">
+
+    </figure>
+
+  </section>
+
+  <svg viewBox="0,0 1,10">
+    <polygon points="0,0 1,1 1,10 0,10" fill="#fae240"></polygon>
+  </svg>
+
+</section>

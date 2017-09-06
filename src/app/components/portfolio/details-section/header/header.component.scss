@@ -1,60 +1,70 @@
 @import "../../../../../assets/styles/mediaQueries";
-:host{
-  width:100%;
-  header{
-    width:100%;
-    display:flex;
+
+:host {
+  width: 100%;
+  header {
+    width: 100%;
+    display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    margin-top:90px;
-    figcaption, h1{
-      display:none;
+    margin-top: 100px;
+    figcaption {
+      display: none;
     }
 
-    figure {
-      width:30%;
-      display:flex;
-      margin: 0;
-      img {
-        width:100%;
-      }
-      &.small{
-        img{
-          width: 80px;
-          height: 80px;
-        }
-        figcaption{
-          display: block;
-          font-size: 3.6rem;
-          font-weight: bold;
-          padding-left: 35px ;
-        }
-        @media #{$phone} {
-          figcaption{
-            font-size:2.4rem;
-            box-sizing: border-box;
-            width:70%;
-          }
-          img{
-            width: 60px;
-            height: 60px;
-          }
-        }
-      }
-    }
-    div{
-      width:50%;
-      p{
-        max-width: 520px;
-      }
+    div {
+      width: 50%;
     }
     @media #{$tablet}{
-      figure, div{
-        width:100%;
+      figure, div {
+        width: 100%;
       }
-      div p{
+      div p {
         max-width: 100%;
       }
     }
+  }
+}
+
+
+.title {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: flex-end;
+  align-items: center;
+  h1 {
+    margin: 0;
+    font-size: 3.6rem;
+    //@media #{$phone}{
+    //  font-size: 3.6rem;
+    //}
+  }
+  figure {
+    width: 30%;
+    display: flex;
+    margin: 0;
+    img {
+      width: 80px;
+      height: 80px;
+      margin: 0 auto;
+    }
+    @media #{$phone} {
+      figcaption {
+        font-size: 2.4rem;
+        box-sizing: border-box;
+        width: 70%;
+      }
+      img {
+        width: 60px;
+        height: 60px;
+      }
+    }
+  }
+}
+
+.text{
+  p{
+    padding:0 20px;
+    font-weight: 500;
   }
 }

@@ -1,0 +1,66 @@
+:host {
+  font-weight: 500;
+}
+
+.wrapper {
+  width: 100%;
+}
+
+.home-image {
+  margin-top: 100px;
+  figure {
+    margin: 0;
+    width: 100%;
+    figcaption {
+      display: none;
+    }
+    img {
+      width: 100%;
+    }
+  }
+}
+
+.goal {
+  margin-top: 100px;
+  h3 {
+    margin: 20px 0;
+  }
+  p {
+    display: flex;
+    justify-content: space-between;
+    span {
+      width: 45%;
+      display: block;
+    }
+  }
+}
+
+.goal-images {
+  margin-top: 100px;
+  width:100%;
+  figure{
+    margin:0;
+    width: 100%;
+    figcaption {
+      display: none;
+    }
+  }
+
+  img{
+    width:100%;
+    transform: scale(1.2);
+  }
+
+  video{
+    margin-top: -100%;
+    width:100%;
+    box-shadow: 15px 25px 100px  #777777;
+    transform-origin: left bottom;
+    transform: translate(26.5%, 1%) rotateZ(-15deg) skew(-330deg) scale(0.37);
+  }
+}
+
+.architecture{
+  margin-top: 100px;
+  margin-bottom: 100px;
+}

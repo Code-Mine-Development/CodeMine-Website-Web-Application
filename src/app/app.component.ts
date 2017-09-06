@@ -4,6 +4,7 @@ import {Router, NavigationEnd} from '@angular/router';
 import {TranslateService} from '@ngx-translate/core';
 import {LocalizeRouterService} from 'localize-router';
 
+declare let ga: Function;
 
 @Component({
   selector: 'app-root',
@@ -20,7 +21,7 @@ export class AppComponent implements OnInit {
 
   ngOnInit() {
     this.selectLanguage();
-    this.changeTitle();
+    this.routerEventListener();
   }
 
   selectLanguage() {
@@ -37,7 +38,6 @@ export class AppComponent implements OnInit {
     }
   }
 
-
   activeLanguage(lang) {
     this.translate.use(lang);
     this.translate.setDefaultLang(lang);
@@ -47,22 +47,23 @@ export class AppComponent implements OnInit {
     return languages.find((listLang) => (listLang === lang));
   }
 
-  changeTitle() {
-    let prefix = '',
-      page = '';
+
+  routerEventListener() {
+    this.router.events.filter((state) => (state instanceof NavigationEnd)).subscribe(
+      (state: NavigationEnd) => {
+        this.changeTitle(state);
+        this.googleAnalytics(state);
+      });
+  }
+
+  changeTitle(state: NavigationEnd) {
+    let prefix = '';
+    const page = this.parseUrl(state.urlAfterRedirects);
 
     this.translate.get('PAGETITLE.prefix').subscribe((translation) => {
       prefix = translation;
       this.setTitle(prefix, page);
     });
-
-    this.router.events.subscribe((state) => {
-      if (state instanceof NavigationEnd) {
-        page = this.parseUrl(state.urlAfterRedirects);
-      }
-      this.setTitle(prefix, page);
-    });
-
   }
 
   parseUrl(url: string) {
@@ -73,6 +74,11 @@ export class AppComponent implements OnInit {
 
   setTitle(prefix: string, page: string) {
     this.titleService.setTitle(prefix + ' | ' + page);
+  }
+
+  googleAnalytics(state: NavigationEnd) {
+    ga('set', 'page', state.urlAfterRedirects);
+    ga('send', 'pageview');
   }
 
 

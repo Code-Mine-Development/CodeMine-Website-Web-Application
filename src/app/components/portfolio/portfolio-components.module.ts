@@ -12,7 +12,6 @@ import { ImagesComponent } from './details-section/images/images.component';
 import { ArchitectureComponent } from './details-section/architecture/architecture.component';
 import { IconsComponent } from './details-section/icons/icons.component';
 import { TwoImagesComponent } from './details-section/two-images/two-images.component';
-import { PortfolioDetailsGeneratorComponent } from './portfolio-details-generator.component';
 import { StarInfoComponent } from './details-section/star-info/star-info.component';
 
 @NgModule({
@@ -25,7 +24,6 @@ import { StarInfoComponent } from './details-section/star-info/star-info.compone
         ArchitectureComponent,
         IconsComponent,
         TwoImagesComponent,
-        PortfolioDetailsGeneratorComponent,
         StarInfoComponent
     ],
     imports: [
@@ -36,19 +34,16 @@ import { StarInfoComponent } from './details-section/star-info/star-info.compone
     ],
     exports: [
         PortfolioProjectComponent,
-        PortfolioDetailsGeneratorComponent
+        PortfolioDetailsHeaderComponent,
+        ImageComponent,
+        TextComponent,
+        ImagesComponent,
+        ArchitectureComponent,
+        IconsComponent,
+        TwoImagesComponent,
+        StarInfoComponent
     ],
-    providers: [],
-    entryComponents: [
-      PortfolioDetailsHeaderComponent,
-      ImageComponent,
-      TextComponent,
-      ImagesComponent,
-      ArchitectureComponent,
-      IconsComponent,
-      TwoImagesComponent,
-      StarInfoComponent
-    ]
+    providers: []
 })
 export class PortfolioComponentModule {
 }

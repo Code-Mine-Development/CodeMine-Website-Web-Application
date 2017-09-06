@@ -1,4 +1,4 @@
-import {Component, Input, EventEmitter, Output, OnChanges, OnInit} from '@angular/core';
+import {Component, Input, EventEmitter, Output, OnChanges, OnInit, HostListener, HostBinding} from '@angular/core';
 import {OfferThumbnail} from '../../../../shared/interface/offerThumbnail.interface';
 
 @Component({
@@ -15,16 +15,26 @@ export class ArchitectureComponent implements OnInit {
 
   @Output() navigate = new EventEmitter();
 
+  @HostBinding('class.center') center;
+
   elements: [OfferThumbnail];
+
+  private breakPoints: number[] = [0, 500, 799, 992, 1350, window.innerWidth];
 
 
   constructor() {
   }
 
+  @HostListener('window:resize', []) onResize() {
+    this.checkCenter();
+  }
+
+
   ngOnInit() {
     this.elements = <[OfferThumbnail]>[];
     this.parseTechnologies();
     this.parseTools();
+    this.checkCenter();
   }
 
   parseTechnologies() {
@@ -56,4 +66,7 @@ export class ArchitectureComponent implements OnInit {
     this.navigate.emit(url);
   }
 
+  checkCenter() {
+    this.center =  window.innerWidth > (this.breakPoints[this.elements.length]);
+  }
 }

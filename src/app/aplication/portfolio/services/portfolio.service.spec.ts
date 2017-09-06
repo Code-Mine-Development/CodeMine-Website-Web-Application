@@ -7,7 +7,7 @@ import {MockPortfolio} from '../../../shared/mocks/portfolio.mock';
 
 describe('PortfolioService', () => {
   const MagicUseObj = {
-    MagicUse(connection){
+    MagicUse(connection) {
       connection.mockRespond(new Response(new ResponseOptions({
         body: JSON.stringify(MockPortfolio)
       })));
