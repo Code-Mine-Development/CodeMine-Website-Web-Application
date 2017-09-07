@@ -1,4 +1,4 @@
-import {OnInit} from '@angular/core';
+import {OnInit, HostListener} from '@angular/core';
 import {Portfolio} from '../interfaces/portfolio.interface';
 import {OfferElementBeforePrepare} from '../../offerElementsDetails/interface/offerElementBeforePrepare';
 import {ActivatedRoute, Router} from '@angular/router';
@@ -11,11 +11,16 @@ export class PortfolioDetailsModel implements OnInit {
   detail: Portfolio;
   tools: OfferElementBeforePrepare;
   technologies: OfferElementBeforePrepare;
+  mobile: boolean;
 
   constructor(private route: ActivatedRoute,
               private router: Router,
               private localize: LocalizeRouterService,
               private prevPosition: PreviousPositionService) {
+  }
+
+  @HostListener('window:resize', []) onResize() {
+    this.checkMobile();
   }
 
   ngOnInit() {
@@ -24,7 +29,7 @@ export class PortfolioDetailsModel implements OnInit {
       this.technologies = data['technologies'];
       this.tools = data['tools'];
     });
-
+    this.checkMobile();
   }
 
   parseDetails(details: Portfolio[], id: string) {
@@ -41,4 +46,9 @@ export class PortfolioDetailsModel implements OnInit {
     const link = <string>this.localize.translateRoute(url);
     this.router.navigateByUrl(link);
   }
+
+  checkMobile() {
+    this.mobile = window.innerWidth <= 767;
+  }
+
 }

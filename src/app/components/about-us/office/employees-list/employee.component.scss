@@ -15,7 +15,7 @@ section{
     flex:.55;
   }
   &.desc-visible{
-    background: #ffdb4a;
+    background: #FFDE07;
     @media #{$phone}{
       position:absolute;
       left:0;
@@ -87,7 +87,7 @@ p{
     top:100%;
     left:0;
     width:100%;
-    background: #ffdb4a;
+    background: #FFDE07;
     z-index: 20;
     font-size:1.6rem;
     transition: opacity .5s;

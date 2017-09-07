@@ -10,6 +10,7 @@ import {ToolsResolver} from '../offer/services/tools.resolver';
 import {MidOceanComponent} from './portfolio-details/mid-ocean/mid-ocean.component';
 import {TandartsComponent} from './portfolio-details/tandarts/tandarts.component';
 import {TripbuzzComponent} from './portfolio-details/tripbuzz/tripbuzz.component';
+import {TelecomComponent} from './portfolio-details/telecom/telecom.component';
 
 const portfolioRoutes: Routes = [
   {
@@ -39,6 +40,14 @@ const portfolioRoutes: Routes = [
       },
       {
         path: 'tripbuzz', component: TripbuzzComponent,
+        resolve: {
+          portfolio: PortfolioResolver,
+          tools: ToolsResolver,
+          technologies: TechnologiesResolver
+        },
+      },
+      {
+        path: 'e-comerce-for-telecom', component: TelecomComponent,
         resolve: {
           portfolio: PortfolioResolver,
           tools: ToolsResolver,

@@ -13,6 +13,7 @@ import {SharedModule} from '../../shared/shared.module';
 import { MidOceanComponent } from './portfolio-details/mid-ocean/mid-ocean.component';
 import { TandartsComponent } from './portfolio-details/tandarts/tandarts.component';
 import { TripbuzzComponent } from './portfolio-details/tripbuzz/tripbuzz.component';
+import { TelecomComponent } from './portfolio-details/telecom/telecom.component';
 
 
 
@@ -23,7 +24,8 @@ import { TripbuzzComponent } from './portfolio-details/tripbuzz/tripbuzz.compone
         PortfolioListComponent,
         MidOceanComponent,
         TandartsComponent,
-        TripbuzzComponent
+        TripbuzzComponent,
+        TelecomComponent
     ],
     imports: [
         CommonModule,

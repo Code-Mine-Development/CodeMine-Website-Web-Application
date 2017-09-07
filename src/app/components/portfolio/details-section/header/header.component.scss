@@ -1,5 +1,9 @@
 @import "../../../../../assets/styles/mediaQueries";
 
+.container {
+  margin: 0;
+}
+
 :host {
   width: 100%;
   header {
@@ -15,7 +19,7 @@
     div {
       width: 50%;
     }
-    @media #{$tablet}{
+    @media #{$tablet-media}{
       figure, div {
         width: 100%;
       }
@@ -26,18 +30,24 @@
   }
 }
 
-
 .title {
   display: flex;
   flex-direction: row-reverse;
   justify-content: flex-end;
   align-items: center;
+  @media #{$phone} {
+    flex-wrap: wrap-reverse;
+  }
   h1 {
     margin: 0;
     font-size: 3.6rem;
-    //@media #{$phone}{
-    //  font-size: 3.6rem;
-    //}
+    padding: 0 15px;
+    @media #{$phone} {
+      padding: 0;
+      width: 100%;
+      text-align: center;
+      margin-top: 20px;
+    }
   }
   figure {
     width: 30%;
@@ -54,17 +64,18 @@
         box-sizing: border-box;
         width: 70%;
       }
-      img {
-        width: 60px;
-        height: 60px;
-      }
     }
   }
 }
 
-.text{
-  p{
-    padding:0 20px;
+.text {
+  p {
+    margin: 0;
+    padding: 0 20px;
     font-weight: 500;
+    @media #{$tablet-media} {
+      padding: 0;
+      margin-top: 50px;
+    }
   }
 }
