@@ -1,31 +1,17 @@
 @import '../../../../assets/styles/typography';
 @import "../../../../assets/styles/mediaQueries";
+@import "../../../../assets/styles/elements";
+
+:host{
+  width:100%;
+  display:block;
+  background-repeat: no-repeat;
+}
 .container{
   width: 90%;
   margin: auto;
-
 }
 
-canvas{
-  display: none;
-}
-
-#triangle0{
-  width: 100%;
-  background-repeat: no-repeat;
-  opacity: 0;
-  animation: bgFadeIn 2s  forwards;
-  overflow:hidden;
-}
-
-#triangle1{
-  width: 100%;
-  background-repeat: no-repeat;
-  padding-top: 10%;
-  opacity: 0;
-  animation: bgFadeIn 1s forwards;
-  overflow:hidden;
-}
 .usability-panel{
   padding-top: 12em;
   h1{
@@ -43,25 +29,18 @@ canvas{
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
-    margin: 0 auto;
+    margin: 40px auto;
     app-list{
       width:80%;
-      margin: 4em auto;
+      margin:0 auto;
+      &:nth-of-type(2){
+        margin-top: 20px;
+      }
     }
   }
   .details{
     padding: 200px 0;
     text-align:center;
-    button{
-      background: #fff;
-      border: none;
-      padding: 9px 35px;
-      text-transform: uppercase;
-      font-weight: bold;
-      cursor: pointer;
-      font-size: 1.4em;
-      box-shadow: 7px 10px 30px rgba(161, 161, 161, 0.3);
-    }
   }
 }
 
@@ -71,6 +50,9 @@ canvas{
     .usability-table{
       app-list{
         width: 46%;
+        &:nth-of-type(2){
+          margin-top: 0;
+        }
       }
     }
   }
@@ -94,6 +76,9 @@ canvas{
       color:#fff;
       text-transform: uppercase;
     }
+  button.btn{
+    background: #ffffff;
+  }
 }
 
 

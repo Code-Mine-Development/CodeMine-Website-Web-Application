@@ -11,7 +11,7 @@
       "task_4": "Badanie elastyczności kodu w perspektywie ewolucji wymagań biznesowych",
       "task_5": "Badania realnego nakładu zasobów",
       "benefit_1": "Identyfikacja problemów dotyczących czytelności kodu wraz z listą rekomendacji w związku z ich poprawą, przyczyniającą się do zwiększenia wydajności zespołowej pracy nad projektem",
-      "benefit_2": "Identyfikacja problemów związanych z błędnym zastosowaniem wzorców projektowych, negatywnie rzutujących na jakość projektu oraz jego bezpieczny rozwój; przyczyniająca się do przyspieszenia tempa pracy nad projektem i znacznych oszczędności w przyszłości",
+      "benefit_2": "Identyfikacja problemów związanych z błędnym zastosowaniem wzorców projektowych, negatywnie rzutujących na jakość projektu oraz jego bezpieczny rozwój przyczyniająca się do przyspieszenia tempa pracy nad projektem i znacznych oszczędności w przyszłości",
       "benefit_3": "Ocena wykorzystania zewnętrznych bibliotek, w tym zabezpieczania projektu przed dokonującymi się w nich zmianami, wpływająca na wydajność oraz neutralizację problemów z bezpieczeństwem",
       "benefit_4": "Ocena poziomu elastyczności narażonego na modyfikacje kodu, pozwalająca podjąć decyzję o jego zwiększeniu, przyczyniającego się z kolei do oszczędzenia czasu i pieniędzy",
       "benefit_5": "Ocena wielkości nakładu zasobów ludzkich i czasowych, niezbędnych do wykonania projektu, pozwalająca określić realia otrzymanej od wykonawcy wyceny"
@@ -154,6 +154,16 @@
     "addProjectButton": "do formularza",
     "checkPortfolio": "sprawdź nasze portfolio",
     "starInfo": "Dane przedstawione na ilustracjach oraz filmach są przykładowe",
+    "sectionTitles": {
+      "interface": "Interfejs",
+      "before": "Przed",
+      "after": "Po",
+      "process": "Proces",
+      "application": "Zastosowanie",
+      "technologies": "Technologie",
+      "tools": "Narzędzia",
+      "goal": "Cel"
+    },
     "BrighterVision":{
       "title": "Brigter Vision Growth Platform",
       "subTitle":"Aplikacja dla amerykańskich terapeutów",
@@ -227,12 +237,6 @@
       "subTitle":"Planowanie wydajnej produkcji",
       "shortDescription": "Kompleksowe narzędzie służące do planowania wydajności produkcji dla firmy zajmującej się wykonywaniem nadruków graficzne na różnego rodzaju gadżetach.",
       "description":{
-        "before": "Przed",
-        "after": "Po",
-        "process": "Proces",
-        "technologies": "Technologie",
-        "application": "Zastosowanie",
-        "interface": "Interfejs",
         "part1": "Zarządzanie procesem produkcyjnym na dużą skalę jest zadaniem nie tylko pracochłonnym, ale też wysoce skomplikowanym, szczególnie, kiedy głównym używanym narzędziem staje się Microsoft Excel. Tak było w przypadku Mid Ocean Brands – firmy zajmującej się profesjonalnym nadrukiem materiałów graficznych na różnorakich gadżetach, która obecnie może już cieszyć się lepszym, zaproponowanym przez nas rozwiązaniem.",
         "part2": "W zastępstwie dla dokumentów excelowych, dla naszego klienta stworzyliśmy narzędzie pozwalające zaplanować wydajność produkcji na określony czas, a także przedstawiające istotne dane w formie wykresów i raportów. Tym sposobem, rozproszone w wielu arkuszach kalkulacyjnych dane, aktualnie znajdują się w jednym miejscu, wyróżniając się przy tym przyjaznym interfejsem.",
         "part3": "Pierwszym etapem prac było otrzymanie od klienta kilku przykładowych plików, wyeksportowanych z używanego przez niego, oprogramowania SAP. Na ich podstawie, przystąpiliśmy do projektowania głównej funkcjonalności aplikacji, umożliwiającej importowanie danych z plików zawierających nie tylko różną strukturę danych, ale również odmienne formatowanie.",
@@ -256,15 +260,10 @@
       "subTitle":"Aplikacja zrzeszająca praktyki dentystyczne na terenie Holandii",
       "shortDescription": "Aplikacja zrzeszająca praktyki dentystyczne na terenie Holandii, pozwalająca użytkownikom wyszukać najlepszych specjalistów z okolicy i bezpośrednio umówić się na wizytę.",
       "description":{
-        "tools": "Narzędzia",
-        "process": "Proces",
-        "creatingProcess": "Proces tworzenia własnej sieci powiązań",
         "part1": "Tandarts to aplikacja zrzeszająca praktyki dentystyczne na terenie Holandii. Za jej pomocą użytkownicy mogą wyszukiwać najlepszych dentystów ze swojej okolicy, jak również przy pomocy kilku kliknięć bezpośrednio umawiać się na wizyty do specjalistów, a także weryfikować jakość świadczonych przez nich usług dzięki kompleksowemu systemowi ocen.",
         "part2": "Rolą naszego zespołu było przygotowanie szkieletu systemu, który w późniejszej fazie, po doprowadzeniu go przez nas do fazy MVP (Minimum Viable Product), został przejęty przez holenderską grupę deweloperską, występującą z ramienia klienta. ",
-        "part3": "Taka specyfika pracy wymusiła na nas zastosowanie głównie prostych narzędzi, nie stanowiących problemu dla zastępujących nas programistów, z których wiodącym okazał się być framework Laravel (PHP) połączony z bazą PostgreSQL.",
-        "part4": "Prace nad projektem rozpoczęły się od długich konsultacji z klientem oraz innymi ekspertami z branży dentystycznej, których owocem stała się starannie zaprojektowana logika biznesowa. Celem było w końcu stworzenie systemu, który nie tylko spełni wszystkie wymagania biznesowe, ale okaże się być również łatwy w rozwoju dla zespołu nieuczestniczącego w jego początkowym projektowaniu. ",
-        "part5": "Z tego względu dużą wagę przywiązywaliśmy także do szczegółowej dokumentacji projektu, finalnie przekazanej klientowi.",
-        "part6": "Następujący po planowaniu, proces implementacji przebiegł niezwykle sprawnie. Pomimo ograniczeń Laravela w postaci ilości możliwych do wykorzystania, wcześniej stworzonych przez nas dla innych frameworków narzędzi, przygotowaliśmy masę nowych rozwiązań, wpasowujących się w specyfikę projektu."
+        "part3": "Prace nad projektem rozpoczęły się od długich konsultacji z klientem oraz innymi ekspertami z branży dentystycznej, których owocem stała się starannie zaprojektowana logika biznesowa. Celem było w końcu stworzenie systemu, który nie tylko spełni wszystkie wymagania biznesowe, ale okaże się być również łatwy w rozwoju dla zespołu nieuczestniczącego w jego początkowym projektowaniu. ",
+        "part4": "Z tego względu dużą wagę przywiązywaliśmy także do szczegółowej dokumentacji projektu, finalnie przekazanej klientowi."
       }
     },
     "Tripbuzz":{
@@ -272,7 +271,9 @@
       "subTitle":"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
       "shortDescription": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
       "description":{
-        "part1": ""
+        "part1": "Tripuzz to rozbudowana aplikacja webowa, która pozwala swoim użytkownikom odkryć nowe, ciekawe miejsca czy atrakcje, znajdujące się w ich najbliższej okolicy. Choć dziś narzędzie to stanowi obszerną bazę, niegdyś było niezwykle prostą stroną, która za sprawą naszego zespołu, przeszła niemałą transformację.",
+        "part2": "Głównym zadaniem Code Mine było rozbudowanie aplikacji o nowe funkcjonalności, jak również rozwijanie tych istniejących. W ramach współpracy wprowadziliśmy nowe atrakcje i dział hoteli, a także zaimplementowaliśmy wersję mobilną. ",
+        "part3": "Na każdym etapie prac skupialiśmy się na optymalizacji pod kontem SEO oraz zapewnianiu maksymalnej wydajności, niejednokrotnie podejmując się sporych wyzwań, do których należało między innymi wprowadzenie zaawansowanego algorytmu pozwalającego na szybkie filtrowanie wyników po lokalizacji."
       }
     },
     "ZorgIndicator":{
@@ -292,6 +293,7 @@
     "benefits": "Korzyści",
     "showDetails": "Chcesz poznać więcej szczegółów ?",
     "sendRequest": "Wyślij zapytanie",
+    "navigateToContact": "Przejdź do kontaktu",
     "technologies": "Technologie"
   },
   "NAVIGATION":{

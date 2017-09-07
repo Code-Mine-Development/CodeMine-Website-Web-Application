@@ -16,4 +16,5 @@ export class PortfolioDetailsHeaderComponent implements OnInit {
   ngOnInit() {
   }
 
+
 }

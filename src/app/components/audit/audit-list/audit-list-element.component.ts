@@ -3,8 +3,8 @@ import {Component, HostBinding, HostListener, ElementRef, AfterViewInit, Input} 
 @Component({
   selector: 'app-list-element',
   template: `
-    <svg viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
-      <path class="tick" d="M1 25l14 14L47 7"/>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 17.41 12.03">
+     <polyline class="tick" points=" 0.71 4.53 6.8 10.62 16.71 0.71"/>
     </svg>
     {{ (source === 0 ? item.task : item.benefit) | translate }}
   `,
@@ -12,35 +12,36 @@ import {Component, HostBinding, HostListener, ElementRef, AfterViewInit, Input} 
     @keyframes jumpIn {
         0%{
           opacity: 0;
-          bottom:-20px
         }
         50%{
           opacity: .5;
-          bottom: 20px;
         }
         to{
           opacity: 1;
-          bottom: 0;
         }
       }
     :host{
-        width: 80%;
-        margin:2em auto;
+        width: 100%;
+        margin: 10px 0;
         display: inline-flex;
         position: relative;
         opacity:0;
         font-size: 1.5em;
+        font-weight: 700;
+        box-sizing: border-box;
+        padding: 0 40px 0 60px ;
       }
      .tick {
         fill:none;
         stroke:#000;
-        stroke-width:4px;
+        stroke-miterlimit:10;
+        stroke-width:2px;
       }
         svg{
           position: absolute;
-          left: -15%;
-          top: -15px;
-          height: 40px;
+          left:18.5px;
+          top: 0;
+          height: 16px;
           stroke-dasharray: 100;
           stroke-dashoffset: 100;
         }

@@ -72,13 +72,13 @@
   align-items: center;
   justify-content: flex-end;
   @media #{$tablet}{
-    overflow-x:hidden;
+    overflow-x: hidden;
     overflow-y: scroll;
   }
   .row {
-    display:flex;
+    display: flex;
     flex-wrap: wrap;
-    flex:1;
+    flex: 1;
     height: 70%;
     width: 100%;
     margin-bottom: -10px;
@@ -104,7 +104,7 @@
         font-size: 1.5rem;
       }
     }
-    .picture{
+    .picture {
       display: flex;
       justify-content: flex-end;
       align-items: flex-end;
@@ -114,36 +114,37 @@
         max-height: 100vh;
         overflow: hidden;
       }
-      div{
-        max-height:572px;
+      div {
+        max-height: 572px;
         width: 100%;
         height: 100%;
-        position:relative;
+        position: relative;
       }
-      img, video{
+      img, video {
         position: absolute;
-        left:0;
-        bottom:-5%;
+        left: 0;
+        bottom: -5%;
         transform: scale(.88);
-        height:100%;
+        height: 100%;
         @media #{$tablet}{
-          position:relative;
-          width:100%;
-          height:auto;
-          transform:scale(1.7);
+          position: relative;
+          width: 100%;
+          height: auto;
+          transform: scale(1.7);
           transform-origin: left top;
         }
       }
-      img.laptop{
-        filter: drop-shadow( 0 0 10px rgba(0,0,0,.3));
-        transform: scale(1.3);
-        bottom:-6.5%;
+      img.laptop {
+        filter: drop-shadow(0 0 10px rgba(0, 0, 0, .3));
+        transform: scale(1.31);
+        bottom: -6.8%;
+        left: 0.32%;
         @media #{$tablet}{
-          position:absolute;
-          width:100%;
-          height:auto;
-          bottom:initial;
-          top:0;
+          position: absolute;
+          width: 100%;
+          height: auto;
+          bottom: initial;
+          top: 0;
           transform: translate(-40%, -28%) scale(2.2);
         }
       }
@@ -156,7 +157,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    position:relative;
+    position: relative;
     padding: 60px 0 0;
     .title {
       width: 100%;
@@ -170,38 +171,38 @@
         filter: drop-shadow(5px 5px 20px rgba(0, 0, 0, .3))
       }
       @media #{$phone}{
-        h1{
+        h1 {
           font-size: 3.6rem;
           margin-left: -15px;
         }
-        svg{
+        svg {
           height: 100px;
         }
       }
-      @media only screen and (max-width: 350px){
-        h1{
+      @media only screen and (max-width: 350px) {
+        h1 {
           font-size: 2.4rem;
           margin-left: -5px;
         }
-        svg{
+        svg {
           height: 90px;
         }
       }
     }
-    .next, .prev{
+    .next, .prev {
       height: 45px;
 
     }
     .next {
       margin-right: 40px;
       @media #{$phone}{
-        margin-right: 20px ;
+        margin-right: 20px;
       }
     }
     .prev {
       margin-left: 40px;
       @media #{$phone}{
-        margin-left: 20px ;
+        margin-left: 20px;
       }
     }
   }

@@ -25,6 +25,8 @@ describe('AppComponent', () => {
   let app: AppComponent;
   let fixture: ComponentFixture<AppComponent>;
 
+  window['ga'] = jasmine.createSpy('ga');
+
   const localizeRouterServiceMock = {
       parser: {
         locales: ['test', 'language', 'list'],
@@ -80,40 +82,44 @@ describe('AppComponent', () => {
     expect(app).toBeTruthy();
   }));
 
-  it('should run on Init', () => {
+  it('should run on Init', fakeAsync(() => {
     expect(app.selectLanguage).toHaveBeenCalled();
-    expect(app.changeTitle).toHaveBeenCalled();
-  })
+  }));
 
   it('should addLangs', () => {
     app.selectLanguage();
     expect(translateServiceMock.addLangs).toHaveBeenCalled()
-  })
+  });
 
   it('should select currentLanguage', () => {
     TestBed.get(LocalizeRouterService).parser.currentLang = 'list';
-    translateServiceMock.use.calls.reset()
-    translateServiceMock.setDefaultLang.calls.reset()
+    translateServiceMock.use.calls.reset();
+    translateServiceMock.setDefaultLang.calls.reset();
     app.selectLanguage();
     expect(translateServiceMock.use).toHaveBeenCalledWith('list');
     expect(translateServiceMock.setDefaultLang).toHaveBeenCalledWith('list')
-  })
+  });
 
 
   it('should select browserLang', () => {
     TestBed.get(LocalizeRouterService).parser.currentLang = '';
-    translateServiceMock.use.calls.reset()
-    translateServiceMock.setDefaultLang.calls.reset()
+    translateServiceMock.use.calls.reset();
+    translateServiceMock.setDefaultLang.calls.reset();
     app.selectLanguage();
     expect(translateServiceMock.use).toHaveBeenCalledWith('language');
     expect(translateServiceMock.setDefaultLang).toHaveBeenCalledWith('language')
-  })
+  });
 
   it('title should be changed', fakeAsync(() => {
     TestBed.get(Router).events.next(new NavigationEnd(1, 'test', 'test/page'));
     tick();
-    expect(titleService.setTitle).toHaveBeenCalledWith('Test Prefix | page')
+    expect(titleService.setTitle).toHaveBeenCalledWith('Test Prefix | page');
+  }))
 
+  it('Google Analitics should be initialized', fakeAsync(() => {
+    TestBed.get(Router).events.next(new NavigationEnd(1, 'test', 'test/page'));
+    tick();
+    expect(window['ga']).toHaveBeenCalledWith('set', 'page', 'test/page');
   }))
 
 });

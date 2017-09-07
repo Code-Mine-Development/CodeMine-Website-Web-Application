@@ -1,14 +1,14 @@
 @import "../../../assets/styles/mediaQueries";
 
-.section-audit{
+.section-audit {
   width: 100%;
   height: 50vh;
   padding-top: 33vh;
   @media #{$tablet}{
     height: 70vh;
-    padding-top:15vh;
+    padding-top: 15vh;
   }
-  .little-triangle{
+  .little-triangle {
     animation: triangleHoverOut .7s forwards;
     width: 0;
     height: 0;
@@ -21,7 +21,7 @@
     left: 80px;
     opacity: 0;
   }
-  .row{
+  .row {
     display: flex;
     justify-content: space-around;
     width: 60%;
@@ -31,7 +31,7 @@
       display: block;
     }
 
-    .column{
+    .column {
       width: 40%;
       position: relative;
       animation: columns-slideIn 1s forwards;
@@ -44,176 +44,182 @@
       cursor: pointer;
       @media #{$tablet}{
         width: 80%;
-        margin:auto;
+        margin: auto;
       }
 
-      img{
+      img {
         border-radius: 50%;
         position: relative;
         animation: imageHoverOut .7s forwards;
       }
-      .title{
+      .title {
         width: auto;
         text-align: center;
         position: relative;
-        h3,p,i{
+        h3, p, i {
           animation: titleHoverOut .7s forwards;
         }
-        i{
+        i {
           font-size: 2em;
         }
-        h3{
+        h3 {
           position: relative;
-          left:0;
+          left: 0;
         }
-        p, i{
+        p, i {
           margin: 0 1em;
           display: inline;
           opacity: 0;
           position: relative;
-          left:0;
+          left: 0;
           line-height: 1.5em;
-      }
-      }
-      &:hover{
-        .little-triangle{
-          animation:triangleHover .7s forwards alternate;
         }
-        img{
+      }
+      &:hover {
+        .little-triangle {
+          animation: triangleHover .7s forwards alternate;
+        }
+        img {
           animation: imageHover .7s forwards;
         }
-        .title{
-          h3,p,i{
+        .title {
+          h3, p, i {
             animation: titleHover .7s forwards;
           }
         }
       }
-      &:first-of-type{
-        left:-25%
+      &:first-of-type {
+        left: -25%
       }
-      &:last-of-type{
-        left:25%;
+      &:last-of-type {
+        left: 25%;
       }
 
-      img{
+      img {
         max-height: 100%;
-        max-width:100%;
+        max-width: 100%;
       }
     }
-      a{
-        color:#fff;
-        text-decoration: none;
-        font-size: 1.5em;
-      }
+    a {
+      color: #fff;
+      text-decoration: none;
+      font-size: 1.5em;
     }
   }
-
-canvas{
-  display: none;
 }
-#triangle-head{
-  width: 100%;
-  opacity: 0;
-  background-repeat: no-repeat;
-  animation: bgFadeIn 2s forwards;
-  overflow:hidden;
 
-}
-@media screen and (max-height: 780px){
-  .column{
+@media screen and (max-height: 780px) {
+  .column {
     width: 30% !important;
   }
-  .section-audit{
+  .section-audit {
     height: 100vh;
   }
 }
+
 @keyframes bgFadeIn {
-  from{
-    opacity:0
+  from {
+    opacity: 0
   }
-  to{
+  to {
     opacity: 1;
   }
 }
-@keyframes columns-slideIn {
-  from{
-    opacity:0
-  }
-  to{
-    opacity:1;
-    left:0%;
-    top:0;
-  }
-}
-@keyframes titleHover {
-  from{
-    left:0;
-  }
-  to{
-    left:-50px;
-    opacity:1
-  }
-}
-@keyframes titleHoverOut {
-  from{
-    left:-50px;
-    opacity:1
-  }
-  to{
 
-    left:0;
+@keyframes columns-slideIn {
+  from {
+    opacity: 0
+  }
+  to {
+    opacity: 1;
+    left: 0%;
+    top: 0;
   }
 }
-@keyframes triangleHover{
-   from{
-     bottom: 200px;
-     left: 80px;
-      opacity:0;
-   }
-   to{
-     bottom:0;
-     left:-50px;
-     opacity:1;
-   }
- }
-@keyframes triangleHoverOut{
-  from{
-    bottom:0;
-    left:-50px;
-    opacity:1;
+
+@keyframes titleHover {
+  from {
+    left: 0;
   }
-  to{
-    bottom: 200px ;
-    left: 80px ;
-    opacity:0;
+  to {
+    left: -50px;
+    opacity: 1
   }
 }
-@keyframes imageHover{
-  from{
-    top:0;
+
+@keyframes titleHoverOut {
+  from {
+    left: -50px;
+    opacity: 1
+  }
+  to {
+
+    left: 0;
+  }
+}
+
+@keyframes triangleHover {
+  from {
+    bottom: 200px;
+    left: 80px;
+    opacity: 0;
+  }
+  to {
+    bottom: 0;
+    left: -50px;
+    opacity: 1;
+  }
+}
+
+@keyframes triangleHoverOut {
+  from {
+    bottom: 0;
+    left: -50px;
+    opacity: 1;
+  }
+  to {
+    bottom: 200px;
+    left: 80px;
+    opacity: 0;
+  }
+}
+
+@keyframes imageHover {
+  from {
+    top: 0;
     box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
   }
-  to{
-    top:-30px;
+  to {
+    top: -30px;
     box-shadow: 4px 6px 10px 4px rgba(0, 0, 0, 0.2);
   }
 }
-@keyframes imageHoverOut{
-  from{
-    top:-30px;
+
+@keyframes imageHoverOut {
+  from {
+    top: -30px;
     box-shadow: 4px 6px 10px 4px rgba(0, 0, 0, 0.2);
   }
-  to{
-    top:0;
+  to {
+    top: 0;
     box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
   }
 }
-@media screen and (min-width: 850px){
-  .section-audit{
-  .row{
-    .column{
-      width: 40%;
+
+@media screen and (min-width: 850px) {
+  .section-audit {
+    .row {
+      .column {
+        width: 40%;
+      }
     }
   }
 }
+
+/deep/{
+  app-audit-details:nth-of-type(1){
+    .btn{
+      background: #ffffff;
+    }
+  }
 }

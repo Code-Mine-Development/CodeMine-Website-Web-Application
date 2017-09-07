@@ -17,4 +17,5 @@ export class OfferThumbnailsComponent {
   onClick(url: string) {
     this.navigate.next(url);
   }
+
 }
