@@ -1,5 +1,6 @@
-import {Component, OnInit, Input, HostListener} from '@angular/core';
+import {Component, OnInit, Input} from '@angular/core';
 import {Employees} from './interfaces/employees.interface';
+import {EventManager} from './event_manager';
 
 @Component({
   selector: 'app-office',
@@ -7,35 +8,16 @@ import {Employees} from './interfaces/employees.interface';
   styleUrls: ['office.component.scss'],
 })
 export class OfficeComponent implements OnInit {
-
   @Input() employees: Employees;
-  modelVisible = false;
-  listVisible = false;
-  modelStatus = 'maximize';
 
-  private breakPoint = 800;
+  eventManager = new EventManager();
+
+
 
   constructor() {
   }
 
-  @HostListener('window:resize', ['$event']) onWindowResize() {
-    this.checkSize();
-  }
-
   ngOnInit() {
-    this.checkSize();
-  }
-
-  checkSize() {
-    this.modelVisible = window.innerWidth > this.breakPoint;
-  }
-
-  setModelNavigate(status) {
-    this.modelStatus = status;
-  }
-
-  setListVisible(status) {
-    this.listVisible = status;
   }
 
 }

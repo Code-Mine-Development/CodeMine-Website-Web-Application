@@ -13,8 +13,8 @@
       "description": "PEOPLE.przemyslaw.description",
       "since": 5,
       "deskCoordinate": {
-        "top": 322,
-        "left": 1169,
+        "top": 16.445182724,
+        "left": 51.976923076,
         "variant": 1
       },
       "image":{
@@ -23,8 +23,7 @@
       }
     },
     {
-      "name": "Piotr",
-      "surname": "Macha",
+      "name": "Piotrek",
       "position": "Backend developer",
       "description": "PEOPLE.piotr.description",
       "since": 1,
@@ -33,14 +32,13 @@
         "funny":"_V3B0376.jpg"
       },
       "deskCoordinate": {
-        "top": 542,
-        "left": 790,
+        "top": 29.346622369,
+        "left": 36.538461538,
         "variant": 1
       }
     },
     {
       "name": "Adam",
-      "surname": "Niesłony",
       "position": "Frontend developer",
       "description": "PEOPLE.adamn.description",
       "since": 2,
@@ -49,14 +47,13 @@
         "funny":"_V3B9910.jpg"
       },
       "deskCoordinate": {
-        "top": 644,
-        "left": 613,
+        "top": 35.260243632,
+        "left": 29.353846153,
         "variant": 1
       }
     },
     {
-      "name": "Joanna",
-      "surname": "Koterba",
+      "name": "Asia",
       "position": "Frontend developer",
       "description": "PEOPLE.joannaK.description",
       "since": 1,
@@ -65,8 +62,8 @@
         "funny":"_V3B0069.jpg"
       },
       "deskCoordinate": {
-        "top": 691,
-        "left": 531,
+        "top": 38.133874239,
+        "left": 23.769230769,
         "variant": 1
       }
     },
@@ -81,8 +78,8 @@
         "funny":"_V3B0451.jpg"
       },
       "deskCoordinate": {
-        "top": 435,
-        "left": 1383,
+        "top": 23.067552602,
+        "left": 60.692307692,
         "variant": 1
       }
     },
@@ -113,13 +110,13 @@
         "funny":"_V3B9982.jpg"
       },
       "deskCoordinate": {
-        "top": 897,
-        "left": 175,
+        "top": 50.188261351,
+        "left": 11.515384615,
         "variant": 1
       }
     },
     {
-      "name": "Radosław ",
+      "name": "Radosław",
       "surname": "Adamiec",
       "position": "CEO",
       "description": "PEOPLE.radoslaw.description",
@@ -129,8 +126,8 @@
         "funny":"_V3B0408.jpg"
       },
       "deskCoordinate": {
-        "top": 944,
-        "left": 93,
+        "top": 52.945736434,
+        "left": 8.161538461,
         "variant": 1
       }
     },
@@ -209,8 +206,8 @@
         "funny":"_V3B0392.jpg"
       },
       "deskCoordinate": {
-        "top": 1044,
-        "left": 266,
+        "top": 58.733111849,
+        "left": 15.209538461,
         "variant": 1
       }
     },

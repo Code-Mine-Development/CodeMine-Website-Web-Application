@@ -1,30 +1,27 @@
-:host{
-  width:100%;
-  height: 95%;
-  top:0;
-  left:0;
-}
-.wrap {
-  height: 100%;
-  overflow: hidden;
-  position: relative;
-  max-width: 100%;
-  transition: all .5s;
-  > div {
-    width: 2920px;
-    height: 1700px;
-    position: absolute;
-    background-repeat: no-repeat;
-    transition: 0.1s;
-    left: -300px;
-    top: -400px;
-  }
-  &.minimize{
-      zoom: .6;
-    & > div{
-      left:0;
-      top:50px;
-    }
+@import "../../../../../assets/styles/mediaQueries";
+
+:host {
+  @media #{$phone}{
+    display: none;
   }
 }
 
+.container.model {
+  position: relative;
+  margin-top: 100px;
+  padding: 0;
+  right: 0;
+  @media #{$computer}{
+    margin-top: -7%;
+    right: -10%;
+  }
+  figure {
+    margin:0;
+    figcaption {
+      display: none;
+    }
+    img {
+      width: 100%;
+    }
+  }
+}

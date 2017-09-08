@@ -1,60 +1,51 @@
-import {Component, OnInit, Input, Output, EventEmitter, OnChanges} from '@angular/core';
+import {Component, Input, Output, EventEmitter, OnChanges, OnInit, HostBinding, HostListener} from '@angular/core';
+import {EventManager} from '../event_manager';
+import {Employees} from '../../../../aplication/about-us/interfaces/employees.interface';
 
 @Component({
   selector: 'app-employee',
   template: `
-    <figure>
-      <img [src]="'assets/images/people/'+person.image.normal" alt="Photo of someone from team">
-      <figcaption>{{person.name}} Photo</figcaption>
-    </figure>
-    <section [class.desc-visible]="descriptionVisible">
-      <h1>{{person.name + " " + person.surname}}</h1>
-      <h2>{{person.position}}</h2>
-      <hr>
-      <p>
-        <button (click)="show()" class="show">
-          {{'ABOUT_US.showDescription' | translate}}
-        </button>
-        <button (click)="hide()" class="close">
-          <span class="fa fa-times" aria-hidden="true" ></span>{{'ABOUT_US.closeDescription' | translate}}
-        </button>
-        <span class="description">
-            {{person.description | translate}}
-        </span>
-      </p>
+    <div class="image">
+      <figure>
+        <img [src]="'assets/images/people/'+person.image.normal" alt="Photo of someone from team">
+        <figcaption>{{person.name}} Photo</figcaption>
+        <svg class="cover" viewBox="0,0 1,1">
+          <polygon points="0,0 1,1 0,1" fill="#FFDE07"></polygon>
+        </svg>
+      </figure>
+    </div>
+    <section class="vcard">
+          <h3>{{person.name  | translate}}</h3>
+          <p>{{person.position  | translate}}</p>
     </section>
 
   `,
   styleUrls: ['./employee.component.scss']
 })
-export class EmployeeComponent implements OnChanges {
+export class EmployeeComponent implements OnInit {
 
-  @Input() person;
-  @Input() currentVisible;
-  @Output() visible = new EventEmitter();
+  @Input() person: Employees;
+  @Input() eventManager: EventManager;
 
-  descriptionVisible = false;
+  @HostBinding("class.hover") hover = false;
 
   constructor() {
   }
 
-  ngOnChanges() {
-    if (this.currentVisible !== this.getId()) {
-      this.descriptionVisible = false;
-    }
+  @HostListener('mouseenter', []) onMouseEnter() {
+    this.eventManager.emit("hover", this.person)
   }
 
-  show() {
-    this.descriptionVisible = true;
-    this.visible.emit(this.getId());
+  @HostListener('mouseleave', []) onMouseLeave() {
+    this.eventManager.emit("hover", null)
   }
 
-  hide() {
-    this.descriptionVisible = false;
+  ngOnInit() {
+    this.eventManager.on("hover", (person) => this.onHover(person))
   }
 
-  getId() {
-    return this.person.name + this.person.surname;
+  onHover(person: Employees) {
+    this.hover = person === this.person
   }
 
 }

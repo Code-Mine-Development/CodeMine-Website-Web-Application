@@ -1,5 +1,23 @@
-<ul>
-  <li *ngFor="let person of employees">
-    <app-employee [person]="person" (visible)="setVisible($event)" [currentVisible]="currentVisible"></app-employee>
-  </li>
-</ul>
+<section class="container">
+  <app-employee *ngFor="let employee of employees" [person]="employee" [eventManager]="eventManager"></app-employee>
+  <section class="join_us">
+    <div class="join_us-image">
+      <figure>
+        <figcaption>Join us icon</figcaption>
+        <img
+          src="https://images.pexels.com/photos/4636/person-woman-eyes-face.jpg?w=1260&h=750&auto=compress&cs=tinysrgb"
+          alt="place for your photo">
+      </figure>
+    </div>
+    <section class="join_us-text">
+      <h3>{{'ABOUT_US.place4U' | translate }}</h3>
+      <p>{{'ABOUT_US.joinUs' | translate }}</p>
+    </section>
+    <svg viewBox="0,0 10,10">
+      <polygon fill="#FFDE07" points="10,0 0,10 10,10"></polygon>
+    </svg>
+  </section>
+</section>
+<svg viewBox="0,0 10,1">
+  <polygon fill="#282828" points="0,1 1,0 10,0 10,1"></polygon>
+</svg>

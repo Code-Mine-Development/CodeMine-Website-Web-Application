@@ -1,11 +1,6 @@
 @import "../../../../assets/styles/colors";
 :host {
-  display: flex;
-  flex-direction: column;
-  flex: 1;
-  height:100vh;
   position:relative;
-  overflow: hidden;
 }
 
 .skip {

@@ -24,6 +24,7 @@ import {DOCUMENT} from '@angular/common';
 export class EmployeesListComponent {
 
   @Input() employees: Employees;
+  @Input() eventManager
 
   currentVisible = '';
 

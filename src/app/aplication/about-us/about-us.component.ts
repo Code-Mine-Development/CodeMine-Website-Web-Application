@@ -1,4 +1,4 @@
-import { Component, OnInit, HostListener } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import {Company} from '../../shared/interface/company.interface';
 import {ActivatedRoute, Data} from '@angular/router';
 import {fadeInAnimation} from '../../shared/routing.animation';
