@@ -162,7 +162,11 @@
       "application": "Zastosowanie",
       "technologies": "Technologie",
       "tools": "Narzędzia",
-      "goal": "Cel"
+      "goal": "Cel",
+      "build": "Budowa",
+      "postsBooking": "Rezerwacja postów",
+      "ourRole": "Nasze zadanie",
+      "workingScheme": "Schemat działania aplikacji"
     },
     "BrighterVision":{
       "title": "Brigter Vision Growth Platform",
@@ -193,9 +197,7 @@
         "part3": "wymóg zdolności naszych mikroserwisów do integracji z wieloma, często przestarzałymi rozwiązaniami klasy eneterprise; ",
         "part4": "mnogość obecnych i wymaganych technologii oraz narzędzi (PHP, Java, C#, Apache Kafka, PostgreSQL, Microsoft BizTalk, Magento);",
         "part5": "czy praca z enigmatycznymi formatami danych",
-        "build": "Budowa",
         "part6": "Zarówno tworzone w JAVIE i PHP mikroserwisy, jak i pisane w technologii ReactJS, aplikacje internetowe, przyczyniają się do stworzenia przez naszego klienta nowoczesnej platformy e-commerce dla operatorów telekomunikacyjnych. Nasze aplikacje to starannie zaprojektowane komponenty, korzystające ponadto z rozwiązań takich jak CQRS czy Event Sourcing.",
-        "OurMission": "Nasze zadanie",
         "part7": "Jedną z kluczowych realizacji w ramach tego projektu jest stworzenie systemów katalogowych, pozwalających na integrację wielu istniejących baz danych klientów w jedno wygodne narzędzie.",
         "part8": "Rozwiązanie to jest szczególnie istotne z perspektywy operatorów, którzy kupując inną firmę, nie są w stanie łatwo połączyć wielu baz z systemami rozpoznawania dostępności usług we wskazanych adresach czy katalogami produktów."
       }
@@ -492,11 +494,13 @@
 
   "home": "home",
   "aboutus": "onas",
-  "portfolio":"portfolio",
+
   "offer": "oferta",
   "contact": "kontakt",
   "audit": "audyty",
   "not-found": "nie-ma",
+
+  "e-comerce-for-telecom": "e-comerce-dla-telecomu",
 
   "wecreate": "tworzymy",
   "solutionstoyourbusinessproblems": "solutions-to-your-business-problems",

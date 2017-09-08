@@ -1,13 +1,34 @@
+@import "../../../../../assets/styles/mediaQueries";
+
 :host {
   font-weight: 500;
 }
 
 .wrapper {
   width: 100%;
+  position: relative;
+  overflow: hidden;
+  & > * {
+    position: relative;
+    z-index: 25;
+  }
+  svg {
+    margin-top: 300px;
+    position: absolute;
+    left: 0;
+    width: 100%;
+    &.background {
+      top: 0;
+      z-index: 20;
+    }
+  }
 }
 
 .home-image {
   margin-top: 100px;
+  @media #{$phone}{
+    margin-top: 50px;
+  }
   figure {
     margin: 0;
     width: 100%;
@@ -22,8 +43,11 @@
 
 .goal {
   margin-top: 100px;
+  @media #{$phone}{
+    margin-top: 50px;
+  }
   h3 {
-    margin: 20px 0;
+    margin: 0 0 20px;
   }
   p {
     display: flex;
@@ -32,35 +56,51 @@
       width: 45%;
       display: block;
     }
+    @media #{$phone}{
+      flex-wrap: wrap;
+      span {
+        width: 100%;
+        &:nth-of-type(2) {
+          margin-top: 20px;
+        }
+      }
+    }
   }
 }
 
 .goal-images {
   margin-top: 100px;
-  width:100%;
-  figure{
-    margin:0;
+  @media #{$phone}{
+    margin-top: 50px;
+  }
+  width: 100%;
+  figure {
+    margin: 0;
     width: 100%;
     figcaption {
       display: none;
     }
   }
 
-  img{
-    width:100%;
+  img {
+    width: 100%;
     transform: scale(1.2);
   }
 
-  video{
+  video {
     margin-top: -100%;
-    width:100%;
-    box-shadow: 15px 25px 100px  #777777;
+    width: 100%;
+    box-shadow: 15px 25px 100px #777777;
     transform-origin: left bottom;
     transform: translate(26.5%, 1%) rotateZ(-15deg) skew(-330deg) scale(0.37);
   }
 }
 
-.architecture{
+.architecture {
   margin-top: 100px;
   margin-bottom: 100px;
+  @media #{$phone}{
+    margin-top: 50px;
+    margin-bottom: 50px;
+  }
 }

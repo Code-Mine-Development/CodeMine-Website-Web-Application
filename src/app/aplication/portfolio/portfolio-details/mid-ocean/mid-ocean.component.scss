@@ -6,12 +6,15 @@
     font-weight: 500;
   }
   h3{
-    margin: 20px 0;
+    margin: 0 0 20px;
   }
 }
 
 section {
   margin-top: 100px;
+  @media #{$phone}{
+    margin-top: 50px;
+  }
   width: 100%;
   video {
     width: 100%;
@@ -71,6 +74,9 @@ section {
 
 .process{
   margin-top:100px;
+  @media #{$phone}{
+    margin-top: 50px;
+  }
   p{
     display:flex;
     justify-content: space-between;
@@ -136,6 +142,9 @@ section {
 
 .end{
   margin-bottom: 100px;
+  @media #{$phone}{
+    margin-bottom: 50px;
+  }
 }
 
 .triangle{
