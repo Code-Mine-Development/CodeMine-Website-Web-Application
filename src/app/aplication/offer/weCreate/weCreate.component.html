@@ -4,7 +4,11 @@
 
   <div class="row">
     <div class="col" *ngFor="let item of WeCreate.features">
-      <div class="col-img" [ngStyle]="{'background-image': 'url(' + item.image + ')'}"></div>
+      <figure class="col-img">
+        <figcaption>Offer image</figcaption>
+        <img [src]="item.image" alt="offer Image">
+      </figure>
+
       <div class="col-text">
         <h3>{{item.name | translate}}</h3>
         <p>{{item.description | translate }}</p>

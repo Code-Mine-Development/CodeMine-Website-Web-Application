@@ -3,7 +3,7 @@
 .container {
   width: 100%;
   margin-top: 80px;
-  padding:0 80px;
+  padding: 0 80px;
   box-sizing: border-box;
   @media #{$phone}{
     padding: 0 10px;
@@ -12,76 +12,81 @@
     padding: 0 40px;
   }
 }
-.header{
+
+.header {
   text-align: center;
   margin-bottom: 4em;
 }
-.row{
+
+.row {
   width: 100%;
   text-align: center;
   display: flex;
   flex-wrap: wrap;
   justify-content: flex-start;
-  .col{
+  .col {
     text-align: center;
     box-sizing: border-box;
     padding: 0 40px;
-    display:flex;
+    display: flex;
     flex-direction: column;
     width: 25%;
 
-    @media only screen and (max-width: 1440px){
+    @media only screen and (max-width: 1440px) {
       padding: 0 20px;
     }
 
-
-    @media only screen and (max-width: 1180px){
+    @media only screen and (max-width: 1180px) {
       width: 33.33%;
     }
 
-    @media only screen and (max-width: 860px){
+    @media only screen and (max-width: 860px) {
       width: 50%;
     }
 
     @media #{$phone}{
-      width:100%;
+      width: 100%;
     }
-    h3{
-      padding:40px 0 40px;
+    h3 {
+      padding: 40px 0 40px;
       box-sizing: border-box;
       font-weight: bold;
-      height:35%;
-      margin:0;
+      height: 35%;
+      margin: 0;
       @media #{$phone}{
         box-sizing: content-box;
-        padding:40px 0 20px;
+        padding: 40px 0 20px;
       }
     }
-    &:hover{
-      h3{
+    &:hover {
+      h3 {
         font-weight: 700;
       }
     }
-    p{
+    p {
       height: 60%;
-      margin:20px 0 40px;
+      margin: 20px 0 40px;
     }
-    .col-img{
-      width:100%;
-      border:1px solid #eee;
-      background-size: cover;
-      &:after{
-        content: "";
-        display: block;
-        padding-bottom: 100%;
+    .col-img {
+      margin:0;
+      width: 100%;
+      transition: .5s;
+      border: 1px solid transparent;
+      box-sizing: border-box;
+      figcaption{
+        display:none;
       }
-      &:hover{
-        border:1px solid #000;
+      img{
+        width:100%;
+      }
+      &:hover {
+        border: 1px solid rgba(228, 228, 228, 1);
+        background: rgba(242, 242, 242, 1);
       }
     }
-    .col-text{
-      flex:1;
-      display:flex;
+    .col-text {
+      flex: 1;
+      display: flex;
       flex-direction: column;
       justify-content: flex-start;
     }
