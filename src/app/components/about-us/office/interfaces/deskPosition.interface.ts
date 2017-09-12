@@ -1,5 +1,6 @@
 export interface DeskCoordinate {
   top: number;
   left: number;
-  variant: number
+  variant: number,
+  hide?: string[]
 }

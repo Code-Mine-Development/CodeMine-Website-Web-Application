@@ -1,0 +1,26 @@
+:host {
+  position: absolute;
+  left: 53.4645669%;
+  top: 57.87627385%;
+  width: 3.622047244%;
+  transform-origin: right center;
+  transition: transform .5s;
+  figure {
+    width: 100%;
+    margin: 0;
+    transform-origin: bottom right;
+    transform: skewY(-30deg) rotateY(-45deg);
+    transition: transform .5s;
+    img {
+      width: 100%;
+    }
+  }
+  &:hover {
+    transform: skewY(44deg);
+    figure {
+      transform: rotateY(-40deg);
+    }
+  }
+}
+
+

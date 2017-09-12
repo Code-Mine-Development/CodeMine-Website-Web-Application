@@ -1,13 +1,16 @@
 @import "../../../../assets/styles/colors";
+@import "../../../../assets/styles/mediaQueries";
+
 :host {
-  position:relative;
+  position: relative;
+  display: block;
 }
 
-.skip {
-  text-align: center;
-  width: 100%;
-  i{
-    margin: 1em;
-    font-size: 2em;
+.container {
+  display: block;
+  position: relative;
+  @media #{$tablet-media}{
+    width:100%;
+    max-width: 100%;
   }
 }

@@ -27,25 +27,42 @@ export class EmployeeComponent implements OnInit {
   @Input() person: Employees;
   @Input() eventManager: EventManager;
 
-  @HostBinding("class.hover") hover = false;
+  @HostBinding('class.hover') hover = false;
+
+  private clicked = false;
 
   constructor() {
   }
 
   @HostListener('mouseenter', []) onMouseEnter() {
-    this.eventManager.emit("hover", this.person)
+    this.eventManager.emit('hover', this.person)
   }
 
   @HostListener('mouseleave', []) onMouseLeave() {
-    this.eventManager.emit("hover", null)
+    this.eventManager.emit('hover', null)
+  }
+
+  @HostListener('click', []) onMouseClick() {
+    this.eventManager.emit('click', this.person);
   }
 
   ngOnInit() {
-    this.eventManager.on("hover", (person) => this.onHover(person))
+    this.eventManager.on('hover', (person) => this.onHover(person));
+    this.eventManager.on('click', (person) => this.onClick(person));
   }
 
   onHover(person: Employees) {
-    this.hover = person === this.person
+    if (this.clicked) {
+      return;
+    }
+    this.hover = person === this.person;
+  }
+
+  onClick(person: Employees) {
+    this.clicked = !!person;
+    if (!this.clicked) {
+      this.hover = false;
+    }
   }
 
 }

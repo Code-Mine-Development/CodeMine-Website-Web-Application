@@ -1,13 +1,12 @@
 import {NgModule} from '@angular/core';
 import {CommonModule} from '@angular/common';
 import {DeskComponent} from './office/office-model/desk/desk.component';
-import { PersonComponent } from './person/person.component';
+import { PersonComponent } from './office/person/person.component';
 import {UiModule} from '../../shared/ui-elements/ui.module';
-import { DoorComponent } from './door/door.component';
+import { DoorComponent } from './office/office-model/door/door.component';
 import {ScrollToModule} from 'ng2-scroll-to';
 import {AboutCompanyNameComponent} from './about-company-name/about-company-name.component';
 import { ApproachComponent } from './approach/approach.component';
-import { VideoComponent } from './video/video.component';
 import { InstagramComponent } from './instagram/instagram.component';
 import { InstagramPhotoComponent } from './instagram/instagram-photo.component';
 import { EmployeesListComponent } from './office/employees-list/employees-list.component';
@@ -24,7 +23,6 @@ import { EmployeeComponent } from './office/employees-list/employee.component';
     DoorComponent,
     AboutCompanyNameComponent,
     ApproachComponent,
-    VideoComponent,
     InstagramComponent,
     InstagramPhotoComponent,
     EmployeesListComponent,
@@ -44,7 +42,6 @@ import { EmployeeComponent } from './office/employees-list/employee.component';
     DoorComponent,
     AboutCompanyNameComponent,
     ApproachComponent,
-    VideoComponent,
     InstagramComponent,
     OfficeComponent
   ],

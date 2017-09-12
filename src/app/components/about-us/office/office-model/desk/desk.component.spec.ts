@@ -3,7 +3,8 @@ import {Component} from '@angular/core';
 import {TranslateModule} from '@ngx-translate/core';
 
 import {DeskComponent} from './desk.component';
-import {MockCompany} from '../../../shared/mocks/company.mock';
+import {MockCompany} from '../../../../../shared/mocks/company.mock';
+import {EventManager} from '../../event_manager';
 
 
 @Component({
@@ -20,10 +21,10 @@ import {MockCompany} from '../../../shared/mocks/company.mock';
 class BackgroundMockComponent {
 }
 
-describe('DeskComponent', () => {
+fdescribe('DeskComponent', () => {
   let component: DeskComponent;
   let fixture: ComponentFixture<DeskComponent>;
-
+  const eventManager = new EventManager();
   beforeEach(async(() => {
     TestBed.configureTestingModule({
       imports: [
@@ -37,24 +38,23 @@ describe('DeskComponent', () => {
   beforeEach(() => {
     const background = TestBed.createComponent(BackgroundMockComponent);
     fixture = TestBed.createComponent(DeskComponent);
-
     component = fixture.componentInstance;
     component.person = MockCompany.employees[0];
-    component.activePerson = {};
-    component.bg = background.nativeElement;
-
+    component.eventManager = eventManager;
     fixture.detectChanges();
   });
 
   it('should be created', () => {
     expect(component).toBeTruthy();
   });
-
-  it('should open card', () => {
-    component.activePerson = MockCompany.employees[0];
-    spyOn(component.coordinate, 'showDetails');
-    fixture.detectChanges();
-    component.ngOnChanges();
-    expect(component.coordinate.showDetails).toHaveBeenCalled();
-  })
+  //
+  // it('should open card', () => {
+  //   spyOn(component.eventManager, 'on').and.callThrough();
+  //   fixture.detectChanges();
+  //   eventManager.emit("click", MockCompany.employees[0]);
+  //   fixture.detectChanges();
+  //   expect(component.eventManager.on).toHaveBeenCalledWith("click");
+  //   expect(component.clicked).toBe(true);
+  //   expect(component.animateMoveCenter).toHaveBeenCalled();
+  // })
 });

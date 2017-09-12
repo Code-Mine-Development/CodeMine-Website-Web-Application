@@ -7,34 +7,26 @@
   "phone": "+48 723 21 67",
   "employees": [
     {
-      "name": "Przemysław",
+      "name": "Przemek",
       "surname": "Adamiec",
       "position": "COO",
       "description": "PEOPLE.przemyslaw.description",
       "since": 5,
       "deskCoordinate": {
-        "top": 16.445182724,
-        "left": 51.976923076,
-        "variant": 1
+        "top": 20.95,
+        "left": 52.9769,
+        "variant": 1,
+        "hide": [
+          "leftBottom"
+        ],
+        "centerCoordinate":{
+          "left": 0,
+          "top": 0
+        }
       },
       "image":{
         "normal":"_V3B0425.jpg",
         "funny":"_V3B0354.jpg"
-      }
-    },
-    {
-      "name": "Piotrek",
-      "position": "Backend developer",
-      "description": "PEOPLE.piotr.description",
-      "since": 1,
-      "image":{
-        "normal":"_V3B0360.jpg",
-        "funny":"_V3B0376.jpg"
-      },
-      "deskCoordinate": {
-        "top": 29.346622369,
-        "left": 36.538461538,
-        "variant": 1
       }
     },
     {
@@ -47,9 +39,16 @@
         "funny":"_V3B9910.jpg"
       },
       "deskCoordinate": {
-        "top": 35.260243632,
-        "left": 29.353846153,
-        "variant": 1
+        "top": 40.7,
+        "left": 26.99,
+        "variant": 1,
+        "hide": [
+          "leftBottom"
+        ],
+        "centerCoordinate":{
+          "left": 0,
+          "top": 0
+        }
       }
     },
     {
@@ -62,9 +61,17 @@
         "funny":"_V3B0069.jpg"
       },
       "deskCoordinate": {
-        "top": 38.133874239,
-        "left": 23.769230769,
-        "variant": 1
+        "top": 43.3,
+        "left": 23.55,
+        "variant": 1,
+        "hide": [
+          "leftBottom",
+          "topFull"
+        ],
+        "centerCoordinate":{
+          "left": 0,
+          "top": 0
+        }
       }
     },
     {
@@ -78,25 +85,13 @@
         "funny":"_V3B0451.jpg"
       },
       "deskCoordinate": {
-        "top": 23.067552602,
-        "left": 60.692307692,
-        "variant": 1
-      }
-    },
-    {
-      "name": "Mateusz",
-      "surname": "Wit",
-      "position": "Frontend developer",
-      "description": "PEOPLE.mateusz.description",
-      "since": 1,
-      "image":{
-        "normal":"_V3B0309.jpg",
-        "funny":"_V3B0316.jpg"
-      },
-      "deskCoordinate": {
-        "top": 920,
-        "left": 955,
-        "variant": 2
+        "top": 31,
+        "left": 66.25,
+        "variant": 1,
+        "centerCoordinate":{
+          "left": 0,
+          "top": 0
+        }
       }
     },
     {
@@ -110,13 +105,20 @@
         "funny":"_V3B9982.jpg"
       },
       "deskCoordinate": {
-        "top": 50.188261351,
-        "left": 11.515384615,
-        "variant": 1
+        "top": 54.1,
+        "left": 9.46,
+        "variant": 1,
+        "hide": [
+          "leftBottom"
+        ],
+        "centerCoordinate":{
+          "left": 0,
+          "top": 0
+        }
       }
     },
     {
-      "name": "Radosław",
+      "name": "Radek",
       "surname": "Adamiec",
       "position": "CEO",
       "description": "PEOPLE.radoslaw.description",
@@ -126,9 +128,17 @@
         "funny":"_V3B0408.jpg"
       },
       "deskCoordinate": {
-        "top": 52.945736434,
-        "left": 8.161538461,
-        "variant": 1
+        "top": 56.7,
+        "left": 6,
+        "variant": 1,
+        "hide": [
+          "leftBottom",
+          "topFull"
+        ],
+        "centerCoordinate":{
+          "left": 0,
+          "top": 0
+        }
       }
     },
     {
@@ -142,9 +152,39 @@
         "funny":"_V3B9999.jpg"
       },
       "deskCoordinate": {
-        "top": 924,
-        "left": 500,
-        "variant": 2
+        "top": 52,
+        "left": 20,
+        "variant": 2,
+        "hide": [
+          "rightBottom"
+        ],
+        "centerCoordinate":{
+          "left": 0,
+          "top": 0
+        }
+      }
+    },
+    {
+      "name": "Tomek",
+      "surname": "Osadnik",
+      "position": "CFO",
+      "description": "PEOPLE.tomasz.description",
+      "since": 4,
+      "image":{
+        "normal":"_V3B0085.jpg",
+        "funny":"_V3B0094.jpg"
+      },
+      "deskCoordinate": {
+        "top": 29.7,
+        "left": 50.5,
+        "hide": [
+          "leftBottom"
+        ],
+        "variant": 2,
+        "centerCoordinate":{
+          "left": 0,
+          "top": 0
+        }
       }
     },
     {
@@ -158,9 +198,36 @@
         "funny":"_V3B0173.jpg"
       },
       "deskCoordinate": {
-        "top": 749,
-        "left": 1252,
-        "variant": 2
+        "top": 34.5,
+        "left": 44,
+        "variant": 2,
+        "hide": [
+          "rightBottom",
+          "leftFull"
+        ],
+        "centerCoordinate":{
+          "left": 0,
+          "top": 0
+        }
+      }
+    },
+    {
+      "name": "Piotrek",
+      "position": "Backend developer",
+      "description": "PEOPLE.piotr.description",
+      "since": 1,
+      "image":{
+        "normal":"_V3B0360.jpg",
+        "funny":"_V3B0376.jpg"
+      },
+      "deskCoordinate": {
+        "top": 38.5,
+        "left": 38.8,
+        "variant": 2,
+        "centerCoordinate":{
+          "left": 0,
+          "top": 0
+        }
       }
     },
     {
@@ -174,29 +241,41 @@
         "funny":"_V3B0204.jpg"
       },
       "deskCoordinate": {
-        "top": 851,
-        "left": 1074,
-        "variant": 2
+        "top": 42,
+        "left": 53.8,
+        "variant": 2,
+        "hide":[
+          "rightBottom",
+          "leftFull"
+        ],
+        "centerCoordinate":{
+          "left": 0,
+          "top": 0
+        }
       }
     },
     {
-      "name": "Tomasz",
-      "surname": "Osadnik",
-      "position": "CFO",
-      "description": "PEOPLE.tomasz.description",
-      "since": 4,
+      "name": "Mateusz",
+      "surname": "Wit",
+      "position": "Frontend developer",
+      "description": "PEOPLE.mateusz.description",
+      "since": 1,
       "image":{
-        "normal":"_V3B0085.jpg",
-        "funny":"_V3B0094.jpg"
+        "normal":"_V3B0309.jpg",
+        "funny":"_V3B0316.jpg"
       },
       "deskCoordinate": {
-        "top": 536,
-        "left": 1176,
-        "variant": 2
+        "top": 45.9,
+        "left": 48.65,
+        "variant": 2,
+        "centerCoordinate":{
+          "left": 0,
+          "top": 0
+        }
       }
     },
     {
-      "name": "Wojciech",
+      "name": "Wojtek",
       "surname": "Malinowski",
       "position": "UX/UI Designer",
       "description": "PEOPLE.wojciech.description",
@@ -206,13 +285,20 @@
         "funny":"_V3B0392.jpg"
       },
       "deskCoordinate": {
-        "top": 58.733111849,
+        "top": 64,
         "left": 15.209538461,
-        "variant": 1
+        "hide": [
+          "rightTop"
+        ],
+        "variant": 1,
+        "centerCoordinate":{
+          "left": 0,
+          "top": 0
+        }
       }
     },
     {
-      "name": "Joanna",
+      "name": "Asia",
       "surname": "Rodo",
       "position": "UX/UI Designer",
       "description": "PEOPLE.joannar.description",
@@ -222,9 +308,13 @@
         "funny":"_V3B0042.jpg"
       },
       "deskCoordinate": {
-        "top": 1180,
-        "left": 428,
-        "variant": 2
+        "top": 68,
+        "left": 18.7,
+        "variant": 2,
+        "centerCoordinate":{
+          "left": 0,
+          "top": 0
+        }
       }
     }
   ]

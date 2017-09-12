@@ -7,6 +7,9 @@
   background: #282828;
   display: block;
   position: relative;
+  @media #{$phone}{
+    margin-top: 100px;
+  }
 }
 
 .container {
@@ -29,24 +32,27 @@ svg {
   display: flex;
   margin-top: 20px;
   box-sizing: border-box;
-  padding:10px 10px;
+  padding: 10px 10px;
   align-items: center;
   cursor: pointer;
-  transition-property: background;
+  transition-property: background, border;
   transition-duration: .25s;
   @media #{$br1200}{
     width: 50%;
   }
 
-  & > *{
+  & > * {
     position: relative;
     z-index: 35;
   }
   .join_us-image {
+    @media #{$phone} {
+      display: none;
+    }
     width: 10.5%;
     figure {
       position: relative;
-      margin:0;
+      margin: 0;
       overflow: hidden;
       width: 100%;
       &:after {
@@ -54,47 +60,56 @@ svg {
         padding-bottom: 100%;
         display: block;
       }
-      figcaption{
-        display:none;
+      figcaption {
+        display: none;
       }
-      img{
+      img {
         position: absolute;
-        left:0;
-        top:0;
-        width:100%;
+        left: 0;
+        top: 0;
+        width: 100%;
         height: 100%;
       }
     }
   }
-  .join_us-text{
+  .join_us-text {
     color: #ffffff;
     box-sizing: border-box;
+    letter-spacing: 0;
     padding-left: 20px;
-
-    h3, p{
-      margin:0;
+    transition: color .75s;
+    @media #{$phone} {
+      padding-left: 0;
+    }
+    h3, p {
+      margin: 0;
       font-size: 16px;
     }
-    h3{
-      margin:0 0 10px;
+    h3 {
+      margin: 0 0 10px;
       font-size: 18px;
     }
   }
 
-  svg{
+  svg {
     position: absolute;
     z-index: 30;
     bottom: 0;
     right: 0;
-    width:5%;
+    width: 5%;
     pointer-events: none;
     transition: .75s;
   }
-  &:hover{
+  &:hover {
     transition-delay: .30s;
     background: #FFDE07;
-    svg{
-      width:150%;
+    border: 1px solid #FFDE07;
+
+    .join_us-text{
+      color: #282828;
+    }
+    svg {
+      width: 150%;
     }
   }
 }
