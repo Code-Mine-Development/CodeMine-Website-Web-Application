@@ -22,7 +22,6 @@ describe('EmployeeComponent', () => {
     fixture = TestBed.createComponent(EmployeeComponent);
     component = fixture.componentInstance;
     component.person = MockCompany.employees[0];
-    component.currentVisible = {};
     fixture.detectChanges();
   });
 

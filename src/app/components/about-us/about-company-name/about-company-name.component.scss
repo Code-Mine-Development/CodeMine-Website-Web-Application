@@ -1,19 +1,20 @@
 @import "../../../../assets/styles/mediaQueries";
-.row{
-  width:100%;
-  padding-top: 5vh;
-  margin: auto;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
 
-  .col3{
-    width: 30%;
-    p {
-      font-weight: bold;
-    }
-    @media #{$tablet}{
-      width:100%;
-    }
+.container {
+  margin-top: 100px;
+  & > * {
+    max-width: 570px;
+  }
+
+  h1 {
+    margin: 0 0 40px;
+  }
+
+  p {
+    margin: 0 0 20px;
+  }
+
+  @media only screen and (min-width: 1570px) {
+    margin-left: -10%;
   }
 }

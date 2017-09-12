@@ -310,18 +310,18 @@
     "nor": "norsk"
   },
   "ABOUT_US":{
-    "showDescription": "Zobacz Opis",
-    "closeDescription": "Ukryj Opis",
+    "place4U": "Być może to miejsce właśnie dla Ciebie?",
+    "joinUs": "Dołącz do naszego zespołu już dziś!",
+    "name_origin": {
+      "title": "Skąd nazwa?",
+      "description_part1": "Posiadając swoje biuro w samym sercu Katowic, wśród urokliwych kamienic i kopalnianych szybów, czujemy się silnie związani z naszym środowiskiem. Na wzór dawnych kopalni, z naszej branży staramy się wydobywać to, co najlepsze, jednocześnie przyczyniając się do zmieniania naszego regionu w polską dolinę krzemową. Z kolei wytwarzanie wysokiej jakości kodu jest dla naszych deweloperów na wagę złota, czarnego złota.",
+      "description_part2": "Zainspirowani otoczeniem, nie mogliśmy odciąć się od korzeni – wybraliśmy więc nazwę, podkreślającą z jednej strony nasze pochodzenie, a z drugiej – charakter. Tak powstał Code Mine."
+    },
     "approach": {
-      "title": "nasze podejście",
-      "definition": "Definicja",
-      "start": "Duży zespół nie jest miernikiem jakości świadczonych usług – są nim raczej umiejętności, pasja i zaangażowanie. Jako kilkunastoosobowy team pracujący w myśl",
-      "QDD": {
-        "title":"Quality Driven Development",
-        "description":"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore"
-      },
-      "end": "nie boimy się wyzwań, a nasze indywidualne podejście jest doceniane przez wszystkich klientów."
-    }
+      "title": "Nasze podejście",
+      "description": "Duży zespół nie jest miernikiem jakości świadczonych usług – są nim raczej umiejętności, pasja i zaangażowanie. Jako kilkunastoosobowy team pracujący w myśl Quality Driven Development,nie boimy się wyzwań, a nasze indywidualne podejście jest doceniane przez wszystkich klientów."
+    },
+    "aFewPhotos": "Kilka zdjęć z życia naszego biura"
   },
   "PEOPLE": {
     "worksince": "Wydobycie w Code Mine od: ",

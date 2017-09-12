@@ -3,8 +3,8 @@ import {trigger, state, style} from '@angular/animations'
 
 @Component({
   selector: 'app-door',
-  templateUrl: './door.component.html',
-  styleUrls: ['./door.component.scss'],
+  templateUrl: 'door.component.html',
+  styleUrls: ['door.component.scss'],
   animations: [
     trigger('door', [
       state('close', style({

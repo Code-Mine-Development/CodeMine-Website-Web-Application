@@ -1,8 +1,5 @@
-<app-office-model *ngIf='modelVisible && !listVisible' [employees]="employees" [modelNavigate]="modelStatus"></app-office-model>
-<app-employees-list *ngIf='!modelVisible || listVisible' [employees]="employees"></app-employees-list>
-<app-office-nav *ngIf='modelVisible' [modelNavigate]="modelStatus" (modelNavigateChange)="setModelNavigate($event)" [showList]="listVisible" (showListChange)="setListVisible($event)"></app-office-nav>
-
-<div class="skip">
-  <a class="skip-btn" #skip [appScrollTo]='skip' [appLocationOnScreenAfterScrolling]="'top'" ><i class="fa fa-chevron-down" aria-hidden="true"></i></a>
-</div>
-
+<section class="container">
+  <app-person [eventManager]="eventManager"></app-person>
+  <app-office-model [employees]="employees" [eventManager]="eventManager"></app-office-model>
+</section>
+<app-employees-list [employees]="employees" [eventManager]="eventManager"></app-employees-list>

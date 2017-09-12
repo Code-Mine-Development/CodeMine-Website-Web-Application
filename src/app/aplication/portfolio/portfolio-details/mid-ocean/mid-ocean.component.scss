@@ -129,8 +129,12 @@ section {
 
 .YT-Video{
   position: relative;
-  padding-bottom: 56.25%;
-  height:0;
+  &:after{
+    padding-bottom: 56.25%;
+    content: '';
+    display:block;
+    width:100%;
+  }
   iframe {
     position: absolute;
     top: 0;
