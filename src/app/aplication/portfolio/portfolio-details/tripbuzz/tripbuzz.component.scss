@@ -32,6 +32,7 @@
   figure {
     margin: 0;
     width: 100%;
+    box-shadow: 10px 20px 50px rgba(161, 161, 161, .35);
     figcaption {
       display: none;
     }
@@ -74,6 +75,7 @@
     margin-top: 50px;
   }
   width: 100%;
+
   figure {
     margin: 0;
     width: 100%;
@@ -90,7 +92,7 @@
   video {
     margin-top: -100%;
     width: 100%;
-    box-shadow: 15px 25px 100px #777777;
+    box-shadow: -10px 33px 52px -2px rgba(0, 0, 3, .48);
     transform-origin: left bottom;
     transform: translate(26.5%, 1%) rotateZ(-15deg) skew(-330deg) scale(0.37);
   }

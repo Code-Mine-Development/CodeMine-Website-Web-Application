@@ -3,6 +3,7 @@ import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 import { EmployeeComponent } from './employee.component';
 import {TranslateModule} from '@ngx-translate/core';
 import {MockCompany} from '../../../../shared/mocks/company.mock';
+import {EventManager} from '../event_manager';
 
 
 
@@ -22,6 +23,7 @@ describe('EmployeeComponent', () => {
     fixture = TestBed.createComponent(EmployeeComponent);
     component = fixture.componentInstance;
     component.person = MockCompany.employees[0];
+    component.eventManager = new EventManager();
     fixture.detectChanges();
   });
 

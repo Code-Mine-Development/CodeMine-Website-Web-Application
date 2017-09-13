@@ -21,7 +21,7 @@ import {EventManager} from '../../event_manager';
 class BackgroundMockComponent {
 }
 
-fdescribe('DeskComponent', () => {
+describe('DeskComponent', () => {
   let component: DeskComponent;
   let fixture: ComponentFixture<DeskComponent>;
   const eventManager = new EventManager();

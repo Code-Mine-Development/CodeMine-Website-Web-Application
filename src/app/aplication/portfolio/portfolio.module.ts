@@ -14,6 +14,7 @@ import { MidOceanComponent } from './portfolio-details/mid-ocean/mid-ocean.compo
 import { TandartsComponent } from './portfolio-details/tandarts/tandarts.component';
 import { TripbuzzComponent } from './portfolio-details/tripbuzz/tripbuzz.component';
 import { TelecomComponent } from './portfolio-details/telecom/telecom.component';
+import { ZorgindicatorComponent } from './portfolio-details/zorgindicator/zorgindicator.component';
 
 
 
@@ -25,7 +26,8 @@ import { TelecomComponent } from './portfolio-details/telecom/telecom.component'
         MidOceanComponent,
         TandartsComponent,
         TripbuzzComponent,
-        TelecomComponent
+        TelecomComponent,
+        ZorgindicatorComponent
     ],
     imports: [
         CommonModule,

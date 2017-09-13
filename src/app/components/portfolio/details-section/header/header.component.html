@@ -1,7 +1,7 @@
 <header>
   <div class="title">
     <h1>{{title | translate}}</h1>
-    <figure>
+    <figure *ngIf="logo">
       <img [src]="logo" alt="project logo">
       <figcaption>{{title | translate}}</figcaption>
     </figure>

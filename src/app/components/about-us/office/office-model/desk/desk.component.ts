@@ -72,8 +72,8 @@ export class DeskComponent implements OnInit {
   }
 
   animateMoveCenter() {
-    const parentWidth = this.elementRef.nativeElement.offsetParent.offsetWidth,
-      parentHeight = this.elementRef.nativeElement.offsetParent.offsetHeight,
+    const parentWidth = this.elementRef.nativeElement.offsetParent ? this.elementRef.nativeElement.offsetParent.offsetWidth : 0,
+      parentHeight = this.elementRef.nativeElement.offsetParent ? this.elementRef.nativeElement.offsetParent.offsetHeight : 0,
       top = (parentHeight / 2) - this.elementRef.nativeElement.offsetTop - (this.elementRef.nativeElement.offsetHeight / 2),
       left = (parentWidth / 2) - this.elementRef.nativeElement.offsetLeft - (this.elementRef.nativeElement.offsetWidth / 2),
       right = (this.elementRef.nativeElement.offsetLeft + this.elementRef.nativeElement.offsetWidth) - (parentWidth / 2),

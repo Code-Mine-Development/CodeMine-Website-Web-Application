@@ -1,0 +1,38 @@
+<section class="container">
+  <app-portfolio-details-header [title]="detail.title" [description]="'PORTFOLIO.ZorgIndicator.description.part1'"></app-portfolio-details-header>
+  <figure class="home-image">
+    <figcaption>Home image</figcaption>
+    <img src="assets/images/portfolio-images/zorgIndicator-1.png" alt="home Image">
+  </figure>
+  <article class="text_content">
+    <h3>{{"PORTFOLIO.sectionTitles.ourRole" | translate}}</h3>
+    <p>
+      <span>{{"PORTFOLIO.ZorgIndicator.description.part4" | translate}}</span>
+      <span>{{"PORTFOLIO.ZorgIndicator.description.part5" | translate}}</span>
+    </p>
+  </article>
+</section>
+
+<section class="site-presentation">
+  <figure>
+    <figcaption>Presentation ZorgIndicator site</figcaption>
+    <img src="assets/images/portfolio-images/zorgIndicator-2.png" alt="ZorgIndicator site presentation">
+    <video autoplay loop src="assets/videos/portfolio-details/ZorgIndicator_video.mov" poster="assets/images/portfolio-images/zorgIndicator.mov.png"></video>
+  </figure>
+</section>
+
+<section class="container">
+  <article class="text_content">
+    <h3>{{"PORTFOLIO.sectionTitles.businessModel" | translate}}</h3>
+    <p>
+      <span>{{"PORTFOLIO.ZorgIndicator.description.part2" | translate}}</span>
+      <span>{{"PORTFOLIO.ZorgIndicator.description.part3" | translate}}</span>
+    </p>
+  </article>
+  <figure class="last_image">
+    <figcaption>ZorgIndicator site screen</figcaption>
+    <img src="assets/images/portfolio-images/zorgIndicator-3.png" alt="ZorgIndicator screen">
+  </figure>
+  <app-architecture [currentTechnologies]="detail.technologies" [currentTools]="detail.tools"
+                    [technologies]="technologies" [tools]="tools" (navigate)="navigate($event)"></app-architecture>
+</section>
