@@ -11,6 +11,7 @@ import {MidOceanComponent} from './portfolio-details/mid-ocean/mid-ocean.compone
 import {TandartsComponent} from './portfolio-details/tandarts/tandarts.component';
 import {TripbuzzComponent} from './portfolio-details/tripbuzz/tripbuzz.component';
 import {TelecomComponent} from './portfolio-details/telecom/telecom.component';
+import {ZorgindicatorComponent} from './portfolio-details/zorgindicator/zorgindicator.component';
 
 const portfolioRoutes: Routes = [
   {
@@ -28,7 +29,7 @@ const portfolioRoutes: Routes = [
           portfolio: PortfolioResolver,
           tools: ToolsResolver,
           technologies: TechnologiesResolver
-        },
+        }
       },
       {
         path: 'tandarts', component: TandartsComponent,
@@ -36,7 +37,7 @@ const portfolioRoutes: Routes = [
           portfolio: PortfolioResolver,
           tools: ToolsResolver,
           technologies: TechnologiesResolver
-        },
+        }
       },
       {
         path: 'tripbuzz', component: TripbuzzComponent,
@@ -44,7 +45,7 @@ const portfolioRoutes: Routes = [
           portfolio: PortfolioResolver,
           tools: ToolsResolver,
           technologies: TechnologiesResolver
-        },
+        }
       },
       {
         path: 'e-comerce-for-telecom', component: TelecomComponent,
@@ -52,7 +53,15 @@ const portfolioRoutes: Routes = [
           portfolio: PortfolioResolver,
           tools: ToolsResolver,
           technologies: TechnologiesResolver
-        },
+        }
+      },
+      {
+        path: 'zorgindicator', component: ZorgindicatorComponent,
+        resolve: {
+          portfolio: PortfolioResolver,
+          tools: ToolsResolver,
+          technologies: TechnologiesResolver
+        }
       }
     ]
   },
@@ -62,8 +71,8 @@ const portfolioRoutes: Routes = [
 @NgModule({
   imports: [
     TranslateModule,
-    LocalizeRouterModule.forChild(portfolioRoutes),
-    RouterModule.forChild(portfolioRoutes)
+    RouterModule.forChild(portfolioRoutes),
+    LocalizeRouterModule.forChild(portfolioRoutes)
   ],
   exports: [RouterModule]
 })

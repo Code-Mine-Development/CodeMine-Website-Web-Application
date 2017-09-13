@@ -14,8 +14,8 @@ export class TestComponent implements OnInit {
 
   private elementList = [];
   private currentFrame = 0;
-  private videoFrames = 300;
-  private videoDuration = 5000;
+  private videoFrames = 1800;
+  private videoDuration = 30000;
 
   constructor(private renderer: Renderer2) {
   }
@@ -49,18 +49,20 @@ export class TestComponent implements OnInit {
 
   generateVideo() {
     for (let i = 0; i < this.videoFrames; i++) {
-      this.createFrame('assets/testImages/midocean_1004' + this.parseId(i) + '.png')
+      this.createFrame('assets/testImages/codemine_anim_testLQ_0' + this.parseId(i) + '.png')
     }
   }
 
   parseId(index: number) {
     let id;
     if (index < 10) {
-      id = '00' + index
+      id = '000' + index
     } else if (index < 100) {
-      id = '0' + index;
+      id = '00' + index;
     } else if (index < 1000) {
-      id = index;
+      id = '0' + index;
+    } else if (index < 10000) {
+      id = index
     }
     return id;
   }

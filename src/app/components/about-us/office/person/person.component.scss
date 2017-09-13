@@ -35,10 +35,12 @@
   transform-origin: 50% 50%;
   transform: translate(-50%, -50%) scale(0.3);
   box-sizing: border-box;
-
   @media #{$phone} {
     overflow-y: scroll;
     background: $desk;
+    left:0;
+    top:0;
+    transform: scale(0.3);
   }
   #personWrapper {
     background: $desk;
@@ -138,5 +140,10 @@
     transform: translate(-50%, -50%) scale(1);
     margin: 0 auto;
     left: 50%;
+    @media #{$phone} {
+      transform: scale(1);
+      left:0;
+      min-height: 100vh;
+    }
   }
 }

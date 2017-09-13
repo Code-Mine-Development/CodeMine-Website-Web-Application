@@ -1,0 +1,80 @@
+@import "../../../../../assets/styles/mediaQueries";
+
+:host{
+  font-weight: 500;
+}
+
+.container, .site-presentation {
+  & > * {
+    margin-top: 100px;
+    @media #{$phone}{
+      margin-top: 50px;
+    }
+  }
+}
+
+app-architecture {
+  margin-bottom: 100px;
+  @media #{$phone}{
+    margin-bottom: 50px;
+  }
+}
+
+
+.home-image, .last_image {
+  margin: 0;
+  width: 100%;
+  figcaption {
+    display: none;
+  }
+  img {
+    width: 100%;
+    box-shadow: 10px 20px 50px rgba(161, 161, 161, .35);
+  }
+}
+
+.text_content {
+  h3 {
+    margin: 0 0 20px;
+  }
+  p {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    span {
+      width: 45%;
+      max-width: 570px;
+      @media #{$phone} {
+        width: 100%;
+      }
+      @media #{$tablet-media} {
+        &:last-child{
+          margin-top: 20px;
+        }
+      }
+    }
+  }
+}
+
+.site-presentation {
+  width: 100%;
+  background: #f17052;
+  figure {
+    width: 100%;
+    padding-bottom: 5%;
+    figcaption {
+      display: none;
+    }
+    img {
+      width: 100%;
+      transform: translateX(-5%) scale(1.3);
+    }
+    video {
+      width: 37%;
+      position: relative;
+      margin-top: -100%;
+      transform: translate(32.5%, -16%) rotateZ(-15deg) skew(-330deg);
+      box-shadow: -10px 33px 52px -2px rgba(0, 0, 3, .48);
+    }
+  }
+}

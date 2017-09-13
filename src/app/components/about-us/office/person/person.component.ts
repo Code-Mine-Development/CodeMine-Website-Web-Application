@@ -31,7 +31,6 @@ export class PersonComponent implements OnInit {
   showPerson(person: Employees) {
     this.visibleElement = person;
     this.visible = !!person;
-    console.log('Object Visible ', !!person)
   }
 
   closeButtonClicked() {

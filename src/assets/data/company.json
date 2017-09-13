@@ -8,21 +8,15 @@
   "employees": [
     {
       "name": "Przemek",
-      "surname": "Adamiec",
       "position": "COO",
       "description": "PEOPLE.przemyslaw.description",
-      "since": 5,
       "deskCoordinate": {
         "top": 20.95,
         "left": 52.9769,
         "variant": 1,
         "hide": [
           "leftBottom"
-        ],
-        "centerCoordinate":{
-          "left": 0,
-          "top": 0
-        }
+        ]
       },
       "image":{
         "normal":"_V3B0425.jpg",
@@ -33,7 +27,6 @@
       "name": "Adam",
       "position": "Frontend developer",
       "description": "PEOPLE.adamn.description",
-      "since": 2,
       "image":{
         "normal":"_V3B9900.jpg",
         "funny":"_V3B9910.jpg"
@@ -44,18 +37,13 @@
         "variant": 1,
         "hide": [
           "leftBottom"
-        ],
-        "centerCoordinate":{
-          "left": 0,
-          "top": 0
-        }
+        ]
       }
     },
     {
       "name": "Asia",
       "position": "Frontend developer",
       "description": "PEOPLE.joannaK.description",
-      "since": 1,
       "image":{
         "normal":"_V3B0055.jpg",
         "funny":"_V3B0069.jpg"
@@ -67,19 +55,13 @@
         "hide": [
           "leftBottom",
           "topFull"
-        ],
-        "centerCoordinate":{
-          "left": 0,
-          "top": 0
-        }
+        ]
       }
     },
     {
       "name": "Michał",
-      "surname": "Nicz ",
       "position": "CSO",
       "description": "PEOPLE.michal.description",
-      "since": 4,
       "image":{
         "normal":"_V3B0322.jpg",
         "funny":"_V3B0451.jpg"
@@ -87,19 +69,13 @@
       "deskCoordinate": {
         "top": 31,
         "left": 66.25,
-        "variant": 1,
-        "centerCoordinate":{
-          "left": 0,
-          "top": 0
-        }
+        "variant": 1
       }
     },
     {
       "name": "Marta",
-      "surname": "Zygmunt",
       "position": "Tester",
       "description": "PEOPLE.marta.description",
-      "since": 1,
       "image":{
         "normal":"_V3B9965.jpg",
         "funny":"_V3B9982.jpg"
@@ -110,19 +86,13 @@
         "variant": 1,
         "hide": [
           "leftBottom"
-        ],
-        "centerCoordinate":{
-          "left": 0,
-          "top": 0
-        }
+        ]
       }
     },
     {
       "name": "Radek",
-      "surname": "Adamiec",
       "position": "CEO",
       "description": "PEOPLE.radoslaw.description",
-      "since": 5,
       "image":{
         "normal":"_V3B0411.jpg",
         "funny":"_V3B0408.jpg"
@@ -134,19 +104,13 @@
         "hide": [
           "leftBottom",
           "topFull"
-        ],
-        "centerCoordinate":{
-          "left": 0,
-          "top": 0
-        }
+        ]
       }
     },
     {
       "name": "Adam",
-      "surname": "Grabek",
       "position": "CTO",
       "description": "PEOPLE.adamg.description",
-      "since": 5,
       "image":{
         "normal":"_V3B0433.jpg",
         "funny":"_V3B9999.jpg"
@@ -157,16 +121,11 @@
         "variant": 2,
         "hide": [
           "rightBottom"
-        ],
-        "centerCoordinate":{
-          "left": 0,
-          "top": 0
-        }
+        ]
       }
     },
     {
       "name": "Tomek",
-      "surname": "Osadnik",
       "position": "CFO",
       "description": "PEOPLE.tomasz.description",
       "since": 4,
@@ -180,19 +139,13 @@
         "hide": [
           "leftBottom"
         ],
-        "variant": 2,
-        "centerCoordinate":{
-          "left": 0,
-          "top": 0
-        }
+        "variant": 2
       }
     },
     {
       "name": "Adrian",
-      "surname": "Moroń",
       "position": "Backend developer",
       "description": "PEOPLE.adrian.description",
-      "since": 2,
       "image":{
         "normal":"_V3B0159.jpg",
         "funny":"_V3B0173.jpg"
@@ -204,18 +157,13 @@
         "hide": [
           "rightBottom",
           "leftFull"
-        ],
-        "centerCoordinate":{
-          "left": 0,
-          "top": 0
-        }
+        ]
       }
     },
     {
       "name": "Piotrek",
       "position": "Backend developer",
       "description": "PEOPLE.piotr.description",
-      "since": 1,
       "image":{
         "normal":"_V3B0360.jpg",
         "funny":"_V3B0376.jpg"
@@ -232,10 +180,8 @@
     },
     {
       "name": "Kamil",
-      "surname": "Zając",
       "position": "Frontend developer",
       "description": "PEOPLE.kamil.description",
-      "since": 1,
       "image":{
         "normal":"_V3B0197.jpg",
         "funny":"_V3B0204.jpg"
@@ -247,19 +193,13 @@
         "hide":[
           "rightBottom",
           "leftFull"
-        ],
-        "centerCoordinate":{
-          "left": 0,
-          "top": 0
-        }
+        ]
       }
     },
     {
       "name": "Mateusz",
-      "surname": "Wit",
       "position": "Frontend developer",
       "description": "PEOPLE.mateusz.description",
-      "since": 1,
       "image":{
         "normal":"_V3B0309.jpg",
         "funny":"_V3B0316.jpg"
@@ -267,19 +207,13 @@
       "deskCoordinate": {
         "top": 45.9,
         "left": 48.65,
-        "variant": 2,
-        "centerCoordinate":{
-          "left": 0,
-          "top": 0
-        }
+        "variant": 2
       }
     },
     {
       "name": "Wojtek",
-      "surname": "Malinowski",
       "position": "UX/UI Designer",
       "description": "PEOPLE.wojciech.description",
-      "since": 1,
       "image":{
         "normal":"_V3B0143.jpg",
         "funny":"_V3B0392.jpg"
@@ -290,19 +224,13 @@
         "hide": [
           "rightTop"
         ],
-        "variant": 1,
-        "centerCoordinate":{
-          "left": 0,
-          "top": 0
-        }
+        "variant": 1
       }
     },
     {
       "name": "Asia",
-      "surname": "Rodo",
       "position": "UX/UI Designer",
       "description": "PEOPLE.joannar.description",
-      "since": 1,
       "image":{
         "normal":"_V3B0017.jpg",
         "funny":"_V3B0042.jpg"
@@ -310,11 +238,7 @@
       "deskCoordinate": {
         "top": 68,
         "left": 18.7,
-        "variant": 2,
-        "centerCoordinate":{
-          "left": 0,
-          "top": 0
-        }
+        "variant": 2
       }
     }
   ]

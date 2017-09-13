@@ -3,7 +3,7 @@
     <button (click)="closeButtonClicked()" ><img src="assets/images/arrows/x.svg"></button>
     <div class="bg" *ngIf="visibleElement?.image" [ngStyle]="{'background-image': 'url(./assets/images/people/'+visibleElement?.image?.normal+'), url(./assets/images/people/'+visibleElement?.image?.funny+')'}"></div>
     <div class="desc">
-      <h2>{{visibleElement?.name}} {{visibleElement?.surname}}</h2>
+      <h2>{{visibleElement?.name}}</h2>
       <h3>{{visibleElement?.position}}</h3>
       <hr>
       <p>{{visibleElement?.description | translate}}</p>

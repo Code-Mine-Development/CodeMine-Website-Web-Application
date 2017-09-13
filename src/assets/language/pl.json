@@ -16,26 +16,26 @@
       "benefit_4": "Ocena poziomu elastyczności narażonego na modyfikacje kodu, pozwalająca podjąć decyzję o jego zwiększeniu, przyczyniającego się z kolei do oszczędzenia czasu i pieniędzy",
       "benefit_5": "Ocena wielkości nakładu zasobów ludzkich i czasowych, niezbędnych do wykonania projektu, pozwalająca określić realia otrzymanej od wykonawcy wyceny"
     },
-    "usability":{
+    "usability": {
       "title": "Użyteczność",
-      "description":"Audyt usability ma na celu kompleksową analizę użyteczności i funkcjonalności strony internetowej, aplikacji czy systemu. Podczas tego procesu sprawdzamy przede wszystkim intuicyjność strony, łatwość poruszania po niej, przydatność dla internautów i ogólne wrażenia związane z korzystania z usługi. Bierzemy pod uwagę wszystkie czynniki mające wpływ na użyteczność takie jak: architektura informacji, nawigacja, strukturę funkcjonalności dodatkowo sprawdzamy wszystkie ekrany oraz procesy myślowe. Stosujemy najlepsze techniki w zależności od rodzaju powierzonego problemu takie jak: Indywidualne wywiady pogłębione, Card Sorting, Paper prototyping, Eyetracking,",
-      "task_1":"Badanie zgodności z heurystykami",
-      "task_2":"Badanie efektywności wdrożonych scenariuszy użycia",
-      "task_3":"Badanie zgodności ze standardami UI",
+      "description": "Audyt usability ma na celu kompleksową analizę użyteczności i funkcjonalności strony internetowej, aplikacji czy systemu. Podczas tego procesu sprawdzamy przede wszystkim intuicyjność strony, łatwość poruszania po niej, przydatność dla internautów i ogólne wrażenia związane z korzystania z usługi. Bierzemy pod uwagę wszystkie czynniki mające wpływ na użyteczność takie jak: architektura informacji, nawigacja, strukturę funkcjonalności dodatkowo sprawdzamy wszystkie ekrany oraz procesy myślowe. Stosujemy najlepsze techniki w zależności od rodzaju powierzonego problemu takie jak: Indywidualne wywiady pogłębione, Card Sorting, Paper prototyping, Eyetracking,",
+      "task_1": "Badanie zgodności z heurystykami",
+      "task_2": "Badanie efektywności wdrożonych scenariuszy użycia",
+      "task_3": "Badanie zgodności ze standardami UI",
       "benefit_1": "Ocena zgodności aplikacji/ strony z przyjętymi norami, opatrzona opisami heurystyk",
       "benefit_2": "Ocena architektury informacji pod kątem intuicyjności wykonywanych czynności",
       "benefit_3": "Ocena wydajności kanałów komunikacji (web/ mobile) oraz zgodności interfejsów z wytycznymi dla danej platformy"
     }
   },
-  "HOME":{
-    "motto":{
-        "title":"Wydobywany z pasją w samym sercu Śląska,",
-        "subtitle":"Quality Driven Development"
+  "HOME": {
+    "motto": {
+      "title": "Wydobywany z pasją w samym sercu Śląska,",
+      "subtitle": "Quality Driven Development"
     },
-    "howWeWork":{
-        "title":"Jak pracujemy?",
-        "shortCut": "Jak pracujemy?",
-        "description": "Gwarantem skuteczności proponowanych przez nas rozwiązań, jest niezmienny proces ich realizacji, składający się z kilku poszczególnych etapów, zaprezentowanych poniżej."
+    "howWeWork": {
+      "title": "Jak pracujemy?",
+      "shortCut": "Jak pracujemy?",
+      "description": "Gwarantem skuteczności proponowanych przez nas rozwiązań, jest niezmienny proces ich realizacji, składający się z kilku poszczególnych etapów, zaprezentowanych poniżej."
     },
     "hireUs": {
       "title": "Hire us",
@@ -43,52 +43,52 @@
       "description": "Przejdź do kontaktu lub wypełnij krótki formularz odpowiadając na kilka pytań dotyczących Twojego pomysłu na projekt.",
       "buttonText": "Przejdź do briefu"
     },
-    "language":{
+    "language": {
       "title": "Tworzymy jednolity język komunikacji",
       "shortCut": "Język komunikacji",
       "description": "W celu zapewnienia efektywnej komunikacji, punktem wyjścia każdego realizowanego przez nas projektu jest stworzenie kompletnego słownika pojęć typowych dla obszaru biznesowego, w jakim porusza się nasz klient."
     },
-    "knowledge":{
+    "knowledge": {
       "title": "Zdobywamy wiedzę biznesową",
       "shortCut": "Wiedza biznesowa",
       "description": "Uważamy, że zrozumienie branży to podstawa, dlatego kolejnym etapem jest wyczerpująca rozmowa z klientem, pozwalająca nam na wyodrębnienie najistotniejszych elementów, zachowań i modeli, potrzebnych do stworzenia nowego systemu."
     },
-    "logic":{
+    "logic": {
       "title": "Tworzymy logikę biznesową",
       "shortCut": "Logika biznesowa",
       "description": "Po przemyśleniu i zaprojektowaniu modeli działania, następnym krokiem jest przystąpienie do ich programowania. Warto podkreślić, że nasze koncepty testujemy tylko i wyłącznie na prawdziwym kodzie."
     },
-    "specification":{
+    "specification": {
       "title": "Tworzymy szczegółową specyfikację projektu",
       "shortCut": "Specyfikacja",
       "description": "Posiadawszy wymaganą wiedzę, zagłębiamy się w projekt, tworząc jego szczegółową specyfikację. Zakłada ona głównie opracowanie ścieżek użytkownika i modelowanie jego zachowań, opisanie działania poszczególnych komponentów systemu oraz stworzenie poglądowych diagramów.",
       "shortDescription": "Zagłębiamy się w projekt, tworząc jego specyfikację. Zakłada ona głównie opracowanie ścieżek użytkownika i modelowanie jego zachowań, opisanie działania poszczególnych komponentów systemu oraz stworzenie poglądowych diagramów."
     },
-    "UX":{
+    "UX": {
       "title": "Rysujemy makiety UX",
       "shortCut": "Rysujemy UX",
       "description": "Specyfikacja projektu jest podstawą do stworzenia przez nas interaktywnego prototypu interfejsu. Korzystając z posiadanej wiedzy o User Experience, oraz zgromadzonych pojęć dotyczących procesów biznesowych charakterystycznych dla branży klienta, dopracowujemy hierarchie działań i informacji systemu, kładąc nacisk przede wszystkim na wygodę użytkowników (Task Driven UI).",
       "shortDescription": "Korzystając z posiadanej wiedzy o User Experience, oraz zgromadzonych pojęć dotyczących procesów biznesowych charakterystycznych dla branży klienta, dopracowujemy hierarchie działań i informacji systemu, kładąc nacisk przede wszystkim na wygodę użytkowników."
     },
-    "UI":{
+    "UI": {
       "title": "Tworzymy designy",
       "shortCut": "Design",
       "description": "Po pracach nad funkcjonalnościami systemu nadchodzi czas na projektowanie jego warstwy wizualnej. Zawsze dbamy o to, by nasze designy z jednej strony ściśle korespondowały z wartościami marki klienta, a z drugiej – wpisywały w aktualne trendy."
     },
-    "implementation":{
+    "implementation": {
       "title": "Implementujemy",
       "shortCut": "Implementacja",
       "description": "Następnym etapem projektu jest implementacja zaprogramowanego interfejsu użytkownika, a więc integracja wcześniej napisanego kodu logiki biznesowej z warstwą aplikacyjną oprogramowania. Tak przygotowany system przechodzi szereg testów, mających potwierdzić jego zgodność z początkowymi założeniami.",
       "shortDescription": "Następnym etapem projektu jest integracja wcześniej napisanego kodu logiki biznesowej z warstwą aplikacyjną oprogramowania. Tak przygotowany system przechodzi szereg testów, mających potwierdzić jego zgodność z początkowymi założeniami.",
       "message": "Sprawdź ofertę"
     },
-    "secondImplementation":{
+    "secondImplementation": {
       "title": "Wdrażamy",
       "shortCut": "Wdrażanie",
       "description": "Po pozytywnym przejściu wszystkich testów, software zostaje uruchomiony, a my przechodzimy do szkolenia klienta z zakresu jego funkcjonowania, przekazując tym samym wcześniej skompletowaną, szczegółową dokumentację.",
       "message": "Sprawdź realizację"
     },
-    "support":{
+    "support": {
       "title": "Wspieramy",
       "shortCut": "Wsparcie",
       "description": "„Go live” systemu nie oznacza końca współpracy. Po oddaniu projektu zapewniamy naszym klientom wsparcie, obejmujące między innymi kwestie związane z drobnymi zmianami, modernizacją oprogramowania czy fachowym doradztwem w jego potencjalnych kierunkach rozwoju.",
@@ -96,60 +96,60 @@
       "message": "Poznaj nasz zespół"
     }
   },
-  "OFFER":{
-    "features":{
+  "OFFER": {
+    "features": {
       "title": "We create",
-      "solutionToBusines":{
+      "solutionToBusines": {
         "title": "Solutions to your business problems",
         "description": "Rozwiązania problemów nie zawsze są oczywiste – z tego względu pomożemy Ci znaleźć złoty środek, pomagający usprawnić procesy i polepszyć wydajność w Twojej firmie."
       },
-      "internalApps":{
+      "internalApps": {
         "title": "Internal Apps",
         "description": "Oferujemy wydajne i responsywne, zaawansowane aplikacje dla Twojej firmy, oparte na najnowszych technologiach i możliwe do integracji z systemami enterprise."
       },
-      "B2Capplications":{
+      "B2Capplications": {
         "title": "B2C Applications",
         "description": "Zaprojektujemy nowoczesne systemy aplikacji internetowych dla Twoich klientów, które możemy także zintegrować z mediami społecznościowymi czy systemami płatności."
       },
-      "socialNetworking":{
+      "socialNetworking": {
         "title": "Social Networking",
         "description": "Sieci społecznościowe to dla nas nie problem – posiadamy doświadczenie zarówno w ich budowaniu, jak i rozwiązywaniu towarzyszących im problemów."
       },
-      "TVApps":{
+      "TVApps": {
         "title": "TV Apps",
         "description": "Jeśli masz pomysł na aplikację dla Apple TV - zgłoś się do nas! Jesteśmy otwarci na wyzwania i przeanalizujemy każdą Twoją koncepcję."
       },
-      "desktopApplications":{
+      "desktopApplications": {
         "title": "Desktop Applications",
         "description": "Projektujemy aplikacje desktopowe dla systemów Windows, Linux i MacOS X, charakteryzujące się wysokim stopniem kompatybilności, stabilności oraz bezpieczeństwa."
       },
-      "mobileApps":{
+      "mobileApps": {
         "title": "Mobile Apps",
         "description": "Tworzymy aplikacje mobilne dedykowane systemom iOS oraz Android, dostosowane z jednej strony do Twoich wymagań, a z drugiej – do aktualnych trendów."
       },
-      "openForNew":{
+      "openForNew": {
         "title": "?",
         "description": "Jesteśmy otwarci na nowe wyzwania"
       }
     },
-    "technologies":{
+    "technologies": {
       "title": "Technologie"
     },
-    "languages":{
+    "languages": {
       "title": "Języki"
     },
-    "architecture":{
+    "architecture": {
       "title": "Architektura"
     }
   },
-  "COMPANY":{
+  "COMPANY": {
     "adressTitle": "Skontaktuj się z nami!",
     "showOnMap": "zobacz na mapie",
     "hireUs": "Hire us!",
     "describeUsYourProject": "Opisz nam swój pomysł, formularz pomoże ci sprecyzować czego będzie on dotyczył",
     "navigateToBrief": "Przejdź do briefu"
   },
-  "PORTFOLIO":{
+  "PORTFOLIO": {
     "addProjectTitle": "Dodaj swój projekt",
     "addProjectButton": "do formularza",
     "checkPortfolio": "sprawdź nasze portfolio",
@@ -166,11 +166,12 @@
       "build": "Budowa",
       "postsBooking": "Rezerwacja postów",
       "ourRole": "Nasze zadanie",
-      "workingScheme": "Schemat działania aplikacji"
+      "workingScheme": "Schemat działania aplikacji",
+      "businessModel": "Model biznesowy"
     },
-    "BrighterVision":{
+    "BrighterVision": {
       "title": "Brigter Vision Growth Platform",
-      "subTitle":"Aplikacja dla amerykańskich terapeutów",
+      "subTitle": "Aplikacja dla amerykańskich terapeutów",
       "shortDescription": "Aplikacja skierowana do amerykańskich terapeutów, pozwalająca na przeglądanie puli dostępnych postów oraz ich publikację w formie bloga.",
       "description": {
         "part1": "Brighter Vision Growth Platform jest odpowiedzią na zjawisko braku czasu poświęconego na marketing – jak chociażby prowadzenie bloga, zauważalnego wśród amerykańskich terapeutów, którzy całą swoją energię przeznaczają na zarządzanie własną praktyką, dbając o każdy, nawet najmniejszy szczegół.",
@@ -186,11 +187,11 @@
         "part7": "Z kolei napisana przy użyciu AngularJS, aplikacja kliencka przyjmuje formę panelu administracyjnego, wykorzystującego komunikację REST API, dostarczaną przez wcześniej wspomnianą, aplikacja serwerową."
       }
     },
-    "telecom":{
+    "telecom": {
       "title": "E-commerce dla telecomu",
-      "subTitle":"Platforma e-commerce dla wiodących operatorów telekomunikacyjnych w Europie",
+      "subTitle": "Platforma e-commerce dla wiodących operatorów telekomunikacyjnych w Europie",
       "shortDescription": "Samodzielne moduły oprogramowania przyczyniające się do stworzenia nowoczesnej platformy e-commerce dla wiodących operatorów telekomunikacyjnych w Europie.",
-      "description":{
+      "description": {
         "part1": "Od początku 2017 roku współpracujemy z dostawcą oprogramowania, rozpowszechniającego swoje rozwiązania wśród wielu wiodących firm z branży telekomunikacyjnej na rynku niemieckim, holenderskim, indyjskim oraz tureckim.",
         "postBooking": "Rezerwacja postów",
         "part2": "Udostępniając czterech działających autonomicznie pracowników, naszym zadaniem jest dostarczanie klientowi samodzielnych modułów oprogramowania, finalnie przekazywanych zewnętrznym zespołom. Z tego względu, na każdym kroku czeka na nas sporo wyzwań, z których głównymi są:",
@@ -202,19 +203,18 @@
         "part8": "Rozwiązanie to jest szczególnie istotne z perspektywy operatorów, którzy kupując inną firmę, nie są w stanie łatwo połączyć wielu baz z systemami rozpoznawania dostępności usług we wskazanych adresach czy katalogami produktów."
       }
     },
-    "exchange":{
+    "exchange": {
       "title": "Internetowy system wymiany walut",
-      "subTitle":"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+      "subTitle": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
       "shortDescription": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-      "description":{
-
+      "description": {
       }
     },
-    "MDLinking":{
+    "MDLinking": {
       "title": "MDLinking",
-      "subTitle":"Sieć społecznościowa dla lekarzy z całego świata",
+      "subTitle": "Sieć społecznościowa dla lekarzy z całego świata",
       "shortDescription": "Sieć społecznościowa umożliwiająca prywatną komunikację lekarzy z całego świata i przyczyniająca się do polepszania jakości opieki medycznej.",
-      "description":{
+      "description": {
         "part1": "MDLinking to platforma umożliwiająca prywatną komunikację między lekarzami z całego świata, przyczyniając się do polepszania jakości opieki medycznej. Serwis pozwala na wzajemną konsultację i dzielenie się wiedzą wśród specjalistów w zamkniętym i bezpiecznym środowisku, a utworzone profile użytkowników funkcjonują ponadto jako wizytówki/ CV dla potencjalnych pracodawców.",
         "web": "Sieć powiązań",
         "part2": "Celem ułatwienia użytkownikom serwisu odnajdywania znajomych z branży oraz wchodzenia z nimi w relacje, stworzyliśmy inteligentny system rekomendacji potencjalnych kontaktów, który na drodze określenia stopnia prawdopodobieństwa znajomości, bierze pod uwagę czynniki takie jak historia zawodowa, miejsce pracy i zamieszkania czy zainteresowania.",
@@ -234,11 +234,11 @@
         "part10": "W trakcie prac, wraz z biegiem czasu i rozwojem platformy, jej oryginalny model znacznie ewoluował. Wyróżnialiśmy coraz to nowsze odpowiedzialności i zachowania, upraszczając tym samym istniejące, co tylko dowodzi złożoności projektu."
       }
     },
-    "MidOceanBrands":{
+    "MidOceanBrands": {
       "title": "Mid Ocean Brands Reporting System",
-      "subTitle":"Planowanie wydajnej produkcji",
+      "subTitle": "Planowanie wydajnej produkcji",
       "shortDescription": "Kompleksowe narzędzie służące do planowania wydajności produkcji dla firmy zajmującej się wykonywaniem nadruków graficzne na różnego rodzaju gadżetach.",
-      "description":{
+      "description": {
         "part1": "Zarządzanie procesem produkcyjnym na dużą skalę jest zadaniem nie tylko pracochłonnym, ale też wysoce skomplikowanym, szczególnie, kiedy głównym używanym narzędziem staje się Microsoft Excel. Tak było w przypadku Mid Ocean Brands – firmy zajmującej się profesjonalnym nadrukiem materiałów graficznych na różnorakich gadżetach, która obecnie może już cieszyć się lepszym, zaproponowanym przez nas rozwiązaniem.",
         "part2": "W zastępstwie dla dokumentów excelowych, dla naszego klienta stworzyliśmy narzędzie pozwalające zaplanować wydajność produkcji na określony czas, a także przedstawiające istotne dane w formie wykresów i raportów. Tym sposobem, rozproszone w wielu arkuszach kalkulacyjnych dane, aktualnie znajdują się w jednym miejscu, wyróżniając się przy tym przyjaznym interfejsem.",
         "part3": "Pierwszym etapem prac było otrzymanie od klienta kilku przykładowych plików, wyeksportowanych z używanego przez niego, oprogramowania SAP. Na ich podstawie, przystąpiliśmy do projektowania głównej funkcjonalności aplikacji, umożliwiającej importowanie danych z plików zawierających nie tylko różną strukturę danych, ale również odmienne formatowanie.",
@@ -247,46 +247,47 @@
         "part6": "Aplikacja stosowana jest przede wszystkim w celu wprowadzania danych oraz planowania produkcji przez administratora, niemniej jednak, jej przeznaczenie obejmuje także halę produkcyjną, gdzie w czasie rzeczywistym na ekranach prezentuje ona aktualny stan produkcji oraz plan zamówień na najbliższe dni."
       }
     },
-    "SmartHome":{
+    "SmartHome": {
       "title": "System zarządzania inteligentnymi domami",
-      "subTitle":"System dostosowany do nowych wymagań technologicznych",
+      "subTitle": "System dostosowany do nowych wymagań technologicznych",
       "shortDescription": "System do zarządzania inteligentnymi domami, konieczny do dostosowania do nowych wymagań technologicznych.",
-      "description":{
+      "description": {
         "part1": "W 2016 roku mieliśmy okazję współtworzyć oprogramowanie do zarządzania inteligentnymi domami dla naszego norweskiego klienta, będącego jednym z wiodących dostawców tego typu rozwiązań na swoim rynku. Po fuzji, w jaką wszedł on wraz z drugą największą firmą z tej samej branży, niezbędne okazało się dostosowanie istniejącego oprogramowania do komunikacji z urządzeniami obsługującymi protokół ZigBee.",
         "part2": "Poza przystosowaniem systemów zarządzania do nowych możliwości, oferowanych przez urządzenia działające w systemie ZigBee, do naszych głównych zadań należały bieżąca kontrola kodu źródłowego oraz zapewnienie wstecznej kompatybilności dla istniejących klientów. Do zadań projektowych używaliśmy zwłaszcza frameworku Symfony 2, Redis’a oraz bazy PostgreSQL.",
         "part3": "Po skutecznym procesie adaptacji, z przyjemnością przekazaliśmy oprogramowanie w ręce programistów ze strony naszego klienta, którzy mogli zająć się rozwijaniem systemu na miejscu, mając bezpośredni dostęp do wszystkich urządzeń i klientów."
       }
     },
-    "Tandarts":{
+    "Tandarts": {
       "title": "Tandarts.com",
-      "subTitle":"Aplikacja zrzeszająca praktyki dentystyczne na terenie Holandii",
+      "subTitle": "Aplikacja zrzeszająca praktyki dentystyczne na terenie Holandii",
       "shortDescription": "Aplikacja zrzeszająca praktyki dentystyczne na terenie Holandii, pozwalająca użytkownikom wyszukać najlepszych specjalistów z okolicy i bezpośrednio umówić się na wizytę.",
-      "description":{
+      "description": {
         "part1": "Tandarts to aplikacja zrzeszająca praktyki dentystyczne na terenie Holandii. Za jej pomocą użytkownicy mogą wyszukiwać najlepszych dentystów ze swojej okolicy, jak również przy pomocy kilku kliknięć bezpośrednio umawiać się na wizyty do specjalistów, a także weryfikować jakość świadczonych przez nich usług dzięki kompleksowemu systemowi ocen.",
         "part2": "Rolą naszego zespołu było przygotowanie szkieletu systemu, który w późniejszej fazie, po doprowadzeniu go przez nas do fazy MVP (Minimum Viable Product), został przejęty przez holenderską grupę deweloperską, występującą z ramienia klienta. ",
         "part3": "Prace nad projektem rozpoczęły się od długich konsultacji z klientem oraz innymi ekspertami z branży dentystycznej, których owocem stała się starannie zaprojektowana logika biznesowa. Celem było w końcu stworzenie systemu, który nie tylko spełni wszystkie wymagania biznesowe, ale okaże się być również łatwy w rozwoju dla zespołu nieuczestniczącego w jego początkowym projektowaniu. ",
         "part4": "Z tego względu dużą wagę przywiązywaliśmy także do szczegółowej dokumentacji projektu, finalnie przekazanej klientowi."
       }
     },
-    "Tripbuzz":{
+    "Tripbuzz": {
       "title": "Tripbuzz",
-      "subTitle":"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+      "subTitle": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
       "shortDescription": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-      "description":{
+      "description": {
         "part1": "Tripuzz to rozbudowana aplikacja webowa, która pozwala swoim użytkownikom odkryć nowe, ciekawe miejsca czy atrakcje, znajdujące się w ich najbliższej okolicy. Choć dziś narzędzie to stanowi obszerną bazę, niegdyś było niezwykle prostą stroną, która za sprawą naszego zespołu, przeszła niemałą transformację.",
         "part2": "Głównym zadaniem Code Mine było rozbudowanie aplikacji o nowe funkcjonalności, jak również rozwijanie tych istniejących. W ramach współpracy wprowadziliśmy nowe atrakcje i dział hoteli, a także zaimplementowaliśmy wersję mobilną. ",
         "part3": "Na każdym etapie prac skupialiśmy się na optymalizacji pod kontem SEO oraz zapewnianiu maksymalnej wydajności, niejednokrotnie podejmując się sporych wyzwań, do których należało między innymi wprowadzenie zaawansowanego algorytmu pozwalającego na szybkie filtrowanie wyników po lokalizacji."
       }
     },
-    "ZorgIndicator":{
+    "ZorgIndicator": {
       "title": "ZorgIndicator",
-      "subTitle":"Platforma umożliwiająca pacjentom wyszukanie najlepszych szpitali w okolicy",
+      "subTitle": "Platforma umożliwiająca pacjentom wyszukanie najlepszych szpitali w okolicy",
       "shortDescription": "Platforma umożliwiająca pacjentom wyszukanie najlepszych szpitali w okolicy, z uwzględnieniem ich oceny, statystyk w leczeniu oraz liczby wolnych łóżek.",
-      "description":{
+      "description": {
         "part1": "Jako platforma pomagająca w wyszukiwaniu najlepszych szpitali w okolicy, ZorgIndicator został zbudowany z myślą o pacjentach chcących w przystępny sposób uzyskać informacje o ilości szpitalnych łóżek, statystykach w leczeniu chorób czy ocenach innych pacjentów dla danej jednostki.",
         "part2": "Platforma składa się z dwóch komponentów – użytkownika i administratora szpitala, z czego użytkownik może wyszukiwać szpitale po geolokalizacji, sprawdzać ich statystyki i przyznawać oceny; natomiast administrator jest w stanie edytować dane kontaktowe placówki, zarządzając ponadto widocznością związanych z nią lekarzy.",
         "part3": "Oprócz oceny samych szpitali, za pośrednictwem ZorgIndicator możliwe jest także ocenianie poszczególnych specjalistów. Dzięki platformie, pacjenci mają więc pewność zarówno w kwestii kompetencji lekarzy, jak również poziomu obsługi w jednostkach medycznych.",
-        "part4": "Naszym celem było zachowanie jak największej elastyczności platformy, w celu umożliwienia jej dalszej rozbudowy o nowe funkcjonalności w przyszłości. Z tego względu ZorgIndicator został zaprojektowany zgodnie z metodologią Domain Driven Design, na back-endzie wykorzystując język PHP wsparty frameworkiem Laravel, zaś na front-endzie framework Bootstrap oraz bibliotekę JQuery. W pełni responsywna całość opiera się na bazie danych PostgreSQL, funkcjonując na serwerach AWS."
+        "part4": "Naszym celem było zachowanie jak największej elastyczności platformy, w celu umożliwienia jej dalszej rozbudowy o nowe funkcjonalności w przyszłości.",
+        "part5": "Z tego względu ZorgIndicator został zaprojektowany zgodnie z metodologią Domain Driven Design, na back-endzie wykorzystując język PHP wsparty frameworkiem Laravel, zaś na front-endzie framework Bootstrap oraz bibliotekę JQuery. W pełni responsywna całość opiera się na bazie danych PostgreSQL, funkcjonując na serwerach AWS."
       }
     }
   },
@@ -298,7 +299,7 @@
     "navigateToContact": "Przejdź do kontaktu",
     "technologies": "Technologie"
   },
-  "NAVIGATION":{
+  "NAVIGATION": {
     "about_as": "o nas",
     "portfolio": "portfolio",
     "offer": "oferta",
@@ -309,7 +310,7 @@
     "de": "deutch",
     "nor": "norsk"
   },
-  "ABOUT_US":{
+  "ABOUT_US": {
     "place4U": "Być może to miejsce właśnie dla Ciebie?",
     "joinUs": "Dołącz do naszego zespołu już dziś!",
     "name_origin": {
@@ -369,147 +370,141 @@
       "description": "Kocha projektowanie doświadczeń użytkownika, ale ceni też dobry design, co sprawia, że idealnie nadaje się na swoje stanowisko UX/UI Designera. Fan Apple, nie w mniejszym stopniu lubiący kawę i fast-foody. Na co dzień odlicza czas pozostały do kolejnych podróży i leniuchowania na piaszczystej plaży. Nienawidzi kolejek i stania w korkach. Jest maniakiem obniżania samochodów do granic przyzwoitości."
     }
   },
-  "TECHNOLOGIES":{
+  "TECHNOLOGIES": {
     "title": "Technologie",
     "description": "Opis",
-    "bash":{
+    "bash": {
       "description": "brak"
     },
-    "java":{
+    "java": {
       "description": "Jako najpopularniejszy obiektowy język programowania, Java charakteryzuje się przede wszystkim niezwykłą sprawnością i szybkością działania, przy jednoczesnym zachowaniu wysokiego stopnia bezpieczeństwa. Niemniej jednak, na komfort pracy z tym językiem wpływają także jego łatwa składnia, wielowątkowość i silne typowanie. W Code Mine szczególnie cenimy go sobie również za promowanie dobrych praktyk programowania obiektowego oraz łatwy dostęp do wiedzy. Co więcej, Java świetnie sprawdza się przy implementacji aplikacji typu enterprise, co dla nas, jako firmy dostarczającej rozwiązania biznesowe szyte na miarę, ma ogromne znaczenie. Jej stosowanie doceniane jest nawet przez samych klientów, którzy podkreślają jej stabilność i popularność. Z tego względu, Java jest naszym numerem jeden, wykorzystywanym zwłaszcza przy aplikacjach serwerowych."
     },
-    "javascript":{
+    "javascript": {
       "description": "JavaScript to stworzony pod koniec lat 90. język skryptowy, który choć głównie wykorzystywany jest do tworzenia stron internetowych, może także wzbogacać komponenty programów desktopowych, serwery www, aplikacje mobilne czy nawet dokumenty PDF. Charakteryzując się prostą składnią, uniwersalnością i asynchronicznością, język ten stanowi nasze podstawowe narzędzie do tworzenia software'u. Najczęściej sięgamy po niego przy aplikacjach klienckich do naszych systemów backendowych, używając  AngularJS czy ReactJS, jak również przy multiplatformowych aplikacjach mobilnych, tworzonych we frameworku IONIC."
     },
-    "php":{
+    "php": {
       "description": "Będący uniwersalnym językiem skryptowym, PHP został stworzony z myślą o stronach i aplikacjach internetowych. Dzięki znacznemu rozwojowi, jaki odnotował na przestrzeni ostatnich lat, staje się językiem coraz bardziej dojrzałym. Ze względu na niskie wymagania hostingowe, PHP odznacza się łatwością jego wdrożenia, toteż często wykorzystujemy go przy naszych projektach. Warto podkreślić, że pracujemy zawsze w jego najnowszej wersji, rozwijając przy tym istniejące biblioteki Open Source. "
     },
-    "swift":{
+    "swift": {
       "description": "brak"
     },
-    "typescript":{
+    "typescript": {
       "description": "Będący nakładką JavaScriptu, TypeScript, dzięki typowaniu wpływa na czystość kodu oraz łatwość w jego zarządzaniu. To narzędzie, które w pierwszym etapie pozwala na rozszerzenie funkcjonalności JS, a w ostatnim, automatycznie przekształca do niego powstały kod. TypeScript jest dla nas podstawą przy projektowaniu zaawansowanych aplikacji internetowych. Jego użycie we frameworku Angular, przyczynia się do stabilności oferowanych rozwiązań, jak i szybkości i intuicyjności samego procesu tworzenia."
     },
-    "html5":{
+    "html5": {
       "description": "brak"
     }
-
   },
-  "TOOLS":{
+  "TOOLS": {
     "title": "Narzędzia",
-    "AI":{
-      "description":"Po Illustratora sięgamy najczęściej w końcowych etapach prac – tuż po dopracowaniu i zatwierdzeniu makiet UX, w programie powstaje UI, czyli warstwa wizualna danego projektu. W Illustratorze projektujemy większość elementów graficznych, począwszy od prostych ikon, a skończywszy na rozmaitych ilustracjach, które z kolei niejednokrotnie stanowią bazę do tworzenia animacji svg, wykorzystywanych w naszych interfejsach."
+    "AI": {
+      "description": "Po Illustratora sięgamy najczęściej w końcowych etapach prac – tuż po dopracowaniu i zatwierdzeniu makiet UX, w programie powstaje UI, czyli warstwa wizualna danego projektu. W Illustratorze projektujemy większość elementów graficznych, począwszy od prostych ikon, a skończywszy na rozmaitych ilustracjach, które z kolei niejednokrotnie stanowią bazę do tworzenia animacji svg, wykorzystywanych w naszych interfejsach."
     },
-    "AmazonAWS":{
-      "description":"Rozwiązania chmurowe amerykańskiej firmy Amazon pozwalają na tworzenie skalowalnych, wydajnych i bezpiecznych aplikacji w stosunkowo krótkim czasie. Wyróżniają się szerokim asortymentem usług, od baz danych, serwerów, systemów powiadomień czy kolejek zadań, aż po rozwiązania machine learning i analizy danych w czasie rzeczywistym.Wszystkie te cechy sprawiają, że Amazon AWS jest idealnym wyborem dla nowoczesnych aplikacji. Z tego względu pojawia się także w naszych projektach, opieranych na systemach automatycznego zarządzania aplikacjami, do których należy ElasticBeanstalk, czy też na systemach skonteneryzowanych takich jak Elastic Container Service wspierający Docker’a."
+    "AmazonAWS": {
+      "description": "Rozwiązania chmurowe amerykańskiej firmy Amazon pozwalają na tworzenie skalowalnych, wydajnych i bezpiecznych aplikacji w stosunkowo krótkim czasie. Wyróżniają się szerokim asortymentem usług, od baz danych, serwerów, systemów powiadomień czy kolejek zadań, aż po rozwiązania machine learning i analizy danych w czasie rzeczywistym.Wszystkie te cechy sprawiają, że Amazon AWS jest idealnym wyborem dla nowoczesnych aplikacji. Z tego względu pojawia się także w naszych projektach, opieranych na systemach automatycznego zarządzania aplikacjami, do których należy ElasticBeanstalk, czy też na systemach skonteneryzowanych takich jak Elastic Container Service wspierający Docker’a."
     },
-    "Angular":{
-      "description":"Ze względu na klarowną separację odpowiedzialności oraz łatwość w utrzymaniu czystości kodu, na Angularze opieramy większość naszych projektów o wymagającej strukturze. Co więcej, narzędzie to pozwala nam na szybkie tworzenie aplikacji internetowych wraz z testami jednostkowymi i akceptacyjnymi, z niespotykaną wcześniej łatwością.Stworzone przez firmę Google oraz niezliczoną ilość niezależnych programistów, narzędzie to jest nieustannie rozwijane. Choć bliskie jest nam nawet jego pierwsze wydanie, dopiero od kolejnych wersji Angular rozpoczął nową erę wydajnych oraz elastycznych bibliotek, pozwalających na tworzenie niesamowitych aplikacji internetowych. Przyczyniło się do tego zwłaszcza wprowadzenie w drugiej wersji frameworku podejścia reative programming, które połączone z silnym naciskiem na technologie TypeScript, ustandaryzowało cały proces projektowy."
+    "Angular": {
+      "description": "Ze względu na klarowną separację odpowiedzialności oraz łatwość w utrzymaniu czystości kodu, na Angularze opieramy większość naszych projektów o wymagającej strukturze. Co więcej, narzędzie to pozwala nam na szybkie tworzenie aplikacji internetowych wraz z testami jednostkowymi i akceptacyjnymi, z niespotykaną wcześniej łatwością.Stworzone przez firmę Google oraz niezliczoną ilość niezależnych programistów, narzędzie to jest nieustannie rozwijane. Choć bliskie jest nam nawet jego pierwsze wydanie, dopiero od kolejnych wersji Angular rozpoczął nową erę wydajnych oraz elastycznych bibliotek, pozwalających na tworzenie niesamowitych aplikacji internetowych. Przyczyniło się do tego zwłaszcza wprowadzenie w drugiej wersji frameworku podejścia reative programming, które połączone z silnym naciskiem na technologie TypeScript, ustandaryzowało cały proces projektowy."
     },
-    "ApacheKafka":{
-      "description":"Apache Kafka jest narzędziem umożliwiającym przechowywanie strumieni danych. Tworzy ono kolejkę wiadomości pogrupowanych w tematy, z przypisanymi identyfikatorem i czasem zdarzenia.Ogromną zaletą Apache jest jej skalowalność, wynikająca z działania na tak zwanych klastrach, możliwych do uruchomienia zarówno na jednym, jak i wielu serwerach. Ponadto idealnie sprawdza się również jako tak zwany Event Bus w przypadku aplikacji opartych o Event Sourcing."
+    "ApacheKafka": {
+      "description": "Apache Kafka jest narzędziem umożliwiającym przechowywanie strumieni danych. Tworzy ono kolejkę wiadomości pogrupowanych w tematy, z przypisanymi identyfikatorem i czasem zdarzenia.Ogromną zaletą Apache jest jej skalowalność, wynikająca z działania na tak zwanych klastrach, możliwych do uruchomienia zarówno na jednym, jak i wielu serwerach. Ponadto idealnie sprawdza się również jako tak zwany Event Bus w przypadku aplikacji opartych o Event Sourcing."
     },
-    "AxureRP":{
-      "description":"Axure stanowi podstawę codziennej pracy naszych UX Designerów. To rozbudowana aplikacja desktopowa, służąca w głównej mierze do tworzenia rozbudowanych prototypów interfejsów użytkownika, diagramów przepływu informacji oraz specyfikacji projektów w wyjątkowo intuicyjny sposób. Zaletą programu jest dodatkowo możliwość projektowania złożonych interakcji – animacji, dynamicznych treści, obliczeń czy warunków logicznych, bez potrzeby programowania.Przygotowane za pomocą aplikacji makiety, czynią proces projektowy bardziej efektywnym, jednocześnie pozwalając naszym klientom na lepsze zrozumienie podejmowanych prac dzięki zobrazowaniu tworzonych funkcjonalności."
+    "AxureRP": {
+      "description": "Axure stanowi podstawę codziennej pracy naszych UX Designerów. To rozbudowana aplikacja desktopowa, służąca w głównej mierze do tworzenia rozbudowanych prototypów interfejsów użytkownika, diagramów przepływu informacji oraz specyfikacji projektów w wyjątkowo intuicyjny sposób. Zaletą programu jest dodatkowo możliwość projektowania złożonych interakcji – animacji, dynamicznych treści, obliczeń czy warunków logicznych, bez potrzeby programowania.Przygotowane za pomocą aplikacji makiety, czynią proces projektowy bardziej efektywnym, jednocześnie pozwalając naszym klientom na lepsze zrozumienie podejmowanych prac dzięki zobrazowaniu tworzonych funkcjonalności."
     },
-    "CircleCl":{
-      "description":"Jako jedno z trzech używanych przez nas narzędzi do automatycznego testowania zmian wprowadzanych do kodu źródłowego, Circle CI wyróżnia się ponadprzeciętną uniwersalnością. Jego przewagą są wszechstronne możliwości integracji z innymi narzędziami, takimi jak Github, Bitbucket czy Gitlab, co pozwala nam zachować dużą elastyczność działania. Atutem tego dodatku jest także atrakcyjna cena."
+    "CircleCl": {
+      "description": "Jako jedno z trzech używanych przez nas narzędzi do automatycznego testowania zmian wprowadzanych do kodu źródłowego, Circle CI wyróżnia się ponadprzeciętną uniwersalnością. Jego przewagą są wszechstronne możliwości integracji z innymi narzędziami, takimi jak Github, Bitbucket czy Gitlab, co pozwala nam zachować dużą elastyczność działania. Atutem tego dodatku jest także atrakcyjna cena."
     },
-    "Docker":{
-      "description":"Będący narzędziem umożliwiającym uruchamianie oprogramowania w autonomicznych kontenerach, Docker pozwala nam projektować i testować aplikacje w środowisku identycznym w porównaniu do tego, który dostępny jest w systemie produkcyjnym. Rozwiązanie to przyczynia się do zmniejszenia ilości błędów, przyspieszając tym samym proces tworzenia oprogramowania.Największą zaletą Docker’a jest jednak jego uniwersalność zwłaszcza, że wspierany jest on przez nowoczesne platformy takie jak Amazon AWS, za pośrednictwem Elastic Container Service czy Elastic Beanstalk. Pod tym kątem narzędzie to znacznie przewyższa wszystkie klasyczne rozwiązania oparte na wirtualizacji"
+    "Docker": {
+      "description": "Będący narzędziem umożliwiającym uruchamianie oprogramowania w autonomicznych kontenerach, Docker pozwala nam projektować i testować aplikacje w środowisku identycznym w porównaniu do tego, który dostępny jest w systemie produkcyjnym. Rozwiązanie to przyczynia się do zmniejszenia ilości błędów, przyspieszając tym samym proces tworzenia oprogramowania.Największą zaletą Docker’a jest jednak jego uniwersalność zwłaszcza, że wspierany jest on przez nowoczesne platformy takie jak Amazon AWS, za pośrednictwem Elastic Container Service czy Elastic Beanstalk. Pod tym kątem narzędzie to znacznie przewyższa wszystkie klasyczne rozwiązania oparte na wirtualizacji"
     },
-    "Git":{
-      "description":"W pisanie kodu przy dużych projektach najczęściej zaangażowanych jest jednocześnie kilku deweloperów, pracujących na jednym kodzie źródłowym. Git, jako miejsce jego przechowywania, pozwala na śledzenie wszystkich modyfikacji kodu, dając również możliwość zarządzania wszystkimi utworzonymi zmianami w wygodny i czytelny sposób.Za sprawą tego narzędzia jesteśmy ponadto w stanie rozwiązać konflikty powstałe w wyniku pracy kilku programistów nad jedną funkcjonalnością, a także zapobiec całkowitej utracie kodu. To sprawia, że Git, będący obecnie najpopularniejszym systemem kontroli wersji, jest także nieodłącznym elementem każdego tworzonego przez nas projektu."
+    "Git": {
+      "description": "W pisanie kodu przy dużych projektach najczęściej zaangażowanych jest jednocześnie kilku deweloperów, pracujących na jednym kodzie źródłowym. Git, jako miejsce jego przechowywania, pozwala na śledzenie wszystkich modyfikacji kodu, dając również możliwość zarządzania wszystkimi utworzonymi zmianami w wygodny i czytelny sposób.Za sprawą tego narzędzia jesteśmy ponadto w stanie rozwiązać konflikty powstałe w wyniku pracy kilku programistów nad jedną funkcjonalnością, a także zapobiec całkowitej utracie kodu. To sprawia, że Git, będący obecnie najpopularniejszym systemem kontroli wersji, jest także nieodłącznym elementem każdego tworzonego przez nas projektu."
     },
-    "Gradle":{
-      "description":"Dzięki możliwości zdefiniowania automatycznych zadań wykonywanych w trakcie zmiany kodu źródłowego w działający program, Gradle zapewnia nam pełną kontrolę nad procesem developmentu i deployu aplikacji.Narzędzie pozwala na szybkie i bezproblemowe pobieranie potrzebnych zależności, ich kompilację oraz intuicyjne zarządzanie, co znacznie uławia cały proces programowania szczególnie, że praktycznie w każdym naszym projekcie posiłkujemy się zewnętrznymi bibliotekami czy frameworkami."
+    "Gradle": {
+      "description": "Dzięki możliwości zdefiniowania automatycznych zadań wykonywanych w trakcie zmiany kodu źródłowego w działający program, Gradle zapewnia nam pełną kontrolę nad procesem developmentu i deployu aplikacji.Narzędzie pozwala na szybkie i bezproblemowe pobieranie potrzebnych zależności, ich kompilację oraz intuicyjne zarządzanie, co znacznie uławia cały proces programowania szczególnie, że praktycznie w każdym naszym projekcie posiłkujemy się zewnętrznymi bibliotekami czy frameworkami."
     },
-    "Grunt":{
-      "description":"Grunt jest jednym z pierwszych systemów automatyzacji pracy, zaimplementowanych w naszych aplikacjach internetowych. Choć moduł ten obecnie nie posiada już swojego miejsca w naszej wirtualnej skrzynce narzędzi, faktem jest, że wciąż pracujemy nad projektami, w których został użyty."
+    "Grunt": {
+      "description": "Grunt jest jednym z pierwszych systemów automatyzacji pracy, zaimplementowanych w naszych aplikacjach internetowych. Choć moduł ten obecnie nie posiada już swojego miejsca w naszej wirtualnej skrzynce narzędzi, faktem jest, że wciąż pracujemy nad projektami, w których został użyty."
     },
-    "Gulp":{
-      "description":"Podobnie jak Grunt, Gulp w erze Webpack’a jest narzędziem odsuniętym na drugi plan; nie mniej jednak, nie można zarzucić mu braku użyteczności. Jako system automatyzacji pracy programisty, pozwala na wykonanie wielu zaawansowanych zadań z ogromną łatwością, zwłaszcza w kontekście integracji z nowoczesnymi framework’ami, takimi jak Angular. Z tego powodu Gulp został wykorzystany w kilku projektach, wciąż przez nas wspieranych bądź też rozbudowywanych."
+    "Gulp": {
+      "description": "Podobnie jak Grunt, Gulp w erze Webpack’a jest narzędziem odsuniętym na drugi plan; nie mniej jednak, nie można zarzucić mu braku użyteczności. Jako system automatyzacji pracy programisty, pozwala na wykonanie wielu zaawansowanych zadań z ogromną łatwością, zwłaszcza w kontekście integracji z nowoczesnymi framework’ami, takimi jak Angular. Z tego powodu Gulp został wykorzystany w kilku projektach, wciąż przez nas wspieranych bądź też rozbudowywanych."
     },
-    "Jenkins":{
-      "description":"Jenkins jest narzędziem wykorzystywanym przez nas do automatycznego testowania kodu w celu sprawdzenia zgodności wprowadzonych zmian z postawionymi wymaganiami. Jako rozwiązanie nie oferowane w chmurze, Jenkins zapewnia niesamowite możliwości konfiguracyjne, praktycznie niespotykane w innych tego typu narzędziach. Dzięki precyzyjnemu dostosowywaniu sposobu budowania oprogramowania, a także jego testowania i dostarczania, idealnie sprawdza się w projektach wymagających chirurgicznej precyzji pod względem Continous Integration. Oprócz wysokiej elastyczności, cenimy w nim również pełną kontrolę, gwarantowaną poprzez samodzielny hosting."
+    "Jenkins": {
+      "description": "Jenkins jest narzędziem wykorzystywanym przez nas do automatycznego testowania kodu w celu sprawdzenia zgodności wprowadzonych zmian z postawionymi wymaganiami. Jako rozwiązanie nie oferowane w chmurze, Jenkins zapewnia niesamowite możliwości konfiguracyjne, praktycznie niespotykane w innych tego typu narzędziach. Dzięki precyzyjnemu dostosowywaniu sposobu budowania oprogramowania, a także jego testowania i dostarczania, idealnie sprawdza się w projektach wymagających chirurgicznej precyzji pod względem Continous Integration. Oprócz wysokiej elastyczności, cenimy w nim również pełną kontrolę, gwarantowaną poprzez samodzielny hosting."
     },
-    "Jira":{
-      "description":"Jako ekosystem oprogramowania pozwalającego na łatwe zarządzenie projektami IT, Jira pomaga nam utrzymać każde zlecenie w spójnych ramach, oferując nieograniczone możliwości konfiguracji, stabilność oraz bezpieczeństwo. Zbudowana przez firmę Atlassian, Jira jest kompletnym narzędziem, które z jednej strony umożliwia planowanie i realizację projektów dzięki tworzeniu i weryfikacji zadań oraz zarządzaniu dokumentami; zaś z drugiej – płynną wymianę informacji wśród całego zespołu. Ponadto, może być integrowana z innymi narzędziami – systemami kontroli wersji, kalendarzami czy systemami Continous Integration. W Jirze prowadzone są wszystkie nasze projekty, w których każdorazowo wykorzystujemy  także oferowane przez narzędzie, tablice Agile. Co ważne, platforma dostarcza także system helpdesk, dzięki któremu nasi Klienci posiadają bieżące informacje na temat poszczególnych zgłoszeń, mogąc kontrolować tym samym poziom SLA."
+    "Jira": {
+      "description": "Jako ekosystem oprogramowania pozwalającego na łatwe zarządzenie projektami IT, Jira pomaga nam utrzymać każde zlecenie w spójnych ramach, oferując nieograniczone możliwości konfiguracji, stabilność oraz bezpieczeństwo. Zbudowana przez firmę Atlassian, Jira jest kompletnym narzędziem, które z jednej strony umożliwia planowanie i realizację projektów dzięki tworzeniu i weryfikacji zadań oraz zarządzaniu dokumentami; zaś z drugiej – płynną wymianę informacji wśród całego zespołu. Ponadto, może być integrowana z innymi narzędziami – systemami kontroli wersji, kalendarzami czy systemami Continous Integration. W Jirze prowadzone są wszystkie nasze projekty, w których każdorazowo wykorzystujemy  także oferowane przez narzędzie, tablice Agile. Co ważne, platforma dostarcza także system helpdesk, dzięki któremu nasi Klienci posiadają bieżące informacje na temat poszczególnych zgłoszeń, mogąc kontrolować tym samym poziom SLA."
     },
-    "JMeter":{
-      "description":"JMeter to rozbudowane narzędzie testowe, wyróżniające się szybkością tworzenia złożonych i niezwykle miarodajnych planów testowych, służących nam do sprawdzania wydajności aplikacji, baz danych czy skryptów. Dzięki nim możemy dowiedzieć się jak dane oprogramowanie zachowa się w ekstremalnych, niecodziennych warunkach.Istotną cechą JMeter jest również możliwość przetestowania wielu zależnych od siebie i występujących po sobie żądań. Efektem tak rozbudowanych i skrupulatnych testów są obszerne raporty, które dzięki graficznej formie prezentowania wyników, stają się wyjątkowo przystępne, co znacznie ułatwia proces wyciągania wniosków."
+    "JMeter": {
+      "description": "JMeter to rozbudowane narzędzie testowe, wyróżniające się szybkością tworzenia złożonych i niezwykle miarodajnych planów testowych, służących nam do sprawdzania wydajności aplikacji, baz danych czy skryptów. Dzięki nim możemy dowiedzieć się jak dane oprogramowanie zachowa się w ekstremalnych, niecodziennych warunkach.Istotną cechą JMeter jest również możliwość przetestowania wielu zależnych od siebie i występujących po sobie żądań. Efektem tak rozbudowanych i skrupulatnych testów są obszerne raporty, które dzięki graficznej formie prezentowania wyników, stają się wyjątkowo przystępne, co znacznie ułatwia proces wyciągania wniosków."
     },
-    "Laravel":{
-      "description":"Choć Laravel jest stosunkowo młodym frameworkiem MVC dla języka PHP, nie przeszkodziło mu to w zdobyciu znaczącego udziału rynku otwartych rozwiązań. Mimo braku zaawansowanych i wysoce elastycznych rozwiązań charakterystycznych dla innych, używanych przez nas narzędzi tego typu, Laravel zdecydowanie wyróżnia się łatwością tworzenia prostych projektów. Z tego względu stosujemy go zazwyczaj w zespołach, które dopiero kompletują swoje doświadczenie w tym obszarze."
+    "Laravel": {
+      "description": "Choć Laravel jest stosunkowo młodym frameworkiem MVC dla języka PHP, nie przeszkodziło mu to w zdobyciu znaczącego udziału rynku otwartych rozwiązań. Mimo braku zaawansowanych i wysoce elastycznych rozwiązań charakterystycznych dla innych, używanych przez nas narzędzi tego typu, Laravel zdecydowanie wyróżnia się łatwością tworzenia prostych projektów. Z tego względu stosujemy go zazwyczaj w zespołach, które dopiero kompletują swoje doświadczenie w tym obszarze."
     },
-    "MongoDB":{
-      "description":"MongoDB jest wydajną, nierelacyjną bazą danych (NotOnlySQL), która ponadto nie wymaga predefiniowanych schematów, co stanowi jedną z jej największych zalet. Baza wykorzystywana jest przede wszystkim do aplikacji zawierających hierarchiczne i różniące się od siebie dane. Zapewnia szybkie operacje na danych, a ponadto świetnie sprawdza się jako cache danych w strukturach intranetowych."
+    "MongoDB": {
+      "description": "MongoDB jest wydajną, nierelacyjną bazą danych (NotOnlySQL), która ponadto nie wymaga predefiniowanych schematów, co stanowi jedną z jej największych zalet. Baza wykorzystywana jest przede wszystkim do aplikacji zawierających hierarchiczne i różniące się od siebie dane. Zapewnia szybkie operacje na danych, a ponadto świetnie sprawdza się jako cache danych w strukturach intranetowych."
     },
-    "MySQL":{
-      "description":"Bazy danych są podstawą funkcjonowania niemal każdego oprogramowania internetowego. Jako najpopularniejsza baza dostępna na rynku, MySQL jest narzędziem wysoce uniwersalnym, charakteryzującym się ponadto stosunkowo niskim kosztem utrzymania, dlatego idealnie sprawdza się przy projektach z zawężonymi wymogami hostingowymi, w których priorytetem jest również szybkość i łatwość implementacji."
+    "MySQL": {
+      "description": "Bazy danych są podstawą funkcjonowania niemal każdego oprogramowania internetowego. Jako najpopularniejsza baza dostępna na rynku, MySQL jest narzędziem wysoce uniwersalnym, charakteryzującym się ponadto stosunkowo niskim kosztem utrzymania, dlatego idealnie sprawdza się przy projektach z zawężonymi wymogami hostingowymi, w których priorytetem jest również szybkość i łatwość implementacji."
     },
-    "NPM":{
-      "description":"Będący jednym z największych źródeł bibliotek i rozwiązań Open Source dostępnych we współczesnym świecie programowania, NPM pozwala nam na wzbogacanie projektu zewnętrznymi, gotowymi rozwiązaniami, bez obaw o ich aktualność czy poprawność. Narzędzie to uważane jest za globalny standard, toteż na stałe zagościło w naszych projektach front-endowych, w których możemy wykorzystywać niemalże każdą pożądaną bibliotekę, co z kolei przekłada się na oszczędność czasu oraz lepszą wydajność."
+    "NPM": {
+      "description": "Będący jednym z największych źródeł bibliotek i rozwiązań Open Source dostępnych we współczesnym świecie programowania, NPM pozwala nam na wzbogacanie projektu zewnętrznymi, gotowymi rozwiązaniami, bez obaw o ich aktualność czy poprawność. Narzędzie to uważane jest za globalny standard, toteż na stałe zagościło w naszych projektach front-endowych, w których możemy wykorzystywać niemalże każdą pożądaną bibliotekę, co z kolei przekłada się na oszczędność czasu oraz lepszą wydajność."
     },
-    "PostgreSQL":{
-      "description":"Baza danych jest jednym z najistotniejszych elementów składowych każdego oprogramowania, a jej wybór powinien być dostosowany do złożoności podejmowanego projektu. PostgreSQL, będąca dojrzałą, ale i najbardziej zaawansowaną z dostępnych na rynku, otwartą bazą, wykorzystujemy w przypadku kompleksowych i wymagających programów. Oferowane przez PostgreSQL, niemal nieograniczone możliwości dotyczące zapytań, struktur i rozszerzania jej funkcjonalności, znacznie poprawiają efektywność pracy nad projektem."
+    "PostgreSQL": {
+      "description": "Baza danych jest jednym z najistotniejszych elementów składowych każdego oprogramowania, a jej wybór powinien być dostosowany do złożoności podejmowanego projektu. PostgreSQL, będąca dojrzałą, ale i najbardziej zaawansowaną z dostępnych na rynku, otwartą bazą, wykorzystujemy w przypadku kompleksowych i wymagających programów. Oferowane przez PostgreSQL, niemal nieograniczone możliwości dotyczące zapytań, struktur i rozszerzania jej funkcjonalności, znacznie poprawiają efektywność pracy nad projektem."
     },
-    "RabbitMQ":{
-      "description":"RabbitMQ jest jednym z najbardziej popularnych narzędzi systemów kolejkowych, pozwalających na swobodną komunikację między rozproszonymi systemami. Również w naszych projektach systemy podzielone są na mikroserwisy, wykorzystując oparte na protokole MQTT, wewnętrzne mechanizmy do wymiany komend i zapytań pomiędzy poszczególnymi serwisami. Takie rozwiązanie pozwala nam tworzyć oprogramowanie z jednej strony wydaje, a z drugiej bezpieczne i skalowalne."
+    "RabbitMQ": {
+      "description": "RabbitMQ jest jednym z najbardziej popularnych narzędzi systemów kolejkowych, pozwalających na swobodną komunikację między rozproszonymi systemami. Również w naszych projektach systemy podzielone są na mikroserwisy, wykorzystując oparte na protokole MQTT, wewnętrzne mechanizmy do wymiany komend i zapytań pomiędzy poszczególnymi serwisami. Takie rozwiązanie pozwala nam tworzyć oprogramowanie z jednej strony wydaje, a z drugiej bezpieczne i skalowalne."
     },
-    "ReactJS":{
-      "description":"Stworzony przez Facebooka, React JS jest innowacyjnym frameworkiem, wykorzystującym język JSX – hybrydę języka JavaScript oraz HTML. Jest niezastąpiony w przypadku małych i średnich projektów, w których zaawansowana struktura i setki narzędzi, jakie oferuje Angular, nie są wymagane. Przewagą React JS jest ponadto ogromna społeczność udostępniająca setki, jeśli nie tysiące otwartych bibliotek typu Open Source. Korzystanie z dobrych jakościowo, gotowych rozwiązań pozwala oszczędzić czas i budżet, przy jednoczesnym zapewnieniu stabilności i bezpieczeństwa."
+    "ReactJS": {
+      "description": "Stworzony przez Facebooka, React JS jest innowacyjnym frameworkiem, wykorzystującym język JSX – hybrydę języka JavaScript oraz HTML. Jest niezastąpiony w przypadku małych i średnich projektów, w których zaawansowana struktura i setki narzędzi, jakie oferuje Angular, nie są wymagane. Przewagą React JS jest ponadto ogromna społeczność udostępniająca setki, jeśli nie tysiące otwartych bibliotek typu Open Source. Korzystanie z dobrych jakościowo, gotowych rozwiązań pozwala oszczędzić czas i budżet, przy jednoczesnym zapewnieniu stabilności i bezpieczeństwa."
     },
-    "SASS":{
-      "description":"Kaskadowe arkusze stylów CSS są nieoderwalną częścią stron i aplikacji mobilnych, stanowiących największą część naszego portfolio. Tworzenie CSS’ów jest jednak zajęciem niezwykle czasochłonnym, wymagającym niemałej precyzji i uwagi, co z kolei zwiększa ryzyko wystąpienia różnych problemów, wynikających z przeoczenia pewnych detali. Jako preprocesor CSS, SASS został stworzony celem uniknięcia tych błędów, pozwalając na tworzenie ustrukturyzowanych i czytelnych arkuszy stylów w szybkim czasie. Szereg jego zalet sprawił, że używamy go na co dzień, w każdym naszym projekcie."
+    "SASS": {
+      "description": "Kaskadowe arkusze stylów CSS są nieoderwalną częścią stron i aplikacji mobilnych, stanowiących największą część naszego portfolio. Tworzenie CSS’ów jest jednak zajęciem niezwykle czasochłonnym, wymagającym niemałej precyzji i uwagi, co z kolei zwiększa ryzyko wystąpienia różnych problemów, wynikających z przeoczenia pewnych detali. Jako preprocesor CSS, SASS został stworzony celem uniknięcia tych błędów, pozwalając na tworzenie ustrukturyzowanych i czytelnych arkuszy stylów w szybkim czasie. Szereg jego zalet sprawił, że używamy go na co dzień, w każdym naszym projekcie."
     },
-    "Sketch":{
-      "description":"Sketch służy nam do projektowania interfejsów, layoutów, ikon i innych elementów graficznych. Dzięki możliwości odręcznego tworzenia ścieżek, pozwala on na budowanie skomplikowanych kształtów, łatwych do późniejszej edycji, z kolei ze względu na renderowanie powstałych elementów – na ich skalowanie bez utraty jakości. Przydatną funkcjonalnością Sketch’a jest także możliwość podglądania projektu na podłączonym do sieci lokalnej iPhonie z zainstalowaną aplikacją iOS Mirror."
+    "Sketch": {
+      "description": "Sketch służy nam do projektowania interfejsów, layoutów, ikon i innych elementów graficznych. Dzięki możliwości odręcznego tworzenia ścieżek, pozwala on na budowanie skomplikowanych kształtów, łatwych do późniejszej edycji, z kolei ze względu na renderowanie powstałych elementów – na ich skalowanie bez utraty jakości. Przydatną funkcjonalnością Sketch’a jest także możliwość podglądania projektu na podłączonym do sieci lokalnej iPhonie z zainstalowaną aplikacją iOS Mirror."
     },
-    "SonarQube":{
-      "description":"Jakość kodu źródłowego jest dla nas kwestią pierwszorzędną, a narzędzia takie jak SonarQube pomagają nad sprawować nad nią kontrolę. Platforma w łatwy sposób wymusza zgodność kodu z obowiązującymi standardami, wychwytując ponadto miejsca, będące potencjalnym źródłem problemów w przyszłości. Uniwersalność narzędzia sprawia, że jest ono wykorzystywane przez nas zespół w niemalże każdym projekcie."
+    "SonarQube": {
+      "description": "Jakość kodu źródłowego jest dla nas kwestią pierwszorzędną, a narzędzia takie jak SonarQube pomagają nad sprawować nad nią kontrolę. Platforma w łatwy sposób wymusza zgodność kodu z obowiązującymi standardami, wychwytując ponadto miejsca, będące potencjalnym źródłem problemów w przyszłości. Uniwersalność narzędzia sprawia, że jest ono wykorzystywane przez nas zespół w niemalże każdym projekcie."
     },
-    "SpringFramework":{
-      "description":"Zarówno przy tworzeniu, jak i konfiguracji nowoczesnych aplikacji klasy enterprise, opartych na platformie Java, każdorazowo sięgamy po Spring Framework, zapewniający łatwą integrację z innymi frameworkami i bibliotekami. W myśl zasady convention over configuration, narzędzie to daje nam możliwość  zredukowania pisanego kodu do niezbędnego minimum po to, by móc całkowicie skoncentrować się na rozwiązywaniu złożonych problemów biznesowych. Niewątpliwym atutem Sping’a jest też jego bieżące udoskonalanie, wywołane dużym zainteresowaniem społeczności, jaką przy sobie skupia. Dzięki temu mamy pewność, że oferowane przez framework rozwiązania zawsze należą do innowacyjnych i z powodzeniem możemy wykorzystywać je w swoich projektach, na które składają się zwłaszcza aplikacje serwerowe dostarczające REST/RPC Api."
+    "SpringFramework": {
+      "description": "Zarówno przy tworzeniu, jak i konfiguracji nowoczesnych aplikacji klasy enterprise, opartych na platformie Java, każdorazowo sięgamy po Spring Framework, zapewniający łatwą integrację z innymi frameworkami i bibliotekami. W myśl zasady convention over configuration, narzędzie to daje nam możliwość  zredukowania pisanego kodu do niezbędnego minimum po to, by móc całkowicie skoncentrować się na rozwiązywaniu złożonych problemów biznesowych. Niewątpliwym atutem Sping’a jest też jego bieżące udoskonalanie, wywołane dużym zainteresowaniem społeczności, jaką przy sobie skupia. Dzięki temu mamy pewność, że oferowane przez framework rozwiązania zawsze należą do innowacyjnych i z powodzeniem możemy wykorzystywać je w swoich projektach, na które składają się zwłaszcza aplikacje serwerowe dostarczające REST/RPC Api."
     },
-    "Symfony":{
-      "description":"Symfony uznawany jest za jeden z najbardziej profesjonalnych frameworków MVC dla PHP. Współtworzony przez zaangażowane w rozwój tego języka, brazylijskie studio SensioLabs oraz niezliczoną ilość wolontariuszy z całego świata, zyskał ogromne uznanie wśród osób z branży. Czerpiąc inspiracje z Sping Framework, Symfony polega na wielu sprawdzonych wzorach i rozwiązaniach. W efekcie, narzędzie te oferuje ogromną liczbę możliwości i z powodzeniem może być zastosowane do każdego rodzaju projektu. W naszej firmie sięgamy po nie jednak zwłaszcza w przypadku realizacji ograniczonych pod względem czasu czy budżetu, w pełni wykorzystując jego zautomatyzowane działania."
+    "Symfony": {
+      "description": "Symfony uznawany jest za jeden z najbardziej profesjonalnych frameworków MVC dla PHP. Współtworzony przez zaangażowane w rozwój tego języka, brazylijskie studio SensioLabs oraz niezliczoną ilość wolontariuszy z całego świata, zyskał ogromne uznanie wśród osób z branży. Czerpiąc inspiracje z Sping Framework, Symfony polega na wielu sprawdzonych wzorach i rozwiązaniach. W efekcie, narzędzie te oferuje ogromną liczbę możliwości i z powodzeniem może być zastosowane do każdego rodzaju projektu. W naszej firmie sięgamy po nie jednak zwłaszcza w przypadku realizacji ograniczonych pod względem czasu czy budżetu, w pełni wykorzystując jego zautomatyzowane działania."
     },
-    "TravisCl":{
-      "description":"W miarę upływu ery ręcznego wysyłania plików projektów na serwer przy pomocy FTP, narzędzia Continous Integration stały się podstawą bezpiecznego aktualizowania oprogramowania. Pozwalają one na automatyczne przetestowanie kodu przed wprowadzeniem zmian, sprawdzając tym samym, czy nowe modyfikacje spełniają wszystkie wymagane kryteria i oczekiwania. Co istotne, jako jeden z najbardziej powszechnych narzędzi Continous Integration, Travis z powodzeniem może być wykorzystywany w różnych projektach i technologiach. Łatwość jego konfiguracji jest z resztą jednym z wielu argumentów, skłaniającym nas do częstego wybierania tego narzędzia."
+    "TravisCl": {
+      "description": "W miarę upływu ery ręcznego wysyłania plików projektów na serwer przy pomocy FTP, narzędzia Continous Integration stały się podstawą bezpiecznego aktualizowania oprogramowania. Pozwalają one na automatyczne przetestowanie kodu przed wprowadzeniem zmian, sprawdzając tym samym, czy nowe modyfikacje spełniają wszystkie wymagane kryteria i oczekiwania. Co istotne, jako jeden z najbardziej powszechnych narzędzi Continous Integration, Travis z powodzeniem może być wykorzystywany w różnych projektach i technologiach. Łatwość jego konfiguracji jest z resztą jednym z wielu argumentów, skłaniającym nas do częstego wybierania tego narzędzia."
     },
-    "Vagrant":{
-      "description":"Podobnie jak Docker, Vagrant wykorzystywany jest do budowania wirtualnych maszyn oraz zarządzania nimi z jednego miejsca. Narzędzie to pozwala deweloperowi na utworzenie odpowiedniego dla danej aplikacji środowiska, bez względu na używany przez niego system operacyjny czy zainstalowane programy. Wirtualna maszyna powstaje po uruchomieniu wcześniej przygotowanego skryptu konfiguracyjnego. Jego umieszczenie w repozytorium kodu źródłowego projektu daje nam ponadto nieograniczoną kontrolę nad zmianami wprowadzanymi w zależnościach aplikacji."
+    "Vagrant": {
+      "description": "Podobnie jak Docker, Vagrant wykorzystywany jest do budowania wirtualnych maszyn oraz zarządzania nimi z jednego miejsca. Narzędzie to pozwala deweloperowi na utworzenie odpowiedniego dla danej aplikacji środowiska, bez względu na używany przez niego system operacyjny czy zainstalowane programy. Wirtualna maszyna powstaje po uruchomieniu wcześniej przygotowanego skryptu konfiguracyjnego. Jego umieszczenie w repozytorium kodu źródłowego projektu daje nam ponadto nieograniczoną kontrolę nad zmianami wprowadzanymi w zależnościach aplikacji."
     },
-    "Webpack":{
-      "description":"Tworzone przez nas aplikacje i strony internetowe to złożone systemy, składające się z wielu modułów i wzajemnych zależności. Webpack pomaga nam w optymalizacji projektu, zamieniając setki plików HTML, Java Script, Type Script, elementów graficznych czy fontów, w jedną, małą paczkę, możliwą do szybkiego pobrania na urządzeniach mobilnych. Poza poprawą User Experience, Webpack wpływa także na automatyzację pracy, zwiększając efektywność naszego zespołu, który w miejsce konfiguracji projektu, może skoncentrować się na tworzeniu oprogramowania, co z kolei pozwala na lepsze wykorzystanie budżetu."
+    "Webpack": {
+      "description": "Tworzone przez nas aplikacje i strony internetowe to złożone systemy, składające się z wielu modułów i wzajemnych zależności. Webpack pomaga nam w optymalizacji projektu, zamieniając setki plików HTML, Java Script, Type Script, elementów graficznych czy fontów, w jedną, małą paczkę, możliwą do szybkiego pobrania na urządzeniach mobilnych. Poza poprawą User Experience, Webpack wpływa także na automatyzację pracy, zwiększając efektywność naszego zespołu, który w miejsce konfiguracji projektu, może skoncentrować się na tworzeniu oprogramowania, co z kolei pozwala na lepsze wykorzystanie budżetu."
     },
-    "ZendFramework":{
-      "description":"Jako jeden z najbardziej wspieranych przez społeczność, a zarazem najbardziej zaawansowanych frameworków, Zend jest wiodącym narzędziem wykorzystywanym w naszych projektach. Decyduje o tym wiele czynników, z których na pierwszy plan wychodzi jego modułowość, pozwalająca na niemal stuprocentowe przystosowanie architektury frameworku do naszych potrzeb. Nie bez znaczenia jest również jego fundament – ze względu na swoją powszechność, język PHP, w którym Zend został napisany, przyczynia się do uniknięcia wszelkich problemów związanych z hostingiem systemu. W swoim zespole posiadamy certyfikowanych architektów frameworku, którzy oprócz bazowania na dostępnych rozwiązaniach, tworzą własne biblioteki, w pełni dostosowane do opisywanego narzędzia. Nasi programiści są ponadto aktywnymi kontrybutorami zarówno w tym, jak i innych projektach, mogąc pochwalić się zainicjowaniem w biurze Code Mine współpracy Zend Framework 3 z Apigility. To właśnie biblioteki tego projektu umożliwiają nam tworzenie zgodnych ze standardami systemów back-endowych dostarczających REST Api, które stanowią największą liczbę naszych projektów opartych na frameworku."
+    "ZendFramework": {
+      "description": "Jako jeden z najbardziej wspieranych przez społeczność, a zarazem najbardziej zaawansowanych frameworków, Zend jest wiodącym narzędziem wykorzystywanym w naszych projektach. Decyduje o tym wiele czynników, z których na pierwszy plan wychodzi jego modułowość, pozwalająca na niemal stuprocentowe przystosowanie architektury frameworku do naszych potrzeb. Nie bez znaczenia jest również jego fundament – ze względu na swoją powszechność, język PHP, w którym Zend został napisany, przyczynia się do uniknięcia wszelkich problemów związanych z hostingiem systemu. W swoim zespole posiadamy certyfikowanych architektów frameworku, którzy oprócz bazowania na dostępnych rozwiązaniach, tworzą własne biblioteki, w pełni dostosowane do opisywanego narzędzia. Nasi programiści są ponadto aktywnymi kontrybutorami zarówno w tym, jak i innych projektach, mogąc pochwalić się zainicjowaniem w biurze Code Mine współpracy Zend Framework 3 z Apigility. To właśnie biblioteki tego projektu umożliwiają nam tworzenie zgodnych ze standardami systemów back-endowych dostarczających REST Api, które stanowią największą liczbę naszych projektów opartych na frameworku."
     }
   },
-  "PAGETITLE":{
+  "PAGETITLE": {
     "prefix": "Code-Mine"
   },
-
   "home": "home",
   "aboutus": "onas",
-
   "offer": "oferta",
   "contact": "kontakt",
   "audit": "audyty",
   "not-found": "nie-ma",
-
   "e-comerce-for-telecom": "e-comerce-dla-telecomu",
-
   "wecreate": "tworzymy",
   "solutionstoyourbusinessproblems": "solutions-to-your-business-problems",
   "internalapps": "internal-apps",
-  "b2capplications":"b2c-applications",
-  "socialnetworking":"social-networking",
-  "tvapps":"tv-apps",
-
-  "tools":"narzedzia",
-  "technologies":"technologie"
+  "b2capplications": "b2c-applications",
+  "socialnetworking": "social-networking",
+  "tvapps": "tv-apps",
+  "tools": "narzedzia",
+  "technologies": "technologie"
 }
 
