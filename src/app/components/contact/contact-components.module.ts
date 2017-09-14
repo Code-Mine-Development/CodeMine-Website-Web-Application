@@ -4,6 +4,7 @@ import {ContactInfoComponent} from './contact-info/contact-info.component';
 import {SharedModule} from '../../shared/shared.module';
 import {TranslateModule} from '@ngx-translate/core';
 import { CompanyInformationsComponent } from './company-informations/company-informations.component';
+import {CopyToClipboardService} from './service/copy-to-clipboard.service';
 
 @NgModule({
     declarations: [
@@ -19,7 +20,9 @@ import { CompanyInformationsComponent } from './company-informations/company-inf
         ContactInfoComponent,
         CompanyInformationsComponent
     ],
-    providers: [],
+    providers: [
+        CopyToClipboardService
+    ],
 })
 export class ContactComponentModule {
 }

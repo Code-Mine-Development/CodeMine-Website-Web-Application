@@ -1,5 +1,6 @@
 import {Component, Input} from '@angular/core';
 import {Company} from '../../../shared/interface/company.interface';
+import {CopyToClipboardService} from '../service/copy-to-clipboard.service';
 
 
 @Component({
@@ -10,5 +11,12 @@ import {Company} from '../../../shared/interface/company.interface';
 export class ContactInfoComponent {
   @Input() company: Company;
 
-  constructor() {}
+  currentCopy;
+
+  constructor( private copyService: CopyToClipboardService) {
+  }
+
+  copy(text:string){
+    this.currentCopy = this.copyService.copy(text) ? text : "";
+  }
 }

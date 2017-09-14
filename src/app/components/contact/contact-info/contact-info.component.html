@@ -1,36 +1,24 @@
-<div class="section-contact">
-  <div class="contact-panel">
-      <div class="row row-contact">
-        <div class="col-contact contact-box col-video">
-          <video autoplay="autoplay" loop="loop" poster="../assets/images/city-of-mineshaft-timelapse-cover.jpg">
-            <source src="../assets/videos/timelapse-chorzowska-2.mp4" type="video/mp4">
-          </video>
-          <div class="overlay"></div>
-
-          <h1 class="contact-box-header">{{'COMPANY.adressTitle' | translate}}</h1>
-          <div class="row contact text">
-            <div class="contact-email">{{company?.email }}</div>
-            <div class="contact-phone">{{company?.phone }}</div>
-          </div>
-          <div class="row address text">
-            <div>{{company?.street }} {{company?.apartment}}</div>
-            <div>{{company?.city}}, {{company?.country}}</div>
-          </div>
-          <div class="row localization text">
-            <div class="contact-local">{{'COMPANY.showOnMap' | translate}}</div>
-            <a href="https://www.google.com/maps/dir/Current+Location/3+Maja+18+Katowice+Poland"><img src="assets/icons/map-marker/map.svg" alt="map marker"></a>
-          </div>
-          <i class="fa fa-map-marker" aria-hidden="true"></i>
-        </div>
-        <div class="col-contact contact-box">
-          <h1 class="contact-box-header">{{'COMPANY.hireUs' | translate}}</h1>
-          <div class="row row-brief text">
-            <span>{{'COMPANY.describeUsYourProject' | translate}}</span>
-          </div>
-          <div class="row row-brief">
-            <button class="btn btn-yellow btn-shadow btn-large">{{'COMPANY.navigateToBrief' | translate}}</button>
-          </div>
-        </div>
-      </div>
-  </div>
-</div>
+<figure>
+  <figcaption>Katowice timelapse</figcaption>
+  <video autoplay loop src="assets/videos/timelaps.mp4" poster="assets/images/timelapseSzyb.png"></video>
+</figure>
+<section class="container address">
+  <p (click)="copy(company.email)">{{company.email}} <span class="hover" [class.copied]="currentCopy === company.email">{{(currentCopy === company.email ? 'CONTACT.copied' : 'CONTACT.clickToCopy') | translate}}</span>
+  </p>
+  <p (click)="copy(company.phone)">{{company.phone}} <span class="hover" [class.copied]="currentCopy === company.phone">{{(currentCopy === company.phone ? 'CONTACT.copied' : 'CONTACT.clickToCopy') | translate}}</span>
+  </p>
+  <address>
+    <a href="https://www.google.com/maps/dir/Current+Location/3+Maja+18+Katowice+Poland">
+      <span>{{company.street}} {{company.apartment}} </span>
+      <span>{{company.city}}, {{company.country}}</span>
+    </a>
+    <span class="hover">{{'CONTACT.clickToNavigate' | translate}}</span>
+  </address>
+</section>
+<section class="container info">
+  <p class="info">CODE MINE SP Z O O KRS: 0000582589, NIP: 6342848860, REGON: 362863893; SĄD REJONOWY KATOWICE_WSCHÓD W
+    KATOWICACH, VIII WYDZIAŁ GOSPODARCZY KRAJOWEGO REJESTRU SĄDOWEGO</p>
+</section>
+<svg viewBox="0,0 17,2">
+  <polygon fill="#282828" points="0,0 0,1 8,1 9,2 17,2 17,0"></polygon>
+</svg>
