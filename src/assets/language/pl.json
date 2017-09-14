@@ -168,7 +168,8 @@
       "ourRole": "Nasze zadanie",
       "workingScheme": "Schemat działania aplikacji",
       "businessModel": "Model biznesowy",
-      "implementation": "Wdrożenie"
+      "implementation": "Wdrożenie",
+      "arch/tech/tool": "Architektura/języki/narzędzia"
     },
     "BrighterVision": {
       "title": "Brigter Vision Growth Platform",
@@ -176,14 +177,10 @@
       "shortDescription": "Aplikacja skierowana do amerykańskich terapeutów, pozwalająca na przeglądanie puli dostępnych postów oraz ich publikację w formie bloga.",
       "description": {
         "part1": "Brighter Vision Growth Platform jest odpowiedzią na zjawisko braku czasu poświęconego na marketing – jak chociażby prowadzenie bloga, zauważalnego wśród amerykańskich terapeutów, którzy całą swoją energię przeznaczają na zarządzanie własną praktyką, dbając o każdy, nawet najmniejszy szczegół.",
-        "postBooking": "Rezerwacja postów",
         "part2": "Aplikacja pozwala na przeglądanie gotowych, dostępnych postów oraz na ich publikację na blogu opartym o Wordpressa w wybranym przez siebie terminie. Jej sercem jest prezentujący zarówno opublikowane, jak i przyszłe posty, ogromny kalendarz, szczegółowo dopracowany pod kątem UI oraz UX.",
         "part3": "Dzięki dobrej kategoryzacji, a także świetnemu mechanizmowi rezerwowania postów, użytkownik jest w stanie zarezerwować wybraną publikację przy pomocy zaledwie trzech kliknięć.",
-        "calendar": "Kalendarz",
-        "businessModel": "Model biznesowy",
         "part4": "Zważywszy na model biznesowy, który obok darmowych, zakłada również płatne posty, aplikacja została zintegrowana z systemem płatności Chargify. Użytkownik ma do wyboru wykupienie pojedynczych publikacji lub też miesięcznych subskrypcji. Posty darmowe przyznawane są z kolei miesięcznie, mając określony limit.",
         "part5": "Każdy user dostaje trzy bezpłatne publikacje, które w przypadku niewykorzystania, przechodzą na kolejny miesiąc. Łącznie, użytkownik może uzbierać pokaźną sumę publikacji, których historię może łatwo podejrzeć dzięki zastosowanemu systemowi zliczania sald podobnych do systemów bankowości, opartemu na założeniach Event Sourcingu.",
-        "archLangTools": "Architektura / języki / narzędzia",
         "part6": "Pod względem architektury, Growth Platform skupia dwie aplikacje – serwerową oraz kliencką. Aplikacja serwerowa (back-endowa) napisana została w języku PHP, z wykorzystywaniem Zend Framework 2 i odpowiada za kluczowe działania, do których należą głównie publikacja postów, zarządzanie saldem klienta czy zarządzanie publikacjami. ",
         "part7": "Z kolei napisana przy użyciu AngularJS, aplikacja kliencka przyjmuje formę panelu administracyjnego, wykorzystującego komunikację REST API, dostarczaną przez wcześniej wspomnianą, aplikacja serwerową."
       }
@@ -194,7 +191,6 @@
       "shortDescription": "Samodzielne moduły oprogramowania przyczyniające się do stworzenia nowoczesnej platformy e-commerce dla wiodących operatorów telekomunikacyjnych w Europie.",
       "description": {
         "part1": "Od początku 2017 roku współpracujemy z dostawcą oprogramowania, rozpowszechniającego swoje rozwiązania wśród wielu wiodących firm z branży telekomunikacyjnej na rynku niemieckim, holenderskim, indyjskim oraz tureckim.",
-        "postBooking": "Rezerwacja postów",
         "part2": "Udostępniając czterech działających autonomicznie pracowników, naszym zadaniem jest dostarczanie klientowi samodzielnych modułów oprogramowania, finalnie przekazywanych zewnętrznym zespołom. Z tego względu, na każdym kroku czeka na nas sporo wyzwań, z których głównymi są:",
         "part3": "wymóg zdolności naszych mikroserwisów do integracji z wieloma, często przestarzałymi rozwiązaniami klasy eneterprise; ",
         "part4": "mnogość obecnych i wymaganych technologii oraz narzędzi (PHP, Java, C#, Apache Kafka, PostgreSQL, Microsoft BizTalk, Magento);",

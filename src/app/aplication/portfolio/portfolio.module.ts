@@ -16,6 +16,7 @@ import { TripbuzzComponent } from './portfolio-details/tripbuzz/tripbuzz.compone
 import { TelecomComponent } from './portfolio-details/telecom/telecom.component';
 import { ZorgindicatorComponent } from './portfolio-details/zorgindicator/zorgindicator.component';
 import { SmartHomeComponent } from './portfolio-details/smart-home/smart-home.component';
+import { BrighterVisionComponent } from './portfolio-details/brighter-vision/brighter-vision.component';
 
 
 
@@ -29,7 +30,8 @@ import { SmartHomeComponent } from './portfolio-details/smart-home/smart-home.co
         TripbuzzComponent,
         TelecomComponent,
         ZorgindicatorComponent,
-        SmartHomeComponent
+        SmartHomeComponent,
+        BrighterVisionComponent
     ],
     imports: [
         CommonModule,

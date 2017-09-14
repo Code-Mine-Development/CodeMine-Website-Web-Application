@@ -13,6 +13,7 @@ import {TripbuzzComponent} from './portfolio-details/tripbuzz/tripbuzz.component
 import {TelecomComponent} from './portfolio-details/telecom/telecom.component';
 import {ZorgindicatorComponent} from './portfolio-details/zorgindicator/zorgindicator.component';
 import {SmartHomeComponent} from './portfolio-details/smart-home/smart-home.component';
+import {BrighterVisionComponent} from './portfolio-details/brighter-vision/brighter-vision.component';
 
 const portfolioRoutes: Routes = [
   {
@@ -66,6 +67,14 @@ const portfolioRoutes: Routes = [
       },
       {
         path: 'smart-home', component: SmartHomeComponent,
+        resolve: {
+          portfolio: PortfolioResolver,
+          tools: ToolsResolver,
+          technologies: TechnologiesResolver
+        }
+      },
+      {
+        path: 'brigter-vision-growth-platform', component: BrighterVisionComponent,
         resolve: {
           portfolio: PortfolioResolver,
           tools: ToolsResolver,

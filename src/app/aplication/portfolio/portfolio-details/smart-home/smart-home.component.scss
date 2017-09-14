@@ -1,0 +1,95 @@
+@import "../../../../../assets/styles/mediaQueries";
+
+:host {
+  font-weight: 500;
+  letter-spacing: 0;
+  & > section {
+    margin-top: 100px;
+    margin-bottom: 100px;
+    @media #{$phone} {
+      margin-top: 50px;
+      margin-bottom: 50px;
+    }
+  }
+  .ourRole, .architecture {
+    padding: 100px 0;
+    @media #{$phone} {
+      padding: 50px 0;
+    }
+  }
+
+  .ourRole .container, .implementation {
+    display: flex;
+    align-items: center;
+    & > * {
+      width: 50%;
+    }
+    @media #{$phone} {
+      flex-wrap: wrap;
+      & > * {
+        width: 100%;
+      }
+    }
+  }
+
+  figure {
+    margin: 0;
+  }
+
+  article {
+    h3 {
+      margin: 0 0 20px;
+    }
+    p {
+      max-width: 570px;
+      margin: 0;
+    }
+  }
+}
+
+.ourRole {
+  background: #FFDE07;
+  figure {
+    text-align: center;
+    figcaption {
+      display: none;
+    }
+    img {
+      width: 40%;
+    }
+  }
+  @media #{$phone} {
+    article {
+      margin-top: 40px;
+    }
+  }
+}
+
+.implementation {
+  figure {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-end;
+    figcaption {
+      display: none;
+    }
+    img {
+      width: 25%;
+      &:nth-of-type(2) {
+        width: 35%
+      }
+    }
+    @media #{$phone} {
+      margin-top: 40px;
+    }
+  }
+
+}
+
+:host > .architecture {
+  background: #FFDE07;
+  margin-bottom: 0;
+  h3 {
+    margin: 0 0 40px;
+  }
+}

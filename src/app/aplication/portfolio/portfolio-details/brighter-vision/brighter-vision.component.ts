@@ -1,15 +1,15 @@
-import {Component, OnInit} from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import {PortfolioDetailsModel} from '../portfolio-details.model';
-import {PreviousPositionService} from '../../../../shared/services/previous-position.service';
 import {LocalizeRouterService} from 'localize-router';
+import {PreviousPositionService} from '../../../../shared/services/previous-position.service';
 import {Router, ActivatedRoute} from '@angular/router';
 
 @Component({
-  selector: 'app-tandarts',
-  templateUrl: './tandarts.component.html',
-  styleUrls: ['./tandarts.component.scss']
+  selector: 'app-brighter-vision',
+  templateUrl: './brighter-vision.component.html',
+  styleUrls: ['./brighter-vision.component.scss']
 })
-export class TandartsComponent extends PortfolioDetailsModel implements OnInit {
+export class BrighterVisionComponent extends PortfolioDetailsModel implements OnInit {
 
   protected id = 'brigter-vision-growth-platform';
 
@@ -19,5 +19,4 @@ export class TandartsComponent extends PortfolioDetailsModel implements OnInit {
               prevPosition: PreviousPositionService) {
     super(route, router, localize, prevPosition);
   }
-
 }
