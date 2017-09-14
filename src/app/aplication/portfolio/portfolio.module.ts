@@ -15,6 +15,7 @@ import { TandartsComponent } from './portfolio-details/tandarts/tandarts.compone
 import { TripbuzzComponent } from './portfolio-details/tripbuzz/tripbuzz.component';
 import { TelecomComponent } from './portfolio-details/telecom/telecom.component';
 import { ZorgindicatorComponent } from './portfolio-details/zorgindicator/zorgindicator.component';
+import { SmartHomeComponent } from './portfolio-details/smart-home/smart-home.component';
 
 
 
@@ -27,7 +28,8 @@ import { ZorgindicatorComponent } from './portfolio-details/zorgindicator/zorgin
         TandartsComponent,
         TripbuzzComponent,
         TelecomComponent,
-        ZorgindicatorComponent
+        ZorgindicatorComponent,
+        SmartHomeComponent
     ],
     imports: [
         CommonModule,

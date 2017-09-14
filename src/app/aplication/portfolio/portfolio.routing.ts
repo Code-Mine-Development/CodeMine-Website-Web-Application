@@ -12,6 +12,7 @@ import {TandartsComponent} from './portfolio-details/tandarts/tandarts.component
 import {TripbuzzComponent} from './portfolio-details/tripbuzz/tripbuzz.component';
 import {TelecomComponent} from './portfolio-details/telecom/telecom.component';
 import {ZorgindicatorComponent} from './portfolio-details/zorgindicator/zorgindicator.component';
+import {SmartHomeComponent} from './portfolio-details/smart-home/smart-home.component';
 
 const portfolioRoutes: Routes = [
   {
@@ -57,6 +58,14 @@ const portfolioRoutes: Routes = [
       },
       {
         path: 'zorgindicator', component: ZorgindicatorComponent,
+        resolve: {
+          portfolio: PortfolioResolver,
+          tools: ToolsResolver,
+          technologies: TechnologiesResolver
+        }
+      },
+      {
+        path: 'smart-home', component: SmartHomeComponent,
         resolve: {
           portfolio: PortfolioResolver,
           tools: ToolsResolver,

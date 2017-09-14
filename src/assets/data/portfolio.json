@@ -629,7 +629,7 @@
     "subTitle": "PORTFOLIO.SmartHome.subTitle",
     "description": "PORTFOLIO.SmartHome.description",
     "mainImage": "http://blog.oxforddictionaries.com/wp-content/uploads/mountain-names.jpg",
-    "thumbnail": "http://blog.oxforddictionaries.com/wp-content/uploads/mountain-names.jpg",
+    "thumbnail": "assets/images/portfolio-images/smarthome_bulp.svg",
     "detailsTemplate": [
       {
         "section": "header",
