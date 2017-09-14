@@ -9,7 +9,7 @@ import {Company} from '../../shared/interface/company.interface';
 })
 export class FooterComponent {
   company: Company;
-  backgroundColor = '#000000';
+  backgroundColor = '#282828';
 
   constructor(contact: ContactService) {
     contact.getCompany().subscribe((company) => {

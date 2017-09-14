@@ -22,7 +22,7 @@ export class SocialServiceComponent {
 
   @Output() hoverColor = new EventEmitter();
 
-  private defaultColor = '#000000';
+  private defaultColor = '#282828';
 
   constructor() {
   }

@@ -8,7 +8,7 @@ export class CopyToClipboardService {
 
 
   copy(text) {
-    let textArea = document.createElement("textarea");
+    const textArea = document.createElement('textarea');
 
     textArea.style.position = 'fixed';
     textArea.style.top = '0';

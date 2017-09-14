@@ -13,10 +13,10 @@ export class ContactInfoComponent {
 
   currentCopy;
 
-  constructor( private copyService: CopyToClipboardService) {
+  constructor(private copyService: CopyToClipboardService) {
   }
 
-  copy(text:string){
-    this.currentCopy = this.copyService.copy(text) ? text : "";
+  copy(text: string) {
+    this.currentCopy = this.copyService.copy(text) ? text : '';
   }
 }
