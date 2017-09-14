@@ -371,9 +371,18 @@
     }
   },
   "CONTACT": {
+    "contactUs": "Skontaktuj się z nami!",
+    "name": "Nazwa",
+    "myName": "Nazywam się",
+    "namePlaceHolder": "podaj imię",
+    "emailPlaceHolder": "podaj swój adres email",
     "clickToCopy": "Naciśnij aby skopiować",
     "clickToNavigate": "Naciśnij aby przejść do Google Maps",
-    "copied": "Skopiowano!"
+    "copied": "Skopiowano!",
+    "message": "wiadomość",
+    "hello": "Cześć,",
+    "send": "Wyślij",
+    "requestEstimate": "lub poproś o wycenę swojego projektu"
   },
   "TECHNOLOGIES": {
     "title": "Technologie",

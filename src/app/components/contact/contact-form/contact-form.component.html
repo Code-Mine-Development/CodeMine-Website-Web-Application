@@ -1,0 +1,29 @@
+<form (submit)="onSubmit($event, form)" #form="ngForm">
+  <h1>{{'CONTACT.contactUs' | translate}}</h1>
+  <fieldset class="name">
+    <legend>{{'CONTACT.myName' | translate}}</legend>
+    <p>
+      <label for="contact_name">{{'CONTACT.name' | translate}}</label>
+      <input id="contact_name" type="text" [(ngModel)]="name" name="name"
+             [attr.placeholder]="'CONTACT.namePlaceHolder' | translate">
+      <label for="contact_email">E-mail</label>
+      <input id="contact_email" type="text" [(ngModel)]="email" name="email"
+             [attr.placeholder]="'CONTACT.emailPlaceHolder' | translate">
+    </p>
+  </fieldset>
+  <fieldset class="message">
+    <legend>{{'CONTACT.message' | translate}}</legend>
+    <p>
+      <textarea rows="6" #textArea [(ngModel)]="message"  name="message" (keyup)="adjustTextArea(textArea)"></textarea>
+    </p>
+  </fieldset>
+  <fieldset>
+    <button type="submit" class="btn btn-yellow btn-large">{{'CONTACT.send' | translate}}</button>
+  </fieldset>
+</form>
+<a>
+  <p class="navigateToEstimate">
+    <span> > </span>
+    <span>{{'CONTACT.requestEstimate' | translate}}</span>
+  </p>
+</a>
