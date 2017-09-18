@@ -1,4 +1,4 @@
-import {Component, OnInit, HostBinding} from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import {ActivatedRoute, Data} from '@angular/router';
 import {Company} from '../../shared/interface/company.interface';
 import {fadeInAnimation} from '../../shared/routing.animation';
@@ -13,7 +13,6 @@ import {fadeInAnimation} from '../../shared/routing.animation';
 
 export class ContactComponent implements OnInit {
   company: Company;
-  @HostBinding('class.container') container = true;
 
   constructor(private route: ActivatedRoute) { }
 

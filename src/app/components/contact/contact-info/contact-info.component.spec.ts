@@ -3,6 +3,7 @@ import { ContactInfoComponent } from './contact-info.component';
 import {Component} from '@angular/core';
 import {MockCompany} from '../../../shared/mocks/company.mock';
 import {TranslateModule} from '@ngx-translate/core';
+import {CopyToClipboardService} from '../service/copy-to-clipboard.service';
 
 @Component({
   selector: 'app-fake-contact-info-wrapper',
@@ -25,6 +26,11 @@ describe('ContactInfoComponent', () => {
         TranslateModule.forRoot()
       ],
       declarations: [ FakeWrapperContactInfoComponent, ContactInfoComponent],
+      providers: [
+        {provide: CopyToClipboardService, useValue: {
+          copy: (text) => true
+        }}
+      ]
     })
     .compileComponents();
   }));

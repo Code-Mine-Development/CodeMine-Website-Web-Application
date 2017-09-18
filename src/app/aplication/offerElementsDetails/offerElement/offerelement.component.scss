@@ -85,7 +85,6 @@
     .col {
 
       &.description {
-        min-height: 100%;
         display: flex;
         align-items: center;
       }
@@ -115,38 +114,27 @@
         overflow: hidden;
       }
       div {
-        max-height: 572px;
         width: 100%;
-        height: 100%;
         position: relative;
+        &:after {
+          content: '';
+          display: block;
+          width:100%;
+          padding-bottom: 58% ;
+        }
       }
       img, video {
         position: absolute;
-        left: 0;
-        bottom: -5%;
-        transform: scale(.88);
-        height: 100%;
-        @media #{$tablet}{
-          position: relative;
-          width: 100%;
-          height: auto;
-          transform: scale(1.7);
-          transform-origin: left top;
-        }
+        right: 0;
+        bottom: 0;
+        width:100%;
       }
       img.laptop {
-        filter: drop-shadow(0 0 10px rgba(0, 0, 0, .3));
-        transform: scale(1.31);
-        bottom: -6.8%;
-        left: 0.32%;
-        @media #{$tablet}{
-          position: absolute;
-          width: 100%;
-          height: auto;
-          bottom: initial;
-          top: 0;
-          transform: translate(-40%, -28%) scale(2.2);
-        }
+        filter: drop-shadow(0 0 10px rgba(0, 0, 0, .5));
+        transform-origin: bottom right;
+        transform: scale(1.045);
+        bottom: 0;
+        right: 0;
       }
 
     }
