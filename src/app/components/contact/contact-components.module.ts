@@ -11,7 +11,7 @@ import {FormsModule} from '@angular/forms';
 @NgModule({
     declarations: [
         ContactInfoComponent,
-        ContactFormComponent,
+        ContactFormComponent
     ],
     imports: [
         CommonModule,

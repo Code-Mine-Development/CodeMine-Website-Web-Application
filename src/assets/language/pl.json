@@ -379,7 +379,12 @@
     "message": "wiadomość",
     "hello": "Cześć,",
     "send": "Wyślij",
-    "requestEstimate": "lub poproś o wycenę swojego projektu"
+    "requestEstimate": "lub poproś o wycenę swojego projektu",
+    "form": {
+      "require": "To pole jest wymagane",
+      "pattern": "format emaila jest nieprawidowy",
+      "sthWentWrong": "Niepoprawna zawartość pola"
+    }
   },
   "TECHNOLOGIES": {
     "title": "Technologie",

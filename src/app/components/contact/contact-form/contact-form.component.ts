@@ -32,7 +32,6 @@ export class ContactFormComponent implements OnInit {
   adjustTextArea(textArea) {
     const scrollHeight = textArea.scrollHeight,
       clientHeight = textArea.clientHeight;
-    console.log(scrollHeight, clientHeight);
     textArea.style.height = scrollHeight > clientHeight ? `${scrollHeight}px` : '';
   }
 
