@@ -38,7 +38,7 @@ export class ContactFormComponent implements OnInit {
   onSubmit(event, form: NgForm) {
     event.preventDefault();
     if (form.valid) {
-      this.contactService.sendRequest(form.value);
+      this.contactService.sendContactForm(form.value);
     }
   }
 

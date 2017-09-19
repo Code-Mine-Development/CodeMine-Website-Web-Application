@@ -6,6 +6,7 @@ import {MockCompany} from '../../shared/mocks/company.mock';
 import {ContactComponentModule} from '../../components/contact/contact-components.module';
 import {TranslateModule} from '@ngx-translate/core';
 import {NoopAnimationsModule} from '@angular/platform-browser/animations';
+import {Http} from '@angular/http';
 
 describe('ContactComponent', () => {
     let component: ContactComponent;
@@ -13,8 +14,9 @@ describe('ContactComponent', () => {
 
     const router = {
         navigate: jasmine.createSpy('navigate')
-    };
-
+    }, http = {
+      post: jasmine.createSpy('post')
+    }
 
     beforeEach(async(() => {
         TestBed.configureTestingModule({
@@ -35,7 +37,8 @@ describe('ContactComponent', () => {
                         }
                     }
                 },
-                {provide: Router, useValue: router}
+                {provide: Router, useValue: router},
+                {provide: Http, useValue: http}
             ]
         })
             .compileComponents();

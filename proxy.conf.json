@@ -1,0 +1,6 @@
+{
+  "/api": {
+    "target": "https://uma80bpn0c.execute-api.us-east-1.amazonaws.com/prod/CommunicationGateway",
+    "secure": true
+  }
+}
