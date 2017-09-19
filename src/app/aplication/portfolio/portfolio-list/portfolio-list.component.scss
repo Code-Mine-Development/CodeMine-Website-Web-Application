@@ -1,4 +1,32 @@
-:host{
-  margin-top:160px;
-  display:block;
+:host {
+  margin-top: 160px;
+  display: block;
+  position: relative;
+  & > * {
+    position: relative;
+    z-index: 35;;
+  }
+
+  .cta {
+    padding: 200px 0;
+    text-align: center;
+    h2 {
+      font-weight: 800;
+      font-size: 36px;
+    }
+    .btn{
+      outline: none;
+      border: 0;
+      background: #FFFFFF;
+    }
+  }
+
+  & > svg {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    z-index: 30;
+    width: 100%;
+  }
+
 }

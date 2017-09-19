@@ -1,34 +1,25 @@
-:host{
-  width:100%;
+:host {
+  width: 100%;
   display: block;
   overflow: hidden;
   letter-spacing: initial;
   position: relative;
 }
-.cta{
-    height: 50vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    h2{
-	   font-weight: 500;
-	   font-size: 30px;
+
+/deep/ .right {
+  .container {
+    .project {
+      flex-direction: row-reverse;
+      .project-details {
+        .technologies {
+          flex-direction: row-reverse;
+        }
+        .project-tech {
+          right: -5em;
+          left: inherit !important;
+          align-self: flex-end;
+        }
+      }
     }
+  }
 }
-/deep/ .right{
-    .container {
-	   .project {
-		  flex-direction: row-reverse;
-		  .project-details {
-			 .technologies {
-				flex-direction: row-reverse;
-			 }
-			 .project-tech {
-				right: -5em;
-				left: inherit!important;
-				align-self: flex-end;
-			 }
-		  }
-	   }
-    }}
