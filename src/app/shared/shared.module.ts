@@ -25,7 +25,7 @@ import {ToolTipComponent} from './ui-elements/tool-tip/tool-tip.component';
     ToolTipDirective,
     ToolTipComponent
   ],
-  entryComponents:[
+  entryComponents: [
     ToolTipComponent
   ]
 

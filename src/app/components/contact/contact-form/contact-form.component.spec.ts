@@ -18,7 +18,7 @@ describe('ContactFormComponent', () => {
       declarations: [ ContactFormComponent ],
       providers: [
         {provide: ContactFormService, useValue: {
-          sendRequest: (datas:string) => true
+          sendRequest: (datas: string) => true
         }}
       ]
     })

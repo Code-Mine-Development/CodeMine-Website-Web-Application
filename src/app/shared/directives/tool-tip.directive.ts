@@ -13,7 +13,10 @@ export class ToolTipDirective implements OnInit {
 
   private toolTipComponent: ComponentRef<ToolTipComponent>;
 
-  constructor(private ngModel: NgModel, private componentFactoryResolver: ComponentFactoryResolver, private viewContainerRef: ViewContainerRef, private ngZone:NgZone) {
+  constructor(private ngModel: NgModel,
+              private componentFactoryResolver: ComponentFactoryResolver,
+              private viewContainerRef: ViewContainerRef,
+              private ngZone: NgZone) {
 
   }
 
@@ -27,23 +30,23 @@ export class ToolTipDirective implements OnInit {
       this.updateErrors();
     });
 
-    this.ngModel.formDirective.ngSubmit.subscribe( () => {
+    this.ngModel.formDirective.ngSubmit.subscribe(() => {
       this.updateErrors();
     });
 
     this.insertComponent();
   }
 
-  updateErrors(){
-      if (!this.toolTipComponent || (!this.ngModel.touched && !this.ngModel.formDirective.submitted && this.ngModel.pristine)) {
-        return;
-      }
+  updateErrors() {
+    if (!this.toolTipComponent || (!this.ngModel.touched && !this.ngModel.formDirective.submitted && this.ngModel.pristine)) {
+      return;
+    }
 
-      this.toolTipComponent.instance.errors = this.ngModel.errors;
+    this.toolTipComponent.instance.errors = this.ngModel.errors;
 
-      this.toolTipComponent.changeDetectorRef.detectChanges();
+    this.toolTipComponent.changeDetectorRef.detectChanges();
 
-      this.toolTipComponent.instance.ngOnChanges();
+    this.toolTipComponent.instance.ngOnChanges();
   }
 
   insertComponent() {

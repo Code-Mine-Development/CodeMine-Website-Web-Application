@@ -4,17 +4,18 @@ import {Renderer2} from '@angular/core';
 export class PNGFramePreloader {
 
   private static makeIterator(filePath: string, id: number, radius: number) {
-    let nextIndex = 0,
-      fileArray = [],
+    const fileArray = [],
       maxLength = (2 * radius),
       currentPosition = 1;
+    let nextIndex = 0;
 
     fileArray.push(PNGFramePreloader.createIteratorObject(filePath, id));
 
     while (fileArray.length < maxLength) {
       fileArray.push(PNGFramePreloader.createIteratorObject(filePath, id + currentPosition));
-      if(id - currentPosition > 0)
+      if (id - currentPosition > 0) {
         fileArray.push(PNGFramePreloader.createIteratorObject(filePath, id - currentPosition));
+      }
     }
 
     return {
@@ -45,14 +46,13 @@ export class PNGFramePreloader {
   }
 
 
-
   constructor(private renderer: Renderer2, private filePath: string, private radius: number) {
   }
 
   addLoader(id) {
-    let iterator = PNGFramePreloader.makeIterator(this.filePath, id, this.radius),
-      element = this.renderer.createElement('img'),
-      iteratorNext: any = iterator.next();
+    const iterator = PNGFramePreloader.makeIterator(this.filePath, id, this.radius),
+      element = this.renderer.createElement('img');
+    let iteratorNext: any = iterator.next();
 
     this.renderer.listen(element, 'load', () => {
 
@@ -67,7 +67,7 @@ export class PNGFramePreloader {
     element.src = iteratorNext.done ? '' : iteratorNext.value;
   }
 
-  getPath(frame:number){
+  getPath(frame: number) {
     return PNGFramePreloader.createIteratorObject(this.filePath, frame);
   }
 

@@ -1,6 +1,7 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { ToolTipComponent } from './tool-tip.component';
+import {TranslateModule} from '@ngx-translate/core';
 
 describe('ToolTipComponent', () => {
   let component: ToolTipComponent;
@@ -8,6 +9,9 @@ describe('ToolTipComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
+      imports: [
+        TranslateModule.forRoot()
+      ],
       declarations: [ ToolTipComponent ]
     })
     .compileComponents();

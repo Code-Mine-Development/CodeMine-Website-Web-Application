@@ -13,10 +13,11 @@ export class ToolTipComponent implements OnChanges {
   @HostBinding('class.visible') visible = false;
 
   private static getMessage(list) {
-    if (!list)
+    if (!list) {
       return;
+    }
 
-    let message = "";
+    let message = '';
 
     if (list.required) {
       message = 'CONTACT.form.require';
@@ -42,7 +43,7 @@ export class ToolTipComponent implements OnChanges {
   constructor(private element: ElementRef) {
   }
 
-  @HostListener('click', []) onClick(){
+  @HostListener('click', []) onClick() {
     this.visible = false;
   }
 
@@ -60,8 +61,8 @@ export class ToolTipComponent implements OnChanges {
     return ToolTipComponent.getMessage(list);
   }
 
-  setVisible(){
-    if(this.errors) {
+  setVisible() {
+    if (this.errors) {
       this.visible = true;
     } else {
       this.visible = false;
@@ -72,7 +73,9 @@ export class ToolTipComponent implements OnChanges {
     if (!this.element || !this.element.nativeElement) {
       return;
     }
-    const spaceAfterContainer = window.innerWidth - (ToolTipComponent.calculateFullOffsetLeft(this.element.nativeElement.offsetParent) + this.element.nativeElement.offsetParent.offsetWidth);
+    const spaceAfterContainer = window.innerWidth -
+      (ToolTipComponent.calculateFullOffsetLeft(this.element.nativeElement.offsetParent) +
+      this.element.nativeElement.offsetParent.offsetWidth);
 
     if (spaceAfterContainer > this.element.nativeElement.offsetWidth) {
       this.bottom = false;

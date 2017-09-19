@@ -9,7 +9,7 @@ export class TestComponent implements OnInit {
 
   @ViewChild('target') target;
 
-  private currentFrame = 0;
+  currentFrame = 0;
   private videoFrames = 1621;
   private videoDuration = 30000;
 
