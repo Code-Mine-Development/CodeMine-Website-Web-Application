@@ -17,6 +17,7 @@ import { TelecomComponent } from './portfolio-details/telecom/telecom.component'
 import { ZorgindicatorComponent } from './portfolio-details/zorgindicator/zorgindicator.component';
 import { SmartHomeComponent } from './portfolio-details/smart-home/smart-home.component';
 import { BrighterVisionComponent } from './portfolio-details/brighter-vision/brighter-vision.component';
+import { ExchangeMoneySystemComponent } from './portfolio-details/exchange-money-system/exchange-money-system.component';
 
 
 
@@ -31,7 +32,8 @@ import { BrighterVisionComponent } from './portfolio-details/brighter-vision/bri
         TelecomComponent,
         ZorgindicatorComponent,
         SmartHomeComponent,
-        BrighterVisionComponent
+        BrighterVisionComponent,
+        ExchangeMoneySystemComponent
     ],
     imports: [
         CommonModule,

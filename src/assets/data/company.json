@@ -150,7 +150,8 @@
       "description": "PEOPLE.adrian.description",
       "image":{
         "normal":"_V3B0159.jpg",
-        "funny":"_V3B0173.jpg"
+        "funny":"_V3B0173.jpg",
+        "funnyCover": "ardian.svg"
       },
       "deskCoordinate": {
         "top": 34.5,

@@ -1,0 +1,130 @@
+:host {
+  letter-spacing: 0;
+}
+
+.ourRole, .exchange-process, .architecture {
+  margin-top: 100px;
+}
+
+.architecture {
+  margin-bottom: 100px;
+}
+
+.ourRole, .implementation, .micro-services {
+  padding: 100px 0;
+}
+
+figure {
+  margin: 0;
+  figcaption {
+    display: none;
+  }
+  img {
+    width: 100%;
+  }
+}
+
+p {
+  font-weight: 500;
+  margin: 0;
+}
+
+h3 {
+  margin: 0 0 20px;
+}
+
+.ourRole {
+  background: #FFDE07;
+  .container {
+    display: flex;
+    align-items: center;
+    & > * {
+      width: 50%;
+    }
+
+    article {
+      p {
+        max-width: 570px;
+      }
+    }
+
+    figure {
+      text-align: center;
+      img {
+        width: 50%;
+      }
+    }
+  }
+}
+
+.implementation {
+  position: relative;
+  .container {
+    display: flex;
+    align-items: center;
+    & > * {
+      width: 50%;
+    }
+
+    article {
+      p {
+        max-width: 570px;
+      }
+    }
+    figure {
+      text-align: center;
+      img {
+        width: 90%;
+      }
+    }
+  }
+  svg {
+    position: absolute;
+    width: 100%;
+    top: 0;
+    right: 0;
+  }
+}
+
+.micro-services {
+  position: relative;
+  background: #FFDE07;
+  .container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    h2 {
+      margin: 0 0 40px;
+      width: 100%;
+    }
+    article {
+      width: 45%;
+      margin-top: 40px;
+      img {
+        height: 80px;
+        margin-right: 10px;
+      }
+      h3 {
+        display: flex;
+        align-items: center;
+      }
+      p {
+        max-width: 570px;
+      }
+    }
+  }
+  svg {
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
+}
+
+.exchange-process {
+  figcaption {
+    font-size: 2.4rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+    display: block;
+  }
+}
