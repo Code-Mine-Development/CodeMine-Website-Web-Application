@@ -20,6 +20,8 @@ export class PersonComponent implements OnInit, AfterViewInit {
   @ViewChild('funnyCover', {read: ElementRef}) funnyCover;
 
   visibleElement;
+  animationInstance;
+  animationElement;
 
   constructor(private renderer: Renderer2) {
   }
@@ -31,16 +33,20 @@ export class PersonComponent implements OnInit, AfterViewInit {
   }
 
   ngOnInit() {
-    this.eventManager.on('click', (person) => this.showPerson(person));
+    this.eventManager.on('click', (pers) => this.showPerson(pers));
+    this.addDrawCoverEvents();
   }
 
-  ngAfterViewInit(){
+  ngAfterViewInit() {
   }
 
   showPerson(person: Employees) {
     this.visibleElement = person;
     this.visible = !!person;
-    this.drawFunnyCover();
+    if (person) {
+      this.drawFunnyCover();
+      console.log(person);
+    }
   }
 
   closeButtonClicked() {
@@ -48,20 +54,35 @@ export class PersonComponent implements OnInit, AfterViewInit {
   }
 
   drawFunnyCover() {
-    console.log(document.querySelector('#funny-cover'));
-    const animationInstance = new Vivus('funny-cover', {
+    if (this.animationInstance) {
+      this.clearSvgBox();
+    }
+
+    this.animationInstance = new Vivus('funny-cover', {
       type: 'delayed',
       animTimingFunction: Vivus.EASE,
       start: 'manual',
-      file: "assets/images/home-svg/logika.svg"
+      file: "assets/images/people/funny_cover/" + this.visibleElement.image.funnyCover,
+      onReady: (elem) => {
+        this.animationElement = elem.el;
+      }
     });
+  }
 
+  clearSvgBox() {
+    this.animationInstance.destroy();
+    if (this.animationElement) {
+      this.funnyCover.nativeElement.removeChild(this.animationElement);
+    }
+  }
+
+  addDrawCoverEvents() {
     this.renderer.listen(this.funnyCover.nativeElement, 'mouseenter', () => {
-      animationInstance.start();
+      this.animationInstance.play();
     });
 
     this.renderer.listen(this.funnyCover.nativeElement, 'mouseleave', () => {
-      animationInstance.reset().stop();
+      this.animationInstance.reset().stop();
     });
   }
 

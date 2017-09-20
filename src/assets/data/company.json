@@ -20,7 +20,8 @@
       },
       "image":{
         "normal":"_V3B0425.jpg",
-        "funny":"_V3B0354.jpg"
+        "funny":"_V3B0354.jpg",
+        "funnyCover": "lysy.svg"
       }
     },
     {
@@ -113,7 +114,8 @@
       "description": "PEOPLE.adamg.description",
       "image":{
         "normal":"_V3B0433.jpg",
-        "funny":"_V3B9999.jpg"
+        "funny":"_V3B9999.jpg",
+        "funnyCover": "adam_g.svg"
       },
       "deskCoordinate": {
         "top": 52,
@@ -166,7 +168,8 @@
       "description": "PEOPLE.piotr.description",
       "image":{
         "normal":"_V3B0360.jpg",
-        "funny":"_V3B0376.jpg"
+        "funny":"_V3B0376.jpg",
+        "funnyCover": "piotrek.svg"
       },
       "deskCoordinate": {
         "top": 38.5,
@@ -216,7 +219,8 @@
       "description": "PEOPLE.wojciech.description",
       "image":{
         "normal":"_V3B0143.jpg",
-        "funny":"_V3B0392.jpg"
+        "funny":"_V3B0392.jpg",
+        "funnyCover": "wojtek.svg"
       },
       "deskCoordinate": {
         "top": 64,
