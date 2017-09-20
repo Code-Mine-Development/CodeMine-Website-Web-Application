@@ -38,7 +38,14 @@ export class ContactFormComponent implements OnInit {
   onSubmit(event, form: NgForm) {
     event.preventDefault();
     if (form.valid) {
-      this.contactService.sendContactForm(form.value);
+      this.contactService.sendContactForm(form.value).subscribe(
+        (result: boolean) => {
+          console.log('We did it! Now let\'s inform user that his message was send successfully')
+        },
+        (error) => {
+          console.log('Ups! something went wrong. We need also to inform user about this')
+        }
+      );
     }
   }
 
