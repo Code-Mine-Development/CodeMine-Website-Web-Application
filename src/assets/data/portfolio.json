@@ -1,68 +1,11 @@
 [
   {
-    "link": "mdlinking",
-    "title": "PORTFOLIO.MDLinking.title",
-    "subTitle": "PORTFOLIO.MDLinking.subTitle",
-    "shortDescription": "PORTFOLIO.MDLinking.shortDescription",
-    "description": "PORTFOLIO.MDLinking.description",
-    "mainImage": "../assets/images/mdlinking-carousel.jpg",
-    "thumbnail": "../assets/icons/mdlinking/MDlinking.svg",
-    "tags": {
-      "products": [
-        "prod1",
-        "prod2",
-        "prod3"
-      ],
-      "technology": [
-        "tech1",
-        "tech2",
-        "tech3"
-      ],
-      "languages": [
-        "lang1",
-        "lang1",
-        "lang1"
-      ]
-    },
-    "tools": [
-      "angular",
-      "gulp",
-      "npm"
-    ],
-    "technologies": [
-      "bash",
-      "html5",
-      "swify",
-      "typescript",
-      "java",
-      "php"
-    ],
-    "homePage": true
-  },
-  {
     "link": "brigter-vision-growth-platform",
     "title": "PORTFOLIO.BrighterVision.title",
     "subTitle": "PORTFOLIO.BrighterVision.subTitle",
-    "description": "PORTFOLIO.BrighterVision.description",
-    "mainImage": "http://blog.oxforddictionaries.com/wp-content/uploads/mountain-names.jpg",
+    "description": "PORTFOLIO.BrighterVision.shortDescription",
+    "mainImage": "assets/images/portfolio-images/brighter_home.png",
     "thumbnail": "../assets/icons/brighter/Brighter.svg",
-    "tags": {
-      "products": [
-        "prod1",
-        "prod2",
-        "prod3"
-      ],
-      "technology": [
-        "tech1",
-        "tech2",
-        "tech3"
-      ],
-      "languages": [
-        "lang1",
-        "lang1",
-        "lang1"
-      ]
-    },
     "tools": [
       "angular",
       "gulp",
@@ -82,26 +25,8 @@
     "link": "e-comerce-for-telecom",
     "title": "PORTFOLIO.telecom.title",
     "subTitle": "PORTFOLIO.telecom.subTitle",
-    "description": "PORTFOLIO.telecom.description",
-    "mainImage": "http://blog.oxforddictionaries.com/wp-content/uploads/mountain-names.jpg",
-    "thumbnail": "http://blog.oxforddictionaries.com/wp-content/uploads/mountain-names.jpg",
-    "tags": {
-      "products": [
-        "prod1",
-        "prod2",
-        "prod3"
-      ],
-      "technology": [
-        "tech1",
-        "tech2",
-        "tech3"
-      ],
-      "languages": [
-        "lang1",
-        "lang1",
-        "lang1"
-      ]
-    },
+    "description": "PORTFOLIO.telecom.shortDescription",
+    "mainImage": "assets/images/portfolio-images/telecom_1.png",
     "tools": [
       "angular",
       "gulp",
@@ -121,26 +46,8 @@
     "link": "exchange",
     "title": "PORTFOLIO.exchange.title",
     "subTitle": "PORTFOLIO.exchange.subTitle",
-    "description": "PORTFOLIO.exchange.description",
+    "description": "PORTFOLIO.exchange.shortDescription",
     "mainImage": "http://blog.oxforddictionaries.com/wp-content/uploads/mountain-names.jpg",
-    "thumbnail": "http://blog.oxforddictionaries.com/wp-content/uploads/mountain-names.jpg",
-    "tags": {
-      "products": [
-        "prod1",
-        "prod2",
-        "prod3"
-      ],
-      "technology": [
-        "tech1",
-        "tech2",
-        "tech3"
-      ],
-      "languages": [
-        "lang1",
-        "lang1",
-        "lang1"
-      ]
-    },
     "tools": [
       "angular",
       "zend-framework",
@@ -158,26 +65,9 @@
     "link": "mid-ocean-brands",
     "title": "PORTFOLIO.MidOceanBrands.title",
     "subTitle": "PORTFOLIO.MidOceanBrands.subTitle",
-    "description": "PORTFOLIO.MidOceanBrands.description",
-    "mainImage": "http://blog.oxforddictionaries.com/wp-content/uploads/mountain-names.jpg",
+    "description": "PORTFOLIO.MidOceanBrands.shortDescription",
+    "mainImage": "assets/images/portfolio-images/midocean_1.png",
     "thumbnail": "../assets/icons/midocean/MidOcean.svg",
-    "tags": {
-      "products": [
-        "prod1",
-        "prod2",
-        "prod3"
-      ],
-      "technology": [
-        "tech1",
-        "tech2",
-        "tech3"
-      ],
-      "languages": [
-        "lang1",
-        "lang1",
-        "lang1"
-      ]
-    },
     "tools": [
       "spring-framework",
       "reactjs",
@@ -192,26 +82,9 @@
     "link": "smart-home",
     "title": "PORTFOLIO.SmartHome.title",
     "subTitle": "PORTFOLIO.SmartHome.subTitle",
-    "description": "PORTFOLIO.SmartHome.description",
+    "description": "PORTFOLIO.SmartHome.shortDescription",
     "mainImage": "http://blog.oxforddictionaries.com/wp-content/uploads/mountain-names.jpg",
     "thumbnail": "assets/images/portfolio-images/smarthome_bulp.svg",
-    "tags": {
-      "products": [
-        "prod1",
-        "prod2",
-        "prod3"
-      ],
-      "technology": [
-        "tech1",
-        "tech2",
-        "tech3"
-      ],
-      "languages": [
-        "lang1",
-        "lang1",
-        "lang1"
-      ]
-    },
     "tools": [
       "symfony",
       "postgresql"
@@ -225,26 +98,8 @@
     "link": "tandarts",
     "title": "PORTFOLIO.Tandarts.title",
     "subTitle": "PORTFOLIO.Tandarts.subTitle",
-    "description": "PORTFOLIO.Tandarts.description",
-    "mainImage": "http://blog.oxforddictionaries.com/wp-content/uploads/mountain-names.jpg",
-    "thumbnail": "http://blog.oxforddictionaries.com/wp-content/uploads/mountain-names.jpg",
-    "tags": {
-      "products": [
-        "prod1",
-        "prod2",
-        "prod3"
-      ],
-      "technology": [
-        "tech1",
-        "tech2",
-        "tech3"
-      ],
-      "languages": [
-        "lang1",
-        "lang1",
-        "lang1"
-      ]
-    },
+    "description": "PORTFOLIO.Tandarts.shortDescription",
+    "mainImage": "assets/images/portfolio-images/tandarts_mov_1.png",
     "tools": [
       "laravel",
       "postgresql"
@@ -258,26 +113,8 @@
     "link": "tripbuzz",
     "title": "PORTFOLIO.Tripbuzz.title",
     "subTitle": "PORTFOLIO.Tripbuzz.subTitle",
-    "description": "PORTFOLIO.Tripbuzz.description",
-    "mainImage": "http://blog.oxforddictionaries.com/wp-content/uploads/mountain-names.jpg",
-    "thumbnail": "http://blog.oxforddictionaries.com/wp-content/uploads/mountain-names.jpg",
-    "tags": {
-      "products": [
-        "prod1",
-        "prod2",
-        "prod3"
-      ],
-      "technology": [
-        "tech1",
-        "tech2",
-        "tech3"
-      ],
-      "languages": [
-        "lang1",
-        "lang1",
-        "lang1"
-      ]
-    },
+    "description": "PORTFOLIO.Tripbuzz.shortDescription",
+    "mainImage": "assets/images/portfolio-images/tripbuzz_1.png",
     "tools": [
       "angular",
       "gulp",
@@ -297,26 +134,8 @@
     "link": "zorgindicator",
     "title": "PORTFOLIO.ZorgIndicator.title",
     "subTitle": "PORTFOLIO.ZorgIndicator.subTitle",
-    "description": "PORTFOLIO.ZorgIndicator.description",
-    "mainImage": "http://blog.oxforddictionaries.com/wp-content/uploads/mountain-names.jpg",
-    "thumbnail": "http://blog.oxforddictionaries.com/wp-content/uploads/mountain-names.jpg",
-    "tags": {
-      "products": [
-        "prod1",
-        "prod2",
-        "prod3"
-      ],
-      "technology": [
-        "tech1",
-        "tech2",
-        "tech3"
-      ],
-      "languages": [
-        "lang1",
-        "lang1",
-        "lang1"
-      ]
-    },
+    "description": "PORTFOLIO.ZorgIndicator.shortDescription",
+    "mainImage": "assets/images/portfolio-images/zorgIndicator-1.png",
     "tools": [
       "postgresql",
       "amazon-aws"

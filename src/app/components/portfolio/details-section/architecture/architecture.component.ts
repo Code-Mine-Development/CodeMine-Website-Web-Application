@@ -12,6 +12,7 @@ export class ArchitectureComponent implements OnInit {
   @Input() technologies;
   @Input() currentTools;
   @Input() currentTechnologies;
+  @Input() small;
 
   @Output() navigate = new EventEmitter();
 

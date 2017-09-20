@@ -5,6 +5,7 @@ import {ScrollToDirective} from './directives/scroll-to.directive';
 import {ScrollToService} from './services/scroll-to.service';
 import {ToolTipDirective} from './directives/tool-tip.directive';
 import {ToolTipComponent} from './ui-elements/tool-tip/tool-tip.component';
+import {CopyToClipboardService} from './services/copy-to-clipboard.service';
 
 @NgModule({
   imports: [
@@ -18,7 +19,7 @@ import {ToolTipComponent} from './ui-elements/tool-tip/tool-tip.component';
   ],
   providers: [
     ScrollToService,
-
+    CopyToClipboardService
   ],
   declarations: [
     ScrollToDirective,

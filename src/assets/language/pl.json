@@ -154,6 +154,7 @@
     "addProjectButton": "Napisz do nas",
     "checkPortfolio": "sprawdź nasze portfolio",
     "starInfo": "Dane przedstawione na ilustracjach oraz filmach są przykładowe",
+    "showMore": "Zobacz więcej",
     "sectionTitles": {
       "interface": "Interfejs",
       "before": "Przed",
@@ -203,7 +204,7 @@
     "exchange": {
       "title": "Internetowy system wymiany walut",
       "subTitle": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-      "shortDescription": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+      "shortDescription": "Nowoczesny system pośredniczącym w sprzedaży i zakupie walut, spłatach rat kredytów walutowych, jak również tworzeniu wirtualnych kont walutowych.",
       "description": {
       }
     },

@@ -23,6 +23,8 @@ const portfolioRoutes: Routes = [
         path: '', component: PortfolioListComponent,
         resolve: {
           portfolio: PortfolioResolver,
+          tools: ToolsResolver,
+          technologies: TechnologiesResolver
         }
       },
       {
