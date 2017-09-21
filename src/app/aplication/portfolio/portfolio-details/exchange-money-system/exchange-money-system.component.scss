@@ -1,17 +1,27 @@
+@import "../../../../../assets/styles/mediaQueries";
 :host {
   letter-spacing: 0;
 }
 
 .ourRole, .exchange-process, .architecture {
   margin-top: 100px;
+  @media #{$tablet-media} {
+    margin-top: 50px;
+  }
 }
 
 .architecture {
   margin-bottom: 100px;
+  @media #{$tablet-media} {
+    margin-bottom: 50px;
+  }
 }
 
 .ourRole, .implementation, .micro-services {
   padding: 100px 0;
+  @media #{$tablet-media} {
+    padding: 50px 0;
+  }
 }
 
 figure {
@@ -38,11 +48,18 @@ h3 {
   .container {
     display: flex;
     align-items: center;
+    flex-wrap: wrap;
     & > * {
       width: 50%;
+      @media #{$tablet-media} {
+        width: 100%;
+      }
     }
 
     article {
+      @media #{$tablet-media} {
+        margin-top: 40px;
+      }
       p {
         max-width: 570px;
       }
@@ -62,8 +79,12 @@ h3 {
   .container {
     display: flex;
     align-items: center;
+    flex-wrap: wrap;
     & > * {
       width: 50%;
+      @media #{$tablet-media} {
+        width: 100%;
+      }
     }
 
     article {
@@ -75,6 +96,9 @@ h3 {
       text-align: center;
       img {
         width: 90%;
+      }
+      @media #{$tablet-media} {
+        margin-top: 40px;
       }
     }
   }
@@ -100,6 +124,9 @@ h3 {
     article {
       width: 45%;
       margin-top: 40px;
+      @media #{$tablet-media} {
+        width: 100%;
+      }
       img {
         height: 80px;
         margin-right: 10px;
