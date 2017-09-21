@@ -66,7 +66,8 @@ export class PersonComponent implements OnInit, AfterViewInit {
     }
 
     this.animationInstance = new Vivus('funny-cover', {
-      type: 'delayed',
+      type: 'oneByOne',
+      duration: 125,
       animTimingFunction: Vivus.EASE,
       start: 'manual',
       file: 'assets/images/people/funny_cover/' + this.visibleElement.image.funnyCover,
