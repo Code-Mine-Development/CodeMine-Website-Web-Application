@@ -418,7 +418,7 @@
     "title": "Technologie",
     "description": "Opis",
     "bash": {
-      "description": "brak"
+      "description": "Jako powłoka systemów UNIX, Bash jest jednym z najpopularniejszych rozwiązań w swojej kategorii i jednocześnie domyślnym - w większości dystrybucji Linuxa. To narzędzie pozwalające na komunikację między systemem operacyjnym a użytkownikiem bądź aplikacją, które charakteryzuje się uniwersalnością, szybkością oraz ogromnym wachlarzem możliwego wykorzystania.Na co dzień w zdecydowanej większości przypadków instalujemy nasz software na serwerach UNIX'owych, toteż Bash pomaga nam w ich obsłudze, będąc ponadto podstawowym narzędziem do automatyzacji procesów. Tym samym, wykorzystujemy go głównie do skryptów automatyzujących instalację oprogramowania czy skryptów wspierających development, jak również do automatyzacji testów oraz budowania aplikacji."
     },
     "java": {
       "description": "Jako najpopularniejszy obiektowy język programowania, Java charakteryzuje się przede wszystkim niezwykłą sprawnością i szybkością działania, przy jednoczesnym zachowaniu wysokiego stopnia bezpieczeństwa. Niemniej jednak, na komfort pracy z tym językiem wpływają także jego łatwa składnia, wielowątkowość i silne typowanie. W Code Mine szczególnie cenimy go sobie również za promowanie dobrych praktyk programowania obiektowego oraz łatwy dostęp do wiedzy. Co więcej, Java świetnie sprawdza się przy implementacji aplikacji typu enterprise, co dla nas, jako firmy dostarczającej rozwiązania biznesowe szyte na miarę, ma ogromne znaczenie. Jej stosowanie doceniane jest nawet przez samych klientów, którzy podkreślają jej stabilność i popularność. Z tego względu, Java jest naszym numerem jeden, wykorzystywanym zwłaszcza przy aplikacjach serwerowych."
@@ -430,13 +430,10 @@
       "description": "Będący uniwersalnym językiem skryptowym, PHP został stworzony z myślą o stronach i aplikacjach internetowych. Dzięki znacznemu rozwojowi, jaki odnotował na przestrzeni ostatnich lat, staje się językiem coraz bardziej dojrzałym. Ze względu na niskie wymagania hostingowe, PHP odznacza się łatwością jego wdrożenia, toteż często wykorzystujemy go przy naszych projektach. Warto podkreślić, że pracujemy zawsze w jego najnowszej wersji, rozwijając przy tym istniejące biblioteki Open Source. "
     },
     "swift": {
-      "description": "brak"
+      "description": "Swift to potężny, nowoczesny i niezwykle intuicyjny język programowania na platformy macOS, iOS, watchOS i tvOS, który wszedł na rynek w 2014 roku, zastępując swojego przestarzałego i nieczytelnego poprzednika, Objective-C.Dzięki sporej liczbie ciekawych bibliotek, jak i samej dobrej wydajności tego narzędzia, Swift ułatwia codzienną pracę programistów, będąc stosunkowo łatwym punktem wejścia  także dla deweloperów niemających wcześniej styczności z platformami Apple.Nasi programiści są zaciętymi entuzjastami Swifta i wykorzystują go każdorazowo przy tworzeniu aplikacji na platformy iOS oraz tvOS. Co więcej, cenią sobie przypisany mu komfort pracy do tego stopnia, że stworzyli w nim aplikację wyświetlającą informacje o przebiegu naszych projektów na biurowym Apple TV."
     },
     "typescript": {
       "description": "Będący nakładką JavaScriptu, TypeScript, dzięki typowaniu wpływa na czystość kodu oraz łatwość w jego zarządzaniu. To narzędzie, które w pierwszym etapie pozwala na rozszerzenie funkcjonalności JS, a w ostatnim, automatycznie przekształca do niego powstały kod. TypeScript jest dla nas podstawą przy projektowaniu zaawansowanych aplikacji internetowych. Jego użycie we frameworku Angular, przyczynia się do stabilności oferowanych rozwiązań, jak i szybkości i intuicyjności samego procesu tworzenia."
-    },
-    "html5": {
-      "description": "brak"
     }
   },
   "TOOLS": {

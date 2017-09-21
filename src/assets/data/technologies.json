@@ -6,13 +6,6 @@
     "img": "assets/images/technologies/CM-0032_bash.jpg",
     "color": "#009d96"
   },
-  "html5": {
-    "title": "HTML 5",
-    "description": "TECHNOLOGIES.html5.description",
-    "icon": "html5/html5.svg",
-    "img": "assets/images/technologies/CM-0011_HTML5.jpg",
-    "color": "#E44D26"
-  },
   "javascript": {
     "title": "JavaScript",
     "description": "TECHNOLOGIES.javascript.description",
