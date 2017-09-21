@@ -1,5 +1,12 @@
 import {
-  Component, HostListener, Input, HostBinding, OnInit, ViewChild, ElementRef, Renderer2,
+  Component,
+  HostListener,
+  Input,
+  HostBinding,
+  OnInit,
+  ViewChild,
+  ElementRef,
+  Renderer2,
   AfterViewInit
 } from '@angular/core';
 import {EventManager} from '../event_manager';
@@ -62,7 +69,7 @@ export class PersonComponent implements OnInit, AfterViewInit {
       type: 'delayed',
       animTimingFunction: Vivus.EASE,
       start: 'manual',
-      file: "assets/images/people/funny_cover/" + this.visibleElement.image.funnyCover,
+      file: 'assets/images/people/funny_cover/' + this.visibleElement.image.funnyCover,
       onReady: (elem) => {
         this.animationElement = elem.el;
       }

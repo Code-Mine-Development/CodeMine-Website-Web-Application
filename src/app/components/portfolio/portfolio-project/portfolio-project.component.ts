@@ -1,7 +1,6 @@
 import {Component, Input, Output, EventEmitter} from '@angular/core';
 import {Portfolio} from '../../../aplication/portfolio/interfaces/portfolio.interface';
 import {OfferElementBeforePrepare} from '../../../aplication/offerElementsDetails/interface/offerElementBeforePrepare';
-import {PreviousPositionService} from '../../../shared/services/previous-position.service';
 
 
 @Component({
@@ -17,12 +16,14 @@ export class PortfolioProjectComponent {
   @Output() onAction: EventEmitter<string> = new EventEmitter();
   @Output() navigate: EventEmitter<string> = new EventEmitter();
 
-  constructor() {}
+  constructor() {
+  }
+
   onClick() {
     this.onAction.emit();
   }
 
-  onNavigate(event){
+  onNavigate(event) {
     this.navigate.emit(event);
   }
 }

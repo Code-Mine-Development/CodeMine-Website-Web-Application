@@ -7,7 +7,7 @@ export class EventManager {
   }
 
   emit(name, value) {
-    if (name === "" || !this.events[name]) {
+    if (name === '' || !this.events[name]) {
       return;
     }
     this.events[name].forEach(
