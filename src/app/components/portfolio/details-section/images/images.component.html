@@ -1,8 +1,0 @@
-<h1 *ngIf="title">{{title | translate}}</h1>
-<section>
-  <figure *ngFor="let image of images">
-    <figcaption>{{(title | translate) || "project pictures"}}</figcaption>
-    <img [src]="image"  alt="project pictures">
-  </figure>
-
-</section>

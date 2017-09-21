@@ -1,0 +1,101 @@
+<section class="container">
+  <app-portfolio-details-header [title]="'PORTFOLIO.exchange.title'"
+                                [description]="'PORTFOLIO.exchange.description.part1'"
+                                [logo]="detail.thumbnail"></app-portfolio-details-header>
+</section>
+
+<section class="ourRole">
+  <section class="container">
+    <figure>
+      <figcaption>securiti presentation</figcaption>
+      <img src="assets/images/portfolio-images/exchange_security.svg" alt="shield icon">
+    </figure>
+    <article>
+      <h3>{{'PORTFOLIO.sectionTitles.ourRole' | translate}}</h3>
+      <p>{{'PORTFOLIO.exchange.description.part2' | translate}}</p>
+    </article>
+  </section>
+</section>
+
+<section class="implementation">
+  <section class="container">
+    <article>
+      <h3>{{'PORTFOLIO.sectionTitles.implementation' | translate}}</h3>
+      <p>
+        <span>{{'PORTFOLIO.exchange.description.part3' | translate}}</span>
+      </p>
+    </article>
+    <figure>
+      <figcaption>responsive presentation</figcaption>
+      <img src="assets/images/portfolio-images/exchange_responsive.svg" alt="responsive icon">
+    </figure>
+  </section>
+  <svg viewBox="0,0 25,1">
+    <polygon points="11.5,0 12.5,1 25,1 25,0" fill="#FFDE07"></polygon>
+  </svg>
+</section>
+
+<section class="micro-services">
+  <section class="container">
+    <h2>{{'PORTFOLIO.sectionTitles.microServices' | translate}}</h2>
+    <article>
+      <h3><img src="assets/images/portfolio-images/exchange_userzy.svg" alt="">{{'PORTFOLIO.exchange.description.micro_1_title' | translate}}</h3>
+      <p>{{'PORTFOLIO.exchange.description.micro_1' | translate}}</p>
+    </article>
+    <article>
+      <h3><img src="assets/images/portfolio-images/exchange_salda.svg" alt="">{{'PORTFOLIO.exchange.description.micro_4_title' | translate}}</h3>
+      <p>{{'PORTFOLIO.exchange.description.micro_4' | translate}}</p>
+    </article>
+    <article>
+      <h3><img src="assets/images/portfolio-images/exchange_klienci.svg" alt="">{{'PORTFOLIO.exchange.description.micro_2_title' | translate}}</h3>
+      <p>{{'PORTFOLIO.exchange.description.micro_2' | translate}}</p>
+    </article>
+    <article>
+      <h3><img src="assets/images/portfolio-images/exchange_promocja.svg" alt="">{{'PORTFOLIO.exchange.description.micro_7_title' | translate}}</h3>
+      <p>{{'PORTFOLIO.exchange.description.micro_7' | translate}}</p>
+    </article>
+    <article>
+      <h3><img src="assets/images/portfolio-images/exchange_WymianaWalut.svg" alt="">{{'PORTFOLIO.exchange.description.micro_5_title' | translate}}</h3>
+      <p>{{'PORTFOLIO.exchange.description.micro_5' | translate}}</p>
+    </article>
+    <article>
+      <h3><img src="assets/images/portfolio-images/exchange_kursWalut.svg" alt="">{{'PORTFOLIO.exchange.description.micro_8_title' | translate}}</h3>
+      <p>{{'PORTFOLIO.exchange.description.micro_8' | translate}}</p>
+    </article>
+    <article>
+      <h3><img src="assets/images/portfolio-images/exchange_dokumenty.svg" alt="">{{'PORTFOLIO.exchange.description.micro_10_title' | translate}}</h3>
+      <p>{{'PORTFOLIO.exchange.description.micro_10' | translate}}</p>
+    </article>
+    <article>
+      <h3><img src="assets/images/portfolio-images/exchange_Logi.svg" alt="">{{'PORTFOLIO.exchange.description.micro_11_title' | translate}}</h3>
+      <p>{{'PORTFOLIO.exchange.description.micro_11' | translate}}</p>
+    </article>
+    <article>
+      <h3><img src="assets/images/portfolio-images/exchange_komunikacja.svg" alt="">{{'PORTFOLIO.exchange.description.micro_6_title' | translate}}</h3>
+      <p>{{'PORTFOLIO.exchange.description.micro_6' | translate}}</p>
+    </article>
+    <article>
+      <h3><img src="assets/images/portfolio-images/exchange_raporty.svg" alt="">{{'PORTFOLIO.exchange.description.micro_9_title' | translate}}</h3>
+      <p>{{'PORTFOLIO.exchange.description.micro_9' | translate}}</p>
+    </article>
+    <article>
+      <h3><img src="assets/images/portfolio-images/exchange_transfer.svg" alt="">{{'PORTFOLIO.exchange.description.micro_3_title' | translate}}</h3>
+      <p>{{'PORTFOLIO.exchange.description.micro_3' | translate}}</p>
+    </article>
+  </section>
+  <svg viewBox="0,0 25,1">
+    <polygon points="11.5,0 12.5,1 25,1 25,0" fill="#FFFFFF"></polygon>
+  </svg>
+</section>
+
+<section class="container">
+  <figure class="exchange-process">
+    <figcaption>{{'PORTFOLIO.sectionTitles.exchangeProcess' | translate}}</figcaption>
+    <img src="assets/images/portfolio-images/exchange_process.jpg" alt="process image">
+  </figure>
+
+  <section class="architecture">
+    <h3>{{'PORTFOLIO.sectionTitles.technologies' | translate}}</h3>
+    <app-architecture [currentTechnologies]="detail.technologies" [currentTools]="detail.tools" [technologies]="technologies" [tools]="tools" (navigate)="navigate($event)"></app-architecture>
+  </section>
+</section>

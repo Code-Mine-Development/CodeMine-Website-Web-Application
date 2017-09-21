@@ -1,11 +1,14 @@
 import {async, ComponentFixture, TestBed, fakeAsync, tick} from '@angular/core/testing';
-import {PortfolioListComponent} from './portfolio-list.component';
-import {ActivatedRoute, Data, Router} from '@angular/router';
-import {MockPortfolio} from 'app/shared/mocks/portfolio.mock';
-import {PortfolioProjectComponent} from '../../../components/portfolio/portfolio-project/portfolio-project.component';
-import {UiModule} from '../../../shared/ui-elements/ui.module';
 import {LocalizeRouterService} from 'localize-router';
 import {TranslateModule} from '@ngx-translate/core';
+import {Component, EventEmitter, Output, Input} from '@angular/core';
+import {ActivatedRoute, Data, Router} from '@angular/router';
+import {PortfolioListComponent} from './portfolio-list.component';
+import {MockPortfolio} from 'app/shared/mocks/portfolio.mock';
+import {UiModule} from '../../../shared/ui-elements/ui.module';
+import {OfferElementBeforePrepare} from '../../offerElementsDetails/interface/offerElementBeforePrepare';
+import {Portfolio} from '../interfaces/portfolio.interface';
+
 
 const MockRoutingData = {
   data: {
@@ -14,6 +17,20 @@ const MockRoutingData = {
     })
   }
 };
+
+@Component({
+  selector: 'app-portfolio-project',
+  template: 'test'
+})
+class PortfolioProjectComponentMock {
+
+  @Input() project: Portfolio;
+  @Input() tools: OfferElementBeforePrepare[];
+  @Input() technologies: OfferElementBeforePrepare[];
+
+  @Output() onAction: EventEmitter<string> = new EventEmitter();
+  @Output() navigate: EventEmitter<string> = new EventEmitter();
+}
 
 describe('PortfolioListComponent', () => {
   let component: PortfolioListComponent;
@@ -25,7 +42,7 @@ describe('PortfolioListComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [PortfolioListComponent, PortfolioProjectComponent],
+      declarations: [PortfolioListComponent, PortfolioProjectComponentMock],
       imports: [
         UiModule,
         TranslateModule.forRoot()
@@ -42,7 +59,7 @@ describe('PortfolioListComponent', () => {
             translateRoute: (val) => val
           }
         }
-        ]
+      ]
     })
       .compileComponents();
   }));

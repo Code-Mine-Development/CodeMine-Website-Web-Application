@@ -11,7 +11,7 @@ import {Router, ActivatedRoute} from '@angular/router';
 })
 export class TelecomComponent extends PortfolioDetailsModel implements OnInit {
 
-  protected id = 'telecom';
+  protected id = 'e-comerce-for-telecom';
 
   constructor(route: ActivatedRoute,
               router: Router,

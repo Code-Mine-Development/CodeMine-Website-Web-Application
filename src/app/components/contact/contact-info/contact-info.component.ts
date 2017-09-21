@@ -1,6 +1,6 @@
 import {Component, Input} from '@angular/core';
 import {Company} from '../../../shared/interface/company.interface';
-import {CopyToClipboardService} from '../service/copy-to-clipboard.service';
+import {CopyToClipboardService} from '../../../shared/services/copy-to-clipboard.service';
 
 
 @Component({

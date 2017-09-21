@@ -1,25 +1,24 @@
 <div class="container">
-  <div class="project"  >
-    <div class="project-image" [ngStyle]="{'background-image': 'url(' + project.mainImage + ')'}">
-      <p (click)="onClick()">zobacz wiecej</p>
+  <div class="project">
+    <div class="project-image">
+      <img [src]="project.mainImage" [attr.alt]="project.title+'image'">
+      <button (click)="onClick($event)" class="btn btn-yellow btn-large btn-shadow">{{'PORTFOLIO.showMore' |
+        translate}}
+      </button>
     </div>
     <div class="project-details">
       <div class="project-desc">
-        <div class="desc-img"><img [src]="project.thumbnail"></div>
         <div class="desc-info">
           <h1>{{project.title | translate}}</h1>
           <p>{{project.description | translate}}</p>
-          <div class="tags">
-            <p *ngFor="let tag of project.tags.technology">{{tag}}</p>
-            <p *ngFor="let tag of project.tags.languages">{{tag}}</p>
-            <p *ngFor="let tag of project.tags.products">{{tag}}</p>
-          </div>
         </div>
       </div>
-      <div class="project-tech" >
-        <h4>Technologie</h4>
+      <div class="project-tech">
+        <h4>{{'PORTFOLIO.sectionTitles.technologies' | translate}}</h4>
         <div class="technologies">
-          <app-square-image *ngFor="let tech of project.technologies" [width]="70" [image]="tech.thumbnail"></app-square-image>
+          <app-architecture [technologies]="technologies" [tools]="tools" [currentTechnologies]="project.technologies"
+                            [currentTools]="project.tools" (navigate)="onNavigate($event)"
+                            [small]="true"></app-architecture>
         </div>
       </div>
     </div>

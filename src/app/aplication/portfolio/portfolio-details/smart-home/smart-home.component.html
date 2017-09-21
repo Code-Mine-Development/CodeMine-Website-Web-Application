@@ -1,0 +1,39 @@
+<section class="container">
+  <app-portfolio-details-header [title]="'PORTFOLIO.SmartHome.title'"
+                                [description]="'PORTFOLIO.SmartHome.description.part1'"
+                                [logo]="detail?.thumbnail"></app-portfolio-details-header>
+</section>
+
+<section class="ourRole">
+  <div class="container">
+    <figure>
+      <figcaption>Handle Image</figcaption>
+      <img src="assets/images/portfolio-images/smarthome_handle.svg" alt="handle Image">
+    </figure>
+    <article>
+      <h3>{{'PORTFOLIO.sectionTitles.ourRole' | translate}}</h3>
+      <p>{{'PORTFOLIO.SmartHome.description.part2' | translate}}</p>
+    </article>
+  </div>
+</section>
+
+<section class="implementation container">
+  <article>
+    <h3>{{'PORTFOLIO.sectionTitles.implementation' | translate }}</h3>
+    <p>{{'PORTFOLIO.SmartHome.description.part3' | translate}}</p>
+  </article>
+  <figure>
+    <figcaption>Implementation images</figcaption>
+    <img src="assets/images/portfolio-images/smarthome_implementation_1.svg" alt="implementation image">
+    <img src="assets/images/portfolio-images/smarthome_implementation_2.svg" alt="implementation image">
+    <img src="assets/images/portfolio-images/smarthome_implementation_3.svg" alt="implementation image">
+  </figure>
+</section>
+
+<section class="architecture">
+  <section class="container">
+    <h3>{{'PORTFOLIO.sectionTitles.technologies' | translate}}</h3>
+    <app-architecture [tools]="tools" [currentTools]="detail?.tools" [technologies]="technologies"
+                      [currentTechnologies]="detail?.technologies" (navigate)="navigate($event)"></app-architecture>
+  </section>
+</section>

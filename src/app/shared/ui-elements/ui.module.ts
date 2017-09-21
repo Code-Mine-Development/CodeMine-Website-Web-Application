@@ -12,6 +12,7 @@ import { OfferThumbnailsComponent } from './offer-thumbnails/offer-thumbnails.co
 import { CarouselElementTextComponent } from './carousel/carousel-element-text.component';
 import { CarouselElementImageComponent } from './carousel/carousel-element-image.component';
 
+
 @NgModule({
     declarations: [
         CarouselComponent,

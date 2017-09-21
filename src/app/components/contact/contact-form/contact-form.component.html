@@ -1,0 +1,67 @@
+<form (submit)="onSubmit($event, form)" #form="ngForm">
+  <h1>{{'CONTACT.contactUs' | translate}}</h1>
+  <fieldset class="name">
+    <legend>{{'CONTACT.myName' | translate}}</legend>
+    <p>
+      <span>
+        <label for="contact_name">{{'CONTACT.name' | translate}}</label>
+        <input id="contact_name" type="text" [(ngModel)]="name" name="name" #nameInput="ngModel"
+               [attr.placeholder]="'CONTACT.namePlaceHolder' | translate"
+               appToolTip required
+        >
+        <svg class="status"
+             [class.visible]="!nameInput.pristine || nameInput.touched"
+             viewBox="0,0 6,6">
+          <polyline [class.invalid]="nameInput.invalid" stroke-width="1px" stroke="#FF3866" fill="none"
+                    points="1,1 3,3 1,5 3,3 5,5 3,3 5,1"></polyline>
+        </svg>
+      </span>
+      <span>
+        <label for="contact_email">E-mail</label>
+        <input id="contact_email" type="text" [(ngModel)]="email" name="email" #emailInput="ngModel"
+               [attr.placeholder]="'CONTACT.emailPlaceHolder' | translate"
+               appToolTip required pattern="^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,6})+$"
+        >
+        <svg class="status"
+             [class.visible]="!emailInput.pristine || emailInput.touched"
+             viewBox="0,0 6,6">
+          <polyline [class.valid]="emailInput.valid" stroke-width="1px" stroke="#37D773" fill="none"
+                    points="1,4 2,5 5,2"></polyline>
+          <polyline [class.invalid]="emailInput.invalid" stroke-width="1px" stroke="#FF3866" fill="none"
+                    points="1,1 3,3 1,5 3,3 5,5 3,3 5,1"></polyline>
+        </svg>
+      </span>
+    </p>
+  </fieldset>
+  <fieldset class="message">
+    <legend>{{'CONTACT.message' | translate}}</legend>
+    <p>
+      <textarea rows="6" #textArea
+                #textNgModel="ngModel"
+                name="message"
+                [(ngModel)]="message"
+                (keyup)="adjustTextArea(textArea)"
+                appToolTip
+                required></textarea>
+      <svg class="status"
+           [class.visible]="!textNgModel.pristine || textNgModel.touched"
+           viewBox="0,0 6,6">
+        <polyline [class.valid]="textNgModel.valid" stroke-width="1px" stroke="#37D773" fill="none"
+                  points="1,4 2,5 5,2"></polyline>
+        <polyline [class.invalid]="textNgModel.invalid" stroke-width="1px" stroke="#FF3866" fill="none"
+                  points="1,1 3,3 1,5 3,3 5,5 3,3 5,1"></polyline>
+      </svg>
+    </p>
+
+
+  </fieldset>
+  <fieldset>
+    <button type="submit" class="btn btn-yellow btn-large">{{'CONTACT.send' | translate}}</button>
+  </fieldset>
+</form>
+<a>
+  <p class="navigateToEstimate">
+    <span> > </span>
+    <span>{{'CONTACT.requestEstimate' | translate}}</span>
+  </p>
+</a>

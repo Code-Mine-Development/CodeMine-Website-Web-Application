@@ -1,10 +1,23 @@
-import {async, ComponentFixture, TestBed, fakeAsync, tick} from '@angular/core/testing';
-
-import { PortfolioProjectComponent } from './portfolio-project.component';
-import {Router, ActivatedRoute} from '@angular/router';
+import {async, ComponentFixture, TestBed} from '@angular/core/testing';
+import {PortfolioProjectComponent} from './portfolio-project.component';
+import {ActivatedRoute} from '@angular/router';
 import {MockPortfolio} from '../../../shared/mocks/portfolio.mock';
-import {SquareImageComponent} from '../../../shared/ui-elements/squareImage/square-image.component';
 import {TranslateModule} from '@ngx-translate/core';
+import {Component, Input, Output, EventEmitter} from '@angular/core';
+
+@Component({
+  selector: 'app-architecture',
+  template: 'test'
+})
+class ArchitectureMock {
+  @Input() tools;
+  @Input() technologies;
+  @Input() currentTools;
+  @Input() currentTechnologies;
+  @Input() small;
+
+  @Output() navigate = new EventEmitter();
+}
 
 describe('PortfolioProjectComponent', () => {
   let component: PortfolioProjectComponent;
@@ -15,7 +28,7 @@ describe('PortfolioProjectComponent', () => {
       imports: [
         TranslateModule.forRoot()
       ],
-      declarations: [PortfolioProjectComponent, SquareImageComponent],
+      declarations: [PortfolioProjectComponent, ArchitectureMock],
       providers: [
         {provide: ActivatedRoute, useValue: {data: {}}}
       ]
@@ -34,7 +47,7 @@ describe('PortfolioProjectComponent', () => {
     expect(component).toBeTruthy();
   });
 
-  it('should @Input portfolio to be equal MockPOrtfolio', () => {
+  it('should @Input portfolio to be equal MockPortfolio', () => {
     expect(component.project).toEqual(MockPortfolio[0])
   });
 

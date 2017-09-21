@@ -11,7 +11,7 @@ import {Router, ActivatedRoute} from '@angular/router';
 })
 export class TandartsComponent extends PortfolioDetailsModel implements OnInit {
 
-  protected id = 'tandarts';
+  protected id = 'brigter-vision-growth-platform';
 
   constructor(route: ActivatedRoute,
               router: Router,

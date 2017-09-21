@@ -1,7 +1,0 @@
-<figure>
-  <figcaption>
-    <span *ngIf="title">{{ title | translate }}</span>
-  </figcaption>
-  <img *ngIf="image" [src]="image" alt="project home screen picture"/>
-  <video *ngIf="video" autoplay loop [src]="video?.videoUrl" [attr.picture]="video?.image"></video>
-</figure>

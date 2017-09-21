@@ -3,7 +3,7 @@ import { ContactInfoComponent } from './contact-info.component';
 import {Component} from '@angular/core';
 import {MockCompany} from '../../../shared/mocks/company.mock';
 import {TranslateModule} from '@ngx-translate/core';
-import {CopyToClipboardService} from '../service/copy-to-clipboard.service';
+import {CopyToClipboardService} from '../../../shared/services/copy-to-clipboard.service';
 
 @Component({
   selector: 'app-fake-contact-info-wrapper',

@@ -3,25 +3,27 @@ import {CommonModule} from '@angular/common';
 import {ContactInfoComponent} from './contact-info/contact-info.component';
 import {SharedModule} from '../../shared/shared.module';
 import {TranslateModule} from '@ngx-translate/core';
-import { CompanyInformationsComponent } from './company-informations/company-informations.component';
-import {CopyToClipboardService} from './service/copy-to-clipboard.service';
+import { ContactFormComponent } from './contact-form/contact-form.component';
+import {ContactFormService} from './service/contact-form.service';
+import {FormsModule} from '@angular/forms';
 
 @NgModule({
     declarations: [
         ContactInfoComponent,
-        CompanyInformationsComponent,
+        ContactFormComponent
     ],
     imports: [
         CommonModule,
         SharedModule,
-        TranslateModule
+        TranslateModule,
+        FormsModule
     ],
     exports: [
         ContactInfoComponent,
-        CompanyInformationsComponent
+        ContactFormComponent
     ],
     providers: [
-        CopyToClipboardService
+        ContactFormService
     ],
 })
 export class ContactComponentModule {

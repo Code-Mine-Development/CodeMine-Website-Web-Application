@@ -151,9 +151,10 @@
   },
   "PORTFOLIO": {
     "addProjectTitle": "Dodaj swój projekt",
-    "addProjectButton": "do formularza",
+    "addProjectButton": "Napisz do nas",
     "checkPortfolio": "sprawdź nasze portfolio",
     "starInfo": "Dane przedstawione na ilustracjach oraz filmach są przykładowe",
+    "showMore": "Zobacz więcej",
     "sectionTitles": {
       "interface": "Interfejs",
       "before": "Przed",
@@ -167,7 +168,11 @@
       "postsBooking": "Rezerwacja postów",
       "ourRole": "Nasze zadanie",
       "workingScheme": "Schemat działania aplikacji",
-      "businessModel": "Model biznesowy"
+      "businessModel": "Model biznesowy",
+      "implementation": "Proces wdrażania",
+      "arch/tech/tool": "Architektura/języki/narzędzia",
+      "microServices": "Mikroserwisy",
+      "exchangeProcess": "Proces wymiany walut"
     },
     "BrighterVision": {
       "title": "Brigter Vision Growth Platform",
@@ -175,14 +180,10 @@
       "shortDescription": "Aplikacja skierowana do amerykańskich terapeutów, pozwalająca na przeglądanie puli dostępnych postów oraz ich publikację w formie bloga.",
       "description": {
         "part1": "Brighter Vision Growth Platform jest odpowiedzią na zjawisko braku czasu poświęconego na marketing – jak chociażby prowadzenie bloga, zauważalnego wśród amerykańskich terapeutów, którzy całą swoją energię przeznaczają na zarządzanie własną praktyką, dbając o każdy, nawet najmniejszy szczegół.",
-        "postBooking": "Rezerwacja postów",
         "part2": "Aplikacja pozwala na przeglądanie gotowych, dostępnych postów oraz na ich publikację na blogu opartym o Wordpressa w wybranym przez siebie terminie. Jej sercem jest prezentujący zarówno opublikowane, jak i przyszłe posty, ogromny kalendarz, szczegółowo dopracowany pod kątem UI oraz UX.",
         "part3": "Dzięki dobrej kategoryzacji, a także świetnemu mechanizmowi rezerwowania postów, użytkownik jest w stanie zarezerwować wybraną publikację przy pomocy zaledwie trzech kliknięć.",
-        "calendar": "Kalendarz",
-        "businessModel": "Model biznesowy",
         "part4": "Zważywszy na model biznesowy, który obok darmowych, zakłada również płatne posty, aplikacja została zintegrowana z systemem płatności Chargify. Użytkownik ma do wyboru wykupienie pojedynczych publikacji lub też miesięcznych subskrypcji. Posty darmowe przyznawane są z kolei miesięcznie, mając określony limit.",
         "part5": "Każdy user dostaje trzy bezpłatne publikacje, które w przypadku niewykorzystania, przechodzą na kolejny miesiąc. Łącznie, użytkownik może uzbierać pokaźną sumę publikacji, których historię może łatwo podejrzeć dzięki zastosowanemu systemowi zliczania sald podobnych do systemów bankowości, opartemu na założeniach Event Sourcingu.",
-        "archLangTools": "Architektura / języki / narzędzia",
         "part6": "Pod względem architektury, Growth Platform skupia dwie aplikacje – serwerową oraz kliencką. Aplikacja serwerowa (back-endowa) napisana została w języku PHP, z wykorzystywaniem Zend Framework 2 i odpowiada za kluczowe działania, do których należą głównie publikacja postów, zarządzanie saldem klienta czy zarządzanie publikacjami. ",
         "part7": "Z kolei napisana przy użyciu AngularJS, aplikacja kliencka przyjmuje formę panelu administracyjnego, wykorzystującego komunikację REST API, dostarczaną przez wcześniej wspomnianą, aplikacja serwerową."
       }
@@ -193,7 +194,6 @@
       "shortDescription": "Samodzielne moduły oprogramowania przyczyniające się do stworzenia nowoczesnej platformy e-commerce dla wiodących operatorów telekomunikacyjnych w Europie.",
       "description": {
         "part1": "Od początku 2017 roku współpracujemy z dostawcą oprogramowania, rozpowszechniającego swoje rozwiązania wśród wielu wiodących firm z branży telekomunikacyjnej na rynku niemieckim, holenderskim, indyjskim oraz tureckim.",
-        "postBooking": "Rezerwacja postów",
         "part2": "Udostępniając czterech działających autonomicznie pracowników, naszym zadaniem jest dostarczanie klientowi samodzielnych modułów oprogramowania, finalnie przekazywanych zewnętrznym zespołom. Z tego względu, na każdym kroku czeka na nas sporo wyzwań, z których głównymi są:",
         "part3": "wymóg zdolności naszych mikroserwisów do integracji z wieloma, często przestarzałymi rozwiązaniami klasy eneterprise; ",
         "part4": "mnogość obecnych i wymaganych technologii oraz narzędzi (PHP, Java, C#, Apache Kafka, PostgreSQL, Microsoft BizTalk, Magento);",
@@ -205,9 +205,34 @@
     },
     "exchange": {
       "title": "Internetowy system wymiany walut",
-      "subTitle": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-      "shortDescription": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+      "subTitle": "System przeznaczony do kupna i sprzedaży walut online",
+      "shortDescription": "Nowoczesny system pośredniczącym w sprzedaży i zakupie walut, spłatach rat kredytów walutowych, jak również tworzeniu wirtualnych kont walutowych.",
       "description": {
+        "part1": "Przez niespełna dwa ostatnie lata mieliśmy przyjemność pracować nad nowoczesnym internetowym systemem wymiany walut, pośredniczącym w sprzedaży i zakupie walut, spłatach rat kredytów walutowych, jak również tworzeniu wirtualnych kont walutowych.",
+        "part2": "Naszą rolą było zaprojektowanie platformy finansowej w myśl metodologii Domain Driven Design oraz zasad projektowych S.O.L.I.D., przy jednoczesnym wykorzystaniu najnowszych technologii bezpieczeństwa. Z tego względu, postawiliśmy na szyfrowanie zgodne z protokołem SSL, zabezpieczanie realizacji transakcji poprzez kody SMS i potwierdzenia e-mailowe, a także prowadzenie historii zrealizowanych transakcji.",
+        "part3": "Od strony front-endu, platforma ta składała się z dwóch części - aplikacji administracyjnej oraz klienckiej. Z kolei patrząc od strony back-endu, był to system złożony z jedenastu mikroserwisów, komunikujących się ze sobą za pośrednictwem oprogramowania RabbitMQ. Posiadawszy swój własny zestaw odpowiedzialności, każdy moduł mógł być modyfikowany bez najmniejszego wpływu na pozostałe, co pozwalało poszczególnym zespołom skupić się na swojej części projektu, bez konieczności wdrażania się w pozostałe elementy systemu. To znacznie usprawniło cały proces.Oprócz wspomnianego RabbitMQ, projekt ten oparliśmy o wiele innych technologii i narzędzi, takich jak PHP 7 wsparte przez Zend Framework, JavaScript i AngularJS, Bootstrap, RWD, PostgrreSQL czy AWS. ",
+        "micro_1_title": "System zarządzania użytkownikami",
+        "micro_1": "To system umożliwiający logowanie użytkownika do systemu, dostarczający metod niezbędnych do logowania się do pozostałych mikroserwisów. Odpowiada za zarządzanie uprawnieniami użytkowników, dając ponadto możliwość rejestracji czy logowania za pośrednictwem portalów społecznościowych, takich jak Facebook, Twitter i LinkedIn, jak również innych kont, do których zaliczyć można Google czy Microsoft.",
+        "micro_2_title": "System zarządzania klientami",
+        "micro_2": "Przechowuje dane klientów oraz logikę biznesową związaną z ich indywidualnymi i firmowymi kontami. Pozwala na zarządzanie kontami klienckimi przez jednego lub wielu użytkowników systemu. ",
+        "micro_3_title": "System automatycznego księgowania i zarządzania przelewami",
+        "micro_3": "Jest miejscem komunikacji z bankami, przez co stanowi jeden z najważniejszych serwisów aplikacji. Jej integracja z systemami bankowymi pozwoliła na odejście od ręcznego przeglądania wyciągów rachunków bankowych na rzecz natychmiastowego odnotowywania uznań na kontach klientów i szybkiego powiadamiania ich o możliwości zarządzania środkami i wymiany waluty. Ponadto, system ten pozwala na automatyczne zlecanie przelewów wychodzących w odpowiednich ośrodkach bankowych, tuż po decyzji klienta odnośnie wypłaty środków z kont w systemie zarządzania saldami. Oba zastosowane rozwiązania przyczyniły się do minimalizacji liczby pomyłek, zwykle towarzyszących ręcznemu zlecaniu przelewów.",
+        "micro_4_title": "System zarządzania saldami ",
+        "micro_4": "Umożliwia tworzenie wirtualnych kont walutowych na wzór rachunku bankowego i przechowuje informacje o zgromadzonych środkach i walutach, wyliczanych na podstawie historii transakcji. Zastosowana integralność danych ułatwia zadanie księgowości, która w łatwy sposób może powiązać sumę widoczną u klienta z pieniędzmi odłożonymi w banku, co z kolei sprzyja spełnieniu wymagań komisji nadzoru finansowego. ",
+        "micro_5_title": "System zarządzania wymianami walut",
+        "micro_5": "Umożliwia kupno i sprzedaż waluty po wcześniej ustalonym przez klienta kursie, lub po aktualnym kursie ustalonym przez system z uwzględnieniem zniżek, rabatów oraz promocji.",
+        "micro_6_title": "System komunikacji",
+        "micro_6": "Odpowiedzialny jest za kontakt z klientem drogą SMS-ową bądź e-mailową, jak również komunikację między użytkownikami w obrębie systemu, mających pełną kontrolę nad swoimi środkami bez konieczności logowania. Poza tym, system ten wykorzystywany jest także do potwierdzania zleceń poprzez wysyłanie jednorazowego kodu wiadomością SMS.",
+        "micro_7_title": "System promocji",
+        "micro_7": "Odpowiada za wszelkiego rodzaju promocje i rabaty, a także obliczanie punktów lojalnościowych na podstawie liczby przeprowadzonych transakcji wymiany walut czy ilości osób zaproszonych do korzystania z serwisu (rekomendacje).",
+        "micro_8_title": "System zarządzania kursem walut",
+        "micro_8": "Zbiera i przechowuje informacje dotyczące aktualnych kursów walut dostarczanych z różnych źródeł, takich jak banki czy giełdy, stanowiąc rdzeń całej platformy.",
+        "micro_9_title": "System tworzenia raportów",
+        "micro_9": "Analizuje dane przelewów, transakcji wymiany walut i wszelkich promocji, by następnie tworzyć szczegółowe raporty sprzedaży czy podsumowania pracowników i klientów. ",
+        "micro_10_title": "System zarządzania dokumentami",
+        "micro_10": "Odpowiada za tworzenie dokumentów elektronicznych na podstawie danych dostarczanych z pozostałych mikroserwisów, które użytkownik może wygenerować samodzielnie w różnych formatach (txt, csv, xml, pdf) oraz pobrać przy pomocy jednorazowych linków.",
+        "micro_11_title": "System logów aplikacji",
+        "micro_11": "Zbiera informacje o czynnościach przeprowadzonych przez użytkowników systemu, jednocześnie będąc zabezpieczeniem w razie awarii głównej bazy danych dzięki zdolności do odtwarzania systemu"
       }
     },
     "MDLinking": {
@@ -371,9 +396,23 @@
     }
   },
   "CONTACT": {
+    "contactUs": "Skontaktuj się z nami!",
+    "name": "Nazwa",
+    "myName": "Nazywam się",
+    "namePlaceHolder": "podaj imię",
+    "emailPlaceHolder": "podaj swój adres email",
     "clickToCopy": "Naciśnij aby skopiować",
     "clickToNavigate": "Naciśnij aby przejść do Google Maps",
-    "copied": "Skopiowano!"
+    "copied": "Skopiowano!",
+    "message": "wiadomość",
+    "hello": "Cześć,",
+    "send": "Wyślij",
+    "requestEstimate": "lub poproś o wycenę swojego projektu",
+    "form": {
+      "require": "To pole jest wymagane",
+      "pattern": "format emaila jest nieprawidowy",
+      "sthWentWrong": "Niepoprawna zawartość pola"
+    }
   },
   "TECHNOLOGIES": {
     "title": "Technologie",

@@ -1,7 +1,9 @@
 <div id="personView" >
   <div id="personWrapper">
     <button (click)="closeButtonClicked()" ><img src="assets/images/arrows/x.svg"></button>
-    <div class="bg" *ngIf="visibleElement?.image" [ngStyle]="{'background-image': 'url(./assets/images/people/'+visibleElement?.image?.normal+'), url(./assets/images/people/'+visibleElement?.image?.funny+')'}"></div>
+    <figure class="bg" [ngStyle]="{'background-image': visibleElement ? 'url(./assets/images/people/'+ (visibleElement?.image?.normal ) +'), url(./assets/images/people/'+ (visibleElement?.image?.funny) +')' : ''}">
+      <div #funnyCover id="funny-cover"></div>
+    </figure>
     <div class="desc">
       <h2>{{visibleElement?.name}}</h2>
       <h3>{{visibleElement?.position}}</h3>

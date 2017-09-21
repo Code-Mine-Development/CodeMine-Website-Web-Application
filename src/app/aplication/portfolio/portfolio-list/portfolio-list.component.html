@@ -1,5 +1,12 @@
-<app-portfolio-project [ngClass]="{'right': i %2!==0}" *ngFor="let project of portfolio, let i = index" [project]="project" (onAction)="showDetails(project.link)"></app-portfolio-project>
-<div class="cta">
-  <h2>{{'PORTFOLIO.addProjectTitle'| translate}}</h2>
-  <app-button [title]="'PORTFOLIO.addProjectButton'| translate" [color]="'#169bd5'" [hover]="'#000000'"></app-button>
-</div>
+<section class="container">
+  <app-portfolio-project [ngClass]="{'right': i %2!==0}" *ngFor="let project of portfolio, let i = index"
+                         [project]="project" [technologies]="technologies" [tools]="tools" (onAction)="showDetails(project.link)" (navigate)="navigate($event)"></app-portfolio-project>
+  <div class="cta">
+    <h2>{{'PORTFOLIO.addProjectTitle'| translate}}</h2>
+    <button class="btn btn-large btn-shadow">{{'PORTFOLIO.addProjectButton' | translate}}</button>
+  </div>
+</section>
+
+<svg viewBox="0,0 1,1">
+  <polygon points="0,0 1,1 0,1" fill="#FFDE07"></polygon>
+</svg>

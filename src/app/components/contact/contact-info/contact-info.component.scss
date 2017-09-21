@@ -118,7 +118,7 @@ svg {
     color: #AAAAAA;
     transition: .5s;
     pointer-events: none;
-    &.copied{
+    &.copied {
       animation: fadeCopied;
       animation-fill-mode: forwards;
       animation-duration: .5s;
@@ -127,8 +127,8 @@ svg {
 
   address {
     font-style: normal;
-    a{
-      color:#ffffff;
+    a {
+      color: #ffffff;
     }
     span {
       text-align: center;
@@ -145,18 +145,20 @@ svg {
   font-size: 1.3rem;
 
   @media #{$phone}{
-    padding:0 20px;
+    padding: 0 20px;
     box-sizing: border-box;
   }
 }
 
 @keyframes fadeCopied {
-  from {
-    opacity: 1;
+  0% {
     color: #AAAAAA;
   }
-  to {
-    color: lime;
+  30% {
+    opacity: 1;
+  }
+  100% {
+    color: #37D773;
     transform: scale(2);
     opacity: 0;
     bottom: 125%;

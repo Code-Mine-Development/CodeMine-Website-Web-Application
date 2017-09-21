@@ -3,49 +3,49 @@
     "title": "Bash",
     "description": "TECHNOLOGIES.bash.description",
     "icon": "bash/bash.svg",
-    "img": "assets/images/angularCode.png",
+    "img": "assets/images/technologies/CM-0032_bash.jpg",
     "color": "#009d96"
   },
   "html5":{
     "title": "HTML 5",
     "description": "TECHNOLOGIES.html5.description",
     "icon": "html5/html5.svg",
-    "img": "assets/images/angularCode.png",
+    "img": "assets/images/technologies/CM-0011_HTML5.jpg",
     "color": "#E44D26"
   },
   "javascript":{
     "title": "JavaScript",
     "description": "TECHNOLOGIES.javascript.description",
     "icon":  "javascript/js.svg",
-    "img": "assets/images/angularCode.png",
+    "img": "assets/images/technologies/CM-0020_JS.jpg",
     "color": "#F0DB4F"
   },
   "java":{
     "title": "JAVA",
     "description": "TECHNOLOGIES.java.description",
     "icon": "java/java.svg",
-    "img": "assets/images/angularCode.png",
+    "img": "assets/images/technologies/CM-0027_JAVA.jpg",
     "color": "#EA2D2E"
   },
   "php":{
     "title": "PHP",
     "description": "TECHNOLOGIES.php.description",
     "icon":  "php/php.svg",
-    "img": "assets/images/angularCode.png",
+    "img": "assets/images/technologies/CM-0021_PHP.jpg",
     "color": "#6181B6"
   },
   "swift":{
     "title": "Swift",
     "description": "TECHNOLOGIES.swift.description",
     "icon": "swift/swift.svg",
-    "img": "assets/images/angularCode.png",
+    "img": "assets/images/technologies/CM-0022_Swift.jpg",
     "color": "#f05138"
   },
   "typescript":{
     "title": "Type Script",
     "description": "TECHNOLOGIES.typescript.description",
     "icon": "typescript/typescript.svg",
-    "img": "assets/images/angularCode.png",
+    "img": "assets/images/technologies/CM-0035_Typescript.jpg",
     "color": "#0174c1"
   }
 }
