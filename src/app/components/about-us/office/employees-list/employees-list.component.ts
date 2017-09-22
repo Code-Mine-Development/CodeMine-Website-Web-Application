@@ -1,49 +1,24 @@
-import {Component, Input, HostListener, Inject} from '@angular/core';
-import {trigger, animate, transition, style} from '@angular/animations';
+import {Component, Input, EventEmitter, Output} from '@angular/core';
 import {Employees} from '../interfaces/employees.interface';
-import {ScrollToService} from '../../../../shared/services/scroll-to.service';
-import {DOCUMENT} from '@angular/common';
+import {EventManager} from '../event_manager';
 
 @Component({
   selector: 'app-employees-list',
   templateUrl: 'employees-list.component.html',
-  styleUrls: ['employees-list.component.scss'],
-  animations: [
-    trigger('slideDown', [
-      transition(':enter', [
-        style({transform: 'translateY(-100%)'}),
-        animate('.5s ease-in-out', style({transform: 'translateY(0)'}))
-      ]),
-      transition(':leave', [
-        animate('.5s ease-in-out', style({transform: 'translateY(-150%)'}))
-      ])
-    ])
-  ],
-  host: {'[@slideDown]': ''}
+  styleUrls: ['employees-list.component.scss']
 })
 export class EmployeesListComponent {
 
   @Input() employees: Employees;
-  @Input() eventManager
+  @Input() eventManager:EventManager;
 
-  currentVisible = '';
+  @Output() navigate = new EventEmitter();
 
-  constructor(@Inject(DOCUMENT) private document, private scrollService: ScrollToService) {
+  constructor() {
   }
 
-  @HostListener('scroll', ['$event'])
-  onScroll() {
-    console.log(this.checkTopPosition());
-    if (this.checkTopPosition()) {
-      this.scrollService.scroll('SiteHead');
-    }
+  onNavigate(){
+    this.navigate.emit();
   }
 
-  checkTopPosition() {
-    return (this.document.body.scrollTop || this.document.documentElement.scrollTop) > 0;
-  }
-
-  setVisible(person) {
-    this.currentVisible = person;
-  }
 }

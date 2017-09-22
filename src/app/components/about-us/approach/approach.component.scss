@@ -1,9 +1,12 @@
 :host {
-
+  position: relative;
   width: 100%;
   display: block;
   svg {
-    width: 52.5%;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    right: 0;
   }
 }
 
@@ -18,7 +21,7 @@
     }
     p {
       max-width: 570px;
-      padding-bottom: 40px;
+      padding-bottom: 100px;
       margin:0;
     }
   }

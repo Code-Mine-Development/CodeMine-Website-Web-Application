@@ -30,7 +30,8 @@
       "description": "PEOPLE.adamn.description",
       "image":{
         "normal":"_V3B9900.jpg",
-        "funny":"_V3B9910.jpg"
+        "funny":"_V3B9910.jpg",
+        "funnyCover": ""
       },
       "deskCoordinate": {
         "top": 40.7,
@@ -47,7 +48,8 @@
       "description": "PEOPLE.joannaK.description",
       "image":{
         "normal":"_V3B0055.jpg",
-        "funny":"_V3B0069.jpg"
+        "funny":"_V3B0069.jpg",
+        "funnyCover": "asia.svg"
       },
       "deskCoordinate": {
         "top": 43.3,
@@ -65,7 +67,8 @@
       "description": "PEOPLE.michal.description",
       "image":{
         "normal":"_V3B0322.jpg",
-        "funny":"_V3B0451.jpg"
+        "funny":"_V3B0451.jpg",
+        "funnyCover": ""
       },
       "deskCoordinate": {
         "top": 31,
@@ -79,7 +82,8 @@
       "description": "PEOPLE.marta.description",
       "image":{
         "normal":"_V3B9965.jpg",
-        "funny":"_V3B9982.jpg"
+        "funny":"_V3B9982.jpg",
+        "funnyCover": ""
       },
       "deskCoordinate": {
         "top": 54.1,
@@ -96,7 +100,8 @@
       "description": "PEOPLE.radoslaw.description",
       "image":{
         "normal":"_V3B0411.jpg",
-        "funny":"_V3B0408.jpg"
+        "funny":"_V3B0408.jpg",
+        "funnyCover": "radek.svg"
       },
       "deskCoordinate": {
         "top": 56.7,
@@ -133,7 +138,8 @@
       "since": 4,
       "image":{
         "normal":"_V3B0085.jpg",
-        "funny":"_V3B0094.jpg"
+        "funny":"_V3B0094.jpg",
+        "funnyCover": "tomek.svg"
       },
       "deskCoordinate": {
         "top": 29.7,
@@ -188,7 +194,8 @@
       "description": "PEOPLE.kamil.description",
       "image":{
         "normal":"_V3B0197.jpg",
-        "funny":"_V3B0204.jpg"
+        "funny":"_V3B0204.jpg",
+        "funnyCover": "kamil.svg"
       },
       "deskCoordinate": {
         "top": 42,
@@ -206,7 +213,8 @@
       "description": "PEOPLE.mateusz.description",
       "image":{
         "normal":"_V3B0309.jpg",
-        "funny":"_V3B0316.jpg"
+        "funny":"_V3B0316.jpg",
+        "funnyCover": "mateusz.svg"
       },
       "deskCoordinate": {
         "top": 45.9,
@@ -238,7 +246,8 @@
       "description": "PEOPLE.joannar.description",
       "image":{
         "normal":"_V3B0017.jpg",
-        "funny":"_V3B0042.jpg"
+        "funny":"_V3B0042.jpg",
+        "funnyCover": "rodosnth.svg"
       },
       "deskCoordinate": {
         "top": 68,

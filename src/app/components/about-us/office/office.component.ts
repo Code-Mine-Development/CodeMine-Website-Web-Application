@@ -1,4 +1,4 @@
-import {Component, OnInit, Input} from '@angular/core';
+import {Component, OnInit, Input, Output, EventEmitter} from '@angular/core';
 import {Employees} from './interfaces/employees.interface';
 import {EventManager} from './event_manager';
 
@@ -9,7 +9,7 @@ import {EventManager} from './event_manager';
 })
 export class OfficeComponent implements OnInit {
   @Input() employees: Employees;
-
+  @Output() navigate = new EventEmitter();
   eventManager = new EventManager();
 
 
@@ -18,6 +18,10 @@ export class OfficeComponent implements OnInit {
   }
 
   ngOnInit() {
+  }
+
+  toContactForm(){
+    this.navigate.emit('contact');
   }
 
 }

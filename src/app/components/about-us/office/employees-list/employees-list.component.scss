@@ -7,6 +7,7 @@
   background: #282828;
   display: block;
   position: relative;
+  z-index: 35;
   @media #{$phone}{
     margin-top: 100px;
   }

@@ -1,24 +1,15 @@
-import {
-  Component,
-  HostListener,
-  Input,
-  HostBinding,
-  OnInit,
-  ViewChild,
-  ElementRef,
-  Renderer2,
-  AfterViewInit
-} from '@angular/core';
+import {Component, HostListener, Input, HostBinding, OnInit, ViewChild, ElementRef, Renderer2} from '@angular/core';
 import {EventManager} from '../event_manager';
 import {Employees} from '../interfaces/employees.interface';
 import * as Vivus from 'vivus';
+import {ScrollToService} from '../../../../shared/services/scroll-to.service';
 
 @Component({
   selector: 'app-person',
   templateUrl: 'person.component.html',
   styleUrls: ['person.component.scss']
 })
-export class PersonComponent implements OnInit, AfterViewInit {
+export class PersonComponent implements OnInit {
 
   @Input() eventManager: EventManager;
 
@@ -30,7 +21,7 @@ export class PersonComponent implements OnInit, AfterViewInit {
   animationInstance;
   animationElement;
 
-  constructor(private renderer: Renderer2) {
+  constructor(private renderer: Renderer2, private scrollToService: ScrollToService, private element: ElementRef ) {
   }
 
   @HostListener('window:keydown', ['$event']) closePerson(event) {
@@ -40,19 +31,17 @@ export class PersonComponent implements OnInit, AfterViewInit {
   }
 
   ngOnInit() {
-    this.eventManager.on('click', (pers) => this.showPerson(pers));
+    this.eventManager.on('click', (person) => this.showPerson(person));
     this.addDrawCoverEvents();
   }
 
-  ngAfterViewInit() {
-  }
 
   showPerson(person: Employees) {
     this.visibleElement = person;
     this.visible = !!person;
     if (person) {
+      this.scrollToService.scroll(this.element.nativeElement,'center');
       this.drawFunnyCover();
-      console.log(person);
     }
   }
 
@@ -63,6 +52,10 @@ export class PersonComponent implements OnInit, AfterViewInit {
   drawFunnyCover() {
     if (this.animationInstance) {
       this.clearSvgBox();
+    }
+
+    if(!this.visibleElement.image.funnyCover){
+      return;
     }
 
     this.animationInstance = new Vivus('funny-cover', {
@@ -79,6 +72,7 @@ export class PersonComponent implements OnInit, AfterViewInit {
 
   clearSvgBox() {
     this.animationInstance.destroy();
+    this.animationInstance = null;
     if (this.animationElement) {
       this.funnyCover.nativeElement.removeChild(this.animationElement);
     }
@@ -86,11 +80,15 @@ export class PersonComponent implements OnInit, AfterViewInit {
 
   addDrawCoverEvents() {
     this.renderer.listen(this.funnyCover.nativeElement, 'mouseenter', () => {
-      this.animationInstance.play();
+      if (this.animationInstance) {
+        this.animationInstance.play();
+      }
     });
 
     this.renderer.listen(this.funnyCover.nativeElement, 'mouseleave', () => {
-      this.animationInstance.reset().stop();
+      if (this.animationInstance) {
+        this.animationInstance.reset().stop();
+      }
     });
   }
 

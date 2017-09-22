@@ -2,30 +2,16 @@
 
 h1 {
   font-size: 3.6rem;
-  margin:40px 0;
+  margin:100px 0 0;
 }
 
 .instagram_box {
-  width: 100%;
   display: flex;
   flex-wrap: wrap;
-  margin: 20px 0 100px;
+  margin: 20px -20px 100px;
   justify-content: space-between;
   @media #{$phone}{
     margin: 40px 0 50px;
     width: 100%;
-  }
-}
-
-.row {
-  width: 80%;
-  margin: 4em auto;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-around;
-  .col {
-    width: 22%;
-    background: #eee;
-    margin-bottom: 2em;
   }
 }

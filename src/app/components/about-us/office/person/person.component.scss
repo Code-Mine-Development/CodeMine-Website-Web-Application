@@ -28,13 +28,16 @@
   height: 100vh;
   position: absolute;
   left: 60%;
-  top: 50%;
+  top: 40%;
   visibility: hidden;
   opacity: 0;
   transition-duration: .7s;
   transform-origin: 50% 50%;
   transform: translate(-50%, -50%) scale(0.3);
   box-sizing: border-box;
+  @media #{$computer-max}{
+    top: 20%;
+  }
   @media #{$phone} {
     overflow-y: scroll;
     background: $desk;
@@ -59,13 +62,16 @@
       padding: 20px;
       box-shadow: none;
     }
+    @media #{$tablet-media}{
+      padding: 30px;
+    }
     strong {
       font-size: 1.6rem;
     }
     button {
       position: absolute;
       right: 1.5%;
-      z-index: 35;
+      z-index: 32;
       top: 3%;
       background: none;
       cursor: pointer;
