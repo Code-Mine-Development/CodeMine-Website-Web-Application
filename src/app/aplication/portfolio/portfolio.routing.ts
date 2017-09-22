@@ -103,7 +103,7 @@ const portfolioRoutes: Routes = [
     RouterModule.forChild(portfolioRoutes),
     LocalizeRouterModule.forChild(portfolioRoutes)
   ],
-  exports: [RouterModule]
+  exports: [RouterModule, LocalizeRouterModule]
 })
 export class PortfolioRoutingModule {
 

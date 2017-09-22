@@ -3,10 +3,18 @@
   width:100%;
   display: flex;
   flex-wrap: wrap;
+  .column.small{
+    h3.hover{
+      font-size: 1rem;
+    }
+    width: 12.5%;
+    @media #{$computer}{
+      width: 20%;
+    }
+  }
 }
 
 .column {
-
   @media #{$phone}{
     width: 100%;
   }
@@ -56,9 +64,6 @@
     text-align: center;
     margin:0;
     color:#ffffff;
-    &.small{
-      font-size: 1rem;
-    }
     &:first-letter{
       text-transform: uppercase;
     }

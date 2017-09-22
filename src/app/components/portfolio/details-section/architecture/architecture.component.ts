@@ -1,4 +1,4 @@
-import {Component, Input, EventEmitter, Output, OnChanges, OnInit, HostListener, HostBinding} from '@angular/core';
+import {Component, Input, EventEmitter, Output, OnInit, HostListener, HostBinding} from '@angular/core';
 import {OfferThumbnail} from '../../../../shared/interface/offerThumbnail.interface';
 
 @Component({
@@ -56,7 +56,7 @@ export class ArchitectureComponent implements OnInit {
 
   pushObject(urlSegment: string, key: string, object) {
     this.elements.push({
-      key: key,
+      key: object.title,
       url: `/${urlSegment}/${key}`,
       icon: object.icon,
       color: object.color
@@ -68,6 +68,6 @@ export class ArchitectureComponent implements OnInit {
   }
 
   checkCenter() {
-    this.center =  window.innerWidth > (this.breakPoints[this.elements.length]);
+    this.center =  !this.small && window.innerWidth > (this.breakPoints[this.elements.length]);
   }
 }

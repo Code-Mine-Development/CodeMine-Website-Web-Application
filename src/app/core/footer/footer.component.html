@@ -1,8 +1,18 @@
 <footer class="footer" [ngStyle]="{'background-color':backgroundColor}">
   <section class="footer_bar">
     <section class="footer_vcard">
-      <p>{{company?.email}}</p>
-      <p>{{company?.phone}}</p>
+      <a [attr.href]="mobile ? 'mailto:' + company?.email : null">
+        <p (click)="!mobile ? copy(company?.email) : null">
+          {{company?.email}}
+          <span class="hover" [class.copied]="copied === company?.email">{{(copied === company?.email ? 'CONTACT.copied' : 'CONTACT.clickToCopy') | translate}}</span>
+        </p>
+      </a>
+      <a href="tel:{{company?.phone}}">
+        <p (click)="copy(company?.phone)">
+          {{company?.phone}}
+          <span class="hover" [class.copied]="copied === company?.phone">{{(copied === company?.phone ? 'CONTACT.copied' : 'CONTACT.clickToCopy') | translate}}</span>
+        </p>
+      </a>
     </section>
     <div class="footer_slideTop">
       <span aria-hidden="true" class="fa fa-chevron-up fa-3x" [appScrollTo]="'SiteHead'"></span>
@@ -12,20 +22,20 @@
     <section class="footer_copyright">
       <div class="footer_triangle">
         <svg viewBox="0 0 25 25">
-            <polygon fill="#ffdf00" points="0 25 25 25 0 0"></polygon>
+          <polygon fill="#ffdf00" points="0 25 25 25 0 0"></polygon>
         </svg>
       </div>
       <p>Copyrights 2017</p>
     </section>
     <div class="footer_socialmedia">
       <app-social-service [color]="'#ff0099'" [link]="'https://www.instagram.com/codemine/'"
-          [socialName]="'instagram'" (hoverColor)="changeBg($event)"></app-social-service>
+                          [socialName]="'instagram'" (hoverColor)="changeBg($event)"></app-social-service>
       <app-social-service [color]="'#3333ff'" [link]="'https://www.facebook.com/codeminedevelopment/'"
-          [socialName]="'facebook'" (hoverColor)="changeBg($event)"></app-social-service>
+                          [socialName]="'facebook'" (hoverColor)="changeBg($event)"></app-social-service>
       <app-social-service [color]="'#6699ff'" [link]="'https://www.linkedin.com/company/code-mine'"
-          [socialName]="'linkedin'" (hoverColor)="changeBg($event)"></app-social-service>
+                          [socialName]="'linkedin'" (hoverColor)="changeBg($event)"></app-social-service>
       <app-social-service [color]="'#1da1f3'" [link]="'https://twitter.com/codeminedev'" [socialName]="'twitter'"
-          (hoverColor)="changeBg($event)"></app-social-service>
+                          (hoverColor)="changeBg($event)"></app-social-service>
     </div>
   </section>
 </footer>

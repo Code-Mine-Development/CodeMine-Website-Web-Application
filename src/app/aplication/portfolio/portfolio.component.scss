@@ -5,21 +5,3 @@
   letter-spacing: initial;
   position: relative;
 }
-
-/deep/ .right {
-  .container {
-    .project {
-      flex-direction: row-reverse;
-      .project-details {
-        .technologies {
-          flex-direction: row-reverse;
-        }
-        .project-tech {
-          right: -5em;
-          left: inherit !important;
-          align-self: flex-end;
-        }
-      }
-    }
-  }
-}

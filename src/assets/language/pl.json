@@ -154,7 +154,7 @@
     "addProjectButton": "Napisz do nas",
     "checkPortfolio": "sprawdź nasze portfolio",
     "starInfo": "Dane przedstawione na ilustracjach oraz filmach są przykładowe",
-    "showMore": "Zobacz więcej",
+    "showMore": "Więcej",
     "sectionTitles": {
       "interface": "Interfejs",
       "before": "Przed",
@@ -261,7 +261,7 @@
     },
     "MidOceanBrands": {
       "title": "Mid Ocean Brands Reporting System",
-      "subTitle": "Planowanie wydajnej produkcji",
+      "subTitle": "Narzędzie do planowania wydajnej produkcji  ",
       "shortDescription": "Kompleksowe narzędzie służące do planowania wydajności produkcji dla firmy zajmującej się wykonywaniem nadruków graficzne na różnego rodzaju gadżetach.",
       "description": {
         "part1": "Zarządzanie procesem produkcyjnym na dużą skalę jest zadaniem nie tylko pracochłonnym, ale też wysoce skomplikowanym, szczególnie, kiedy głównym używanym narzędziem staje się Microsoft Excel. Tak było w przypadku Mid Ocean Brands – firmy zajmującej się profesjonalnym nadrukiem materiałów graficznych na różnorakich gadżetach, która obecnie może już cieszyć się lepszym, zaproponowanym przez nas rozwiązaniem.",
@@ -295,8 +295,8 @@
     },
     "Tripbuzz": {
       "title": "Tripbuzz",
-      "subTitle": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-      "shortDescription": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+      "subTitle": "Aplikacja pozwalająca na odkrywanie nowych miejsc i atrakcji w okolicy",
+      "shortDescription": "Aplikacja pozwalająca na odkrywanie nieznanych miejsc i podejmowanie nowych aktywności, dostępnych w najbliższej okolicy. ",
       "description": {
         "part1": "Tripuzz to rozbudowana aplikacja webowa, która pozwala swoim użytkownikom odkryć nowe, ciekawe miejsca czy atrakcje, znajdujące się w ich najbliższej okolicy. Choć dziś narzędzie to stanowi obszerną bazę, niegdyś było niezwykle prostą stroną, która za sprawą naszego zespołu, przeszła niemałą transformację.",
         "part2": "Głównym zadaniem Code Mine było rozbudowanie aplikacji o nowe funkcjonalności, jak również rozwijanie tych istniejących. W ramach współpracy wprowadziliśmy nowe atrakcje i dział hoteli, a także zaimplementowaliśmy wersję mobilną. ",

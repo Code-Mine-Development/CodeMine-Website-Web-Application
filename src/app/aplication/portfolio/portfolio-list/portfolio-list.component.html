@@ -3,7 +3,7 @@
                          [project]="project" [technologies]="technologies" [tools]="tools" (onAction)="showDetails(project.link)" (navigate)="navigate($event)"></app-portfolio-project>
   <div class="cta">
     <h2>{{'PORTFOLIO.addProjectTitle'| translate}}</h2>
-    <button class="btn btn-large btn-shadow">{{'PORTFOLIO.addProjectButton' | translate}}</button>
+    <button class="btn btn-large" [routerLink]="['/contact' | localize]">{{'PORTFOLIO.addProjectButton' | translate}}</button>
   </div>
 </section>
 

@@ -11,13 +11,13 @@
     padding: 200px 0;
     text-align: center;
     h2 {
-      font-weight: 800;
+      font-weight: 700;
       font-size: 36px;
     }
     .btn{
       outline: none;
-      border: 0;
-      background: #FFFFFF;
+      background: transparent;
+      border: 2px solid #000000;
     }
   }
 
