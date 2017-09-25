@@ -19,7 +19,8 @@ export class PortfolioProjectComponent {
   constructor() {
   }
 
-  onClick() {
+  onClick(event) {
+    event.preventDefault();
     this.onAction.emit();
   }
 

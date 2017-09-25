@@ -1,4 +1,5 @@
 @import "../../../../../assets/styles/mediaQueries";
+
 :host {
   letter-spacing: 0;
 }
@@ -153,5 +154,20 @@ h3 {
     font-weight: bold;
     margin-bottom: 20px;
     display: block;
+  }
+
+  img.exchange-process_full {
+    display: block;
+  }
+  img.exchange-process_mobile {
+    display: none;
+  }
+  @media #{$tablet-media} {
+    img.exchange-process_full {
+      display: none;
+    }
+    img.exchange-process_mobile {
+      display: block;
+    }
   }
 }

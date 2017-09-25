@@ -11,6 +11,7 @@
   margin-top: 100px;
   padding: 0;
   right: 0;
+  z-index: 30;
   @media #{$computer}{
     margin-top: -7%;
     right: -10%;

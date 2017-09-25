@@ -1,23 +1,18 @@
 // Buttons
 .btn {
-    padding: 10px 35px;
-    text-transform: uppercase;
-    cursor: pointer;
+  padding: 10px 35px;
+  text-transform: uppercase;
+  cursor: pointer;
+  outline: none;
 
   &-yellow {
     background-color: #fee03c;
-    color: #000;
-    border:none;
+    color: #282828;
+    border: none;
   }
 
   &-shadow {
-    box-shadow: 7px 10px 30px rgba(161,161,161,0.30);
-    transition: all 500ms;
-    &:hover {
-      box-shadow: 2px 3px 30px rgba(161,161,161,0.30);
-      transform: scale(0.99);
-    }
-
+    box-shadow: 7px 10px 30px rgba(161, 161, 161, 0.30);
   }
 
   &-white {
@@ -28,7 +23,30 @@
   }
 
   &-large {
-   font-size: 16px;
-   font-weight: 700;
+    font-size: 16px;
+    font-weight: 700;
+  }
+
+  &-border-only {
+    background: transparent;
+    color: #282828;
+    border: 2px solid #282828;
+  }
+  &-hover-yellow-border {
+    border: 2px solid transparent;
+    transition: .5s;
+    &:hover{
+      background: transparent;
+      border: 2px solid #FFDE07;
+      color: #FFDE07;
+    }
+  }
+
+  &-hover-black-fill {
+    transition: .3s;
+    &:hover {
+      background: #282828;
+      color: #FFDE07;
+    }
   }
 }

@@ -30,7 +30,7 @@
   transition: background .5s;
   &.active{
     pointer-events: initial;
-    background: #000000;
+    background: #282828;
   }
 }
 
@@ -45,7 +45,7 @@
   div{
     height:2px;
     width:100%;
-    background:#000000;
+    background:#282828;
     transition: transform .5s, background .5s, opacity .2s;
   }
 

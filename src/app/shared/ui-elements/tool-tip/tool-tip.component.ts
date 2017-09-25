@@ -8,8 +8,7 @@ import {Component, Input, HostBinding, ElementRef, OnChanges, HostListener} from
 export class ToolTipComponent implements OnChanges {
 
   @Input() errors;
-  @HostBinding('class.right') right;
-  @HostBinding('class.bottom') bottom;
+
   @HostBinding('class.visible') visible = false;
 
   private static getMessage(list) {
@@ -29,16 +28,6 @@ export class ToolTipComponent implements OnChanges {
     return message;
   }
 
-  private static calculateFullOffsetLeft(element: HTMLElement) {
-    let offsetLeft = element.offsetLeft,
-      parent: any = element.offsetParent;
-
-    while (parent) {
-      offsetLeft += parent.offsetLeft;
-      parent = parent.offsetParent;
-    }
-    return offsetLeft;
-  }
 
   constructor(private element: ElementRef) {
   }
@@ -47,13 +36,8 @@ export class ToolTipComponent implements OnChanges {
     this.visible = false;
   }
 
-  @HostListener('window:resize', []) onResize() {
-    this.chooseClass();
-  }
-
 
   ngOnChanges() {
-    this.chooseClass();
     this.setVisible();
   }
 
@@ -68,23 +52,4 @@ export class ToolTipComponent implements OnChanges {
       this.visible = false;
     }
   }
-
-  chooseClass() {
-    if (!this.element || !this.element.nativeElement) {
-      return;
-    }
-    const spaceAfterContainer = window.innerWidth -
-      (ToolTipComponent.calculateFullOffsetLeft(this.element.nativeElement.offsetParent) +
-      this.element.nativeElement.offsetParent.offsetWidth);
-
-    if (spaceAfterContainer > this.element.nativeElement.offsetWidth) {
-      this.bottom = false;
-      this.right = true;
-    } else {
-      this.bottom = true;
-      this.right = false;
-    }
-
-  }
-
 }

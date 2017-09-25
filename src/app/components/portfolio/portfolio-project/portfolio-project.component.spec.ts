@@ -9,7 +9,7 @@ import {Component, Input, Output, EventEmitter} from '@angular/core';
   selector: 'app-architecture',
   template: 'test'
 })
-class ArchitectureMock {
+class ArchitectureMockComponent {
   @Input() tools;
   @Input() technologies;
   @Input() currentTools;
@@ -28,7 +28,7 @@ describe('PortfolioProjectComponent', () => {
       imports: [
         TranslateModule.forRoot()
       ],
-      declarations: [PortfolioProjectComponent, ArchitectureMock],
+      declarations: [PortfolioProjectComponent, ArchitectureMockComponent],
       providers: [
         {provide: ActivatedRoute, useValue: {data: {}}}
       ]

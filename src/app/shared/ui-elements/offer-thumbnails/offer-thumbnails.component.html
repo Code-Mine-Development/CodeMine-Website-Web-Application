@@ -1,7 +1,8 @@
 <div class="column"
+     [class.small]="small"
      *ngFor="let item of elements"
      (click)="onClick(item.url)">
   <img [src]="'assets/icons/'+item.icon" [attr.alt]="item.key + ' icon'">
   <div class="hover" [style.background]="item.color"></div>
-  <h3 class="hover" [class.small]="small">{{item.key}}</h3>
+  <h3 class="hover">{{item.key}}</h3>
 </div>

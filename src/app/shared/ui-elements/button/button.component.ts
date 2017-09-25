@@ -21,7 +21,7 @@ import {Component, Input, HostBinding, HostListener, OnInit} from '@angular/core
 export class ButtonComponent implements OnInit {
   @Input() title = 'Button';
   @Input() color = '#169bd5';
-  @Input() hover = '#000000';
+  @Input() hover = '#282828';
   @HostBinding('style.backgroundColor') backgroundColor: string;
 
   ngOnInit() {

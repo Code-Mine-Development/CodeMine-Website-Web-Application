@@ -4,6 +4,7 @@
 
 body {
   margin: 0;
+  color: #282828;
 }
 
 app-audit {
@@ -39,6 +40,10 @@ app-offer {
   }
 }
 
+p {
+  line-height: 22px;
+  font-weight: 700;
+}
 
 
 

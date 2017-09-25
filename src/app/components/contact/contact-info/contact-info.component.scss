@@ -106,6 +106,9 @@ svg {
       margin: 10px 0;
     }
   }
+  a {
+    color: #ffffff;
+  }
   .hover {
     position: absolute;
     font-size: 1.6rem;
@@ -149,19 +152,3 @@ svg {
     box-sizing: border-box;
   }
 }
-
-@keyframes fadeCopied {
-  0% {
-    color: #AAAAAA;
-  }
-  30% {
-    opacity: 1;
-  }
-  100% {
-    color: #37D773;
-    transform: scale(2);
-    opacity: 0;
-    bottom: 125%;
-  }
-}
-

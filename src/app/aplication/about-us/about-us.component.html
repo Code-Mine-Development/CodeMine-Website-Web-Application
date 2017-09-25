@@ -1,4 +1,4 @@
 <app-about-company-name></app-about-company-name>
-<app-office [employees]="company.employees"></app-office>
+<app-office [employees]="company.employees" (navigate)="navigate($event)"></app-office>
 <app-approach></app-approach>
 <app-instagram class="container"></app-instagram>

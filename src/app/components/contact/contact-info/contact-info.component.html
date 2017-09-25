@@ -3,12 +3,20 @@
   <video autoplay loop src="assets/videos/timelaps.mp4" poster="assets/images/timelapseSzyb.png"></video>
 </figure>
 <section class="container address">
-  <p (click)="copy(company.email)">{{company.email}} <span class="hover" [class.copied]="currentCopy === company.email">{{(currentCopy === company.email ? 'CONTACT.copied' : 'CONTACT.clickToCopy') | translate}}</span>
+  <p (click)="copy(company.email)">
+    <a [attr.href]="mobile ? 'mailto:' + company?.email : null">{{company.email}}</a>
+    <span class="hover" [class.copied]="currentCopy === company.email">
+        {{(currentCopy === company.email ? 'CONTACT.copied' : 'CONTACT.clickToCopy') | translate}}
+    </span>
   </p>
-  <p (click)="copy(company.phone)">{{company.phone}} <span class="hover" [class.copied]="currentCopy === company.phone">{{(currentCopy === company.phone ? 'CONTACT.copied' : 'CONTACT.clickToCopy') | translate}}</span>
+  <p (click)="copy(company.phone)">
+    <a href="tel:{{company?.phone}}">{{company.phone}}</a>
+    <span class="hover" [class.copied]="currentCopy === company.phone">
+      {{(currentCopy === company.phone ? 'CONTACT.copied' : 'CONTACT.clickToCopy') | translate}}
+    </span>
   </p>
   <address>
-    <a href="https://www.google.com/maps/dir/Current+Location/3+Maja+18+Katowice+Poland">
+    <a href="https://www.google.com/maps/dir/Current+Location/3+Maja+18+Katowice+Poland" target="_blank">
       <span>{{company.street}} {{company.apartment}} </span>
       <span>{{company.city}}, {{company.country}}</span>
     </a>

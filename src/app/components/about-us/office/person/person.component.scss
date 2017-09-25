@@ -28,18 +28,21 @@
   height: 100vh;
   position: absolute;
   left: 60%;
-  top: 50%;
+  top: 40%;
   visibility: hidden;
   opacity: 0;
   transition-duration: .7s;
   transform-origin: 50% 50%;
   transform: translate(-50%, -50%) scale(0.3);
   box-sizing: border-box;
+  @media #{$computer-max}{
+    top: 20%;
+  }
   @media #{$phone} {
     overflow-y: scroll;
     background: $desk;
-    left:0;
-    top:0;
+    left: 0;
+    top: 0;
     transform: scale(0.3);
   }
   #personWrapper {
@@ -59,12 +62,16 @@
       padding: 20px;
       box-shadow: none;
     }
+    @media #{$tablet-media}{
+      padding: 30px;
+    }
     strong {
       font-size: 1.6rem;
     }
     button {
       position: absolute;
       right: 1.5%;
+      z-index: 32;
       top: 3%;
       background: none;
       cursor: pointer;
@@ -77,21 +84,44 @@
       @media #{$phone} {
         top: 25px;
         right: 25px;
-        padding:0;
+        padding: 0;
       }
 
     }
     .bg {
-      margin:0;
+      position: relative;
+      margin: 0;
       width: 45%;
       height: 100%;
-      background-size: cover;
-      background-position: center, 1000px 0%;
-      background-repeat: no-repeat;
-      &:hover {
-        background-position: 1000px 0%, center;
+      overflow: hidden;
+      .funny, .normal, #funny-cover {
+        position: absolute;
+        left: 50%;
+        top: 0;
+        width: 100%;
+        min-width: 472.5px;
+        transform: translateX(-50%);
+      }
+      #funny-cover {
+        z-index: 35;
+      }
+      .normal {
+        opacity: 1;
+        z-index: 30;
+      }
+      .funny, #funny-cover {
+        opacity: 0;
+        z-index: 31;
       }
 
+      &:hover {
+        .normal {
+          opacity: 0;
+        }
+        .funny,#funny-cover {
+          opacity: 1;
+        }
+      }
       @media #{$phone} {
         width: 100%;
         background-position: top, 1000px 0;
@@ -121,7 +151,7 @@
         margin: 0;
       }
       p {
-        margin: 2em 0;
+        margin: 25px 0;
       }
       @media #{$phone} {
         margin-top: 40px;
@@ -144,7 +174,7 @@
     left: 50%;
     @media #{$phone} {
       transform: scale(1);
-      left:0;
+      left: 0;
       min-height: 100vh;
     }
   }

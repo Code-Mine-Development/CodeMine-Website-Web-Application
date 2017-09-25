@@ -60,6 +60,7 @@ export class ScrollToService {
     this.filterTarget();
     this.chooseOppenent();
     this.targetPosition = this.getTargetPosition();
+    console.log(this.targetPosition);
     this.currentPosition = this.getCurrentPosition();
     window.requestAnimationFrame(this.scrollToElement.bind(this));
   }
@@ -95,11 +96,9 @@ export class ScrollToService {
     } else if (this.target === 'SiteHead') {
       return 0;
     }
-
     let distance = this.target.offsetTop;
     let parent: any = this.target.offsetParent;
-
-    while (!parent) {
+    while (parent) {
       distance += parent.offsetTop;
       parent = parent.offsetParent;
     }
@@ -111,7 +110,7 @@ export class ScrollToService {
       halfTargetHeight = this.target.offsetHeight / 2;
 
     if (this.onScreenLocation === 'top') {
-      return distance - 60;
+      return distance;
     } else if (this.onScreenLocation === 'center') {
       return distance - halfHeight + halfTargetHeight;
     } else if (this.onScreenLocation === 'bottom') {

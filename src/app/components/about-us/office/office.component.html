@@ -2,4 +2,4 @@
   <app-person [eventManager]="eventManager"></app-person>
   <app-office-model [employees]="employees" [eventManager]="eventManager"></app-office-model>
 </section>
-<app-employees-list [employees]="employees" [eventManager]="eventManager"></app-employees-list>
+<app-employees-list [employees]="employees" [eventManager]="eventManager" (navigate)="toContactForm()"></app-employees-list>

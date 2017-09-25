@@ -3,6 +3,7 @@ import {NgForm} from '@angular/forms';
 import {TranslateService} from '@ngx-translate/core';
 import {ContactFormService} from '../service/contact-form.service';
 
+
 @Component({
   selector: 'app-contact-form',
   templateUrl: './contact-form.component.html',
@@ -13,6 +14,7 @@ export class ContactFormComponent implements OnInit {
   name: string;
   email: string;
   message: string;
+  formStatus: string;
 
   constructor(private translate: TranslateService, private contactService: ContactFormService) {
   }
@@ -38,12 +40,17 @@ export class ContactFormComponent implements OnInit {
   onSubmit(event, form: NgForm) {
     event.preventDefault();
     if (form.valid) {
+      this.formStatus = 'loading';
       this.contactService.sendContactForm(form.value).subscribe(
         (result: boolean) => {
-          console.log('We did it! Now let\'s inform user that his message was send successfully')
+          if (result) {
+            this.formStatus = 'valid';
+          } else {
+            this.formStatus = 'invalid';
+          }
         },
         (error) => {
-          console.log('Ups! something went wrong. We need also to inform user about this')
+          this.formStatus = 'invalid';
         }
       );
     }

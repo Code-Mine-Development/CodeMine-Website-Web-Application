@@ -154,7 +154,7 @@
     "addProjectButton": "Napisz do nas",
     "checkPortfolio": "sprawdź nasze portfolio",
     "starInfo": "Dane przedstawione na ilustracjach oraz filmach są przykładowe",
-    "showMore": "Zobacz więcej",
+    "showMore": "Więcej",
     "sectionTitles": {
       "interface": "Interfejs",
       "before": "Przed",
@@ -261,7 +261,7 @@
     },
     "MidOceanBrands": {
       "title": "Mid Ocean Brands Reporting System",
-      "subTitle": "Planowanie wydajnej produkcji",
+      "subTitle": "Narzędzie do planowania wydajnej produkcji  ",
       "shortDescription": "Kompleksowe narzędzie służące do planowania wydajności produkcji dla firmy zajmującej się wykonywaniem nadruków graficzne na różnego rodzaju gadżetach.",
       "description": {
         "part1": "Zarządzanie procesem produkcyjnym na dużą skalę jest zadaniem nie tylko pracochłonnym, ale też wysoce skomplikowanym, szczególnie, kiedy głównym używanym narzędziem staje się Microsoft Excel. Tak było w przypadku Mid Ocean Brands – firmy zajmującej się profesjonalnym nadrukiem materiałów graficznych na różnorakich gadżetach, która obecnie może już cieszyć się lepszym, zaproponowanym przez nas rozwiązaniem.",
@@ -295,8 +295,8 @@
     },
     "Tripbuzz": {
       "title": "Tripbuzz",
-      "subTitle": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-      "shortDescription": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+      "subTitle": "Aplikacja pozwalająca na odkrywanie nowych miejsc i atrakcji w okolicy",
+      "shortDescription": "Aplikacja pozwalająca na odkrywanie nieznanych miejsc i podejmowanie nowych aktywności, dostępnych w najbliższej okolicy. ",
       "description": {
         "part1": "Tripuzz to rozbudowana aplikacja webowa, która pozwala swoim użytkownikom odkryć nowe, ciekawe miejsca czy atrakcje, znajdujące się w ich najbliższej okolicy. Choć dziś narzędzie to stanowi obszerną bazę, niegdyś było niezwykle prostą stroną, która za sprawą naszego zespołu, przeszła niemałą transformację.",
         "part2": "Głównym zadaniem Code Mine było rozbudowanie aplikacji o nowe funkcjonalności, jak również rozwijanie tych istniejących. W ramach współpracy wprowadziliśmy nowe atrakcje i dział hoteli, a także zaimplementowaliśmy wersję mobilną. ",
@@ -408,6 +408,7 @@
     "hello": "Cześć,",
     "send": "Wyślij",
     "requestEstimate": "lub poproś o wycenę swojego projektu",
+    "sthWentWrong": "Coś poszło nie tak ...",
     "form": {
       "require": "To pole jest wymagane",
       "pattern": "format emaila jest nieprawidowy",
@@ -418,7 +419,7 @@
     "title": "Technologie",
     "description": "Opis",
     "bash": {
-      "description": "brak"
+      "description": "Jako powłoka systemów UNIX, Bash jest jednym z najpopularniejszych rozwiązań w swojej kategorii i jednocześnie domyślnym - w większości dystrybucji Linuxa. To narzędzie pozwalające na komunikację między systemem operacyjnym a użytkownikiem bądź aplikacją, które charakteryzuje się uniwersalnością, szybkością oraz ogromnym wachlarzem możliwego wykorzystania.Na co dzień w zdecydowanej większości przypadków instalujemy nasz software na serwerach UNIX'owych, toteż Bash pomaga nam w ich obsłudze, będąc ponadto podstawowym narzędziem do automatyzacji procesów. Tym samym, wykorzystujemy go głównie do skryptów automatyzujących instalację oprogramowania czy skryptów wspierających development, jak również do automatyzacji testów oraz budowania aplikacji."
     },
     "java": {
       "description": "Jako najpopularniejszy obiektowy język programowania, Java charakteryzuje się przede wszystkim niezwykłą sprawnością i szybkością działania, przy jednoczesnym zachowaniu wysokiego stopnia bezpieczeństwa. Niemniej jednak, na komfort pracy z tym językiem wpływają także jego łatwa składnia, wielowątkowość i silne typowanie. W Code Mine szczególnie cenimy go sobie również za promowanie dobrych praktyk programowania obiektowego oraz łatwy dostęp do wiedzy. Co więcej, Java świetnie sprawdza się przy implementacji aplikacji typu enterprise, co dla nas, jako firmy dostarczającej rozwiązania biznesowe szyte na miarę, ma ogromne znaczenie. Jej stosowanie doceniane jest nawet przez samych klientów, którzy podkreślają jej stabilność i popularność. Z tego względu, Java jest naszym numerem jeden, wykorzystywanym zwłaszcza przy aplikacjach serwerowych."
@@ -430,13 +431,10 @@
       "description": "Będący uniwersalnym językiem skryptowym, PHP został stworzony z myślą o stronach i aplikacjach internetowych. Dzięki znacznemu rozwojowi, jaki odnotował na przestrzeni ostatnich lat, staje się językiem coraz bardziej dojrzałym. Ze względu na niskie wymagania hostingowe, PHP odznacza się łatwością jego wdrożenia, toteż często wykorzystujemy go przy naszych projektach. Warto podkreślić, że pracujemy zawsze w jego najnowszej wersji, rozwijając przy tym istniejące biblioteki Open Source. "
     },
     "swift": {
-      "description": "brak"
+      "description": "Swift to potężny, nowoczesny i niezwykle intuicyjny język programowania na platformy macOS, iOS, watchOS i tvOS, który wszedł na rynek w 2014 roku, zastępując swojego przestarzałego i nieczytelnego poprzednika, Objective-C.Dzięki sporej liczbie ciekawych bibliotek, jak i samej dobrej wydajności tego narzędzia, Swift ułatwia codzienną pracę programistów, będąc stosunkowo łatwym punktem wejścia  także dla deweloperów niemających wcześniej styczności z platformami Apple.Nasi programiści są zaciętymi entuzjastami Swifta i wykorzystują go każdorazowo przy tworzeniu aplikacji na platformy iOS oraz tvOS. Co więcej, cenią sobie przypisany mu komfort pracy do tego stopnia, że stworzyli w nim aplikację wyświetlającą informacje o przebiegu naszych projektów na biurowym Apple TV."
     },
     "typescript": {
       "description": "Będący nakładką JavaScriptu, TypeScript, dzięki typowaniu wpływa na czystość kodu oraz łatwość w jego zarządzaniu. To narzędzie, które w pierwszym etapie pozwala na rozszerzenie funkcjonalności JS, a w ostatnim, automatycznie przekształca do niego powstały kod. TypeScript jest dla nas podstawą przy projektowaniu zaawansowanych aplikacji internetowych. Jego użycie we frameworku Angular, przyczynia się do stabilności oferowanych rozwiązań, jak i szybkości i intuicyjności samego procesu tworzenia."
-    },
-    "html5": {
-      "description": "brak"
     }
   },
   "TOOLS": {

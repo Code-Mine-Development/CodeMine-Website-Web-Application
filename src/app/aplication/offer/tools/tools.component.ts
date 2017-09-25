@@ -26,7 +26,7 @@ export class ToolsComponent implements OnChanges {
   parseTechnologies() {
     Object.keys(this.Tools).forEach((key) => {
       this.elements.push({
-        key: key,
+        key: this.Tools[key].title,
         icon: this.Tools[key].icon,
         url: '/tools/' + key,
         color: this.Tools[key].color

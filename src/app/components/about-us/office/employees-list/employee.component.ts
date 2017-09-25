@@ -1,4 +1,4 @@
-import {Component, Input, Output, EventEmitter, OnChanges, OnInit, HostBinding, HostListener} from '@angular/core';
+import {Component, Input, OnInit, HostBinding, HostListener} from '@angular/core';
 import {EventManager} from '../event_manager';
 import {Employees} from '../../../../aplication/about-us/interfaces/employees.interface';
 
@@ -52,17 +52,12 @@ export class EmployeeComponent implements OnInit {
   }
 
   onHover(person: Employees) {
-    if (this.clicked) {
-      return;
-    }
-    this.hover = person === this.person;
+    this.hover = this.clicked || person === this.person;
   }
 
   onClick(person: Employees) {
-    this.clicked = !!person;
-    if (!this.clicked) {
-      this.hover = false;
-    }
+    this.clicked = person === this.person;
+    this.onHover(person);
   }
 
 }
