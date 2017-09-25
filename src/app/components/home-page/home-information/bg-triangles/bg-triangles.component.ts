@@ -65,7 +65,7 @@ export class BgTrianglesComponent implements AfterViewInit {
 
       random = +Math.random().toFixed(0);
 
-      triangle.color = random === 1 ? '#ffdf00' : '#000000';
+      triangle.color = random === 1 ? '#ffdf00' : '#282828';
       this.triangles.push(triangle);
     }
   }

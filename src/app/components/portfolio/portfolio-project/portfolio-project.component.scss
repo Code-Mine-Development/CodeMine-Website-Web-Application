@@ -43,6 +43,22 @@ h1 {
     align-items: center;
     background-size: cover;
     position: relative;
+    & > div{
+      position: relative;
+      &:after{
+        content: '';
+        position: absolute;
+        left:0;
+        top:0;
+        width: 100%;
+        height: 100%;
+        background: #282828;
+        opacity: 0;
+        pointer-events: none;
+        transition: opacity .5s;
+        z-index: 30;
+      }
+    }
     img {
       width: 100%;
     }
@@ -50,11 +66,9 @@ h1 {
       transform: scale(1.05);
       button {
         opacity: 1;
-        transition: 2s;
-        &:hover {
-          transform: translate(-50%, -50%) scale(0.95);
-          transition: 0.3s;
-        }
+      }
+      & > div:after{
+        opacity: .2;
       }
     }
 
@@ -64,6 +78,7 @@ h1 {
       top: 50%;
       transform: translate(-50%, -50%);
       opacity: 0;
+      z-index: 35;
     }
   }
   .project-details {
@@ -123,11 +138,6 @@ h1 {
         transform: scale(1.05);
         button {
           opacity: 1;
-          transition: 2s;
-          &:hover {
-            transform: translate(-50%, -50%) scale(0.95);
-            transition: 0.3s;
-          }
         }
       }
 

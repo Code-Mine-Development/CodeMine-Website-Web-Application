@@ -13,14 +13,13 @@ export class OfficeComponent implements OnInit {
   eventManager = new EventManager();
 
 
-
   constructor() {
   }
 
   ngOnInit() {
   }
 
-  toContactForm(){
+  toContactForm() {
     this.navigate.emit('contact');
   }
 

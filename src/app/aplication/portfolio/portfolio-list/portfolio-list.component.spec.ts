@@ -22,7 +22,7 @@ const MockRoutingData = {
   selector: 'app-portfolio-project',
   template: 'test'
 })
-class PortfolioProjectComponentMock {
+class PortfolioProjectMockComponent {
 
   @Input() project: Portfolio;
   @Input() tools: OfferElementBeforePrepare[];
@@ -42,7 +42,7 @@ describe('PortfolioListComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [PortfolioListComponent, PortfolioProjectComponentMock],
+      declarations: [PortfolioListComponent, PortfolioProjectMockComponent],
       imports: [
         UiModule,
         TranslateModule.forRoot()

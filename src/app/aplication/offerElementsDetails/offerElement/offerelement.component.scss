@@ -102,6 +102,9 @@
       .title {
         font-size: 1.5rem;
       }
+      .desc p {
+        max-width: 450px;
+      }
     }
     .picture {
       display: flex;

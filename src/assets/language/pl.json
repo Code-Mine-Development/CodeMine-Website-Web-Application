@@ -408,6 +408,7 @@
     "hello": "Cześć,",
     "send": "Wyślij",
     "requestEstimate": "lub poproś o wycenę swojego projektu",
+    "sthWentWrong": "Coś poszło nie tak ...",
     "form": {
       "require": "To pole jest wymagane",
       "pattern": "format emaila jest nieprawidowy",

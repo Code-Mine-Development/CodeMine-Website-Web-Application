@@ -10,14 +10,14 @@ import {EventManager} from '../event_manager';
 export class EmployeesListComponent {
 
   @Input() employees: Employees;
-  @Input() eventManager:EventManager;
+  @Input() eventManager: EventManager;
 
   @Output() navigate = new EventEmitter();
 
   constructor() {
   }
 
-  onNavigate(){
+  onNavigate() {
     this.navigate.emit();
   }
 

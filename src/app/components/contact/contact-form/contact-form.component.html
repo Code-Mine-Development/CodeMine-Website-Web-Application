@@ -9,8 +9,8 @@
                [attr.placeholder]="'CONTACT.namePlaceHolder' | translate"
                appToolTip required
         >
-        <svg class="status"
-             [class.visible]="!nameInput.pristine || nameInput.touched"
+        <svg class="status status-center"
+             [class.visible]="!nameInput.pristine || nameInput.touched || form.submitted"
              viewBox="0,0 6,6">
           <polyline [class.invalid]="nameInput.invalid" stroke-width="1px" stroke="#FF3866" fill="none"
                     points="1,1 3,3 1,5 3,3 5,5 3,3 5,1"></polyline>
@@ -22,8 +22,8 @@
                [attr.placeholder]="'CONTACT.emailPlaceHolder' | translate"
                appToolTip required pattern="^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,6})+$"
         >
-        <svg class="status"
-             [class.visible]="!emailInput.pristine || emailInput.touched"
+        <svg class="status status-center"
+             [class.visible]="!emailInput.pristine || emailInput.touched || form.submitted"
              viewBox="0,0 6,6">
           <polyline [class.valid]="emailInput.valid" stroke-width="1px" stroke="#37D773" fill="none"
                     points="1,4 2,5 5,2"></polyline>
@@ -44,7 +44,7 @@
                 appToolTip
                 required></textarea>
       <svg class="status"
-           [class.visible]="!textNgModel.pristine || textNgModel.touched"
+           [class.visible]="!textNgModel.pristine || textNgModel.touched || form.submitted"
            viewBox="0,0 6,6">
         <polyline [class.valid]="textNgModel.valid" stroke-width="1px" stroke="#37D773" fill="none"
                   points="1,4 2,5 5,2"></polyline>
@@ -56,7 +56,24 @@
 
   </fieldset>
   <fieldset>
-    <button type="submit" class="btn btn-yellow btn-large">{{'CONTACT.send' | translate}}</button>
+    <p class="button_area">
+      <span class="invalid_info" [class.visible]="formStatus === 'invalid'">{{'CONTACT.sthWentWrong' | translate}}</span>
+      <button type="submit" class="btn btn-yellow btn-large" [ngClass]="{ 'btn-loading':  formStatus === 'loading', 'btn-fail': formStatus === 'invalid', 'btn-success': formStatus === 'valid'}">
+        {{'CONTACT.send' | translate}}
+        <svg class="btn-status" viewBox="0,0 6,6">
+          <polyline class="btn-success-cont" stroke-width="1px" stroke="#FFFFFF" fill="none"
+                    points="1,3.5 2.5,4.5 5.5,1.5"></polyline>
+          <polyline class="btn-fail-cont" stroke-width="1px" stroke="#FFFFFF" fill="none"
+                    points="1,1 3,3 1,5 3,3 5,5 3,3 5,1"></polyline>
+        </svg>
+        <div class="loading">
+          <div class="blob blob-1"></div>
+          <div class="blob blob-2"></div>
+          <div class="blob blob-3"></div>
+          <div class="blob blob-4"></div>
+        </div>
+      </button>
+    </p>
   </fieldset>
 </form>
 <a>

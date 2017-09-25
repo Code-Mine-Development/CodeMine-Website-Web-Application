@@ -33,6 +33,7 @@
   justify-content: space-between;
   position: relative;
   .footer_vcard {
+
     display: flex;
     width: 50%;
     box-sizing: border-box;
@@ -44,6 +45,7 @@
       margin: 0;
     }
     a p {
+      font-weight: 400;
       text-align: center;
       padding: 15px 0;
       position: relative;
@@ -67,6 +69,10 @@
           animation: fadeCopied;
           animation-fill-mode: forwards;
           animation-duration: .5s;
+        }
+        @media #{$phone}{
+          left: 20px;
+          text-align: left;
         }
       }
       @media #{$phone}{

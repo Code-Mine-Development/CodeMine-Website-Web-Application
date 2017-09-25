@@ -109,7 +109,7 @@
         opacity: 1;
         z-index: 30;
       }
-      .funny {
+      .funny, #funny-cover {
         opacity: 0;
         z-index: 31;
       }
@@ -118,7 +118,7 @@
         .normal {
           opacity: 0;
         }
-        .funny {
+        .funny,#funny-cover {
           opacity: 1;
         }
       }
@@ -151,7 +151,7 @@
         margin: 0;
       }
       p {
-        margin: 2em 0;
+        margin: 25px 0;
       }
       @media #{$phone} {
         margin-top: 40px;

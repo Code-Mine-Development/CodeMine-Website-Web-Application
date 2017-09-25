@@ -21,7 +21,7 @@ export class PersonComponent implements OnInit {
   animationInstance;
   animationElement;
 
-  constructor(private renderer: Renderer2, private scrollToService: ScrollToService, private element: ElementRef ) {
+  constructor(private renderer: Renderer2, private scrollToService: ScrollToService, private element: ElementRef) {
   }
 
   @HostListener('window:keydown', ['$event']) closePerson(event) {
@@ -40,7 +40,7 @@ export class PersonComponent implements OnInit {
     this.visibleElement = person;
     this.visible = !!person;
     if (person) {
-      this.scrollToService.scroll(this.element.nativeElement,'center');
+      this.scrollToService.scroll(this.element.nativeElement, 'center');
       this.drawFunnyCover();
     }
   }
@@ -54,7 +54,7 @@ export class PersonComponent implements OnInit {
       this.clearSvgBox();
     }
 
-    if(!this.visibleElement.image.funnyCover){
+    if (!this.visibleElement.image.funnyCover) {
       return;
     }
 

@@ -1,10 +1,12 @@
 <div class="container">
   <div class="project">
     <div class="project-image">
-      <img [src]="project.mainImage" [attr.alt]="project.title+'image'">
-      <button (click)="onClick($event)" class="btn btn-yellow btn-large btn-shadow">
-        {{'PORTFOLIO.showMore' | translate}}
-      </button>
+      <div>
+        <img [src]="project.mainImage" [attr.alt]="project.title+'image'">
+        <button (click)="onClick($event)" class="btn btn-yellow btn-large btn-hover-yellow-border">
+          {{'PORTFOLIO.showMore' | translate}}
+        </button>
+      </div>
     </div>
     <div class="project-details">
       <div class="project-desc">

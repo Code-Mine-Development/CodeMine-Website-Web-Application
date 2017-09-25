@@ -1,4 +1,4 @@
-import {Component, OnInit, ElementRef, HostListener, ChangeDetectorRef, AfterViewInit} from '@angular/core';
+import {Component, ElementRef, HostListener, ChangeDetectorRef, AfterViewInit} from '@angular/core';
 import {ComponentTemplate, RegisterElement} from '../component.template';
 import {ScrollController} from '../../../services/scroll.controller';
 import * as Vivus from 'vivus';
@@ -80,7 +80,7 @@ import * as Vivus from 'vivus';
     }
     .curve_line{
       stroke-miterlimit: 10;
-      stroke:#000000;
+      stroke:#282828;
       fill:none;
       stroke-width: 2px;
     }

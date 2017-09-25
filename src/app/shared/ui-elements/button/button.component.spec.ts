@@ -26,10 +26,10 @@ describe('ValidateOnBlurDirective', () => {
         fixture.detectChanges();
     });
 
-    it('should change button background on hover to "#000000" and revert to red on mouseover', () => {
+    it('should change button background on hover to "#282828" and revert to red on mouseover', () => {
         element.triggerEventHandler('mouseenter', null);
         fixture.detectChanges();
-        expect(element.styles.backgroundColor).toBe('#000000');
+        expect(element.styles.backgroundColor).toBe('#282828');
 
         element.triggerEventHandler('mouseleave', null);
         fixture.detectChanges();

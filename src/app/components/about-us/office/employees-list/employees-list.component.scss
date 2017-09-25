@@ -31,7 +31,7 @@ svg {
   border: 1px solid #ffffff;
   width: 100%;
   display: flex;
-  margin-top: 20px;
+  margin: 15px 0 0;
   box-sizing: border-box;
   padding: 10px 10px;
   align-items: center;
@@ -40,6 +40,7 @@ svg {
   transition-duration: .25s;
   @media #{$br1200}{
     width: 50%;
+    margin: 15px -2px 0;
   }
 
   & > * {
@@ -47,10 +48,14 @@ svg {
     z-index: 35;
   }
   .join_us-image {
+    max-width: 67px;
     @media #{$phone} {
       display: none;
     }
-    width: 10.5%;
+    @media #{$br1200}{
+      max-width: 100%;
+    }
+    width: 12.5%;
     figure {
       position: relative;
       margin: 0;

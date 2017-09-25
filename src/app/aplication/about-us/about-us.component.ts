@@ -28,7 +28,7 @@ export class AboutUsComponent implements OnInit {
   navigate(target) {
     let route;
     if (target === 'contact') {
-      route = this.localize.translateRoute("/" + target);
+      route = this.localize.translateRoute('/' + target);
     }
 
     this.router.navigateByUrl(route);

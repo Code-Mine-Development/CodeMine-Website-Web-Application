@@ -19,7 +19,7 @@ export class ContactInfoComponent {
   }
 
   copy(text: string) {
-    if(text === ''){
+    if (text === '') {
       return;
     }
     this.currentCopy = this.copyService.copy(text) ? text : '';

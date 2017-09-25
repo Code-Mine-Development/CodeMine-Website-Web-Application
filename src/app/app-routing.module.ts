@@ -34,7 +34,7 @@ export const appRoutes: Routes = [
     RouterModule.forRoot(appRoutes, {preloadingStrategy: PreloadAllModules}),
     LocalizeRouterModule.forRoot(appRoutes)
   ],
-  exports: [RouterModule,LocalizeRouterModule]
+  exports: [RouterModule, LocalizeRouterModule]
 })
 export class AppRoutingModule {
 

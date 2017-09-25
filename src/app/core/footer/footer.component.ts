@@ -14,7 +14,7 @@ export class FooterComponent {
   copied;
   mobile = false;
 
-  constructor(contact: ContactService, private copyService:CopyToClipboardService) {
+  constructor(contact: ContactService, private copyService: CopyToClipboardService) {
     contact.getCompany().subscribe((company) => {
       this.company = company;
     });
@@ -25,11 +25,11 @@ export class FooterComponent {
     this.backgroundColor = color;
   }
 
-  copy(text){
-    if(text === ''){
+  copy(text) {
+    if (text === '') {
       return;
     }
-    if(this.copyService.copy(text)){
+    if (this.copyService.copy(text)) {
       this.copied = text;
     }
   }
