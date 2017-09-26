@@ -2,13 +2,10 @@ import {async, ComponentFixture, TestBed} from '@angular/core/testing';
 import {Router} from '@angular/router';
 import {TranslateModule} from '@ngx-translate/core';
 import {LocalizeRouterService} from 'localize-router';
-
 import {TechnologiesComponent} from './technologies.component';
-
 import {OfferThumbnailsComponent} from '../../../shared/ui-elements/offer-thumbnails/offer-thumbnails.component';
 import {PreviousPositionService} from '../../../shared/services/previous-position.service';
 import {MockTechnologies} from '../../../shared/mocks/technologies.mock';
-
 
 
 describe('TechnologiesComponent', () => {
@@ -55,7 +52,7 @@ describe('TechnologiesComponent', () => {
   });
 
   it('should have parsed elements', () => {
-    expect(component.elements[0].key).toBe('bash');
+    expect(component.elements[0].key).toBe('Bash');
   });
 
   it('should navigate', () => {

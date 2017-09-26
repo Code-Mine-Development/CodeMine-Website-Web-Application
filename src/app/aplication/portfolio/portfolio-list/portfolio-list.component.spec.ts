@@ -1,13 +1,14 @@
 import {async, ComponentFixture, TestBed, fakeAsync, tick} from '@angular/core/testing';
 import {LocalizeRouterService} from 'localize-router';
 import {TranslateModule} from '@ngx-translate/core';
-import {Component, EventEmitter, Output, Input} from '@angular/core';
+import {Component, EventEmitter, Output, Input, PipeTransform, Pipe} from '@angular/core';
 import {ActivatedRoute, Data, Router} from '@angular/router';
 import {PortfolioListComponent} from './portfolio-list.component';
 import {MockPortfolio} from 'app/shared/mocks/portfolio.mock';
 import {UiModule} from '../../../shared/ui-elements/ui.module';
 import {OfferElementBeforePrepare} from '../../offerElementsDetails/interface/offerElementBeforePrepare';
 import {Portfolio} from '../interfaces/portfolio.interface';
+import {RouterTestingModule} from '@angular/router/testing';
 
 
 const MockRoutingData = {
@@ -32,6 +33,14 @@ class PortfolioProjectMockComponent {
   @Output() navigate: EventEmitter<string> = new EventEmitter();
 }
 
+@Pipe({name: 'localize'})
+class MockLocalizePipe implements PipeTransform {
+  transform(value: number): number {
+    //Do stuff here, if you want
+    return value;
+  }
+}
+
 describe('PortfolioListComponent', () => {
   let component: PortfolioListComponent;
   let fixture: ComponentFixture<PortfolioListComponent>;
@@ -42,10 +51,11 @@ describe('PortfolioListComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [PortfolioListComponent, PortfolioProjectMockComponent],
+      declarations: [PortfolioListComponent, PortfolioProjectMockComponent, MockLocalizePipe],
       imports: [
         UiModule,
-        TranslateModule.forRoot()
+        TranslateModule.forRoot(),
+        RouterTestingModule
       ],
       providers: [
         {

@@ -1,8 +1,8 @@
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
-
-import { PersonComponent } from './person.component';
+import {async, ComponentFixture, TestBed} from '@angular/core/testing';
+import {PersonComponent} from './person.component';
 import {TranslateModule} from '@ngx-translate/core';
 import {EventManager} from '../event_manager';
+import {ScrollToService} from '../../../../shared/services/scroll-to.service';
 
 describe('PersonComponent', () => {
   let component: PersonComponent;
@@ -13,7 +13,10 @@ describe('PersonComponent', () => {
       imports: [
         TranslateModule.forRoot()
         ],
-      declarations: [ PersonComponent ]
+      declarations: [ PersonComponent ],
+      providers: [
+        ScrollToService
+      ]
     })
     .compileComponents();
   }));

@@ -4,7 +4,10 @@
     "title": "PORTFOLIO.BrighterVision.title",
     "subTitle": "PORTFOLIO.BrighterVision.subTitle",
     "description": "PORTFOLIO.BrighterVision.shortDescription",
-    "mainImage": "assets/images/portfolio-images/brighter_home.png",
+    "mainImage": {
+      "big": "assets/images/portfolio-images/brighter-big.jpg",
+      "small": "assets/images/portfolio-images/brighter-small.jpg"
+    },
     "thumbnail": "../assets/icons/brighter/Brighter.svg",
     "tools": [
       "angular",
@@ -26,7 +29,10 @@
     "title": "PORTFOLIO.telecom.title",
     "subTitle": "PORTFOLIO.telecom.subTitle",
     "description": "PORTFOLIO.telecom.shortDescription",
-    "mainImage": "assets/images/portfolio-images/telecom_1.png",
+    "mainImage": {
+      "big": "assets/images/portfolio-images/telecom-big.jpg",
+      "small": "assets/images/portfolio-images/telecom-small.jpg"
+    },
     "tools": [
       "angular",
       "gulp",
@@ -47,7 +53,10 @@
     "title": "PORTFOLIO.exchange.title",
     "subTitle": "PORTFOLIO.exchange.subTitle",
     "description": "PORTFOLIO.exchange.shortDescription",
-    "mainImage": "http://blog.oxforddictionaries.com/wp-content/uploads/mountain-names.jpg",
+    "mainImage": {
+      "big": "assets/images/portfolio-images/brighter-big.jpg",
+      "small": "assets/images/portfolio-images/brighter-small.jpg"
+    },
     "tools": [
       "angular",
       "zend-framework",
@@ -66,7 +75,10 @@
     "title": "PORTFOLIO.MidOceanBrands.title",
     "subTitle": "PORTFOLIO.MidOceanBrands.subTitle",
     "description": "PORTFOLIO.MidOceanBrands.shortDescription",
-    "mainImage": "assets/images/portfolio-images/midocean_1.png",
+    "mainImage": {
+      "big": "assets/images/portfolio-images/midocean-big.jpg",
+      "small": "assets/images/portfolio-images/midocean-small.jpg"
+    },
     "thumbnail": "../assets/icons/midocean/MidOcean.svg",
     "tools": [
       "spring-framework",
@@ -83,7 +95,10 @@
     "title": "PORTFOLIO.SmartHome.title",
     "subTitle": "PORTFOLIO.SmartHome.subTitle",
     "description": "PORTFOLIO.SmartHome.shortDescription",
-    "mainImage": "http://blog.oxforddictionaries.com/wp-content/uploads/mountain-names.jpg",
+    "mainImage": {
+      "big": "assets/images/portfolio-images/brighter-big.jpg",
+      "small": "assets/images/portfolio-images/brighter-small.jpg"
+    },
     "thumbnail": "assets/images/portfolio-images/smarthome_bulp.svg",
     "tools": [
       "symfony",
@@ -99,7 +114,10 @@
     "title": "PORTFOLIO.Tandarts.title",
     "subTitle": "PORTFOLIO.Tandarts.subTitle",
     "description": "PORTFOLIO.Tandarts.shortDescription",
-    "mainImage": "assets/images/portfolio-images/tandarts_mov_1.png",
+    "mainImage": {
+      "big": "assets/images/portfolio-images/tandarts-big.jpg",
+      "small": "assets/images/portfolio-images/tandarts-small.jpg"
+    },
     "tools": [
       "laravel",
       "postgresql"
@@ -114,7 +132,10 @@
     "title": "PORTFOLIO.Tripbuzz.title",
     "subTitle": "PORTFOLIO.Tripbuzz.subTitle",
     "description": "PORTFOLIO.Tripbuzz.shortDescription",
-    "mainImage": "assets/images/portfolio-images/tripbuzz_1.png",
+    "mainImage": {
+      "big": "assets/images/portfolio-images/brighter-big.jpg",
+      "small": "assets/images/portfolio-images/brighter-small.jpg"
+    },
     "tools": [
       "angular",
       "gulp",
@@ -135,7 +156,10 @@
     "title": "PORTFOLIO.ZorgIndicator.title",
     "subTitle": "PORTFOLIO.ZorgIndicator.subTitle",
     "description": "PORTFOLIO.ZorgIndicator.shortDescription",
-    "mainImage": "assets/images/portfolio-images/zorgIndicator-1.png",
+    "mainImage": {
+      "big": "assets/images/portfolio-images/brighter-big.jpg",
+      "small": "assets/images/portfolio-images/brighter-small.jpg"
+    },
     "tools": [
       "postgresql",
       "amazon-aws"

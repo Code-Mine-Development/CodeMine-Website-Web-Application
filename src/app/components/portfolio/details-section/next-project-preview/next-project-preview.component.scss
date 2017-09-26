@@ -1,0 +1,114 @@
+@import "../../../../../assets/styles/mediaQueries";
+
+:host {
+  width: 100%;
+  height: 600px;
+  display: block;
+  position: relative;
+  z-index: 40;
+  background: #cccccc;
+  overflow: hidden;
+  @media #{$tablet-media} {
+    height: 400px;
+  }
+
+  .next, .prev {
+    position: absolute;
+    top: 50%;
+    margin: 0;
+    transform: translateY(-50%);
+    cursor: pointer;
+    figcaption {
+      display: none;
+    }
+    img {
+      width: 40px;
+      @media #{$phone} {
+        width: 25px;
+      }
+    }
+  }
+
+  .prev {
+    left: 20px;
+  }
+
+  .next {
+    right: 20px;
+  }
+  .dots {
+    position: absolute;
+    margin: 0;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    list-style: none;
+    justify-content: center;
+    width: 100%;
+    padding: 20px 0;
+    z-index: 42;
+    & > li {
+      width: 10px;
+      height: 10px;
+      margin-left: 25px;
+      border-radius: 50%;
+      background: rgba(255, 255, 255, .4);
+      padding: 0;
+      cursor: pointer;
+      transition: .5s;
+      position: relative;
+      @media #{$phone}{
+        margin-left: 15px;
+      }
+      &:first-of-type {
+        margin-left: 0;
+      }
+      &:hover {
+        background: rgba(255, 255, 255, .8);
+        div {
+          transform: translate(-50%, -20%);
+          img {
+            opacity: 1;
+          }
+          @media #{$phone}{
+            display: none;
+          }
+        }
+      }
+      &.active {
+        background: rgba(255, 255, 255, 1);
+      }
+      div {
+        width: 100px;
+        height: 60px;
+        position: absolute;
+        left: 50%;
+        bottom: 100%;
+        overflow: hidden;
+        pointer-events: none;
+        transform: translate(-50%, 0);
+        transition: transform .5s;
+      }
+      img {
+        height: 60px;
+        pointer-events: none;
+        opacity: 0;
+        position: absolute;
+        left: 50%;
+        top: 0;
+        transform: translate(-50%);
+        transition: opacity .5s;
+      }
+    }
+  }
+}
+
+h3 {
+  position: absolute;
+  left: 0;
+  top: 20px;
+  color: #ffffff;
+  width: 100%;
+  text-align: center;
+  margin: 0;
+}

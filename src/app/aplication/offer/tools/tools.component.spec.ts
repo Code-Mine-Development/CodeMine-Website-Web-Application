@@ -1,5 +1,4 @@
 import {async, ComponentFixture, TestBed} from '@angular/core/testing';
-
 import {ToolsComponent} from './tools.component';
 import {MockTools} from '../../../shared/mocks/tools.mock';
 import {TranslateModule} from '@ngx-translate/core';
@@ -53,7 +52,7 @@ describe('ToolsComponent', () => {
   });
 
   it('should have parsed elements', () => {
-    expect(component.elements[0].key).toBe('adobe-illustrator');
+    expect(component.elements[0].key).toBe('Adobe Illustrator');
   });
 
   it('should navigate', () => {

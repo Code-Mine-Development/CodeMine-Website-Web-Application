@@ -100,8 +100,8 @@ const portfolioRoutes: Routes = [
 @NgModule({
   imports: [
     TranslateModule,
-    RouterModule.forChild(portfolioRoutes),
-    LocalizeRouterModule.forChild(portfolioRoutes)
+    LocalizeRouterModule.forChild(portfolioRoutes),
+    RouterModule.forChild(portfolioRoutes)
   ],
   exports: [RouterModule, LocalizeRouterModule]
 })

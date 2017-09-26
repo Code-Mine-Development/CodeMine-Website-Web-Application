@@ -1,17 +1,20 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import {PortfolioDetailsModel} from '../portfolio-details.model';
 import {PreviousPositionService} from '../../../../shared/services/previous-position.service';
 import {LocalizeRouterService} from 'localize-router';
 import {Router, ActivatedRoute} from '@angular/router';
+import {fadeInAnimation} from '../../../../shared/routing.animation';
 
 @Component({
   selector: 'app-tripbuzz',
   templateUrl: './tripbuzz.component.html',
-  styleUrls: ['./tripbuzz.component.scss']
+  styleUrls: ['./tripbuzz.component.scss'],
+  animations: [fadeInAnimation],
+  host: { '[@fadeInAnimation]': '' }
 })
 export class TripbuzzComponent extends PortfolioDetailsModel implements OnInit {
 
-  protected id = 'tripbuzz';
+  id = 'tripbuzz';
 
   constructor(route: ActivatedRoute,
               router: Router,
