@@ -30,8 +30,8 @@
     "subTitle": "PORTFOLIO.telecom.subTitle",
     "description": "PORTFOLIO.telecom.shortDescription",
     "mainImage": {
-      "big": "assets/images/portfolio-images/brighter-big.jpg",
-      "small": "assets/images/portfolio-images/brighter-small.jpg"
+      "big": "assets/images/portfolio-images/telecom-big.jpg",
+      "small": "assets/images/portfolio-images/telecom-small.jpg"
     },
     "tools": [
       "angular",

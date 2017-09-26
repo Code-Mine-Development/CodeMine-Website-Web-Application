@@ -1,7 +1,4 @@
-import {Tags} from '../../../shared/interface/tags.interface';
-import {PortfolioDetails} from './portfolio-details.interface';
-
-export interface Portfolio extends Tags, PortfolioDetails {
+export interface Portfolio {
     link: string;
     title: string;
     shortDescription?: string;

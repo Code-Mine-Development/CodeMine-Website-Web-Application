@@ -1,5 +1,5 @@
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
-import { ContactInfoComponent } from './contact-info.component';
+import {async, ComponentFixture, TestBed} from '@angular/core/testing';
+import {ContactInfoComponent} from './contact-info.component';
 import {Component} from '@angular/core';
 import {MockCompany} from '../../../shared/mocks/company.mock';
 import {TranslateModule} from '@ngx-translate/core';
@@ -28,7 +28,8 @@ describe('ContactInfoComponent', () => {
       declarations: [ FakeWrapperContactInfoComponent, ContactInfoComponent],
       providers: [
         {provide: CopyToClipboardService, useValue: {
-          copy: (text) => true
+          copy: (text) => true,
+          detectMobile: () => true
         }}
       ]
     })

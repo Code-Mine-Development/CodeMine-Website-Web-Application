@@ -5,7 +5,7 @@ import {EmployeeComponent} from './employee.component';
 import {NoopAnimationsModule} from '@angular/platform-browser/animations';
 import {DOCUMENT} from '@angular/common';
 
-fdescribe('EmployeesListComponent', () => {
+describe('EmployeesListComponent', () => {
   let component: EmployeesListComponent;
   let fixture: ComponentFixture<EmployeesListComponent>;
 
