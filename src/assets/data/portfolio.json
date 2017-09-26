@@ -54,8 +54,8 @@
     "subTitle": "PORTFOLIO.exchange.subTitle",
     "description": "PORTFOLIO.exchange.shortDescription",
     "mainImage": {
-      "big": "assets/images/portfolio-images/brighter-big.jpg",
-      "small": "assets/images/portfolio-images/brighter-small.jpg"
+      "big": "assets/images/portfolio-images/kantor-big.jpg",
+      "small": "assets/images/portfolio-images/kantor-small.jpg"
     },
     "tools": [
       "angular",

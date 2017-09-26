@@ -30,12 +30,22 @@
   }
 
   .prev {
-    left: 20px;
+    left: 40px;
   }
 
   .next {
-    right: 20px;
+    right: 40px;
   }
+
+  @media #{$phone}{
+    .prev {
+      left: 20px;
+    }
+    .next {
+      right: 20px;
+    }
+  }
+
   .dots {
     position: absolute;
     margin: 0;
@@ -45,7 +55,7 @@
     list-style: none;
     justify-content: center;
     width: 100%;
-    padding: 20px 0;
+    padding: 40px 0;
     z-index: 42;
     & > li {
       width: 10px;
@@ -106,7 +116,7 @@
 h3 {
   position: absolute;
   left: 0;
-  top: 20px;
+  top: 40px;
   color: #ffffff;
   width: 100%;
   text-align: center;
