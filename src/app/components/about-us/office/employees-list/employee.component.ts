@@ -24,6 +24,7 @@ import {Employees} from '../../../../aplication/about-us/interfaces/employees.in
 })
 export class EmployeeComponent implements OnInit {
 
+
   @Input() person: Employees;
   @Input() eventManager: EventManager;
 

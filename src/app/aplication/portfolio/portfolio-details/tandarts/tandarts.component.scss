@@ -3,6 +3,7 @@
 .wrapper {
   position: relative;
   margin-top: 100px;
+  display: block;
   @media #{$phone} {
     margin-top:50px;
   }

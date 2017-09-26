@@ -11,6 +11,7 @@ export class PortfolioDetailsModel implements OnInit {
   detail: Portfolio;
   tools: OfferElementBeforePrepare;
   technologies: OfferElementBeforePrepare;
+  portfolio: Portfolio;
   mobile: boolean;
 
   constructor(private route: ActivatedRoute,
@@ -28,6 +29,7 @@ export class PortfolioDetailsModel implements OnInit {
       this.parseDetails(data['portfolio'], this.id);
       this.technologies = data['technologies'];
       this.tools = data['tools'];
+      this.portfolio = data['portfolio'];
     });
     this.checkMobile();
   }

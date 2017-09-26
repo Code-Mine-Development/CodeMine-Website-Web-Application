@@ -2,7 +2,7 @@
   <div class="project">
     <div class="project-image">
       <div>
-        <img [src]="project.mainImage" [attr.alt]="project.title+'image'">
+        <img [src]="project.mainImage.small" [attr.alt]="project.title+'image'">
         <button (click)="onClick($event)" class="btn btn-yellow btn-large btn-hover-yellow-border">
           {{'PORTFOLIO.showMore' | translate}}
         </button>

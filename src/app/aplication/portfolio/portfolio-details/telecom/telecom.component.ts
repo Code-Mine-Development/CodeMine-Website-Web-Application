@@ -3,15 +3,18 @@ import {PortfolioDetailsModel} from '../portfolio-details.model';
 import {PreviousPositionService} from '../../../../shared/services/previous-position.service';
 import {LocalizeRouterService} from 'localize-router';
 import {Router, ActivatedRoute} from '@angular/router';
+import {fadeInAnimation} from '../../../../shared/routing.animation';
 
 @Component({
   selector: 'app-telecom',
   templateUrl: './telecom.component.html',
-  styleUrls: ['./telecom.component.scss']
+  styleUrls: ['./telecom.component.scss'],
+  animations: [fadeInAnimation],
+  host: { '[@fadeInAnimation]': '' }
 })
 export class TelecomComponent extends PortfolioDetailsModel implements OnInit {
 
-  protected id = 'e-comerce-for-telecom';
+  id = 'e-comerce-for-telecom';
 
   constructor(route: ActivatedRoute,
               router: Router,

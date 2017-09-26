@@ -156,6 +156,7 @@
     "starInfo": "Dane przedstawione na ilustracjach oraz filmach są przykładowe",
     "showMore": "Więcej",
     "sectionTitles": {
+      "nextProject": "Następny projekt",
       "interface": "Interfejs",
       "before": "Przed",
       "after": "Po",
@@ -328,7 +329,7 @@
     "about_as": "o nas",
     "portfolio": "portfolio",
     "offer": "oferta",
-    "audit": "audit",
+    "audit": "audi TT",
     "contact": "kontakt",
     "pl": "polski",
     "en": "english",
@@ -540,13 +541,6 @@
   "contact": "kontakt",
   "audit": "audyty",
   "not-found": "nie-ma",
-  "e-comerce-for-telecom": "e-comerce-dla-telecomu",
-  "wecreate": "tworzymy",
-  "solutionstoyourbusinessproblems": "solutions-to-your-business-problems",
-  "internalapps": "internal-apps",
-  "b2capplications": "b2c-applications",
-  "socialnetworking": "social-networking",
-  "tvapps": "tv-apps",
   "tools": "narzedzia",
   "technologies": "technologie"
 }

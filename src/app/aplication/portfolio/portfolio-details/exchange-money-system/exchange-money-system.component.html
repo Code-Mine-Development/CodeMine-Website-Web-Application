@@ -30,8 +30,11 @@
       <img src="assets/images/portfolio-images/exchange_responsive.svg" alt="responsive icon">
     </figure>
   </section>
-  <svg viewBox="0,0 25,1">
+  <svg class="upper" viewBox="0,0 25,1">
     <polygon points="11.5,0 12.5,1 25,1 25,0" fill="#FFDE07"></polygon>
+  </svg>
+  <svg class="lower" viewBox="0,0 25,1">
+    <polygon points="11.5,0 12.5,1 0,1 0,0" fill="#FFDE07"></polygon>
   </svg>
 </section>
 
@@ -83,9 +86,6 @@
       <p>{{'PORTFOLIO.exchange.description.micro_3' | translate}}</p>
     </article>
   </section>
-  <svg viewBox="0,0 25,1">
-    <polygon points="11.5,0 12.5,1 25,1 25,0" fill="#FFFFFF"></polygon>
-  </svg>
 </section>
 
 <section class="container">
@@ -100,3 +100,5 @@
     <app-architecture [currentTechnologies]="detail.technologies" [currentTools]="detail.tools" [technologies]="technologies" [tools]="tools" (navigate)="navigate($event)"></app-architecture>
   </section>
 </section>
+
+<app-next-project-preview [currentElement]="id" [portfolio]="portfolio" (navigate)="navigate($event)"></app-next-project-preview>
