@@ -41,6 +41,9 @@
       @media #{$tablet-media}{
         height: 400px;
       }
+      @media only screen and (min-width: 1920px){
+        width: 100%;
+      }
     }
 
   }
