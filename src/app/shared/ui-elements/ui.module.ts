@@ -1,5 +1,4 @@
 import {NgModule} from '@angular/core';
-import {CarouselComponent} from './carousel/carousel.component';
 import {CommonModule} from '@angular/common';
 import {CloseComponent} from './close/close.component';
 import {ButtonComponent} from './button/button.component';
@@ -8,20 +7,19 @@ import {SharedModule} from '../shared.module';
 import {TranslateModule} from '@ngx-translate/core';
 import {LocalizeRouterModule} from 'localize-router';
 import {RouterModule} from '@angular/router';
-import { OfferThumbnailsComponent } from './offer-thumbnails/offer-thumbnails.component';
-import { CarouselElementTextComponent } from './carousel/carousel-element-text.component';
-import { CarouselElementImageComponent } from './carousel/carousel-element-image.component';
+import {OfferThumbnailsComponent} from './offer-thumbnails/offer-thumbnails.component';
+import {CarouselComponent} from './carousel/carousel.component';
+import {CarouselElementComponent} from './carousel/carousel-element/carousel-element.component';
 
 
 @NgModule({
     declarations: [
-        CarouselComponent,
         ButtonComponent,
         SquareImageComponent,
         CloseComponent,
         OfferThumbnailsComponent,
-        CarouselElementTextComponent,
-        CarouselElementImageComponent
+        CarouselComponent,
+        CarouselElementComponent
     ],
     imports: [
         CommonModule,
@@ -30,12 +28,12 @@ import { CarouselElementImageComponent } from './carousel/carousel-element-image
         RouterModule
     ],
     exports: [
-        CarouselComponent,
         ButtonComponent,
         SharedModule,
         CloseComponent,
         SquareImageComponent,
-        OfferThumbnailsComponent
+        OfferThumbnailsComponent,
+        CarouselComponent
     ],
     providers: [],
 })

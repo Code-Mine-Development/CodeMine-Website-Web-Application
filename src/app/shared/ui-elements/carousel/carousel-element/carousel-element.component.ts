@@ -1,11 +1,11 @@
 import {Component, Input, OnChanges, HostBinding, Output, EventEmitter} from '@angular/core';
-import {Portfolio} from '../../../../../aplication/portfolio/interfaces/portfolio.interface';
 import {trigger, state, style, transition, animate} from '@angular/animations';
+import {Portfolio} from '../../../../aplication/portfolio/interfaces/portfolio.interface';
 
 @Component({
-  selector: 'app-project-preview',
-  templateUrl: 'project-preview.component.html',
-  styleUrls: ['project-preview.component.scss'],
+  selector: 'app-carousel-element',
+  templateUrl: 'carousel-elementcomponent.html',
+  styleUrls: ['carousel-element.component.scss'],
   animations: [
     trigger('slideAnimation', [
       state('left', style({left: '-100%'})),
@@ -29,7 +29,7 @@ import {trigger, state, style, transition, animate} from '@angular/animations';
     ])
   ]
 })
-export class ProjectPreviewComponent implements OnChanges {
+export class CarouselElementComponent implements OnChanges {
   @Input() index: number;
   @Input() open: number;
   @Input() project: Portfolio;
@@ -60,7 +60,6 @@ export class ProjectPreviewComponent implements OnChanges {
         this.animate = 'right';
       }
     }
-    console.log(this.direction, this.animate);
   }
 
   onNavigate() {

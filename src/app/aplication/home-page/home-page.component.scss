@@ -5,7 +5,9 @@
   flex: 1;
   width:100%;
 }
-
+app-carousel{
+  cursor: pointer;
+}
 
 .section-home {
 
@@ -28,3 +30,6 @@
   }
 }
 
+app-contact-info{
+  margin-top: 0;
+}

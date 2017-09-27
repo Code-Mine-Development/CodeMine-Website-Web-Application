@@ -5,6 +5,6 @@
   </div>
 </div>
 <div #homeTarget>
-  <app-carousel  [data]="carousel" [timeout]="5000" [transition]="1500" (navigate)="onNavigate($event)"></app-carousel>
+  <app-carousel [portfolio]="carousel" (click)="onNavigate('/portfolio')" [disableNavigation]="true"></app-carousel>
 </div>
-<app-contact-info class="container" [company]="company"></app-contact-info>
+<app-contact-info [company]="company"></app-contact-info>

@@ -22,7 +22,7 @@
       "java",
       "php"
     ],
-    "homePage": false
+    "homePage": true
   },
   {
     "link": "e-comerce-for-telecom",
@@ -46,7 +46,7 @@
       "java",
       "php"
     ],
-    "homePage": false
+    "homePage": true
   },
   {
     "link": "exchange-money-system",
@@ -68,7 +68,7 @@
       "php",
       "javascript"
     ],
-    "homePage": false
+    "homePage": true
   },
   {
     "link": "mid-ocean-brands",
@@ -88,7 +88,7 @@
     "technologies": [
       "java"
     ],
-    "homePage": false
+    "homePage": true
   },
   {
     "link": "smart-home",
@@ -107,7 +107,7 @@
     "technologies": [
       "php"
     ],
-    "homePage": false
+    "homePage": true
   },
   {
     "link": "tandarts",
@@ -125,7 +125,7 @@
     "technologies": [
       "php"
     ],
-    "homePage": false
+    "homePage": true
   },
   {
     "link": "tripbuzz",
@@ -149,7 +149,7 @@
       "java",
       "php"
     ],
-    "homePage": false
+    "homePage": true
   },
   {
     "link": "zorgindicator",

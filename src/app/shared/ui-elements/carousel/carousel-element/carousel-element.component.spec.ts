@@ -1,17 +1,17 @@
 import {async, ComponentFixture, TestBed} from '@angular/core/testing';
-import {ProjectPreviewComponent} from './project-preview.component';
+import {CarouselElementComponent} from './carousel-element.component';
 import {TranslateModule} from '@ngx-translate/core';
 import {NoopAnimationsModule} from '@angular/platform-browser/animations';
 import {CopyToClipboardService} from '../../../../../shared/services/copy-to-clipboard.service';
 import {MockPortfolio} from '../../../../../shared/mocks/portfolio.mock';
 
-describe('ProjectPreviewComponent', () => {
-  let component: ProjectPreviewComponent;
-  let fixture: ComponentFixture<ProjectPreviewComponent>;
+describe('CarouselElementComponent', () => {
+  let component: CarouselElementComponent;
+  let fixture: ComponentFixture<CarouselElementComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ ProjectPreviewComponent ],
+      declarations: [ CarouselElementComponent ],
       imports: [
         TranslateModule.forRoot(),
         NoopAnimationsModule
@@ -27,7 +27,7 @@ describe('ProjectPreviewComponent', () => {
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(ProjectPreviewComponent);
+    fixture = TestBed.createComponent(CarouselElementComponent);
     component = fixture.componentInstance;
     component.open = 0;
     component.index = 0;
