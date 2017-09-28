@@ -1,9 +1,23 @@
-:host{
+:host {
   display: flex;
   flex: 1;
   justify-content: flex-end;
   align-items: center;
-  height:40px;
+  height: 40px;
+  color: #282828;
+  transition: color .5s;
+  &.white {
+    color: #ffffff;
+    .dropdown > .dropbtn {
+      border-color: #ffffff;
+    }
+    .dropdown-content {
+      border-right: solid 3px #ffffff;
+    }
+    ul > li > span:after {
+      background: #ffffff;
+    }
+  }
 
   ul {
     display: flex;
@@ -12,27 +26,39 @@
     margin: 0;
     align-items: center;
     li {
-      &>span {
+      position: relative;
+      padding: 0 17.5px;
+      &:last-child {
+        padding-right: 0;
+      }
+      &.active > span{
+        &:after {
+          width: 100%;
+        }
+      }
+      & > span {
+        outline: none;
         text-transform: uppercase;
         white-space: nowrap;
         cursor: pointer;
         position: relative;
-        padding: 0 0 0 35px;
         font-weight: 700;
         font-size: 1em;
         letter-spacing: 1px;
-
-        &:last-child {
-          padding-right: 0;
-        }
-
-        &:before {
+        &:after {
           content: '';
-          height: 2px;
+          height: 3px;
           width: 0;
           position: absolute;
           background: black;
-          bottom: 12px;
+          bottom: -7px;
+          left: 0;
+          transition: width .3s;
+        }
+        &:hover {
+          &:after {
+            width: 100%;
+          }
         }
       }
     }
@@ -41,29 +67,33 @@
   .dropdown {
     float: left;
     overflow: hidden;
-    position:relative;
+    position: relative;
     &:hover {
       cursor: pointer;
-      overflow:visible;
+      overflow: visible;
     }
 
     .dropbtn {
-      margin-top:auto;
+      margin-top: auto;
       font-size: 13px;
       font-weight: 700;
-      border-right: solid 2px #282828;
+      border-right: solid 3px #282828;
       padding: 2px 14px;
     }
 
     &-content {
       display: none;
       position: absolute;
-      border-right: solid 2px #282828;
+      border-right: solid 3px #282828;
       z-index: 1;
       padding: 0 10px;
       background-color: #ffffff;
-      right:0;
-
+      right: 0;
+      a:first-of-type{
+        span{
+          padding: 16px 0 8px;
+        }
+      }
       span {
         font-size: 13px;
         margin-right: 1px;

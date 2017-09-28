@@ -20,7 +20,7 @@
         <label for="contact_email">E-mail</label>
         <input id="contact_email" type="text" [(ngModel)]="email" name="email" #emailInput="ngModel"
                [attr.placeholder]="'CONTACT.emailPlaceHolder' | translate"
-               appToolTip required pattern="^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,6})+$"
+               appToolTip required  pattern="^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,6})+$"
         >
         <svg class="status status-center"
              [class.visible]="!emailInput.pristine || emailInput.touched || form.submitted"
@@ -48,8 +48,6 @@
            viewBox="0,0 6,6">
         <polyline [class.valid]="textNgModel.valid" stroke-width="1px" stroke="#37D773" fill="none"
                   points="1,4 2,5 5,2"></polyline>
-        <polyline [class.invalid]="textNgModel.invalid" stroke-width="1px" stroke="#FF3866" fill="none"
-                  points="1,1 3,3 1,5 3,3 5,5 3,3 5,1"></polyline>
       </svg>
     </p>
 

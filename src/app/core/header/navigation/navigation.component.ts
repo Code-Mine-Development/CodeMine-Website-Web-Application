@@ -1,4 +1,4 @@
-import {Component, OnInit, HostListener} from '@angular/core';
+import {Component, OnInit, HostListener, Input} from '@angular/core';
 import {TranslateService} from '@ngx-translate/core';
 import {LocalizeRouterService} from 'localize-router';
 
@@ -6,8 +6,8 @@ import {LocalizeRouterService} from 'localize-router';
 @Component({
   selector: 'app-navigation',
   template: `
-    <app-full-size *ngIf="!mobile" [navigation]="navigation" (changeLanguage)="changeLanguage($event)"></app-full-size>
-    <app-hamburger *ngIf="mobile" [navigation]="navigation" (changeLanguage)="changeLanguage($event)"></app-hamburger>
+    <app-full-size *ngIf="!mobile" [navigation]="navigation" (changeLanguage)="changeLanguage($event)" [HiddenBG]="HiddenBG"></app-full-size>
+    <app-hamburger *ngIf="mobile" [navigation]="navigation" (changeLanguage)="changeLanguage($event)" [HiddenBG]="HiddenBG"></app-hamburger>
   `,
   styles: [`
     :host{
@@ -17,9 +17,15 @@ import {LocalizeRouterService} from 'localize-router';
 })
 export class NavigationComponent implements OnInit {
 
+  @Input() HiddenBG;
   mobile = false;
 
   navigation = [
+    {
+      'title': 'NAVIGATION.home',
+      'href': 'home',
+      'mobile': true
+    },
     {
       'title': 'NAVIGATION.about_as',
       'href': 'aboutus'

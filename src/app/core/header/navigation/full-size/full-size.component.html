@@ -11,7 +11,7 @@
       </div>
     </li>
     <li *ngFor="let nav of navigation" routerLinkActive="active">
-      <span [routerLink]="'/'+ nav.href | localize">{{ nav.title | translate }}</span>
+      <span *ngIf="!nav.mobile" [routerLink]="'/'+ nav.href | localize">{{ nav.title | translate }}</span>
     </li>
   </ul>
 </div>
