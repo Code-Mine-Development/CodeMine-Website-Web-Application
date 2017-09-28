@@ -1,4 +1,4 @@
-<app-carousel-element *ngFor="let project of portfolio; let index = index"
+<app-carousel-element *ngFor="let project of parsedPortfolio; let index = index"
                      [open]="visibleIndex"
                      [index]="index"
                      [direction]="direction"
@@ -15,7 +15,7 @@
     <img src="assets/images/arrows/angle_left-white.svg" alt="left arrow">
   </figure>
   <ul class="dots">
-    <li *ngFor="let project of portfolio; let index = index" (click)="setProject(index)" [class.active]="visibleIndex === index">
+    <li *ngFor="let project of parsedPortfolio; let index = index" (click)="setProject(index)" [class.active]="visibleIndex === index">
       <div>
         <img [src]="project.mainImage.big" alt="">
       </div>

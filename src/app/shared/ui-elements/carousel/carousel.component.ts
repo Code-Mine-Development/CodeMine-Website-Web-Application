@@ -14,6 +14,8 @@ export class CarouselComponent implements OnInit, OnDestroy {
 
   @Output() navigate = new EventEmitter();
 
+  parsedPortfolio: Portfolio[];
+
   visibleIndex;
   direction = 'next';
   private sliderInterval;
@@ -23,6 +25,11 @@ export class CarouselComponent implements OnInit, OnDestroy {
 
   ngOnInit() {
     const project = this.portfolio.findIndex((element) => (this.currentElement === element.link));
+    this.parsedPortfolio = this.portfolio.slice();
+    if(project >= 0 &&  this.currentElement){
+      this.parsedPortfolio.splice(project,1);
+    }
+
     this.visibleIndex = project ? this.getNextIndex(project) : 0;
     if (this.disableNavigation) {
       this.setSliderInterval();
@@ -46,11 +53,11 @@ export class CarouselComponent implements OnInit, OnDestroy {
   }
 
   getNextIndex(index) {
-    return index + 1 === this.portfolio.length ? 0 : index + 1;
+    return index + 1 >= this.parsedPortfolio.length ? 0 : index + 1;
   }
 
   getPrevIndex(index) {
-    return index - 1 < 0 ? this.portfolio.length - 1 : index - 1;
+    return index - 1 < 0 ? this.parsedPortfolio.length - 1 : index - 1;
   }
 
   setProject(index) {

@@ -1,4 +1,4 @@
-import {Component, HostListener, AfterViewInit} from '@angular/core';
+import {Component, HostListener, ElementRef, OnInit} from '@angular/core';
 import {ScrollController} from '../../services/scroll.controller';
 
 @Component({
@@ -6,43 +6,36 @@ import {ScrollController} from '../../services/scroll.controller';
   templateUrl: 'horizontal.component.html',
   styleUrls: ['horizontal.component.scss']
 })
-export class HorizontalComponent implements AfterViewInit {
+export class HorizontalComponent implements OnInit {
 
   hidden = false;
-  element;
-  private breakPoint = 500;
-  private verticalBreakPoint = 800;
 
-  constructor(private scrollController: ScrollController) {
-    scrollController.getCurrentElementStream().subscribe(
-      (element) => {
-        this.element = element;
-        this.element.quantity = scrollController.getElementsQuantity();
-      }
-    )
+  constructor(private scrollController: ScrollController, private element: ElementRef) {
+    // scrollController.getCurrentElementStream().subscribe(
+    //   (element) => {
+    //     this.element = element;
+    //     this.element.quantity = scrollController.getElementsQuantity();
+    //   }
+    // )
   }
 
-  @HostListener('window:resize', ['$event']) resize() {
-    this.checkScreen();
+  @HostListener('scroll', []) resize() {
+    this.setScroll();
   }
 
-  ngAfterViewInit() {
-    this.checkScreen();
+  ngOnInit() {
   }
 
-  checkScreen() {
-    if (window.innerWidth < window.innerHeight) {
-      this.hidden = window.innerWidth <= this.breakPoint;
-    } else {
-      this.hidden = window.innerWidth <= this.verticalBreakPoint;
-    }
+
+  setScroll() {
+    // this.element.nativeElement
   }
 
-  moveToLast() {
-    this.scrollController.moveToLast();
-  }
-
-  moveToPrev() {
-    this.scrollController.move('up');
-  }
+  // moveToLast() {
+  //   this.scrollController.moveToLast();
+  // }
+  //
+  // moveToPrev() {
+  //   this.scrollController.move('up');
+  // }
 }

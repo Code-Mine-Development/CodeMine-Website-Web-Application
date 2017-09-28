@@ -1,5 +1,10 @@
-<section>
-  <header>
-    <img src="assets/images/home_page_background.jpg" alt="Home Image">
-  </header>
-</section>
+<div #scrollableBox (scroll)="onScroll()">
+  <section>
+    <header [style.left]="shaftPosition+'px'">
+      <img src="assets/images/home_page_background.jpg" alt="Home Image">
+      <img class="logo" src="assets/images/logo.svg" alt="CODE MINE">
+    </header>
+  </section>
+
+  <section [style.height]="duration+'px'" [class.container]="boxContainer" class="process_scroll_box"></section>
+</div>
