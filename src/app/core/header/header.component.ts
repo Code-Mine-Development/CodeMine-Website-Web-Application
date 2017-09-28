@@ -44,7 +44,7 @@ export class HeaderComponent implements OnInit {
       });
   }
 
-  private parseScrollTop(){
+  private parseScrollTop() {
     this.windowScrollTop = this.document.body.scrollTop || this.document.documentElement.scrollTop;
     this.homeInformationScrollTop = 0;
     this.scrollTop = this.windowScrollTop > this.homeInformationScrollTop ? this.windowScrollTop : this.homeInformationScrollTop;
@@ -80,7 +80,7 @@ export class HeaderComponent implements OnInit {
     }
   }
 
-  private hideBackground(){
+  private hideBackground() {
     this.hiddenBG = this.shouldHide ? this.scrollTop < 100 : false;
   }
 }

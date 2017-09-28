@@ -2,8 +2,8 @@ import {async, ComponentFixture, TestBed} from '@angular/core/testing';
 import {CarouselElementComponent} from './carousel-element.component';
 import {TranslateModule} from '@ngx-translate/core';
 import {NoopAnimationsModule} from '@angular/platform-browser/animations';
-import {CopyToClipboardService} from '../../../../../shared/services/copy-to-clipboard.service';
-import {MockPortfolio} from '../../../../../shared/mocks/portfolio.mock';
+import {CopyToClipboardService} from '../../../services/copy-to-clipboard.service';
+import {MockPortfolio} from '../../../mocks/portfolio.mock';
 
 describe('CarouselElementComponent', () => {
   let component: CarouselElementComponent;

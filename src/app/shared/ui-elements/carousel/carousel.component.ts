@@ -24,13 +24,13 @@ export class CarouselComponent implements OnInit, OnDestroy {
   ngOnInit() {
     const project = this.portfolio.findIndex((element) => (this.currentElement === element.link));
     this.visibleIndex = project ? this.getNextIndex(project) : 0;
-    if(this.disableNavigation){
+    if (this.disableNavigation) {
       this.setSliderInterval();
     }
   }
 
   ngOnDestroy() {
-    if(this.sliderInterval){
+    if (this.sliderInterval) {
       clearInterval(this.sliderInterval);
     }
   }
@@ -62,8 +62,8 @@ export class CarouselComponent implements OnInit, OnDestroy {
     this.navigate.emit(address);
   }
 
-  setSliderInterval(){
-    this.sliderInterval = setInterval( () => {
+  setSliderInterval() {
+    this.sliderInterval = setInterval(() => {
       this.visibleIndex = this.getNextIndex(this.visibleIndex);
     }, 5000)
   }

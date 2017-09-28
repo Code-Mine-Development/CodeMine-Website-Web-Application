@@ -5,7 +5,7 @@ import {Portfolio} from '../../../aplication/portfolio/interfaces/portfolio.inte
 import {MockPortfolio} from '../../mocks/portfolio.mock';
 import {CarouselComponent} from './carousel.component';
 @Component({
-  selector: 'app-project-preview',
+  selector: 'app-carousel-element',
   template: 'test'
 })
 class ProjectPreviewMockComponent {

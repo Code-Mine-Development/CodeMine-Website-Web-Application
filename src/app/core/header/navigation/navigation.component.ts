@@ -6,8 +6,14 @@ import {LocalizeRouterService} from 'localize-router';
 @Component({
   selector: 'app-navigation',
   template: `
-    <app-full-size *ngIf="!mobile" [navigation]="navigation" (changeLanguage)="changeLanguage($event)" [HiddenBG]="HiddenBG"></app-full-size>
-    <app-hamburger *ngIf="mobile" [navigation]="navigation" (changeLanguage)="changeLanguage($event)" [HiddenBG]="HiddenBG"></app-hamburger>
+    <app-full-size *ngIf="!mobile"
+      [navigation]="navigation"
+      (changeLanguage)="changeLanguage($event)"
+      [HiddenBG]="HiddenBG"></app-full-size>
+    <app-hamburger *ngIf="mobile"
+      [navigation]="navigation"
+      (changeLanguage)="changeLanguage($event)"
+      [HiddenBG]="HiddenBG"></app-hamburger>
   `,
   styles: [`
     :host{
