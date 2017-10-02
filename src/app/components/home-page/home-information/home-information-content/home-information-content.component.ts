@@ -25,6 +25,7 @@ export class HomeInformationContentComponent implements OnInit {
 
   ngOnInit() {
     this.calculateBoxSize();
+    this.calculateShaftPosition();
   }
 
   onScroll() {
