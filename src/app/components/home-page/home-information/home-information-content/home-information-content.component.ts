@@ -12,11 +12,12 @@ export class HomeInformationContentComponent implements OnInit {
   @ViewChild('scrollableBox', {read: ElementRef}) scrollableBox: ElementRef;
 
   @HostBinding('class.box') boxContainer;
+  @HostBinding('class.hidden_motto') hideMotto;
 
   duration = AnimationConfig.duration;
   shaftPosition = 0;
 
-  constructor(private scrollController: ScrollController, private element: ElementRef) {
+  constructor(private scrollController: ScrollController) {
   }
 
   @HostListener('window:resize',[]) onResize(){
@@ -42,14 +43,18 @@ export class HomeInformationContentComponent implements OnInit {
   }
 
   calculateShaftPosition() {
+
     if (window.innerHeight * 1.7 > window.innerWidth){
       this.shaftPosition = -((window.innerHeight * 1.7 - window.innerWidth ) / 2);
+      this.hideMotto = false;
     }
     if (window.innerHeight * 1.06 > window.innerWidth) {
       this.shaftPosition = -((window.innerHeight * 1.06 - window.innerWidth ) / 2);
+      this.hideMotto = true;
     }
     if (window.innerHeight * 1.7 < window.innerWidth) {
       this.shaftPosition = 0;
+      this.hideMotto = false;
     }
   }
 }

@@ -16,6 +16,11 @@
       margin-left: -80px;
     }
   }
+  &.hidden_motto {
+    article {
+      display: none;
+    }
+  }
 }
 
 div {
@@ -32,19 +37,35 @@ div {
     position: relative;
     header {
       position: absolute;
-      left:0;
-      top:0;
+      left: 0;
+      top: 0;
       img {
         height: 100vh;
         pointer-events: none;
         transition: .5s;
       }
-      .logo{
+      .logo {
         position: absolute;
         left: 0;
         top: 0;
         transform-origin: left top;
-        transform: translate(45%,15%) scale(0.7);
+        transform: translate(45%, 15%) scale(0.7);
+      }
+    }
+    article {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      color: #ffffff;
+      transform: translateY(-50%);
+      h1, p {
+        margin: 0;
+        font-size: 3.6rem;
+        line-height: normal;
+      }
+      p {
+        font-weight: 300;
+        max-width: 380px;
       }
     }
   }

@@ -133,8 +133,8 @@
     "subTitle": "PORTFOLIO.Tripbuzz.subTitle",
     "description": "PORTFOLIO.Tripbuzz.shortDescription",
     "mainImage": {
-      "big": "assets/images/portfolio-images/brighter-big.jpg",
-      "small": "assets/images/portfolio-images/brighter-small.jpg"
+      "big": "assets/images/portfolio-images/tripbuzz-big.jpg",
+      "small": "assets/images/portfolio-images/tripbuzz-small.jpg"
     },
     "tools": [
       "angular",
