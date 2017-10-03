@@ -51,7 +51,7 @@ export class LogoComponent implements OnChanges {
 
 
   checkHomeVisible() {
-    if (this.logoVisible) {
+    if (this.hidden) {
       this.homeVisible = false;
     }
   }
