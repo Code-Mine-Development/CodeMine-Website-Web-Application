@@ -3,11 +3,12 @@
   width: 100%;
   height: 100%;
   overflow: hidden;
-  transition: .5s;
+  transition: .3s;
   box-sizing: border-box;
   max-width: 100%;
   margin-right: auto;
   margin-left: auto;
+
   &.box {
     padding: 80px;
     box-sizing: border-box;
@@ -17,15 +18,16 @@
     }
   }
   &.hidden_motto {
-    article {
+    .home_section article {
       display: none;
     }
   }
 }
 
-div {
+.scrollable_box {
   width: 100%;
   height: 100%;
+  box-shadow: inset 0 0 50px rgba(161,161,161, .35);
   overflow: scroll;
   &::-webkit-scrollbar {
     display: none;
@@ -33,46 +35,91 @@ div {
   section {
     height: 100%;
     width: 100%;
-    overflow: hidden;
     position: relative;
-    header {
-      position: absolute;
-      left: 0;
-      top: 0;
-      img {
-        height: 100vh;
-        pointer-events: none;
-        transition: .5s;
-      }
-      .logo {
+
+    &.home_section {
+      overflow: hidden;
+      padding-bottom: 80px;
+      background: #282828;
+      header {
         position: absolute;
         left: 0;
         top: 0;
-        transform-origin: left top;
-        transform: translate(45%, 15%) scale(0.7);
+        img {
+          height: 100vh;
+          pointer-events: none;
+          transition: .3s;
+        }
+        .logo {
+          position: absolute;
+          left: 0;
+          top: 0;
+          transform-origin: left top;
+          transform: translate(45%, 15%) scale(0.7);
+        }
+      }
+      article {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        color: #ffffff;
+        transform: translateY(-50%);
+        h1, p {
+          margin: 0;
+          font-size: 3.6rem;
+          line-height: normal;
+        }
+        p {
+          font-weight: 300;
+          max-width: 380px;
+        }
       }
     }
-    article {
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      color: #ffffff;
-      transform: translateY(-50%);
-      h1, p {
-        margin: 0;
-        font-size: 3.6rem;
-        line-height: normal;
+    &.howWeWork {
+      color: #282828;
+      position: relative;
+      box-sizing: border-box;
+      background: #282828;
+      article {
+        max-width: 570px;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        background: rgb(242, 242, 242);
+        padding: 60px;
+        text-align: center;
+        h3 {
+          font-size: 4.8rem;
+          margin: 0;
+        }
+        p {
+          font-size: 2.4rem;
+          margin-bottom: 0;
+          font-weight: 500;
+          line-height: normal;
+        }
+
       }
-      p {
-        font-weight: 300;
-        max-width: 380px;
+      svg {
+        position: absolute;
+        right: 0;
+        bottom: 100%;
+      }
+    }
+    &.process_scroll_box {
+      width: 100%;
+      background: transparent;
+      .follow_box {
+        width: 100%;
+        height: 100vh;
+        padding: 80px 0;
+        box-sizing: border-box;
+        position: absolute;
+        display: flex;
+        left: 0;
+        top: 0;
       }
     }
   }
-}
-
-.process_scroll_box {
-  width: 100%;
-  background: transparent;
-  pointer-events: none;
 }

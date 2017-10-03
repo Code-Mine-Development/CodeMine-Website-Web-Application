@@ -22,7 +22,19 @@ export class AppComponent implements OnInit {
   ngOnInit() {
     this.selectLanguage();
     this.routerEventListener();
+    // console.log(JSON.stringify(this.getRoutes(this.router.config)));
   }
+
+  // getRoutes(inp, path = ''){
+  //   const list = [];
+  //   inp.forEach((route) => {
+  //     list.push(path + "/" + route.path);
+  //     if(route.children){
+  //       list.push(...this.getRoutes(route.children, path + "/" + route.path))
+  //     }
+  //   });
+  //   return list;
+  // }
 
   selectLanguage() {
     const languages = <[string]>this.localize.parser.locales;

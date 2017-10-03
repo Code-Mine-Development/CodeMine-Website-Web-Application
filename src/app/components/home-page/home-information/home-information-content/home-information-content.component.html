@@ -1,5 +1,5 @@
-<div #scrollableBox (scroll)="onScroll()">
-  <section>
+<div class="scrollable_box" #scrollableBox (scroll)="onScroll()">
+  <section class="home_section">
     <header [style.left]="shaftPosition+'px'">
       <img src="assets/images/home_page_background.jpg" alt="Home Image">
       <img class="logo" src="assets/images/logo.svg" alt="CODE MINE">
@@ -9,6 +9,20 @@
       <p> {{'HOME.motto.title' | translate}}</p>
     </article>
   </section>
+  <section class="howWeWork">
+    <svg viewBox="0,0 25,1">
+      <polygon points="0,1 15,1 16,0 25,0 25,1" fill="#282828"></polygon>
+    </svg>
+    <article>
+      <h3>{{'HOME.howWeWork.title'| translate}}</h3>
+      <p>{{'HOME.howWeWork.description'| translate}}</p>
+    </article>
 
-  <section [style.height]="duration+'px'" [class.container]="boxContainer" class="process_scroll_box"></section>
+  </section>
+  <section [style.height]="duration+'px'" class="process_scroll_box">
+    <div class="follow_box" #followBox>
+      <app-home-information-animation></app-home-information-animation>
+      <app-home-information-text></app-home-information-text>
+    </div>
+  </section>
 </div>

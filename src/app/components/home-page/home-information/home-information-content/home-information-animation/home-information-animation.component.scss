@@ -1,0 +1,17 @@
+:host{
+  display: flex;
+  align-items: center;
+}
+figure {
+  margin: 0;
+  figcaption {
+    display: none;;
+  }
+  img {
+    display: none;
+    width: 100%;
+    &.visible {
+      display: block;
+    }
+  }
+}

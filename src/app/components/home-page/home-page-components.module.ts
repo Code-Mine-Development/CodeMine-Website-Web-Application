@@ -7,6 +7,8 @@ import {MouseWheelDirective} from './directive/mouseWheel.directive';
 import {HomeInformationComponent} from './home-information/home-information.component';
 import {SharedModule} from '../../shared/shared.module';
 import {HomeInformationContentComponent} from './home-information/home-information-content/home-information-content.component';
+import {HomeInformationAnimationComponent} from './home-information/home-information-content/home-information-animation/home-information-animation.component';
+import {HomeInformationTextComponent} from './home-information/home-information-content/home-information-text/home-information-text.component';
 
 
 @NgModule({
@@ -14,7 +16,9 @@ import {HomeInformationContentComponent} from './home-information/home-informati
     HomeInformationComponent,
     HorizontalComponent,
     MouseWheelDirective,
-    HomeInformationContentComponent
+    HomeInformationContentComponent,
+    HomeInformationAnimationComponent,
+    HomeInformationTextComponent
   ],
   imports: [
     CommonModule,

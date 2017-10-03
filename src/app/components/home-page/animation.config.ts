@@ -1,5 +1,5 @@
 export const AnimationConfig = {
-  duration: 50000,      // scroll distance to end of animation (in pixels)
+  duration: 25000,      // scroll distance to end of animation (in pixels)
   animationFrames: 1620,// total count of animation frames
   speed: .01,
   animationPath: 'assets/animation/',

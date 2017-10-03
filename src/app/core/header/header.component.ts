@@ -39,14 +39,14 @@ export class HeaderComponent implements OnInit {
 
   private scrollTopStream() {
     this.scrollInformationService.getScrollTopStream()
-      .subscribe(() => {
+      .subscribe((scroll: number) => {
+        this.homeInformationScrollTop = scroll;
         this.parseScrollTop();
       });
   }
 
   private parseScrollTop() {
     this.windowScrollTop = this.document.body.scrollTop || this.document.documentElement.scrollTop;
-    this.homeInformationScrollTop = 0;
     this.scrollTop = this.windowScrollTop > this.homeInformationScrollTop ? this.windowScrollTop : this.homeInformationScrollTop;
     this.hideBackground();
   }
