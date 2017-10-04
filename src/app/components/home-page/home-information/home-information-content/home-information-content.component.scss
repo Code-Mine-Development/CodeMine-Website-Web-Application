@@ -85,6 +85,7 @@
         position: absolute;
         left: 50%;
         top: 50%;
+        width: 80%;
         transform: translate(-50%, -50%);
         background: rgb(242, 242, 242);
         padding: 60px;
@@ -110,6 +111,8 @@
     &.process_scroll_box {
       width: 100%;
       background: transparent;
+      overflow: hidden;
+      transition: background .5s;
       .follow_box {
         width: 100%;
         height: 100vh;
@@ -119,6 +122,27 @@
         display: flex;
         left: 0;
         top: 0;
+      }
+    }
+    &.hireUs{
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      h3{
+        font-size: 3.6rem;
+        font-weight: 800;
+        margin: 0;
+      }
+      p{
+        max-width: 480px;
+        font-size: 2.4rem;
+        margin: 40px 0;
+      }
+
+      .btn{
+        font-weight: 800;;
       }
     }
   }

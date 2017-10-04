@@ -21,11 +21,11 @@ export class HomeInformationAnimationComponent implements OnInit {
       func;
 
     return {
-      getFile(fn){
+      getFile(fn) {
         func = fn;
         func(list[index], index);
       },
-      next(){
+      next() {
         index++;
         if (func) {
           func(list[index], index);
@@ -34,12 +34,15 @@ export class HomeInformationAnimationComponent implements OnInit {
     }
   }
 
-  constructor(private scrollControler: ScrollController, private renderer: Renderer2) {
+  constructor(private scrollController: ScrollController, private renderer: Renderer2) {
   }
 
   ngOnInit() {
     this.preloadFrames();
-    this.scrollSubscriber = this.scrollControler.getScrollTop().subscribe((section) => {
+    this.scrollSubscriber = this.scrollController.getScrollTop().subscribe((section) => {
+      if (section.frame > AnimationConfig.animationFrames) {
+        return;
+      }
       this.visible = section.frame;
     });
   }
@@ -64,7 +67,7 @@ export class HomeInformationAnimationComponent implements OnInit {
         iterator.next();
       }
       this.loadFile(file, () => {
-        console.log('loaded :' + index);
+        // console.log('loaded :' + index);
         this.loadingList[index] = file;
         iterator.next();
       });
@@ -72,7 +75,7 @@ export class HomeInformationAnimationComponent implements OnInit {
   }
 
   loadFile(file, cb) {
-    console.log('startSubscribe');
+    // console.log('startSubscribe');
 
     const element = this.renderer.createElement('img');
     this.renderer.listen(element, 'load', () => {
@@ -80,7 +83,7 @@ export class HomeInformationAnimationComponent implements OnInit {
       cb();
     });
     this.renderer.setProperty(element, 'src', file);
-    console.log('startLoading : ' + file);
+    // console.log('startLoading : ' + file);
   }
 
   getFilePath(index) {

@@ -19,10 +19,15 @@
     </article>
 
   </section>
-  <section [style.height]="duration+'px'" class="process_scroll_box">
+  <section [style.height]="duration+'px'" class="process_scroll_box" [style.background]="animationBg">
     <div class="follow_box" #followBox>
       <app-home-information-animation></app-home-information-animation>
       <app-home-information-text></app-home-information-text>
     </div>
+  </section>
+  <section class="hireUs">
+    <h3>{{'HOME.hireUs.title' | translate}}</h3>
+    <p>{{'HOME.hireUs.description' | translate}}</p>
+    <button class="btn btn-yellow btn-hover-black-fill">{{'HOME.hireUs.buttonText' | translate}}</button>
   </section>
 </div>

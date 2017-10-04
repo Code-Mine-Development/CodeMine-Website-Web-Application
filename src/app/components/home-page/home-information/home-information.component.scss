@@ -1,8 +1,24 @@
 
-:host{
+:host {
   overflow: hidden;
   display: block;
   width: 100%;
   height: 100vh;
   position: relative;
+}
+
+.skip {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  transition: opacity .5s;
+  background: transparent;
+  border: 0;
+  cursor: pointer;
+  outline: none;
+  &.hidden {
+    opacity: 0;
+    visibility: hidden;
+  }
 }

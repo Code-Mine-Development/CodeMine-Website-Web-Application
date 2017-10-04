@@ -11,7 +11,7 @@
   justify-content: space-between;
   margin-top: 90px;
   text-align: center;
-  overflow-x: hidden;
+  overflow: hidden;
   transition: opacity .5s;
   &.hidden{
     opacity:0;

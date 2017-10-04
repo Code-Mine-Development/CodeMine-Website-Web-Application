@@ -1,5 +1,6 @@
-import {Component, HostListener, ElementRef, OnInit} from '@angular/core';
+import {Component, HostListener, OnInit} from '@angular/core';
 import {ScrollController} from '../../services/scroll.controller';
+import {AnimationConfig} from '../../animation.config';
 
 @Component({
   selector: 'app-horizontal',
@@ -8,27 +9,29 @@ import {ScrollController} from '../../services/scroll.controller';
 })
 export class HorizontalComponent implements OnInit {
 
-  hidden = false;
+  hidden = true;
+  sectionNumber = 0;
+  sectionTitle = '';
 
-  constructor(private scrollController: ScrollController, private element: ElementRef) {
-    // scrollController.getCurrentElementStream().subscribe(
-    //   (element) => {
-    //     this.element = element;
-    //     this.element.quantity = scrollController.getElementsQuantity();
-    //   }
-    // )
-  }
-
-  @HostListener('scroll', []) resize() {
-    this.setScroll();
+  constructor(private scrollController: ScrollController) {
+    scrollController.getScrollTop().subscribe(
+      (scrollInfo) => {
+        if (!scrollInfo.horizontal) {
+          this.hidden = true;
+        } else {
+          this.sectionNumber = scrollInfo.horizontal.section;
+          this.sectionTitle = scrollInfo.horizontal.title;
+          this.hidden = false;
+        }
+      }
+    )
   }
 
   ngOnInit() {
   }
 
-
-  setScroll() {
-    // this.element.nativeElement
+  getSectionCount() {
+    return AnimationConfig.sections.length + 2;
   }
 
   // moveToLast() {

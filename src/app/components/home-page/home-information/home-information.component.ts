@@ -1,10 +1,9 @@
-import {Component, OnInit, OnDestroy, Inject, Input} from '@angular/core';
+import {Component, OnInit, OnDestroy, Inject, Input, ElementRef} from '@angular/core';
 import {ActivatedRoute, Data} from '@angular/router';
 import {HomeInformation} from '../interfaces/home-information.interface';
 import {HomeInformationServices} from '../services/home-information.service';
 import {DOCUMENT} from '@angular/common';
 import {ScrollToService} from '../../../shared/services/scroll-to.service';
-import {ScrollController} from '../services/scroll.controller';
 
 @Component({
   selector: 'app-home-information',
@@ -13,16 +12,16 @@ import {ScrollController} from '../services/scroll.controller';
 })
 export class HomeInformationComponent implements OnInit, OnDestroy {
 
-  @Input('escapeComponent') escapeComponent;
 
   informations: HomeInformation[];
+  hiddenSkip = true;
 
 
   constructor(@Inject(DOCUMENT) private document,
               private route: ActivatedRoute,
               private homeInformationService: HomeInformationServices,
               private scrollToService: ScrollToService,
-              private scrollController: ScrollController) {
+              private element: ElementRef) {
   }
 
 
@@ -31,6 +30,13 @@ export class HomeInformationComponent implements OnInit, OnDestroy {
       .subscribe((data: Data) => {
         this.informations = data['homeInformation'];
       });
+    this.homeInformationService.getScrollTopStream().subscribe((scrollTop) => {
+      if (scrollTop > 80) {
+        this.hiddenSkip = false;
+      } else {
+        this.hiddenSkip = true;
+      }
+    })
   }
 
 
@@ -38,9 +44,7 @@ export class HomeInformationComponent implements OnInit, OnDestroy {
     this.homeInformationService.setScrollTop(1);
   }
 
-
-  getScrollTopPosition() {
-    return this.document.body.scrollTop || this.document.documentElement.scrollTop;
+  skip() {
+    this.scrollToService.scroll(this.element.nativeElement, 'bottom');
   }
-
 }

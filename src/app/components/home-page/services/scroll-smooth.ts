@@ -1,4 +1,4 @@
-import {Subject} from 'rxjs';
+import {Subject} from 'rxjs/subject';
 import {AnimationConfig} from '../animation.config';
 export class ScrollSmooth {
 
@@ -23,11 +23,11 @@ export class ScrollSmooth {
 
   private animationFunction() {
     const distance = this.targetScrollTop - this.currentScrollTop;
-    this.currentScrollTop += (AnimationConfig.speed * distance)
-
+    this.currentScrollTop += (AnimationConfig.speed * distance);
     if (Math.abs(distance) < 1) {
       this.currentScrollTop = this.targetScrollTop;
       this.end = true;
+      window.cancelAnimationFrame(this.animationFrame);
     } else {
       this.animationFrame = window.requestAnimationFrame(this.animationFunction.bind(this))
     }

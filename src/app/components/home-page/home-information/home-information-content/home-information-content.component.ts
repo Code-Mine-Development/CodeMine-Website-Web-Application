@@ -1,4 +1,4 @@
-import {Component, OnInit, HostListener, ViewChild, ElementRef, HostBinding} from '@angular/core';
+import {Component, OnInit, HostListener, ViewChild, ElementRef, HostBinding, Output, EventEmitter} from '@angular/core';
 import {AnimationConfig} from '../../animation.config';
 import {ScrollController} from '../../services/scroll.controller';
 import {ScrollToService} from '../../../../shared/services/scroll-to.service';
@@ -16,28 +16,38 @@ export class HomeInformationContentComponent implements OnInit {
   @HostBinding('class.box') boxContainer;
   @HostBinding('class.hidden_motto') hideMotto;
 
-  duration = AnimationConfig.duration;
+  @Output() skip = new EventEmitter();
+
+  duration = AnimationConfig.duration - 320;
   shaftPosition = 0;
+  animationBg = 'transparent';
+
+  padding = 80;
 
   constructor(private scrollController: ScrollController, private scrollService: ScrollToService) {
   }
 
-  @HostListener('window:resize', []) onResize() {
+  @HostListener('window:resize', [])
+  onResize() {
     this.calculateShaftPosition();
   }
 
   ngOnInit() {
     this.calculateBoxSize();
     this.calculateShaftPosition();
-
+    this.changeBackground();
   }
 
   onScroll() {
-    const distanceToAnimation = (window.innerHeight * 2 - 160);
-    this.scrollController.setScrollTop(this.scrollableBox.nativeElement.scrollTop, distanceToAnimation);
+    const distanceToAnimation = (this.scrollableBox.nativeElement.offsetHeight * 2),
+      scrollTop = this.scrollableBox.nativeElement.scrollTop;
+    this.scrollController.setScrollTop(scrollTop, distanceToAnimation - 320, (scrollTop - (distanceToAnimation / 2)));
     this.calculateBoxSize();
-    this.calculateBoxFollow(this.scrollableBox.nativeElement.scrollTop, distanceToAnimation);
-    this.scrollService.scroll('SiteHead');
+    this.checkEnd(scrollTop);
+    this.calculateBoxFollow(scrollTop, distanceToAnimation + (2 * this.padding));
+    if (this.getScrollTop() > 0) {
+      this.scrollService.scroll('SiteHead');
+    }
   }
 
   calculateBoxSize() {
@@ -62,5 +72,30 @@ export class HomeInformationContentComponent implements OnInit {
       this.shaftPosition = 0;
       this.hideMotto = false;
     }
+  }
+
+  changeBackground() {
+    this.scrollController.getScrollTop().subscribe((scrollInfo) => {
+      if (scrollInfo.section < 0) {
+        return;
+      }
+      if (AnimationConfig.sections[scrollInfo.section]) {
+        this.animationBg = AnimationConfig.sections[scrollInfo.section]['background']
+      } else {
+        this.animationBg = 'transparent';
+      }
+    });
+  }
+
+  checkEnd(scrollTop: number) {
+    const endPosition = this.scrollableBox.nativeElement.scrollHeight,
+      currentPosition = scrollTop + this.scrollableBox.nativeElement.offsetHeight;
+    if (currentPosition >= endPosition) {
+      this.skip.emit();
+    }
+  }
+
+  getScrollTop() {
+    return document.body.scrollTop || document.documentElement.scrollTop;
   }
 }

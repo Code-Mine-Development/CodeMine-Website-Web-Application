@@ -1,5 +1,3 @@
-<app-home-information [escapeComponent]="homeTarget"></app-home-information>
-<div #homeTarget>
-  <app-carousel [portfolio]="carousel" (click)="onNavigate('/portfolio')" [disableNavigation]="true"></app-carousel>
-</div>
+<app-home-information></app-home-information>
+<app-carousel [portfolio]="carousel" (click)="onNavigate('/portfolio')" [disableNavigation]="true"></app-carousel>
 <app-contact-info [company]="company"></app-contact-info>
