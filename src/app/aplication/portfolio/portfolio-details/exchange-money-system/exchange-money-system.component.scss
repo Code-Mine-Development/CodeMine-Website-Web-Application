@@ -70,6 +70,7 @@ h3 {
     figure {
       text-align: center;
       img {
+        max-height: 250px;
         width: 50%;
       }
     }
@@ -97,6 +98,7 @@ h3 {
     figure {
       text-align: center;
       img {
+        max-height: 250px;
         width: 90%;
       }
       @media #{$tablet-media} {

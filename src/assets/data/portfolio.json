@@ -26,31 +26,6 @@
     "homePage": true
   },
   {
-    "link": "e-comerce-for-telecom",
-    "title": "PORTFOLIO.telecom.title",
-    "subTitle": "PORTFOLIO.telecom.subTitle",
-    "description": "PORTFOLIO.telecom.shortDescription",
-    "mainImage": {
-      "big": "assets/images/portfolio-images/telecom-big.jpg",
-      "small": "assets/images/portfolio-images/telecom-small.jpg",
-      "mini": "assets/images/portfolio-images/telecom-mini.jpg"
-    },
-    "tools": [
-      "angular",
-      "gulp",
-      "npm"
-    ],
-    "technologies": [
-      "bash",
-      "html5",
-      "swify",
-      "typescript",
-      "java",
-      "php"
-    ],
-    "homePage": true
-  },
-  {
     "link": "exchange-money-system",
     "title": "PORTFOLIO.exchange.title",
     "subTitle": "PORTFOLIO.exchange.subTitle",
@@ -95,26 +70,6 @@
     "homePage": true
   },
   {
-    "link": "smart-home",
-    "title": "PORTFOLIO.SmartHome.title",
-    "subTitle": "PORTFOLIO.SmartHome.subTitle",
-    "description": "PORTFOLIO.SmartHome.shortDescription",
-    "mainImage": {
-      "big": "assets/images/portfolio-images/smarthome-big.jpg",
-      "small": "assets/images/portfolio-images/smarthome-small.jpg",
-      "mini": "assets/images/portfolio-images/smarthome-mini.jpg"
-    },
-    "thumbnail": "assets/images/portfolio-images/smarthome_bulp.svg",
-    "tools": [
-      "symfony",
-      "postgresql"
-    ],
-    "technologies": [
-      "php"
-    ],
-    "homePage": true
-  },
-  {
     "link": "tandarts",
     "title": "PORTFOLIO.Tandarts.title",
     "subTitle": "PORTFOLIO.Tandarts.subTitle",
@@ -129,6 +84,31 @@
       "postgresql"
     ],
     "technologies": [
+      "php"
+    ],
+    "homePage": true
+  },
+  {
+    "link": "e-comerce-for-telecom",
+    "title": "PORTFOLIO.telecom.title",
+    "subTitle": "PORTFOLIO.telecom.subTitle",
+    "description": "PORTFOLIO.telecom.shortDescription",
+    "mainImage": {
+      "big": "assets/images/portfolio-images/telecom-big.jpg",
+      "small": "assets/images/portfolio-images/telecom-small.jpg",
+      "mini": "assets/images/portfolio-images/telecom-mini.jpg"
+    },
+    "tools": [
+      "angular",
+      "gulp",
+      "npm"
+    ],
+    "technologies": [
+      "bash",
+      "html5",
+      "swify",
+      "typescript",
+      "java",
       "php"
     ],
     "homePage": true
@@ -175,6 +155,26 @@
     "technologies": [
       "php",
       "javascript"
+    ],
+    "homePage": true
+  },
+  {
+    "link": "smart-home",
+    "title": "PORTFOLIO.SmartHome.title",
+    "subTitle": "PORTFOLIO.SmartHome.subTitle",
+    "description": "PORTFOLIO.SmartHome.shortDescription",
+    "mainImage": {
+      "big": "assets/images/portfolio-images/smarthome-big.jpg",
+      "small": "assets/images/portfolio-images/smarthome-small.jpg",
+      "mini": "assets/images/portfolio-images/smarthome-mini.jpg"
+    },
+    "thumbnail": "assets/images/portfolio-images/smarthome_bulp.svg",
+    "tools": [
+      "symfony",
+      "postgresql"
+    ],
+    "technologies": [
+      "php"
     ],
     "homePage": true
   }

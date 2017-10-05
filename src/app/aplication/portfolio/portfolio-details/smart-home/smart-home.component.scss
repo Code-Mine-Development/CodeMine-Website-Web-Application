@@ -57,6 +57,7 @@
     }
     img {
       width: 40%;
+      max-height: 250px;
     }
   }
   @media #{$phone} {
@@ -75,9 +76,8 @@
       display: none;
     }
     img {
-      width: 100%;
-      box-sizing:border-box;
-      padding: 0 20px;
+      width: 40%;
+      max-height: 250px;
     }
     @media #{$phone} {
       margin-top: 40px;

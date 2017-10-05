@@ -30,7 +30,7 @@ export class CarouselComponent implements OnInit, OnDestroy {
       this.parsedPortfolio.splice(project,1);
     }
 
-    this.visibleIndex = project ? this.getNextIndex(project) : 0;
+    this.visibleIndex = (this.parsedPortfolio.length - 1) < project ? 0 : project;
     if (this.disableNavigation) {
       this.setSliderInterval();
     }
