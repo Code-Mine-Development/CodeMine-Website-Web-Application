@@ -91,8 +91,8 @@
 <section class="container">
   <figure class="exchange-process">
     <figcaption>{{'PORTFOLIO.sectionTitles.exchangeProcess' | translate}}</figcaption>
-    <img class="exchange-process_full" src="assets/images/portfolio-images/exchange_schemat.svg" alt="process image">
-    <img class="exchange-process_mobile" src="assets/images/portfolio-images/exchange_mobileProces.jpg" alt="process image">
+    <img *ngIf="!mobile" class="exchange-process_full" src="assets/images/portfolio-images/exchange_schemat.svg" alt="process image">
+    <img *ngIf="mobile" class="exchange-process_mobile" src="assets/images/portfolio-images/exchange_pion.svg" alt="process image">
   </figure>
 
   <section class="architecture">

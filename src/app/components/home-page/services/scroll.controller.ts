@@ -2,19 +2,19 @@ import {Injectable} from '@angular/core';
 import {ScrollSmooth} from './scroll-smooth';
 import {HomeInformationServices} from './home-information.service';
 import {AnimationConfig} from '../animation.config';
+import {Subject} from 'rxjs';
 
 
 @Injectable()
 export class ScrollController {
+
+  private navigateStream = new Subject();
 
   private smoothScroll = new ScrollSmooth();
   currentElement = 1;
   clearScrollTop = 0;
 
   constructor(private homeInformation: HomeInformationServices) {
-    // this.smoothScroll.getSmoothScroll().subscribe( (value) => {
-    //   console.log(value);
-    // })
   }
 
 
@@ -54,7 +54,7 @@ export class ScrollController {
     return currentSection;
   }
 
-  getHorizontalInfo(scrollTop, section) {
+  private getHorizontalInfo(scrollTop, section) {
     if (this.clearScrollTop > 0 && scrollTop === 0) {
       return {section: 0, title: 'HOME.howWeWork'};
     } else if (this.clearScrollTop <= 0) {
@@ -64,6 +64,14 @@ export class ScrollController {
     } else {
       return {section: section + 1, title: AnimationConfig.sections[section].short}
     }
+  }
+
+  navigateTo(section: number) {
+    this.navigateStream.next(section);
+  }
+
+  getNavigateStream() {
+    return this.navigateStream;
   }
 
 }

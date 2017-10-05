@@ -1,5 +1,5 @@
 <div class="horizontal" [class.hidden]="hidden">
-  <p class="pointer" (click)="moveToPrev()">{{sectionNumber}}</p>
+  <p class="pointer" (click)="moveToPrev()" *ngIf="sectionNumber > 0">{{sectionNumber}}</p>
   <div class="borderDiv"></div>
   <div class="sliderMain">
     <p>{{sectionNumber+1}}</p>
@@ -8,5 +8,5 @@
     </div>
   </div>
   <div class="borderDiv"></div>
-  <p  class="pointer" (click)="moveToLast()">{{getSectionCount()}}</p>
+  <p  class="pointer" (click)="moveToLast()">{{getSectionCount() + 1}}</p>
 </div>

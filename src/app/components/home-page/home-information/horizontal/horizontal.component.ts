@@ -1,4 +1,4 @@
-import {Component, HostListener, OnInit} from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import {ScrollController} from '../../services/scroll.controller';
 import {AnimationConfig} from '../../animation.config';
 
@@ -31,14 +31,15 @@ export class HorizontalComponent implements OnInit {
   }
 
   getSectionCount() {
-    return AnimationConfig.sections.length + 2;
+    return AnimationConfig.sections.length + 1;
   }
 
-  // moveToLast() {
-  //   this.scrollController.moveToLast();
-  // }
-  //
-  // moveToPrev() {
-  //   this.scrollController.move('up');
-  // }
+
+  moveToLast() {
+    this.scrollController.navigateTo(this.getSectionCount());
+  }
+
+  moveToPrev() {
+    this.scrollController.navigateTo(this.sectionNumber-1);
+  }
 }

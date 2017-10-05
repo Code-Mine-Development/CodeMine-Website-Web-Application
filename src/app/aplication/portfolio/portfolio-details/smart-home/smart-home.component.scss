@@ -75,10 +75,9 @@
       display: none;
     }
     img {
-      width: 25%;
-      &:nth-of-type(2) {
-        width: 35%
-      }
+      width: 100%;
+      box-sizing:border-box;
+      padding: 0 20px;
     }
     @media #{$phone} {
       margin-top: 40px;

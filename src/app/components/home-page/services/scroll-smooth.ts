@@ -1,4 +1,4 @@
-import {Subject} from 'rxjs/subject';
+import {Subject} from 'rxjs/Subject';
 import {AnimationConfig} from '../animation.config';
 export class ScrollSmooth {
 
@@ -12,6 +12,7 @@ export class ScrollSmooth {
   setScroll(scroll: number) {
     this.targetScrollTop = scroll;
     if (this.end) {
+      this.end = false;
       this.animationFrame = window.requestAnimationFrame(this.animationFunction.bind(this));
     }
   }

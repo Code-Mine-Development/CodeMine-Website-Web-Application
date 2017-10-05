@@ -7,6 +7,7 @@ export interface Portfolio {
     mainImage: {
       big: string;
       small: string;
+      mini: string;
     };
     thumbnail: string;
     technologies: string[];

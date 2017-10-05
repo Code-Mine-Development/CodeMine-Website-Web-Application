@@ -17,7 +17,7 @@
   <ul class="dots">
     <li *ngFor="let project of parsedPortfolio; let index = index" (click)="setProject(index)" [class.active]="visibleIndex === index">
       <div>
-        <img [src]="project.mainImage.big" alt="">
+        <img [src]="project.mainImage.mini" alt="">
       </div>
 
     </li>

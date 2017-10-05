@@ -31,11 +31,6 @@
     <h3>{{'PORTFOLIO.sectionTitles.build' | translate}}</h3>
     <p>{{'PORTFOLIO.telecom.description.part6' | translate}}</p>
   </article>
-  <figure class="build_image">
-    <figcaption> Project architecture</figcaption>
-    <img *ngIf="!mobile" src="assets/images/portfolio-images/telecom_3.png" alt="architecture image">
-    <img *ngIf="mobile" src="assets/images/portfolio-images/telecom_3_mobile.png" alt="architecture image">
-  </figure>
 </section>
 <section class="ourRole">
   <article class="container">
@@ -51,7 +46,8 @@
     <h3>{{'PORTFOLIO.sectionTitles.workingScheme' | translate}}</h3>
     <figure>
       <figcaption>working scheme</figcaption>
-      <img src="assets/images/portfolio-images/telecom_2.png" alt="working scheme image">
+      <img *ngIf="!mobile" src="assets/images/portfolio-images/telecom_3.svg" alt="working scheme image">
+      <img *ngIf="mobile" src="assets/images/portfolio-images/telecom_3_mobile.svg" alt="working scheme image">
     </figure>
   </section>
   <section class="architecture">

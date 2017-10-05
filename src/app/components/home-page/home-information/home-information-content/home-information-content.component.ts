@@ -15,6 +15,7 @@ export class HomeInformationContentComponent implements OnInit {
 
   @HostBinding('class.box') boxContainer;
   @HostBinding('class.hidden_motto') hideMotto;
+  @HostBinding('class.followBox') followBoxClass;
 
   @Output() skip = new EventEmitter();
 
@@ -36,15 +37,16 @@ export class HomeInformationContentComponent implements OnInit {
     this.calculateBoxSize();
     this.calculateShaftPosition();
     this.changeBackground();
+    this.navigateToSection();
   }
 
   onScroll() {
     const distanceToAnimation = (this.scrollableBox.nativeElement.offsetHeight * 2),
       scrollTop = this.scrollableBox.nativeElement.scrollTop;
+    this.calculateBoxFollow(scrollTop, distanceToAnimation + (2 * this.padding));
     this.scrollController.setScrollTop(scrollTop, distanceToAnimation - 320, (scrollTop - (distanceToAnimation / 2)));
     this.calculateBoxSize();
     this.checkEnd(scrollTop);
-    this.calculateBoxFollow(scrollTop, distanceToAnimation + (2 * this.padding));
     if (this.getScrollTop() > 0) {
       this.scrollService.scroll('SiteHead');
     }
@@ -56,7 +58,11 @@ export class HomeInformationContentComponent implements OnInit {
 
   calculateBoxFollow(scrollTop, distance) {
     const scroll = scrollTop - distance < 0 ? 0 : scrollTop - distance;
-    this.followBox.nativeElement.style.top = scroll + 'px';
+    if (scroll > 0) {
+      this.followBoxClass = true;
+    } else {
+      this.followBoxClass = false;
+    }
   }
 
   calculateShaftPosition() {
@@ -91,11 +97,29 @@ export class HomeInformationContentComponent implements OnInit {
     const endPosition = this.scrollableBox.nativeElement.scrollHeight,
       currentPosition = scrollTop + this.scrollableBox.nativeElement.offsetHeight;
     if (currentPosition >= endPosition) {
-      this.skip.emit();
+      // this.skip.emit();
     }
   }
 
   getScrollTop() {
     return document.body.scrollTop || document.documentElement.scrollTop;
+  }
+
+  navigateToSection() {
+    this.scrollController.getNavigateStream().subscribe((section: number) => {
+      if (section === 0) {
+        this.scrollService.scroll(window.innerHeight-80, 'top', this.scrollableBox.nativeElement);
+      } else if (AnimationConfig.sections.length + 1 === section) {
+        this.scrollService.scroll(this.scrollableBox.nativeElement.scrollHeight, 'top', this.scrollableBox.nativeElement)
+      } else {
+        const currentSection = AnimationConfig.sections[section - 1],
+          average = (currentSection.start + currentSection.end) / 2,
+          distancePerFrame = AnimationConfig.duration / AnimationConfig.animationFrames,
+          distance = average * distancePerFrame,
+          targetPosition = (window.innerHeight + this.scrollableBox.nativeElement.offsetHeight - 320) + distance;
+
+        this.scrollService.scroll(targetPosition, 'top', this.scrollableBox.nativeElement)
+      }
+    })
   }
 }
