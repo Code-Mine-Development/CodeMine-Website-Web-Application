@@ -2,27 +2,37 @@
   "AUDIT": {
     "title": "Audyty",
     "move": "przejdź",
+    "tasks": "Zadania",
+    "benefits": "Korzyści",
     "quality": {
       "title": "Jakość kodu",
-      "description": "Otrzymując gotowe oprogramowanie, firmy zazwyczaj akceptują je bez jakiejkolwiek weryfikacji jakości kodu, bezpieczeństwa, elastyczności, zgodności z wymaganiami oraz wszystkich innych czynników. To nic dziwnego – klienci zwykle nie posiadają odpowiedniej wiedzy czy też czasu.Jako specjaliści, możemy zostać pośrednikiem między Twoją firmą, a Twoim wykonawcą, oceniając zastosowane przez niego rozwiązania. Naszym zadaniem będzie sprawdzenie zgodności kodu ze standardami, a także ocena jego wydajności i wielkość długu technologicznego, przeprowadzając audyty zastosowanej technologii, architektury informacji, kodu źródłowego, skalowalności oraz wydajności aplikacji.",
-      "task_1": "Badanie kodu źródłowego pod kątem zgodności z standardami",
+      "description": {
+        "part_1": "Otrzymując gotowe oprogramowanie, firmy zazwyczaj akceptują je bez jakiejkolwiek weryfikacji jakości kodu, bezpieczeństwa, elastyczności, zgodności z wymaganiami oraz wszystkich innych czynników. To nic dziwnego – klienci zwykle nie posiadają odpowiedniej wiedzy czy też czasu.",
+        "part_2": "Jako specjaliści, możemy zostać pośrednikiem między Twoją firmą, a Twoim wykonawcą, oceniając zastosowane przez niego rozwiązania.",
+        "part_3": "Naszym zadaniem będzie sprawdzenie zgodności kodu ze standardami, a także ocena jego wydajności i wielkość długu technologicznego, przeprowadzając audyty zastosowanej technologii, architektury informacji, kodu źródłowego, skalowalności oraz wydajności aplikacji."
+      },
+      "task_1": "Badanie zgodności kodu źródłowego ze standardami",
       "task_2": "Badanie kodu pod względem poprawności wykorzystania wzorców projektowych",
-      "task_3": "Badanie kodu pod względem poprawności wykorzystania wzorców projektowych",
+      "task_3": "Badanie sposobu wykorzystania zewnętrznych bibliotek",
       "task_4": "Badanie elastyczności kodu w perspektywie ewolucji wymagań biznesowych",
       "task_5": "Badania realnego nakładu zasobów",
       "benefit_1": "Identyfikacja problemów dotyczących czytelności kodu wraz z listą rekomendacji w związku z ich poprawą, przyczyniającą się do zwiększenia wydajności zespołowej pracy nad projektem",
-      "benefit_2": "Identyfikacja problemów związanych z błędnym zastosowaniem wzorców projektowych, negatywnie rzutujących na jakość projektu oraz jego bezpieczny rozwój przyczyniająca się do przyspieszenia tempa pracy nad projektem i znacznych oszczędności w przyszłości",
+      "benefit_2": "Identyfikacja problemów związanych z błędnym zastosowaniem wzorców projektowych, negatywnie rzutujących na jakość projektu oraz jego bezpieczny rozwój; przyczyniająca się do przyspieszenia tempa pracy nad projektem i znacznych oszczędności w przyszłości",
       "benefit_3": "Ocena wykorzystania zewnętrznych bibliotek, w tym zabezpieczania projektu przed dokonującymi się w nich zmianami, wpływająca na wydajność oraz neutralizację problemów z bezpieczeństwem",
       "benefit_4": "Ocena poziomu elastyczności narażonego na modyfikacje kodu, pozwalająca podjąć decyzję o jego zwiększeniu, przyczyniającego się z kolei do oszczędzenia czasu i pieniędzy",
       "benefit_5": "Ocena wielkości nakładu zasobów ludzkich i czasowych, niezbędnych do wykonania projektu, pozwalająca określić realia otrzymanej od wykonawcy wyceny"
     },
     "usability": {
       "title": "Użyteczność",
-      "description": "Audyt usability ma na celu kompleksową analizę użyteczności i funkcjonalności strony internetowej, aplikacji czy systemu. Podczas tego procesu sprawdzamy przede wszystkim intuicyjność strony, łatwość poruszania po niej, przydatność dla internautów i ogólne wrażenia związane z korzystania z usługi. Bierzemy pod uwagę wszystkie czynniki mające wpływ na użyteczność takie jak: architektura informacji, nawigacja, strukturę funkcjonalności dodatkowo sprawdzamy wszystkie ekrany oraz procesy myślowe. Stosujemy najlepsze techniki w zależności od rodzaju powierzonego problemu takie jak: Indywidualne wywiady pogłębione, Card Sorting, Paper prototyping, Eyetracking,",
-      "task_1": "Badanie zgodności z heurystykami",
+      "description": {
+        "part_1": "Celem audytu usability jest kompleksowa analiza użyteczności i funkcjonalności strony internetowej, aplikacji czy systemu. Podczas badania sprawdzamy głównie intuicyjność, łatwość poruszania się po interfejsie oraz przydatność dla użytkowników, analizując zwłaszcza architekturę informacji i nawigację. Ocenie poddajemy wszystkie ekrany i procesy myślowe, odnotowując również ogólne wrażenia z korzystania z usługi.",
+        "part_2": "Do badania wykorzystujemy najskuteczniejsze techniki, do których należą indywidualne wywiady pogłębione, card sorting, paper prototyping, eyetracking, zdalne badania z użytkownikami, testy AB czy clicktracking. Ich wybór uwarunkowany jest specyfiką postawionego problemu.",
+        "part_3": "Efektem badania jest lista rekomendacji, stworzona w oparciu o naszą wiedzę i doświadczenie. Do zidentyfikowanych niewłaściwych praktyk czy elementów, dopasowujemy konkretne zalecenia, mające poprawić ich użyteczność."
+      },
+      "task_1": "Badanie zgodności z heurystykam",
       "task_2": "Badanie efektywności wdrożonych scenariuszy użycia",
       "task_3": "Badanie zgodności ze standardami UI",
-      "benefit_1": "Ocena zgodności aplikacji/ strony z przyjętymi norami, opatrzona opisami heurystyk",
+      "benefit_1": "Ocena zgodności aplikacji/ strony z przyjętymi normami, opatrzona opisami heurystyk",
       "benefit_2": "Ocena architektury informacji pod kątem intuicyjności wykonywanych czynności",
       "benefit_3": "Ocena wydajności kanałów komunikacji (web/ mobile) oraz zgodności interfejsów z wytycznymi dla danej platformy"
     }

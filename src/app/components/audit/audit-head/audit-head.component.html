@@ -1,14 +1,8 @@
-<div class="section-audit">
-  <div class="row">
+<header>
+  <h1>{{'AUDIT.title' | translate}}</h1>
+  <span><h2> {{'AUDIT.quality.title' | translate}} </h2> & <h2> {{'AUDIT.usability.title' | translate}}</h2></span>
+</header>
 
-    <div (click)="onClick(id)" class="column" *ngFor="let audit of audits, let id = index">
-      <img [src]="audit.image" alt="">
-      <div class="title">
-        <div class="little-triangle"></div>
-        <h3>{{audit.title | translate }}</h3>
-        <i class="fa fa-chevron-down"></i>
-        <p>{{'AUDIT.move' | translate}}</p>
-      </div>
-    </div>
-  </div>
-</div>
+<svg viewBox="0,0 25,1">
+  <polygon points="0,0 3,0 4,1 0,1" fill="#ffffff"></polygon>
+</svg>

@@ -1,8 +1,8 @@
-import {AfterViewInit, Component, HostListener, Input, OnInit} from '@angular/core';
+import {AfterViewInit, Component, Input, OnInit} from '@angular/core';
 
 
 @Component({
-  selector: 'app-list',
+  selector: 'app-audit-list',
   templateUrl: 'aduit-list.component.html',
   styleUrls: ['audit-list.component.scss'],
 
@@ -10,9 +10,7 @@ import {AfterViewInit, Component, HostListener, Input, OnInit} from '@angular/co
 
 export class AuditListComponent implements OnInit, AfterViewInit {
   @Input() listData;
-  @Input() source;
   @Input() title: string;
-  @Input() listTitle: string;
 
   constructor() {
 

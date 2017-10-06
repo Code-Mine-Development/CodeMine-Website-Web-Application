@@ -68,9 +68,10 @@ export class HeaderComponent implements OnInit {
 
   private backgroundAnimation(state) {
     if (state instanceof NavigationEnd) {
-      const translatedLink = this.localize.translateRoute('/home');
+      const translatedLink = this.localize.translateRoute('/home'),
+            translatedSecoundLink = this.localize.translateRoute('/audit');
 
-      if (translatedLink !== state.urlAfterRedirects) {
+      if (translatedLink !== state.urlAfterRedirects && translatedSecoundLink !== state.urlAfterRedirects) {
         this.shouldHide = false;
       } else {
         this.shouldHide = true;
