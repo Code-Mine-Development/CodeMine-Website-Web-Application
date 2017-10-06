@@ -1,3 +1,4 @@
+@import "../../../../assets/styles/mediaQueries";
 
 :host {
   overflow: hidden;
@@ -9,14 +10,32 @@
 
 .skip {
   position: absolute;
+  color: #282828;
   bottom: 20px;
   left: 50%;
   transform: translateX(-50%);
-  transition: opacity .5s;
+  transition: opacity .5s, color .5s;
   background: transparent;
   border: 0;
   cursor: pointer;
   outline: none;
+  svg {
+    margin-top: 5px;
+  }
+  @media #{$tablet-media} {
+    bottom: 2px;
+  }
+  @media #{$phone} {
+    polyline {
+      transition: stroke .5s
+    }
+    &.white {
+      color: #ffffff;
+      polyline {
+        stroke: #ffffff;
+      }
+    }
+  }
   &.hidden {
     opacity: 0;
     visibility: hidden;

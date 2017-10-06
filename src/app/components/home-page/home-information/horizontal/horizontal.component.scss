@@ -1,27 +1,34 @@
 @import "../../../../../assets/styles/mediaQueries";
+
 .horizontal {
-  color:#333;
+  color: #333;
   position: absolute;
   top: 0;
-  right: 0px;
+  right: 0;
   height: 85vh;
   width: 80px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  margin-top: 90px;
+  margin-top: 7.5vh;
   text-align: center;
   overflow: hidden;
   transition: opacity .5s;
-  &.hidden{
-    opacity:0;
+  @media #{$tablet-media}{
+    width: 40px;
+  }
+  @media #{$phone}{
+    display: none;
+  }
+  &.hidden {
+    opacity: 0;
     visibility: hidden;
   }
-  p{
-    width:100%;
-    font-size:2rem;
+  p {
+    width: 100%;
+    font-size: 2rem;
     font-weight: bold;
-    margin:0;
+    margin: 0;
   }
 
   .sliderMain {
@@ -32,13 +39,13 @@
     @media #{$phone}{
       height: 25vh;
     }
-    .sliderTitle{
-      display:block;
+    .sliderTitle {
+      display: block;
       transform: rotate(-90deg);
-      h3{
+      h3 {
         width: 20vh;
-        font-size:1.2rem;
-        margin:0;
+        font-size: 1.2rem;
+        margin: 0;
       }
     }
   }
@@ -51,20 +58,20 @@
   margin: auto;
 }
 
-.pointer{
+.pointer {
   cursor: pointer;
 }
 
-p:last-child{
-  position:relative;
-  &:after{
-    content:'';
-    width:26px;
-    position:absolute;
-    bottom:150%;
-    left:50%;
+p:last-child {
+  position: relative;
+  &:after {
+    content: '';
+    width: 26px;
+    position: absolute;
+    bottom: 150%;
+    left: 50%;
     transform: rotate(-45deg) translateX(-50%);
     transform-origin: bottom left;
-    border-top:3px solid #282828;
+    border-top: 3px solid #282828;
   }
 }

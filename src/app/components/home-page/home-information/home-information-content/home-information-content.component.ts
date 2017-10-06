@@ -43,7 +43,7 @@ export class HomeInformationContentComponent implements OnInit {
   onScroll() {
     const distanceToAnimation = (this.scrollableBox.nativeElement.offsetHeight * 2),
       scrollTop = this.scrollableBox.nativeElement.scrollTop;
-    this.calculateBoxFollow(scrollTop, distanceToAnimation + (2 * this.padding));
+    this.calculateBoxFollow(scrollTop, distanceToAnimation);
     this.scrollController.setScrollTop(scrollTop, distanceToAnimation - 320, (scrollTop - (distanceToAnimation / 2)));
     this.calculateBoxSize();
     this.checkEnd(scrollTop);

@@ -26,7 +26,12 @@ export class HomeInformationTextComponent implements AfterViewInit {
         distance = window.innerHeight + targetElement.nativeElement.offsetHeight,
         currentPosition = window.innerHeight - (distance * progress);
       targetElement.nativeElement.style.color = AnimationConfig.sections[scrollInfo.section]['color'] || ' #282828';
-      targetElement.nativeElement.style.top = currentPosition + 'px';
+      if(this.checkMobile()){
+        targetElement.nativeElement.style.opacity = 1;
+      } else {
+        targetElement.nativeElement.style.top = currentPosition + 'px';
+        targetElement.nativeElement.style.opacity = 1;
+      }
     })
   }
 
@@ -42,11 +47,29 @@ export class HomeInformationTextComponent implements AfterViewInit {
   }
 
   hideBottom(element) {
-    element.nativeElement.style.top = window.innerHeight + 'px';
+    if(this.checkMobile()){
+      element.nativeElement.style.opacity = 0;
+    } else {
+      element.nativeElement.style.top = window.innerHeight + 'px';
+      element.nativeElement.style.opacity = 0;
+    }
+
   }
 
   hideTop(element) {
-    element.nativeElement.style.top = (-element.nativeElement.offsetHeight) + 'px';
+    if(this.checkMobile()){
+      element.nativeElement.style.opacity = 0;
+    } else {
+      element.nativeElement.style.top = (-element.nativeElement.offsetHeight) + 'px';
+      element.nativeElement.style.opacity = 0;
+    }
+  }
+
+  checkMobile() {
+    if (window.innerWidth < window.innerHeight && window.innerWidth <= 768) {
+      return true;
+    }
+    return false;
   }
 
 }

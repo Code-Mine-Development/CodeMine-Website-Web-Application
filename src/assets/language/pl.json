@@ -1,6 +1,6 @@
 {
   "AUDIT": {
-    "title": "Audyt",
+    "title": "Audyty",
     "move": "przejdź",
     "quality": {
       "title": "Jakość kodu",
@@ -329,7 +329,7 @@
     "about_as": "o nas",
     "portfolio": "portfolio",
     "offer": "oferta",
-    "audit": "audyt",
+    "audit": "audyty",
     "contact": "kontakt",
     "home": "strona główna",
     "pl": "polski",

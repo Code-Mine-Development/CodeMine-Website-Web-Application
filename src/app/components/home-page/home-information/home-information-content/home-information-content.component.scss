@@ -1,3 +1,5 @@
+@import "../../../../../assets/styles/mediaQueries";
+
 :host {
   display: block;
   width: 100%;
@@ -16,6 +18,20 @@
       margin-top: -80px;
       margin-left: -80px;
     }
+    @media #{$tablet-media} {
+      padding: 60px 40px 40px;
+      div > section > header > img {
+        margin-top: -40px;
+        margin-left: -40px;
+      }
+    }
+    @media #{$phone} {
+      padding: 0;
+      div > section > header > img {
+        margin-top: 0;
+        margin-left: 0;
+      }
+    }
   }
   &.hidden_motto {
     .home_section article {
@@ -28,25 +44,28 @@
       .process_scroll_box {
         position: initial;
         pointer-events: none;
+        .follow_box {
+          opacity: 1;
+        }
       }
     }
   }
 }
 
-.over-hidden{
-  width:100%;
+.over-hidden {
+  width: 100%;
   height: 100%;
   position: relative;
   overflow: hidden;
-  &:after{
+  &:after {
     content: '';
     display: block;
     position: absolute;
-    width:100%;
+    width: 100%;
     height: 100%;
     box-shadow: inset 0 0 50px rgba(161, 161, 161, .35);
-    top:0;
-    left:0;
+    top: 0;
+    left: 0;
     pointer-events: none;
   }
 }
@@ -106,6 +125,7 @@
       position: relative;
       box-sizing: border-box;
       background: #282828;
+
       article {
         max-width: 570px;
         position: absolute;
@@ -128,10 +148,18 @@
         }
 
       }
+
       svg {
         position: absolute;
         right: 0;
         bottom: 100%;
+      }
+
+      @media #{$phone-portrait}{
+        color: #ffffff;
+        article {
+          background: transparent;
+        }
       }
     }
     &.process_scroll_box {
@@ -140,6 +168,8 @@
       overflow: hidden;
       transition: background .5s;
       .follow_box {
+        transition: opacity .5s;
+        opacity: 0;
         width: 100%;
         height: 100%;
         box-sizing: border-box;

@@ -1,6 +1,16 @@
+@import "../../../../../../assets/styles/mediaQueries";
+
 :host{
   display: flex;
   align-items: center;
+  @media #{$tablet-media-portrait}{
+    height: 50%;
+    width: 100%;
+    figure img{
+      width: 160%;
+      transform: translateX(14%);
+    }
+  }
 }
 figure {
   margin: 0;

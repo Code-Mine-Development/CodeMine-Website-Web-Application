@@ -1,17 +1,50 @@
+@import "../../../../../../assets/styles/mediaQueries";
+
 :host {
   position: absolute;
   right: 0;
   top: 0;
   width: 50%;
-  height: 100vh;
+  height: 100%;
   box-sizing: border-box;
+  @media #{$tablet-media-portrait} {
+    display: block;
+    width: 100%;
+    height: 35%;
+    top: 65%;
+    article {
+      padding: 0 20px;
+      box-sizing: border-box;
+      width: 100%;
+      left: 50%;
+      transform: translateX(-50%);
+      top: 0;
+      transition: opacity .5s;
+      position: absolute;
+    }
+  }
+  @media #{$phone-portrait}{
+    top: 60%;
+    article {
+      text-align: center;
+      top: initial;
+      bottom: 0;
+      padding: 0 10px;
+      h3 {
+        font-size: 2.4rem;
+        margin: 0;
+      }
+    }
+  }
 }
 
 article {
-  max-width: 480px;
+  max-width: 520px;
   position: absolute;
   left: 0;
   top: 100%;
+  padding-right: 40px;
+  box-sizing: border-box;
   h3 {
     font-size: 3.6rem;
   }
