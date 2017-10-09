@@ -49,4 +49,12 @@
       color: #FFDE07;
     }
   }
+
+  &-hover-black-fill-white-color {
+    transition: .3s;
+    &:hover {
+      background: #282828;
+      color: #ffffff;
+    }
+  }
 }

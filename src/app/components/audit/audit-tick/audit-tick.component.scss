@@ -1,0 +1,26 @@
+:host {
+  display: block;
+  &.active {
+    .tick {
+      stroke-dashoffset: 0;
+    }
+  }
+}
+
+svg {
+  width: 32px;
+  position: absolute;
+  left: 14px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.tick {
+  fill: none;
+  stroke: #282828;
+  stroke-miterlimit: 10;
+  stroke-width: 6.32px;
+  stroke-dasharray: 100;
+  stroke-dashoffset: 100;
+  transition: 1s ease-in-out;
+}

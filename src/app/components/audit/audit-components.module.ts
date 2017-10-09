@@ -6,13 +6,15 @@ import {TranslateModule} from '@ngx-translate/core';
 import {DrawBackgroundService} from '../../shared/services/draw-background.service';
 import {AuditListElementComponent} from './audit-list/audit-list-element.component';
 import {AuditHeadComponent} from './audit-head/audit-head.component';
+import {AuditTickComponent} from './audit-tick/audit-tick.component';
 
 
 @NgModule({
   declarations: [
     AuditListComponent,
     AuditListElementComponent,
-    AuditHeadComponent
+    AuditHeadComponent,
+    AuditTickComponent
   ],
   imports: [
     CommonModule,

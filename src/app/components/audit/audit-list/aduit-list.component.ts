@@ -1,4 +1,4 @@
-import {AfterViewInit, Component, Input, OnInit} from '@angular/core';
+import {Component, Output, EventEmitter} from '@angular/core';
 
 
 @Component({
@@ -7,22 +7,14 @@ import {AfterViewInit, Component, Input, OnInit} from '@angular/core';
   styleUrls: ['audit-list.component.scss'],
 
 })
+export class AuditListComponent {
 
-export class AuditListComponent implements OnInit, AfterViewInit {
-  @Input() listData;
-  @Input() title: string;
+  @Output('navigate') navigate = new EventEmitter();
 
-  constructor() {
-
+  onNavigate() {
+    this.navigate.emit();
   }
 
-
-  ngOnInit() {
-  };
-
-  ngAfterViewInit() {
-
-  }
 }
 
 

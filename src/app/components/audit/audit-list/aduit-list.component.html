@@ -1,9 +1,9 @@
-<section>
-  <section class="quality">
-    <header>
+<section class="container">
+  <section id="quality" class="quality">
+    <header class="description">
       <figure>
         <figcaption>Quality presentation</figcaption>
-        <img src="" alt="quality image">
+        <img src="assets/images/code_audyt.svg" alt="quality image">
       </figure>
       <article>
         <h2>{{'AUDIT.quality.title' | translate}}</h2>
@@ -21,32 +21,55 @@
       </tr>
       <tr>
         <td>{{'AUDIT.quality.task_1' | translate}}</td>
-        <td>{{'AUDIT.quality.benefit_1' | translate}}</td>
+        <td>
+          <app-audit-tick></app-audit-tick>
+          {{'AUDIT.quality.benefit_1' | translate}}
+        </td>
       </tr>
       <tr>
         <td>{{'AUDIT.quality.task_2' | translate}}</td>
-        <td>{{'AUDIT.quality.benefit_2' | translate}}</td>
+        <td>
+          <app-audit-tick></app-audit-tick>
+          {{'AUDIT.quality.benefit_2' | translate}}
+        </td>
       </tr>
       <tr>
         <td>{{'AUDIT.quality.task_3' | translate}}</td>
-        <td>{{'AUDIT.quality.benefit_3' | translate}}</td>
+        <td>
+          <app-audit-tick></app-audit-tick>
+          {{'AUDIT.quality.benefit_3' | translate}}
+        </td>
       </tr>
       <tr>
         <td>{{'AUDIT.quality.task_4' | translate}}</td>
-        <td>{{'AUDIT.quality.benefit_4' | translate}}</td>
+        <td>
+          <app-audit-tick></app-audit-tick>
+          {{'AUDIT.quality.benefit_4' | translate}}
+        </td>
       </tr>
       <tr>
         <td>{{'AUDIT.quality.task_5' | translate}}</td>
-        <td>{{'AUDIT.quality.benefit_5' | translate}}</td>
+        <td>
+          <app-audit-tick></app-audit-tick>
+          {{'AUDIT.quality.benefit_5' | translate}}
+        </td>
       </tr>
     </table>
+    <section class="contactInfo">
+      <h3>{{'AUDIT.wantKnowDetails' | translate}}</h3>
+      <button (click)='onNavigate()' class="btn btn-large btn-border-only btn-hover btn-hover-black-fill-white-color">
+        {{'AUDIT.navigate' | translate}}
+      </button>
+    </section>
   </section>
+</section>
 
-  <section class="usability">
-    <header>
+<section id="usability" class="usability">
+  <div class="container">
+    <header class="description">
       <figure>
         <figcaption>Quality presentation</figcaption>
-        <img src="" alt="usability image">
+        <img src="assets/images/ux_audyt.svg" alt="usability image">
       </figure>
       <article>
         <h2>{{'AUDIT.usability.title' | translate}}</h2>
@@ -64,16 +87,34 @@
       </tr>
       <tr>
         <td>{{'AUDIT.usability.task_1' | translate}}</td>
-        <td>{{'AUDIT.usability.benefit_1' | translate}}</td>
+        <td>
+          <app-audit-tick></app-audit-tick>
+          {{'AUDIT.usability.benefit_1' | translate}}
+        </td>
       </tr>
       <tr>
         <td>{{'AUDIT.usability.task_2' | translate}}</td>
-        <td>{{'AUDIT.usability.benefit_2' | translate}}</td>
+        <td>
+          <app-audit-tick></app-audit-tick>
+          {{'AUDIT.usability.benefit_2' | translate}}
+        </td>
       </tr>
       <tr>
         <td>{{'AUDIT.usability.task_3' | translate}}</td>
-        <td>{{'AUDIT.usability.benefit_3' | translate}}</td>
+        <td>
+          <app-audit-tick></app-audit-tick>
+          {{'AUDIT.usability.benefit_3' | translate}}
+        </td>
       </tr>
     </table>
-  </section>
+    <section class="contactInfo">
+      <h3>{{'AUDIT.wantKnowDetails' | translate}}</h3>
+      <button (click)='onNavigate()' class="btn btn-large btn-border-only btn-hover btn-hover-black-fill">
+        {{'AUDIT.navigate' | translate}}
+      </button>
+    </section>
+  </div>
+  <svg viewBox="0,0 25,1">
+    <polygon points="25,0 22,0 21,1 25,1" fill="#FFDE07"></polygon>
+  </svg>
 </section>
