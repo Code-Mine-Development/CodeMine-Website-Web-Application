@@ -1,3 +1,4 @@
-<app-bg-triangles></app-bg-triangles>
-<app-home-information-content></app-home-information-content>
+<app-home-information-content (skip)="skip()"></app-home-information-content>
 <app-horizontal></app-horizontal>
+<button (click)="skip()" [class.hidden]="hiddenSkip" class="skip">skip <img src="assets/icons/skip.svg" alt="skip Icon">
+</button>

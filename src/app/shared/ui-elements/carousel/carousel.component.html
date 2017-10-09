@@ -1,7 +1,28 @@
-<app-carousel-element-text [title]="data[currentElement].title" [subTitle]="data[currentElement].subTitle" (navigate)="onNavigate()"></app-carousel-element-text>
-<app-carousel-element-image *ngFor="let image of data; let i = index"
-                            [title]="image.title"
-                            [imgUrl]="image.mainImage"
-                            [index]="i"
-                            [currentIndex]="currentElement"></app-carousel-element-image>
+<app-carousel-element *ngFor="let project of parsedPortfolio; let index = index"
+                     [open]="visibleIndex"
+                     [index]="index"
+                     [direction]="direction"
+                     [project]="project"
+(navigate)="onNavigate($event)"></app-carousel-element>
+
+<nav *ngIf="!disableNavigation">
+  <figure class="next" (click)="nextProject()">
+    <figcaption>Next</figcaption>
+    <img src="assets/images/arrows/angle_right-white.svg" alt="right arrow">
+  </figure>
+  <figure class="prev" (click)="prevProject()">
+    <figcaption>Previous</figcaption>
+    <img src="assets/images/arrows/angle_left-white.svg" alt="left arrow">
+  </figure>
+  <ul class="dots">
+    <li *ngFor="let project of parsedPortfolio; let index = index" (click)="setProject(index)" [class.active]="visibleIndex === index">
+      <div>
+        <img [src]="project.mainImage.mini" alt="">
+      </div>
+
+    </li>
+  </ul>
+</nav>
+
+<h3 *ngIf="!disableNavigation" >{{'PORTFOLIO.sectionTitles.nextProject' | translate}}</h3>
 

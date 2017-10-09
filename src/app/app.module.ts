@@ -7,11 +7,9 @@ import {TranslateLoader, TranslateModule} from '@ngx-translate/core';
 import {TranslateHttpLoader} from '@ngx-translate/http-loader';
 import {TranslateStore} from '@ngx-translate/core/src/translate.store';
 import {LocalizeRouterService} from 'localize-router';
-
 import {AppRoutingModule} from './app-routing.module';
 import {CoreModule} from './core/core-module';
 import {TechnologiesModule} from './aplication/offerElementsDetails/offerElements.module';
-
 import {ContactResolver} from './aplication/contact/services/contact.resolver';
 import {ContactService} from './aplication/contact/services/contact.service';
 import {PortfolioService} from './aplication/portfolio/services/portfolio.service';
@@ -21,10 +19,10 @@ import {OfferResolver} from './aplication/offer/services/offer.resolver';
 import {HomeInformationServices} from './components/home-page/services/home-information.service';
 import {HomeInformationResolver} from './components/home-page/services/home-information.resolver';
 import {AuditResolver} from './aplication/audit/services/audit.resolver';
-import {PreviousPositionService} from './shared/services/previous-position.service'
+import {PreviousPositionService} from './shared/services/previous-position.service';
 import {GoogleAnalyticsEventService} from './shared/services/google-analytics-event.service';
-
 import {AppComponent} from './app.component';
+import {UiModule} from './shared/ui-elements/ui.module';
 
 export function createTranslateLoader(http: Http) {
   return new TranslateHttpLoader(http, './assets/language/', '.json');
@@ -49,7 +47,8 @@ export function createTranslateLoader(http: Http) {
     CoreModule,
     BrowserAnimationsModule,
     AppRoutingModule,
-    TechnologiesModule
+    TechnologiesModule,
+    UiModule
   ],
   providers: [
     PortfolioService,

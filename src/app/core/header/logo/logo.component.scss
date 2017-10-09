@@ -1,24 +1,19 @@
 @import "../../../../assets/styles/colors";
 @import "../../../../assets/styles/mixins";
 @import '../../../../assets/styles/mediaQueries';
-:host{
-  width:15%;
+
+:host {
+  width: 15%;
   outline: none;
 }
 
 .wrapper {
   position: relative;
-  width: 115px;
-  height:153px;
-  display:flex;
+  width: 32px;
+  height: 32px;
+  display: flex;
   align-items: center;
-  img {
-    width: 75px;
-    height: 153px;
-    cursor: pointer;
-    transition: .3s all;
-  }
-  .hidden{
+  .hidden {
     opacity: 0;
   }
 
@@ -28,20 +23,17 @@
     bottom: 0;
     right: 0;
     z-index: 3500;
-    width:32px;
-    height:32px;
+    width: 32px;
+    height: 32px;
     transform-origin: top right;
-    transition: transform .7s ease-in-out;
+    transition: opacity .7s ease-in-out;
   }
-  svg{
-    width:32px;
-    height:32px;
-    polygon{
+  svg {
+    width: 32px;
+    height: 32px;
+    polygon {
       transition: opacity .5s;
     }
-  }
-  .animate-logo{
-    transform: translate(-80px,-120px) rotateZ(360deg);
   }
 }
 

@@ -1,6 +1,6 @@
 @import "../../../../../assets/styles/mediaQueries";
 
-:host{
+:host {
   display: block;
   font-weight: 500;
 }
@@ -20,7 +20,6 @@ app-architecture {
     margin-bottom: 50px;
   }
 }
-
 
 .home-image, .last_image {
   margin: 0;
@@ -49,7 +48,7 @@ app-architecture {
         width: 100%;
       }
       @media #{$tablet-media} {
-        &:last-child{
+        &:last-child {
           margin-top: 20px;
         }
       }
@@ -66,14 +65,15 @@ app-architecture {
       display: none;
     }
     img {
-      width: 100%;
+      width: 80%;
       transform: translateX(-5%) scale(1.3);
     }
     video {
-      width: 37%;
+      width: 40.5%;
       position: relative;
       margin-top: -100%;
-      transform: translate(32.5%, -16%) rotateZ(-15deg) skew(-330deg);
+      transform: translate(129.5%, 34%) rotate(-45deg);
+      transform-origin: left top;
       box-shadow: -10px 33px 52px -2px rgba(0, 0, 3, .48);
     }
   }

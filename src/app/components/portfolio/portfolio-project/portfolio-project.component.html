@@ -1,7 +1,7 @@
 <div class="container">
   <div class="project">
     <div class="project-image">
-      <div>
+      <div (click)="onClick($event)">
         <img [src]="project.mainImage.small" [attr.alt]="project.title+'image'">
         <button (click)="onClick($event)" class="btn btn-yellow btn-large btn-hover-yellow-border">
           {{'PORTFOLIO.showMore' | translate}}

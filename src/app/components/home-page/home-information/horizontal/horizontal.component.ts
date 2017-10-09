@@ -1,48 +1,45 @@
-import {Component, HostListener, AfterViewInit} from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import {ScrollController} from '../../services/scroll.controller';
+import {AnimationConfig} from '../../animation.config';
 
 @Component({
   selector: 'app-horizontal',
   templateUrl: 'horizontal.component.html',
   styleUrls: ['horizontal.component.scss']
 })
-export class HorizontalComponent implements AfterViewInit {
+export class HorizontalComponent implements OnInit {
 
-  hidden = false;
-  element;
-  private breakPoint = 500;
-  private verticalBreakPoint = 800;
+  hidden = true;
+  sectionNumber = 0;
+  sectionTitle = '';
 
   constructor(private scrollController: ScrollController) {
-    scrollController.getCurrentElementStream().subscribe(
-      (element) => {
-        this.element = element;
-        this.element.quantity = scrollController.getElementsQuantity();
+    scrollController.getScrollTop().subscribe(
+      (scrollInfo) => {
+        if (!scrollInfo.horizontal) {
+          this.hidden = true;
+        } else {
+          this.sectionNumber = scrollInfo.horizontal.section;
+          this.sectionTitle = scrollInfo.horizontal.title;
+          this.hidden = false;
+        }
       }
     )
   }
 
-  @HostListener('window:resize', ['$event']) resize() {
-    this.checkScreen();
+  ngOnInit() {
   }
 
-  ngAfterViewInit() {
-    this.checkScreen();
+  getSectionCount() {
+    return AnimationConfig.sections.length + 1;
   }
 
-  checkScreen() {
-    if (window.innerWidth < window.innerHeight) {
-      this.hidden = window.innerWidth <= this.breakPoint;
-    } else {
-      this.hidden = window.innerWidth <= this.verticalBreakPoint;
-    }
-  }
 
   moveToLast() {
-    this.scrollController.moveToLast();
+    this.scrollController.navigateTo(this.getSectionCount());
   }
 
   moveToPrev() {
-    this.scrollController.move('up');
+    this.scrollController.navigateTo(this.sectionNumber-1);
   }
 }

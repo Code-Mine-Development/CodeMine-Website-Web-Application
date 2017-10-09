@@ -29,7 +29,7 @@
   },
   "HOME": {
     "motto": {
-      "title": "Wydobywany z pasją w samym sercu Śląska,",
+      "title": "- wydobywany z pasją w samym sercu Śląska",
       "subtitle": "Quality Driven Development"
     },
     "howWeWork": {
@@ -41,7 +41,7 @@
       "title": "Hire us",
       "shortCut": "Hire us",
       "description": "Przejdź do kontaktu lub wypełnij krótki formularz odpowiadając na kilka pytań dotyczących Twojego pomysłu na projekt.",
-      "buttonText": "Przejdź do briefu"
+      "buttonText": "Przejdź do kontaktu"
     },
     "language": {
       "title": "Tworzymy jednolity język komunikacji",
@@ -329,8 +329,9 @@
     "about_as": "o nas",
     "portfolio": "portfolio",
     "offer": "oferta",
-    "audit": "audi TT",
+    "audit": "audyt",
     "contact": "kontakt",
+    "home": "strona główna",
     "pl": "polski",
     "en": "english",
     "de": "deutch",

@@ -1,0 +1,4 @@
+<figure>
+  <figcaption> Process Animation </figcaption>
+  <img #animationCanvas *ngFor="let image of loadingList; let i = index" [class.visible]="visible === i" [src]="image || ''" alt="loading...">
+</figure>

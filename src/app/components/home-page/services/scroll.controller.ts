@@ -1,102 +1,77 @@
 import {Injectable} from '@angular/core';
-import {Subject} from 'rxjs/Subject';
-import {ScrollToService} from '../../../shared/services/scroll-to.service';
+import {ScrollSmooth} from './scroll-smooth';
+import {HomeInformationServices} from './home-information.service';
+import {AnimationConfig} from '../animation.config';
+import {Subject} from 'rxjs';
 
-interface InformationElement {
-  id: number,
-  title: string
-}
 
 @Injectable()
 export class ScrollController {
 
+  private navigateStream = new Subject();
+
+  private smoothScroll = new ScrollSmooth();
   currentElement = 1;
-  $currentElement = new Subject();
-  elementsQuantity = 0;
-  escapeElement;
-  title = [];
+  clearScrollTop = 0;
 
-  animationInProgress = false;
-
-  constructor(private scrollToService: ScrollToService) {
+  constructor(private homeInformation: HomeInformationServices) {
   }
 
 
-  setScrollDirectory(directory) {
-    if (this.animationInProgress) {
-      return;
-    }
+  setScrollTop(scrollTop: number, firstSectionSize: number, startScrollTop: number) {
+    const animationScrollTop = scrollTop - firstSectionSize < 0 ? 0 : scrollTop - firstSectionSize;
+    this.clearScrollTop = startScrollTop;
+    this.homeInformation.setScrollTop(scrollTop);
+    this.smoothScroll.setScroll(animationScrollTop);
+  }
 
-    if (directory === 'up') {
-      this.moveUp();
+  getScrollTop() {
+    return this.smoothScroll.getSmoothScroll().map((scrollTop: number) => {
+      const frame = this.getFrame(scrollTop),
+        section = this.getSection(frame);
+      return {
+        scrollTop: scrollTop,
+        frame: frame,
+        section: section,
+        horizontal: this.getHorizontalInfo(scrollTop, section)
+      }
+    });
+  }
+
+  private getFrame(scrollTop: number) {
+    const scrollFactor = scrollTop / AnimationConfig.duration;
+    return Math.round(scrollFactor * AnimationConfig.animationFrames);
+  }
+
+  getSection(frame: number) {
+    let currentSection = -1;
+
+    AnimationConfig.sections.forEach((section, index) => {
+      if (section.start <= frame && section.end >= frame) {
+        currentSection = index;
+      }
+    });
+    return currentSection;
+  }
+
+  private getHorizontalInfo(scrollTop, section) {
+    if (this.clearScrollTop > 0 && scrollTop === 0) {
+      return {section: 0, title: 'HOME.howWeWork'};
+    } else if (this.clearScrollTop <= 0) {
+      return null
+    } else if (section < 0) {
+      return {section: AnimationConfig.sections.length + 1, title: 'HOME.hireUs'}
     } else {
-      this.moveDown();
+      return {section: section + 1, title: AnimationConfig.sections[section].short}
     }
   }
 
-  setEscapeElement(escapeElement) {
-    this.escapeElement = escapeElement;
+  navigateTo(section: number) {
+    this.navigateStream.next(section);
   }
 
-  resetElementQuantity() {
-    this.elementsQuantity = 0;
-    this.currentElement = 1;
-  }
-
-  registerElement(title: string) {
-    this.elementsQuantity++;
-    this.title[this.elementsQuantity] = title;
-    return this.elementsQuantity;
-  }
-
-
-  move(directory) {
-    this.setScrollDirectory(directory);
-  }
-
-  moveToLast() {
-    this.currentElement = this.getElementsQuantity();
-    this.$currentElement.next(<InformationElement>{id: this.currentElement, title: this.title[this.currentElement]});
-    this.animationInProgress = true;
-  }
-
-  getCurrentElementStream() {
-    return this.$currentElement.asObservable();
-  }
-
-  getElementsQuantity() {
-    return this.elementsQuantity;
-  }
-
-  animationEnd() {
-    this.animationInProgress = false;
-  }
-
-
-  private moveDown() {
-    if (this.currentElement === this.elementsQuantity) {
-      return this.escapeFromInformations();
-    }
-
-    this.currentElement++;
-    this.$currentElement.next(<InformationElement>{id: this.currentElement, title: this.title[this.currentElement]});
-    this.animationInProgress = true;
-  }
-
-  private moveUp() {
-    if (this.currentElement === 1) {
-      return;
-    }
-
-    this.currentElement--;
-    this.$currentElement.next(<InformationElement>{id: this.currentElement, title: this.title[this.currentElement]});
-    this.animationInProgress = true;
-  }
-
-  private escapeFromInformations() {
-    if (this.escapeElement) {
-      this.scrollToService.scroll(this.escapeElement);
-    }
+  getNavigateStream() {
+    return this.navigateStream;
   }
 
 }

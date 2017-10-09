@@ -43,6 +43,7 @@ h1 {
     align-items: center;
     background-size: cover;
     position: relative;
+    cursor: pointer;
     & > div{
       position: relative;
       &:after{

@@ -8,6 +8,7 @@ import {TranslateService} from '@ngx-translate/core';
 })
 export class HamburgerComponent implements OnInit {
 
+  @HostBinding('class.white') @Input() HiddenBG;
   @Input() navigation;
   @Output() changeLanguage = new EventEmitter();
 

@@ -83,6 +83,7 @@
     figcaption {
       display: none;
     }
+    padding-bottom: 100px;
   }
 
   img {
@@ -94,8 +95,8 @@
     margin-top: -100%;
     width: 100%;
     box-shadow: -10px 33px 52px -2px rgba(0, 0, 3, .48);
-    transform-origin: left bottom;
-    transform: translate(26.5%, 1%) rotateZ(-15deg) skew(-330deg) scale(0.37);
+    transform-origin: right top;
+    transform: translate(-72%, 51%) scale(.3635) rotate(-45deg);
   }
 }
 

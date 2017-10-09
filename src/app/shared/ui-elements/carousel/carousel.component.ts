@@ -1,4 +1,4 @@
-import {Component, OnInit, ViewChildren, QueryList, Input, OnDestroy, EventEmitter, Output} from '@angular/core';
+import {Component, OnInit, Input, Output, EventEmitter, OnDestroy} from '@angular/core';
 import {Portfolio} from '../../../aplication/portfolio/interfaces/portfolio.interface';
 
 @Component({
@@ -7,38 +7,72 @@ import {Portfolio} from '../../../aplication/portfolio/interfaces/portfolio.inte
   styleUrls: ['carousel.component.scss']
 })
 export class CarouselComponent implements OnInit, OnDestroy {
-  @ViewChildren('item') items: QueryList<any>;
-  @Input() timeout = 5000;
-  @Input() transition = 1000;
-  @Input() data: Portfolio[];
+
+  @Input() portfolio: Portfolio[];
+  @Input() currentElement: string;
+  @Input() disableNavigation = false;
+
   @Output() navigate = new EventEmitter();
 
-  interval;
-  currentElement = 0;
+  parsedPortfolio: Portfolio[];
+
+  visibleIndex;
+  direction = 'next';
+  private sliderInterval;
 
   constructor() {
   }
 
   ngOnInit() {
-    if (this.data.length > 0) {
-      this.animateCarousel();
+    const project = this.portfolio.findIndex((element) => (this.currentElement === element.link));
+    this.parsedPortfolio = this.portfolio.slice();
+    if(project >= 0 &&  this.currentElement){
+      this.parsedPortfolio.splice(project,1);
+    }
+
+    this.visibleIndex = (this.parsedPortfolio.length - 1) < project ? 0 : project;
+    if (this.disableNavigation) {
+      this.setSliderInterval();
     }
   }
 
-  animateCarousel() {
-    this.interval = setInterval(() => {
-      this.currentElement++;
-      if (this.currentElement + 1 > this.data.length) {
-        this.currentElement = 0;
-      }
-    }, 3000)
-  }
-
   ngOnDestroy() {
-    clearInterval(this.interval);
+    if (this.sliderInterval) {
+      clearInterval(this.sliderInterval);
+    }
   }
 
-  onNavigate() {
-    this.navigate.emit('/portfolio');
+  nextProject() {
+    this.visibleIndex = this.getNextIndex(this.visibleIndex);
+    this.direction = 'next';
   }
+
+  prevProject() {
+    this.visibleIndex = this.getPrevIndex(this.visibleIndex);
+    this.direction = 'prev';
+  }
+
+  getNextIndex(index) {
+    return index + 1 >= this.parsedPortfolio.length ? 0 : index + 1;
+  }
+
+  getPrevIndex(index) {
+    return index - 1 < 0 ? this.parsedPortfolio.length - 1 : index - 1;
+  }
+
+  setProject(index) {
+    this.direction = this.visibleIndex < index ? 'next' : 'prev';
+    this.visibleIndex = index;
+  }
+
+  onNavigate(address) {
+    this.navigate.emit(address);
+  }
+
+  setSliderInterval() {
+    this.sliderInterval = setInterval(() => {
+      this.visibleIndex = this.getNextIndex(this.visibleIndex);
+    }, 5000)
+  }
+
 }

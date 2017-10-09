@@ -4,7 +4,7 @@ import {Component, Input, ElementRef} from '@angular/core';
   selector: 'app-instagram-photo',
   template: `
     <div class="box">
-      <a [href]="image.link">
+      <a [href]="image.link" target="_blank">
         <figure>
           <img [src]="image.images.standard_resolution.url" alt="instagram photo" >
           <figcaption>{{image.caption.text}}</figcaption>

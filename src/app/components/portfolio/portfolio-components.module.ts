@@ -6,17 +6,13 @@ import {UiModule} from '../../shared/ui-elements/ui.module';
 import {SharedModule} from '../../shared/shared.module';
 import {PortfolioDetailsHeaderComponent} from './details-section/header/header.component';
 import {ArchitectureComponent} from './details-section/architecture/architecture.component';
-import {NextProjectPreviewComponent} from './details-section/next-project-preview/next-project-preview.component';
-import {ProjectPreviewComponent} from './details-section/next-project-preview/project-preview/project-preview.component';
 
 
 @NgModule({
     declarations: [
         PortfolioProjectComponent,
         PortfolioDetailsHeaderComponent,
-        ArchitectureComponent,
-        NextProjectPreviewComponent,
-        ProjectPreviewComponent
+        ArchitectureComponent
     ],
     imports: [
         CommonModule,
@@ -28,7 +24,6 @@ import {ProjectPreviewComponent} from './details-section/next-project-preview/pr
         PortfolioProjectComponent,
         PortfolioDetailsHeaderComponent,
         ArchitectureComponent,
-        NextProjectPreviewComponent
     ],
     providers: []
 })

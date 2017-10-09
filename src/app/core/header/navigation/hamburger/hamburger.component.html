@@ -6,7 +6,7 @@
 
 <section class="navigation" [class.active]="active" >
   <ul>
-    <li *ngFor="let nav of navigation" routerLinkActive="active">
+    <li *ngFor="let nav of navigation" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">
       <span [routerLink]="'/'+ nav.href | localize" (click)="toggleHamburger()">{{ nav.title | translate }}</span>
     </li>
   </ul>

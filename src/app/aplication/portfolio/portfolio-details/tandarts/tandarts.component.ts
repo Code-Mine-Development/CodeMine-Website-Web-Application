@@ -14,7 +14,7 @@ import {fadeInAnimation} from '../../../../shared/routing.animation';
 })
 export class TandartsComponent extends PortfolioDetailsModel implements OnInit {
 
-  id = 'brigter-vision-growth-platform';
+  id = 'tandarts';
 
   constructor(route: ActivatedRoute,
               router: Router,

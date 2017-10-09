@@ -1,4 +1,4 @@
-import {Component, OnInit, Input, Output, EventEmitter} from '@angular/core';
+import {Component, OnInit, Input, Output, EventEmitter, HostBinding} from '@angular/core';
 import {TranslateService} from '@ngx-translate/core';
 
 @Component({
@@ -8,6 +8,7 @@ import {TranslateService} from '@ngx-translate/core';
 })
 export class FullSizeComponent implements OnInit {
 
+  @HostBinding('class.white') @Input() HiddenBG;
   @Input() navigation;
   @Output() changeLanguage = new EventEmitter();
 
