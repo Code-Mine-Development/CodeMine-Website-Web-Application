@@ -19,10 +19,11 @@
 }
 
 svg {
-  width: 35%;
+  width: 100%;
   position: absolute;
-  bottom: 100%;
-  right: 0;
+  top:0;
+  right: -2%;
+  transform: translateY(-95%);
 }
 
 .join_us {
@@ -103,12 +104,15 @@ svg {
   svg {
     position: absolute;
     z-index: 30;
+    top: initial;
+    transform: none;
     bottom: 0;
     right: 0;
     width: 5%;
     pointer-events: none;
     transition: .75s;
   }
+
   &:hover {
     transition-delay: .30s;
     background: #FFDE07;
@@ -118,6 +122,7 @@ svg {
       color: #282828;
     }
     svg {
+
       width: 150%;
     }
   }

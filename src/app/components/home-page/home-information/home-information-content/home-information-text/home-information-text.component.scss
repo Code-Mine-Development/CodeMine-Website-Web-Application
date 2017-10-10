@@ -24,15 +24,17 @@
     }
   }
   @media #{$phone-portrait}{
-    top: 60%;
+    top: 80%;
     article {
       text-align: center;
       top: initial;
-      bottom: 0;
       padding: 0 10px;
       h3 {
         font-size: 2.4rem;
         margin: 0;
+      }
+      p{
+        display: none;
       }
     }
   }

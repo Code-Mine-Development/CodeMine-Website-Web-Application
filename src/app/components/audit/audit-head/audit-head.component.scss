@@ -46,10 +46,19 @@
   h2, h1, span {
     font-size: 48px;
     font-weight: 700;
+    @media #{$tablet-media}{
+      font-size: 36px;
+    }
   }
 
   header {
     margin-left: 80px;
+    @media #{$tablet-media}{
+      margin-left: 40px;
+    }
+    @media #{$phone}{
+      margin-left: 20px;
+    }
   }
 
   span {
@@ -57,12 +66,5 @@
     & > * {
       display: inline-block;
     }
-  }
-
-  svg {
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    width: 100%;
   }
 }

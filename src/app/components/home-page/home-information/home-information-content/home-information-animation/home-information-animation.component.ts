@@ -56,7 +56,7 @@ export class HomeInformationAnimationComponent implements OnInit, OnDestroy {
   preloadFrames() {
     const tempFileLink = [];
     for (let i = 0; i < AnimationConfig.animationFrames + 1; i++) {
-      tempFileLink.push(this.getFilePath(i*2));
+      tempFileLink.push(this.getFilePath(i));
     }
     this.loadFiles(tempFileLink);
   }

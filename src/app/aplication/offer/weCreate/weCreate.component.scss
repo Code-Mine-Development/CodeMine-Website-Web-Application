@@ -48,24 +48,22 @@
       width: 100%;
     }
     h3 {
-      padding: 40px 0 40px;
+      padding: 0 0 40px;
       box-sizing: border-box;
       font-weight: bold;
       height: 35%;
       margin: 0;
       @media #{$phone}{
         box-sizing: content-box;
-        padding: 40px 0 20px;
-      }
-    }
-    &:hover {
-      h3 {
-        font-weight: 700;
+        padding: 0 0 20px;
       }
     }
     p {
       height: 60%;
-      margin: 20px 0 40px;
+      margin: 20px 0;
+      @media #{$phone}{
+        margin: 0;
+      }
     }
     .col-img {
       margin:0;
@@ -78,10 +76,6 @@
       }
       img{
         width:100%;
-      }
-      &:hover {
-        border: 1px solid rgba(228, 228, 228, 1);
-        background: rgba(242, 242, 242, 1);
       }
     }
     .col-text {

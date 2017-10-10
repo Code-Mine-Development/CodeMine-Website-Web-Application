@@ -1,3 +1,17 @@
+@import '../../../../assets/styles/mediaQueries';
+
+:host {
+  display: block;
+  position: relative;
+  .quality_svg {
+    position: absolute;
+    left: 0;
+    bottom: 100%;
+    width: 100%;
+    //transform: translateY(5%);
+  }
+}
+
 .description {
   padding-top: 100px;
   display: flex;
@@ -5,12 +19,20 @@
   article, figure {
     width: 50%;
   }
+  @media #{$phone} {
+    flex-wrap: wrap;
+    article, figure {
+      width: 100%;
+    }
+  }
 
   figure {
     max-width: 400px;
     margin: 0 auto;
     img {
       width: 100%;
+      padding: 0 20px;
+      box-sizing: border-box;
     }
     figcaption {
       display: none;
@@ -55,6 +77,12 @@ table {
       font-weight: 700;
       width: 40%;
       padding-left: 20px;
+      @media #{$phone} {
+        width: 100%;
+        padding-left: 20px;
+        padding-right: 20px;
+        box-sizing: border-box;
+      }
     }
 
     td:last-of-type, th:last-of-type {
@@ -62,6 +90,26 @@ table {
       width: 60%;
       padding-left: 60px;
       box-sizing: border-box;
+      @media #{$phone} {
+        width: 100%;
+        padding-top: 0;
+        padding-left: 20px;
+        padding-right: 20px;
+      }
+    }
+
+    @media #{$phone} {
+      td, th {
+        display: block;
+        width: 100%;
+        padding: 50px 0;
+        app-audit-tick {
+          display: none;
+        }
+      }
+      th:first-of-type{
+        display: none;
+      }
     }
   }
 }
@@ -75,14 +123,16 @@ table {
   }
 }
 
-
-.usability{
+.usability {
   background: #FFDE07;
   position: relative;
 
-  svg{
+  svg {
     position: absolute;
     right: 0;
     bottom: 100%;
   }
 }
+
+
+
