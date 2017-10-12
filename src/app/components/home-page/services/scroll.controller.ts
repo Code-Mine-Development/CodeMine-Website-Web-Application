@@ -39,7 +39,7 @@ export class ScrollController {
   }
 
   private getFrame(scrollTop: number) {
-    const scrollFactor = scrollTop / AnimationConfig.duration;
+    const scrollFactor = scrollTop / this.getDistance();
     return Math.round(scrollFactor * AnimationConfig.animationFrames);
   }
 
@@ -72,6 +72,18 @@ export class ScrollController {
 
   getNavigateStream() {
     return this.navigateStream;
+  }
+
+  getDistance(){
+    if(this.checkMobile()){
+      return AnimationConfig.duration / 2;
+    } else {
+      return AnimationConfig.duration;
+    }
+  }
+
+  private checkMobile(){
+    return window.innerWidth <= 768
   }
 
 }

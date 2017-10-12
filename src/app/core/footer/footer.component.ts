@@ -2,6 +2,7 @@ import {Component} from '@angular/core';
 import {ContactService} from '../../aplication/contact/services/contact.service';
 import {Company} from '../../shared/interface/company.interface';
 import {CopyToClipboardService} from '../../shared/services/copy-to-clipboard.service';
+import {EventManagerService} from '../../shared/services/event-menager.service';
 
 @Component({
   selector: 'app-footer',
@@ -14,7 +15,7 @@ export class FooterComponent {
   copied;
   mobile = false;
 
-  constructor(contact: ContactService, private copyService: CopyToClipboardService) {
+  constructor(contact: ContactService, private copyService: CopyToClipboardService, private eventManager: EventManagerService) {
     contact.getCompany().subscribe((company) => {
       this.company = company;
     });
@@ -32,6 +33,10 @@ export class FooterComponent {
     if (this.copyService.copy(text)) {
       this.copied = text;
     }
+  }
+
+  scrollAnimation(){
+    this.eventManager.emit('scrollToSiteHead',true);
   }
 
 }

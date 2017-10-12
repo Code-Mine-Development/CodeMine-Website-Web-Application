@@ -3,6 +3,7 @@ import {DOCUMENT} from '@angular/platform-browser';
 import {Router, NavigationEnd} from '@angular/router';
 import {HomeInformationServices} from '../../components/home-page/services/home-information.service';
 import {LocalizeRouterService} from 'localize-router';
+import {EventManagerService} from '../../shared/services/event-menager.service';
 
 @Component({
   selector: 'app-header',
@@ -24,7 +25,8 @@ export class HeaderComponent implements OnInit {
               private document: Document,
               private router: Router,
               private scrollInformationService: HomeInformationServices,
-              private localize: LocalizeRouterService) {
+              private localize: LocalizeRouterService,
+              private eventManager: EventManagerService) {
   }
 
   @HostListener('window:scroll', [])
@@ -83,5 +85,9 @@ export class HeaderComponent implements OnInit {
 
   private hideBackground() {
     this.hiddenBG = this.shouldHide ? this.scrollTop < 100 : false;
+  }
+
+  scrollAnimation(){
+    this.eventManager.emit('scrollToSiteHead', true);
   }
 }

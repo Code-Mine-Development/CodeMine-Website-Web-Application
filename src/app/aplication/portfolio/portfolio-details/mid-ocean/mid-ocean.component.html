@@ -3,31 +3,32 @@
                                 [description]="'PORTFOLIO.MidOceanBrands.description.part1'"
                                 [logo]="detail.thumbnail"></app-portfolio-details-header>
   <section class="video">
-    <video autoplay loop [src]="'../assets/videos/portfolio-details/midocean_1.mp4'"
+    <video *ngIf="!mobile" loop [src]="'../assets/videos/portfolio-details/midocean_1.mp4'"
            [attr.poster]="'../assets/images/portfolio-images/midocean_1.mov.jpg'"></video>
+    <img *ngIf="mobile" src="assets/images/portfolio-images/midocean_1.mov.jpg" alt="brighter presentation">
   </section>
 
 
   <section class="interface">
     <article>
-      <h3>{{'PORTFOLIO.sectionTitles.interface' | translate}}</h3>
-      <p>{{'PORTFOLIO.MidOceanBrands.description.part2' | translate}}</p>
+      <h3>{{'PORTFOLIO.sectionTitles.interface' | translate | prettifyText}}</h3>
+      <p>{{'PORTFOLIO.MidOceanBrands.description.part2' | translate | prettifyText}}</p>
     </article>
     <figure class="before">
-      <figcaption>{{'PORTFOLIO.sectionTitles.before' | translate}}</figcaption>
+      <figcaption>{{'PORTFOLIO.sectionTitles.before' | translate | prettifyText}}</figcaption>
       <img src="../assets/images/portfolio-images/midocean_3.jpg" alt="before photo">
     </figure>
     <figure class="after">
-      <figcaption>{{'PORTFOLIO.sectionTitles.after' | translate}}</figcaption>
+      <figcaption>{{'PORTFOLIO.sectionTitles.after' | translate | prettifyText}}</figcaption>
       <img src="../assets/images/portfolio-images/midocean_2.png" alt="after photo">
     </figure>
   </section>
 
   <article class="process">
-    <h3>{{'PORTFOLIO.sectionTitles.process' | translate}}</h3>
+    <h3>{{'PORTFOLIO.sectionTitles.process' | translate | prettifyText}}</h3>
     <p>
-      <span>{{'PORTFOLIO.MidOceanBrands.description.part3' | translate}}</span>
-      <span>{{'PORTFOLIO.MidOceanBrands.description.part4' | translate}}</span>
+      <span>{{'PORTFOLIO.MidOceanBrands.description.part3' | translate | prettifyText}}</span>
+      <span>{{'PORTFOLIO.MidOceanBrands.description.part4' | translate | prettifyText}}</span>
     </p>
   </article>
 </section>
@@ -36,15 +37,16 @@
   <figure>
     <figcaption>Process presentation</figcaption>
     <img src="assets/images/portfolio-images/midocean_4.png" alt="process images">
-    <video autoplay loop src="assets/videos/portfolio-details/midocean_3.mp4"
+    <video *ngIf="!mobile" loop src="assets/videos/portfolio-details/midocean_3.mp4"
            poster="assets/images/portfolio-images/midocean_3.mov.jpg"></video>
+    <img *ngIf="mobile" class="video_alt" src="assets/images/portfolio-images/midocean_3.mov.jpg" alt="midocean presentation">
   </figure>
 </section>
 
 <section class="container center">
   <article>
-    <h3>{{'PORTFOLIO.sectionTitles.application' | translate}}</h3>
-    <p>{{'PORTFOLIO.MidOceanBrands.description.part6' | translate}}</p>
+    <h3>{{'PORTFOLIO.sectionTitles.application' | translate | prettifyText}}</h3>
+    <p>{{'PORTFOLIO.MidOceanBrands.description.part6' | translate | prettifyText}}</p>
   </article>
 </section>
 
@@ -59,8 +61,8 @@
 
 <section class="container center">
   <article>
-    <h3>{{'PORTFOLIO.sectionTitles.technologies' | translate}}</h3>
-    <p>{{'PORTFOLIO.MidOceanBrands.description.part5' | translate}}</p>
+    <h3>{{'PORTFOLIO.sectionTitles.technologies' | translate | prettifyText}}</h3>
+    <p>{{'PORTFOLIO.MidOceanBrands.description.part5' | translate | prettifyText}}</p>
   </article>
 </section>
 

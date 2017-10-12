@@ -25,14 +25,23 @@
 
 .navigation {
   width: 100%;
+  transition: background .5s;
+  height: 60px;
+  z-index: 3005;
+  position: fixed;
+  top: 0;
+  left: 0;
+  &.whiteBG {
+    background: #ffffff;
+  }
   a > * {
-    position: fixed;
-    z-index: 3004;
+    position: absolute;
+    z-index: 3006;
   }
   .home {
-    top: 40px;
+    top: 14px;
     left: 40px;
-    width: 37px;
+    width: 32px;
     polygon {
       transition: all .5s;
     }
@@ -47,17 +56,15 @@
         opacity: 1;
       }
     }
-    @media #{$phone}{
-      top: 20px;
+    @media #{$phone} {
       left: 20px;
     }
   }
   .exit {
-    top: 40px;
+    top: 14px;
     right: 40px;
-    height: 30px;
+    height: 32px;
     @media #{$phone}{
-      top: 20px;
       right: 20px;
     }
   }
@@ -114,7 +121,7 @@
         padding-top: 80px;
         justify-content: center;
         max-height: 100vh;
-        overflow: hidden;
+        transform: translateX(10%);
       }
       div {
         width: 100%;
@@ -122,15 +129,15 @@
         &:after {
           content: '';
           display: block;
-          width:100%;
-          padding-bottom: 58% ;
+          width: 100%;
+          padding-bottom: 58%;
         }
       }
       img, video {
         position: absolute;
         right: 0;
         bottom: 0;
-        width:100%;
+        width: 100%;
       }
       img.laptop {
         filter: drop-shadow(0 0 10px rgba(0, 0, 0, .5));
@@ -157,32 +164,31 @@
       justify-content: center;
       letter-spacing: normal;
       svg {
-        height: 160px;
+        width: 100px;
         fill: #fff;
         filter: drop-shadow(5px 5px 20px rgba(0, 0, 0, .3))
       }
       @media #{$phone}{
         h1 {
           font-size: 3.6rem;
-          margin-left: -15px;
+          margin: 0 0 0 10px;
         }
         svg {
-          height: 100px;
+          width: 80px;
         }
       }
       @media only screen and (max-width: 350px) {
+        justify-content: flex-start;
         h1 {
           font-size: 2.4rem;
-          margin-left: -5px;
         }
         svg {
-          height: 90px;
+          width: 100px
         }
       }
     }
     .next, .prev {
       height: 45px;
-
     }
     .next {
       margin-right: 40px;

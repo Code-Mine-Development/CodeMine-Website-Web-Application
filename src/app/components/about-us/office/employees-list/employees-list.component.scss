@@ -3,7 +3,7 @@
 :host {
   margin-top: -10%;
   width: 100%;
-  padding: 20px 0 40px;
+  padding: 20px 0 100px;
   background: #282828;
   display: block;
   position: relative;
@@ -29,10 +29,10 @@ svg {
 .join_us {
   overflow: hidden;
   position: relative;
-  border: 1px solid #ffffff;
+  border: 4px solid #ffffff;
   width: 100%;
   display: flex;
-  margin: 15px 0 0;
+  margin: 15px 0 0 -4px;
   box-sizing: border-box;
   padding: 10px 10px;
   align-items: center;
@@ -41,7 +41,7 @@ svg {
   transition-duration: .25s;
   @media #{$br1200}{
     width: 50%;
-    margin: 15px -2px 0;
+    margin: 6px -5px -11px;
   }
 
   & > * {
@@ -94,9 +94,9 @@ svg {
       font-weight: 500;
     }
     h3 {
-      margin: 10px 0;
+      margin: 0 0 4px;
       font-size: 18px;
-      line-height: 0px;
+      line-height: normal;
       font-weight: 700;
     }
   }
@@ -116,7 +116,7 @@ svg {
   &:hover {
     transition-delay: .30s;
     background: #FFDE07;
-    border: 1px solid #FFDE07;
+    border: 4px solid #FFDE07;
 
     .join_us-text{
       color: #282828;

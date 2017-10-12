@@ -4,19 +4,19 @@
       <div (click)="onClick($event)">
         <img [src]="project.mainImage.small" [attr.alt]="project.title+'image'">
         <button (click)="onClick($event)" class="btn btn-yellow btn-large btn-hover-yellow-border">
-          {{'PORTFOLIO.showMore' | translate}}
+          {{'PORTFOLIO.showMore' | translate | prettifyText}}
         </button>
       </div>
     </div>
     <div class="project-details">
       <div class="project-desc">
         <div class="desc-info">
-          <h1 (click)="onClick($event)">{{project.title | translate}}</h1>
-          <p>{{project.description | translate}}</p>
+          <h1 (click)="onClick($event)">{{project.title | translate | prettifyText}}</h1>
+          <p>{{project.description | translate | prettifyText}}</p>
         </div>
       </div>
       <div class="project-tech">
-        <h4>{{'PORTFOLIO.sectionTitles.technologies' | translate}}</h4>
+        <h4>{{'PORTFOLIO.sectionTitles.technologies' | translate | prettifyText}}</h4>
         <div class="technologies">
           <app-architecture [technologies]="technologies" [tools]="tools" [currentTechnologies]="project.technologies"
                             [currentTools]="project.tools" (navigate)="onNavigate($event)"

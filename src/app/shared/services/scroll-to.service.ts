@@ -126,10 +126,12 @@ export class ScrollToService {
     }
 
     if (this.opponent) {
-      return this.scrollingOpponent.scrollTop = position;
+      this.scrollingOpponent.scrollTop = position;
+    } else {
+      this.scrollingOpponent.documentElement.scrollTop = position;
+      this.scrollingOpponent.body.scrollTop = position;
     }
-    this.scrollingOpponent.body.scrollTop = position;
-    this.scrollingOpponent.documentElement.scrollTop = position;
+
   }
 
 

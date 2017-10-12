@@ -5,7 +5,6 @@ import {HomeInformationServices} from '../services/home-information.service';
 import {ScrollToService} from '../../../shared/services/scroll-to.service';
 import {ScrollController} from '../services/scroll.controller';
 import {AnimationConfig} from '../animation.config';
-
 @Component({
   selector: 'app-home-information',
   templateUrl: 'home-information.component.html',
@@ -63,5 +62,7 @@ export class HomeInformationComponent implements OnInit, OnDestroy {
       }
     })
   }
+
+
 
 }

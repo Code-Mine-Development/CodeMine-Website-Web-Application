@@ -1,6 +1,6 @@
 <section class="container">
   <app-employee *ngFor="let employee of employees" [person]="employee" [eventManager]="eventManager"></app-employee>
-  <section class="join_us">
+  <section class="join_us" (click)="onNavigate()">
     <div class="join_us-image">
       <figure>
         <figcaption>Join us icon</figcaption>
@@ -9,9 +9,9 @@
           alt="place for your photo">
       </figure>
     </div>
-    <section (click)="onNavigate()" class="join_us-text">
-      <h3>{{'ABOUT_US.place4U' | translate }}</h3>
-      <p>{{'ABOUT_US.joinUs' | translate }}</p>
+    <section class="join_us-text">
+      <h3>{{'ABOUT_US.place4U' | translate | prettifyText }}</h3>
+      <p>{{'ABOUT_US.joinUs' | translate | prettifyText }}</p>
     </section>
     <svg viewBox="0,0 10,10">
       <polygon fill="#FFDE07" points="10,0 0,10 10,10"></polygon>

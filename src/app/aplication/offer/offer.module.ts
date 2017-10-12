@@ -3,20 +3,17 @@ import {CommonModule} from '@angular/common';
 import {HttpModule} from '@angular/http';
 import {TranslateModule} from '@ngx-translate/core';
 import {LocalizeRouterModule} from 'localize-router';
-import {UiModule} from '../../shared/ui-elements/ui.module'
-
+import {UiModule} from '../../shared/ui-elements/ui.module';
+import {SharedModule} from '../../shared/shared.module';
 import {OfferComponent} from './offer.component';
 import {OfferRoutingModule} from './offer.routing';
 import {OfferService} from './services/offer.service';
 import {OfferResolver} from './services/offer.resolver';
-
 import {WeCreateComponent} from './weCreate/weCreate.component';
 import {TechnologiesComponent} from './technologies/technologies.component';
 import {ToolsComponent} from './tools/tools.component';
 import {TechnologiesResolver} from './services/technologies.resolver';
 import {ToolsResolver} from './services/tools.resolver';
-
-
 
 
 @NgModule({
@@ -26,7 +23,8 @@ import {ToolsResolver} from './services/tools.resolver';
     HttpModule,
     TranslateModule,
     LocalizeRouterModule,
-    UiModule
+    UiModule,
+    SharedModule
   ],
   declarations: [
     OfferComponent,

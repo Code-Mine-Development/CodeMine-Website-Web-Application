@@ -5,16 +5,18 @@
   <div class="third"></div>
 </section>
 
-<section class="navigation" [class.active]="active" >
+<section class="navigation" [class.active]="active">
   <ul>
-    <li *ngFor="let nav of navigation" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">
-      <span [routerLink]="'/'+ nav.href | localize" (click)="toggleHamburger()">{{ nav.title | translate }}</span>
+    <li *ngFor="let nav of navigation" routerLinkActive="active"
+        [routerLinkActiveOptions]="{exact: (nav.mobile ? true: false)}">
+      <span [routerLink]="'/'+ nav.href | localize" (click)="toggleHamburger()">{{ nav.title | translate | prettifyText }}</span>
     </li>
   </ul>
 </section>
 
 <section class="languages" [class.active]="active">
-  <p [class.active]="translate.currentLang === lang" *ngFor="let lang of translate.getLangs()" (click)="onLanguageChange(lang)"> {{ 'NAVIGATION.'+lang | translate}}</p>
+  <p [class.active]="translate.currentLang === lang" *ngFor="let lang of translate.getLangs()"
+     (click)="onLanguageChange(lang)"> {{ 'NAVIGATION.'+lang | translate | prettifyText}}</p>
 </section>
 
 <div class="background" [class.active]="active"></div>

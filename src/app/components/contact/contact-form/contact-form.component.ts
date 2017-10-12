@@ -1,5 +1,5 @@
-import {Component, OnInit} from '@angular/core';
-import {NgForm} from '@angular/forms';
+import {Component, OnInit, ViewChild} from '@angular/core';
+import {NgForm, NgModel} from '@angular/forms';
 import {TranslateService} from '@ngx-translate/core';
 import {ContactFormService} from '../service/contact-form.service';
 
@@ -11,6 +11,10 @@ import {ContactFormService} from '../service/contact-form.service';
 })
 export class ContactFormComponent implements OnInit {
 
+  @ViewChild('textArea') textArea;
+  @ViewChild('emailInput') emailInput;
+  @ViewChild('textArea', {read: NgModel}) textAreaModel;
+
   name: string;
   email: string;
   message: string;
@@ -21,6 +25,8 @@ export class ContactFormComponent implements OnInit {
 
   ngOnInit() {
     this.applyTextToTextArea();
+    this.adjustTextArea();
+    this.setValidator();
   }
 
   applyTextToTextArea() {
@@ -31,10 +37,20 @@ export class ContactFormComponent implements OnInit {
     })
   }
 
-  adjustTextArea(textArea) {
-    const scrollHeight = textArea.scrollHeight,
-      clientHeight = textArea.clientHeight;
-    textArea.style.height = scrollHeight > clientHeight ? `${scrollHeight}px` : '';
+
+  adjustTextArea() {
+    this.textAreaModel.valueChanges.subscribe(() => {
+      const scrollHeight = this.textArea.nativeElement.scrollHeight,
+        clientHeight = this.textArea.nativeElement.clientHeight;
+      this.textArea.nativeElement.style.height = scrollHeight >= clientHeight ? `${scrollHeight}px` : '';
+    });
+  }
+
+  setValidator() {
+    this.emailInput.control.setValidators((control) => {
+      const email = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/.test(control.value);
+      return !email ? {'pattern': control.value} : null
+    });
   }
 
   onSubmit(event, form: NgForm) {

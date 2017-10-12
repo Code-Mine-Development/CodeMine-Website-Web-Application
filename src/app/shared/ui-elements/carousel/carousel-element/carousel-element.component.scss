@@ -40,8 +40,9 @@
       transform: translateX(-50%);
       @media #{$tablet-media}{
         height: 400px;
+        width: auto;
       }
-      @media only screen and (min-width: 1920px){
+      @media only screen and (min-width: 1920px) {
         width: 100%;
       }
     }
@@ -55,7 +56,7 @@
     height: 100%;
     position: absolute;
     left: 20%;
-    top:0;
+    top: 0;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -64,10 +65,11 @@
     cursor: pointer;
     z-index: 30;
     pointer-events: none;
-    h2{
+    text-shadow: 0 0 30px #282828;
+    h2 {
       margin: 0 0 25px;
     }
-    p{
+    p {
       margin: 0;
       font-size: 1.6rem;
     }

@@ -4,18 +4,18 @@
       <a [attr.href]="mobile ? 'mailto:' + company?.email : null">
         <p (click)="!mobile ? copy(company?.email) : null">
           {{company?.email}}
-          <span class="hover" [class.copied]="copied === company?.email">{{(copied === company?.email ? 'CONTACT.copied' : 'CONTACT.clickToCopy') | translate}}</span>
+          <span class="hover" [class.copied]="copied === company?.email">{{(copied === company?.email ? 'CONTACT.copied' : 'CONTACT.clickToCopy') | translate | prettifyText}}</span>
         </p>
       </a>
       <a href="tel:{{company?.phone}}">
         <p (click)="copy(company?.phone)">
           {{company?.phone}}
-          <span class="hover" [class.copied]="copied === company?.phone">{{(copied === company?.phone ? 'CONTACT.copied' : 'CONTACT.clickToCopy') | translate}}</span>
+          <span class="hover" [class.copied]="copied === company?.phone">{{(copied === company?.phone ? 'CONTACT.copied' : 'CONTACT.clickToCopy') | translate | prettifyText}}</span>
         </p>
       </a>
     </section>
-    <div class="footer_slideTop">
-      <span aria-hidden="true" class="fa fa-chevron-up fa-3x" [appScrollTo]="'SiteHead'"></span>
+    <div class="footer_slideTop"  [appScrollTo]="'SiteHead'" (click)="scrollAnimation()">
+      <span aria-hidden="true" class="fa fa-chevron-up fa-3x"></span>
     </div>
   </section>
   <section class="footer_content">

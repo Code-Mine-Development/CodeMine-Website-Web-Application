@@ -25,11 +25,11 @@ import {CarouselElementComponent} from './carousel/carousel-element/carousel-ele
         CommonModule,
         TranslateModule,
         LocalizeRouterModule,
-        RouterModule
+        RouterModule,
+        SharedModule
     ],
     exports: [
         ButtonComponent,
-        SharedModule,
         CloseComponent,
         SquareImageComponent,
         OfferThumbnailsComponent,

@@ -45,7 +45,7 @@ figure {
   figcaption {
     display: none;
   }
-  video {
+  video, img {
     width: 100%;
     pointer-events: none;
   }
@@ -112,7 +112,7 @@ svg {
   }
   .hover {
     position: absolute;
-    font-size: 1.6rem;
+    font-size: 1.2rem;
     font-weight: bold;
     bottom: 50%;
     left: 0;
@@ -126,6 +126,9 @@ svg {
       animation: fadeCopied;
       animation-fill-mode: forwards;
       animation-duration: .5s;
+    }
+    @media #{$phone}{
+      display: none;
     }
   }
 

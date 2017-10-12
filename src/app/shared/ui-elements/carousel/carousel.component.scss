@@ -14,10 +14,13 @@
 
   .next, .prev {
     position: absolute;
-    top: 50%;
+    top: 0;
+    height: 100%;
     margin: 0;
-    transform: translateY(-50%);
+    display: flex;
+    align-items: center;
     cursor: pointer;
+    -webkit-tap-highlight-color: transparent;
     figcaption {
       display: none;
     }
@@ -30,22 +33,20 @@
   }
 
   .prev {
-    left: 40px;
+    left: 0;
+    padding-left: 40px;
+    @media #{$phone} {
+      padding-left: 20px;
+    }
   }
 
   .next {
-    right: 40px;
-  }
-
-  @media #{$phone}{
-    .prev {
-      left: 20px;
-    }
-    .next {
-      right: 20px;
+    right: 0;
+    padding-right: 40px;
+    @media #{$phone} {
+      padding-right: 20px;
     }
   }
-
   .dots {
     position: absolute;
     margin: 0;
@@ -57,6 +58,9 @@
     width: 100%;
     padding: 40px 0;
     z-index: 42;
+    @media #{$phone}{
+      padding: 20px 0;
+    }
     & > li {
       width: 10px;
       height: 10px;
@@ -68,7 +72,7 @@
       transition: .5s;
       position: relative;
       @media #{$phone}{
-        margin-left: 15px;
+        margin-left: 20px;
       }
       &:first-of-type {
         margin-left: 0;
@@ -80,7 +84,7 @@
           img {
             opacity: 1;
           }
-          @media #{$phone}{
+          @media #{$tablet-media}{
             display: none;
           }
         }
@@ -121,4 +125,11 @@ h3 {
   width: 100%;
   text-align: center;
   margin: 0;
+  text-shadow: 0 0 30px #282828;
+  @media #{$phone} {
+    top: 20px;
+  }
+  &.center {
+    top: 24%;
+  }
 }

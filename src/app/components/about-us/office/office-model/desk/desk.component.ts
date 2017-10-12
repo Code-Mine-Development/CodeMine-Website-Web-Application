@@ -1,6 +1,6 @@
 import {Component, Input, ElementRef, HostListener, HostBinding, Renderer2, ViewChild, OnInit} from '@angular/core';
 import {Employees} from '../../interfaces/employees.interface';
-import {EventManager} from '../../event_manager';
+import {EventManager} from '../../../../../shared/services/event_manager';
 @Component({
   selector: 'app-desk',
   template: `<section class="desk">

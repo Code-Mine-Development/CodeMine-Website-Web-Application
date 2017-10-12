@@ -1,6 +1,6 @@
 import {Component, OnInit, Input, Output, EventEmitter} from '@angular/core';
 import {Employees} from './interfaces/employees.interface';
-import {EventManager} from './event_manager';
+import {EventManager} from '../../../shared/services/event_manager';
 
 @Component({
   selector: 'app-office',

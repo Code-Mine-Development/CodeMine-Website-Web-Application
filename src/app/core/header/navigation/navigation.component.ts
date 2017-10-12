@@ -73,6 +73,6 @@ export class NavigationComponent implements OnInit {
 
 
   checkSize() {
-    this.mobile = window.innerWidth < 760;
+    this.mobile = window.innerWidth < 768;
   }
 }

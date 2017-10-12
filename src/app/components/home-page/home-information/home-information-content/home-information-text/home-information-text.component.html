@@ -1,4 +1,4 @@
 <article #textsElements *ngFor="let texts of textsList">
-  <h3>{{ texts.title | translate}}</h3>
-  <p>{{ texts.text | translate}}</p>
+  <h3>{{ texts.title | translate | prettifyText}}</h3>
+  <p>{{ texts.text | translate | prettifyText}}</p>
 </article>

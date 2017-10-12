@@ -1,5 +1,5 @@
 <div class="container">
-  <div class="header"><h2>{{WeCreate.title | translate}}</h2></div>
+  <div class="header"><h2>{{WeCreate.title | translate | prettifyText}}</h2></div>
 
 
   <div class="row">
@@ -10,8 +10,8 @@
       </figure>
 
       <div class="col-text">
-        <h3>{{item.name | translate}}</h3>
-        <p>{{item.description | translate }}</p>
+        <h3>{{item.name | translate | prettifyText}}</h3>
+        <p>{{item.description | translate | prettifyText }}</p>
       </div>
     </div>
   </div>

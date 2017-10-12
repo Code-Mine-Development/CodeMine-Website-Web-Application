@@ -118,7 +118,7 @@
         .normal {
           opacity: 0;
         }
-        .funny,#funny-cover {
+        .funny, #funny-cover {
           opacity: 1;
         }
       }
@@ -178,4 +178,8 @@
       min-height: 100vh;
     }
   }
+}
+
+.hidden {
+  visibility: hidden;
 }

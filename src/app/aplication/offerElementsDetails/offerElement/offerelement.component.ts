@@ -12,16 +12,24 @@ import {PreviousPositionService} from '../../../shared/services/previous-positio
 export class OfferElementComponent implements OnInit {
 
   @ViewChild('svg') svg;
+  @ViewChild('scrollableBox') scrollableBox;
   viewBox = '0 0 128 128';
 
   offerElement: OfferElement;
+  isScrolled = false;
+
 
   constructor(private route: ActivatedRoute,
               private previousPositionService: PreviousPositionService,
               private localize: LocalizeRouterService) {
   }
 
+  onScroll() {
+    this.checkScrollTop();
+  }
+
   ngOnInit() {
+    this.checkScrollTop()
     this.route.data.subscribe(
       (data) => {
         this.offerElement = data['offerelement'];
@@ -37,4 +45,12 @@ export class OfferElementComponent implements OnInit {
   }
 
 
+  checkScrollTop() {
+    this.isScrolled = this.getScrollTop() > 25;
+  }
+
+
+  private getScrollTop() {
+    return this.scrollableBox.nativeElement.scrollTop;
+  }
 }

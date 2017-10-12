@@ -31,7 +31,10 @@
       &:last-child {
         padding-right: 0;
       }
-      &.active > span{
+      &.disabled {
+        position: absolute;
+      }
+      &.active > span {
         &:after {
           width: 100%;
         }
@@ -47,7 +50,7 @@
         letter-spacing: 1px;
         &:after {
           content: '';
-          height: 3px;
+          height: 4px;
           width: 0;
           position: absolute;
           background: black;
@@ -77,20 +80,20 @@
       margin-top: auto;
       font-size: 13px;
       font-weight: 700;
-      border-right: solid 3px #282828;
+      border-right: solid 4px #282828;
       padding: 2px 14px;
     }
 
     &-content {
       display: none;
       position: absolute;
-      border-right: solid 3px #282828;
+      border-right: solid 4px #282828;
       z-index: 1;
       padding: 0 10px;
       background-color: #ffffff;
       right: 0;
-      a:first-of-type{
-        span{
+      a:first-of-type {
+        span {
           padding: 16px 0 8px;
         }
       }

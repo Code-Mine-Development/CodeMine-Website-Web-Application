@@ -21,6 +21,8 @@
   outline: none;
   svg {
     margin-top: 5px;
+    width: 32px;
+    display: block;
   }
   @media #{$tablet-media} {
     bottom: 2px;
