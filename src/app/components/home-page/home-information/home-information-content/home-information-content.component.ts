@@ -2,7 +2,7 @@ import {Component, OnInit, HostListener, ViewChild, ElementRef, HostBinding, Out
 import {AnimationConfig} from '../../animation.config';
 import {ScrollController} from '../../services/scroll.controller';
 import {ScrollToService} from '../../../../shared/services/scroll-to.service';
-import {EventManagerService} from '../../../../shared/services/event-menager.service';
+import {EventManagerService} from '../../../../shared/services/event-manager.service';
 
 @Component({
   selector: 'app-home-information-content',

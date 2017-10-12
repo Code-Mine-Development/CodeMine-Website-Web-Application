@@ -141,6 +141,11 @@ svg {
       text-align: center;
       display: block;
     }
+    @media #{$phone}{
+      & > span {
+        display: none;
+      }
+    }
   }
 }
 

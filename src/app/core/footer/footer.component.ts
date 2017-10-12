@@ -2,7 +2,7 @@ import {Component} from '@angular/core';
 import {ContactService} from '../../aplication/contact/services/contact.service';
 import {Company} from '../../shared/interface/company.interface';
 import {CopyToClipboardService} from '../../shared/services/copy-to-clipboard.service';
-import {EventManagerService} from '../../shared/services/event-menager.service';
+import {EventManagerService} from '../../shared/services/event-manager.service';
 
 @Component({
   selector: 'app-footer',

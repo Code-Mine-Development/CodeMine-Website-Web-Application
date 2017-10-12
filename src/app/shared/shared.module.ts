@@ -7,7 +7,7 @@ import {ToolTipDirective} from './directives/tool-tip.directive';
 import {ToolTipComponent} from './ui-elements/tool-tip/tool-tip.component';
 import {CopyToClipboardService} from './services/copy-to-clipboard.service';
 import {PrettifyTextPipe} from './pipe/prettify-text.pipe';
-import {EventManagerService} from './services/event-menager.service';
+import {EventManagerService} from './services/event-manager.service';
 @NgModule({
   imports: [
     TranslateModule

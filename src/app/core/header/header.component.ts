@@ -3,7 +3,7 @@ import {DOCUMENT} from '@angular/platform-browser';
 import {Router, NavigationEnd} from '@angular/router';
 import {HomeInformationServices} from '../../components/home-page/services/home-information.service';
 import {LocalizeRouterService} from 'localize-router';
-import {EventManagerService} from '../../shared/services/event-menager.service';
+import {EventManagerService} from '../../shared/services/event-manager.service';
 
 @Component({
   selector: 'app-header',
