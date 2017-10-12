@@ -19,7 +19,7 @@
   article, figure {
     width: 50%;
   }
-  @media #{$phone} {
+  @media #{$tablet-media} {
     flex-wrap: wrap;
     article, figure {
       width: 100%;

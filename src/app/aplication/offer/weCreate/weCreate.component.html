@@ -8,11 +8,8 @@
         <figcaption>Offer image</figcaption>
         <img [src]="item.image" alt="offer Image">
       </figure>
-
-      <div class="col-text">
-        <h3>{{item.name | translate | prettifyText}}</h3>
-        <p>{{item.description | translate | prettifyText }}</p>
-      </div>
+      <h3>{{item.name | translate | prettifyText}}</h3>
+      <p>{{item.description | translate | prettifyText }}</p>
     </div>
   </div>
 </div>
