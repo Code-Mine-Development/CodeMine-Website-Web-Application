@@ -1,4 +1,4 @@
-import {AfterViewInit, Component, ViewChildren} from '@angular/core';
+import {AfterViewInit, Component, HostListener, ViewChildren} from '@angular/core';
 import {AnimationConfig} from '../../../animation.config';
 import {ScrollController} from '../../../services/scroll.controller';
 
@@ -12,6 +12,10 @@ export class HomeInformationTextComponent implements AfterViewInit {
   @ViewChildren('textsElements') texts;
 
   constructor(private scrollController: ScrollController) {
+  }
+
+  @HostListener('window:resize', [])
+  onResize() {
   }
 
   ngAfterViewInit() {
@@ -54,6 +58,7 @@ export class HomeInformationTextComponent implements AfterViewInit {
     if(this.checkMobile()){
       element.nativeElement.style.opacity = 0;
       element.nativeElement.classList.add('hideBottom');
+      element.nativeElement.style.top =  '0px';
     } else {
       element.nativeElement.style.top = window.innerHeight + 'px';
       element.nativeElement.style.opacity = 0;
@@ -67,6 +72,7 @@ export class HomeInformationTextComponent implements AfterViewInit {
     if(this.checkMobile()){
       element.nativeElement.style.opacity = 0;
       element.nativeElement.classList.add('hideTop');
+      element.nativeElement.style.top =  '0px';
     } else {
       element.nativeElement.style.top = (-element.nativeElement.offsetHeight) + 'px';
       element.nativeElement.style.opacity = 0;

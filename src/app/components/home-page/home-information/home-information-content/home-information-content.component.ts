@@ -28,8 +28,6 @@ export class HomeInformationContentComponent implements OnInit {
   shaftPosition = 0;
   animationBg = 'transparent';
 
-  padding = 80;
-
   constructor(private scrollController: ScrollController, private scrollService: ScrollToService, private eventManager: EventManagerService) {
   }
 
@@ -40,12 +38,12 @@ export class HomeInformationContentComponent implements OnInit {
 
   ngOnInit() {
     this.duration = this.scrollController.getDistance() - 320;
-    this.calculateBoxSize();
     this.calculateShaftPosition();
     this.changeBackground();
     this.navigateToSection();
     this.eventManager.on('scrollToSiteHead').subscribe(() => {
-      this.scrollableBox.nativeElement.scrollTop = 0;
+      this.scrollService.scroll('SiteHead', 'top', this.scrollableBox.nativeElement);
+      // this.scrollableBox.nativeElement.scrollTop = 0;
     })
   }
 
@@ -53,15 +51,11 @@ export class HomeInformationContentComponent implements OnInit {
     const distanceToAnimation = (this.scrollableBox.nativeElement.offsetHeight * 2),
       scrollTop = this.scrollableBox.nativeElement.scrollTop;
     this.calculateBoxFollow(scrollTop, distanceToAnimation);
+    this.scrollController.setScrollEnd(this.checkEnd(scrollTop));
     this.scrollController.setScrollTop(scrollTop, distanceToAnimation - 320, (scrollTop - (distanceToAnimation / 2)));
-    this.calculateBoxSize();
     if (this.getScrollTop() > 0 && !this.checkEnd(scrollTop)) {
       this.scrollService.scroll('SiteHead');
     }
-  }
-
-  calculateBoxSize() {
-    this.boxContainer = this.scrollableBox.nativeElement.scrollTop > 80;
   }
 
   calculateBoxFollow(scrollTop, distance) {
@@ -85,7 +79,7 @@ export class HomeInformationContentComponent implements OnInit {
       this.hideMotto = true;
     }
     if (height * 1.7 < width) {
-      this.shaftPosition = window.innerWidth < 768 ?  -25 : 0;
+      this.shaftPosition = window.innerWidth < 768 ? -25 : 0;
       this.hideMotto = false;
     }
   }

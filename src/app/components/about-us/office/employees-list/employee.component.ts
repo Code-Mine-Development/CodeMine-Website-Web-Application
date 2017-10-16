@@ -6,25 +6,27 @@ import {Employees} from '../../../../aplication/about-us/interfaces/employees.in
   selector: 'app-employee',
   template: `
     <div class="worker">
-        <div class="image">
-          <figure>
-            <img [src]="'assets/images/people/'+person.image.normal" alt="Photo of someone from team">
-            <figcaption>{{person.name}} Photo</figcaption>
-            <svg class="cover" viewBox="0,0 1,1">
-              <polygon points="0,0 1,1 0,1" fill="#FFDE07"></polygon>
-            </svg>
-          </figure>
-        </div>
-        <section class="vcard">
-              <h3>{{person.name  | translate | prettifyText}}</h3>
-              <p>{{person.position  | translate | prettifyText}}</p>
-        </section>
-        <div class="right-arrow" (click)="changeVisibleDescription($event)">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32.07 20.5">
-            <polyline [class.visible]="!showDescription" fill="none" stroke="#FFFFFF" stroke-miterlimit = "10" stroke-width="6.32px" points="29.84 2.23 16.04 16.04 2.23 2.23"/>
-            <polyline [class.visible]="showDescription"fill="none" stroke="#FFDE07" stroke-miterlimit = "10" stroke-width="6.32px" points="29.84,16.04 16.04,3.5 2.23,16.04"/>
+      <div class="image">
+        <figure>
+          <img [src]="'assets/images/people/'+person.image.normal" alt="Photo of someone from team">
+          <figcaption>{{person.name}} Photo</figcaption>
+          <svg class="cover" viewBox="0,0 1,1">
+            <polygon points="0,0 1,1 0,1" fill="#FFDE07"></polygon>
           </svg>
-        </div>
+        </figure>
+      </div>
+      <section class="vcard">
+        <h3>{{person.name | translate | prettifyText}}</h3>
+        <p>{{person.position | translate | prettifyText}}</p>
+      </section>
+      <div class="right-arrow" (click)="changeVisibleDescription($event)">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32.07 20.5">
+          <polyline [class.visible]="!showDescription" fill="none" stroke="#FFFFFF" stroke-miterlimit="10"
+                    stroke-width="6.32px" points="29.84 2.23 16.04 16.04 2.23 2.23"/>
+          <polyline [class.visible]="showDescription" fill="none" stroke="#FFDE07" stroke-miterlimit="10"
+                    stroke-width="6.32px" points="29.84,16.04 16.04,3.5 2.23,16.04"/>
+        </svg>
+      </div>
     </div>
     <p class="description" [class.visible]="showDescription">{{person.description | translate | prettifyText}}</p>
   `,
@@ -38,24 +40,27 @@ export class EmployeeComponent implements OnInit {
 
   private clicked = false;
 
-  private showDescription = false;
+  showDescription = false;
 
 
-  @HostListener('mouseenter', []) onMouseEnter() {
+  @HostListener('mouseenter', [])
+  onMouseEnter() {
     this.eventManager.emit('hover', this.person)
   }
 
-  @HostListener('mouseleave', []) onMouseLeave() {
+  @HostListener('mouseleave', [])
+  onMouseLeave() {
     this.eventManager.emit('hover', null)
   }
 
-  @HostListener('click', []) onMouseClick() {
+  @HostListener('click', [])
+  onMouseClick() {
     this.eventManager.emit('click', this.person);
   }
 
-  changeVisibleDescription(event){
+  changeVisibleDescription(event) {
     event.stopPropagation();
-    if(!this.clicked){
+    if (!this.clicked) {
       this.eventManager.emit('click', this.person);
     } else {
       this.eventManager.emit('click', null)
@@ -76,7 +81,7 @@ export class EmployeeComponent implements OnInit {
     this.onHover(person);
     if (this.detectMobile() && this.clicked) {
       this.showDescription = true;
-    }  else {
+    } else {
       this.showDescription = false;
     }
   }

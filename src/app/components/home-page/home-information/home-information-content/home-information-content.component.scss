@@ -85,14 +85,7 @@
 
     &.home_section {
       overflow: hidden;
-      padding-bottom: 80px;
       background: #282828;
-      @media #{$phone} {
-        padding-bottom: 0;
-      }
-      @media #{$tablet-media-landscape} {
-        padding-bottom: 0;
-      }
       header {
         position: absolute;
         left: 0;
@@ -136,6 +129,7 @@
     &.howWeWork {
       color: #282828;
       position: relative;
+      top:-2px;
       box-sizing: border-box;
       background: #282828;
 
@@ -171,6 +165,7 @@
         position: absolute;
         right: 0;
         bottom: 100%;
+        transform: translateY(5%);
       }
 
       @media #{$phone-portrait}{
@@ -188,6 +183,7 @@
       }
     }
     &.process_scroll_box {
+      margin-top: -2px;
       width: 100%;
       background: transparent;
       overflow: hidden;

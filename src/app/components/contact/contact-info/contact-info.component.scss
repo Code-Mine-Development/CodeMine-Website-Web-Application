@@ -63,8 +63,9 @@ figure {
 svg {
   position: absolute;
   width: 100%;
+  min-width: 470px;
   top: 0;
-  left: 0;
+  right: 0;
 }
 
 .address, .info {
