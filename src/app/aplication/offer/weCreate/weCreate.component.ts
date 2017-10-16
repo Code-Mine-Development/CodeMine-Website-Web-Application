@@ -9,4 +9,8 @@ import {WeCreate} from '../../../shared/interface/we-create.interface';
 })
 export class WeCreateComponent {
   @Input() WeCreate: WeCreate;
+
+  detectMobile(){
+    return  window.innerWidth < 577;
+  }
 }

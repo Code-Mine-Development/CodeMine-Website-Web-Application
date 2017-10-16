@@ -3,18 +3,17 @@ import {NoopAnimationsModule} from '@angular/platform-browser/animations';
 import {ActivatedRoute, Data, Router} from '@angular/router';
 import {TranslateModule} from '@ngx-translate/core';
 import {LocalizeRouterService} from 'localize-router';
-
 import {OfferComponent} from './offer.component';
 import {WeCreateComponent} from './weCreate/weCreate.component';
 import {TechnologiesComponent} from './technologies/technologies.component';
 import {ToolsComponent} from './tools/tools.component';
-
 import {MockOffer} from '../../shared/mocks/offer.mock';
 import {OfferThumbnailsComponent} from '../../shared/ui-elements/offer-thumbnails/offer-thumbnails.component';
 import {PreviousPositionService} from '../../shared/services/previous-position.service';
 import {ScrollToService} from '../../shared/services/scroll-to.service';
 import {MockTools} from '../../shared/mocks/tools.mock';
 import {MockTechnologies} from '../../shared/mocks/technologies.mock';
+import {SharedModule} from '../../shared/shared.module';
 
 
 describe('OfferComponent', () => {
@@ -32,7 +31,8 @@ describe('OfferComponent', () => {
     TestBed.configureTestingModule({
       imports: [
         TranslateModule.forRoot(),
-        NoopAnimationsModule
+        NoopAnimationsModule,
+        SharedModule
       ],
       declarations: [OfferComponent, WeCreateComponent, TechnologiesComponent, ToolsComponent, OfferThumbnailsComponent],
       providers: [

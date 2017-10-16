@@ -1,16 +1,17 @@
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
-
-import { PortfolioDetailsHeaderComponent } from './header.component';
+import {async, ComponentFixture, TestBed} from '@angular/core/testing';
+import {PortfolioDetailsHeaderComponent} from './header.component';
 import {TranslateModule} from '@ngx-translate/core';
+import {SharedModule} from '../../../../shared/shared.module';
 
-describe('HeaderComponent', () => {
+describe('PortfolioHeaderComponent', () => {
   let component: PortfolioDetailsHeaderComponent;
   let fixture: ComponentFixture<PortfolioDetailsHeaderComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
       imports: [
-        TranslateModule.forRoot()
+        TranslateModule.forRoot(),
+        SharedModule
       ],
       declarations: [ PortfolioDetailsHeaderComponent ]
     })

@@ -74,6 +74,10 @@
       img {
         width: 100%;
       }
+      @media #{$phone} {
+        padding: 40px;
+        box-sizing: border-box;
+      }
     }
   }
 }

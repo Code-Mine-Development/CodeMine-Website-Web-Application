@@ -4,6 +4,7 @@ import {Component} from '@angular/core';
 import {MockCompany} from '../../../shared/mocks/company.mock';
 import {TranslateModule} from '@ngx-translate/core';
 import {CopyToClipboardService} from '../../../shared/services/copy-to-clipboard.service';
+import {SharedModule} from '../../../shared/shared.module';
 
 @Component({
   selector: 'app-fake-contact-info-wrapper',
@@ -23,7 +24,8 @@ describe('ContactInfoComponent', () => {
   beforeEach(async(() => {
     TestBed.configureTestingModule({
       imports: [
-        TranslateModule.forRoot()
+        TranslateModule.forRoot(),
+        SharedModule
       ],
       declarations: [ FakeWrapperContactInfoComponent, ContactInfoComponent],
       providers: [

@@ -1,29 +1,560 @@
 {
+  "404": {
+    "lost": "Are you lost?",
+    "siteNotExist": "The page you are looking for is not available",
+    "homeNavigate": "Go to the homepage"
+  },
   "AUDIT": {
-    "title": "hahahahaxd",
+    "title": "Audits",
+    "move": "go",
+    "tasks": "Works",
+    "benefits": "benefits",
+    "wantKnowDetails": "Want more details?",
+    "navigate": "Go to contact",
     "quality": {
-      "title": "Jakość kodu",
-      "description": "Otrzymując gotowe oprogramowanie, firmy zazwyczaj akceptują je bez jakiejkolwiek weryfikacji jakości kodu, bezpieczeństwa, elastyczności, zgodności z wymaganiami oraz wszystkich innych czynników. To nic dziwnego – klienci zwykle nie posiadają odpowiedniej wiedzy czy też czasu.Jako specjaliści, możemy zostać pośrednikiem między Twoją firmą, a Twoim wykonawcą, oceniając zastosowane przez niego rozwiązania. Naszym zadaniem będzie sprawdzenie zgodności kodu ze standardami, a także ocena jego wydajności i wielkość długu technologicznego, przeprowadzając audyty zastosowanej technologii, architektury informacji, kodu źródłowego, skalowalności oraz wydajności aplikacji.",
-      "task_1": "Badanie kodu źródłowego pod kątem zgodności z standardami",
-      "task_2": "Badanie kodu pod względem poprawności wykorzystania wzorców projektowych",
-      "task_3": "Badanie kodu pod względem poprawności wykorzystania wzorców projektowych",
-      "task_4": "Badanie elastyczności kodu w perspektywie ewolucji wymagań biznesowych",
-      "task_5": "Badania realnego nakładu zasobów",
-      "benefit_1": "Identyfikacja problemów dotyczących czytelności kodu wraz z listą rekomendacji w związku z ich poprawą, przyczyniającą się do zwiększenia wydajności zespołowej pracy nad projektem",
-      "benefit_2": "Identyfikacja problemów związanych z błędnym zastosowaniem wzorców projektowych, negatywnie rzutujących na jakość projektu oraz jego bezpieczny rozwój; przyczyniająca się do przyspieszenia tempa pracy nad projektem i znacznych oszczędności w przyszłości",
-      "benefit_3": "Ocena wykorzystania zewnętrznych bibliotek, w tym zabezpieczania projektu przed dokonującymi się w nich zmianami, wpływająca na wydajność oraz neutralizację problemów z bezpieczeństwem",
-      "benefit_4": "Ocena poziomu elastyczności narażonego na modyfikacje kodu, pozwalająca podjąć decyzję o jego zwiększeniu, przyczyniającego się z kolei do oszczędzenia czasu i pieniędzy",
-      "benefit_5": "Ocena wielkości nakładu zasobów ludzkich i czasowych, niezbędnych do wykonania projektu, pozwalająca określić realia otrzymanej od wykonawcy wyceny"
+      "title": "Code quality",
+      "description": {
+        "part_1": "When the ready-made software is delivered, companies typically acknowledge this without any verification of the code quality, or security and flexibility audit, or checking the product compliance with all important factors. This is no surprise; the customer usually does not have the sufficient knowledge or time.",
+        "part_2": "As specialists, we can become a facilitator between your business and the contractor, by evaluating the solutions that they provide.",
+        "part_3": "Our task will be to verify the fulfilment of the required standards, and assess the implementation of the software and the technological debt. This will include auditing the applied technology, information architecture, source code, scalability, and application performance."
+      },
+      "task_1": "Evaluation of the compatibility of the source code against standards",
+      "task_2": "Evaluation of the software code in terms of accuracy of implementing the design patterns",
+      "task_3": "Evaluation of the use of external libraries",
+      "task_4": "Evaluation of the code flexibility in view of business requirements evolution",
+      "task_5": "Evaluation of the real resources outlay",
+      "benefit_1": "Identification of code readability issues along with the listed recommendations for improvement, contributing to the enhanced teamwork that results in the better quality of the project",
+      "benefit_2": "Identification of problems caused by the improper implementation of the design patterns that negatively affect the quality of the project and its secure development. This will contribute to the improved pace of work on the project, and significant savings in the future.",
+      "benefit_3": "Assessment of the use of external libraries, including security features that may affect the software performance during code modifications, and counterbalancing the potential security issues",
+      "benefit_4": "Assessment of the flexibility of the code that is exposed to modifications, allowing the customer to make decisions on further development. This will subsequently contribute to the money and time savings.",
+      "benefit_5": "Assessment of the amount of time and human resources that are required to complete the project, which allows the customer to control the real cost of the contractor proposed valuation"
     },
-    "usability":{
-      "title": "Użyteczność",
-      "description":"Audyt usability ma na celu kompleksową analizę użyteczności i funkcjonalności strony internetowej, aplikacji czy systemu. Podczas tego procesu sprawdzamy przede wszystkim intuicyjność strony, łatwość poruszania po niej, przydatność dla internautów i ogólne wrażenia związane z korzystania z usługi. Bierzemy pod uwagę wszystkie czynniki mające wpływ na użyteczność takie jak: architektura informacji, nawigacja, strukturę funkcjonalności dodatkowo sprawdzamy wszystkie ekrany oraz procesy myślowe. Stosujemy najlepsze techniki w zależności od rodzaju powierzonego problemu takie jak: Indywidualne wywiady pogłębione, Card Sorting, Paper prototyping, Eyetracking,",
-      "task_1":"Badanie zgodności z heurystykami",
-      "task_2":"Badanie efektywności wdrożonych scenariuszy użycia",
-      "task_3":"Badanie zgodności ze standardami UI",
-      "benefit_1": "Ocena zgodności aplikacji/ strony z przyjętymi norami, opatrzona opisami heurystyk",
-      "benefit_2": "Ocena architektury informacji pod kątem intuicyjności wykonywanych czynności",
-      "benefit_3": "Ocena wydajności kanałów komunikacji (web/ mobile) oraz zgodności interfejsów z wytycznymi dla danej platformy"
+    "usability": {
+      "title": "Usability",
+      "description": {
+        "part_1": "The purpose of the usability audit is the comprehensive analysis of adoption and functionalities of a website, application, or system. During the assessment, we primarily check how intuitive and easy-to-navigate the interface is, and how efficient the user experience feels. In particular, we analyze the information architecture and the possible paths. We evaluate all the screens and rationale, also measuring the overall experience of using the service.",
+        "part_2": "During the audit, we apply the most effective techniques that include individual in-depth interviews, card sorting, paper prototyping, eye tracking, remote user testing, AB tests, and click tracking. The choice of the techniques depends on the nature of the issue that needs to be addressed.",
+        "part_3": "The result of the study lists the recommendations based on our knowledge and experience. To address the identified inadequate procedures or elements, we tailor explicit suggestions that will result in the improved usability."
+      },
+      "task_1": "Heuristic Evaluation",
+      "task_2": "Evaluation of the efficiency of the implemented use case scenarios",
+      "task_3": "UI Compliance Test",
+      "benefit_1": "Compliance assessment of the application / site with the accepted standards, including the description of the heuristics",
+      "benefit_2": "Assessment of the information architecture for the intuitive user actions",
+      "benefit_3": "Evaluation of performance of web/ mobile communication channels, and compatibility of the interface with the platform guidelines\n"
     }
-  }
+  },
+  "HOME": {
+    "motto": {
+      "title": "- Mined with passion in the heart of Silesia",
+      "subtitle": "Quality Driven Development"
+    },
+    "howWeWork": {
+      "title": "How we work?",
+      "shortCut": "How we work?",
+      "description": "We can guarantee the effectiveness of our solutions. Sounds confident enough? To meet the requirements and deliver successful results, we introduced a constant delivery process that consists of several individual stages, presented below."
+    },
+    "hireUs": {
+      "title": "Hire us",
+      "shortCut": "Hire us",
+      "description": "Go to your contact or fill out a short form to answer a few questions about your project idea.",
+      "buttonText": "Go to contact"
+    },
+    "language": {
+      "title": "We create a unified language of communication",
+      "shortCut": "language of communication",
+      "description": "To ensure the productive communication, the starting point of any project that we implement is to create a complete glossary of business terms. This covers the specific environment of our customer.\n"
+    },
+    "knowledge": {
+      "title": "We acquire business knowledge",
+      "shortCut": "business knowledge",
+      "description": "We believe that the proper understanding of our customer business is fundamental. Thus, the next step is to have an across-the-board conversation with the customer. This allows us to recognize the most critical elements, behaviors, and models that are essential when designing a new system."
+    },
+    "logic": {
+      "title": "We create business logic",
+      "shortCut": "business logic",
+      "description": "After a thorough analysis, when the action models are ready, the next step is to start coding. It is worth pointing out that our concepts are tested entirely and exclusively on the actual code."
+    },
+    "specification": {
+      "title": "We create a detailed project specification",
+      "shortCut": "specification",
+      "description": "With the required knowledge, we delve deeper into the project and create a detailed specification. Its main components include the development of the predicted user paths and modeling the user behavior. Additionally, it describes how the individual components of the system interact. The illustrative diagrams complete the picture. "
+    },
+    "UX": {
+      "title": "We prepare UX mockups",
+      "shortCut": "We prepare UX",
+      "description": "The project specification is the foundation for the development of an interactive prototype interface. Taking advantage of the available knowledge of User Experience and the industry-specific business concepts, we refine the hierarchy of information and system interactions. The consistent and convenient user experience is our ultimate goal. (Task Driven UI)"
+    },
+    "UI": {
+      "title": "We design the visual components",
+      "shortCut": "Design",
+      "description": "After the work on the system functionalities is finished, it is time to sketch out the visual layer. We always ensure that our designs, on one hand, closely correspond to the customer’s brand values, and on the other, are in sync with the current trends"
+    },
+    "implementation": {
+      "title": "We implement",
+      "shortCut": "implementation ",
+      "description": "The next stage of the project is the implementation of the programmed user interface. This involves the integration of the previously created business logic code with the application software layer. Later, the adolescent system goes through a series of tests to confirm its compliance with the initial specification.",
+      "message": "Check the offer"
+    },
+    "secondImplementation": {
+      "title": "We enable",
+      "shortCut": "implementation",
+      "description": "When the testing phase is successfully passed, the software is initiated. Our customer receives a training on how to manage and work with the product. At this point, a complete and detailed documentation of the application features is provided.",
+      "message": "Check the implementation"
+    },
+    "support": {
+      "title": "We support",
+      "shortCut": "support",
+      "description": "The system’s \"Go live\" does not mean the end of cooperation with the customer. Upon the completion of the project, we provide them with technical support. This includes, but is not limited to, minor modifications, software upgrades, or professional advice in its potential directions of development.",
+      "message": "Meet our team"
+    }
+  },
+  "OFFER": {
+    "features": {
+      "title": "We create",
+      "solutionToBusines": {
+        "title": "Solutions to your business problems",
+        "description": "Solutions to problems are not always obvious. Thus, we'll help you find a golden mean that allows you to streamline the processes and improve your company's performance."
+      },
+      "internalApps": {
+        "title": "Internal Apps",
+        "description": "We offer powerful and responsive, advanced applications for your business, based on state-of-the-art technologies and integration with already used enterprise systems."
+      },
+      "B2Capplications": {
+        "title": "B2C Applications",
+        "description": "We design modern web application systems for your clients. They can also be integrated with social media or payment systems."
+      },
+      "socialNetworking": {
+        "title": "Social Networking",
+        "description": "Social networking is not an issue for us. We are experienced in both building this kind of solutions and solving the emerging problems."
+      },
+      "TVApps": {
+        "title": "TV Apps",
+        "description": "If you have an idea for an Apple TV app, don't hesitate to report this to us! We are open to challenges and we are ready to analyze every concept."
+      },
+      "desktopApplications": {
+        "title": "Desktop Applications",
+        "description": "We design desktop applications for Windows, Linux, and MacOS X, with a high degree of compatibility, stability, and security."
+      },
+      "mobileApps": {
+        "title": "Mobile Apps",
+        "description": "We create mobile applications that are dedicated to iOS or Android. They are tailored to your needs on one hand, and on the other, are in line with the current trends."
+      },
+      "openForNew": {
+        "title": "?",
+        "description": "We are open to new challenges"
+      }
+    },
+    "technologies": {
+      "title": "Technologies"
+    },
+    "languages": {
+      "title": "languages"
+    },
+    "architecture": {
+      "title": "Architecture"
+    }
+  },
+  "COMPANY": {
+    "adressTitle": "Contact us!",
+    "showOnMap": "see on map",
+    "hireUs": "Hire us!",
+    "describeUsYourProject": "Describe us your idea, the form will help you to specify what it will be.",
+    "navigateToBrief": "Go to the brief"
+  },
+  "PORTFOLIO": {
+    "addProjectTitle": "Add your design",
+    "addProjectButton": "Write to us",
+    "ourPortfolio": "Our Portfolio",
+    "checkPortfolio": "Check out our portfolio",
+    "starInfo": "The figures shown in the illustrations and videos are examples",
+    "showMore": "Show More ",
+    "sectionTitles": {
+      "nextProject": "Next project",
+      "interface": "interface",
+      "before": "Before",
+      "after": "After",
+      "process": "Process",
+      "application": "Application",
+      "technologies": "Technologies",
+      "tools": "Tools",
+      "goal": "Goal",
+      "build": "Building",
+      "postsBooking": "Post reservation",
+      "ourRole": "Our task",
+      "workingScheme": "Application schema",
+      "businessModel": "Business model",
+      "implementation": "Implementation process",
+      "arch/tech/tool": "Architecture / Languages / Tools",
+      "microServices": "Microservice",
+      "exchangeProcess": "Currency exchange process"
+    },
+    "BrighterVision": {
+      "title": "Brigter Vision Growth Platform",
+      "subTitle": "Application for American therapists",
+      "shortDescription": "Application directed to American therapists, allowing you to browse the pool of available posts and publish them in the form of a blog.",
+      "description": {
+        "part1": "Brighter Vision Growth Platform jest odpowiedzią na zjawisko braku czasu poświęconego na marketing – jak chociażby prowadzenie bloga, zauważalnego wśród amerykańskich terapeutów, którzy całą swoją energię przeznaczają na zarządzanie własną praktyką, dbając o każdy, nawet najmniejszy szczegół.",
+        "part2": "It allows you to view ready-made available posts and publish them on a blog that is based on Wordpress at the date of your choice. Its heart is a huge calendar, beautifully crafted and simple to use. It presents both published and future posts. ",
+        "part3": "Thanks to the coherent categorization, as well as a great mechanism for selecting posts, the user can book a selected publication with just three clicks.",
+        "part4": "Given the business model, which alongside the free posts also provides paid subscription plan, the application is integrated with the Chargify billing software. You may choose to purchase individual publications or monthly subscriptions. Free posts are awarded monthly, with a specified limit. ",
+        "part5": " Each user gets three free publications, which if not used, pass over onto the following month. In total, the user can obtain a substantial amount of publications. Their history can be easily viewed using a similar system to how bank balances work, based on the assumptions of Event Sourcing.",
+        "part6": "In terms of architecture, the Growth Platform brings together two applications, server-side and a client. The back-end server application has been written in PHP using Zend Framework 2 and is responsible for key actions. This includes posting, managing client balance, and publishing.",
+        "part7": "In turn, written in AngularJS, the client application becomes the administration panel that uses the REST API communication that is provided by the server-side application mentioned before."
+      }
+    },
+    "telecom": {
+      "title": "E-commerce for telecom",
+      "subTitle": "Ecommerce platform for Europe's leading telecoms operators",
+      "shortDescription": "Standalone software modules that contribute to the creation of a modern e-commerce platform for Europe's leading telecom operators.",
+      "description": {
+        "part1": "Since the beginning of 2017, we have been working with a software vendor that distributes its solutions to a number of leading telecommunications companies on the German, Dutch, Indian, and Turkish markets.",
+        "part2": "Delegating our four autonomous employees, our job is to provide our clients with self-contained software modules that are ultimately transferred to external teams.",
+        "part3": "For this reason, we are faced with a number of challenges at every step. The main requirement is the capacity of our microservices to integrate them with numerous, often outdated, enterprise solutions, the applied required ",
+        "part4": "technology and tools, such as PHP, Java, C #, Apache Kafka, PostgreSQL, Microsoft BizTalk, Magento. ",
+        "part5": "A separate issue is to work with enigmatic data formats.",
+        "part6": "Both the JAVA and PHP microservices, as well as ReactJS web applications, contribute to the development of our modern e-commerce platform for telecom operators. Our applications compose of carefully designed components that also benefit from solutions, such as CQRS and Event Sourcing.",
+        "part7": "One of the key accomplishments of this project is to create directory systems that allow you to integrate multiple existing customer databases into one convenient tool",
+        "part8": "This solution is particularly important from the perspective of telecom operators who are not able to easily connect multiple databases with service availability recognition systems in designated addresses or product directories."
+      }
+    },
+    "exchange": {
+      "title": "Online currency exchange system",
+      "subTitle": "System designed to buy and sell currencies online",
+      "shortDescription": "A modern system that mediates the sale and purchase of currencies, the repayment of foreign currency loans, and the creation of virtual currency accounts.",
+      "description": {
+        "part1": "For the past two years, we have had the pleasure of working on a modern online currency exchange system that is allows the customer to sell and purchase currencies, settle foreign currency loans, and to create the virtual currency accounts.",
+        "part2": "Our role was to design a financial platform based on the Domain Driven Design methodology and the S.O.L.I.D. design principles, while leveraging the latest security technologies. To accomplish the task, we set up the SSL-compliant encryption, securing transactions via text messages codes and email confirmations, and keeping track of the transaction history.",
+        "part3": "On the front-end side, this platform consists of two applications: the administrative and the client one. On the other hand, looking at the back-end, this is a system of eleven microservices, communicating with each other through the RabbitMQ software. Operating on its own set of responsibilities, each module could be modified without the slightest impact on the others. This allows the individual teams to focus on their part of the project without having to implement the rest of the system. This has greatly improved the process.",
+        "micro_1_title": "User management system",
+        "micro_1": "User management system - It is a system that allows the user to log in to the system, providing the methods necessary to log in to the other microservices. It is responsible for managing user privileges, giving you the ability to sign up and log in via social network sites, such as Facebook, Twitter, and LinkedIn, as well as other accounts, namely Google and Microsoft.",
+        "micro_2_title": "Client management system",
+        "micro_2": "Client management system – It stores customer data and business logic related to the individual and corporate accounts. This allows one or more system users to manage client accounts.",
+        "micro_3_title": "Automated posting and transfer management system",
+        "micro_3": "Automatic posting and transfer management system - It is a place of communication with banks, which is one of the most important services of the application. Its integration with banking systems allows it to move away from the manual review of bank statements towards the immediate balance of customer accounts and prompt notification of the ability to manage funds and exchange currency rates. In addition, the system allows you to automatically send outgoing transfers to relevant banking centers, just after the client's decision to withdraw funds from the accounts in the balance management system. Both solutions have contributed to minimizing the number of errors, usually associated with the manual transfer of funds.",
+        "micro_4_title": "Balance management system ",
+        "micro_4": "Balances management system - It allows you to create virtual currency accounts based on a particular bank account and store information about accumulated funds and currencies, calculated on the basis of transaction history. The applied data integrity facilitates the accounting task, which can easily link the amount visible to the customer with the money deposited at the bank. This, in turn, favors meeting the requirements of the financial supervision committee. In addition, the system allows you to apply consolidated charges for additional services from multiple accounts. As a result, the customer does not need to care about the availability of funds on a particular account.",
+        "micro_5_title": "Currency exchange management system",
+        "micro_5": "Currency exchange management system – It allows you to buy and sell currency at a predetermined rate by the client, or at the current rate set by the system. Any available discounts, rebates, and promotions can be automatically used.",
+        "micro_6_title": "Communication system",
+        "micro_6": "Communication system – It is responsible for contacting the customer by a text message or email. It also deals with communication between users within the system, having full control over their assets without the need to log in. In addition, the system is used to confirming orders by sending a one-off code text message.",
+        "micro_7_title": "Promotion system",
+        "micro_7": "Special offers system – It is responsible for all kinds of offers and discounts, as well as the calculation of loyalty points based on the number of currency exchange transactions or the number of people invited to use the service (recommendations).",
+        "micro_8_title": "Currency management system",
+        "micro_8": "Currency exchange management system – It collects and stores information about the recent exchange rates obtained from various sources, such as banks and stock exchanges. It is the core of the entire platform.",
+        "micro_9_title": "Reporting system",
+        "micro_9": "Reporting system – It analyses the transfer data, currency exchange transactions, and any special offers to generate detailed sales reports or summaries of employees and customers.",
+        "micro_10_title": "Document management system",
+        "micro_10": "Document management system – It is responsible for creating electronic documents based on data from the other microservices that the user can generate independently in various formats (TXT, SCV, XML, PDF) and later download with unique links.",
+        "micro_11_title": "Application log system",
+        "micro_11": "Application log system – It gathers information about activities performed by the system users. At the same it is safeguarded in the event of a failure of the main database thanks to the ability to restore the system."
+      }
+    },
+    "MDLinking": {
+      "title": "MDLinking",
+      "subTitle": "Social network for doctors from all over the world",
+      "shortDescription": "A social network that allows private physicians to communicate with patients around the world and help improve the quality of care.",
+      "description": {
+        "part1": "MDLinking is a platform for private communication between doctors from around the world, helping to improve the quality of medical care. The service allows the professionals to provide mutual consultation and share the expertise. This is happening in a safe and secure environment. The created user profiles can also function as business cards / CVs for potential employers.",
+        "web": "Network of links",
+        "part2": "To make it easier for the service customers to find and connect with colleagues in the industry, we developed an intelligent recommendation system for potential connections. This is done by determining the probability of acquaintance. Other factors, such as occupational history, workplace, and occupation or interests are also taken into account.",
+        "intensiveCare": "Intensive care units",
+        "part3": "Apart from the social networking, the equally important functional prerequisite for the application was to speed up the communication between hospitals in the predefined groups. This is why we designed a system that would allow us to locate free beds in the ICUs.",
+        "intensiveCare2": "Intensive care",
+        "intensiveCareManagement": "Management process of the intensive care unit",
+        "part4": "Our role was to design a flexible platform from scratch. This needed to be in line with both the customer business requirements and the Domain Driven Design methodology. Yet another consideration was the ability to extend new functionalities as the service would grow.",
+        "specification": "Specification",
+        "part5": "With such an engaging and long-term project ahead, we focused on creating the precise specification and setting out the scenarios for the service. This was preceded with learning our client's requirements. Most of all, we needed to understand the language of the medical industry, and the system development plans. We had to be aware of those needs, and understand what the underlying issue was all about.",
+        "logic": "Business logic",
+        "part6": "In the next step, we began modelling the business logic. A whiteboard, markers, and some cards and pencils, combined with a solid brainstorm, allowed us to determine the main models, actors, and behaviours that the system should demonstrate.",
+        "part7": "Having learned the basics, we started programming the back-end application using PHP and the Zend Framework which is linked to the PostgreSQL database. Then, when we created a precise user interface mockups. We were able to work on a front-end component, and integrate it with the REST API. We brought to play the AngularJS framework for the user application, and TypeScript for the administration panel.",
+        "architecture": "Architecture",
+        "part8": "In terms of architecture, MDLinking is composed of sets of independent modules, communicating with RabbitMQ. Each of them has its own collection of responsibilities so that the module in control of users and their profiles does not depend on the organization or the users’ relationship component. In other words, modifications to one module do not affect the other. This increases the speed of work, while reducing the risk of errors.",
+        "part9": "An important issue with MDLinking is also the security of applications, which has been our priority since the very beginning of its development. It is dictated by the fact that a substantial amount of sensitive data is stored in the database. This also includes evidence files or user credentials that help verify the authenticity of the accounts. With the implementation of numerous security mechanisms, all application data is encrypted and stored in secure warehouses provided by Amazon AWS. This allows us to customize the access to information so that it does not fall into the wrong hands, and misused.",
+        "part10": "During the work, with the ongoing development of the platform, its original model evolved considerably. We distinguished new responsibilities and behaviours, thus simplifying the existing ones, which only proves the complexity of the project."
+      }
+    },
+    "MidOceanBrands": {
+      "title": "Mid Ocean Brands Reporting System",
+      "subTitle": " A tool for efficient production planning ",
+      "shortDescription": "Comprehensive tool for productivity planning for a graphic design company on a variety of gadgets.",
+      "description": {
+        "part1": "Large-scale production process management is not only a laborious task but also highly complex, especially when the main tool used is Microsoft Excel. This is the case with Mid Ocean Brands, a professional graphic design company that specialize in production of a variety of gadgets. The company can now enjoy the better solution that we have provided.",
+        "part2": "As a substitute for MS Excel documents, for our client we have created a tool that allows you to schedule production cadence within the specified time, and presents important data in the form of graphs and reports. In this way, the dataset scattered in many spreadsheets is now available from one place, wrapped up in a friendly interface.",
+        "part3": "The first step was to receive some sample files from the customer, exported from the SAP software used by the client. Based on this, we started to design the main functionality of the application that will allow the user to import data from files containing not only a different data structure but also different formatting. This resulted in creating a tool that lets easily add new content parsers, and adjust import settings individually for each file, while checking the existing data for correct format and structure. All of this has a clear and fully customizable interface.",
+        "part4": "This resulted in creating a tool that lets easily add new content parsers, and adjust import settings individually for each file, while checking the existing data for correct format and structure. All of this has a clear and fully customizable interface.",
+        "part5": "The software is based on the Java 8 Spring Application, a REST API server solution, linked to the PostgreSQL data warehouse.",
+        "part6": "A client application that is created in ReactJS communicates with the server part via the API. The project also used VirtualBox technology to configure the virtual machine needed to run the application.\nThe provided solution is primarily used by the administrator for data entry and production planning. The features also make it suitable at production spaces, where it displays real-time production status and a procurement plan for the coming days."
+      }
+    },
+    "SmartHome": {
+      "title": "Smart home management system",
+      "subTitle": "System adapted to new technological requirements",
+      "shortDescription": "Intelligent home management system needed to adapt to new technological requirements.",
+      "description": {
+        "part1": "In 2016, we had the opportunity to co-create intelligent home management software for our Norwegian client, one of the leading providers of this type of solutions on the market. After the merger with the second largest company in the same industry, it was necessary to adapt the existing software to communicate with ZigBee protocol devices.",
+        "part2": "In addition to adapting management systems to the new capabilities offered by ZigBee devices, our core tasks include continuous source code control and backward compatibility for existing customers. We used the Symfony 2 framework, and Redis and PostgreSQL databases for the design tasks.",
+        "part3": "After a successful adaptation process, we were happy to hand over the software to our fellow remote developers, who could work on the system development on site, having direct access to all devices and customers."
+      }
+    },
+    "Tandarts": {
+      "title": "Tandarts.com",
+      "subTitle": "Tandarts is an application that unites dental practices in the Netherlands.",
+      "shortDescription": "A dental practice application in the Netherlands that allows users to search for the best specialists in the area and make a direct appointment.",
+      "description": {
+        "part1": "Tandarts is an application that unites dental practices in the Netherlands. With it, users can search for the best dentists in their area. What’s more, with a few clicks you can make appointments directly to specialists, and verify the quality of their services through a comprehensive rating system.",
+        "part2": "The role of our team was to prepare the skeleton of the system, which was later taken over by the Dutch developer group, which, in the latter phase, brought us into the MVP (Minimum Viable Product) phase. Such character of work forced us to mostly use simple tools, which would not cause issues for our replacements developers. This led to us to use the Laravel framework (PHP), together with the PostgreSQL database. ",
+        "part3": " Work on the project started with long across-the-board conversations with the client and dental experts. This resulted in carefully designed business logic. The goal was to eventually create a system that would not only meet all business requirements but also be easy for a non-participating team to develop in its initial design. For this reason, we also attached great importance to the detailed documentation of the project that was finally handed over to the client.",
+        "part4": "Following the planning process, the implementation phase went extremely smoothly. Despite Laravel's limitations in terms of the number of our previously created tooling frameworks that we could reuse, we prepared several new solutions that fit into the character of the project."
+      }
+    },
+    "Tripbuzz": {
+      "title": "Tripbuzz",
+      "subTitle": "Application to discover new places and attractions in the area",
+      "shortDescription": "An application that allows you to discover unknown places and take up new activities, available in the immediate area. ",
+      "description": {
+        "part1": "TripBuzz is an extensive web application that allows its users to discover new, interesting places or attractions in their immediate vicinity. Although today the tool is a comprehensive database, it was once a very simple webpage, which thanks to our team effort, has undergone a great transformation.",
+        "part2": " Code Mine's main task was to improve and add new functionalities, as well as develop the existing ones. As part of the cooperation, we have introduced new attractions and the Hotel section, and implemented the mobile version",
+        "part3": "At every stage of our work, we focused on optimizing the SEO aspect and ensured the maximum performance, often addressing a number of challenges. This included the introduction of an advanced algorithm that allows for quick filtering of results by the location."
+      }
+    },
+    "ZorgIndicator": {
+      "title": "ZorgIndicator",
+      "subTitle": "A platform that allows patients to find the best hospitals in the area",
+      "shortDescription": "A platform that allows patients to find the best hospitals in the area, including their assessment, treatment statistics and the number of beds available.",
+      "description": {
+        "part1": "As a platform that will help you find the best hospitals in the area, ZorgIndicator was built with the intent of providing patients with an easy way to get information about the number of hospital beds, statistics for the treatment of diseases, or reviews provided by other patients for the hospital unit.",
+        "part2": "The platform consists of two components, for a user, and for a hospital administrator. The user can turn on geolocation and search for hospitals, check their statistics, and give them ratings. The administrator is able to edit the contact details of the facility and manage the various display elements associated with it.",
+        "part3": "In addition to evaluating the hospitals themselves, you can also evaluate individual specialists through ZorgIndicator. Thanks to the platform, patients are confident in both the competence of doctors and the level of service provided by the medical units.",
+        "part4": "Our goal was to preserve the platform's maximum flexibility so that it could be expanded further with new functionalities in the future.",
+        "part5": "For this reason, ZorgIndicator was designed in accordance with the Domain Driven Design methodology on the back end, using the PHP language supported by the Laravel framework. The front-end component was developed using the Bootstrap framework and JQuery library. A fully responsive system is based on the PostgreSQL database, operating on AWS servers."
+      }
+    }
+  },
+  "UTILITIES": {
+    "tasks": "Tasks",
+    "benefits": "Benefits",
+    "showDetails": "Want more details?",
+    "sendRequest": "Send an Inquiry",
+    "navigateToContact": "Go to contact",
+    "technologies": "Technologies"
+  },
+  "NAVIGATION": {
+    "about_as": "about us",
+    "portfolio": "portfolio",
+    "offer": "offer",
+    "audit": "audits",
+    "contact": "contact",
+    "home": "Home",
+    "pl": "polski",
+    "en": "english",
+    "de": "deutch",
+    "nor": "norsk"
+  },
+  "ABOUT_US": {
+    "place4U": "Maybe this is just for you?",
+    "joinUs": "Join our team today!",
+    "name_origin": {
+      "title": "Where's the name?",
+      "description_part1": "With our HQ located in the heart of Katowice, among the charming tenement houses and mine shafts, we feel strongly connected with our surroundings. Like the old mines in our region, we try to extract the best and at the same time contribute to transforming our region into a Polish Silicon Valley. In turn, the high-quality code we create is gold weight, black gold, for our developers.",
+      "description_part2": "Inspired by the environment, we could not cut off from the roots. Thus, we chose a name, emphasizing, on the one hand, our origin, and on the other - our character. Code Mine was created."
+    },
+    "approach": {
+      "title": "Our approuch",
+      "description": "A large team does not reflect the quality of the service provided. This can be measured rather by skills, passion, and commitment. As a company of fifteen people who implement Quality Driven Development, we are not afraid of challenges and our individual approach is greatly appreciated by our customers."
+    },
+    "aFewPhotos": "A few photos from the life of our office."
+  },
+  "PEOPLE": {
+    "worksince": " Mining in Code Mine from:",
+    "year": "year",
+    "przemyslaw": {
+      "description": "One of the five founding fathers of Code Mine. In addition to programming, he is also involved in the management of corporate documentation. The most peaceful bald man on earth, capable of solving every problem. Enthusiast of reggae music, fast skateboarding, green color, and cheese pizza. He likes to fool around, often making jokes to colleagues. In his free time, he likes to relax at his allotment garden."
+    },
+    "piotr": {
+      "description": "Young and ambitious back-end developer who made his first programming attempts in his final months of primary school. He likes challenges so when he chooses the framework, he always follows the specifics of the project, not thinking of his skills as a limitation. Privately, a fanatic of Chinese noodles soup, and a devotee of the spontaneous journeys. After work, he relaxes over rock and punk music, often playing the guitar himself. "
+    },
+    "adamn": {
+      "description": "The entrepreneur type focused on achieving goals both in private and professional life. Unfulfilled fitness model, currently working as a Front-end Developer, focusing on delivering solutions that are as close as possible to the needs of the customer. After work, he expands his knowledge through professional literature, courses, and training. As part of his interest in electronics, he tries to breathe life into dead objects, creating robots based on Raspberry Pi or Arduino."
+    },
+    "joannaK": {
+      "description": "An aspiring front-end developer, leaning towards Angular and proving every day that the developer's guild does not have to be all male. In her private life, she bets on a healthy diet. She likes running and taking a break in the open air. Outside the office, if not in the park, you will find her easiest at her home, where she relaxes watching the Netflix shows."
+    },
+    "tomasz": {
+      "description": "Developer from an early age, specializing in back-end development and testing. One of the five founding fathers of Code Mine, with a lot of common sense when spending money is at stake. He loves programming, and the attractive lines of code bring him a little joy, often expressed in dance. He loves extreme sports, including chess, cycling, and active football watching in front of the TV set."
+    },
+    "mateusz": {
+      "description": "World curious developer, whose first reaction to the newly discovered thing is the basic question, 'How does it work?'. A passionate programmer who loves solving any problems from an early age. He is fascinated with robots and the \"remote change of the world\". In his free time, he practices martial arts and goes cycling for fun."
+    },
+    "radoslaw": {
+      "description": "Co-founder and the CEO of Code Mine. The down-to-earth developer, centred mainly around PHP, Java, TypeScript, and JavaScript. Former basketball referee. At work, despite the managerial position, prefers autonomy and friendly atmosphere over the strict rules. The loud electronic music playing in his headphones provides him with the highest efficiency. He loves avocados, and the proof of this love is his own mini plantation at his desk. Crazy looking socks with the avocado pattern complete the picture."
+    },
+    "marta": {
+      "description": "Junior QA specialist focused on not missing any error. Her writing style is the most distinctive, among all the Code Miners. Interesting fact, she is the only one in the company who uses Windows OS. Aside from the professional note, she is a student of painting, interested in illustration and prefers the vintage style. She spends her free time mountain hiking."
+    },
+    "adamg": {
+      "description": "Passionate developer and leader of the development team. One of the five founding fathers of Code Mine, whose career began with giving programming lessons during computer science classes in the fifth grade of the primary school. Undisputed Apple brand fanboy. Domain Driven Design devotee, loves creating in TypeScript, Swift, Java, and ... wood. Connoisseur of power drinks, which mark both the beginning and the end of his working day."
+    },
+    "adrian": {
+      "description": "An observer type focused on achieving his goals, one of which has always been programming. He likes to work while listening to the cloud music sounds. As a result, he makes the days of the whole team more enjoyable, when he turns into a company DJ. He relaxes behind the wheel, and the McDonald double chips’ coupons mark the best time in his life. He is their sincerest fan."
+    },
+    "kamil": {
+      "description": "Formerly a paramedic, he has recently joined the Code Mine team as a thriving front-end developer. Programming enthusiast and a fan of all kinds of electronics. After work, he pretends to be a musician, thrashing the drums in a metalcore band, which results in the release of his own songs. The best distraction from the everyday life is ... parachute jumping."
+    },
+    "michal": {
+      "description": "One of the five founding fathers of Code Mine. Passionate about object-oriented programming and Domain Driven Design. He loves Java, Swift, and dogs. As a true brewery connoisseur, he produces his own beer. He likes mountains and secluded places, which he prefers for the weekend trips. For him, the perfect relaxation after a whole day of programming at work is … programming at home. "
+    },
+    "joannar": {
+      "description": "UX and UI designer for whom a day without a delivery person's visit in the company is wasted. A classic example of the top of the class at arts and mathematics, always fond of lovely things. Although in design she adheres to the principle of \"Less is more\", she wants to draw a handful with her life, planning to explore the whole world. A cat lover, with a special suggestion of her own one and only Janusz, practicing his creativity in the corridors of the spiel tunnel."
+    },
+    "wojciech": {
+      "description": "He loves to model user experience but also values good design, which makes this combination ideal for his UX/UI Designer position. Fan of Apple, no less fond of coffee and fast food. Every day he is counting down the time that remains until his next trip and relaxing on a sandy beach. He hates queues and traffic jam holdups. He is a maniac of lowering cars to the limits of decency."
+    }
+  },
+  "CONTACT": {
+    "contactUs": "Contact us",
+    "name": "Name",
+    "myName": "My name ",
+    "namePlaceHolder": "Name",
+    "emailPlaceHolder": "Email",
+    "clickToCopy": "Click to copy",
+    "clickToNavigate": "Click to go to Google Maps",
+    "copied": "copied",
+    "message": "Message",
+    "hello": "Hello,",
+    "send": "Send",
+    "requestEstimate": "or ask for a quote on your project",
+    "sthWentWrong": "Something went wrong ...",
+    "form": {
+      "require": "This field is required",
+      "pattern": "The email format is invalid",
+      "sthWentWrong": "Invalid field content"
+    }
+  },
+  "TECHNOLOGIES": {
+    "title": "Technologies",
+    "description": "Description",
+    "bash": {
+      "description": "As a UNIX shell, Bash is one of the most popular in its category and at the same time, it defaults to most Linux distributions. The tool allows communication between the operating system and the user or application. This is characterized by versatility, speed, and a huge range of possible use.\nIn the vast majority of cases we install our software on UNIX servers, so Bash helps us with their management. It is also a basic tool for process automation. Thus, we use it mostly to facilitate the automate software installation, created scripts that support development, as well as test automation and application development."
+    },
+    "java": {
+      "description": "As a UNIX shell, Bash is one of the most popular in its category and at the same time, it defaults to most Linux distributions. The tool allows communication between the operating system and the user or application. This is characterized by versatility, speed, and a huge range of possible use.\nIn the vast majority of cases we install our software on UNIX servers, so Bash helps us with their management. It is also a basic tool for process automation. Thus, we use it mostly to facilitate the automate software installation, created scripts that support development, as well as test automation and application development."
+    },
+    "javascript": {
+      "description": "As the most popular object-oriented programming language, Java is characterized by its remarkable efficiency and speed, at the same time maintaining a high degree of security. Nevertheless, its ease of working with this language is influenced by its clear syntax, multithreading, and strong typing. In Code Mine, we also appreciate its vision of promoting object-oriented programming and easy access to the knowledge base.\nWhat's more, Java is great for enterprise applications. For us, as a provider of tailor-made business solutions, it is a great deal. Its use is valued even by the customers themselves, who stress its stability and popularity. For this reason, Java is our number one, especially when developing server applications."
+    },
+    "php": {
+      "description": "Being a universal scripting language, PHP was created for websites and web applications. Thanks to the considerable development it has received in recent years, it has become an increasingly mature language.\nDue to low hosting requirements, PHP is easy to implement, so we use it often in our projects. It is worth emphasizing that we always work on its latest version, developing existing Open Source libraries.\nThis lists our projects that use PHP:"
+    },
+    "swift": {
+      "description": "Swift is a powerful, modern, and extremely intuitive programming language for macOS, iOS, watchOS, and tvOS. It hit the market in 2014, with the ultimate goal to replace its obsolete and illegible predecessor, Objective-C.\nThanks to a large number of interesting libraries and the very good performance of this tool, Swift facilitates the day-to-day work of programmers. This makes it a relatively easy entry point for developers who are not familiar with Apple platforms.\nOur programmers are the swift enthusiasts of Swift and use it every time they create applications for the iOS and tvOS platforms. What's more, they greatly appreciate the comfort of working so they have created an application that displays information about the progress of our projects on the Apple TV device."
+    },
+    "typescript": {
+      "description": "Being a JavaScript overlay, TypeScript, with its typing capabilities, makes typing easier and more manageable. It is a tool that allows you to extend the JS functionality in the first step, and in the final one, it automatically converts the resulting code.\nTypeScript is the foundation for designing advanced web applications. Its use in the Angular framework contributes to the stability of the offered solutions as well as the speed and intuitiveness of the creation process itself."
+    }
+  },
+  "TOOLS": {
+    "title": "Tools",
+    "AI": {
+      "description": "When the final stages of the application or system development are in sight, Adobe Illustrator comes in. Just after the UX model has been refined and approved, the program creates a UI, constituting for the visual layer of the project. In Adobe Illustrator, we design most of the graphic elements, from simple icons to various illustrations. They, in turn, become the basis for SVG animations later used in our interfaces."
+    },
+    "AmazonAWS": {
+      "description": "The cloud solutions that the Amazon company offers allow us to create scalable, efficient and secure applications in a relatively short amount of time. They are distinguished by a wide range of services, such as databases, servers, notification systems, task queues, real-time machine learning, and data analysis.\nAll these features make the Amazon AWS an ideal choice for modern applications. For this reason, it is also featured in our projects that are based on automated application management systems. These include ElasticBeanstalk, or heterogeneous systems, such as Elastic Container Service that supports Docker."
+    },
+    "Angular": {
+      "description": "Due to the clear separation of responsibilities and the ease of maintaining code cleanliness, Angular is the basis of most of our projects that require a demanding structure. What's more, this tool allows us to quickly create web applications including unit and acceptance testing, with the unprecedented ease.\nCreated by Google and a countless army of independent developers, this tool is constantly being developed. Although its first release is still close to us, it has only been since its following releases that Angular has embarked on a new era of powerful and flexible libraries for creating stunning web applications. This has contributed in particular to the introduction of the reactive programming approach in the second version of the framework. This, combined with a strong emphasis on TypeScript technologies, has standardized the entire design process."
+    },
+    "ApacheKafka": {
+      "description": "Apache Kafka is a tool for storing data streams. It creates a queue of messages that are grouped into topics, with the assigned ID and the event time.\nThe great advantage of Apache Kafka is its scalability, resulting from the operations on so-called clusters. They can be run on both single and multiple servers. In addition, it is also ideal as a so-called Event Bus for applications based on Event Sourcing. "
+    },
+    "AxureRP": {
+      "description": "Axure is the basis for the daily work of our UX Designers. This powerful desktop application is primarily used to create extensive prototypes of user interfaces, flow charts, and project specifications. This is done in a very intuitive way. The biggest advantage of this software is the possibility to design complex interactions, such as animations, dynamic content, calculations, or logical conditions without the need of any coding.\nThe mock-ups that are prepared with this application, allow the design process to be more efficient and let our customers better understand how we work. This is achieved by visualizing the functionalities we create."
+    },
+    "CircleCl": {
+      "description": "As one of our three tools for automatic testing of modifications that we introduce to the source code, Circle CI stands out above the average with its versatility. The main benefit is its adaptable integration capabilities with other solutions that we use, such as GitHub, Bitbucket, and GitLab. This allows us to maintain a great deal of flexibility of our actions. Yet another advantage of this extension is a very attractive price."
+    },
+    "Docker": {
+      "description": "Docker creates standalone virtual containers for applications. This is a tool that allows us to design and test applications in the environment identical to the one configured in a production system. This solution contributes to reducing the number of errors, thus speeding up the software development process.\nDocker's greatest advantage is its versatility, especially because it is supported by modern platforms such as Amazon AWS, Elastic Container Service, or Elastic Beanstalk. At this point, the tool outperforms all classic virtualization solutions."
+    },
+    "Git": {
+      "description": "Many developers, working on one source code, are most often involved in writing the code for large-scale projects. Git, being a centralized system of the code storage, allows us to keep track of all modifications, and also makes it possible to manage all your changes in a comfortable and legible way.\nWith this tool, we are also able to solve the conflicts that may trigger when a few programmers are working on a particular functionality, and also prevent the complete loss of code. This makes Git, which is currently the most popular version control system, also an integral part of every project we create."
+    },
+    "Gradle": {
+      "description": "With the ability to define automatic tasks while changing source code into an operating program, Gradle gives us the complete control over the development and deployment of applications.\nThe tool allows us to quickly and painlessly retrieve and compile dependencies, which results in intuitive management. This greatly facilitates the entire programming process, especially that virtually every project we work on uses external libraries or frameworks. "
+    },
+    "Grunt": {
+      "description": "Grunt is one of the first work automation systems implemented in our web applications. Although currently this module no longer has its own space in our virtual toolbox, we are still working on the projects which in fact take advantage of Grunt’s features."
+    },
+    "Gulp": {
+      "description": "Gulp, in the Webpack era, is not a tool of your first choice. This is similar to the Grunt’s situation. Nevertheless, it cannot be criticized for the lack of functions. As the automation system for developers, it enables you to perform many advanced tasks with great ease, especially during integration with modern frameworks, such as Angular. For this reason, Gulp has been used in several projects, still supported or extended by us."
+    },
+    "Jenkins": {
+      "description": "Jenkins is a tool that we use for automatic code testing, and to verify its compliance with the contractual requirements when any modifications are introduced.\nAs a self-contained piece of software, Jenkins provides amazing configuration capabilities, almost unique amongst other tools of this type. Thanks to the precise customization of software development, as well as testing and delivery, it is ideally suited for projects requiring absolute precision in Continuous Integration. In addition to its high flexibility, we also appreciate the full control that is guaranteed through the self-hosting."
+    },
+    "Jira": {
+      "description": "As a software ecosystem, Jira helps us keep each job in a consistent framework, offering unlimited reconfigurability, stability, and security. This allows you to manage your IT projects easily.\nBuilt by Atlassian, Jira is a complete tool that, on the one hand, allows you to plan and implement projects through the creation and fulfillment of tasks, and documentation management. On the other hand, the smooth exchange of information within the whole team. In addition, it can be integrated with other tools, such as version control systems, calendars, or Continuous Integration systems.\nAll our projects are registered in Jira and we use the Agile boards offered by the tool. What's important, the platform also provides a helpdesk system that keeps our customers up-to-date on individual reports, thereby controlling the SLA contractual requirements."
+    },
+    "JMeter": {
+      "description": "JMeter is a powerful testing tool, renowned for the speed at which complex and highly dependable test plans are employed to test applications, databases, or the performance of the code. Taking advantage of these plans, we can find out how the software behaves under extreme, unusual circumstances.\nAn important feature of JMeter is also the ability to test multiple interdependent and intermittent requests. Such extensive and detailed tests result in extensive reports, which, thanks to the graphical form of the presentation of results, become easily comprehendible and straightforward. This considerably simplifies the process of drawing conclusions. "
+    },
+    "Laravel": {
+      "description": "Although Laravel is a relatively young MVC framework for PHP, this has not prevented it from gaining a significant share of the market for open source solutions.\nDespite the lack of advanced and highly flexible solutions that are typical of our other tools, Laravel is clearly distinguished by its ease of use while creating simple projects. For this reason, Laravel is usually employed in teams that are still exercising their experience in this area."
+    },
+    "MongoDB": {
+      "description": "MongoDB is an efficient non-relational database (NotOnlySQL). It does not require predefined schemas, which is one of its major advantages.\nThe database is primarily used for applications that contain hierarchical data and variants of data. It provides fast operations on records and it also works great as a data cache in intranet structures.\nMongoDB allows us to easily prototype applications and save a lot of our client's time and budget."
+    },
+    "MySQL": {
+      "description": "Databases are the foundation of almost any Internet software. MySQL is a highly versatile tool, with a relatively low cost of ownership. Thus, it is positioned as the most popular database on the market. MySQL is ideal for low-end hosting projects, where priority is given to the speed and ease of implementation."
+    },
+    "NPM": {
+      "description": "NPM is one of the largest homes of open source libraries and solutions available in the modern programming world. It makes it possible to enrich our designs with external, ready-made solutions, without worrying about their up-to-date status or suitability.\nThis tool is considered to be a global standard, and it has constantly grown into our front-end projects. Its capabilities allow us to use almost every library we want, which in turn translates into time savings and improved productivity."
+    },
+    "PostgreSQL": {
+      "description": "The database is one of the most important components of any software, and its choice should be tailored to the complexity of the project being developed. PostgreSQL, which is mature, but also the most advanced open-source database, is used for multifaceted and demanding systems. PostgreSQL's nearly limitless capabilities for querying, structuring, and extending its functionality greatly improve the project productivity."
+    },
+    "RabbitMQ": {
+      "description": "RabbitMQ is one of the most popular QS systems, allowing for seamless communication between distributed systems. In our projects, the systems are divided into microservices using MQTT-based, internal mechanisms for the exchange of commands and requests between individual chunks. This solution allows us to create software that is efficient on one hand, and safe and scalable on the other."
+    },
+    "ReactJS": {
+      "description": "Developed by Facebook, React JS is an innovative framework that uses JSX, a hybrid of JavaScript and HTML. It is irreplaceable for small and medium projects that do not require the advanced structure and dozens of tools that Angular offers.\nReact JS also attracts a huge community that provides hundreds if not thousands of open source libraries. Using high-quality ready-made solutions saves time and money while ensuring the stability and security."
+    },
+    "SASS": {
+      "description": "Cascading CSS style sheets are an indispensable part of the pages and mobile applications which, in turn, make up the largest part of our portfolio. Creating CSS is, however, a very time-consuming task, requiring a lot of precision and attention. As the result, this increases the risk of various problems that result from inaccuracy of certain details.\nAs a preprocessor for CSS, SASS was developed to avoid these errors, allowing you to create structured and legible style sheets in a nick of time. A number of its advantages have made us use it every day, in every project."
+    },
+    "Sketch": {
+      "description": "Sketch is used to design interfaces, layouts, icons, and other graphical elements. With the ability to manually create layers, it allows us to build complex shapes that are easy to edit later. In turn, because of the rendering of the resulting elements, it is possible to scale them without any loss of quality. Sketch's useful functionality is also the capability to preview a project on a locally connected iPhone with the iOS Mirror installed."
+    },
+    "SonarQube": {
+      "description": "The quality of the source code is our top priority and tools like SonarQube help us control this. The platform easily enforces code compliance with the current standards, identifying more potential causes of future problems. The versatility of the tool makes it beneficial in nearly all of our projects."
+    },
+    "SpringFramework": {
+      "description": "For both the development and configuration of the modern enterprise applications based on the Java platform, we use the Spring Framework. This allows us to create our software in a seamlessly and efficiently.\nApplying the rule “Convention over configuration”, Spring gives us the ability to reduce the written code to the minimum amount that is necessary. We, in turn, focus fully on solving the complex business problems.\nSping's unquestionable advantage is its ongoing refinement, driven by the great interest of the involved community. This ensures that the solutions offered by the framework are always innovative and can be used successfully across our projects, which mainly include the REST / RPC API server applications."
+    },
+    "Symfony": {
+      "description": "Symfony is considered to be one of the most professional MVC frameworks for PHP. It has gained enormous recognition among the industry, being developed by a Brazilian studio SensioLabs, which also is engaged in the development of this scripting language, and countless volunteers from all over the world.\nTaking inspiration from the Spring Framework, Symfony relies on a variety of proven designs and solutions. As a result, the tool offers a considerate number of opportunities and can successfully be applied to any type of project. However, in our company, we employ it especially in the case of implementations with limited time or budget, fully engaging the tool’s automated operations."
+    },
+    "TravisCl": {
+      "description": "As the era of manual upload of project files to the server via FTP is over, Continuous Integration tools have become the basis for secure software updates. They allow you to automatically test your code before making changes, ensuring that new modifications meet all the required criteria and expectations.\nWhat is more, as one of the most common Continuous Integration tools, Travis can successfully be used in a variety of projects and technologies. It is simple to configure. This, obviously among other numerous arguments, prompts us to opt for this tool frequently."
+    },
+    "Vagrant": {
+      "description": "Similarly to Docker, Vagrant is used to building and managing virtual machines from a single location. This tool allows the developer to tailor an environment that is customized for a particular application, regardless of the operating system used or the installed software.\nA virtual machine is created after a preconfigured initialization script is run. Including this in the project source code repository gives us the unlimited control over modifications introduced to the application dependencies."
+    },
+    "Webpack": {
+      "description": "Our applications and websites are complex systems that consist of multiple modules and interdependencies. Webpack helps us in optimizing their design, replacing hundreds of HTML files, JavaScript, TypeScript, graphics, or fonts into one small package for a quick retrieval on mobile devices.\nApart from improving the User Experience, Webpack also influences the automation of work, increasing the efficiency of our team. We can concentrate on software development in place of spending too much time on the configuration of the project, which in turn results in the better utilization of the budget."
+    },
+    "ZendFramework": {
+      "description": "As one of the most advanced frameworks and at the same time greatly supported by the community, Zend is the leading tool used in our projects. This is determined by many factors, such as its modularity, which stands out most. This allows us to adapt the framework’s architecture to our needs. Its foundation is also important. Because of its universality, the PHP language, in which Zend is coded, contributes to avoiding numerous issues with the hosting of our system.\nIn our team, we have certified architects of this framework. In addition to taking advantage of the available solutions, they create their own libraries that are fully compatible with this tool. Our developers also actively contribute to both this and other projects. This resulted in the cooperation of the Zend Framework 3 with Apigility. It all started at Code Mind. The libraries of this project enable us to create standards-compliant REST API back-end systems that contribute to the largest number of our projects based on the Zend framework."
+    }
+  },
+  "PAGETITLE": {
+    "prefix": "Code-Mine"
+  },
+  "home": "home",
+  "aboutus": "about us",
+  "offer": "offer",
+  "contact": "contact",
+  "audit": "audits",
+  "not-found": "not found",
+  "tools": "tools",
+  "technologies": "technologies"
 }

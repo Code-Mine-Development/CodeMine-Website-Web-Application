@@ -1,22 +1,31 @@
 @import "../../../../../assets/styles/mediaQueries";
+:host{
+  &.black{
+    .horizontal{
+      li{
+        background: #282828;
+        &.active{
+          background: transparent;
+          border-color: #282828;
+        }
+      }
+    }
+  }
+}
 
 .horizontal {
-  color: #333;
+  list-style: none;
   position: absolute;
   top: 0;
-  right: 0;
-  height: 85vh;
-  width: 80px;
+  right: 20px;
+  height: 100vh;
+  width: 18px;
   display: flex;
+  padding: 60px 0 0;
+  box-sizing: border-box;
   flex-direction: column;
-  justify-content: space-between;
-  margin-top: 7.5vh;
-  text-align: center;
-  overflow: hidden;
+  justify-content: center;
   transition: opacity .5s;
-  @media #{$tablet-media}{
-    width: 40px;
-  }
   @media #{$phone}{
     display: none;
   }
@@ -24,54 +33,23 @@
     opacity: 0;
     visibility: hidden;
   }
-  p {
+  li {
     width: 100%;
-    font-size: 2rem;
-    font-weight: bold;
-    margin: 0;
-  }
+    height: 18px;
+    background: #FFFFFF;
+    margin-top: 20px;
+    cursor: pointer;
+    border: 4px solid transparent;
+    box-sizing: border-box;
 
-  .sliderMain {
-    height: 20vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    @media #{$phone}{
-      height: 25vh;
+    transition: background .5s, border .5s;
+    &:first-of-type {
+      margin-top: 0;
     }
-    .sliderTitle {
-      display: block;
-      transform: rotate(-90deg);
-      h3 {
-        width: 20vh;
-        font-size: 1.2rem;
-        margin: 0;
-      }
+    &.active{
+      border: 4px solid #ffffff;
+      margin-left: -4px;
+      background: transparent;
     }
-  }
-}
-
-.borderDiv {
-  height: 20vh;
-  width: 1px;
-  border-right: 1px solid #333;
-  margin: auto;
-}
-
-.pointer {
-  cursor: pointer;
-}
-
-p:last-child {
-  position: relative;
-  &:after {
-    content: '';
-    width: 26px;
-    position: absolute;
-    bottom: 150%;
-    left: 50%;
-    transform: rotate(-45deg) translateX(-50%);
-    transform-origin: bottom left;
-    border-top: 3px solid #282828;
   }
 }

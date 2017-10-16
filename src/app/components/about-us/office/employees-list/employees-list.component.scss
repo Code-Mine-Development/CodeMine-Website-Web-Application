@@ -21,8 +21,9 @@
 svg {
   width: 100%;
   position: absolute;
-  top:0;
+  top: 0;
   right: -2%;
+  min-width: 600px;
   transform: translateY(-95%);
 }
 
@@ -30,18 +31,23 @@ svg {
   overflow: hidden;
   position: relative;
   border: 4px solid #ffffff;
-  width: 100%;
+  width: 66.6%;
+  margin: 6px -5px -11px;
   display: flex;
-  margin: 15px 0 0 -4px;
+  margin: 5px 0 0 -4px;
   box-sizing: border-box;
   padding: 10px 10px;
   align-items: center;
   cursor: pointer;
   transition-property: background, border;
   transition-duration: .25s;
+
+  @media #{$tablet-media}{
+    width: 100%;
+  }
+
   @media #{$br1200}{
-    width: 50%;
-    margin: 6px -5px -11px;
+    width: 75%;
   }
 
   & > * {
@@ -49,14 +55,14 @@ svg {
     z-index: 35;
   }
   .join_us-image {
-    max-width: 67px;
+    max-width: 80px;
     @media #{$phone} {
       display: none;
     }
     @media #{$br1200}{
-      max-width: 100%;
+      width: 8%;
     }
-    width: 12.5%;
+    width: 12.1%;
     figure {
       position: relative;
       margin: 0;
@@ -102,6 +108,7 @@ svg {
   }
 
   svg {
+    min-width: 0;
     position: absolute;
     z-index: 30;
     top: initial;
@@ -118,7 +125,7 @@ svg {
     background: #FFDE07;
     border: 4px solid #FFDE07;
 
-    .join_us-text{
+    .join_us-text {
       color: #282828;
     }
     svg {

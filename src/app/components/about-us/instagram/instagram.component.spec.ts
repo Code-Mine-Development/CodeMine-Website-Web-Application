@@ -1,8 +1,8 @@
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
-
-import { InstagramComponent } from './instagram.component';
+import {async, ComponentFixture, TestBed} from '@angular/core/testing';
+import {InstagramComponent} from './instagram.component';
 import {InstagramPhotoComponent} from './instagram-photo.component';
 import {TranslateModule} from '@ngx-translate/core';
+import {SharedModule} from '../../../shared/shared.module';
 
 describe('InstagramComponent', () => {
   let component: InstagramComponent;
@@ -11,7 +11,8 @@ describe('InstagramComponent', () => {
   beforeEach(async(() => {
     TestBed.configureTestingModule({
       imports: [
-        TranslateModule.forRoot()
+        TranslateModule.forRoot(),
+        SharedModule
       ],
       declarations: [ InstagramComponent, InstagramPhotoComponent ]
     })

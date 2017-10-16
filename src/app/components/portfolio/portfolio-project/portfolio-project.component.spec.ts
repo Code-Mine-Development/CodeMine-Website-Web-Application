@@ -4,6 +4,7 @@ import {ActivatedRoute} from '@angular/router';
 import {MockPortfolio} from '../../../shared/mocks/portfolio.mock';
 import {TranslateModule} from '@ngx-translate/core';
 import {Component, Input, Output, EventEmitter} from '@angular/core';
+import {SharedModule} from '../../../shared/shared.module';
 
 @Component({
   selector: 'app-architecture',
@@ -26,7 +27,8 @@ describe('PortfolioProjectComponent', () => {
   beforeEach(async(() => {
     TestBed.configureTestingModule({
       imports: [
-        TranslateModule.forRoot()
+        TranslateModule.forRoot(),
+        SharedModule
       ],
       declarations: [PortfolioProjectComponent, ArchitectureMockComponent],
       providers: [

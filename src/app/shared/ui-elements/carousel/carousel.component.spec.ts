@@ -4,15 +4,18 @@ import {TranslateModule} from '@ngx-translate/core';
 import {Portfolio} from '../../../aplication/portfolio/interfaces/portfolio.interface';
 import {MockPortfolio} from '../../mocks/portfolio.mock';
 import {CarouselComponent} from './carousel.component';
+import {SharedModule} from '../../shared.module';
 @Component({
   selector: 'app-carousel-element',
   template: 'test'
 })
-class ProjectPreviewMockComponent {
+class CarouselElementMockComponent {
   @Input() index: number;
   @Input() open: number;
   @Input() project: Portfolio;
   @Input() direction: string;
+  @Input() disabledNavigation: boolean;
+
 }
 
 
@@ -22,9 +25,10 @@ describe('CarouselComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [CarouselComponent, ProjectPreviewMockComponent],
+      declarations: [CarouselComponent, CarouselElementMockComponent],
       imports: [
-        TranslateModule.forRoot()
+        TranslateModule.forRoot(),
+        SharedModule
       ]
     })
       .compileComponents();

@@ -1,8 +1,9 @@
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import {async, ComponentFixture, TestBed} from '@angular/core/testing';
 import {Component} from '@angular/core';
 import {TranslateModule} from '@ngx-translate/core';
 import {WeCreateComponent} from './weCreate.component';
 import {MockFeatures} from '../../../shared/mocks/features.mock';
+import {SharedModule} from '../../../shared/shared.module';
 
 
 @Component({
@@ -24,7 +25,8 @@ describe('WeCreateComponent', () => {
   beforeEach(async(() => {
     TestBed.configureTestingModule({
       imports: [
-        TranslateModule.forRoot()
+        TranslateModule.forRoot(),
+        SharedModule
       ],
       declarations: [ FakeWrapperWeCreateComponent, WeCreateComponent],
     })

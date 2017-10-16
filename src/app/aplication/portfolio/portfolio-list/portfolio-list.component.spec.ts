@@ -9,6 +9,7 @@ import {UiModule} from '../../../shared/ui-elements/ui.module';
 import {OfferElementBeforePrepare} from '../../offerElementsDetails/interface/offerElementBeforePrepare';
 import {Portfolio} from '../interfaces/portfolio.interface';
 import {RouterTestingModule} from '@angular/router/testing';
+import {SharedModule} from '../../../shared/shared.module';
 
 
 const MockRoutingData = {
@@ -55,7 +56,8 @@ describe('PortfolioListComponent', () => {
       imports: [
         UiModule,
         TranslateModule.forRoot(),
-        RouterTestingModule
+        RouterTestingModule,
+        SharedModule
       ],
       providers: [
         {

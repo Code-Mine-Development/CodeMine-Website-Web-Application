@@ -2,9 +2,9 @@
 
 :host {
   position: absolute;
-  right: 0;
+  right: 2.5%;
   top: 0;
-  width: 50%;
+  width: 45%;
   height: 100%;
   box-sizing: border-box;
   @media #{$tablet-media-portrait} {
@@ -19,13 +19,20 @@
       left: 50%;
       transform: translateX(-50%);
       top: 0;
-      transition: opacity .5s;
+      transition: .7s;
       position: absolute;
+      &.hideTop {
+        transform: translate(-50%,-200%);
+      }
+      &.hideBottom {
+        transform: translate(-50%,100%);
+      }
     }
   }
   @media #{$phone-portrait}{
     top: 80%;
     article {
+      transform: translate(-50%, -50%);
       text-align: center;
       top: initial;
       padding: 0 10px;
@@ -33,7 +40,7 @@
         font-size: 2.4rem;
         margin: 0;
       }
-      p{
+      p {
         display: none;
       }
     }

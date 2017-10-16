@@ -12,17 +12,16 @@
   margin-left: auto;
 
   &.box {
-    padding: 80px;
     box-sizing: border-box;
     div > section > header > img {
-      margin-top: -80px;
-      margin-left: -80px;
+      //margin-top: -80px;
+      //margin-left: -80px;
     }
     @media #{$tablet-media} {
-      padding: 60px 40px 40px;
+      //padding: 60px 40px 40px;
       div > section > header > img {
-        margin-top: -40px;
-        margin-left: -40px;
+        //margin-top: -40px;
+        //margin-left: -40px;
       }
     }
     @media #{$phone} {
@@ -92,6 +91,9 @@
       @media #{$phone} {
         padding-bottom: 0;
       }
+      @media #{$tablet-media-landscape} {
+        padding-bottom: 0;
+      }
       header {
         position: absolute;
         left: 0;
@@ -118,7 +120,7 @@
         h1, p {
           margin: 0;
           font-size: 3.6rem;
-          line-height: normal;
+          line-height: 45px;
         }
         p {
           font-weight: 300;
@@ -216,5 +218,28 @@
         font-weight: 800;;
       }
     }
+  }
+}
+
+
+@keyframes slideInUp {
+  from {
+    transform: translate3d(0, 100%, 0);
+    visibility: visible;
+  }
+
+  to {
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+@keyframes slideOutUp {
+  from {
+    transform: translate3d(0, 0, 0);
+  }
+
+  to {
+    visibility: hidden;
+    transform: translate3d(0, -100%, 0);
   }
 }

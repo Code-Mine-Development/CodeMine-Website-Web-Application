@@ -3,6 +3,7 @@ import {EmployeeComponent} from './employee.component';
 import {TranslateModule} from '@ngx-translate/core';
 import {MockCompany} from '../../../../shared/mocks/company.mock';
 import {EventManager} from '../../../../shared/services/event_manager';
+import {SharedModule} from '../../../../shared/shared.module';
 
 
 describe('EmployeeComponent', () => {
@@ -11,7 +12,7 @@ describe('EmployeeComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      imports: [ TranslateModule.forRoot() ],
+      imports: [ TranslateModule.forRoot(), SharedModule ],
       declarations: [ EmployeeComponent ]
     })
     .compileComponents();

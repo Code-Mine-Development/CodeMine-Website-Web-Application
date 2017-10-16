@@ -1,7 +1,7 @@
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
-
-import { ApproachComponent } from './approach.component';
+import {async, ComponentFixture, TestBed} from '@angular/core/testing';
+import {ApproachComponent} from './approach.component';
 import {TranslateModule} from '@ngx-translate/core';
+import {SharedModule} from '../../../shared/shared.module';
 
 describe('ApproachComponent', () => {
   let component: ApproachComponent;
@@ -10,7 +10,8 @@ describe('ApproachComponent', () => {
   beforeEach(async(() => {
     TestBed.configureTestingModule({
       imports: [
-        TranslateModule.forRoot()
+        TranslateModule.forRoot(),
+        SharedModule
       ],
       declarations: [ ApproachComponent ]
     })

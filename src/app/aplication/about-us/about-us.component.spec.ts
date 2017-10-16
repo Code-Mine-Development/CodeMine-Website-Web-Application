@@ -7,6 +7,7 @@ import {AboutUsComponent} from './about-us.component';
 import {AboutUsComponentModule} from '../../components/about-us/about-us-components.module';
 import {MockCompany} from '../../shared/mocks/company.mock';
 import {LocalizeRouterService} from 'localize-router';
+import {SharedModule} from '../../shared/shared.module';
 
 
 const ActivatedRouteMock = {
@@ -36,7 +37,8 @@ describe('AboutUsComponent', () => {
         TranslateModule.forRoot({
           loader: {provide: TranslateLoader, useClass: FakeLoader}
         }),
-        NoopAnimationsModule
+        NoopAnimationsModule,
+        SharedModule
       ],
       declarations: [AboutUsComponent],
       providers: [

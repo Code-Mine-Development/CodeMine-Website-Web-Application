@@ -1,4 +1,4 @@
-import {Component, OnInit, OnDestroy, ElementRef} from '@angular/core';
+import {Component, OnInit, OnDestroy, ElementRef, Output, EventEmitter} from '@angular/core';
 import {ActivatedRoute, Data} from '@angular/router';
 import {HomeInformation} from '../interfaces/home-information.interface';
 import {HomeInformationServices} from '../services/home-information.service';
@@ -12,10 +12,11 @@ import {AnimationConfig} from '../animation.config';
 })
 export class HomeInformationComponent implements OnInit, OnDestroy {
 
-
+  @Output() navigate = new EventEmitter();
   informations: HomeInformation[];
   hiddenSkip = true;
-  whiteSkip = false;
+  blackSkip = false;
+  visibleMobile = false;
 
 
   constructor(private route: ActivatedRoute,
@@ -55,14 +56,27 @@ export class HomeInformationComponent implements OnInit, OnDestroy {
       if (info.section < 0) {
         return;
       }
-      if (AnimationConfig.sections[info.section]['background'] === '#282828') {
-        this.whiteSkip = true;
+
+      if (info.frame > 0) {
+        this.visibleMobile = true;
       } else {
-        this.whiteSkip = false;
+        this.visibleMobile = false;
       }
-    })
+
+      if (AnimationConfig.sections[info.section]['background'] !== '#282828') {
+        this.blackSkip = true;
+      } else {
+        this.blackSkip = false;
+      }
+
+      if (!info.horizontal) {
+        this.blackSkip = false;
+      }
+    });
   }
 
-
+  onNavigate() {
+    this.navigate.emit('/contact');
+  }
 
 }

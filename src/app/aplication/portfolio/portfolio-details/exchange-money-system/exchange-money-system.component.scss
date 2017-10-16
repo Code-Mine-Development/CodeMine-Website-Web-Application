@@ -109,6 +109,7 @@ h3 {
   svg {
     position: absolute;
     width: 100%;
+    min-width: 400px;
     &.upper {
       top: 0;
       right: 0;

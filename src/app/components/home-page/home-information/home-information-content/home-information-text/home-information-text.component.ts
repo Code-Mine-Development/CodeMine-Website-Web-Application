@@ -28,6 +28,8 @@ export class HomeInformationTextComponent implements AfterViewInit {
       targetElement.nativeElement.style.color = AnimationConfig.sections[scrollInfo.section]['color'] || ' #282828';
       if(this.checkMobile()){
         targetElement.nativeElement.style.opacity = 1;
+        targetElement.nativeElement.classList.remove('hideTop');
+        targetElement.nativeElement.classList.remove('hideBottom');
       } else {
         targetElement.nativeElement.style.top = currentPosition + 'px';
         targetElement.nativeElement.style.opacity = 1;
@@ -36,7 +38,7 @@ export class HomeInformationTextComponent implements AfterViewInit {
   }
 
   setOnPlaceElements(section) {
-    const textsArray = this.texts.toArray()
+    const textsArray = this.texts.toArray();
     for (const textIndex in textsArray) {
       if (textIndex > section) {
         this.hideBottom(textsArray[textIndex]);
@@ -47,8 +49,11 @@ export class HomeInformationTextComponent implements AfterViewInit {
   }
 
   hideBottom(element) {
+    element.nativeElement.classList.remove('hideTop');
+    element.nativeElement.classList.remove('hideBottom');
     if(this.checkMobile()){
       element.nativeElement.style.opacity = 0;
+      element.nativeElement.classList.add('hideBottom');
     } else {
       element.nativeElement.style.top = window.innerHeight + 'px';
       element.nativeElement.style.opacity = 0;
@@ -57,8 +62,11 @@ export class HomeInformationTextComponent implements AfterViewInit {
   }
 
   hideTop(element) {
+    element.nativeElement.classList.remove('hideTop');
+    element.nativeElement.classList.remove('hideBottom');
     if(this.checkMobile()){
       element.nativeElement.style.opacity = 0;
+      element.nativeElement.classList.add('hideTop');
     } else {
       element.nativeElement.style.top = (-element.nativeElement.offsetHeight) + 'px';
       element.nativeElement.style.opacity = 0;

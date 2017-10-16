@@ -112,31 +112,31 @@
     "features": {
       "title": "We create",
       "solutionToBusines": {
-        "title": "Business Solutions",
+        "title": "Rozwiązania dla biznesu",
         "description": "Rozwiązania problemów nie zawsze są oczywiste – z tego względu pomożemy Ci znaleźć złoty środek, pomagający usprawnić procesy i polepszyć wydajność w Twojej firmie."
       },
       "internalApps": {
-        "title": "Internal Apps",
+        "title": "Aplikacje wewnętrzne",
         "description": "Oferujemy wydajne i responsywne, zaawansowane aplikacje dla Twojej firmy, oparte na najnowszych technologiach i możliwe do integracji z systemami enterprise."
       },
       "B2Capplications": {
-        "title": "B2C Applications",
+        "title": "Aplikacje B2C",
         "description": "Zaprojektujemy nowoczesne systemy aplikacji internetowych dla Twoich klientów, które możemy także zintegrować z mediami społecznościowymi czy systemami płatności."
       },
       "socialNetworking": {
-        "title": "Social Networking",
+        "title": "Sieci społecznościowe",
         "description": "Sieci społecznościowe to dla nas nie problem – posiadamy doświadczenie zarówno w ich budowaniu, jak i rozwiązywaniu towarzyszących im problemów."
       },
       "TVApps": {
-        "title": "TV Apps",
+        "title": "Aplikacje TV",
         "description": "Jeśli masz pomysł na aplikację dla Apple TV - zgłoś się do nas! Jesteśmy otwarci na wyzwania i przeanalizujemy każdą Twoją koncepcję."
       },
       "desktopApplications": {
-        "title": "Desktop Applications",
+        "title": "Aplikacje desktop",
         "description": "Projektujemy aplikacje desktopowe dla systemów Windows, Linux i MacOS X, charakteryzujące się wysokim stopniem kompatybilności, stabilności oraz bezpieczeństwa."
       },
       "mobileApps": {
-        "title": "Mobile Apps",
+        "title": "Aplikacje mobilne",
         "description": "Tworzymy aplikacje mobilne dedykowane systemom iOS oraz Android, dostosowane z jednej strony do Twoich wymagań, a z drugiej – do aktualnych trendów."
       },
       "openForNew": {
@@ -426,7 +426,7 @@
     "sthWentWrong": "Coś poszło nie tak ...",
     "form": {
       "require": "To pole jest wymagane",
-      "pattern": "format emaila jest nieprawidowy",
+      "pattern": "Format emaila jest nieprawidowy",
       "sthWentWrong": "Niepoprawna zawartość pola"
     }
   },

@@ -6,6 +6,7 @@ import {LocalizeRouterService} from 'localize-router';
 import {Router} from '@angular/router';
 import {PreviousPositionService} from '../../../shared/services/previous-position.service';
 import {OfferThumbnailsComponent} from '../../../shared/ui-elements/offer-thumbnails/offer-thumbnails.component';
+import {SharedModule} from '../../../shared/shared.module';
 
 
 describe('ToolsComponent', () => {
@@ -19,7 +20,8 @@ describe('ToolsComponent', () => {
   beforeEach(async(() => {
     TestBed.configureTestingModule({
       imports: [
-        TranslateModule.forRoot()
+        TranslateModule.forRoot(),
+        SharedModule
       ],
       declarations: [
         ToolsComponent,

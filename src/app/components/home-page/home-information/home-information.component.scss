@@ -10,7 +10,7 @@
 
 .skip {
   position: absolute;
-  color: #282828;
+  color: #ffffff;
   bottom: 20px;
   left: 50%;
   transform: translateX(-50%);
@@ -19,23 +19,35 @@
   border: 0;
   cursor: pointer;
   outline: none;
+  @media #{$phone} {
+    left: 15px;
+    top: 60px;
+    height: 50px;
+    transform: none;
+    visibility: hidden;
+    padding: 0;
+    &.mobileVisible {
+      visibility: visible;
+    }
+  }
   svg {
     margin-top: 5px;
-    width: 32px;
+    width: 28px;
     display: block;
+    @media #{$tablet-media-landscape}{
+      margin-top: 3px;
+    }
   }
   @media #{$tablet-media} {
     bottom: 2px;
   }
-  @media #{$phone} {
+  polyline {
+    transition: stroke .5s
+  }
+  &.black {
+    color: #282828;
     polyline {
-      transition: stroke .5s
-    }
-    &.white {
-      color: #ffffff;
-      polyline {
-        stroke: #ffffff;
-      }
+      stroke: #282828;
     }
   }
   &.hidden {

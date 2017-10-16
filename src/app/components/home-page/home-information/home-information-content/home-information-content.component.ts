@@ -7,18 +7,22 @@ import {EventManagerService} from '../../../../shared/services/event-manager.ser
 @Component({
   selector: 'app-home-information-content',
   templateUrl: './home-information-content.component.html',
-  styleUrls: ['./home-information-content.component.scss']
+  styleUrls: ['./home-information-content.component.scss'],
+  providers: [
+    ScrollToService
+  ]
 })
 export class HomeInformationContentComponent implements OnInit {
 
   @ViewChild('scrollableBox', {read: ElementRef}) scrollableBox: ElementRef;
   @ViewChild('followBox', {read: ElementRef}) followBox: ElementRef;
+  @ViewChild('homeBox', {read: ElementRef}) homeBox: ElementRef;
 
   @HostBinding('class.box') boxContainer;
   @HostBinding('class.hidden_motto') hideMotto;
   @HostBinding('class.followBox') followBoxClass;
 
-  @Output() skip = new EventEmitter();
+  @Output() navigate = new EventEmitter();
 
   duration: number;
   shaftPosition = 0;
@@ -70,15 +74,17 @@ export class HomeInformationContentComponent implements OnInit {
   }
 
   calculateShaftPosition() {
-    if (window.innerHeight * 1.7 > window.innerWidth) {
-      this.shaftPosition = -((window.innerHeight * 1.7 - window.innerWidth ) / 2);
+    const width = window.innerWidth,
+      height = this.homeBox.nativeElement.offsetHeight;
+    if (height * 1.7 > width) {
+      this.shaftPosition = -((height * 1.7 - width ) / 2);
       this.hideMotto = false;
     }
-    if (window.innerHeight * 1.15 > window.innerWidth) {
-      this.shaftPosition = -((window.innerHeight * 1.15 - window.innerWidth ) / 2);
+    if (height * 1.15 > width) {
+      this.shaftPosition = -((height * 1.15 - width ) / 2);
       this.hideMotto = true;
     }
-    if (window.innerHeight * 1.7 < window.innerWidth) {
+    if (height * 1.7 < width) {
       this.shaftPosition = 0;
       this.hideMotto = false;
     }
@@ -126,5 +132,9 @@ export class HomeInformationContentComponent implements OnInit {
         this.scrollService.scroll(targetPosition, 'top', this.scrollableBox.nativeElement)
       }
     })
+  }
+
+  navigateToContact() {
+    this.navigate.emit();
   }
 }

@@ -111,7 +111,6 @@ export class DrawBackgroundService {
     const canvas2 = canvasRef2.nativeElement;
     const ctx2 = canvas2.getContext('2d');
     const triangle2 = document.getElementById('triangle1');
-    console.log(triangle2);
     canvas2.width = window.innerWidth;
     canvas2.height = triangle2.offsetHeight;
 

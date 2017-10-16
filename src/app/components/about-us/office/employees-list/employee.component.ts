@@ -58,7 +58,6 @@ export class EmployeeComponent implements OnInit {
     if(!this.clicked){
       this.eventManager.emit('click', this.person);
     } else {
-      console.log('test');
       this.eventManager.emit('click', null)
     }
   }
@@ -73,7 +72,6 @@ export class EmployeeComponent implements OnInit {
   }
 
   onClick(person: Employees) {
-    console.log(person);
     this.clicked = person === this.person;
     this.onHover(person);
     if (this.detectMobile() && this.clicked) {

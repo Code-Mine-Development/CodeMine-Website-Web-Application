@@ -11,6 +11,8 @@ export class PageNotFoundComponent implements AfterViewInit {
   private animation;
 
   ngAfterViewInit() {
+    setTimeout( () => {
+    }, 1000);
     this.animation = new Vivus('svgPlaceholder', {type:'oneByOne', duration: 250,file: 'assets/images/404.svg'});
   }
 }

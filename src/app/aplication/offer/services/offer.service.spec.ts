@@ -27,7 +27,6 @@ describe('OfferServices', () => {
         });
 
         offerServices.getOffer().subscribe((offer) => {
-          console.log(offer[0].title);
           expect(offer[0].title).toBe('We create');
         });
       }));

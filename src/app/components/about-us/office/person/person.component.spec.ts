@@ -3,6 +3,7 @@ import {PersonComponent} from './person.component';
 import {TranslateModule} from '@ngx-translate/core';
 import {EventManager} from '../../../../shared/services/event_manager';
 import {ScrollToService} from '../../../../shared/services/scroll-to.service';
+import {SharedModule} from '../../../../shared/shared.module';
 
 describe('PersonComponent', () => {
   let component: PersonComponent;
@@ -11,14 +12,15 @@ describe('PersonComponent', () => {
   beforeEach(async(() => {
     TestBed.configureTestingModule({
       imports: [
-        TranslateModule.forRoot()
-        ],
-      declarations: [ PersonComponent ],
+        TranslateModule.forRoot(),
+        SharedModule
+      ],
+      declarations: [PersonComponent],
       providers: [
         ScrollToService
       ]
     })
-    .compileComponents();
+      .compileComponents();
   }));
 
   beforeEach(() => {

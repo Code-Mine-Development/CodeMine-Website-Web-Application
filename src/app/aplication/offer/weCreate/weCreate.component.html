@@ -6,7 +6,7 @@
     <div class="col" *ngFor="let item of WeCreate.features">
       <figure class="col-img">
         <figcaption>Offer image</figcaption>
-        <img [src]="item.image" alt="offer Image">
+        <img [src]="detectMobile() ? item.mobile : item.image" [style.width]="detectMobile() ? item.width + '%' : '100%'" alt="offer Image">
       </figure>
       <h3>{{item.name | translate | prettifyText}}</h3>
       <p>{{item.description | translate | prettifyText }}</p>

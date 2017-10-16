@@ -1,7 +1,7 @@
-<app-home-information-content (skip)="skip()"></app-home-information-content>
+<app-home-information-content (navigate)="onNavigate()"></app-home-information-content>
 <app-horizontal></app-horizontal>
-<button (click)="skip()" [class.hidden]="hiddenSkip" [class.white]="whiteSkip"  class="skip">
+<button (click)="skip()" [class.hidden]="hiddenSkip" [class.mobileVisible]="visibleMobile" [class.black]="blackSkip"  class="skip">
   skip <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32.07 20.5">
-    <polyline fill="none" stroke="#282828" stroke-miterlimit = "10" stroke-width="6.32px" points="29.84 2.23 16.04 16.04 2.23 2.23"/>
+    <polyline fill="none" stroke="#ffffff" stroke-miterlimit = "10" stroke-width="6.32px" points="29.84 2.23 16.04 16.04 2.23 2.23"/>
   </svg>
 </button>

@@ -76,7 +76,7 @@ export class ScrollController {
 
   getDistance(){
     if(this.checkMobile()){
-      return AnimationConfig.duration / 2;
+      return AnimationConfig.duration / 4;
     } else {
       return AnimationConfig.duration;
     }

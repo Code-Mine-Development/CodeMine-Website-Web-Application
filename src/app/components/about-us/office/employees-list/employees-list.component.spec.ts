@@ -4,6 +4,7 @@ import {EmployeesListComponent} from './employees-list.component';
 import {EmployeeComponent} from './employee.component';
 import {NoopAnimationsModule} from '@angular/platform-browser/animations';
 import {DOCUMENT} from '@angular/common';
+import {SharedModule} from '../../../../shared/shared.module';
 
 describe('EmployeesListComponent', () => {
   let component: EmployeesListComponent;
@@ -15,7 +16,8 @@ describe('EmployeesListComponent', () => {
     TestBed.configureTestingModule({
       imports: [
         TranslateModule.forRoot(),
-        NoopAnimationsModule
+        NoopAnimationsModule,
+        SharedModule
       ],
       declarations: [EmployeesListComponent, EmployeeComponent],
       providers: [
