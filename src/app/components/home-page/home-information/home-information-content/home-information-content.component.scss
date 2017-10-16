@@ -87,6 +87,7 @@
       overflow: hidden;
       background: #282828;
       header {
+        width: 100%;
         position: absolute;
         left: 0;
         top: 0;
@@ -97,6 +98,9 @@
           height: 100vh;
           pointer-events: none;
           transition: .3s;
+          &.home_bg{
+            min-width: 100%;
+          }
         }
         .logo {
           position: absolute;
