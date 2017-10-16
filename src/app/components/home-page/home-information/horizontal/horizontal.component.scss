@@ -14,12 +14,13 @@
 }
 
 .horizontal {
+  margin: 0;
   list-style: none;
   position: absolute;
   top: 0;
   right: 20px;
   height: 100vh;
-  width: 18px;
+  width: 14px;
   display: flex;
   padding: 60px 0 0;
   box-sizing: border-box;
@@ -29,27 +30,42 @@
   @media #{$phone}{
     display: none;
   }
+  @media #{$tablet-media-landscape}{
+    width: 6px;
+  }
   &.hidden {
     opacity: 0;
     visibility: hidden;
   }
   li {
     width: 100%;
-    height: 18px;
+    height: 14px;
     background: #FFFFFF;
     margin-top: 20px;
     cursor: pointer;
     border: 4px solid transparent;
     box-sizing: border-box;
 
+    @media #{$tablet-media-landscape}{
+      margin-top: 10px;
+      height: 6px;
+    }
+
     transition: background .5s, border .5s;
     &:first-of-type {
       margin-top: 0;
     }
-    &.active{
+    &.active {
       border: 4px solid #ffffff;
-      margin-left: -4px;
       background: transparent;
+      width: 18px;
+      height: 18px;
+      margin-left: -2px;
+      @media #{$tablet-media-landscape}{
+        width: 14px;
+        height: 14px;
+        margin-left: -3px;
+      }
     }
   }
 }

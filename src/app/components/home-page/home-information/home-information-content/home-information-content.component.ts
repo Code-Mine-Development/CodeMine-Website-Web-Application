@@ -77,7 +77,7 @@ export class HomeInformationContentComponent implements OnInit {
     const width = window.innerWidth,
       height = this.homeBox.nativeElement.offsetHeight;
     if (height * 1.7 > width) {
-      this.shaftPosition = -((height * 1.7 - width ) / 2);
+      this.shaftPosition = -((height * 1.3 - width ) / 2);
       this.hideMotto = false;
     }
     if (height * 1.15 > width) {
@@ -85,7 +85,7 @@ export class HomeInformationContentComponent implements OnInit {
       this.hideMotto = true;
     }
     if (height * 1.7 < width) {
-      this.shaftPosition = 0;
+      this.shaftPosition = window.innerWidth < 768 ?  -25 : 0;
       this.hideMotto = false;
     }
   }
