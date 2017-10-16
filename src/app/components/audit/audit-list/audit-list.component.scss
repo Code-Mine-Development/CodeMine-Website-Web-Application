@@ -1,21 +1,141 @@
-h2, h4, span{
-  text-align: center;
-}
-  .column{
-    height: 85%;
-  }
-  div.list{
-    background: #fff;
-    height:100%;
-    box-sizing: border-box;
-    margin-top: 40px;
-    padding: 40px 0;
-    list-style: none;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    box-shadow: 10px 20px 50px 0px rgba(161, 161, 161, 0.35);
+@import '../../../../assets/styles/mediaQueries';
 
-    border-radius:2px;
+:host {
+  display: block;
+  position: relative;
+  overflow: hidden;
+  .quality_svg {
+    position: absolute;
+    left: 0;
+    bottom: 100%;
+    width: 100%;
+    min-width: 600px;
+    //transform: translateY(5%);
   }
+}
+
+.description {
+  padding-top: 100px;
+  display: flex;
+  align-items: center;
+  article, figure {
+    width: 50%;
+  }
+  @media #{$tablet-media} {
+    flex-wrap: wrap;
+    article, figure {
+      width: 100%;
+    }
+  }
+
+  figure {
+    max-width: 400px;
+    margin: 0 auto;
+    img {
+      width: 100%;
+      padding: 0 20px;
+      box-sizing: border-box;
+    }
+    figcaption {
+      display: none;
+    }
+  }
+
+  article {
+    max-width: 520px;
+    padding-right: 40px;
+    box-sizing: border-box;
+    span {
+      margin-top: 20px;
+      display: block;
+    }
+  }
+}
+
+table {
+  margin-top: 100px;
+  width: 100%;
+  border-collapse: collapse;
+  tr {
+    border-bottom: 3px solid #282828;
+    box-sizing: border-box;
+    th, td {
+      padding: 50px 0;
+    }
+    th {
+      text-align: left;
+      font-size: 2.4rem;
+      font-weight: 800;
+      &:first-of-type {
+        padding-left: 20px;
+      }
+    }
+    padding-left: 20px;
+    td {
+      font-size: 1.6rem;
+    }
+
+    td:first-of-type {
+      font-weight: 700;
+      width: 40%;
+      padding-left: 20px;
+      @media #{$phone} {
+        width: 100%;
+        padding-left: 20px;
+        padding-right: 20px;
+        box-sizing: border-box;
+      }
+    }
+
+    td:last-of-type, th:last-of-type {
+      position: relative;
+      width: 60%;
+      padding-left: 60px;
+      box-sizing: border-box;
+      @media #{$phone} {
+        width: 100%;
+        padding-top: 0;
+        padding-left: 20px;
+        padding-right: 20px;
+      }
+    }
+
+    @media #{$phone} {
+      td, th {
+        display: block;
+        width: 100%;
+        padding: 50px 0;
+        app-audit-tick {
+          display: none;
+        }
+      }
+      th:first-of-type{
+        display: none;
+      }
+    }
+  }
+}
+
+.contactInfo {
+  padding: 200px 0;
+  width: 100%;
+  text-align: center;
+  button {
+    margin-top: 40px;
+  }
+}
+
+.usability {
+  background: #FFDE07;
+  position: relative;
+
+  svg {
+    position: absolute;
+    right: 0;
+    bottom: 100%;
+    min-width: 600px;
+  }
+}
+
+
 

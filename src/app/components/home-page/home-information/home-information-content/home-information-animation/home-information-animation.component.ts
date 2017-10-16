@@ -1,4 +1,4 @@
-import {Component, OnInit, Renderer2} from '@angular/core';
+import {Component, OnInit, Renderer2, OnDestroy} from '@angular/core';
 import {ScrollController} from '../../../services/scroll.controller';
 import {AnimationConfig} from '../../../animation.config';
 
@@ -7,10 +7,10 @@ import {AnimationConfig} from '../../../animation.config';
   templateUrl: './home-information-animation.component.html',
   styleUrls: ['./home-information-animation.component.scss']
 })
-export class HomeInformationAnimationComponent implements OnInit {
+export class HomeInformationAnimationComponent implements OnInit, OnDestroy {
+  loadingList = [];
 
   private scrollSubscriber;
-  private loadingList = [];
   private visible = 0;
   private maxLoadingQuantity = 8;
   private loadingQuantity = 0;
@@ -47,10 +47,16 @@ export class HomeInformationAnimationComponent implements OnInit {
     });
   }
 
+  ngOnDestroy() {
+    if(this.scrollSubscriber) {
+      this.scrollSubscriber.unsubscribe();
+    }
+  }
+
   preloadFrames() {
     const tempFileLink = [];
     for (let i = 0; i < AnimationConfig.animationFrames + 1; i++) {
-      tempFileLink.push(this.getFilePath(i*2));
+      tempFileLink.push(this.getFilePath(i));
     }
     this.loadFiles(tempFileLink);
   }

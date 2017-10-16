@@ -8,13 +8,13 @@ import {NoopAnimationsModule} from '@angular/platform-browser/animations';
 import {HeaderComponent} from './header.component';
 import {TranslateModule} from '@ngx-translate/core';
 import {LocalizeRouterService} from 'localize-router';
-
 import {LoadingComponent} from './loadingbar.component';
 import {LogoComponent} from './logo/logo.component';
 import {NavigationComponent} from './navigation/navigation.component';
 import {FullSizeComponent} from './navigation/full-size/full-size.component';
 import {HamburgerComponent} from './navigation/hamburger/hamburger.component';
 import {HomeInformationServices} from '../../components/home-page/services/home-information.service';
+import {SharedModule} from '../../shared/shared.module';
 
 
 @Component({
@@ -55,13 +55,14 @@ describe('HeaderComponent', () => {
         NavigationComponent,
         FullSizeComponent,
         HamburgerComponent,
-        LocalizePipeMock,
+        LocalizePipeMock
       ],
       imports: [
         RouterTestingModule.withRoutes(routes),
         TranslateModule.forRoot(),
         HttpModule,
-        NoopAnimationsModule
+        NoopAnimationsModule,
+        SharedModule
       ],
       providers: [
         HomeInformationServices,
@@ -86,7 +87,6 @@ describe('HeaderComponent', () => {
 
   it('should return 4 links with routing', () => {
     const link = nativeElement.querySelectorAll('header ul li');
-    console.log(link);
     // expect(link.length).toBe(5)
   });
 

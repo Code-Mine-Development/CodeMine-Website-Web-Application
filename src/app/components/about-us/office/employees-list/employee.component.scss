@@ -1,13 +1,8 @@
 @import '../../../../../assets/styles/mediaQueries.scss';
 
 :host {
-  width: 33.33%;
-  display: flex;
-  box-sizing: border-box;
-  padding: 0 10px;
-  align-items: center;
-  margin-top: 20px;
-  cursor: pointer;
+  display: block;
+  width: 33.3%;
   @media #{$tablet-media}{
     width: 50%;
   }
@@ -17,11 +12,47 @@
   @media #{$br1200}{
     width: 25%;
   }
+}
 
+:host > .worker {
+  display: flex;
+  box-sizing: border-box;
+  padding: 0 10px;
+  align-items: center;
+  margin-top: 20px;
+  cursor: pointer;
+  position: relative;
+  width: 100%;
+
+  .right-arrow {
+    position: absolute;
+    right: 5px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 18px;
+    display: none;
+    @media #{$phone} {
+      display: block;
+    }
+    polyline{
+      opacity: 0;
+      transition: opacity .2s;
+    }
+    .visible{
+      opacity: 1;
+    }
+  }
+  @media #{$phone} {
+    padding: 0;
+    margin-top: 15px;
+  }
 }
 
 .image {
   width: 25%;
+  @media #{$phone}{
+    width: 33%;
+  }
   figure {
     position: relative;
     width: 100%;
@@ -74,7 +105,29 @@ section.vcard {
   }
   h3 {
     font-size: 18px;
-    line-height: 0px;
+    line-height: 0;
     font-weight: 700;
+  }
+}
+
+.description {
+  width: 100%;
+  background: #282828;
+  font-weight: normal;
+  color: #ffffff;
+  margin: 0;
+  padding: 0 ;
+  display: none;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height .5s, padding .5s, border .5s;
+  border-bottom: 3px solid transparent;
+  @media #{$phone} {
+    display: block;
+  }
+  &.visible{
+    padding: 10px 0;
+    max-height: 400px;
+    border-bottom: 3px solid #FFDE07;
   }
 }

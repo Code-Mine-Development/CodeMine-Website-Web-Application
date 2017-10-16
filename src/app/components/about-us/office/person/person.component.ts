@@ -1,5 +1,5 @@
 import {Component, HostListener, Input, HostBinding, OnInit, ViewChild, ElementRef, Renderer2} from '@angular/core';
-import {EventManager} from '../event_manager';
+import {EventManager} from '../../../../shared/services/event_manager';
 import {Employees} from '../interfaces/employees.interface';
 import * as Vivus from 'vivus';
 import {ScrollToService} from '../../../../shared/services/scroll-to.service';
@@ -37,11 +37,13 @@ export class PersonComponent implements OnInit {
 
 
   showPerson(person: Employees) {
-    this.visibleElement = person;
-    this.visible = !!person;
-    if (person) {
-      this.scrollToService.scroll(this.element.nativeElement, 'center');
-      this.drawFunnyCover();
+    if(!this.detectMobile()){
+      this.visibleElement = person;
+      this.visible = !!person;
+      if (person) {
+        this.scrollToService.scroll(this.element.nativeElement, 'center');
+        this.drawFunnyCover();
+      }
     }
   }
 
@@ -90,6 +92,11 @@ export class PersonComponent implements OnInit {
         this.animationInstance.reset().stop();
       }
     });
+  }
+
+
+  private detectMobile(){
+    return window.innerWidth <= 576;
   }
 
 }

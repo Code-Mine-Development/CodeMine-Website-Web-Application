@@ -5,6 +5,11 @@
 :host {
   width: 15%;
   outline: none;
+  display: flex;
+  align-items: center;
+}
+.hidden {
+  opacity: 0;
 }
 
 .wrapper {
@@ -13,20 +18,16 @@
   height: 32px;
   display: flex;
   align-items: center;
-  .hidden {
-    opacity: 0;
+  cursor: pointer;
+  transition: opacity .7s ease-in-out;
+  img {
+    height: 100%;
   }
-
   .triangle-svg {
-    cursor: pointer;
-    position: absolute;
-    bottom: 0;
-    right: 0;
-    z-index: 3500;
+    margin-left: 5px;
     width: 32px;
     height: 32px;
     transform-origin: top right;
-    transition: opacity .7s ease-in-out;
   }
   svg {
     width: 32px;

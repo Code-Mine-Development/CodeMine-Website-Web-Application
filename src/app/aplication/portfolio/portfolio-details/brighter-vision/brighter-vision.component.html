@@ -7,10 +7,10 @@
     <img src="assets/images/portfolio-images/brighter_home.png" alt="home image">
   </figure>
   <article class="postBooking">
-    <h3>{{'PORTFOLIO.sectionTitles.postsBooking' | translate}}</h3>
+    <h3>{{'PORTFOLIO.sectionTitles.postsBooking' | translate | prettifyText}}</h3>
     <p>
-      <span>{{'PORTFOLIO.BrighterVision.description.part2' | translate}}</span>
-      <span>{{'PORTFOLIO.BrighterVision.description.part3' | translate}}</span>
+      <span>{{'PORTFOLIO.BrighterVision.description.part2' | translate | prettifyText}}</span>
+      <span>{{'PORTFOLIO.BrighterVision.description.part3' | translate | prettifyText}}</span>
     </p>
   </article>
 </section>
@@ -23,21 +23,22 @@
 <section class="wrapper">
   <section class="container">
     <article>
-      <h3>{{'PORTFOLIO.sectionTitles.businessModel' | translate}}</h3>
+      <h3>{{'PORTFOLIO.sectionTitles.businessModel' | translate | prettifyText}}</h3>
       <p>
-        <span>{{'PORTFOLIO.BrighterVision.description.part4' | translate}}</span>
-        <span>{{'PORTFOLIO.BrighterVision.description.part5' | translate}}</span>
+        <span>{{'PORTFOLIO.BrighterVision.description.part4' | translate | prettifyText}}</span>
+        <span>{{'PORTFOLIO.BrighterVision.description.part5' | translate | prettifyText}}</span>
       </p>
     </article>
     <figure>
       <figcaption>Site presentation video</figcaption>
-      <video autoplay loop src="assets/videos/portfolio-details/brighter_1.mp4" poster="assets/images/portfolio-images/brighter_1.png"></video>
+      <video *ngIf="!mobile" loop src="assets/videos/portfolio-details/brighter_1.mp4" poster="assets/images/portfolio-images/brighter_1.png"></video>
+      <img *ngIf="mobile" src="assets/images/portfolio-images/brighter_1.png" alt="brighter presentation">
     </figure>
     <article>
-      <h3>{{'PORTFOLIO.sectionTitles.arch/tech/tool' | translate}}</h3>
+      <h3>{{'PORTFOLIO.sectionTitles.arch/tech/tool' | translate | prettifyText}}</h3>
       <p>
-        <span>{{'PORTFOLIO.BrighterVision.description.part6' | translate}}</span>
-        <span>{{'PORTFOLIO.BrighterVision.description.part7' | translate}}</span>
+        <span>{{'PORTFOLIO.BrighterVision.description.part6' | translate | prettifyText}}</span>
+        <span>{{'PORTFOLIO.BrighterVision.description.part7' | translate | prettifyText}}</span>
       </p>
     </article>
     <app-architecture [currentTechnologies]="detail.technologies" [currentTools]="detail.tools" [technologies]="technologies" [tools]="tools" (navigate)="navigate($event)"></app-architecture>

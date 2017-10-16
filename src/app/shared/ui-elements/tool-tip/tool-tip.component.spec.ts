@@ -1,7 +1,7 @@
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
-
-import { ToolTipComponent } from './tool-tip.component';
+import {async, ComponentFixture, TestBed} from '@angular/core/testing';
+import {ToolTipComponent} from './tool-tip.component';
 import {TranslateModule} from '@ngx-translate/core';
+import {SharedModule} from '../../shared.module';
 
 describe('ToolTipComponent', () => {
   let component: ToolTipComponent;
@@ -10,11 +10,11 @@ describe('ToolTipComponent', () => {
   beforeEach(async(() => {
     TestBed.configureTestingModule({
       imports: [
-        TranslateModule.forRoot()
-      ],
-      declarations: [ ToolTipComponent ]
+        TranslateModule.forRoot(),
+        SharedModule
+      ]
     })
-    .compileComponents();
+      .compileComponents();
   }));
 
   beforeEach(() => {

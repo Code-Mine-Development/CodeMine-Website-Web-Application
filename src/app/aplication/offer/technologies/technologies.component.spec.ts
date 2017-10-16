@@ -6,6 +6,7 @@ import {TechnologiesComponent} from './technologies.component';
 import {OfferThumbnailsComponent} from '../../../shared/ui-elements/offer-thumbnails/offer-thumbnails.component';
 import {PreviousPositionService} from '../../../shared/services/previous-position.service';
 import {MockTechnologies} from '../../../shared/mocks/technologies.mock';
+import {SharedModule} from '../../../shared/shared.module';
 
 
 describe('TechnologiesComponent', () => {
@@ -19,7 +20,8 @@ describe('TechnologiesComponent', () => {
   beforeEach(async(() => {
     TestBed.configureTestingModule({
       imports: [
-        TranslateModule.forRoot()
+        TranslateModule.forRoot(),
+        SharedModule
       ],
       declarations: [
         TechnologiesComponent,

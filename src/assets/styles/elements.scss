@@ -30,14 +30,14 @@
   &-border-only {
     background: transparent;
     color: #282828;
-    border: 2px solid #282828;
+    border: 4px solid #282828;
   }
   &-hover-yellow-border {
-    border: 2px solid transparent;
+    border: 4px solid transparent;
     transition: .5s;
     &:hover{
       background: transparent;
-      border: 2px solid #FFDE07;
+      border: 4px solid #FFDE07;
       color: #FFDE07;
     }
   }
@@ -47,6 +47,14 @@
     &:hover {
       background: #282828;
       color: #FFDE07;
+    }
+  }
+
+  &-hover-black-fill-white-color {
+    transition: .3s;
+    &:hover {
+      background: #282828;
+      color: #ffffff;
     }
   }
 }

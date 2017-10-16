@@ -1,70 +1,71 @@
 @import "../../../../../assets/styles/mediaQueries";
-.horizontal {
-  color:#333;
-  position: absolute;
-  top: 0;
-  right: 0px;
-  height: 85vh;
-  width: 80px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  margin-top: 90px;
-  text-align: center;
-  overflow: hidden;
-  transition: opacity .5s;
-  &.hidden{
-    opacity:0;
-    visibility: hidden;
-  }
-  p{
-    width:100%;
-    font-size:2rem;
-    font-weight: bold;
-    margin:0;
-  }
-
-  .sliderMain {
-    height: 20vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    @media #{$phone}{
-      height: 25vh;
-    }
-    .sliderTitle{
-      display:block;
-      transform: rotate(-90deg);
-      h3{
-        width: 20vh;
-        font-size:1.2rem;
-        margin:0;
+:host{
+  &.black{
+    .horizontal{
+      li{
+        background: #282828;
+        &.active{
+          background: transparent;
+          border-color: #282828;
+        }
       }
     }
   }
 }
 
-.borderDiv {
-  height: 20vh;
-  width: 1px;
-  border-right: 1px solid #333;
-  margin: auto;
-}
+.horizontal {
+  margin: 0;
+  list-style: none;
+  position: absolute;
+  top: 0;
+  right: 20px;
+  height: 100vh;
+  width: 14px;
+  display: flex;
+  padding: 60px 0 0;
+  box-sizing: border-box;
+  flex-direction: column;
+  justify-content: center;
+  transition: opacity .5s;
+  @media #{$phone}{
+    display: none;
+  }
+  @media #{$tablet-media-landscape}{
+    width: 6px;
+  }
+  &.hidden {
+    opacity: 0;
+    visibility: hidden;
+  }
+  li {
+    width: 100%;
+    height: 14px;
+    background: #FFFFFF;
+    margin-top: 20px;
+    cursor: pointer;
+    border: 4px solid transparent;
+    box-sizing: border-box;
 
-.pointer{
-  cursor: pointer;
-}
+    @media #{$tablet-media-landscape}{
+      margin-top: 10px;
+      height: 6px;
+    }
 
-p:last-child{
-  position:relative;
-  &:after{
-    content:'';
-    width:26px;
-    position:absolute;
-    bottom:150%;
-    left:50%;
-    transform: rotate(-45deg) translateX(-50%);
-    transform-origin: bottom left;
-    border-top:3px solid #282828;
+    transition: background .5s, border .5s;
+    &:first-of-type {
+      margin-top: 0;
+    }
+    &.active {
+      border: 4px solid #ffffff;
+      background: transparent;
+      width: 18px;
+      height: 18px;
+      margin-left: -2px;
+      @media #{$tablet-media-landscape}{
+        width: 14px;
+        height: 14px;
+        margin-left: -3px;
+      }
+    }
   }
 }

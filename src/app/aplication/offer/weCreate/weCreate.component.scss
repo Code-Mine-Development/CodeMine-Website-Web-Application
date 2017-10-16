@@ -11,6 +11,9 @@
   @media #{$tablet}{
     padding: 0 40px;
   }
+  @media #{$br1400Max}{
+    max-width: 100%;
+  }
 }
 
 .header {
@@ -23,11 +26,10 @@
   text-align: center;
   display: flex;
   flex-wrap: wrap;
-  justify-content: flex-start;
+  justify-content: center;
   .col {
     text-align: center;
     box-sizing: border-box;
-    padding: 0 40px;
     display: flex;
     flex-direction: column;
     width: 25%;
@@ -47,48 +49,35 @@
     @media #{$phone}{
       width: 100%;
     }
+
     h3 {
-      padding: 40px 0 40px;
       box-sizing: border-box;
       font-weight: bold;
-      height: 35%;
+      min-height: 60px;
       margin: 0;
-      @media #{$phone}{
-        box-sizing: content-box;
-        padding: 40px 0 20px;
-      }
-    }
-    &:hover {
-      h3 {
-        font-weight: 700;
-      }
     }
     p {
-      height: 60%;
-      margin: 20px 0 40px;
+      margin: 20px 0;
+      @media #{$phone}{
+        margin: 0;
+      }
     }
     .col-img {
-      margin:0;
+      margin: 0;
       width: 100%;
       transition: .5s;
       border: 1px solid transparent;
       box-sizing: border-box;
-      figcaption{
-        display:none;
+      figcaption {
+        display: none;
       }
-      img{
-        width:100%;
+      img {
+        width: 100%;
       }
-      &:hover {
-        border: 1px solid rgba(228, 228, 228, 1);
-        background: rgba(242, 242, 242, 1);
+      @media #{$phone} {
+        padding: 40px;
+        box-sizing: border-box;
       }
-    }
-    .col-text {
-      flex: 1;
-      display: flex;
-      flex-direction: column;
-      justify-content: flex-start;
     }
   }
 }

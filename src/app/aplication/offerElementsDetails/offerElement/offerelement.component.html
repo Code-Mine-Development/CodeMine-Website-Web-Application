@@ -3,7 +3,7 @@
     <polygon points="20,0 50,0 50,30" style="fill:white;"/>
   </svg>
 </div>
-<nav class="navigation">
+<nav class="navigation" [class.whiteBG]="isScrolled">
   <a [routerLink]="'/home' | localize">
     <svg class="home" viewBox="0 0 21 21">
         <polygon fill = "#FFDE07" [attr.points]="'0,21 21,21 0,0'"></polygon>
@@ -15,7 +15,7 @@
   </a>
 </nav>
 <section class="content">
-  <div class="info">
+  <div class="info" #scrollableBox (scroll)="onScroll()">
     <div class="title-row">
       <a [routerLink]="'../' + offerElement.prevUrl | localize">
         <img class="prev" src="assets/images/arrows/angle_left.svg" alt="Previous">
@@ -32,8 +32,8 @@
     <div class="row">
       <div class="col description">
         <div>
-          <div class="title"><h4>{{ 'TECHNOLOGIES.description' | translate}}</h4></div>
-          <div class="desc"><p>{{offerElement.description | translate}}</p></div>
+          <div class="title"><h4>{{ 'TECHNOLOGIES.description' | translate | prettifyText}}</h4></div>
+          <div class="desc"><p>{{offerElement.description | translate | prettifyText}}</p></div>
         </div>
 
       </div>

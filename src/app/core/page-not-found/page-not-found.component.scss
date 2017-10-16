@@ -1,0 +1,25 @@
+:host {
+  display: flex;
+  width: 100%;
+  min-height: 100vh;
+  text-align: center;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 100px 0;
+}
+
+h2 {
+  margin: 0;
+}
+
+p {
+  margin: 20px 0 40px;
+  font-size: 20px;
+}
+
+div {
+  margin-bottom: 40px;
+  width: 90%;
+  max-width: 600px;
+}

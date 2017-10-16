@@ -2,8 +2,8 @@
   <app-portfolio-project [ngClass]="{'right': i %2!==0}" *ngFor="let project of portfolio, let i = index"
                          [project]="project" [technologies]="technologies" [tools]="tools" (onAction)="showDetails(project.link)" (navigate)="navigate($event)"></app-portfolio-project>
   <div class="cta">
-    <h2>{{'PORTFOLIO.addProjectTitle'| translate}}</h2>
-    <button class="btn btn-large btn-border-only btn-hover-black-fill" [routerLink]="['/contact' | localize]">{{'PORTFOLIO.addProjectButton' | translate}}</button>
+    <h2>{{'PORTFOLIO.addProjectTitle'| translate | prettifyText}}</h2>
+    <button class="btn btn-large btn-border-only btn-hover-black-fill" [routerLink]="['/contact' | localize]">{{'PORTFOLIO.addProjectButton' | translate | prettifyText}}</button>
   </div>
 </section>
 

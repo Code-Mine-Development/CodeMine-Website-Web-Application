@@ -1,12 +1,12 @@
 <form (submit)="onSubmit($event, form)" #form="ngForm">
-  <h1>{{'CONTACT.contactUs' | translate}}</h1>
+  <h1>{{'CONTACT.contactUs' | translate | prettifyText }}</h1>
   <fieldset class="name">
-    <legend>{{'CONTACT.myName' | translate}}</legend>
+    <legend>{{'CONTACT.myName' | translate | prettifyText}}</legend>
     <p>
       <span>
-        <label for="contact_name">{{'CONTACT.name' | translate}}</label>
+        <label for="contact_name">{{'CONTACT.name' | translate | prettifyText}}</label>
         <input id="contact_name" type="text" [(ngModel)]="name" name="name" #nameInput="ngModel"
-               [attr.placeholder]="'CONTACT.namePlaceHolder' | translate"
+               [attr.placeholder]="'CONTACT.namePlaceHolder' | translate | prettifyText"
                appToolTip required
         >
         <svg class="status status-center"
@@ -19,9 +19,8 @@
       <span>
         <label for="contact_email">E-mail</label>
         <input id="contact_email" type="text" [(ngModel)]="email" name="email" #emailInput="ngModel"
-               [attr.placeholder]="'CONTACT.emailPlaceHolder' | translate"
-               appToolTip required  pattern="^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,6})+$"
-        >
+               [attr.placeholder]="'CONTACT.emailPlaceHolder' | translate | prettifyText"
+               appToolTip required>
         <svg class="status status-center"
              [class.visible]="!emailInput.pristine || emailInput.touched || form.submitted"
              viewBox="0,0 6,6">
@@ -34,13 +33,12 @@
     </p>
   </fieldset>
   <fieldset class="message">
-    <legend>{{'CONTACT.message' | translate}}</legend>
+    <legend>{{'CONTACT.message' | translate | prettifyText}}</legend>
     <p>
-      <textarea rows="6" #textArea
+      <textarea #textArea
                 #textNgModel="ngModel"
                 name="message"
                 [(ngModel)]="message"
-                (keyup)="adjustTextArea(textArea)"
                 appToolTip
                 required></textarea>
       <svg class="status"
@@ -55,9 +53,9 @@
   </fieldset>
   <fieldset>
     <p class="button_area">
-      <span class="invalid_info" [class.visible]="formStatus === 'invalid'">{{'CONTACT.sthWentWrong' | translate}}</span>
+      <span class="invalid_info" [class.visible]="formStatus === 'invalid'">{{'CONTACT.sthWentWrong' | translate | prettifyText}}</span>
       <button type="submit" class="btn btn-yellow btn-large" [ngClass]="{ 'btn-loading':  formStatus === 'loading', 'btn-fail': formStatus === 'invalid', 'btn-success': formStatus === 'valid'}">
-        {{'CONTACT.send' | translate}}
+        {{'CONTACT.send' | translate | prettifyText}}
         <svg class="btn-status" viewBox="0,0 6,6">
           <polyline class="btn-success-cont" stroke-width="1px" stroke="#FFFFFF" fill="none"
                     points="1,3.5 2.5,4.5 5.5,1.5"></polyline>
@@ -74,9 +72,9 @@
     </p>
   </fieldset>
 </form>
-<a>
-  <p class="navigateToEstimate">
-    <span> > </span>
-    <span>{{'CONTACT.requestEstimate' | translate}}</span>
-  </p>
-</a>
+<!--<a>-->
+  <!--<p class="navigateToEstimate">-->
+    <!--<span> > </span>-->
+    <!--<span>{{'CONTACT.requestEstimate' | translate | prettifyText}}</span>-->
+  <!--</p>-->
+<!--</a>-->

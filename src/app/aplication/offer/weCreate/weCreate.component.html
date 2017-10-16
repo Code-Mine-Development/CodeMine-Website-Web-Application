@@ -1,18 +1,15 @@
 <div class="container">
-  <div class="header"><h2>{{WeCreate.title | translate}}</h2></div>
+  <div class="header"><h2>{{WeCreate.title | translate | prettifyText}}</h2></div>
 
 
   <div class="row">
     <div class="col" *ngFor="let item of WeCreate.features">
       <figure class="col-img">
         <figcaption>Offer image</figcaption>
-        <img [src]="item.image" alt="offer Image">
+        <img [src]="detectMobile() ? item.mobile : item.image" [style.width]="detectMobile() ? item.width + '%' : '100%'" alt="offer Image">
       </figure>
-
-      <div class="col-text">
-        <h3>{{item.name | translate}}</h3>
-        <p>{{item.description | translate }}</p>
-      </div>
+      <h3>{{item.name | translate | prettifyText}}</h3>
+      <p>{{item.description | translate | prettifyText }}</p>
     </div>
   </div>
 </div>

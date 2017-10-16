@@ -1,9 +1,9 @@
 import {async, ComponentFixture, TestBed} from '@angular/core/testing';
-
 import {HamburgerComponent} from './hamburger.component';
 import {PipeTransform, Pipe} from '@angular/core';
 import {TranslateModule} from '@ngx-translate/core';
 import {RouterTestingModule} from '@angular/router/testing';
+import {SharedModule} from '../../../../shared/shared.module';
 
 
 @Pipe({
@@ -24,7 +24,8 @@ describe('HamburgerComponent', () => {
     TestBed.configureTestingModule({
       imports: [
         RouterTestingModule,
-        TranslateModule.forRoot()
+        TranslateModule.forRoot(),
+        SharedModule
       ],
       declarations: [HamburgerComponent, LocalizePipeMock]
     })

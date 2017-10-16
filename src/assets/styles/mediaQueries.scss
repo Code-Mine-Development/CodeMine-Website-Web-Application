@@ -8,12 +8,15 @@ $home-information-vertical-small-mobile: 'only screen and (max-width: 1050px) an
 $mobile: "only screen and (max-width: 760px)";
 
 $phone: "only screen and (max-width: 576px)";
-$tablet-media: "only screen and (max-width: 767px)";
+$tablet-media: "only screen and (max-width: 768px)";
 $computer-max : "only screen and (max-width: 992px)";
 $computer: "only screen and (min-width: 992px)";
 $br1024: 'only screen and (max-width: 1024px)';
 $br1200: "only screen and (min-width: 1200px)";
 $br1400: "only screen and (min-width: 1400px)";
+$br1400Max: "only screen and (max-width: 1400px)";
 
 
-$tablet-media-landscape: "only screen and (max-width: 767px) and (orientation: landscape)"
+$tablet-media-landscape: "only screen and (max-width: 768px) and (orientation: landscape)";
+$tablet-media-portrait: "only screen and (max-width: 768px) and (orientation: portrait)";
+$phone-portrait: "only screen and (max-width: 576px) and (orientation: portrait)";

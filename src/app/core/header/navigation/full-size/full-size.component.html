@@ -10,8 +10,8 @@
         </div>
       </div>
     </li>
-    <li *ngFor="let nav of navigation" routerLinkActive="active">
-      <span *ngIf="!nav.mobile" [routerLink]="'/'+ nav.href | localize">{{ nav.title | translate }}</span>
+    <li *ngFor="let nav of navigation" [class.disabled]="nav.mobile" routerLinkActive="active">
+      <span *ngIf="!nav.mobile"  [routerLink]="'/'+ nav.href | localize">{{ nav.title | translate | prettifyText }}</span>
     </li>
   </ul>
 </div>

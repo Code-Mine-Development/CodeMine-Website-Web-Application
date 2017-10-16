@@ -12,8 +12,8 @@
 
   <section class="container center tools">
     <article>
-      <h3>{{'PORTFOLIO.sectionTitles.tools' | translate}}</h3>
-      <p>{{'PORTFOLIO.Tandarts.description.part2' | translate}}</p>
+      <h3>{{'PORTFOLIO.sectionTitles.tools' | translate | prettifyText}}</h3>
+      <p>{{'PORTFOLIO.Tandarts.description.part2' | translate | prettifyText}}</p>
     </article>
   </section>
 
@@ -23,17 +23,20 @@
   </section>
 
   <section class="container process">
-    <h3>{{'PORTFOLIO.sectionTitles.process' | translate}}</h3>
-    <p>{{'PORTFOLIO.Tandarts.description.part3' | translate}}</p>
-    <p>{{'PORTFOLIO.Tandarts.description.part4' | translate}}</p>
+    <h3>{{'PORTFOLIO.sectionTitles.process' | translate | prettifyText}}</h3>
+    <p>{{'PORTFOLIO.Tandarts.description.part3' | translate | prettifyText}}</p>
+    <p>{{'PORTFOLIO.Tandarts.description.part4' | translate | prettifyText}}</p>
   </section>
 
   <section class="end-images">
     <figure>
-      <video class="video-first" autoplay loop src="assets/videos/portfolio-details/tandarts_1.mp4"
+      <video class="video-first" *ngIf="!mobile" loop src="assets/videos/portfolio-details/tandarts_1.mp4"
              poster="assets/images/portfolio-images/tandarts_mov_1.png"></video>
-      <video class="video-second" autoplay loop src="assets/videos/portfolio-details/tandarts_2.mp4"
+      <img class="video-first" *ngIf="mobile" src="assets/images/portfolio-images/tandarts_mov_1.png" alt="tandarts presentation">
+      <video class="video-second" *ngIf="!mobile" loop src="assets/videos/portfolio-details/tandarts_2.mp4"
              poster="assets/images/portfolio-images/tandarts_mov_1.png"></video>
+      <img class="video-second" *ngIf="mobile" src="assets/images/portfolio-images/tandarts_mov_1.png" alt="tandarts presentation">
+
       <img class="background" src="assets/images/portfolio-images/tandarts_image.png" alt="tandarts image">
 
     </figure>

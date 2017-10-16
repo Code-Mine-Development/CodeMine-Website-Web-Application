@@ -7,6 +7,8 @@ import {SocialServiceComponent} from './social-service.component';
 import {ContactService} from '../../aplication/contact/services/contact.service';
 import {MockCompany} from '../../shared/mocks/company.mock';
 import {CopyToClipboardService} from '../../shared/services/copy-to-clipboard.service';
+import {SharedModule} from '../../shared/shared.module';
+import {EventManagerService} from '../../shared/services/event-menager.service';
 
 @Directive({
   selector: '[appScrollTo]'
@@ -22,7 +24,8 @@ describe('FooterComponent', () => {
   beforeEach(async(() => {
     TestBed.configureTestingModule({
       imports: [
-        TranslateModule.forRoot()
+        TranslateModule.forRoot(),
+        SharedModule
       ],
       declarations: [FooterComponent, ScrollDirective, SocialServiceComponent],
       providers: [
@@ -36,7 +39,8 @@ describe('FooterComponent', () => {
             copy: (text) => true,
             detectMobile: () => true
           }
-        }
+        },
+        EventManagerService
       ]
 
     })

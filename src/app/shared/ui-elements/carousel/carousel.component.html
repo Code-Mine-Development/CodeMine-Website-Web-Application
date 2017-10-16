@@ -1,9 +1,10 @@
 <app-carousel-element *ngFor="let project of parsedPortfolio; let index = index"
-                     [open]="visibleIndex"
-                     [index]="index"
-                     [direction]="direction"
-                     [project]="project"
-(navigate)="onNavigate($event)"></app-carousel-element>
+                      [open]="visibleIndex"
+                      [index]="index"
+                      [direction]="direction"
+                      [project]="project"
+                      [disabledNavigation]="disableNavigation"
+                      (navigate)="onNavigate($event)"></app-carousel-element>
 
 <nav *ngIf="!disableNavigation">
   <figure class="next" (click)="nextProject()">
@@ -15,7 +16,8 @@
     <img src="assets/images/arrows/angle_left-white.svg" alt="left arrow">
   </figure>
   <ul class="dots">
-    <li *ngFor="let project of parsedPortfolio; let index = index" (click)="setProject(index)" [class.active]="visibleIndex === index">
+    <li *ngFor="let project of parsedPortfolio; let index = index" (click)="setProject(index)"
+        [class.active]="visibleIndex === index">
       <div>
         <img [src]="project.mainImage.mini" alt="">
       </div>
@@ -24,5 +26,6 @@
   </ul>
 </nav>
 
-<h3 *ngIf="!disableNavigation" >{{'PORTFOLIO.sectionTitles.nextProject' | translate}}</h3>
+<h3 [class.center]="disableNavigation">{{(disableNavigation ? 'PORTFOLIO.ourPortfolio'
+  :'PORTFOLIO.sectionTitles.nextProject') | translate | prettifyText}}</h3>
 

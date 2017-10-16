@@ -2,7 +2,7 @@
   <img [src]="project.mainImage.big" alt="brighter big photo">
 </figure>
 
-<article (click)="onNavigate()">
-  <h2>{{project.title | translate}}</h2>
-  <p> {{project.subTitle | translate}}</p>
+<article (click)="onNavigate()" [class.full]="disabledNavigation">
+  <h2>{{project.title | translate | prettifyText}}</h2>
+  <p> {{project.subTitle | translate | prettifyText}}</p>
 </article>

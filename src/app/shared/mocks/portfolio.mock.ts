@@ -6,7 +6,8 @@ export const MockPortfolio = [
     'description': 'PORTFOLIO.MidOceanBrands.shortDescription',
     'mainImage': {
       'big': 'assets/images/portfolio-images/midocean-big.jpg',
-      'small': 'assets/images/portfolio-images/midocean-small.jpg'
+      'small': 'assets/images/portfolio-images/midocean-small.jpg',
+      'mini': 'test'
     },
     'thumbnail': '../assets/icons/midocean/MidOcean.svg',
     'tools': [

@@ -8,7 +8,7 @@
   "employees": [
     {
       "name": "Przemek",
-      "position": "COO",
+      "position": "PHP developer",
       "description": "PEOPLE.przemyslaw.description",
       "deskCoordinate": {
         "top": 20.95,
@@ -63,7 +63,7 @@
     },
     {
       "name": "Michał",
-      "position": "CSO",
+      "position": "Java developer",
       "description": "PEOPLE.michal.description",
       "image": {
         "normal": "_V3B0322.jpg",
@@ -95,27 +95,8 @@
       }
     },
     {
-      "name": "Radek",
-      "position": "CEO",
-      "description": "PEOPLE.radoslaw.description",
-      "image": {
-        "normal": "_V3B0411.jpg",
-        "funny": "_V3B0408.jpg",
-        "funnyCover": "radek.svg"
-      },
-      "deskCoordinate": {
-        "top": 56.7,
-        "left": 6,
-        "variant": 1,
-        "hide": [
-          "leftBottom",
-          "topFull"
-        ]
-      }
-    },
-    {
       "name": "Adam",
-      "position": "CTO",
+      "position": "Software architect",
       "description": "PEOPLE.adamg.description",
       "image": {
         "normal": "_V3B9999.jpg",
@@ -133,7 +114,7 @@
     },
     {
       "name": "Tomek",
-      "position": "CFO",
+      "position": "Java developer",
       "description": "PEOPLE.tomasz.description",
       "since": 4,
       "image": {

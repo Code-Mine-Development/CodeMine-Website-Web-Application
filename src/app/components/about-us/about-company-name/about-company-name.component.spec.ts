@@ -1,7 +1,7 @@
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
-
-import { AboutCompanyNameComponent } from './about-company-name.component';
+import {async, ComponentFixture, TestBed} from '@angular/core/testing';
+import {AboutCompanyNameComponent} from './about-company-name.component';
 import {TranslateModule} from '@ngx-translate/core';
+import {SharedModule} from '../../../shared/shared.module';
 
 describe('AboutCompanyComponent', () => {
   let component: AboutCompanyNameComponent;
@@ -10,7 +10,8 @@ describe('AboutCompanyComponent', () => {
   beforeEach(async(() => {
     TestBed.configureTestingModule({
       imports: [
-        TranslateModule.forRoot()
+        TranslateModule.forRoot(),
+        SharedModule
       ],
       declarations: [ AboutCompanyNameComponent ]
     })

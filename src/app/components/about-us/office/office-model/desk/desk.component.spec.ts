@@ -1,10 +1,9 @@
 import {async, ComponentFixture, TestBed} from '@angular/core/testing';
 import {Component} from '@angular/core';
 import {TranslateModule} from '@ngx-translate/core';
-
 import {DeskComponent} from './desk.component';
 import {MockCompany} from '../../../../../shared/mocks/company.mock';
-import {EventManager} from '../../event_manager';
+import {EventManager} from '../../../../../shared/services/event_manager';
 
 
 @Component({

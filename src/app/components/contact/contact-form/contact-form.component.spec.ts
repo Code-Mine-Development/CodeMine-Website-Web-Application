@@ -1,9 +1,9 @@
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
-
-import { ContactFormComponent } from './contact-form.component';
+import {async, ComponentFixture, TestBed} from '@angular/core/testing';
+import {ContactFormComponent} from './contact-form.component';
 import {FormsModule} from '@angular/forms';
 import {TranslateModule} from '@ngx-translate/core';
 import {ContactFormService} from '../service/contact-form.service';
+import {SharedModule} from '../../../shared/shared.module';
 
 describe('ContactFormComponent', () => {
   let component: ContactFormComponent;
@@ -13,7 +13,8 @@ describe('ContactFormComponent', () => {
     TestBed.configureTestingModule({
       imports: [
         FormsModule,
-        TranslateModule.forRoot()
+        TranslateModule.forRoot(),
+        SharedModule
       ],
       declarations: [ ContactFormComponent ],
       providers: [

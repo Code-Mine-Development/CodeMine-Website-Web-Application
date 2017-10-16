@@ -1,7 +1,19 @@
-:host{
+@import "../../../../../../assets/styles/mediaQueries";
+
+:host {
   display: flex;
   align-items: center;
+  @media #{$tablet-media-portrait}{
+    height: 75%;
+    overflow: hidden;
+    width: 100%;
+    figure img {
+      width: 220%;
+      transform: translate(-0.5%, 7%)
+    }
+  }
 }
+
 figure {
   margin: 0;
   figcaption {

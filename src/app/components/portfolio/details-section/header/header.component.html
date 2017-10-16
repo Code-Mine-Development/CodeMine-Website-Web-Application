@@ -1,12 +1,12 @@
 <header>
   <div class="title">
-    <h1>{{title | translate}}</h1>
+    <h1>{{title | translate | prettifyText}}</h1>
     <figure *ngIf="logo">
       <img [src]="logo" alt="project logo">
-      <figcaption>{{title | translate}}</figcaption>
+      <figcaption>{{title | translate | prettifyText}}</figcaption>
     </figure>
   </div>
   <div class="text">
-    <p>{{description | translate}}</p>
+    <p>{{description | translate | prettifyText}}</p>
   </div>
 </header>

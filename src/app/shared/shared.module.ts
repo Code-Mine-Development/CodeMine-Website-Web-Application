@@ -6,7 +6,8 @@ import {ScrollToService} from './services/scroll-to.service';
 import {ToolTipDirective} from './directives/tool-tip.directive';
 import {ToolTipComponent} from './ui-elements/tool-tip/tool-tip.component';
 import {CopyToClipboardService} from './services/copy-to-clipboard.service';
-
+import {PrettifyTextPipe} from './pipe/prettify-text.pipe';
+import {EventManagerService} from './services/event-manager.service';
 @NgModule({
   imports: [
     TranslateModule
@@ -15,16 +16,19 @@ import {CopyToClipboardService} from './services/copy-to-clipboard.service';
     CommonModule,
     TranslateModule,
     ScrollToDirective,
-    ToolTipDirective
+    ToolTipDirective,
+    PrettifyTextPipe
   ],
   providers: [
     ScrollToService,
-    CopyToClipboardService
+    CopyToClipboardService,
+    EventManagerService
   ],
   declarations: [
     ScrollToDirective,
     ToolTipDirective,
-    ToolTipComponent
+    ToolTipComponent,
+    PrettifyTextPipe
   ],
   entryComponents: [
     ToolTipComponent

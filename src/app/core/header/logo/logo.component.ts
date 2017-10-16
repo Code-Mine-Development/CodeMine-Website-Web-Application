@@ -5,8 +5,9 @@ import {LocalizeRouterService} from 'localize-router';
 @Component({
   selector: 'app-logo',
   template: `
-    <div class="wrapper">
-      <div class="triangle-svg" [class.hidden]="!logoVisible">
+    <div class="wrapper" [class.hidden]="!logoVisible">
+      <img src="assets/images/small_logo.svg" alt="CM">
+      <div class="triangle-svg">
         <svg viewBox="0 0 25 25">
           <polygon fill="#FFDE07" [class.hidden] = 'homeVisible' [attr.points]="'0,25 25,25 0,0'"></polygon>
           <polygon fill="#FFDE07" [class.hidden] = '!homeVisible' [attr.points]="'0,10 0,25 25,25 25,10 12.5,0'"></polygon>

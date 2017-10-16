@@ -1,34 +1,21 @@
-import {async, ComponentFixture, TestBed, fakeAsync, tick} from '@angular/core/testing';
+import {async, ComponentFixture, TestBed} from '@angular/core/testing';
 import {Location} from '@angular/common';
-
 import {PageNotFoundComponent} from './page-not-found.component';
-import {Component} from '@angular/core';
+import {SharedModule} from '../../shared/shared.module';
+import {TranslateModule} from '@ngx-translate/core';
 import {RouterTestingModule} from '@angular/router/testing';
-import {Routes} from '@angular/router';
 
-@Component({
-    selector: 'app-fake-page-not-found',
-    template: '<button class="fakeButton" routerLink="/wrong"></button>',
-})
-class FakeWrongComponent {}
-
-export const routes: Routes = [
-    {path: 'not-found', component: PageNotFoundComponent},
-    {path: '**', redirectTo: '/not-found'}
-];
 
 describe('PageNotFoundComponent', () => {
     let component: PageNotFoundComponent;
     let fixture: ComponentFixture<PageNotFoundComponent>;
-    let fakeComponent: FakeWrongComponent;
-    let fakeFixture: ComponentFixture<FakeWrongComponent>;
     let location: Location;
     let nativeElement;
 
     beforeEach(async(() => {
         TestBed.configureTestingModule({
-            imports: [RouterTestingModule.withRoutes(routes)],
-            declarations: [FakeWrongComponent, PageNotFoundComponent]
+            imports: [RouterTestingModule, SharedModule, TranslateModule.forRoot()],
+            declarations: [ PageNotFoundComponent]
         })
             .compileComponents();
     }));
@@ -36,9 +23,8 @@ describe('PageNotFoundComponent', () => {
     beforeEach(() => {
         fixture = TestBed.createComponent(PageNotFoundComponent);
         component = fixture.componentInstance;
-        fakeFixture = TestBed.createComponent(FakeWrongComponent);
-        fakeComponent = fixture.componentInstance;
-        nativeElement = fakeFixture.debugElement.nativeElement;
+        nativeElement = fixture.debugElement.nativeElement;
+        console.log(nativeElement);
         fixture.detectChanges();
         location = TestBed.get(Location);
     });
@@ -46,10 +32,4 @@ describe('PageNotFoundComponent', () => {
     it('should be created', () => {
         expect(component).toBeTruthy();
     });
-
-    it('page url should contain "page-not-found"', fakeAsync(() => {
-        nativeElement.querySelector('button').click();
-        tick();
-        expect(location.path()).toEqual('/not-found');
-    }));
 });

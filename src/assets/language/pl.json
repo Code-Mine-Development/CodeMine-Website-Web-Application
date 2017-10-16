@@ -1,28 +1,40 @@
 {
   "AUDIT": {
-    "title": "Audyt",
+    "title": "Audyty",
     "move": "przejdź",
+    "tasks": "Zadania",
+    "benefits": "Korzyści",
+    "wantKnowDetails": "Chcesz poznać więcej szczegółów ?",
+    "navigate": "Przejdź do kontaktu",
     "quality": {
       "title": "Jakość kodu",
-      "description": "Otrzymując gotowe oprogramowanie, firmy zazwyczaj akceptują je bez jakiejkolwiek weryfikacji jakości kodu, bezpieczeństwa, elastyczności, zgodności z wymaganiami oraz wszystkich innych czynników. To nic dziwnego – klienci zwykle nie posiadają odpowiedniej wiedzy czy też czasu.Jako specjaliści, możemy zostać pośrednikiem między Twoją firmą, a Twoim wykonawcą, oceniając zastosowane przez niego rozwiązania. Naszym zadaniem będzie sprawdzenie zgodności kodu ze standardami, a także ocena jego wydajności i wielkość długu technologicznego, przeprowadzając audyty zastosowanej technologii, architektury informacji, kodu źródłowego, skalowalności oraz wydajności aplikacji.",
-      "task_1": "Badanie kodu źródłowego pod kątem zgodności z standardami",
+      "description": {
+        "part_1": "Otrzymując gotowe oprogramowanie, firmy zazwyczaj akceptują je bez jakiejkolwiek weryfikacji jakości kodu, bezpieczeństwa, elastyczności, zgodności z wymaganiami oraz wszystkich innych czynników. To nic dziwnego – klienci zwykle nie posiadają odpowiedniej wiedzy czy też czasu.",
+        "part_2": "Jako specjaliści, możemy zostać pośrednikiem między Twoją firmą, a Twoim wykonawcą, oceniając zastosowane przez niego rozwiązania.",
+        "part_3": "Naszym zadaniem będzie sprawdzenie zgodności kodu ze standardami, a także ocena jego wydajności i wielkość długu technologicznego, przeprowadzając audyty zastosowanej technologii, architektury informacji, kodu źródłowego, skalowalności oraz wydajności aplikacji."
+      },
+      "task_1": "Badanie zgodności kodu źródłowego ze standardami",
       "task_2": "Badanie kodu pod względem poprawności wykorzystania wzorców projektowych",
-      "task_3": "Badanie kodu pod względem poprawności wykorzystania wzorców projektowych",
+      "task_3": "Badanie sposobu wykorzystania zewnętrznych bibliotek",
       "task_4": "Badanie elastyczności kodu w perspektywie ewolucji wymagań biznesowych",
       "task_5": "Badania realnego nakładu zasobów",
       "benefit_1": "Identyfikacja problemów dotyczących czytelności kodu wraz z listą rekomendacji w związku z ich poprawą, przyczyniającą się do zwiększenia wydajności zespołowej pracy nad projektem",
-      "benefit_2": "Identyfikacja problemów związanych z błędnym zastosowaniem wzorców projektowych, negatywnie rzutujących na jakość projektu oraz jego bezpieczny rozwój przyczyniająca się do przyspieszenia tempa pracy nad projektem i znacznych oszczędności w przyszłości",
+      "benefit_2": "Identyfikacja problemów związanych z błędnym zastosowaniem wzorców projektowych, negatywnie rzutujących na jakość projektu oraz jego bezpieczny rozwój; przyczyniająca się do przyspieszenia tempa pracy nad projektem i znacznych oszczędności w przyszłości",
       "benefit_3": "Ocena wykorzystania zewnętrznych bibliotek, w tym zabezpieczania projektu przed dokonującymi się w nich zmianami, wpływająca na wydajność oraz neutralizację problemów z bezpieczeństwem",
       "benefit_4": "Ocena poziomu elastyczności narażonego na modyfikacje kodu, pozwalająca podjąć decyzję o jego zwiększeniu, przyczyniającego się z kolei do oszczędzenia czasu i pieniędzy",
       "benefit_5": "Ocena wielkości nakładu zasobów ludzkich i czasowych, niezbędnych do wykonania projektu, pozwalająca określić realia otrzymanej od wykonawcy wyceny"
     },
     "usability": {
       "title": "Użyteczność",
-      "description": "Audyt usability ma na celu kompleksową analizę użyteczności i funkcjonalności strony internetowej, aplikacji czy systemu. Podczas tego procesu sprawdzamy przede wszystkim intuicyjność strony, łatwość poruszania po niej, przydatność dla internautów i ogólne wrażenia związane z korzystania z usługi. Bierzemy pod uwagę wszystkie czynniki mające wpływ na użyteczność takie jak: architektura informacji, nawigacja, strukturę funkcjonalności dodatkowo sprawdzamy wszystkie ekrany oraz procesy myślowe. Stosujemy najlepsze techniki w zależności od rodzaju powierzonego problemu takie jak: Indywidualne wywiady pogłębione, Card Sorting, Paper prototyping, Eyetracking,",
-      "task_1": "Badanie zgodności z heurystykami",
+      "description": {
+        "part_1": "Celem audytu usability jest kompleksowa analiza użyteczności i funkcjonalności strony internetowej, aplikacji czy systemu. Podczas badania sprawdzamy głównie intuicyjność, łatwość poruszania się po interfejsie oraz przydatność dla użytkowników, analizując zwłaszcza architekturę informacji i nawigację. Ocenie poddajemy wszystkie ekrany i procesy myślowe, odnotowując również ogólne wrażenia z korzystania z usługi.",
+        "part_2": "Do badania wykorzystujemy najskuteczniejsze techniki, do których należą indywidualne wywiady pogłębione, card sorting, paper prototyping, eyetracking, zdalne badania z użytkownikami, testy AB czy clicktracking. Ich wybór uwarunkowany jest specyfiką postawionego problemu.",
+        "part_3": "Efektem badania jest lista rekomendacji, stworzona w oparciu o naszą wiedzę i doświadczenie. Do zidentyfikowanych niewłaściwych praktyk czy elementów, dopasowujemy konkretne zalecenia, mające poprawić ich użyteczność."
+      },
+      "task_1": "Badanie zgodności z heurystykam",
       "task_2": "Badanie efektywności wdrożonych scenariuszy użycia",
       "task_3": "Badanie zgodności ze standardami UI",
-      "benefit_1": "Ocena zgodności aplikacji/ strony z przyjętymi norami, opatrzona opisami heurystyk",
+      "benefit_1": "Ocena zgodności aplikacji/ strony z przyjętymi normami, opatrzona opisami heurystyk",
       "benefit_2": "Ocena architektury informacji pod kątem intuicyjności wykonywanych czynności",
       "benefit_3": "Ocena wydajności kanałów komunikacji (web/ mobile) oraz zgodności interfejsów z wytycznymi dla danej platformy"
     }
@@ -100,31 +112,31 @@
     "features": {
       "title": "We create",
       "solutionToBusines": {
-        "title": "Solutions to your business problems",
+        "title": "Rozwiązania dla biznesu",
         "description": "Rozwiązania problemów nie zawsze są oczywiste – z tego względu pomożemy Ci znaleźć złoty środek, pomagający usprawnić procesy i polepszyć wydajność w Twojej firmie."
       },
       "internalApps": {
-        "title": "Internal Apps",
+        "title": "Aplikacje wewnętrzne",
         "description": "Oferujemy wydajne i responsywne, zaawansowane aplikacje dla Twojej firmy, oparte na najnowszych technologiach i możliwe do integracji z systemami enterprise."
       },
       "B2Capplications": {
-        "title": "B2C Applications",
+        "title": "Aplikacje B2C",
         "description": "Zaprojektujemy nowoczesne systemy aplikacji internetowych dla Twoich klientów, które możemy także zintegrować z mediami społecznościowymi czy systemami płatności."
       },
       "socialNetworking": {
-        "title": "Social Networking",
+        "title": "Sieci społecznościowe",
         "description": "Sieci społecznościowe to dla nas nie problem – posiadamy doświadczenie zarówno w ich budowaniu, jak i rozwiązywaniu towarzyszących im problemów."
       },
       "TVApps": {
-        "title": "TV Apps",
+        "title": "Aplikacje TV",
         "description": "Jeśli masz pomysł na aplikację dla Apple TV - zgłoś się do nas! Jesteśmy otwarci na wyzwania i przeanalizujemy każdą Twoją koncepcję."
       },
       "desktopApplications": {
-        "title": "Desktop Applications",
+        "title": "Aplikacje desktop",
         "description": "Projektujemy aplikacje desktopowe dla systemów Windows, Linux i MacOS X, charakteryzujące się wysokim stopniem kompatybilności, stabilności oraz bezpieczeństwa."
       },
       "mobileApps": {
-        "title": "Mobile Apps",
+        "title": "Aplikacje mobilne",
         "description": "Tworzymy aplikacje mobilne dedykowane systemom iOS oraz Android, dostosowane z jednej strony do Twoich wymagań, a z drugiej – do aktualnych trendów."
       },
       "openForNew": {
@@ -152,6 +164,7 @@
   "PORTFOLIO": {
     "addProjectTitle": "Dodaj swój projekt",
     "addProjectButton": "Napisz do nas",
+    "ourPortfolio": "Nasze Portfolio",
     "checkPortfolio": "sprawdź nasze portfolio",
     "starInfo": "Dane przedstawione na ilustracjach oraz filmach są przykładowe",
     "showMore": "Więcej",
@@ -171,7 +184,7 @@
       "workingScheme": "Schemat działania aplikacji",
       "businessModel": "Model biznesowy",
       "implementation": "Proces wdrażania",
-      "arch/tech/tool": "Architektura/języki/narzędzia",
+      "arch/tech/tool": "Architektura / języki / narzędzia",
       "microServices": "Mikroserwisy",
       "exchangeProcess": "Proces wymiany walut"
     },
@@ -180,7 +193,7 @@
       "subTitle": "Aplikacja dla amerykańskich terapeutów",
       "shortDescription": "Aplikacja skierowana do amerykańskich terapeutów, pozwalająca na przeglądanie puli dostępnych postów oraz ich publikację w formie bloga.",
       "description": {
-        "part1": "Brighter Vision Growth Platform jest odpowiedzią na zjawisko braku czasu poświęconego na marketing – jak chociażby prowadzenie bloga, zauważalnego wśród amerykańskich terapeutów, którzy całą swoją energię przeznaczają na zarządzanie własną praktyką, dbając o każdy, nawet najmniejszy szczegół.",
+        "part1": "Brighter Vision Growth Platform jest narzędziem marketingowym skierowanym do amerykańskich terapeutów, którzy przeznaczając całą energię na zarządzanie własną praktyką, zwykle nie znajdują już czasu na działania służące jej promocji.",
         "part2": "Aplikacja pozwala na przeglądanie gotowych, dostępnych postów oraz na ich publikację na blogu opartym o Wordpressa w wybranym przez siebie terminie. Jej sercem jest prezentujący zarówno opublikowane, jak i przyszłe posty, ogromny kalendarz, szczegółowo dopracowany pod kątem UI oraz UX.",
         "part3": "Dzięki dobrej kategoryzacji, a także świetnemu mechanizmowi rezerwowania postów, użytkownik jest w stanie zarezerwować wybraną publikację przy pomocy zaledwie trzech kliknięć.",
         "part4": "Zważywszy na model biznesowy, który obok darmowych, zakłada również płatne posty, aplikacja została zintegrowana z systemem płatności Chargify. Użytkownik ma do wyboru wykupienie pojedynczych publikacji lub też miesięcznych subskrypcji. Posty darmowe przyznawane są z kolei miesięcznie, mając określony limit.",
@@ -329,7 +342,7 @@
     "about_as": "o nas",
     "portfolio": "portfolio",
     "offer": "oferta",
-    "audit": "audyt",
+    "audit": "audyty",
     "contact": "kontakt",
     "home": "strona główna",
     "pl": "polski",
@@ -405,7 +418,7 @@
     "emailPlaceHolder": "podaj swój adres email",
     "clickToCopy": "Naciśnij aby skopiować",
     "clickToNavigate": "Naciśnij aby przejść do Google Maps",
-    "copied": "Skopiowano!",
+    "copied": "Skopiowano",
     "message": "wiadomość",
     "hello": "Cześć,",
     "send": "Wyślij",
@@ -413,7 +426,7 @@
     "sthWentWrong": "Coś poszło nie tak ...",
     "form": {
       "require": "To pole jest wymagane",
-      "pattern": "format emaila jest nieprawidowy",
+      "pattern": "Format emaila jest nieprawidowy",
       "sthWentWrong": "Niepoprawna zawartość pola"
     }
   },
@@ -427,7 +440,7 @@
       "description": "Jako najpopularniejszy obiektowy język programowania, Java charakteryzuje się przede wszystkim niezwykłą sprawnością i szybkością działania, przy jednoczesnym zachowaniu wysokiego stopnia bezpieczeństwa. Niemniej jednak, na komfort pracy z tym językiem wpływają także jego łatwa składnia, wielowątkowość i silne typowanie. W Code Mine szczególnie cenimy go sobie również za promowanie dobrych praktyk programowania obiektowego oraz łatwy dostęp do wiedzy. Co więcej, Java świetnie sprawdza się przy implementacji aplikacji typu enterprise, co dla nas, jako firmy dostarczającej rozwiązania biznesowe szyte na miarę, ma ogromne znaczenie. Jej stosowanie doceniane jest nawet przez samych klientów, którzy podkreślają jej stabilność i popularność. Z tego względu, Java jest naszym numerem jeden, wykorzystywanym zwłaszcza przy aplikacjach serwerowych."
     },
     "javascript": {
-      "description": "JavaScript to stworzony pod koniec lat 90. język skryptowy, który choć głównie wykorzystywany jest do tworzenia stron internetowych, może także wzbogacać komponenty programów desktopowych, serwery www, aplikacje mobilne czy nawet dokumenty PDF. Charakteryzując się prostą składnią, uniwersalnością i asynchronicznością, język ten stanowi nasze podstawowe narzędzie do tworzenia software'u. Najczęściej sięgamy po niego przy aplikacjach klienckich do naszych systemów backendowych, używając  AngularJS czy ReactJS, jak również przy multiplatformowych aplikacjach mobilnych, tworzonych we frameworku IONIC."
+      "description": "JavaScript to stworzony pod koniec lat 90. Język skryptowy, który choć głównie wykorzystywany jest do tworzenia stron internetowych, może także wzbogacać komponenty programów desktopowych, serwery www, aplikacje mobilne czy nawet dokumenty PDF. Charakteryzując się prostą składnią, uniwersalnością i asynchronicznością, język ten stanowi nasze podstawowe narzędzie do tworzenia software'u. Najczęściej sięgamy po niego przy aplikacjach klienckich do naszych systemów backendowych, używając  AngularJS czy ReactJS, jak również przy multiplatformowych aplikacjach mobilnych, tworzonych bazując na frameworku IONIC."
     },
     "php": {
       "description": "Będący uniwersalnym językiem skryptowym, PHP został stworzony z myślą o stronach i aplikacjach internetowych. Dzięki znacznemu rozwojowi, jaki odnotował na przestrzeni ostatnich lat, staje się językiem coraz bardziej dojrzałym. Ze względu na niskie wymagania hostingowe, PHP odznacza się łatwością jego wdrożenia, toteż często wykorzystujemy go przy naszych projektach. Warto podkreślić, że pracujemy zawsze w jego najnowszej wersji, rozwijając przy tym istniejące biblioteki Open Source. "
@@ -532,16 +545,21 @@
       "description": "Jako jeden z najbardziej wspieranych przez społeczność, a zarazem najbardziej zaawansowanych frameworków, Zend jest wiodącym narzędziem wykorzystywanym w naszych projektach. Decyduje o tym wiele czynników, z których na pierwszy plan wychodzi jego modułowość, pozwalająca na niemal stuprocentowe przystosowanie architektury frameworku do naszych potrzeb. Nie bez znaczenia jest również jego fundament – ze względu na swoją powszechność, język PHP, w którym Zend został napisany, przyczynia się do uniknięcia wszelkich problemów związanych z hostingiem systemu. W swoim zespole posiadamy certyfikowanych architektów frameworku, którzy oprócz bazowania na dostępnych rozwiązaniach, tworzą własne biblioteki, w pełni dostosowane do opisywanego narzędzia. Nasi programiści są ponadto aktywnymi kontrybutorami zarówno w tym, jak i innych projektach, mogąc pochwalić się zainicjowaniem w biurze Code Mine współpracy Zend Framework 3 z Apigility. To właśnie biblioteki tego projektu umożliwiają nam tworzenie zgodnych ze standardami systemów back-endowych dostarczających REST Api, które stanowią największą liczbę naszych projektów opartych na frameworku."
     }
   },
+  "404": {
+    "lost": "Zgubiłeś się?",
+    "siteNotExist": "Strona, której szukasz nie jest dostępna",
+    "homeNavigate": "Przejdź na stronę główną"
+  },
   "PAGETITLE": {
     "prefix": "Code-Mine"
   },
 
   "home": "home",
-  "aboutus": "onas",
+  "aboutus": "o-nas",
   "offer": "oferta",
   "contact": "kontakt",
   "audit": "audyty",
-  "not-found": "nie-ma",
+  "not-found": "nie-znaleziono",
   "tools": "narzedzia",
   "technologies": "technologie"
 }

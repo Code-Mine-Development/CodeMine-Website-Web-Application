@@ -1,11 +1,11 @@
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
-
-import { OfficeModelComponent } from './office-model.component';
+import {async, ComponentFixture, TestBed} from '@angular/core/testing';
+import {OfficeModelComponent} from './office-model.component';
 import {DeskComponent} from './desk/desk.component';
 import {DoorComponent} from './door/door.component';
 import {PersonComponent} from '../person/person.component';
 import {TranslateModule} from '@ngx-translate/core';
 import {NoopAnimationsModule} from '@angular/platform-browser/animations';
+import {SharedModule} from '../../../../shared/shared.module';
 
 describe('OfficeModelComponent', () => {
   let component: OfficeModelComponent;
@@ -15,7 +15,8 @@ describe('OfficeModelComponent', () => {
     TestBed.configureTestingModule({
       imports: [
         TranslateModule.forRoot(),
-        NoopAnimationsModule
+        NoopAnimationsModule,
+        SharedModule
       ],
       declarations: [ OfficeModelComponent, DeskComponent, DoorComponent, PersonComponent ]
     })

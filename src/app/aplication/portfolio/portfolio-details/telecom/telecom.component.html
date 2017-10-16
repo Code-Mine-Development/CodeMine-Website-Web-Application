@@ -6,44 +6,44 @@
     <img src="assets/images/portfolio-images/telecom_1.png" alt="world map">
   </figure>
   <article class="postBooking">
-    <h3>{{'PORTFOLIO.sectionTitles.postsBooking' | translate}}</h3>
-    <p>{{'PORTFOLIO.telecom.description.part2' | translate}}</p>
+    <h3>{{'PORTFOLIO.sectionTitles.postsBooking' | translate | prettifyText}}</h3>
+    <p>{{'PORTFOLIO.telecom.description.part2' | translate | prettifyText}}</p>
   </article>
 </section>
 <section class="icons">
   <section class="container">
     <figure>
       <img src="assets/images/portfolio-images/telecom_world.svg" alt="world icon" class="placeholder">
-      <figcaption>{{'PORTFOLIO.telecom.description.part3' | translate}}</figcaption>
+      <figcaption>{{'PORTFOLIO.telecom.description.part3' | translate | prettifyText}}</figcaption>
     </figure>
     <figure>
       <img src="assets/images/portfolio-images/telecom_database.svg" alt="database icon" class="placeholder">
-      <figcaption>{{'PORTFOLIO.telecom.description.part4' | translate}}</figcaption>
+      <figcaption>{{'PORTFOLIO.telecom.description.part4' | translate | prettifyText}}</figcaption>
     </figure>
     <figure>
       <img src="assets/images/portfolio-images/telecom_gear.svg" alt="gear icons" class="placeholder">
-      <figcaption>{{'PORTFOLIO.telecom.description.part5' | translate}}</figcaption>
+      <figcaption>{{'PORTFOLIO.telecom.description.part5' | translate | prettifyText}}</figcaption>
     </figure>
   </section>
 </section>
 <section class="container">
   <article class="build">
-    <h3>{{'PORTFOLIO.sectionTitles.build' | translate}}</h3>
-    <p>{{'PORTFOLIO.telecom.description.part6' | translate}}</p>
+    <h3>{{'PORTFOLIO.sectionTitles.build' | translate | prettifyText}}</h3>
+    <p>{{'PORTFOLIO.telecom.description.part6' | translate | prettifyText}}</p>
   </article>
 </section>
 <section class="ourRole">
   <article class="container">
-    <h3>{{'PORTFOLIO.sectionTitles.ourRole' | translate}}</h3>
+    <h3>{{'PORTFOLIO.sectionTitles.ourRole' | translate | prettifyText}}</h3>
     <p>
-      <span>{{'PORTFOLIO.telecom.description.part7' | translate}}</span>
-      <span>{{'PORTFOLIO.telecom.description.part8' | translate}}</span>
+      <span>{{'PORTFOLIO.telecom.description.part7' | translate | prettifyText}}</span>
+      <span>{{'PORTFOLIO.telecom.description.part8' | translate | prettifyText}}</span>
     </p>
   </article>
 </section>
 <section class="container">
   <section class="workingScheme">
-    <h3>{{'PORTFOLIO.sectionTitles.workingScheme' | translate}}</h3>
+    <h3>{{'PORTFOLIO.sectionTitles.workingScheme' | translate | prettifyText}}</h3>
     <figure>
       <figcaption>working scheme</figcaption>
       <img *ngIf="!mobile" src="assets/images/portfolio-images/telecom_3.svg" alt="working scheme image">
@@ -51,7 +51,7 @@
     </figure>
   </section>
   <section class="architecture">
-    <h4>{{'PORTFOLIO.sectionTitles.technologies' | translate}}</h4>
+    <h4>{{'PORTFOLIO.sectionTitles.technologies' | translate | prettifyText}}</h4>
     <app-architecture [tools]="tools" [technologies]="technologies" [currentTools]="detail.tools"
                       [currentTechnologies]="detail.technologies"></app-architecture>
   </section>

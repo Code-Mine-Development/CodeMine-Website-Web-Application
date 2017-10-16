@@ -25,7 +25,7 @@
     "description": "TOOLS.ApacheKafka.description",
     "icon": "apachekafka/apachekafka.svg",
     "img": "assets/images/tools/CM-0033_Apache Kafka.jpg",
-    "color": "#494949"
+    "color": "#7A7A7A"
   },
   "axurerp": {
     "title": "Axure RP",
@@ -179,7 +179,7 @@
     "description": "TOOLS.Symfony.description",
     "icon": "symfony/symfony.svg",
     "img": "assets/images/tools/CM-0004_Symfony.jpg",
-    "color": "#494949"
+    "color": "#7A7A7A"
   },
   "traviscl": {
     "title": "TravisCL",

@@ -45,7 +45,7 @@ figure {
   figcaption {
     display: none;
   }
-  video {
+  video, img {
     width: 100%;
     pointer-events: none;
   }
@@ -63,8 +63,9 @@ figure {
 svg {
   position: absolute;
   width: 100%;
+  min-width: 470px;
   top: 0;
-  left: 0;
+  right: 0;
 }
 
 .address, .info {
@@ -112,7 +113,7 @@ svg {
   }
   .hover {
     position: absolute;
-    font-size: 1.6rem;
+    font-size: 1.2rem;
     font-weight: bold;
     bottom: 50%;
     left: 0;
@@ -127,6 +128,9 @@ svg {
       animation-fill-mode: forwards;
       animation-duration: .5s;
     }
+    @media #{$phone}{
+      display: none;
+    }
   }
 
   address {
@@ -137,6 +141,11 @@ svg {
     span {
       text-align: center;
       display: block;
+    }
+    @media #{$phone}{
+      & > span {
+        display: none;
+      }
     }
   }
 }

@@ -1,30 +1,20 @@
-import {AfterViewInit, Component, HostListener, Input, OnInit} from '@angular/core';
+import {Component, Output, EventEmitter} from '@angular/core';
 
 
 @Component({
-  selector: 'app-list',
+  selector: 'app-audit-list',
   templateUrl: 'aduit-list.component.html',
   styleUrls: ['audit-list.component.scss'],
 
 })
+export class AuditListComponent {
 
-export class AuditListComponent implements OnInit, AfterViewInit {
-  @Input() listData;
-  @Input() source;
-  @Input() title: string;
-  @Input() listTitle: string;
+  @Output('navigate') navigate = new EventEmitter();
 
-  constructor() {
-
+  onNavigate() {
+    this.navigate.emit();
   }
 
-
-  ngOnInit() {
-  };
-
-  ngAfterViewInit() {
-
-  }
 }
 
 

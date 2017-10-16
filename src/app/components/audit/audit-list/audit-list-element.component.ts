@@ -6,7 +6,7 @@ import {Component, HostBinding, HostListener, ElementRef, AfterViewInit, Input} 
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 17.41 12.03">
      <polyline class="tick" points=" 0.71 4.53 6.8 10.62 16.71 0.71"/>
     </svg>
-    {{ (source === 0 ? item.task : item.benefit) | translate }}
+    {{ (source === 0 ? item.task : item.benefit) | translate | prettifyText }}
   `,
   styles: [`
     @keyframes jumpIn {

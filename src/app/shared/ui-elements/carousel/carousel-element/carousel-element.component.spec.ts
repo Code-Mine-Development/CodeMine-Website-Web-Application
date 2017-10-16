@@ -4,6 +4,7 @@ import {TranslateModule} from '@ngx-translate/core';
 import {NoopAnimationsModule} from '@angular/platform-browser/animations';
 import {CopyToClipboardService} from '../../../services/copy-to-clipboard.service';
 import {MockPortfolio} from '../../../mocks/portfolio.mock';
+import {SharedModule} from '../../../shared.module';
 
 describe('CarouselElementComponent', () => {
   let component: CarouselElementComponent;
@@ -14,7 +15,8 @@ describe('CarouselElementComponent', () => {
       declarations: [ CarouselElementComponent ],
       imports: [
         TranslateModule.forRoot(),
-        NoopAnimationsModule
+        NoopAnimationsModule,
+        SharedModule
       ],
       providers: [
         {provide: CopyToClipboardService, useValue: {

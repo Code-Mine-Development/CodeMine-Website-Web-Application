@@ -13,6 +13,7 @@ export class ScrollController {
   private smoothScroll = new ScrollSmooth();
   currentElement = 1;
   clearScrollTop = 0;
+  scrollEnd = false;
 
   constructor(private homeInformation: HomeInformationServices) {
   }
@@ -23,6 +24,11 @@ export class ScrollController {
     this.clearScrollTop = startScrollTop;
     this.homeInformation.setScrollTop(scrollTop);
     this.smoothScroll.setScroll(animationScrollTop);
+  }
+
+  setScrollEnd(value) {
+    console.log(value);
+    this.scrollEnd = value;
   }
 
   getScrollTop() {
@@ -39,7 +45,7 @@ export class ScrollController {
   }
 
   private getFrame(scrollTop: number) {
-    const scrollFactor = scrollTop / AnimationConfig.duration;
+    const scrollFactor = scrollTop / this.getDistance();
     return Math.round(scrollFactor * AnimationConfig.animationFrames);
   }
 
@@ -59,7 +65,7 @@ export class ScrollController {
       return {section: 0, title: 'HOME.howWeWork'};
     } else if (this.clearScrollTop <= 0) {
       return null
-    } else if (section < 0) {
+    } else if (this.scrollEnd) {
       return {section: AnimationConfig.sections.length + 1, title: 'HOME.hireUs'}
     } else {
       return {section: section + 1, title: AnimationConfig.sections[section].short}
@@ -72,6 +78,18 @@ export class ScrollController {
 
   getNavigateStream() {
     return this.navigateStream;
+  }
+
+  getDistance() {
+    if (this.checkMobile()) {
+      return AnimationConfig.duration / 4;
+    } else {
+      return AnimationConfig.duration;
+    }
+  }
+
+  private checkMobile() {
+    return window.innerWidth <= 768
   }
 
 }

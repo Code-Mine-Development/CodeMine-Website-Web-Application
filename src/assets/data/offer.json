@@ -5,42 +5,58 @@
       {
         "name": "OFFER.features.solutionToBusines.title",
         "image": "../assets/images/offer_images/c.svg",
-        "description": "OFFER.features.solutionToBusines.description"
+        "mobile": "../assets/images/offer_images/c-mobile.svg",
+        "description": "OFFER.features.solutionToBusines.description",
+        "width": 70
       },
       {
         "name": "OFFER.features.internalApps.title",
         "image": "../assets/images/offer_images/o.svg",
-        "description": "OFFER.features.internalApps.description"
+        "mobile": "../assets/images/offer_images/o-mobile.svg",
+        "description": "OFFER.features.internalApps.description",
+        "width": 48
       },
       {
         "name": "OFFER.features.B2Capplications.title",
         "image": "../assets/images/offer_images/d.svg",
-        "description": "OFFER.features.B2Capplications.description"
+        "mobile": "../assets/images/offer_images/d-mobile.svg",
+        "description": "OFFER.features.B2Capplications.description",
+        "width": 100
       },
       {
         "name": "OFFER.features.socialNetworking.title",
-        "image": "../assets/images/offer_images/e.svg",
-        "description": "OFFER.features.socialNetworking.description"
+        "image": "../assets/images/offer_images/e_new.svg",
+        "mobile": "../assets/images/offer_images/e-mobileYellow.svg",
+        "description": "OFFER.features.socialNetworking.description",
+        "width": 66
       },
       {
         "name": "OFFER.features.TVApps.title",
         "image": "../assets/images/offer_images/m.svg",
-        "description": "OFFER.features.TVApps.description"
+        "mobile": "../assets/images/offer_images/m-mobile.svg",
+        "description": "OFFER.features.TVApps.description",
+        "width": 93
       },
       {
         "name": "OFFER.features.desktopApplications.title",
         "image": "../assets/images/offer_images/i.svg",
-        "description": "OFFER.features.desktopApplications.description"
+        "mobile": "../assets/images/offer_images/i-mobile.svg",
+        "description": "OFFER.features.desktopApplications.description",
+        "width": 100
       },
       {
         "name": "OFFER.features.mobileApps.title",
         "image": "../assets/images/offer_images/n.svg",
-        "description": "OFFER.features.mobileApps.description"
+        "mobile": "../assets/images/offer_images/n-mobile.svg",
+        "description": "OFFER.features.mobileApps.description",
+        "width": 51
       },
       {
         "name": "OFFER.features.openForNew.title",
-        "image": "../assets/images/offer_images/e_last.svg",
-        "description": "OFFER.features.openForNew.description"
+        "image": "../assets/images/offer_images/e.svg",
+        "mobile": "../assets/images/offer_images/e-mobile.svg",
+        "description": "OFFER.features.openForNew.description",
+        "width": 70
       }
     ]
   }

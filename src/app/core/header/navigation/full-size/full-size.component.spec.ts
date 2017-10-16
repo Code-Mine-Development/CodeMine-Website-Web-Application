@@ -3,6 +3,7 @@ import {FullSizeComponent} from './full-size.component';
 import {Pipe, PipeTransform} from '@angular/core';
 import {RouterTestingModule} from '@angular/router/testing';
 import {TranslateModule} from '@ngx-translate/core';
+import {SharedModule} from '../../../../shared/shared.module';
 
 @Pipe({
   name: 'localize'
@@ -21,7 +22,8 @@ describe('FullSizeComponent', () => {
     TestBed.configureTestingModule({
       imports: [
         RouterTestingModule,
-        TranslateModule.forRoot()
+        TranslateModule.forRoot(),
+        SharedModule
       ],
       declarations: [FullSizeComponent, LocalizePipeMock]
     })

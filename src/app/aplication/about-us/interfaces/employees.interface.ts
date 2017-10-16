@@ -12,4 +12,3 @@ export interface Employees {
   };
   deskCoordinate: DeskCoordinate
 }
-

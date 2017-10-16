@@ -19,8 +19,6 @@
       "bash",
       "html5",
       "swify",
-      "typescript",
-      "java",
       "php"
     ],
     "homePage": true
@@ -44,7 +42,8 @@
     ],
     "technologies": [
       "php",
-      "javascript"
+      "javascript",
+      "bash"
     ],
     "homePage": true
   },
@@ -65,7 +64,9 @@
       "postgresql"
     ],
     "technologies": [
-      "java"
+      "java",
+      "javascript",
+      "bash"
     ],
     "homePage": true
   },
@@ -132,8 +133,7 @@
       "bash",
       "html5",
       "swify",
-      "typescript",
-      "java",
+      "javascript",
       "php"
     ],
     "homePage": true
@@ -154,7 +154,8 @@
     ],
     "technologies": [
       "php",
-      "javascript"
+      "javascript",
+      "bash"
     ],
     "homePage": true
   },

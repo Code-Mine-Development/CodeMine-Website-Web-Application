@@ -5,10 +5,10 @@
     <img src="assets/images/portfolio-images/zorgIndicator-1.png" alt="home Image">
   </figure>
   <article class="text_content">
-    <h3>{{"PORTFOLIO.sectionTitles.ourRole" | translate}}</h3>
+    <h3>{{"PORTFOLIO.sectionTitles.ourRole" | translate | prettifyText}}</h3>
     <p>
-      <span>{{"PORTFOLIO.ZorgIndicator.description.part4" | translate}}</span>
-      <span>{{"PORTFOLIO.ZorgIndicator.description.part5" | translate}}</span>
+      <span>{{"PORTFOLIO.ZorgIndicator.description.part4" | translate | prettifyText}}</span>
+      <span>{{"PORTFOLIO.ZorgIndicator.description.part5" | translate | prettifyText}}</span>
     </p>
   </article>
 </section>
@@ -17,16 +17,17 @@
   <figure>
     <figcaption>Presentation ZorgIndicator site</figcaption>
     <img src="assets/images/portfolio-images/zorgIndicator-2.png" alt="ZorgIndicator site presentation">
-    <video autoplay loop src="assets/videos/portfolio-details/ZorgIndicator_video.mp4" poster="assets/images/portfolio-images/zorgIndicator.mov.png"></video>
+    <video *ngIf="!mobile" loop src="assets/videos/portfolio-details/ZorgIndicator_video.mp4" poster="assets/images/portfolio-images/zorgIndicator.mov.png"></video>
+    <img *ngIf="mobile" class="video_alt" src="assets/images/portfolio-images/zorgIndicator.mov.png" alt="zorgindicator presentation">
   </figure>
 </section>
 
 <section class="container">
   <article class="text_content">
-    <h3>{{"PORTFOLIO.sectionTitles.businessModel" | translate}}</h3>
+    <h3>{{"PORTFOLIO.sectionTitles.businessModel" | translate | prettifyText}}</h3>
     <p>
-      <span>{{"PORTFOLIO.ZorgIndicator.description.part2" | translate}}</span>
-      <span>{{"PORTFOLIO.ZorgIndicator.description.part3" | translate}}</span>
+      <span>{{"PORTFOLIO.ZorgIndicator.description.part2" | translate | prettifyText}}</span>
+      <span>{{"PORTFOLIO.ZorgIndicator.description.part3" | translate | prettifyText}}</span>
     </p>
   </article>
   <figure class="last_image">

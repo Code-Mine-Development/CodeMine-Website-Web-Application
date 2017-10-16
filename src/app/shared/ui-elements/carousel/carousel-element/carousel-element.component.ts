@@ -34,15 +34,12 @@ export class CarouselElementComponent implements OnChanges {
   @Input() open: number;
   @Input() project: Portfolio;
   @Input() direction: string;
+  @Input() disabledNavigation: boolean;
 
   @Output() navigate = new EventEmitter();
 
-
   @HostBinding('class.center') center;
   animate = 'left';
-
-  constructor() {
-  }
 
   ngOnChanges() {
     if (this.index === this.open) {

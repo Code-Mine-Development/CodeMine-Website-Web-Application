@@ -11,16 +11,16 @@
       <img src="assets/images/portfolio-images/smarthome_handle.svg" alt="handle Image">
     </figure>
     <article>
-      <h3>{{'PORTFOLIO.sectionTitles.ourRole' | translate}}</h3>
-      <p>{{'PORTFOLIO.SmartHome.description.part2' | translate}}</p>
+      <h3>{{'PORTFOLIO.sectionTitles.ourRole' | translate | prettifyText}}</h3>
+      <p>{{'PORTFOLIO.SmartHome.description.part2' | translate | prettifyText}}</p>
     </article>
   </div>
 </section>
 
 <section class="implementation container">
   <article>
-    <h3>{{'PORTFOLIO.sectionTitles.implementation' | translate }}</h3>
-    <p>{{'PORTFOLIO.SmartHome.description.part3' | translate}}</p>
+    <h3>{{'PORTFOLIO.sectionTitles.implementation' | translate | prettifyText }}</h3>
+    <p>{{'PORTFOLIO.SmartHome.description.part3' | translate | prettifyText}}</p>
   </article>
   <figure>
     <figcaption>Implementation images</figcaption>
@@ -30,7 +30,7 @@
 
 <section class="architecture">
   <section class="container">
-    <h3>{{'PORTFOLIO.sectionTitles.technologies' | translate}}</h3>
+    <h3>{{'PORTFOLIO.sectionTitles.technologies' | translate | prettifyText}}</h3>
     <app-architecture [tools]="tools" [currentTools]="detail?.tools" [technologies]="technologies"
                       [currentTechnologies]="detail?.technologies" (navigate)="navigate($event)"></app-architecture>
   </section>

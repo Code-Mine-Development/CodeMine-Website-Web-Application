@@ -5,6 +5,7 @@
 body {
   margin: 0;
   color: #282828;
+  -webkit-appearance: none;
 }
 
 app-audit {
@@ -16,7 +17,7 @@ app-offer {
 }
 
 .container {
-  display:block;
+  display: block;
   margin-right: auto;
   margin-left: auto;
   padding-right: 15px;
@@ -45,9 +46,31 @@ p {
   font-weight: 700;
 }
 
-
-
-
-
-
+.loadingBeforeApp {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100vh;
+  background: #282828;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  figure {
+    width: 100%;
+    margin:0;
+    max-width: 220px;
+    figcaption {
+      display: none;
+    }
+    img {
+      width: 100%;
+    }
+  }
+  p {
+    font-size: 2.4rem;
+    color: #ffffff;
+  }
+}
 
