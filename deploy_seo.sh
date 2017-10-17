@@ -7,16 +7,15 @@ cd $(dirname "$0")
 source "deploy_seo_routes.sh"
 
 # Should be provided by build server
-# S3_KEY=...
-# S3_SECRET=...
-# BUCKET=...
+S3_KEY="AKIAIUMP4SVZDVMIPJXA"
+S3_SECRET="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"
+BUCKET="code-mine-seo-test"
 
 SERVICE="http://localhost:3000/"
 DIST="http://localhost:9000"
 DIR="/tmp/s3build"
 DATADIR="$DIR/data"
 
-ng build --prod
 php -S localhost:9000 -t dist/ &
 
 git clone https://github.com/prerender/prerender.git $DIR
@@ -46,6 +45,5 @@ mv "$DATADIR/en/home.html" "$DATADIR/en/index.html"
 # RECURSIVE UPLOAD FILES TO S3 BUCKET
 AWS_ACCESS_KEY_ID=$S3_KEY AWS_SECRET_ACCESS_KEY=$S3_SECRET aws s3 cp $DATADIR s3://$BUCKET --recursive
 
-killall node
 killall php
 rm -rf $DIR
