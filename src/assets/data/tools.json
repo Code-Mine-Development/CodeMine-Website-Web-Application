@@ -34,8 +34,8 @@
     "img": "assets/images/tools/CM-0015_AxureRP.jpg",
     "color": "#a702b1"
   },
-  "circlecl": {
-    "title": "CircleCL",
+  "circleci": {
+    "title": "CircleCI",
     "description": "TOOLS.CircleCl.description",
     "icon": "circlecl/circlecl.svg",
     "img": "assets/images/tools/CM-0031_Circle CI.jpg",

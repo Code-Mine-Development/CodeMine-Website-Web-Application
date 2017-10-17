@@ -3,7 +3,6 @@
 @import '../../../../assets/styles/mediaQueries';
 
 :host {
-  width: 15%;
   outline: none;
   display: flex;
   align-items: center;
@@ -14,7 +13,6 @@
 
 .wrapper {
   position: relative;
-  width: 32px;
   height: 32px;
   display: flex;
   align-items: center;

@@ -65,7 +65,7 @@
     cursor: pointer;
     z-index: 30;
     pointer-events: none;
-    text-shadow: 0 0 30px #282828;
+    text-shadow: 0 0 100px #282828;
     &.full{
       @media #{$phone}{
         width: 100%;

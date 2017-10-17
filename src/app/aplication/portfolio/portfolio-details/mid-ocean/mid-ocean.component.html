@@ -3,7 +3,7 @@
                                 [description]="'PORTFOLIO.MidOceanBrands.description.part1'"
                                 [logo]="detail.thumbnail"></app-portfolio-details-header>
   <section class="video">
-    <video *ngIf="!mobile" loop [src]="'../assets/videos/portfolio-details/midocean_1.mp4'"
+    <video *ngIf="!mobile" loop autoplay [src]="'http://code-mine.com/videos/midocean_1.mp4'"
            [attr.poster]="'../assets/images/portfolio-images/midocean_1.mov.jpg'"></video>
     <img *ngIf="mobile" src="assets/images/portfolio-images/midocean_1.mov.jpg" alt="brighter presentation">
   </section>
@@ -37,7 +37,7 @@
   <figure>
     <figcaption>Process presentation</figcaption>
     <img src="assets/images/portfolio-images/midocean_4.png" alt="process images">
-    <video *ngIf="!mobile" loop src="assets/videos/portfolio-details/midocean_3.mp4"
+    <video *ngIf="!mobile" loop autoplay src="http://code-mine.com/videos/midocean_3.mp4"
            poster="assets/images/portfolio-images/midocean_3.mov.jpg"></video>
     <img *ngIf="mobile" class="video_alt" src="assets/images/portfolio-images/midocean_3.mov.jpg" alt="midocean presentation">
   </figure>
