@@ -22,6 +22,14 @@ export class ScrollToClass{
     this.animationEndCallBack = animationEndCallBack;
   }
 
+  scroll(target, onScreenLocation = 'top', opponent?, animationEndCallBack?){
+    this.target = target;
+    this.opponent = opponent || null;
+    this.onScreenLocation = onScreenLocation;
+    this.scrollTo();
+    this.animationEndCallBack = animationEndCallBack;
+  }
+
   private reset() {
     if (this.animationEndCallBack) {
       this.animationEndCallBack();

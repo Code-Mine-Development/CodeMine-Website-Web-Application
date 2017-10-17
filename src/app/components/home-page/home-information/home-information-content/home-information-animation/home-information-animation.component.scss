@@ -7,21 +7,33 @@
     height: 75%;
     overflow: hidden;
     width: 100%;
+    figure {
+      position: relative;
+      padding: 0;
+      margin-top: 60px;
+    }
     figure img {
-      width: 220%;
-      transform: translate(-0.5%, 7%)
+      position: absolute;
+      top: 50%;
+      pointer-events: none;
+      left: 0;
+      transform: translate(0, -50%)
     }
   }
 }
 
 figure {
   margin: 0;
+  height: 100%;
+  width: 100%;
+  padding-top: 60px;
+  box-sizing: border-box;
   figcaption {
     display: none;;
   }
   img {
     display: none;
-    width: 100%;
+    height: 100%;
     &.visible {
       display: block;
     }

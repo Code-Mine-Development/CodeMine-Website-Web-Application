@@ -27,6 +27,7 @@ export class HomeInformationContentComponent implements OnInit {
   duration: number;
   shaftPosition = 0;
   animationBg = 'transparent';
+  scrollToHead;
 
   constructor(private scrollController: ScrollController, private scrollService: ScrollToService, private eventManager: EventManagerService) {
   }
@@ -43,18 +44,21 @@ export class HomeInformationContentComponent implements OnInit {
     this.navigateToSection();
     this.eventManager.on('scrollToSiteHead').subscribe(() => {
       this.scrollService.scroll('SiteHead', 'top', this.scrollableBox.nativeElement);
-      // this.scrollableBox.nativeElement.scrollTop = 0;
     })
   }
 
   onScroll() {
     const distanceToAnimation = (this.scrollableBox.nativeElement.offsetHeight * 2),
       scrollTop = this.scrollableBox.nativeElement.scrollTop;
-    this.calculateBoxFollow(scrollTop, distanceToAnimation);
+    this.calculateBoxFollow(scrollTop, distanceToAnimation - 320);
     this.scrollController.setScrollEnd(this.checkEnd(scrollTop));
     this.scrollController.setScrollTop(scrollTop, distanceToAnimation - 320, (scrollTop - (distanceToAnimation / 2)));
     if (this.getScrollTop() > 0 && !this.checkEnd(scrollTop)) {
-      this.scrollService.scroll('SiteHead');
+      if(!this.scrollToHead) {
+        this.scrollToHead = this.scrollService.scroll('SiteHead');
+      } else {
+        this.scrollToHead.scroll('SiteHead');
+      }
     }
   }
 
@@ -71,7 +75,7 @@ export class HomeInformationContentComponent implements OnInit {
     const width = window.innerWidth,
       height = this.homeBox.nativeElement.offsetHeight;
     if (height * 1.7 > width) {
-      this.shaftPosition = -((height * 1.3 - width ) / 2);
+      this.shaftPosition = -((height * 1.7 - width ) / 2);
       this.hideMotto = false;
     }
     if (height * 1.15 > width) {
@@ -123,7 +127,7 @@ export class HomeInformationContentComponent implements OnInit {
           distance = average * distancePerFrame,
           targetPosition = (window.innerHeight + this.scrollableBox.nativeElement.offsetHeight - 320) + distance;
 
-        this.scrollService.scroll(targetPosition, 'top', this.scrollableBox.nativeElement)
+        this.scrollService.scroll(targetPosition, 'top', this.scrollableBox.nativeElement);
       }
     })
   }

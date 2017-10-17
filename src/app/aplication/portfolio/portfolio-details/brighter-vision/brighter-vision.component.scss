@@ -9,6 +9,27 @@
       display: none;
     }
   }
+
+  .site-presentation {
+    @media #{$tablet-media-portrait}{
+      transform: scale(1.3);
+    }
+
+    background: #e6e6e6;
+    img {
+      width: 100%;
+      transform: scale(1.3);
+      box-shadow: none;
+    }
+  }
+
+  .wrapper {
+    margin-top: 200px;
+    @media #{$tablet-media-portrait}{
+      margin-top: 100px;
+    }
+  }
+
 }
 
 article {
@@ -50,11 +71,3 @@ img, video {
   margin-bottom: 100px;
 }
 
-.site-presentation {
-  background: #e6e6e6;
-  img {
-    width: 100%;
-    transform: scale(1.3);
-    box-shadow: none;
-  }
-}

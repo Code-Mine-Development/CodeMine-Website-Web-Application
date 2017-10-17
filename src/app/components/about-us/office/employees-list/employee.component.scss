@@ -12,6 +12,11 @@
   @media #{$br1200}{
     width: 25%;
   }
+  &:last-of-type{
+    .description{
+      border-bottom: 3px solid transparent;
+    }
+  }
 }
 
 :host > .worker {

@@ -50,7 +50,7 @@ export class PortfolioDetailsModel implements OnInit {
   }
 
   checkMobile() {
-    this.mobile = window.innerWidth <= 767;
+    this.mobile = window.innerWidth <= 768;
   }
 
 }

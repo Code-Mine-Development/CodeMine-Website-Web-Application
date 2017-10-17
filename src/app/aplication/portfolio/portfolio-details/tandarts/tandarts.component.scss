@@ -79,26 +79,24 @@
   }
   position: relative;
   figure {
+    @media #{$tablet-media-portrait}{
+      transform: scale(1.7);
+    }
     width: 100%;
     height: 100%;
     margin: 0;
     .background {
       width: 120%;
-      margin-left: -10%;
       margin-bottom: -2%;
     }
     video, .video-first, .video-second {
       width: 60%;
       margin-top: -100%;
-      box-shadow: -10px 33px 52px -2px rgba(0, 0, 3, .48);
+      box-shadow: -10px 33px 94px 9px rgba(0, 0, 3, 0.48);
     }
     .video-first {
       transform-origin: left bottom;
-      transform: translate(96%, 67%) rotateZ(-15deg) skew(-330deg) scale(0.76);
-    }
-    .video-second {
-      transform-origin: left bottom;
-      transform: translate(134%, 136%) rotateZ(-15deg) skew(-330deg) scale(0.76);
+      transform: scale(0.49) translate(223%, 314%) rotate(-45deg);
     }
   }
 

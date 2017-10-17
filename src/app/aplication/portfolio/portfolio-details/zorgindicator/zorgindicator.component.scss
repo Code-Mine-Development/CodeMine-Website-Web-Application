@@ -60,6 +60,15 @@ app-architecture {
   width: 100%;
   background: #f17052;
   figure {
+    margin-top: 200px;
+    margin-bottom: 200px;
+    @media #{$tablet-media-portrait} {
+      transform: scale(1.4);
+    }
+    @media #{$phone}{
+      margin-top: 50px;
+      margin-bottom: 50px
+    }
     width: 100%;
     figcaption {
       display: none;

@@ -550,11 +550,11 @@
     "prefix": "Code-Mine"
   },
   "home": "home",
-  "aboutus": "about us",
+  "aboutus": "about-us",
   "offer": "offer",
   "contact": "contact",
   "audit": "audits",
-  "not-found": "not found",
+  "not-found": "not-found",
   "tools": "tools",
   "technologies": "technologies"
 }
