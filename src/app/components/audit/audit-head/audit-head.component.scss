@@ -67,4 +67,12 @@
       display: inline-block;
     }
   }
+  .quality_svg {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    min-width: 600px;
+    transform: translateY(5%);
+  }
 }
