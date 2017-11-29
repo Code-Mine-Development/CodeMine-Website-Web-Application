@@ -7,7 +7,8 @@
         "image": "../assets/images/offer_images/c.svg",
         "mobile": "../assets/images/offer_images/c-mobile.svg",
         "description": "OFFER.features.solutionToBusines.description",
-        "width": 70
+        "width": 70,
+        "left": "-3%"
       },
       {
         "name": "OFFER.features.internalApps.title",
@@ -15,48 +16,55 @@
         "mobile": "../assets/images/offer_images/o-mobile.svg",
         "description": "OFFER.features.internalApps.description",
         "width": 48
+
       },
       {
         "name": "OFFER.features.B2Capplications.title",
         "image": "../assets/images/offer_images/d.svg",
         "mobile": "../assets/images/offer_images/d-mobile.svg",
         "description": "OFFER.features.B2Capplications.description",
-        "width": 100
+        "width": 100,
+        "left": "-8%"
       },
       {
         "name": "OFFER.features.socialNetworking.title",
         "image": "../assets/images/offer_images/e_new.svg",
         "mobile": "../assets/images/offer_images/e-mobileYellow.svg",
         "description": "OFFER.features.socialNetworking.description",
-        "width": 66
+        "width": 66,
+        "left": "6%"
       },
       {
         "name": "OFFER.features.TVApps.title",
         "image": "../assets/images/offer_images/m.svg",
         "mobile": "../assets/images/offer_images/m-mobile.svg",
         "description": "OFFER.features.TVApps.description",
-        "width": 93
+        "width": 93,
+        "left": "5%"
       },
       {
         "name": "OFFER.features.desktopApplications.title",
         "image": "../assets/images/offer_images/i.svg",
         "mobile": "../assets/images/offer_images/i-mobile.svg",
         "description": "OFFER.features.desktopApplications.description",
-        "width": 100
+        "width": 100,
+        "left": "-3%"
       },
       {
         "name": "OFFER.features.mobileApps.title",
         "image": "../assets/images/offer_images/n.svg",
         "mobile": "../assets/images/offer_images/n-mobile.svg",
         "description": "OFFER.features.mobileApps.description",
-        "width": 51
+        "width": 51,
+        "left": "-3%"
       },
       {
         "name": "OFFER.features.openForNew.title",
         "image": "../assets/images/offer_images/e.svg",
         "mobile": "../assets/images/offer_images/e-mobile.svg",
         "description": "OFFER.features.openForNew.description",
-        "width": 70
+        "width": 70,
+        "left": "4%"
       }
     ]
   }
