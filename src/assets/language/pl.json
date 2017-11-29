@@ -162,7 +162,7 @@
     "navigateToBrief": "Przejdź do briefu"
   },
   "PORTFOLIO": {
-    "addProjectTitle": "Dodaj swój projekt",
+    "addProjectTitle": "Miejsce na twój projekt",
     "addProjectButton": "Napisz do nas",
     "ourPortfolio": "Nasze Portfolio",
     "checkPortfolio": "sprawdź nasze portfolio",
@@ -181,19 +181,21 @@
       "build": "Budowa",
       "postsBooking": "Rezerwacja postów",
       "ourRole": "Nasze zadanie",
-      "workingScheme": "Schemat działania aplikacji",
+      "workingScheme": "Proces aplikacji",
       "businessModel": "Model biznesowy",
       "implementation": "Proces wdrażania",
       "arch/tech/tool": "Architektura / języki / narzędzia",
       "microServices": "Mikroserwisy",
-      "exchangeProcess": "Proces wymiany walut"
+      "exchangeProcess": "Proces wymiany walut",
+      "challenges": "Wyzwanie",
+      "architecture": "Architektura"
     },
     "BrighterVision": {
       "title": "Brigter Vision Growth Platform",
       "subTitle": "Aplikacja dla amerykańskich terapeutów",
       "shortDescription": "Aplikacja skierowana do amerykańskich terapeutów, pozwalająca na przeglądanie puli dostępnych postów oraz ich publikację w formie bloga.",
       "description": {
-        "part1": "Brighter Vision Growth Platform jest narzędziem marketingowym skierowanym do amerykańskich terapeutów, którzy przeznaczając całą energię na zarządzanie własną praktyką, zwykle nie znajdują już czasu na działania służące jej promocji.",
+        "part1": "Aplikacja skierowana do amerykańskich terapeutów, pozwalająca na przeglądanie puli dostępnych postów oraz ich publikację w formie bloga.",
         "part2": "Aplikacja pozwala na przeglądanie gotowych, dostępnych postów oraz na ich publikację na blogu opartym o Wordpressa w wybranym przez siebie terminie. Jej sercem jest prezentujący zarówno opublikowane, jak i przyszłe posty, ogromny kalendarz, szczegółowo dopracowany pod kątem UI oraz UX.",
         "part3": "Dzięki dobrej kategoryzacji, a także świetnemu mechanizmowi rezerwowania postów, użytkownik jest w stanie zarezerwować wybraną publikację przy pomocy zaledwie trzech kliknięć.",
         "part4": "Zważywszy na model biznesowy, który obok darmowych, zakłada również płatne posty, aplikacja została zintegrowana z systemem płatności Chargify. Użytkownik ma do wyboru wykupienie pojedynczych publikacji lub też miesięcznych subskrypcji. Posty darmowe przyznawane są z kolei miesięcznie, mając określony limit.",
@@ -362,7 +364,7 @@
       "title": "Nasze podejście",
       "description": "Duży zespół nie jest miernikiem jakości świadczonych usług – są nim raczej umiejętności, pasja i zaangażowanie. Jako kilkunastoosobowy team pracujący w myśl Quality Driven Development,nie boimy się wyzwań, a nasze indywidualne podejście jest doceniane przez wszystkich klientów."
     },
-    "aFewPhotos": "Kilka zdjęć z życia naszego biura"
+    "aFewPhotos": "Follow us"
   },
   "PEOPLE": {
     "worksince": "Wydobycie w Code Mine od: ",
