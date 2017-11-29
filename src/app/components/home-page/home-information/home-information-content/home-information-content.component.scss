@@ -2,7 +2,7 @@
 
 :host {
   display: block;
-  width: 100%;
+  width: 100vw;
   height: 100%;
   overflow: hidden;
   transition: .3s;
@@ -30,7 +30,7 @@
         margin-top: 0;
         margin-left: 0;
       }
-      .over-hidden:after{
+      .over-hidden:after {
         box-shadow: none;
       }
     }
@@ -98,7 +98,7 @@
           height: 100vh;
           pointer-events: none;
           transition: .3s;
-          &.home_bg{
+          &.home_bg {
             min-width: 100%;
           }
         }
@@ -133,7 +133,7 @@
     &.howWeWork {
       color: #282828;
       position: relative;
-      top:-2px;
+      top: -2px;
       box-sizing: border-box;
       background: #282828;
 
@@ -232,7 +232,6 @@
     }
   }
 }
-
 
 @keyframes slideInUp {
   from {
