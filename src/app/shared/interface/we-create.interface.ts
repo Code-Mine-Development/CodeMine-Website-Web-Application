@@ -6,5 +6,8 @@ export interface WeCreate {
 interface FeaturesEntity {
   name: string;
   image: string;
+  mobile: string;
   description: string;
+  width: string;
+  left: string;
 }

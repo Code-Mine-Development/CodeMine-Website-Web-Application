@@ -4,7 +4,7 @@
 
   <div class="row">
     <div class="col" *ngFor="let item of WeCreate.features">
-      <figure class="col-img">
+      <figure class="col-img" [style.left]="item.left || ''">
         <figcaption>Offer image</figcaption>
         <img [src]="detectMobile() ? item.mobile : item.image" [style.width]="detectMobile() ? item.width + '%' : '100%'" alt="offer Image">
       </figure>
