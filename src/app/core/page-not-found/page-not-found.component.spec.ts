@@ -24,7 +24,6 @@ describe('PageNotFoundComponent', () => {
         fixture = TestBed.createComponent(PageNotFoundComponent);
         component = fixture.componentInstance;
         nativeElement = fixture.debugElement.nativeElement;
-        console.log(nativeElement);
         fixture.detectChanges();
         location = TestBed.get(Location);
     });

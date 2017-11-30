@@ -55,7 +55,6 @@ export class HomeInformationAnimationComponent implements OnInit, OnDestroy {
         if (tempIndex < 0) {
           return;
         }
-        console.log(tempIndex);
         func(list[tempIndex], tempIndex);
         this.loadingMap.set(tempIndex, true);
       },
@@ -65,7 +64,6 @@ export class HomeInformationAnimationComponent implements OnInit, OnDestroy {
           if (tempIndex < 0) {
             return;
           }
-          console.log(tempIndex);
           func(list[tempIndex], tempIndex);
           this.loadingMap.set(tempIndex, true);
         }
