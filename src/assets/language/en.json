@@ -8,8 +8,8 @@
     "title": "Audits",
     "move": "go",
     "tasks": "Works",
-    "benefits": "benefits",
-    "wantKnowDetails": "Want more details?",
+    "benefits": "Benefits",
+    "wantKnowDetails": "For more details",
     "navigate": "Go to contact",
     "quality": {
       "title": "Code quality",
@@ -113,7 +113,7 @@
     "features": {
       "title": "We create",
       "solutionToBusines": {
-        "title": "Solutions to your business problems",
+        "title": "Business Solutions",
         "description": "Solutions to problems are not always obvious. Thus, we'll help you find a golden mean that allows you to streamline the processes and improve your company's performance."
       },
       "internalApps": {
@@ -163,7 +163,7 @@
     "navigateToBrief": "Go to the brief"
   },
   "PORTFOLIO": {
-    "addProjectTitle": "Add your design",
+    "addProjectTitle": "Place for your project",
     "addProjectButton": "Write to us",
     "ourPortfolio": "Our Portfolio",
     "checkPortfolio": "Check out our portfolio",
@@ -176,25 +176,27 @@
       "after": "After",
       "process": "Process",
       "application": "Application",
+      "architecture": "Architecture",
       "technologies": "Technologies",
       "tools": "Tools",
       "goal": "Goal",
       "build": "Building",
-      "postsBooking": "Post reservation",
-      "ourRole": "Our task",
-      "workingScheme": "Application schema",
+      "postsBooking": "Post booking",
+      "ourRole": "Our role",
+      "workingScheme": "Application process",
       "businessModel": "Business model",
       "implementation": "Implementation process",
       "arch/tech/tool": "Architecture / Languages / Tools",
-      "microServices": "Microservice",
-      "exchangeProcess": "Currency exchange process"
+      "microServices": "Microservices",
+      "exchangeProcess": "Currency exchange process",
+      "challenges": "Challenge"
     },
     "BrighterVision": {
       "title": "Brigter Vision Growth Platform",
       "subTitle": "Application for American therapists",
       "shortDescription": "Application directed to American therapists, allowing you to browse the pool of available posts and publish them in the form of a blog.",
       "description": {
-        "part1": "Brighter Vision Growth Platform jest odpowiedzią na zjawisko braku czasu poświęconego na marketing – jak chociażby prowadzenie bloga, zauważalnego wśród amerykańskich terapeutów, którzy całą swoją energię przeznaczają na zarządzanie własną praktyką, dbając o każdy, nawet najmniejszy szczegół.",
+        "part1": "The Brighter Vision Growth Platform makes a great marketing solution for the US therapists.",
         "part2": "It allows you to view ready-made available posts and publish them on a blog that is based on Wordpress at the date of your choice. Its heart is a huge calendar, beautifully crafted and simple to use. It presents both published and future posts. ",
         "part3": "Thanks to the coherent categorization, as well as a great mechanism for selecting posts, the user can book a selected publication with just three clicks.",
         "part4": "Given the business model, which alongside the free posts also provides paid subscription plan, the application is integrated with the Chargify billing software. You may choose to purchase individual publications or monthly subscriptions. Free posts are awarded monthly, with a specified limit. ",
@@ -352,18 +354,18 @@
     "nor": "norsk"
   },
   "ABOUT_US": {
-    "place4U": "Maybe this is just for you?",
-    "joinUs": "Join our team today!",
+    "place4U": "Sounds like something for you?",
+    "joinUs": "Join our team",
     "name_origin": {
-      "title": "Where's the name?",
+      "title": "Why Code Mine?",
       "description_part1": "With our HQ located in the heart of Katowice, among the charming tenement houses and mine shafts, we feel strongly connected with our surroundings. Like the old mines in our region, we try to extract the best and at the same time contribute to transforming our region into a Polish Silicon Valley. In turn, the high-quality code we create is gold weight, black gold, for our developers.",
       "description_part2": "Inspired by the environment, we could not cut off from the roots. Thus, we chose a name, emphasizing, on the one hand, our origin, and on the other - our character. Code Mine was created."
     },
     "approach": {
-      "title": "Our approuch",
+      "title": "Our approach",
       "description": "A large team does not reflect the quality of the service provided. This can be measured rather by skills, passion, and commitment. As a company of fifteen people who implement Quality Driven Development, we are not afraid of challenges and our individual approach is greatly appreciated by our customers."
     },
-    "aFewPhotos": "A few photos from the life of our office."
+    "aFewPhotos": "Follow us"
   },
   "PEOPLE": {
     "worksince": " Mining in Code Mine from:",
@@ -414,7 +416,7 @@
   "CONTACT": {
     "contactUs": "Contact us",
     "name": "Name",
-    "myName": "My name ",
+    "myName": "My name is",
     "namePlaceHolder": "Name",
     "emailPlaceHolder": "Email",
     "clickToCopy": "Click to copy",

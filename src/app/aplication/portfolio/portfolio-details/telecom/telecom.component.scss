@@ -54,6 +54,9 @@
     @media #{$tablet-media}{
       flex-wrap: wrap;
     }
+    article.build {
+      margin-top: 0;
+    }
   }
   figure {
     text-align: center;

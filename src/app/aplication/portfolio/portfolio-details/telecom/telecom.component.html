@@ -12,23 +12,15 @@
 </section>
 <section class="icons">
   <section class="container">
-    <figure>
-      <img src="assets/images/portfolio-images/telecom_world.svg" alt="world icon" class="placeholder">
-      <figcaption>{{'PORTFOLIO.telecom.description.part3' | translate | prettifyText}}</figcaption>
-    </figure>
-    <figure>
-      <img src="assets/images/portfolio-images/telecom_database.svg" alt="database icon" class="placeholder">
-      <figcaption>{{'PORTFOLIO.telecom.description.part4' | translate | prettifyText}}</figcaption>
-    </figure>
-    <figure>
-      <img src="assets/images/portfolio-images/telecom_gear.svg" alt="gear icons" class="placeholder">
-      <figcaption>{{'PORTFOLIO.telecom.description.part5' | translate | prettifyText}}</figcaption>
-    </figure>
+    <article class="build">
+      <h3>{{'PORTFOLIO.sectionTitles.challenges' | translate | prettifyText}}</h3>
+      <p>{{(('PORTFOLIO.telecom.description.part3' | translate) + ' ' + ('PORTFOLIO.telecom.description.part4' | translate) + ' ' + ('PORTFOLIO.telecom.description.part5' | translate) )  | prettifyText}}</p>
+    </article>
   </section>
 </section>
 <section class="container">
   <article class="build">
-    <h3>{{'PORTFOLIO.sectionTitles.build' | translate | prettifyText}}</h3>
+    <h3>{{'PORTFOLIO.sectionTitles.architecture' | translate | prettifyText}}</h3>
     <p>{{'PORTFOLIO.telecom.description.part6' | translate | prettifyText}}</p>
   </article>
 </section>
@@ -51,7 +43,7 @@
     </figure>
   </section>
   <section class="architecture">
-    <h4>{{'PORTFOLIO.sectionTitles.technologies' | translate | prettifyText}}</h4>
+    <h3>{{'PORTFOLIO.sectionTitles.technologies' | translate | prettifyText}}</h3>
     <app-architecture [tools]="tools" [technologies]="technologies" [currentTools]="detail.tools"
                       [currentTechnologies]="detail.technologies"></app-architecture>
   </section>
