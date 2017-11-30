@@ -1,4 +1,4 @@
-import {Component, OnInit, Renderer2, OnDestroy} from '@angular/core';
+import {Component, OnDestroy, OnInit, Renderer2} from '@angular/core';
 import {ScrollController} from '../../../services/scroll.controller';
 import {AnimationConfig} from '../../../animation.config';
 
@@ -9,26 +9,61 @@ import {AnimationConfig} from '../../../animation.config';
 })
 export class HomeInformationAnimationComponent implements OnInit, OnDestroy {
   loadingList = [];
-
   private scrollSubscriber;
-  private visible = 0;
+  visible = 0;
+  private shouldBeVisible = 0;
   private maxLoadingQuantity = 8;
   private loadingQuantity = 0;
 
 
-  static filesIterator(list) {
+  private filesIterator(list) {
     let index = 0,
-      func;
+      func,
+      precision = 50;
+    const loadingMap: Map<number, boolean> = new Map(),
+      keyFrames: number[] = [0, 52, 90, 157, 248, 326, 388, 495, 592, 672, 785];
+
+    const getFrameIndex = () => {
+      const tempIndex = keyFrames.find((value) => (!loadingMap.has(value)));
+      if (!tempIndex) {
+        if (precision === 0) {
+          return -1;
+        }
+        index += precision;
+        if (index > AnimationConfig.animationFrames) {
+          precision = Math.floor(precision / 2);
+          index = precision;
+        }
+        if (loadingMap.has(index)) {
+          return getFrameIndex();
+        }
+        return index;
+      }
+      return tempIndex;
+    };
+
+
 
     return {
       getFile(fn) {
         func = fn;
-        func(list[index], index);
+        const tempIndex = getFrameIndex();
+        if (tempIndex < 0) {
+          return;
+        }
+        console.log(tempIndex);
+        func(list[tempIndex], tempIndex);
+        loadingMap.set(tempIndex, true);
       },
       next() {
-        index++;
         if (func) {
-          func(list[index], index);
+          const tempIndex = getFrameIndex();
+          if (tempIndex < 0) {
+            return;
+          }
+          console.log(tempIndex);
+          func(list[tempIndex], tempIndex);
+          loadingMap.set(tempIndex, true);
         }
       }
     }
@@ -43,12 +78,35 @@ export class HomeInformationAnimationComponent implements OnInit, OnDestroy {
       if (section.frame > AnimationConfig.animationFrames) {
         return;
       }
-      this.visible = section.frame;
+      this.updateVisibleFrame(section.frame);
     });
   }
 
+  updateVisibleFrame(frame?: number) {
+    if (frame) {
+      this.shouldBeVisible = frame;
+    }
+    if (this.loadingList[this.shouldBeVisible]) {
+      this.visible = this.shouldBeVisible;
+      return;
+    }
+    const tempTestCount = (AnimationConfig.animationFrames - this.shouldBeVisible) > this.shouldBeVisible ?
+      (AnimationConfig.animationFrames - this.shouldBeVisible) : this.shouldBeVisible;
+    let testDistance = 0;
+    while (tempTestCount < testDistance) {
+      if (this.loadingList[this.shouldBeVisible - testDistance]) {
+        this.visible = this.shouldBeVisible - testDistance;
+        break;
+      } else if (this.loadingList[this.shouldBeVisible + testDistance]) {
+        this.visible = this.shouldBeVisible - testDistance;
+        break;
+      }
+      testDistance++;
+    }
+  }
+
   ngOnDestroy() {
-    if(this.scrollSubscriber) {
+    if (this.scrollSubscriber) {
       this.scrollSubscriber.unsubscribe();
     }
   }
@@ -62,7 +120,7 @@ export class HomeInformationAnimationComponent implements OnInit, OnDestroy {
   }
 
   loadFiles(list) {
-    const iterator = HomeInformationAnimationComponent.filesIterator(list);
+    const iterator = this.filesIterator(list);
 
     iterator.getFile((file, index) => {
       if (!file) {
@@ -73,23 +131,20 @@ export class HomeInformationAnimationComponent implements OnInit, OnDestroy {
         iterator.next();
       }
       this.loadFile(file, () => {
-        // console.log('loaded :' + index);
         this.loadingList[index] = file;
+        this.updateVisibleFrame();
         iterator.next();
       });
     })
   }
 
   loadFile(file, cb) {
-    // console.log('startSubscribe');
-
     const element = this.renderer.createElement('img');
     this.renderer.listen(element, 'load', () => {
       this.loadingQuantity--;
       cb();
     });
     this.renderer.setProperty(element, 'src', file);
-    // console.log('startLoading : ' + file);
   }
 
   getFilePath(index) {
