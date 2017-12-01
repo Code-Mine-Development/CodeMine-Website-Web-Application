@@ -27,7 +27,6 @@ export class ScrollController {
   }
 
   setScrollEnd(value) {
-    console.log(value);
     this.scrollEnd = value;
   }
 
