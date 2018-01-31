@@ -29,6 +29,7 @@ jobs:
     - stage: Deploy
       script:
         - ./node_modules/.bin/ng build --prod
+        - ./deploy_seo.sh
       deploy:
         #Deploy development version
         - provider: s3
